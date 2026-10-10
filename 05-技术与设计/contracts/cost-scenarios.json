@@ -1,0 +1,171 @@
+{
+  "record_id": "cost-scenarios",
+  "type": "model_call_cost_scenarios",
+  "sources_verified_on": "2026-10-07",
+  "currency": "USD",
+  "pricing_basis": "DeepSeek 峰时价，每百万令牌；全部按输入未命中缓存计（hit 单价列出备查，不参与计算）；金额四舍五入到 0.01 美元；单价仅用于情景算术，不预测价格变化",
+  "rates": {
+    "flash": {
+      "hit": "0.006",
+      "miss": "0.30",
+      "output": "1.20"
+    },
+    "pro": {
+      "hit": "0.044",
+      "miss": "1.32",
+      "output": "3.96"
+    }
+  },
+  "sources": {
+    "deepseek": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "call_model": {
+    "extraction": "招标文件与补遗每 20 个证据块一次调用；各轮评审共用同一份规则，招标文件或补遗更新后才重新提取",
+    "check": "每轮评审对每条参与评审的规则一次调用；被驳回或暂缓的规则不调用",
+    "mapping": "每轮评审一次：把评分条款对应到正文章节",
+    "judgement": "每轮评审对每条带分值的评分条款判断 3 次（第 1 次温度 0，其余 0.7），至多 40 条",
+    "comparison": "登记了锚点包时，每轮评审对满分合计占七成的前几条评分条款（至多 6 条）各与 6 份锚点比较一次；未登记锚点包时为 0",
+    "revision": "每个所选问题一次调用，由人触发",
+    "retry": "输出不合结构时最多修复重发 2 次，所以每次逻辑调用最多 3 次请求",
+    "project_settings": "项目级功能开关不改变调用次数：两类确定性检测不调用模型，关闭显示预测分数时预测照常运行，关闭自动开始评审只推迟调用"
+  },
+  "assumptions": {
+    "chunks_per_page": "2.5",
+    "tokens_per_call_input_output": {
+      "extraction": [
+        9000,
+        4096
+      ],
+      "check": [
+        6000,
+        1500
+      ],
+      "mapping": [
+        12000,
+        1500
+      ],
+      "judgement": [
+        16000,
+        1500
+      ],
+      "comparison": [
+        14000,
+        400
+      ],
+      "revision": [
+        3000,
+        1200
+      ]
+    },
+    "note": "令牌数是依据提示词结构的上界估计，没有在真实模型上度量过实际用量；真实用量由任务产物里记录的 usage 汇总得到"
+  },
+  "scenarios": [
+    {
+      "scenario": "轻量",
+      "tender_pages": 100,
+      "tender_chunks": 250,
+      "rules_per_round": 30,
+      "scoring_rules_per_round": 10,
+      "rounds_per_project": 2,
+      "revision_findings_per_project": 5,
+      "calls_per_project": {
+        "extraction": 13,
+        "check": 60,
+        "mapping": 2,
+        "judgement": 60,
+        "comparison": 72,
+        "revision": 5,
+        "total": 212
+      },
+      "calls_per_round_after_rules": 97,
+      "projects_per_month": 20,
+      "calls_per_month": 4240,
+      "usd_per_month_without_cache": {
+        "flash": {
+          "nominal": "21.41",
+          "all_retries_used": "64.23"
+        },
+        "pro": {
+          "nominal": "87.04",
+          "all_retries_used": "261.13"
+        }
+      }
+    },
+    {
+      "scenario": "常规",
+      "tender_pages": 220,
+      "tender_chunks": 550,
+      "rules_per_round": 60,
+      "scoring_rules_per_round": 20,
+      "rounds_per_project": 3,
+      "revision_findings_per_project": 15,
+      "calls_per_project": {
+        "extraction": 28,
+        "check": 180,
+        "mapping": 3,
+        "judgement": 180,
+        "comparison": 108,
+        "revision": 15,
+        "total": 514
+      },
+      "calls_per_round_after_rules": 157,
+      "projects_per_month": 20,
+      "calls_per_month": 10280,
+      "usd_per_month_without_cache": {
+        "flash": {
+          "nominal": "52.12",
+          "all_retries_used": "156.36"
+        },
+        "pro": {
+          "nominal": "210.31",
+          "all_retries_used": "630.92"
+        }
+      }
+    },
+    {
+      "scenario": "大型",
+      "tender_pages": 400,
+      "tender_chunks": 1000,
+      "rules_per_round": 120,
+      "scoring_rules_per_round": 40,
+      "rounds_per_project": 6,
+      "revision_findings_per_project": 30,
+      "calls_per_project": {
+        "extraction": 50,
+        "check": 720,
+        "mapping": 6,
+        "judgement": 720,
+        "comparison": 216,
+        "revision": 30,
+        "total": 1742
+      },
+      "calls_per_round_after_rules": 277,
+      "projects_per_month": 20,
+      "calls_per_month": 34840,
+      "usd_per_month_without_cache": {
+        "flash": {
+          "nominal": "176.76",
+          "all_retries_used": "530.29"
+        },
+        "pro": {
+          "nominal": "711.87",
+          "all_retries_used": "2135.60"
+        }
+      }
+    }
+  ],
+  "object_storage_volume_scenario": {
+    "gb_per_project_assumption": "0.3",
+    "projects_per_month": 20,
+    "growth_gb_per_month": "6",
+    "months": 36,
+    "retained_gb_end": "216",
+    "price_status": "阿里云 OSS 单价未核实，本记录只给容量"
+  },
+  "not_included": [
+    "阿里云 OSS 存储、请求与流量费用（单价未核实）",
+    "主机、磁盘与备份",
+    "请求失败但仍被计费的未知费用",
+    "税费、汇率和采购报价"
+  ]
+}

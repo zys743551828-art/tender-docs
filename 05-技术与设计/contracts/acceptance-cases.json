@@ -1,0 +1,1137 @@
+{
+  "document_id": "TECH-001",
+  "type": "acceptance_definitions",
+  "note": "automated_tests 列出覆盖该行为的主要自动化测试：后端为 backend/tests 下的“文件::函数”，前端为“frontend/src 下的测试文件::测试路径”（describe 与 it 的标题以“ > ”连接）；不保证覆盖其中的每个分支。real_environment 说明真实服务器与真实数据下的验证状态。用例定义不等于已在真实环境执行。",
+  "cases": [
+    {
+      "case_id": "AC-001",
+      "capability": "资料与流水线",
+      "title": "相同字节再次上传返回已有版本，显式声明才形成新版本",
+      "actor": "编制人",
+      "input": "同一文件重复上传；同用途文件的新版本",
+      "steps": "上传、完成上传；第二次带 version_of_file_id 上传不同字节",
+      "expected": "相同字节返回已有版本（duplicate=true）；不同字节且声明为某文件的新版本时 version_number 递增；跨项目或跨用途声明新版本返回 422",
+      "automated_tests": [
+        "test_files_and_parse.py::test_complete_is_replay_safe_and_explicit_version_supersedes",
+        "test_files_and_parse.py::test_version_of_file_id_must_be_same_project_and_role",
+        "test_product_logic.py::test_reupload_of_identical_content_returns_latest_version"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-002",
+      "capability": "资料与流水线",
+      "title": "服务端复算校验值，字节不符的上传被隔离",
+      "actor": "编制人",
+      "input": "浏览器声称的 SHA-256 与实际字节不符",
+      "steps": "分片上传后调用完成上传",
+      "expected": "返回 422 content_mismatch，产物标为 quarantined，不生成文件版本，也不留下幂等占位",
+      "automated_tests": [
+        "test_files_and_parse.py::test_server_side_recompute_catches_wrong_bytes_with_matching_claim",
+        "test_product_logic.py::test_quarantined_upload_leaves_no_idempotency_placeholder"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-003",
+      "capability": "资料与流水线",
+      "title": "资料不齐时不启动评审",
+      "actor": "编制人",
+      "input": "只上传招标文件",
+      "steps": "查询项目状态与流水线",
+      "expected": "项目状态为 materials_pending，pipeline.missing 为 [\"body\"]；不入队任何规则提取或核对任务",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-004",
+      "capability": "资料与流水线",
+      "title": "上传即评审：解析、提取规则、冻结输入、核对、预测依次自动衔接",
+      "actor": "编制人",
+      "input": "一份招标文件和一份技术标正文",
+      "steps": "依次上传两份资料，等待任务全部结束",
+      "expected": "pipeline 四步（materials、rules、review、prediction）均为 done；项目状态为 issues_open；报告可读取；无需任何手工触发",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-005",
+      "capability": "资料与流水线",
+      "title": "解析失败时流水线停在第一步并说明原因",
+      "actor": "编制人",
+      "input": "无文字层或非 PDF 的资料",
+      "steps": "上传并等待解析任务",
+      "expected": "解析任务失败并带中文原因，不写解析记录；pipeline 的 materials 步为 failed，提示重新上传",
+      "automated_tests": [
+        "test_files_and_parse.py::test_unreadable_file_fails_parse_task_with_reason_and_no_parse_record"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-006",
+      "capability": "资料与流水线",
+      "title": "某一环节失败后重新评审只重做失败的环节",
+      "actor": "投标负责人",
+      "input": "模型未配置导致规则提取失败",
+      "steps": "查看流水线，配置模型后调用重新评审",
+      "expected": "失败时 stage=failed、项目状态 analysis_failed，报告返回 report_not_ready；重新评审后规则提取以新的幂等键重试、解析不重做",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_failed_step_is_reported_and_restart_resumes",
+        "test_ai_pipeline.py::test_rules_job_fails_clearly_without_model"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-007",
+      "capability": "资料与流水线",
+      "title": "重新评审是幂等的",
+      "actor": "投标负责人",
+      "input": "没有失败环节、资料没有变化",
+      "steps": "调用重新评审",
+      "expected": "返回 202 与当前流水线状态，任务表不增加记录",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-008",
+      "capability": "资料与流水线",
+      "title": "资料更新自动开新一轮评审",
+      "actor": "编制人",
+      "input": "已完成一轮评审后上传正文新版本",
+      "steps": "以 version_of_file_id 上传新版正文",
+      "expected": "项目回到 analyzing，自动冻结新输入并重新核对与预测；报告的 round_no 加一；旧一轮仍可按其输入复现",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-009",
+      "capability": "资料与流水线",
+      "title": "新补遗重新提取规则并沿用已有的人工决定",
+      "actor": "编制人",
+      "input": "已确认部分规则后上传补遗",
+      "steps": "上传补遗，等待评审",
+      "expected": "生成新规则包，内容相同的条款沿用已有的人工决定并记录来源规则；新一轮评审自动开始",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_new_addendum_reextracts_rules_and_carries_decisions_into_next_round",
+        "test_rule_carry_over.py::test_reextraction_carries_decisions"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-010",
+      "capability": "资料与流水线",
+      "title": "规则或事实的更正不自动开新一轮",
+      "actor": "投标负责人",
+      "input": "评审完成后驳回一条规则",
+      "steps": "驳回规则；查看流水线与报告",
+      "expected": "产生新规则包，pipeline.stale_reasons 含 rules_changed，报告“下一步”提示重新评审；不自动入队；由人调用重新评审后开新一轮",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_rule_edit_after_review_clones_package_and_asks_for_reanalysis"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-011",
+      "capability": "资料与流水线",
+      "title": "项目行锁串行、幂等键防重复",
+      "actor": "系统",
+      "input": "同一项目并发的推进调用",
+      "steps": "并发调用 advance",
+      "expected": "同一项目的推进在项目行锁内串行；冻结输入与入队使用确定的幂等键，不产生重复快照或任务",
+      "automated_tests": [
+        "test_tasks_protocol.py::test_enqueue_writes_job_and_outbox_atomically"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证（并发推进本身没有专门的并发测试；任务入队的原子性与幂等有测试）"
+    },
+    {
+      "case_id": "AC-012",
+      "capability": "资料与流水线",
+      "title": "回收器兜底推进停在评审中的项目",
+      "actor": "系统",
+      "input": "任务完成后的推进调用丢失",
+      "steps": "回收器周期扫描 analyzing 项目",
+      "expected": "reaper 对 analyzing 状态的项目调用 advance_active，补做丢失的下一步；auto_analysis 关闭时不做",
+      "automated_tests": [],
+      "real_environment": "依赖服务器与数据，尚未验证（代码路径存在，没有专门的自动化测试）"
+    },
+    {
+      "case_id": "AC-013",
+      "capability": "资料与流水线",
+      "title": "部署级 BIDWB_AUTO_ANALYSIS 关闭时上传不自动评审",
+      "actor": "管理员",
+      "input": "BIDWB_AUTO_ANALYSIS=false",
+      "steps": "上传完成",
+      "expected": "上传完成后不调用 advance，也不在任务结束后推进；各步骤只能由人触发（规则提取、核对的专用入口）；与项目级开关 auto_start 不同，它作用于整个部署",
+      "automated_tests": [],
+      "real_environment": "不依赖外部服务（开关本身没有专门的自动化测试；测试夹具默认关闭它，专用入口的测试在关闭状态下运行）"
+    },
+    {
+      "case_id": "AC-014",
+      "capability": "规则与依据",
+      "title": "规则提取：引用必须逐字出自所给片段",
+      "actor": "系统",
+      "input": "模型返回的规则带有不存在的证据 ID 或不在片段中的引文",
+      "steps": "执行规则提取任务",
+      "expected": "这类候选被丢弃并记录原因（unknown_evidence、quote_not_found、duplicate），不进入规则包；最多保留 200 条",
+      "automated_tests": [
+        "test_ai_pipeline.py::test_rules_to_findings_flow"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-015",
+      "capability": "规则与依据",
+      "title": "提取不出规则时任务失败，不留下空规则包",
+      "actor": "系统",
+      "input": "模型没有返回任何合格规则",
+      "steps": "执行规则提取任务",
+      "expected": "任务失败（no_rules_extracted）并带中文原因，规则包数量不变",
+      "automated_tests": [
+        "test_product_logic.py::test_all_rejected_package_is_not_confirmed_and_empty_extraction_fails"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-016",
+      "capability": "规则与依据",
+      "title": "有效规则：已确认与未审核参与评审，驳回与暂缓不参与",
+      "actor": "投标负责人",
+      "input": "一个规则包，其中一条被驳回",
+      "steps": "确认／驳回规则后评审",
+      "expected": "核对只针对有效规则；被驳回的规则不出现在响应矩阵；未审核的规则参与评审且判定标注 rule_basis=unconfirmed",
+      "automated_tests": [
+        "test_product_logic.py::test_diagnosis_only_uses_rules_whose_latest_review_is_confirm",
+        "test_auto_pipeline.py::test_rule_edit_after_review_clones_package_and_asks_for_reanalysis"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-017",
+      "capability": "规则与依据",
+      "title": "全部规则被驳回时核对明确失败",
+      "actor": "投标负责人",
+      "input": "规则包内所有规则被驳回",
+      "steps": "发起核对",
+      "expected": "核对任务失败（no_rules），不假装完成",
+      "automated_tests": [
+        "test_product_logic.py::test_all_rejected_package_is_not_confirmed_and_empty_extraction_fails"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-018",
+      "capability": "规则与依据",
+      "title": "只把未确认变为已确认不复制规则包",
+      "actor": "投标负责人",
+      "input": "已被评审引用的规则包上的未审核规则",
+      "steps": "确认该规则",
+      "expected": "追加一条审核记录；规则包标识不变，不提示重新评审",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-019",
+      "capability": "规则与依据",
+      "title": "改变参与集合的决定克隆新规则包，评审引用的规则包不变",
+      "actor": "投标负责人",
+      "input": "已被评审引用的规则包上驳回、暂缓或驳回后又确认",
+      "steps": "提交审核",
+      "expected": "生成新规则包（revision 加一，条款相同，决定沿用）；原规则包与引用它的评审保持不变；旧一轮结果可复现",
+      "automated_tests": [
+        "test_product_logic.py::test_rule_decision_cannot_change_after_package_is_frozen",
+        "test_review_fixes.py::test_rule_can_be_rereviewed_and_frozen_package_is_cloned"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-020",
+      "capability": "规则与依据",
+      "title": "确认可以不写理由，其余决定必须写明理由",
+      "actor": "投标负责人",
+      "input": "确认、驳回、暂缓的请求",
+      "steps": "提交审核请求",
+      "expected": "确认不带理由通过；驳回、暂缓、重新打开等缺理由返回 422",
+      "automated_tests": [
+        "test_review_fixes.py::test_confirm_needs_no_reason_but_other_decisions_do"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-021",
+      "capability": "规则与依据",
+      "title": "事实录入与撤回追加新事实集",
+      "actor": "项目工程审核人",
+      "input": "带证据的事实",
+      "steps": "录入事实；撤回事实",
+      "expected": "每次生成新的事实集，旧事实集不变；撤回非最新事实集中的事实返回 409 fact_not_current",
+      "automated_tests": [
+        "test_facts_and_confirmations.py::test_fact_entry_and_listing",
+        "test_facts_and_confirmations.py::test_withdraw_fact",
+        "test_review_fixes.py::test_add_fact_locks_project_row"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-022",
+      "capability": "废标／否决检测",
+      "title": "违反否决项的正文被报为废标／否决风险",
+      "actor": "系统",
+      "input": "否决条款“总工期不得超过一百八十日历天”，正文写“计划总工期为二百四十日历天”",
+      "steps": "执行核对",
+      "expected": "响应矩阵该条判定为 violated；生成 category=disqualification、source=rule、impact=qualification 的问题，附正文与条款两侧引文",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-023",
+      "capability": "废标／否决检测",
+      "title": "判定“满足”必须引用正文依据",
+      "actor": "系统",
+      "input": "模型判定满足但没有给出有效正文引用，或同时给出了问题",
+      "steps": "执行核对",
+      "expected": "判定降为 unclear，不记为满足；数据库约束要求 satisfied 至少带一条正文证据",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "不依赖外部服务（落地校验由程序完成，已用脚本化模型验证；真实模型的输出质量依赖服务器与数据，尚未验证）"
+    },
+    {
+      "case_id": "AC-024",
+      "capability": "废标／否决检测",
+      "title": "无法判断不等于满足，必须被看见",
+      "actor": "投标负责人",
+      "input": "正文没有涉及某条强制性要求",
+      "steps": "查看响应矩阵与报告“下一步”",
+      "expected": "判定为 unclear（或 failed），响应矩阵中排在前面；“下一步”出现 review_unclear；不计入“满足”",
+      "automated_tests": [
+        "test_report_actions.py::test_failed_check_is_surfaced_like_unclear",
+        "test_report_actions.py::test_qualification_risks_come_first_then_unclear_then_rules_then_score_issues"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-025",
+      "capability": "废标／否决检测",
+      "title": "模型输出不可用时该条判定为检查失败并降低覆盖度",
+      "actor": "系统",
+      "input": "模型对某条规则多次返回不合结构的输出",
+      "steps": "执行核对",
+      "expected": "该条判定 failed；覆盖度 partial（一条都没成功为 empty）；项目不进入 ready_to_submit，报告提示重新评审",
+      "automated_tests": [
+        "test_review_fixes.py::test_partial_diagnosis_exposes_coverage_and_never_reaches_ready_to_submit",
+        "test_review_fixes.py::test_diagnosis_with_no_rule_checked_is_empty_coverage"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-026",
+      "capability": "废标／否决检测",
+      "title": "所需事实已确认时不要求人工确认",
+      "actor": "系统",
+      "input": "候选要求确认某事实，而该事实已在已确认事实中",
+      "steps": "执行核对",
+      "expected": "该候选以 facts_already_confirmed 丢弃",
+      "automated_tests": [
+        "test_product_logic.py::test_diagnosis_uses_confirmed_facts_and_skips_covered_confirmation_requests"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-027",
+      "capability": "废标／否决检测",
+      "title": "重跑核对不产生重复问题，也不覆盖人工复核",
+      "actor": "系统",
+      "input": "同一输入重复核对",
+      "steps": "再次执行核对",
+      "expected": "相同去重键（规则＋性质＋排序后的证据 ID）的问题保留首次记录及其复核状态",
+      "automated_tests": [
+        "test_product_logic.py::test_rerun_does_not_duplicate_and_reconcile_uses_latest_snapshot"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-028",
+      "capability": "废标／否决检测",
+      "title": "强制类问题的分类与影响",
+      "actor": "系统",
+      "input": "违反强制性要求的候选",
+      "steps": "执行核对",
+      "expected": "category=response、impact=qualification；评分条款与建议性要求上的问题为 improvement／technical",
+      "automated_tests": [
+        "test_ai_pipeline.py::test_rules_to_findings_flow"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-029",
+      "capability": "废标／否决检测",
+      "title": "问题复核流转与重新打开",
+      "actor": "项目工程审核人",
+      "input": "候选问题",
+      "steps": "确认、驳回、暂缓、请求补充事实、标记已解决、重新打开",
+      "expected": "按状态机流转；每次先追加审核记录再推进状态；已被更新一轮替代的问题只读",
+      "automated_tests": [
+        "test_review_fixes.py::test_finding_reopen_and_manual_resolve",
+        "test_product_logic.py::test_findings_pagination_is_keyset_and_survives_filter_changes"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-030",
+      "capability": "前后矛盾与范围残留",
+      "title": "同一个量在正文不同位置取值不同",
+      "actor": "系统",
+      "input": "正文两处写出不同的最大开挖深度（12m 与 15m）",
+      "steps": "执行确定性检测",
+      "expected": "报告一条 category=consistency、source=consistency 的问题，列出各取值及页码；型号不同的同类量（DN300 与 DN500）不互相比较",
+      "automated_tests": [
+        "test_checks.py::test_same_quantity_with_different_values_is_reported_once_with_pages",
+        "test_checks.py::test_same_value_and_different_models_do_not_conflict"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-031",
+      "capability": "前后矛盾与范围残留",
+      "title": "大段重复",
+      "actor": "系统",
+      "input": "不同页的两段文字高度重复",
+      "steps": "执行确定性检测",
+      "expected": "报告一条改进建议性质的 consistency 问题，至多 10 条",
+      "automated_tests": [
+        "test_checks.py::test_long_duplicated_passages_are_reported"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-032",
+      "capability": "前后矛盾与范围残留",
+      "title": "招标文件及补遗没有的工程对象被报为范围残留",
+      "actor": "系统",
+      "input": "正文出现“沉井”，招标文件与补遗均无",
+      "steps": "执行确定性检测",
+      "expected": "报告 category=scope、source=scope、需要确认的问题，附出处页码；没有招标文本时不猜",
+      "automated_tests": [
+        "test_checks.py::test_scope_residue_lists_objects_missing_from_tender"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-033",
+      "capability": "前后矛盾与范围残留",
+      "title": "确定性检测的问题没有规则，也没有规则依据状态",
+      "actor": "系统",
+      "input": "检测产生的问题",
+      "steps": "查询问题",
+      "expected": "rule_id 与 rule_basis 为空；数据库约束要求 source=rule 时二者必填、否则为空",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report",
+        "test_contract_conformance.py::test_migration_sql_is_identical_to_contract_schema"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-034",
+      "capability": "评分预测",
+      "title": "按评分标准逐项定档并给出区间与失分点",
+      "actor": "系统",
+      "input": "带分值的评分条款与正文",
+      "steps": "执行评分预测",
+      "expected": "每条条款带对应章节全文，按评分标准定档后在档内给分，得分要点逐条判断且写到的要点引用正文；每条判断 3 次取均值，区间取各次得分与所定档次的并集；topics 按估计失分排序并带档次、缺失要点与正文证据；没有生效的打分模型时 purpose=research、validation_status=not_validated",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report",
+        "test_predict.py::test_context_keeps_section_heads_then_fills_by_relevance_in_document_order",
+        "test_predict.py::test_grounding_downgrades_points_without_offered_evidence_and_aggregate_unions_grade_intervals",
+        "test_predict.py::test_judgement_output_must_be_consistent",
+        "test_predict.py::test_repeats_use_temperature_and_fallbacks"
+      ],
+      "real_environment": "依赖服务器、真实模型与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-035",
+      "capability": "评分预测",
+      "title": "没有引文支持的要点降为缺失，判断全部不可用的条款按全幅计入区间",
+      "actor": "系统",
+      "input": "模型声称写到但没有引用正文的要点；对某条款的判断全部不可用",
+      "steps": "执行评分预测",
+      "expected": "无引文的“写到”降为缺失；全部不可用的条款估计取满分一半、区间为 0 到满分，覆盖度标为未完成",
+      "automated_tests": [
+        "test_predict.py::test_grounding_downgrades_points_without_offered_evidence_and_aggregate_unions_grade_intervals",
+        "test_predict.py::test_all_judgements_failing_falls_back_to_half_points"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-036",
+      "capability": "评分预测",
+      "title": "没有评分分值时预测弃权",
+      "actor": "系统",
+      "input": "评分条款没有提取到分值",
+      "steps": "执行评分预测",
+      "expected": "status=abstained 并说明原因，不给数值",
+      "automated_tests": [],
+      "real_environment": "不依赖外部服务（逻辑见 ai/predict.py；没有专门的自动化测试）"
+    },
+    {
+      "case_id": "AC-037",
+      "capability": "评分预测",
+      "title": "预测写明是否已校准",
+      "actor": "登录成员",
+      "input": "任意预测",
+      "steps": "查看报告",
+      "expected": "没有生效的打分模型时界面展示“未校准”标签和 reason；数据库约束：purpose=business 时必须 validated_in_scope 并引用验证记录",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report",
+        "test_predict.py::test_business_model_calibrates_and_shadow_is_recorded"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-038",
+      "capability": "评分预测",
+      "title": "校准状态随配对组数变化",
+      "actor": "投标负责人",
+      "input": "已登记官方技术分的提交",
+      "steps": "登记结果后查看度量与报告",
+      "expected": "0 组 uncalibrated；1–19 组 insufficient 且不给误差；20 组及以上 calibrated 并给出 mae 与 bias",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_submission_and_outcome_feed_metrics_and_calibration"
+      ],
+      "real_environment": "20 组以上的校准依赖真实数据，尚未验证；测试只覆盖 0 组与少量配对"
+    },
+    {
+      "case_id": "AC-039",
+      "capability": "评分预测",
+      "title": "评审输入不含成绩与门槛",
+      "actor": "系统",
+      "input": "官方成绩资料",
+      "steps": "冻结输入",
+      "expected": "官方成绩类资料被拒绝进入评审输入（422 official_result_not_allowed）",
+      "automated_tests": [],
+      "real_environment": "不依赖外部服务（校验逻辑见 services/snapshots.py；没有专门的自动化测试）"
+    },
+    {
+      "case_id": "AC-040",
+      "capability": "报价",
+      "title": "平均值法与去极值平均值法的基准价与价格分",
+      "actor": "投标负责人",
+      "input": "竞争对手报价估计与评标价规则",
+      "steps": "试算",
+      "expected": "基准价、偏差、价格分按规则计算；扣到 0 分为止",
+      "automated_tests": [
+        "test_pricing.py::test_average_benchmark_and_score_by_deviation",
+        "test_pricing.py::test_trimmed_average_drops_extremes_and_coefficient_applies",
+        "test_pricing.py::test_score_is_clamped_at_zero"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-041",
+      "capability": "报价",
+      "title": "固定基准价与计入己方报价",
+      "actor": "投标负责人",
+      "input": "fixed 或 include_own",
+      "steps": "试算",
+      "expected": "固定基准价乘系数；include_own 时己方候选计入平均",
+      "automated_tests": [
+        "test_pricing.py::test_fixed_benchmark_and_include_own_price"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-042",
+      "capability": "报价",
+      "title": "超过最高限价与异常低价给出风险提示并排除出最优",
+      "actor": "投标负责人",
+      "input": "候选报价超过 max_limit 或低于异常低价线",
+      "steps": "试算",
+      "expected": "flags 含 over_max_limit 或 abnormal_low；最优候选只在无风险候选中选",
+      "automated_tests": [
+        "test_pricing.py::test_risk_flags_exclude_candidates_from_best"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-043",
+      "capability": "报价",
+      "title": "没有竞争对手报价时说明原因，不猜基准价",
+      "actor": "投标负责人",
+      "input": "平均值法且无竞争对手报价",
+      "steps": "试算",
+      "expected": "benchmark 为空并在 notes 说明",
+      "automated_tests": [
+        "test_pricing.py::test_average_without_prices_explains_instead_of_guessing"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-044",
+      "capability": "报价",
+      "title": "保存追加版本，只有投标负责人可保存",
+      "actor": "投标负责人／其他成员",
+      "input": "评标价规则与候选报价",
+      "steps": "保存、查询历史；其他岗位保存",
+      "expected": "每次保存追加一个版本并指向上一版本；非投标负责人保存返回 403；试算接口不保存",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-045",
+      "capability": "提交闸门",
+      "title": "未确认的废标／否决／强制类规则阻止登记提交",
+      "actor": "投标负责人",
+      "input": "存在未审核的否决或强制类规则；项目未开启“规则按原文接受”（accept_rules_as_written=false，默认）",
+      "steps": "登记提交",
+      "expected": "返回 409 qualification_rules_unconfirmed，并给出条数",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-046",
+      "capability": "提交闸门",
+      "title": "未处理的关键问题与废标／强制响应类问题阻止登记提交",
+      "actor": "投标负责人",
+      "input": "存在未处理的 critical、disqualification 或 response 问题",
+      "steps": "登记提交",
+      "expected": "返回 409 critical_findings_open",
+      "automated_tests": [
+        "test_review_fixes.py::test_submission_gate",
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-047",
+      "capability": "提交闸门",
+      "title": "覆盖不完整的评审不能登记提交",
+      "actor": "投标负责人",
+      "input": "核对覆盖度为 partial 或 empty",
+      "steps": "登记提交",
+      "expected": "返回 409 diagnosis_incomplete",
+      "automated_tests": [
+        "test_review_fixes.py::test_partial_diagnosis_exposes_coverage_and_never_reaches_ready_to_submit"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-048",
+      "capability": "提交闸门",
+      "title": "输入过期时不能登记提交",
+      "actor": "投标负责人",
+      "input": "评审之后事实库或资料有更新",
+      "steps": "登记提交",
+      "expected": "返回 409 snapshot_stale",
+      "automated_tests": [
+        "test_review_fixes.py::test_submission_rejects_snapshot_older_than_facts",
+        "test_review_fixes.py::test_submission_rejects_snapshot_older_than_new_materials"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-049",
+      "capability": "提交闸门",
+      "title": "登记提交同时留下投标负责人的确认记录",
+      "actor": "投标负责人",
+      "input": "正文最新版本与最新一轮评审",
+      "steps": "登记提交",
+      "expected": "写入提交与确认记录，项目进入 submitted；正文不是最新版本时拒绝",
+      "automated_tests": [
+        "test_product_logic.py::test_submission_records_lead_confirmation_and_requires_current_body",
+        "test_auto_pipeline.py::test_submission_and_outcome_feed_metrics_and_calibration"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-050",
+      "capability": "结果登记",
+      "title": "结果更正以新记录指向旧记录",
+      "actor": "投标负责人",
+      "input": "已登记的结果",
+      "steps": "更正或官方核实",
+      "expected": "旧记录保留；被更正的记录不能再被指向；官方核实需要官方原件与页码",
+      "automated_tests": [
+        "test_product_logic.py::test_outcome_supersedes_must_be_unsuperseded_record_of_same_submission"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-051",
+      "capability": "结果登记",
+      "title": "未知成绩不记零，分值量尺校验",
+      "actor": "投标负责人",
+      "input": "无分数结果或分值超过满分",
+      "steps": "登记结果",
+      "expected": "“无分数”不带分值；分值超过满分或满分非正返回 422 score_scale_invalid",
+      "automated_tests": [],
+      "real_environment": "不依赖外部服务（校验逻辑见 services/outcomes.py；没有专门的自动化测试）"
+    },
+    {
+      "case_id": "AC-052",
+      "capability": "报告与导出",
+      "title": "报告汇总响应矩阵、分类计数、预测、报价与下一步",
+      "actor": "投标负责人",
+      "input": "完成的一轮评审",
+      "steps": "读取报告",
+      "expected": "返回基于该轮输入的响应矩阵、五类问题计数、预测、报价摘要、next_actions 与流水线；没有完成的评审时返回 404 report_not_ready",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report",
+        "test_auto_pipeline.py::test_failed_step_is_reported_and_restart_resumes"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-053",
+      "capability": "报告与导出",
+      "title": "下一步按对中标的影响排序",
+      "actor": "投标负责人",
+      "input": "不同状态组合",
+      "steps": "计算 next_actions",
+      "expected": "顺序：评审中断（retry_analysis）、等待手动开始（start_analysis）或进行中（wait_analysis），然后是废标／强制类问题、无法判断的条款、未确认的关键规则、其他问题、重新评审提示、填写报价、登记提交、登记结果；关闭的模块与按原文接受的规则不出现在其中（见项目级功能开关的用例）",
+      "automated_tests": [
+        "test_report_actions.py::test_clean_review_goes_straight_to_submission",
+        "test_report_actions.py::test_qualification_risks_come_first_then_unclear_then_rules_then_score_issues",
+        "test_report_actions.py::test_failed_check_is_surfaced_like_unclear",
+        "test_report_actions.py::test_pipeline_state_and_outcome_prompts"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-054",
+      "capability": "报告与导出",
+      "title": "导出 Word 评审报告与批注版 PDF",
+      "actor": "投标负责人",
+      "input": "完成的一轮评审",
+      "steps": "下载 report.docx 与 body.annotated.pdf",
+      "expected": "Word 为有效 docx；PDF 在正文原页写入高亮批注，无坐标的证据标在页面左上角，不画虚构位置；正文不是 PDF 时返回 409",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_upload_runs_the_whole_review_and_builds_the_report"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-055",
+      "capability": "度量",
+      "title": "结果、废标／否决风险闭环、校准与逐轮变化",
+      "actor": "投标负责人",
+      "input": "提交与结果",
+      "steps": "读取度量",
+      "expected": "入围率、中标率按已出结果计算；废标／否决风险返回发现数、已处理数、提交时未处理数和招标方实际否决数；每个项目逐轮给出预测、未处理与已解决问题数；不含过程类指标",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_submission_and_outcome_feed_metrics_and_calibration"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-056",
+      "capability": "访问与权限",
+      "title": "跨项目访问返回 404，岗位不足返回 403",
+      "actor": "任意成员",
+      "input": "不属于该项目的成员",
+      "steps": "访问项目资源",
+      "expected": "不泄露项目是否存在；已是成员但岗位不足为 403",
+      "automated_tests": [
+        "test_api_projects.py::test_cross_project_isolation_returns_404",
+        "test_api_projects.py::test_grant_roles_enforces_permissions_and_last_lead"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-057",
+      "capability": "访问与权限",
+      "title": "登录会话与跨站写入防护",
+      "actor": "任意成员",
+      "input": "会话 Cookie 与 CSRF 令牌",
+      "steps": "登录、写请求、登出",
+      "expected": "写请求缺少 CSRF 令牌被拒；成员停用后会话立即失效；登录失败的响应一致并写审计",
+      "automated_tests": [
+        "test_api_projects.py::test_login_cookie_csrf_and_logout",
+        "test_api_projects.py::test_deactivated_member_loses_access_immediately",
+        "test_api_projects.py::test_login_failure_is_uniform_and_audited"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-058",
+      "capability": "访问与权限",
+      "title": "写请求幂等键与 If-Match",
+      "actor": "任意成员",
+      "input": "重复的写请求；缺少前置条件的更新",
+      "steps": "提交请求",
+      "expected": "同键同请求重放原响应；缺 Idempotency-Key 返回 428；更新缺 If-Match 返回 428、版本过期返回 412",
+      "automated_tests": [
+        "test_api_projects.py::test_create_project_requires_system_role_and_replays_idempotently",
+        "test_api_projects.py::test_update_requires_if_match_and_detects_stale"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-059",
+      "capability": "任务协议",
+      "title": "任务与发件箱同事务，回滚后不留消息",
+      "actor": "系统",
+      "input": "入队后事务回滚",
+      "steps": "入队",
+      "expected": "jobs 与 outbox_events 要么都在要么都不在",
+      "automated_tests": [
+        "test_tasks_protocol.py::test_enqueue_writes_job_and_outbox_atomically",
+        "test_tasks_protocol.py::test_rolled_back_enqueue_leaves_no_outbox"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-060",
+      "capability": "任务协议",
+      "title": "领取互斥、租约失效后旧尝试不能提交",
+      "actor": "系统",
+      "input": "两个 worker 抢同一任务；租约过期",
+      "steps": "领取、过期、回收、提交",
+      "expected": "只有一个领取成功；过期任务回到 queued；旧 attempt 提交被拒（LEASE_LOST）；尝试用尽标为失败",
+      "automated_tests": [
+        "test_tasks_protocol.py::test_claim_is_exclusive_and_class_scoped",
+        "test_tasks_protocol.py::test_expired_lease_is_reaped_and_old_attempt_cannot_commit",
+        "test_tasks_protocol.py::test_attempts_exhausted_marks_failed",
+        "test_tasks_protocol.py::test_commit_requires_current_lease_input_and_committed_artifact"
+      ],
+      "real_environment": "已在 PostgreSQL 上验证；Kafka 重平衡与位点行为依赖服务器，尚未验证"
+    },
+    {
+      "case_id": "AC-061",
+      "capability": "任务协议",
+      "title": "取消、重复消息与输入不可变",
+      "actor": "系统",
+      "input": "取消请求；重复投递；改写任务输入",
+      "steps": "续租、消费、更新",
+      "expected": "续租发现取消请求；同一事件只处理一次；任务输入与幂等键由数据库触发器保护",
+      "automated_tests": [
+        "test_tasks_protocol.py::test_renew_extends_and_detects_cancel",
+        "test_tasks_protocol.py::test_consume_dedupe",
+        "test_tasks_protocol.py::test_job_inputs_are_immutable",
+        "test_tasks_protocol.py::test_relay_publishes_and_keeps_failed_rows"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-062",
+      "capability": "任务协议",
+      "title": "通用任务入口不创建任何任务种类",
+      "actor": "系统",
+      "input": "各任务种类的通用创建请求",
+      "steps": "调用 POST /projects/{id}/tasks",
+      "expected": "全部返回 422 kind_not_creatable_here；任务只由自动评审流水线与专用入口入队",
+      "automated_tests": [
+        "test_review_fixes.py::test_generic_task_endpoint_rejects_every_kind"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-063",
+      "capability": "任务协议",
+      "title": "数据库角色分权",
+      "actor": "系统",
+      "input": "受限 worker 角色",
+      "steps": "解析任务在 app_worker 角色下执行",
+      "expected": "解析任务能在只有 app_worker 授权的数据库角色下端到端完成（授权清单见 schema.sql 末尾）",
+      "automated_tests": [
+        "test_files_and_parse.py::test_parse_pipeline_end_to_end_under_restricted_worker_role"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-064",
+      "capability": "契约一致性",
+      "title": "接口与数据结构由代码生成并与契约逐字一致",
+      "actor": "开发者",
+      "input": "代码、openapi.json、domain.schema.json、schema.sql",
+      "steps": "运行契约测试",
+      "expected": "迁移 SQL 与 contracts/schema.sql 逐字一致；生成的契约与代码一致；模型字段与契约 schema 字段集合一致",
+      "automated_tests": [
+        "test_contract_conformance.py::test_migration_sql_is_identical_to_contract_schema",
+        "test_contract_conformance.py::test_generated_contracts_are_current",
+        "test_contract_conformance.py::test_schemas_match_contract"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-065",
+      "capability": "改稿建议",
+      "title": "只使用已确认事实形成局部修改，原文必须逐字",
+      "actor": "编制人",
+      "input": "已确认的问题与允许使用的事实",
+      "steps": "发起改稿建议",
+      "expected": "修改使用的数字必须出自原文或允许的事实；不合格的修改被丢弃并记原因；没有任何合格修改时不能采纳",
+      "automated_tests": [
+        "test_ai_pipeline.py::test_revision_propose_adopt_and_stale",
+        "test_review_fixes.py::test_revision_without_accepted_edits_cannot_be_adopted"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-066",
+      "capability": "改稿建议",
+      "title": "正文有新版本后旧的改稿建议过期",
+      "actor": "编制人",
+      "input": "基于旧正文版本的建议",
+      "steps": "上传新版正文后采纳",
+      "expected": "建议显示为过期，不能采纳",
+      "automated_tests": [
+        "test_ai_pipeline.py::test_stale_revision_cannot_be_adopted"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-067",
+      "capability": "项目级功能开关",
+      "title": "新建项目的开关取默认值，投标负责人整体修改并留审计",
+      "actor": "投标负责人",
+      "input": "新建项目；修改功能开关",
+      "steps": "读取 GET /projects/{id} 的 settings；以 PATCH /projects/{id} 提交完整的 settings（带 If-Match）；查询审计",
+      "expected": "默认 auto_start、consistency_check、scope_check、show_score、price、outcome_tracking 为 true，accept_rules_as_written 为 false；修改整体替换七个键，项目 revision 加一；审计 project.update 的 details 含修改后的 settings；缺少 If-Match 返回 428，版本过期返回 412 stale_version；非投标负责人返回 403；修改不触发新一轮评审",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_manual_start_waits_for_the_user_each_round",
+        "test_auto_pipeline.py::test_switches_trim_checks_report_and_submission_gate",
+        "test_api_projects.py::test_update_requires_if_match_and_detects_stale",
+        "frontend/src/features/projects/SettingsPage.test.tsx::功能开关 > 默认全开（规则按原文接受除外）；负责人改动后整体提交 settings，带当前 revision",
+        "frontend/src/features/projects/SettingsPage.test.tsx::功能开关 > 非负责人只能查看开关"
+      ],
+      "real_environment": "不依赖外部服务；非投标负责人修改开关返回 403 没有专门的自动化测试（由权限矩阵 manage_project 保证）"
+    },
+    {
+      "case_id": "AC-068",
+      "capability": "项目级功能开关",
+      "title": "关闭自动开始评审：资料照常解析，评审等人点“开始评审”",
+      "actor": "投标负责人",
+      "input": "auto_start=false 的项目；一份招标文件和一份技术标正文；之后上传正文新版本",
+      "steps": "上传两份资料并等待任务结束；调用 POST /projects/{id}/analysis；上传正文新版本；再次调用 POST /projects/{id}/analysis",
+      "expected": "开始前只有 parse 任务；项目状态 ready_to_analyze；pipeline.stage=waiting_start，四步依次为 done、waiting、waiting、waiting；GET /projects/{id}/report 返回 404 report_not_ready，页面给出“开始评审”。开始后评审完成，状态 issues_open。正文新版本上传后 stage 回到 waiting_start，stale_reasons=[\"body_updated\"]，报告仍为第 1 轮且 next_actions 第一条为 start_analysis；再次开始后报告为第 2 轮。analysis_requested_at 晚于最近一次冻结才允许开新一轮",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_manual_start_waits_for_the_user_each_round",
+        "test_report_actions.py::test_manual_start_is_offered_when_inputs_changed",
+        "frontend/src/features/report/ReportPage.test.tsx::报告页：项目功能开关 > 手动开始评审：资料就绪时给出“开始评审”，点击发起 POST /analysis"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-069",
+      "capability": "项目级功能开关",
+      "title": "规则按原文接受：未确认的关键规则不阻止登记，其余闸门条件不变",
+      "actor": "投标负责人",
+      "input": "accept_rules_as_written=true；本轮存在未确认的废标／否决／强制类规则，没有未处理的关键与废标／响应类问题",
+      "steps": "读取报告；登记提交；导出 report.docx",
+      "expected": "登记提交成功（不返回 qualification_rules_unconfirmed）；next_actions 不含 confirm_rules；Word 报告的评审依据写明按原文接受；问题与判定的 rule_basis 仍为 unconfirmed；仍有未处理的关键或废标／响应类问题时照常返回 409 critical_findings_open",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_switches_trim_checks_report_and_submission_gate",
+        "test_report_actions.py::test_switched_off_modules_do_not_ask_for_anything"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证；开关开启时关键问题仍阻止登记由闸门的检查顺序保证，没有专门的组合测试"
+    },
+    {
+      "case_id": "AC-070",
+      "capability": "项目级功能开关",
+      "title": "提交页闸门清单按“规则按原文接受”判定",
+      "actor": "投标负责人",
+      "input": "accept_rules_as_written=true；存在未确认的废标／否决／强制类规则；其余闸门条件满足",
+      "steps": "打开“提交与结果”页的登记提交标签",
+      "expected": "闸门清单中“废标／否决／强制类规则已全部确认”一项视为满足并注明按原文接受；登记表单可用",
+      "automated_tests": [],
+      "real_environment": "已知缺陷：前端提交页尚未读取该开关，仍禁用登记表单，见验证报告第 5 节"
+    },
+    {
+      "case_id": "AC-071",
+      "capability": "项目级功能开关",
+      "title": "关闭前后矛盾与范围残留检测：不运行、不产生问题、报告不显示该分类",
+      "actor": "投标负责人",
+      "input": "consistency_check=false、scope_check=false；正文含同一量的不同取值与招标文件没有的工程对象",
+      "steps": "评审；读取报告与核对产物",
+      "expected": "report.categories 中 consistency 与 scope 的 total 为 0；核对产物的 checks 为 {\"consistency\": false, \"scope\": false}；报告页不显示这两个分类；已完成一轮的问题不因修改开关而改变",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_switches_trim_checks_report_and_submission_gate",
+        "frontend/src/features/report/ReportPage.test.tsx::报告页：项目功能开关 > 不显示分数、关闭报价与检测：只列失分点，不出现分数、报价卡片和对应分类"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证；核对产物 checks 字段的取值没有专门的断言"
+    },
+    {
+      "case_id": "AC-072",
+      "capability": "项目级功能开关",
+      "title": "关闭显示预测分数：只列失分点，预测照常进行",
+      "actor": "投标负责人",
+      "input": "show_score=false；评分条款带分值",
+      "steps": "评审；读取报告；导出 report.docx",
+      "expected": "预测任务照常运行并写入预测（参与校准）；报告页头部卡片为“可能的失分点”，预测面板只列条款、评估与证据，没有估计值、区间与估计失分；Word 报告第三部分标题为“可能的失分点”，不含“技术标估计”",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_switches_trim_checks_report_and_submission_gate",
+        "frontend/src/features/report/ReportPage.test.tsx::报告页：项目功能开关 > 不显示分数、关闭报价与检测：只列失分点，不出现分数、报价卡片和对应分类"
+      ],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-073",
+      "capability": "项目级功能开关",
+      "title": "关闭报价模块：导航、报告、下一步与 Word 报告都不出现报价",
+      "actor": "投标负责人",
+      "input": "price=false",
+      "steps": "读取报告；打开导航与报价页地址；导出 report.docx",
+      "expected": "report.price 为 null，next_actions 不含 set_price；导航没有“报价”；直接打开报价页显示“本项目关闭了报价模块”与去设置的入口；Word 报告没有“四、报价”；报价接口与已保存方案不受影响",
+      "automated_tests": [
+        "test_auto_pipeline.py::test_switches_trim_checks_report_and_submission_gate",
+        "test_report_actions.py::test_switched_off_modules_do_not_ask_for_anything",
+        "frontend/src/features/projects/SettingsPage.test.tsx::功能开关 > 报价模块关闭时报价页给出说明和去设置的入口",
+        "frontend/src/features/report/ReportPage.test.tsx::报告页：项目功能开关 > 不显示分数、关闭报价与检测：只列失分点，不出现分数、报价卡片和对应分类"
+      ],
+      "real_environment": "浏览器端到端冒烟（backend/tools/smoke/e2e.py）在真实 API 与构建后的前端上走通“关闭报价模块后导航不出现报价”；真实服务器尚未验证"
+    },
+    {
+      "case_id": "AC-074",
+      "capability": "项目级功能开关",
+      "title": "关闭提示登记开标结果：提交后不提示登记",
+      "actor": "投标负责人",
+      "input": "outcome_tracking=false；已登记提交、尚未登记结果",
+      "steps": "读取报告",
+      "expected": "next_actions 不含 record_outcome；结果登记接口与页面照常可用",
+      "automated_tests": [
+        "test_report_actions.py::test_switched_off_modules_do_not_ask_for_anything"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-075",
+      "capability": "外部服务联调",
+      "title": "对象存储预签名分片直传",
+      "actor": "编制人",
+      "input": "真实 OSS 与浏览器",
+      "steps": "分片上传并完成",
+      "expected": "跨域配置正确，ETag 可读，服务端复算通过",
+      "automated_tests": [],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-076",
+      "capability": "外部服务联调",
+      "title": "Kafka 重平衡、位点与长任务",
+      "actor": "系统",
+      "input": "真实 Kafka",
+      "steps": "长任务执行期间暂停轮询并续租",
+      "expected": "不触发重复投递；丢失由回收器补发",
+      "automated_tests": [],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-077",
+      "capability": "外部服务联调",
+      "title": "真实模型下的核对与预测质量",
+      "actor": "投标负责人",
+      "input": "真实招标文件、真实技术标正文与真实模型",
+      "steps": "上传并评审",
+      "expected": "违反项召回、误报率、预测误差按数据管理规范的标注评价",
+      "automated_tests": [],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-078",
+      "capability": "外部服务联调",
+      "title": "迁移与备份恢复演练",
+      "actor": "维护人员",
+      "input": "目标环境",
+      "steps": "执行迁移、备份与恢复演练",
+      "expected": "恢复后业务关联与文件校验一致，原页可打开",
+      "automated_tests": [],
+      "real_environment": "依赖服务器与数据，尚未验证"
+    },
+    {
+      "case_id": "AC-079",
+      "capability": "评分预测",
+      "title": "打分模型校准分数与区间",
+      "actor": "系统",
+      "input": "业务环境登记了评测通过的打分模型，项目在其适用范围内",
+      "steps": "执行评分预测并查看报告",
+      "expected": "分数与约 80% 区间由模型给出，保留一位小数，maximum 为技术标满分，validation_status=validated_in_scope；界面标“已校准”并写明训练组数、误差与适用范围；影子环境模型的结果只写入明细产物",
+      "automated_tests": [
+        "test_predict.py::test_business_model_calibrates_and_shadow_is_recorded",
+        "test_scoring_models.py::test_apply_matches_hand_computed_vectors",
+        "test_scoring_models.py::test_apply_matches_research_golden_vectors",
+        "test_scoring_models.py::test_missing_indicator_and_open_interval",
+        "features/report/ReportPage.test.tsx::报告页：评审报告 > 打分模型已校准：标“已校准”，区间写明把握，给出模型的样本数、误差与适用范围，不写覆盖程度"
+      ],
+      "real_environment": "公式与流程在合成数据上验证；真实成绩训练的模型尚未产生"
+    },
+    {
+      "case_id": "AC-080",
+      "capability": "评分预测",
+      "title": "项目超出打分模型适用范围",
+      "actor": "系统",
+      "input": "项目工程类型或地区不在模型范围内，或缺少模型需要的特征",
+      "steps": "执行评分预测",
+      "expected": "保留逐项合计，validation_status=out_of_scope，reason 写明不适用的原因；地区按地名包含关系判断（“合肥”在“安徽省合肥市”内）",
+      "automated_tests": [
+        "test_predict.py::test_out_of_scope_model_keeps_the_uncalibrated_estimate",
+        "test_scoring_models.py::test_scope_and_missing_features"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-081",
+      "capability": "评分预测",
+      "title": "打分模型与锚点包的登记、路由与撤下",
+      "actor": "维护人员",
+      "input": "研究侧导出的模型或锚点包与评估报告",
+      "steps": "bidwb-admin register-scoring-model／register-anchor-pack／unroute-*",
+      "expected": "契约与 model_id 复核；业务环境只接受评测通过的模型；登记写入数据集、实验、模型、验收、发布与路由的追溯链并留审计；同一模型重复登记不改动；撤下后预测回到未校准",
+      "automated_tests": [
+        "test_model_registry.py::test_register_route_replace_and_unroute",
+        "test_model_registry.py::test_contract_and_business_gate",
+        "test_model_registry.py::test_register_anchor_pack",
+        "test_scoring_models.py::test_contract_is_checked",
+        "test_scoring_models.py::test_registration_gate"
+      ],
+      "real_environment": "不依赖外部服务"
+    },
+    {
+      "case_id": "AC-082",
+      "capability": "评分预测",
+      "title": "比较式锚定",
+      "actor": "系统",
+      "input": "路由了锚点包",
+      "steps": "执行评分预测",
+      "expected": "按工程类型、评分办法与分数分位挑锚点，排除相同正文；对满分合计占七成的前几条条款逐份比较，位置轮换并换算回本标书视角；Bradley–Terry 拟合出 anchor_pct 等特征；批量回放时同项目、同模板的锚点不用",
+      "automated_tests": [
+        "test_anchors.py::test_selection_prefers_same_type_then_scheme_and_spreads_over_quantiles",
+        "test_anchors.py::test_items_cover_seventy_percent_of_points_at_most_six",
+        "test_anchors.py::test_bradley_terry_fit_finds_the_known_optimum",
+        "test_anchors.py::test_position_alternates_and_maps_back",
+        "test_predict.py::test_routed_anchor_pack_feeds_anchor_features"
+      ],
+      "real_environment": "锚定是否带来增益依赖真实数据评测，尚未验证"
+    },
+    {
+      "case_id": "AC-083",
+      "capability": "评分预测",
+      "title": "历史样本批量预测与产品数据回流",
+      "actor": "研究人员",
+      "input": "评分配对集（格式 A）",
+      "steps": "tools/batch/predict_dataset.py；bidwb-admin export-score-pairs",
+      "expected": "逐份用产品流水线跑预测，只上传招标资料与正文，输出格式 B（含特征 pf-1）；模型调用有缓存、可续跑、失败隔离；产品里登记了技术分的提交可导出为同样的格式 A／B",
+      "automated_tests": [
+        "test_batch_predict.py::test_batch_predicts_caches_resumes_and_isolates_failures",
+        "test_batch_predict.py::test_estimate_only_does_not_call_the_model",
+        "test_batch_predict.py::test_cached_llm_replays_with_this_run_identifiers",
+        "test_score_pairs.py::test_export_writes_format_a_and_b"
+      ],
+      "real_environment": "真实模型下的批量运行尚未进行"
+    }
+  ]
+}
