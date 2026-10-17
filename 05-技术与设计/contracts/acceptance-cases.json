@@ -1011,13 +1011,13 @@
     {
       "case_id": "AC-075",
       "capability": "外部服务联调",
-      "title": "对象存储预签名分片直传",
+      "title": "同源分片上传并转传对象存储",
       "actor": "编制人",
       "input": "真实 OSS 与浏览器",
       "steps": "分片上传并完成",
-      "expected": "跨域配置正确，ETag 可读，服务端复算通过",
-      "automated_tests": [],
-      "real_environment": "依赖服务器与数据，尚未验证"
+      "expected": "浏览器只连接本站；会话、CSRF、分片大小及重传校验通过，服务端转传并复算 SHA-256；不依赖桶 CORS",
+      "automated_tests": ["test_upload_parts.py", "test_storage_s3.py", "uploader.test.ts", "client.test.ts"],
+      "real_environment": "HTTP 经真实 nginx／OSS 的 9 MiB 多片上传、重传及下载校验通过；真实浏览器交互待验证"
     },
     {
       "case_id": "AC-076",
