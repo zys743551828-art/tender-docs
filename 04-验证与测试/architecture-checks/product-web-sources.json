@@ -1,0 +1,465 @@
+{
+  "scope": "官方网页披露与云厂商客户文章；未运行产品、真实模型或生产故障试验",
+  "cache_policy": "原文HTML和提取文本位于独立研究缓存，不提交整页内容；摘要固定取得时证据，远端变化时不可自行改摘要",
+  "date_policy": "published_date只记录已明确的首次发表日期，page_date_metadata原样保留页面元信息；不以搜索引擎估计日期代替",
+  "files": [
+    {
+      "source": "WEB-GOV-01",
+      "publisher": "GovDash",
+      "url": "https://www.govdash.com/blog/how-govdash-combines-llms-rag-and-agentic-ai-for-mission-success",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.005327+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "美国政府承包投标；当前产品说明",
+      "status": 200,
+      "final_url": "https://www.govdash.com/blog/how-govdash-combines-llms-rag-and-agentic-ai-for-mission-success",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 116823,
+      "sha256": "7a5a605509d08738b308cc949f8f4f1dac00682c13edc14c0577884e826d1c8d",
+      "title": "How GovDash Uses AI Models: Multi-Model Architecture & Controls",
+      "page_date_metadata": {
+        "article:modified_time": "2026-09-17T20:00:00.000Z"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "d82e1f953a4571e7243ad76cb9e174d6c42c599ee0e5e19c5a05b249f212aab4",
+      "reviewed_topics": [
+        "按任务选择模型、语义与全文检索、引文、运行记录及人工复核"
+      ],
+      "not_established": [
+        "具体任务执行框架、完整恢复语义和厂商数据声明未实测"
+      ],
+      "content_markers": [
+        "Semantic search",
+        "Full-text search",
+        "Continuous evaluation",
+        "A visible record of agent work"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-GOV-02",
+      "publisher": "Microsoft for Startups",
+      "url": "https://www.microsoft.com/en-us/startups/blog/govdash-modernizing-government-contract-workflows-ai/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.006239+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "美国政府承包投标；2024年客户案例",
+      "status": 200,
+      "final_url": "https://www.microsoft.com/en-us/startups/blog/govdash-modernizing-government-contract-workflows-ai/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 272533,
+      "sha256": "9c692e55c54b759e595096032f6990c78a768bf16a2b241c200d6cb44ddb19fb",
+      "title": "GovDash: Modernizing Government Contract Workflows with AI",
+      "page_date_metadata": {
+        "article:published_time": "2024-06-18T14:33:42+00:00",
+        "article:modified_time": "2024-11-01T22:53:43+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "fab61b23439f057318c108e1e7a53e508c1cc94938c93af9971668f9eb4b575d",
+      "reviewed_topics": [
+        "Azure Document Intelligence OCR、Azure OpenAI、跨区域限流分配"
+      ],
+      "not_established": [
+        "不代表当前全部云或模型路径；未披露持久执行框架"
+      ],
+      "content_markers": [
+        "June 18, 2024",
+        "Azure Document Intelligence",
+        "custom load balancer"
+      ],
+      "published_date": "2024-06-18",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-AUTO-01",
+      "publisher": "AutogenAI",
+      "url": "https://autogenai.com/apac/blog/how-do-embeddings-work-find-content-for-your-rfps/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.006730+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "RFP响应起草；非中国市政技术分预测",
+      "status": 200,
+      "final_url": "https://autogenai.com/apac/blog/how-do-embeddings-work-find-content-for-your-rfps/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 193166,
+      "sha256": "12baec00fa4ed5fdb8bbd541b6777643631ac2c3813f1479e8b485853b5f3169",
+      "title": "From Keywords to Meaning: How do Embeddings Work?",
+      "page_date_metadata": {
+        "article:published_time": "2026-02-25T14:59:53+00:00",
+        "article:modified_time": "2026-03-16T10:07:30+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "5f76b433abbbe763d16b869e101f3fb9a82ce63fadbcc19bb88348518be39cd7",
+      "reviewed_topics": [
+        "按段落和标题切分、embedding检索、片段证据后生成及来源核验"
+      ],
+      "not_established": [
+        "不证明完整章节评分覆盖、独立中标收益或向量库选型"
+      ],
+      "content_markers": [
+        "Documents are split into sections",
+        "Only the most relevant sections",
+        "Show sources for verification"
+      ],
+      "published_date": "2026-02-25",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-AUTO-02",
+      "publisher": "AutogenAI",
+      "url": "https://autogenai.com/blog/winning-with-autogenai/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.007196+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "提案生成；具体出口取决于客户配置",
+      "status": 200,
+      "final_url": "https://autogenai.com/blog/winning-with-autogenai/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 170269,
+      "sha256": "bd58e7144322f93cbbb58756b0e6052ca28ec69951c71acff58e03071ee8970e",
+      "title": "How AutogenAI Empowers You to Win | AutogenAI",
+      "page_date_metadata": {
+        "article:published_time": "2025-11-05T05:59:14+00:00",
+        "article:modified_time": "2025-11-18T11:04:08+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "6d8b297363e0b4bb56798caf1b23b97c28d784a72570412dbae36596bf46abde",
+      "reviewed_topics": [
+        "检索与内容处理和外部生成分开描述"
+      ],
+      "not_established": [
+        "客户环境不等于无模型出口；未独立验证保留和训练声明"
+      ],
+      "content_markers": [
+        "Only the relevant text and the user prompts are sent for generation"
+      ],
+      "published_date": "2025-11-05",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-AUTO-03",
+      "publisher": "AutogenAI",
+      "url": "https://autogenai.com/dpa/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.007510+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "分地区合同与分包方披露；非特定客户路由",
+      "status": 200,
+      "final_url": "https://autogenai.com/dpa/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 161661,
+      "sha256": "11254435a3456411f806a2dc16a7736d6f0fcf6532e13f6b9d0e1f295c770f2c",
+      "title": "(DPA) Data processing Addendum - AutogenAI",
+      "page_date_metadata": {
+        "article:modified_time": "2025-11-06T14:25:47+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "9ae67fc7b91da79a260a59b6d7a8e23e9dc08ed72da21340294bd1d963df7dd2",
+      "reviewed_topics": [
+        "分包方表区分地区、基础设施与模型服务用途"
+      ],
+      "not_established": [
+        "不证明某客户实际调用全部列示供应商；不是法律合规验收"
+      ],
+      "content_markers": [
+        "OpenAI",
+        "Microsoft Azure",
+        "Mistral"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-TRUNK-01",
+      "publisher": "Trunk Tools",
+      "url": "https://trunktools.com/blog/trunk-tools-builds-cortex-purpose-built-ai/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:34.978711+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "施工项目文档与图纸；厂商技术说明",
+      "status": 200,
+      "final_url": "https://trunktools.com/blog/trunk-tools-builds-cortex-purpose-built-ai/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 76285,
+      "sha256": "fd886e2b684c9055f4e96d0be96c74d6167ee92f9c39a44631c3f903d8c4f8af",
+      "title": "The Brain We Built for Builders: Why Construction Deserves Purpose-Built AI | Trunk Tools",
+      "page_date_metadata": {
+        "article:published_time": "2026-06-22",
+        "article:modified_time": "2026-06-22"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "374bfe35bbaf877417fa3b36d6ee0075550511d6476e44d57e3032b23c0cca43",
+      "reviewed_topics": [
+        "施工本体、关系图谱、图纸视觉与Agent产物衔接"
+      ],
+      "not_established": [
+        "训练规模、视觉效果和节时未复现；模型、图数据库和执行器未披露"
+      ],
+      "content_markers": [
+        "construction ontology",
+        "knowledge graph",
+        "two million labeled drawing artifacts"
+      ],
+      "published_date": "2026-06-22",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-TRUNK-02",
+      "publisher": "Trunk Tools",
+      "url": "https://trunktools.com/platform/",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.116354+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "施工项目文档与图纸；产品说明",
+      "status": 200,
+      "final_url": "https://trunktools.com/platform/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 105703,
+      "sha256": "e1ac428146b9fff901e8d63988dead62c9db0e3ca55f74de5b24e17bb061d3ad",
+      "title": "Cortex | The brain of construction",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "608088ade182d813dee58f4cb17ac4106a203f4fba827d1f98f71bce43162754",
+      "reviewed_topics": [
+        "项目文档关系、图纸视觉层及预制工具"
+      ],
+      "not_established": [
+        "不代表本项目需要图数据库或专用模型；效果未独立验证"
+      ],
+      "content_markers": [
+        "living knowledge graph",
+        "vision layer",
+        "cross-sheet references"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-DC-01",
+      "publisher": "Document Crunch",
+      "url": "https://www.documentcrunch.com/news/document-crunch-launches-constructions-first-project-level-ai-risk-intelligence-platform",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.281864+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "施工项目风险；北美产品发布说明",
+      "status": 200,
+      "final_url": "https://www.documentcrunch.com/news/document-crunch-launches-constructions-first-project-level-ai-risk-intelligence-platform",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 128373,
+      "sha256": "f7536d4e1b39544a52a856ad790f3a0971609b6e195c10a1bf404f177aa54e43",
+      "title": "Document Crunch Launches Construction’s First Project-Level AI Risk Intelligence Platform",
+      "page_date_metadata": {
+        "article:modified_time": "2026-06-09T14:01:03+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "668f3b7c0f4d4494df62c13af275afb16d5ddefbad1e431e858c7c7ab5921c14",
+      "reviewed_topics": [
+        "CrunchAI、Project Assist及平台工作流分层，引用原文与跨文档处理"
+      ],
+      "not_established": [
+        "专有算法、基础模型和任务执行框架未披露"
+      ],
+      "content_markers": [
+        "June 09, 2026",
+        "CrunchAI surfaces risk",
+        "Project Assist acts on risk"
+      ],
+      "published_date": "2026-06-09",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-DC-02",
+      "publisher": "Document Crunch",
+      "url": "https://www.documentcrunch.com/security",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.282088+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "厂商安全架构披露；不是运行安全审计",
+      "status": 200,
+      "final_url": "https://www.documentcrunch.com/security",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 178770,
+      "sha256": "5a6132c29c0f02b056a6c5d2177ccd8497b40cd89fa98c6f91e62ee5a353d84f",
+      "title": "Security & Privacy",
+      "page_date_metadata": {
+        "article:modified_time": "2025-07-30T09:20:29+00:00"
+      },
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "77d1fd345f258b1b6e26e6f7e1a133bf05138ec3314cdfd622d7decebbda5a5e",
+      "reviewed_topics": [
+        "S3、AWS负载均衡、KMS及应用密钥管理服务"
+      ],
+      "not_established": [
+        "不证明采用Bedrock或特定基础模型；未做安全审计"
+      ],
+      "content_markers": [
+        "S3 buckets",
+        "AWS Key Management System",
+        "AWS Secrets Manager and Parameter Store"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-GLEAN-01",
+      "publisher": "Glean",
+      "url": "https://docs.glean.com/connectors/connectors-power-glean",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.531605+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "企业知识连接与检索；按连接器及部署区别",
+      "status": 200,
+      "final_url": "https://docs.glean.com/connectors/connectors-power-glean",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 55753,
+      "sha256": "873a7f215be9b899d9719e4c51a9a34683191d0910fc9bf76ce37ec642ce0079",
+      "title": "How connectors power the Glean experience",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "e15528efb54780185fb65ec333b25f8005e10bc25614b53012ff6280d6b68875",
+      "reviewed_topics": [
+        "索引、实时和混合检索、权限同步与Enterprise Graph"
+      ],
+      "not_established": [
+        "不证明每个连接器实时生效或全部当前内部实现"
+      ],
+      "content_markers": [
+        "Permission mirroring",
+        "Live retrieval",
+        "Hybrid",
+        "Enterprise Graph"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存",
+      "visible_last_updated": "2026-09-30"
+    },
+    {
+      "source": "WEB-GLEAN-02",
+      "publisher": "Glean",
+      "url": "https://docs.glean.com/administration/assistant/configuration/content-restrictions",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.555987+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "企业AI内容用途控制；产品配置说明",
+      "status": 200,
+      "final_url": "https://docs.glean.com/administration/assistant/configuration/content-restrictions",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 85112,
+      "sha256": "59c27284e36504e0b428008bdb125259a316eeebac0732aaeea198cac3565b18",
+      "title": "Restrict LLM access to content",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "b70f7cb4c2ba120580b292b2a1c45bbb3deaca882b64eee12066600572ebb5c3",
+      "reviewed_topics": [
+        "可访问内容仍可排除AI使用，规则生效最多一小时"
+      ],
+      "not_established": [
+        "不证明本项目成绩隔离或即时撤回已通过"
+      ],
+      "content_markers": [
+        "Even if a user has permission",
+        "up to an hour"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-GLEAN-03",
+      "publisher": "Glean",
+      "url": "https://docs.glean.com/security/architecture/data-flow",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.653412+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "企业知识数据流；架构文档入口",
+      "status": 200,
+      "final_url": "https://docs.glean.com/security/architecture/data-flow",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39109,
+      "sha256": "9c0b9bd710256a2bb3005065d7f54742b55497b9141914dc5cff6d5e9e7e0070",
+      "title": "Data flow",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "319066d11b3b5e619494eb58997fcec9c0dc157213561633e9d981055507a9ff",
+      "reviewed_topics": [
+        "查询、接入与处理三类数据流的职责划分"
+      ],
+      "not_established": [
+        "入口未披露具体执行器、服务拓扑或恢复协议"
+      ],
+      "content_markers": [
+        "Query flow",
+        "Data ingestion flow",
+        "Data processing flow"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-GLEAN-04",
+      "publisher": "Glean",
+      "url": "https://docs.glean.com/administration/llms",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:15:16.718060+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "企业模型管理；部署和密钥方式限定",
+      "status": 200,
+      "final_url": "https://docs.glean.com/administration/llms",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 92306,
+      "sha256": "c7b10df4ae21ecea0fb9ce54077869c4bbc2553cf6ea4fc506af35bc9c0e4ab7",
+      "title": "Supported LLMs",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "1db26908deeba5c3e0139dda54fff5df99f52e3466dd592ef2c0d3aeaf86c977",
+      "discovery_url": "https://docs.glean.com/administration/managing-agents/set-up-llms",
+      "discovery_observation": "原地址HTTP 200正文仅含跳转，按其canonical地址取得正文；未执行脚本",
+      "reviewed_topics": [
+        "Model Hub、供应商配置及不同密钥方式的可用性约束"
+      ],
+      "not_established": [
+        "支持列表不等于每个租户实际使用；未调用模型或购买服务"
+      ],
+      "content_markers": [
+        "Model Hub",
+        "Availability by hosting environment and provider",
+        "Customer Key"
+      ],
+      "published_date": null,
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    },
+    {
+      "source": "WEB-GLEAN-05",
+      "publisher": "Google Cloud",
+      "url": "https://cloud.google.com/blog/products/data-analytics/glean-uses-bigquery-and-google-ai-to-enhance-enterprise-search",
+      "path": "page.html",
+      "retrieved_at": "2026-10-16T08:14:35.896820+00:00",
+      "evidence_type": "official_web_disclosure",
+      "region_scope": "企业搜索；2023年Google Cloud客户案例",
+      "status": 200,
+      "final_url": "https://cloud.google.com/blog/products/data-analytics/glean-uses-bigquery-and-google-ai-to-enhance-enterprise-search",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 240541,
+      "sha256": "475bc693d8bf03a6357d39796c2f9752fbfbcebebd7b2d59adbbb434450cad78",
+      "title": "Glean uses BigQuery and Google AI to enhance enterprise search | Google Cloud Blog",
+      "page_date_metadata": {},
+      "extracted_text_path": "page.txt",
+      "extracted_text_sha256": "a61eb90afb649de79a9bd004e9313519d2dc2e0cec7ac77a71fb01b1fb8720a2",
+      "reviewed_topics": [
+        "Dataflow数据处理、GKE索引、BigQuery分析和Vertex AI训练"
+      ],
+      "not_established": [
+        "不代表当前全部部署，不证明AI任务执行器"
+      ],
+      "content_markers": [
+        "March 1, 2023",
+        "Dataflow",
+        "Google Kubernetes Engine",
+        "BigQuery",
+        "VertexAI"
+      ],
+      "published_date": "2023-03-01",
+      "date_basis": "页面正文或article:published_time；未知保留null，修改日期另存"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "static countermodel, not executed SQL",
+  "input_sha256": "12c412c3f8f097c3cdbfdff000854e2bc0ba39937c575d53ffe21f08391932d6",
+  "subject": {
+    "bidder_id": "00000000-0000-4000-8000-000000000031",
+    "round_id": "00000000-0000-4000-8000-000000000022",
+    "engineering_project_id": "00000000-0000-4000-8000-000000000011",
+    "identity_snapshot": {
+      "bidder_id": "00000000-0000-4000-8000-000000000031",
+      "bidder_name": "合成主体",
+      "round_id": "00000000-0000-4000-8000-000000000022",
+      "engineering_project_id": "00000000-0000-4000-8000-000000000011",
+      "engineering_title": "工程P1",
+      "region": null,
+      "engineering_type": null,
+      "lot": "标段二",
+      "round_no": 2
+    }
+  },
+  "actual_round": {
+    "id": "00000000-0000-4000-8000-000000000022",
+    "engineering_project_id": "00000000-0000-4000-8000-000000000012",
+    "lot": "标段二",
+    "round_no": 2
+  },
+  "assumptions": [
+    "all referenced bidder/round/project rows exist",
+    "exact submission/body/bid match and proof predicate true",
+    "valid current proof heads and manual actor"
+  ],
+  "D_subject_CHECK_ID_equalities_satisfied": true,
+  "D_confirmed_nonnull_and_proof_predicate_satisfied": true,
+  "missing_round_project_relation_is_false": true,
+  "expected": "confirmed must reject; no new head or decision",
+  "paid_calls": 0,
+  "DDL_executed": false
+}

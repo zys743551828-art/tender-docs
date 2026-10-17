@@ -1,0 +1,72 @@
+{
+  "scope": "unfrozen remediation delta; actual PG and nonowner roles with explicit fixture vectors",
+  "input_sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/http_port.py",
+      "sha256": "3e147856c823bdc55e12ff0d1ed73205f2e7554becaae7b40a06d1e3bf895c39"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/indexing.py",
+      "sha256": "0149dc3d8cf561882047312ad4de7edf9147d804859037562a447246bd9e0f43"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/lexical.py",
+      "sha256": "6198d8ec3e80039fcab28375bd0cfcc91e9488b284a25cdb1ce503198417272e"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/local_models.py",
+      "sha256": "43204ae12c0bfba11b9fd654080c6500bfca43c2a8f4da17c2247407c10168a7"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/repository.py",
+      "sha256": "e6b16b57316a967449e1b535ef078334f5777b9b8b22722aa3fa0662ab6db2a7"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/server.py",
+      "sha256": "223446f3af67196d84ad8970c139d38cb84ec2fc40bed0dd24cdcac7f30e62ed"
+    }
+  ],
+  "checks": [
+    {
+      "id": "G01",
+      "passed": true,
+      "source_child_normalizes_withdrawal_to_stable_root": true,
+      "new_parse_cannot_republish": true
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "new_excluded_ancestor_group_rejected": true,
+      "guard_holds_until_same_transaction_effect_commit": true,
+      "withdrawal_before_guard_rejected": true,
+      "autocommit_and_repeatable_read_rejected": true
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "withdrawal_commits_while_compute_paused": true,
+      "computed_index_rejected_after_root_withdrawal": true
+    }
+  ],
+  "paid_calls": 0,
+  "credentials_read": false,
+  "real_model_inference": false,
+  "final_architecture_pass": false,
+  "initialization_semantics": "same owner connection for all five reviewed SQL files; vector extension in design; exact runtime grant after role revocation",
+  "runtime_grant_sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+  "source_sql_sha256": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  }
+}

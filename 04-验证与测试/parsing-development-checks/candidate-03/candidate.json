@@ -1,0 +1,104 @@
+{
+  "status": "ready_for_independent_visibility_delta_review",
+  "change": "Conservative ordinary-black-text fast path; rendered OCR for nonblack/clipped/transparent/overlapping/occluded visual compositions, with explicit partial gaps",
+  "source_count": 12,
+  "sources": [
+    {
+      "path": "packages/parsing/README.md",
+      "sha256": "317ce2d353b48805e09a9834188e0e616f69be3c5917bc0b6eb15a3d582ec971"
+    },
+    {
+      "path": "packages/parsing/__init__.py",
+      "sha256": "39e97b51a4ad28b8e206a3ef2d11ca5df6530d0ec3a9b318e8eb73356efc413b"
+    },
+    {
+      "path": "packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5"
+    },
+    {
+      "path": "packages/parsing/core.py",
+      "sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3"
+    },
+    {
+      "path": "packages/parsing/fetch_assets.py",
+      "sha256": "3a4956df5d38b95bed8885e302935ccbb91212203b80fa02bcded86096f82947"
+    },
+    {
+      "path": "packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c"
+    },
+    {
+      "path": "packages/parsing/qa/run_local_check.py",
+      "sha256": "d9562f18b3ed79acc5a1df4713302b767733aba241ede4f5f7e1f803280e9021"
+    },
+    {
+      "path": "packages/parsing/server.py",
+      "sha256": "12eaf57412c6af22f56816259d2b0c55011492da109d6a251ae28724329da97d"
+    },
+    {
+      "path": "requirements-parsing.in",
+      "sha256": "ff60348d9cab5198127fdc9fdd0047ed26322d6246f4b3eb4ce3fe755c3114ff"
+    },
+    {
+      "path": "requirements-parsing.lock.txt",
+      "sha256": "fc8886726ba4ccf2a0e62291adc9da624f8c28cb08305b6327d1b739de7115a8"
+    },
+    {
+      "path": "tests/test_parsing_http.py",
+      "sha256": "1e42ecf4be704a6e3a097af8d2269430a21a818836fbc4902125599102547551"
+    },
+    {
+      "path": "tests/test_parsing_local.py",
+      "sha256": "bb8402973b1409bd6be0c99befff7946615962bef0c40b243d03dd2247b02f9d"
+    }
+  ],
+  "parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+  "runtime_core_source_sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3",
+  "service": {
+    "url": "http://127.0.0.1:8812",
+    "pid_at_validation": 1523736,
+    "private_environment_file": ".local/parsing.env",
+    "restart_command": ".venv/bin/python deploy/run.py --env-file .local/parsing.env -- .venv-parsing/bin/python -m packages.parsing.server --port 8812"
+  },
+  "tests": {
+    "passed": 16,
+    "actual_http_visibility_delta_checks": 5,
+    "white_paper_white_text": "excluded",
+    "black_background_white_text": "kept_by_rendered_OCR",
+    "normal_black_text": "kept_by_text_fast_path",
+    "mixed_mode3": "excluded",
+    "alpha0": "excluded",
+    "occluded_and_clipped_text_unit_checks": "passed",
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit_runtime": "passed"
+  },
+  "business_documents": 0,
+  "business_accuracy_accepted": false,
+  "target_baseline_qualified": false,
+  "limitations": [
+    "Docling/PaddleOCR baseline not qualified",
+    "OCR of complex visual composition is partial, not visual understanding or business accuracy acceptance",
+    "No production sandbox or capacity qualification"
+  ],
+  "evidence": [
+    {
+      "path": "actual-response.json",
+      "sha256": "f7b91e62088b164e314f34b6bae3b88ecae44b5e3d1912c996bcf9349d77228a"
+    },
+    {
+      "path": "real-http-result.json",
+      "sha256": "675787df3f39fe409a7159b6de251c22c7c2df1c3fcdcfd8f505a3eaef137e39"
+    },
+    {
+      "path": "unit-result.xml",
+      "sha256": "a3e4aafe93e19f7e56da7fddeb9b61b510d74e0775554ad54813a48e66b65b86"
+    },
+    {
+      "path": "visibility-check.py",
+      "sha256": "c95ecb094cbfbbcfc46b4b1d7ea30cbf6da0328b308bbf40cbd90d1caeaf37bb"
+    }
+  ]
+}

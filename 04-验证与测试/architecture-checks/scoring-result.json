@@ -1,0 +1,15 @@
+{
+  "scope": "合成样本机制实验；数值只说明泄漏与有限样本问题，不是本产品精度",
+  "passed": true,
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4"
+  },
+  "synthetic_samples": 192,
+  "groups": 24,
+  "naive_random_split_mae": 0.07947917898372196,
+  "group_split_mae": 13.968696892854553,
+  "small_calibration_90pct_interval": "有限样本分位次序超出样本数，拒绝声称有限半宽",
+  "calibration_21_quantile_90pct": 20,
+  "external_model_calls": 0
+}

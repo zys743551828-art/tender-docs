@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="2.121" timestamp="2026-10-17T01:31:19.857632+00:00" hostname="597cea30c71f"><testcase classname="tests.test_model_governance_historical_integration" name="test_pending_and_exact_subject_claim_confirmation_preserve_original_facts" time="0.545"><failure message="assert 4 == 0">client = (&lt;starlette.testclient.TestClient object at 0x7f84e93ae2d0&gt;, UUID('47ae8286-b473-45fe-8b72-fea746208ab3'), &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f84e939ab60&gt;, {})
+
+    def test_pending_and_exact_subject_claim_confirmation_preserve_original_facts(client):
+        web, _, headers, _ = client
+        item, proof, projection = fixture(client)
+        with connection() as c:
+            before = c.execute(
+                "SELECT review_id,evidence,created_at,submitted_at FROM submission_records WHERE id=%s",
+                (item["submission"],),
+            ).fetchone()
+            source_before = c.execute(
+                "SELECT obtained_at FROM document_versions WHERE id=%s", (item["body"],)
+            ).fetchone()
+        pending = save_subject(client, item, None, None)
+        assert pending.status_code == 201 and pending.json()["identity_snapshot"] is None, pending.text
+        assert pending.json()["manual_decision"] == "pending"
+        denied = web.post(
+            f"/api/v1/historical-proof/subjects/{pending.json()['id']}/confirm",
+            json={"reason": "不能无证据确认"},
+            headers=headers(pending.headers["etag"]),
+        )
+        assert denied.status_code == 409
+        subject = save_subject(client, item, proof, projection, supersedes=pending.json()["id"])
+        assert subject.status_code == 201, subject.text
+        assert subject.json()["manual_decision"] == "pending" and subject.json()["proofs_current"]
+        confirm_headers = headers(subject.headers["etag"])
+        path = f"/api/v1/historical-proof/subjects/{subject.json()['id']}/confirm"
+        confirmed = web.post(path, json={"reason": "合成人工逐页确认历史关系"}, headers=confirm_headers)
+        assert confirmed.status_code == 200, confirmed.text
+        assert confirmed.json()["manual_decision"] == "confirmed"
+        assert confirmed.json()["identity_snapshot"]["bidder_name"] != "合成公司"
+        replay = web.post(path, json={"reason": "合成人工逐页确认历史关系"}, headers=confirm_headers)
+        assert replay.status_code == 200 and replay.headers["idempotency-replayed"] == "true"
+        claim_body = {
+            "submission_id": item["submission"],
+            "document_version_id": item["body"],
+            "historical_subject_authority_id": subject.json()["id"],
+            "declared_data_origin": "synthetic",
+            "reason": "分开确认公布，不推出本方知晓",
+            "facts": [
+                {
+                    "fact_kind": "published",
+                    "claimed_at": "2019-01-01T00:00:00Z",
+                    "proof_refs": [proof],
+                    "explanation": "合成原页支持公开",
+                },
+                {
+                    "fact_kind": "known_to_bidder",
+                    "claimed_at": None,
+                    "proof_refs": [],
+                    "explanation": "本方知晓仍未知",
+                },
+            ],
+        }
+        claim = web.post(
+            "/api/v1/historical-proof/source-claims",
+            json=claim_body,
+            headers=headers(context(web, item).headers["etag"]),
+        )
+        assert claim.status_code == 201, claim.text
+        claim_confirm = web.post(
+            f"/api/v1/historical-proof/source-claims/{claim.json()['id']}/confirm",
+            json={"reason": "只确认有据的公开事实，其余仍未知"},
+            headers=headers(claim.headers["etag"]),
+        )
+        assert claim_confirm.status_code == 200, claim_confirm.text
+        assert (
+            next(f for f in claim_confirm.json()["facts"] if f["fact_kind"] == "known_to_bidder")[
+                "claimed_at"
+            ]
+            is None
+        )
+        assert claim_confirm.json()["historical_input_available"] is False
+        assert claim_confirm.json()["formal_eligibility"] == "unavailable"
+        old = web.get(f"/api/v1/historical-proof/subjects/{pending.json()['id']}")
+        assert old.status_code == 200 and not old.json()["is_current_head"]
+        assert old.json()["last_own_decision"]["decision"] == "pending"
+        with connection() as c:
+            assert (
+                c.execute(
+                    "SELECT review_id,evidence,created_at,submitted_at FROM submission_records WHERE id=%s",
+                    (item["submission"],),
+                ).fetchone()
+                == before
+            )
+            assert (
+                c.execute(
+                    "SELECT obtained_at FROM document_versions WHERE id=%s", (item["body"],)
+                ).fetchone()
+                == source_before
+            )
+&gt;           assert c.execute("SELECT count(*) AS n FROM model_calls").fetchone()["n"] == 0
+E           assert 4 == 0
+
+tests/test_model_governance_historical_integration.py:171: AssertionError</failure></testcase><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[other_project]" time="0.283" /><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[wrong_lot]" time="0.254" /><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[string_round]" time="0.106" /><testcase classname="tests.test_model_governance_historical_integration" name="test_invalid_quote_atomic_and_latest_parse_invalidates_confirm_replay" time="0.479" /></testsuite></testsuites>

@@ -1,0 +1,4 @@
+{
+  "classification": "probe_expectation_scope",
+  "note": "最初补验把所有effect_receipts误当成功原件并期望0；失败终态本来应记录一次error_code/result_ref=null收据。独立业务断言改为失败收据一次、无有效document_version、attempt不增、真实Kafka死信一次。原失败保留，accepted结果是真实重跑。"
+}

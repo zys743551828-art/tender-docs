@@ -1,0 +1,124 @@
+{
+  "manifest_sha256": "3047525933873ffe0d611a76fe4bcaa8f2d111c5664ec26dfd44cb03adbf75af",
+  "source_count": 112,
+  "source_mismatches": [],
+  "asset_count": 215,
+  "asset_mismatches": [],
+  "served_asset_hashes": {
+    "/assets/index-K7HYe8Mx.css": "383f4cbc4eadee370cd538b0780097f8a56a10a35e1442d574f6db16b61f18f9",
+    "/assets/index-BoUEueox.js": "ee953e396ab08fb983feaf2f8d0f2bc1c3205255c4d05e048372d795eae95e69",
+    "/assets/useBidChoices-CuxZI52c.js": "487fa05fdf1c0a6f83c6475d2bbd081761c1071f60325459640abffc062813ea",
+    "/assets/Knowledge-BHF_j5B5.js": "99cf29ce2f2e7fb8964e96c2d81750d6c243c93d89734c9a54ec20bcc4637ff5",
+    "/assets/pdf-BtCWNl9F.js": "6f42c39bcea7e76d2907c20ff4dbd5d86f2a7bac5c578362966a0d3346867666",
+    "/assets/pdf.worker.min-CjEcRF4W.mjs": "9536359f1b8367850d485731ca1d5e45c159a7b7a0912325e539937aa21ceb18",
+    "/assets/businessNames-D2PcdCRi.js": "a961daac6bca3f5d1d7b10ce8543a5b00d297d8c75c402ae3de90ec51f571f44",
+    "/assets/SubmissionPanel-Chjch8hR.js": "3371ee8de7d9f532e5e0dde01d10192afb3ed44a339b8467a2163e3570e95adf",
+    "/assets/Metrics-GiMFeEN0.js": "1dac12dac8e896008b737a5de27fd7895b811e45292845a9760a5fe253bf6c09",
+    "/assets/ReportPanel-zkPsN3OO.js": "9df5644dcaa36882b14d9f98d4287622b51217f46805fd19f8dfb09057e93a70"
+  },
+  "served_asset_mismatches": [],
+  "paid_model_review_research_writes": [],
+  "blocked_writes": [],
+  "business_posts": [
+    [
+      "PATCH",
+      "/api/v1/bids/5cda2fd3-02a1-40b6-90e3-070514a98f2c/settings",
+      200
+    ],
+    [
+      "PATCH",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/settings",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/bids",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/bids/5cda2fd3-02a1-40b6-90e3-070514a98f2c/knowledge-retrievals",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/submission-facts",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/submissions/3fa28042-ac20-4f83-9ad1-ffc7f62530d3/business-results",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/upload-batches",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/upload-batches/f223531a-ec0b-4aa6-bb41-616a34f3a9d1/commit",
+      202
+    ],
+    [
+      "POST",
+      "/api/v1/bids/643d8470-fe41-4b52-a3d2-26b029d38e89/uploads",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/business-results/05e5bf69-8d3e-4026-9538-7c7de41014bc/corrections",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/identity/bidders",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge-retrievals/42aacaa6-3c86-4a5a-b6d4-13cfcc6f5e3c/references",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge/30edbb14-c951-4b57-9f64-3eadf97bd23b/publish",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge/30edbb14-c951-4b57-9f64-3eadf97bd23b/submit",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge/30edbb14-c951-4b57-9f64-3eadf97bd23b/versions",
+      201
+    ],
+    [
+      "POST",
+      "/api/v1/knowledge/30edbb14-c951-4b57-9f64-3eadf97bd23b/withdraw",
+      200
+    ],
+    [
+      "POST",
+      "/api/v1/uploads/7e20a78e-d37d-4366-af65-5839ef44a199/complete",
+      202
+    ],
+    [
+      "PUT",
+      "/api/v1/bids/5cda2fd3-02a1-40b6-90e3-070514a98f2c/identity",
+      200
+    ],
+    [
+      "PUT",
+      "/api/v1/object-transfers/uploads/7e20a78e-d37d-4366-af65-5839ef44a199",
+      200
+    ]
+  ]
+}

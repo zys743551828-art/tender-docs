@@ -1,0 +1,72 @@
+{
+  "state": "succeeded",
+  "coverage": "complete",
+  "conversion_attempted": true,
+  "error_code": null,
+  "retryable": false,
+  "gaps": [],
+  "chain": {
+    "source_docx_digest": "63265c94c7172866f3cd215a12a287c1b1c5cc427840fb42af7385d7323444e6",
+    "producer_manifest_digest": "c83a512ce350a88732384113ef4ff18e99f811b55a478018e0cae2fb5291c1e9",
+    "validator_digest": "ba1251007aa7ecc4d609d33881c502666fc738ae6f71de820c73310afc6bdfcd",
+    "generator_digest": "dea55a54b55e6bbddaeeb92ff2ab684e12208cc30acef22df23db00d5470a923",
+    "parts": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "word/_rels/document.xml.rels",
+      "word/document.xml",
+      "word/footer.xml",
+      "word/header.xml",
+      "word/numbering.xml",
+      "word/styles.xml"
+    ],
+    "page_number": true,
+    "pdf_digest": "5719f48f849bf61257bac8e797398376cb248df7eceae483e030bd55fdd6750d",
+    "profile_digest": "813f347311fbc472d44a54c933c904e4edb887f252ebc6e0a6afe8efa4a53d78",
+    "base_profile_digest": "b7c4a46e623ce8376481581ce0de31cd8b77459b830f95dc56605c2931f56966",
+    "renderer_digest": "965db3bf15b3d0616a41fb6abcb356e7cb1e385c10e45b3b32d726eba584ad8f",
+    "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+    "options_digest": "9b55bd5c2eb5aa6c31b9880e6c7da888c6bd71afccce34d122cac664ebf2fa76",
+    "page_count": 1
+  },
+  "correspondence": {
+    "page_count": 1,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 31
+      }
+    ],
+    "expected_body_digest": "921400806132d22452808f80edba286af851b47bee643a0ee2e734f5795b1c64",
+    "actual_body_digest": "921400806132d22452808f80edba286af851b47bee643a0ee2e734f5795b1c64"
+  },
+  "isolation": {
+    "local_image_pinned": true,
+    "network_none": true,
+    "ipc_none": true,
+    "pid_private": true,
+    "uts_private": true,
+    "nonroot": true,
+    "read_only": true,
+    "not_privileged": true,
+    "capabilities_dropped": true,
+    "no_new_privileges": true,
+    "memory_limited": true,
+    "cpu_limited": true,
+    "pids_limited": true,
+    "no_daemon_document_logs": true,
+    "clean_environment": true,
+    "all_bind_mounts_readonly": true,
+    "exact_allowlisted_bind_mounts": true,
+    "no_anonymous_persistent_volumes": true,
+    "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+    "no_docker_socket_mount": true,
+    "bounded_tmpfs_output": true,
+    "own_job_cleanup_confirmed": true
+  },
+  "scope": "Exact static01 PAGE lane, real sandbox on public synthetic input; no DB/model/Kafka/OSS",
+  "fault_injection": null
+}

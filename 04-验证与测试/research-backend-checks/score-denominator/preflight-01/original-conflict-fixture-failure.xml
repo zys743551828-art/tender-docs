@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="3" time="17.800" timestamp="2026-10-17T04:13:21.988350+00:00" hostname="597cea30c71f"><testcase classname="tests.test_denominator_integration" name="test_current_review_late_confirmation_derives_without_new_calls_or_rewriting_score_f" time="6.435" /><testcase classname="tests.test_denominator_integration" name="test_missing_authority_keeps_null_and_does_not_send" time="7.255" /><testcase classname="tests.test_denominator_integration" name="test_smaller_sourced_total_conflicts_without_rescaling_extracted_rule_points[30]" time="3.114"><error message="failed on setup with &quot;AssertionError: assert 'failed' == 'succeeded'&#10;  &#10;  - succeeded&#10;  + failed&quot;">research_client = (&lt;starlette.testclient.TestClient object at 0x7f32a92dce30&gt;, UUID('1954fe1b-f3cd-4760-8ffe-26eb5ea269ec'), &lt;function c...thetic-84fc49f1d5ba4a71a2351adf843a7ee8","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7f32ab5110a0&gt;
+request = &lt;SubRequest 'project' for &lt;Function test_smaller_sourced_total_conflicts_without_rescaling_extracted_rule_points[30]&gt;&gt;
+
+    
+    @pytest.fixture
+    def project(research_client, monkeypatch, request):  # noqa: F811
+        original = ordinary.pdf_bytes
+        maximum = getattr(request, "param", "60")
+        monkeypatch.setattr(
+            ordinary,
+            "pdf_bytes",
+            lambda text: chinese_pdf(f"技术总分满分为{maximum}分，量尺为未加权原始分。")
+            if "original tender" in text
+            else original(text),
+&gt;       )
+          
+
+tests/test_denominator_integration.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_scoring_integration.py:67: in project
+    make_upload_path(research_client, monkeypatch)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+research_client = (&lt;starlette.testclient.TestClient object at 0x7f32a92dce30&gt;, UUID('1954fe1b-f3cd-4760-8ffe-26eb5ea269ec'), &lt;function c...thetic-84fc49f1d5ba4a71a2351adf843a7ee8","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7f32ab5110a0&gt;
+
+    def test_actual_new_upload_then_historical_input_keeps_real_now_and_no_old_review(
+        research_client,  # noqa: F811 -- imported fixture
+        monkeypatch,
+    ):
+        from apps.api.historical_input_routes import router as inputs
+        from apps.api.historical_routes import router as proofs
+        from apps.api.main import app
+        from apps.worker import handlers
+        from packages.domain import parsing_profile
+    
+        base_web, _, headers, objects = research_client
+        app.include_router(proofs)
+        app.include_router(inputs)
+        parser = LocalTestParser()
+        monkeypatch.setattr(parsing_profile, "configured_parser", lambda: parser)
+        monkeypatch.setattr(handlers, "configured_parser", lambda: parser)
+        monkeypatch.setattr(storage, "bucket", lambda: "explicit-memory-test")
+    
+        def put(key, raw, media):
+            objects[key] = raw
+            return {"ETag": sha(raw)}
+    
+        monkeypatch.setattr(storage, "put", put)
+    
+        class MemoryClient:
+            def head_object(self, *, Bucket, Key):
+                return {"ContentLength": len(objects[Key]), "ETag": sha(objects[Key])}
+    
+            def get_object(self, *, Bucket, Key):
+                return {"ContentLength": len(objects[Key]), "Body": io.BytesIO(objects[Key])}
+    
+        monkeypatch.setattr(storage, "client", lambda: MemoryClient())
+        requests = []
+    
+        def model_response(request):
+            requests.append(request)
+            payload = json.loads(json.loads(request.content)["messages"][-1]["content"])
+            blocks = [
+                block for document in payload["documents"] for block in document["evidence_blocks"]
+            ]
+            text = blocks[0]["text_content"]
+            output = {
+                "rules": [
+                    {
+                        "kind": "scoring",
+                        "statement": text,
+                        "conditions": [],
+                        "exceptions": [],
+                        "scope": {"bid_id": payload["bid_id"], "description": "合成项目"},
+                        "maximum": "60",
+                        "bands": [
+                            {
+                                "label": "完整",
+                                "description": text,
+                                "points": "60",
+                                "evidence_ids": [blocks[0]["id"]],
+                            }
+                        ],
+                        "evidence_quotes": [{"evidence_id": blocks[0]["id"], "quote": text}],
+                    }
+                ],
+                "ambiguities": [],
+                "read_evidence_ids": [block["id"] for block in blocks],
+            }
+            return httpx.Response(
+                200,
+                json={
+                    "id": "synthetic-" + uuid4().hex,
+                    "model": "deepseek-flash",
+                    "usage": {"prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30},
+                    "choices": [
+                        {
+                            "message": {
+                                "role": "assistant",
+                                "content": json.dumps(output, ensure_ascii=False),
+                            },
+                            "finish_reason": "stop",
+                        }
+                    ],
+                },
+            )
+    
+        model = DeepSeekClient(
+            api_key="explicit-synthetic-no-real-calls", transport=httpx.MockTransport(model_response)
+        )
+        monkeypatch.setattr(DeepSeekClient, "from_env", classmethod(lambda cls: model))
+        with TestClient(app) as web:
+            web.cookies.update(base_web.cookies)
+            company = web.post(
+                "/api/v1/identity/bidders",
+                json={
+                    "name": "合成历史上传主体" + uuid4().hex[:6],
+                    "reason": "显式合成身份，不宣称历史属实",
+                },
+                headers=headers(),
+            )
+            assert company.status_code == 201, company.text
+            created = web.post(
+                "/api/v1/bids",
+                json={"title": "合成普通新上传历史重建", "bidder_id": company.json()["bidder"]["id"]},
+                headers=headers(),
+            )
+            assert created.status_code == 201, created.text
+            bid = created.json()["id"]
+            batch = web.post(f"/api/v1/bids/{bid}/upload-batches", json={}, headers=headers())
+            assert batch.status_code == 201, batch.text
+            uploads = []
+            for role in ("tender", "body"):
+                data = pdf_bytes(
+                    f"Explicit synthetic original {role} document. Complete technical plan 60 points. Exact old content has its own proof. {uuid4().hex}"
+                )
+                grant = web.post(
+                    f"/api/v1/bids/{bid}/uploads",
+                    json={
+                        "batch_id": batch.json()["id"],
+                        "role": role,
+                        "filename": role + ".pdf",
+                        "byte_size": len(data),
+                        "declared_sha256": sha(data),
+                        "target": {"kind": "new_file"},
+                    },
+                    headers=headers(),
+                )
+                assert grant.status_code == 200, grant.text
+                url = urlsplit(grant.json()["upload_url"])
+                transfer = web.put(
+                    url.path + "?" + url.query,
+                    content=data,
+                    headers={k: v for k, v in headers().items() if k != "Idempotency-Key"}
+                    | {"Content-Type": "application/pdf", "Content-Length": str(len(data))},
+                )
+                assert transfer.status_code == 200, transfer.text
+                complete = web.post(
+                    f"/api/v1/uploads/{grant.json()['upload_id']}/complete",
+                    json={"parts": [], "declared_sha256": sha(data)},
+                    headers=headers(),
+                )
+                assert complete.status_code == 202, complete.text
+                assert pump(complete.json()["operation"]["id"])["state"] == "succeeded"
+                uploads.append(web.get(f"/api/v1/uploads/{grant.json()['upload_id']}").json())
+            commit = web.post(
+                f"/api/v1/bids/{bid}/upload-batches/{batch.json()['id']}/commit",
+                json={
+                    "accepted_upload_ids": [u["id"] for u in uploads],
+                    "accepted_binding_ids": [u["binding_id"] for u in uploads],
+                    "explicit_partial_acceptance": False,
+                },
+                headers=headers(web.get(f"/api/v1/bids/{bid}").headers["etag"]),
+            )
+            assert commit.status_code == 202, commit.text
+            assert pump(commit.json()["operation"]["id"])["state"] == "succeeded"
+            tick(bid)
+            state = web.get(f"/api/v1/bids/{bid}/review-state").json()["request"]
+&gt;           assert pump(state["prepare_operation_id"])["state"] == "succeeded"
+E           AssertionError: assert 'failed' == 'succeeded'
+E             
+E             - succeeded
+E             + failed
+
+tests/test_historical_input_upload_path.py:217: AssertionError</error></testcase></testsuite></testsuites>

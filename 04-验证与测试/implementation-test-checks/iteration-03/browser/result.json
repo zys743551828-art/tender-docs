@@ -1,0 +1,30 @@
+{
+  "scope": "实际Chromium与QA API/S3/Kafka的单PDF资料UI；无模型评审/真人使用结论",
+  "passed": true,
+  "started_at": "2026-10-16T13:55:54.170281+00:00",
+  "checks": [
+    "真实浏览器Cookie登录",
+    "不经模板/目录即可建项目",
+    "浏览器真实S3 CORS上传、Worker核验和资料入库",
+    "原页/缺口/用途可见，Escape焦点返回，刷新恢复已保存资料",
+    "390px与键盘可打开/关闭原页且保持单层阅读"
+  ],
+  "requests_failed": [],
+  "model_executed": false,
+  "project_path": "/bids/7ff08327-39de-42ab-a31c-4e883593b992/materials",
+  "probe_sha256": "d13c5775d8c09645b35cc357a28b3025527b31991baa65bffbc0e347f801642b",
+  "frontend_sources": {
+    "apps/web/src/contracts.ts": "4967e07d61f8f34191f93d69cd5dada3cd50c0c2480a76163c82bb38d618a993",
+    "apps/web/src/styles.css": "36b757cd4ee11a9b94ff0a82d455933403b06068af27293bd3dd1a068ada30b5",
+    "apps/web/src/main.tsx": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0",
+    "apps/web/src/test-setup.ts": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d",
+    "apps/web/src/App.tsx": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f",
+    "apps/web/src/api.ts": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6",
+    "apps/web/src/components.tsx": "f24c647d1b3b0ad7a0b6bfe1d16ebd83eddd77c68ceab39fd6e8a05f848f72af",
+    "apps/web/src/Evidence.tsx": "db1cea06ff02e2bccc31afc7991a8c09e4c6863ea83df8da7462c84f062b6367",
+    "apps/web/src/App.test.tsx": "64692bff6d859c15b2de4920cfdd3fe70453e466a3f12076e8deb6c866fc2a8a",
+    "apps/web/src/Project.tsx": "c2a9f9f63cd19586732857283a6a595d29e652eadb16487f1ea461ca85c942b6",
+    "apps/web/src/Project.test.tsx": "f8e7c83bf90f4b0671b7fedefe68d5bceade6f4e9805d673aa2aaaaa5c31f0f6"
+  },
+  "finished_at": "2026-10-16T13:56:05.586236+00:00"
+}

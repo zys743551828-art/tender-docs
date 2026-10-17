@@ -1,0 +1,41 @@
+{
+  "candidate_sha256": "740266ccd1b9aff91adf96414806dbabf6c6f66f66289c0d9f3f96a47bd5e27a",
+  "input_manifest_sha256": "f45764c1fd57f06f1931c2eada40c0245224b6b18010dee71762daa145250418",
+  "frozen_source_files": 22,
+  "input_bytes_reverified_after_execution": true,
+  "executed_probe_sha256": "13467be1de8caabf5f489c8c92f66047fd93ca055210e53d8610dcc773ee2f7c",
+  "execution_result_sha256": "2604886130b20eec4caec6c24b1a50ff238ce643373e52189d303e6fd596ea67",
+  "evidence": "candidate-01/execution/result.json",
+  "model_requests": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "status": "blocked_source_qualification",
+  "independent_checks_passed": 14,
+  "runtime_manifest_sha256": "3f888dce330c9f8b19d2c23448a0b10d9c7c369eb12df3895b8364179621c789",
+  "runtime_files": 182,
+  "execution": "Isolated nonownerPG + standalone actual metrics ASGI router; explicit SQL identities/reviews/outcomes fixtures, no live main/frontend or qualified official business result",
+  "fixture_setup": "Frozen developer make_project/make_review only for SQL fixture setup; none of developer test functions or assertions executed",
+  "blocker": "Independent architect real-PG counterexamples show canonical candidate or future-known source may grant verified/usable and enter verified-only rates. This QA deliberately does not duplicate that finding or release module01.",
+  "architect_evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/metrics-architect-review/candidate01-source-candidate-counterexample.json",
+      "sha256": "f79d0429c0e61b519aa609f01472365c20866583d5a313ec347622c478f0e7e7"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/metrics-architect-review/candidate01-source-future_known-counterexample.json",
+      "sha256": "3fd0d7610c0e791c6dbc4162c9c36218e883b4fc6bd1a4f399f2d0309d8f6a96"
+    }
+  ],
+  "passed_scope": [
+    "Business-stage correction, exact denominators, null vs real zero, conflict current-head and old-key replay isolation",
+    "Two real concurrent corrections: one success and one CAS rejection; historical as_of does not fall back past unresolved conflict",
+    "Multiple effective submissions with same unit excluded as identity conflict",
+    "Historical risk observation cutoff: one microsecond late stays unknown; exact cutoff frozen; later dismissal changes current count but not submission snapshot",
+    "Hidden prediction value/bounds/error derivatives absent; GET cannot backfill missing risk audit"
+  ],
+  "limits": [
+    "Standalone actual metrics ASGI router and isolated restricted PostgreSQL, not shared live main or browser.",
+    "Reviews, submissions, identity/outcome records are explicit synthetic SQL fixtures, not qualified real official business results.",
+    "Owner hooks in later backend04 and the forthcoming source-qualification fix require separate delta validation."
+  ]
+}

@@ -1,0 +1,35 @@
+# Word主流程桥接协议（实现候选前输入）
+
+输入为word-intake候选03 `b12e2e456ead217296510ae6fde3f7747198d75adffe42706bb3692c28406fa6`、已审SQL `380a58…`和dev06转换profile `b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18`。07/F04、运行8808及旧环境保持冻结；本片不用owner业务账号、不执行DDL或付费生成。
+
+## 1. 接收和文件身份
+
+single与multipart统一按filename_type接受PDF/DOCX，在new_version、binding、commit用assert_file_format再次核对逻辑文件的原格式。实际核验统一inspect_upload：同大小/实际字节SHA、PDF magic或受限OOXML结构；正式blob的media_type来自实际核验。Word复用原document_versions，不建第二份原件inventory。PDF补传声明沿同bid/资料角色，核验后仅写user_declared_same_draft/unverified，不继承controlled_render。
+
+同源传输按声明文件类型固定Content-Type与magic，真实检查仍在Worker，禁止客户端任意类型/路径/renderer。核验compute在锁外取得可信render profile（包括不可用结果），fenced publish先保存blob/version并将upload verified，再调用publish_verified追加原件收据和word-render/1任务；没有完整转换也明确原件保存事实。
+
+## 2. 材料选择与待检正文
+
+材料commit选择新Word body时，替换本轮body角色的旧PDF，current_body_id明确置null，旧评审及PDF保留历史；不能COALESCE回旧PDF。待检Word身份直接由当前material_assignments的body角色、Word文件head和实际blob类型判定，附加选入审计只冻结材料/设置/规则/事实头与源身份，不建新Word业务头。
+
+旧未冻结评审请求标为输入已变化/待Word对应PDF，不把null写成UUID或自动评旧稿。next_action给转换等待、失败恢复/上传此修改稿PDF；普通评审与标准gate始终基于真实当前PDF。转换本身不给Word交付资格，报告不得声称Word已受检。
+
+parse-materials只解析PDF。Word保留明确WORD_SOURCE_NOT_CONVERTED/未读缺口（不调用PDF parser，不产生Word可读证据或向量来源）。必要Word来源未有规范PDF替代时，整体提取/评审不能获得完整范围资格。
+
+## 3. 转换、采用与迟到
+
+word-render/1进入document lane，compute锁外运行固定隔离renderer与对象I/O；共享acquire/finish的generation/fence/lease/取消和生命周期守卫生效。成功operation只说明转换收据已记录，partial/failed不冒充complete或verified关系。
+
+Worker仅发布产物和受控关系，不写material_snapshots/current_material。独立API角色协调器与材料commit复用同一个采用函数：最新请求的completed_pdf、完整controlled_qualified、Word与PDF实际字节SHA、真实关系，以及源Word仍该逻辑文件head/仍是当前所选材料且材料/设置/相关head与选入上下文一致，才追加新材料快照并派PDF解析。body还要求current_body_id为空；tender等只替换对应Word来源，不抢正文。
+
+转换在commit前完成：commit预读并在业务锁外核验候选PDF，锁内重读最新转换与材料/文件CAS再采用。转换在commit后完成：API协调器锁外核验PDF、bid锁内相同守卫；输入有变则只记needs_selection，保留历史产物，不自动重选。采用与parse enqueue、明确来源审计及原有auto_review意图同一事务；未配置或partial保持未检查，不自动增加人工审批。
+
+## 4. 规范派生来源
+
+完整转换PDF使用独立PDF逻辑文件/版本。首次PDF parse可读发布前，同bid→来源图锁下，以公开original_source_id构建Word原件root→PDF原件root→parse source祖先关系；证据块仍只来自PDF真实物理页。Word root只是受控原件祖先，不伪造Word文本或chunk。源Word/祖先withdrawn不得复活；官方成绩用途继承official_label限制，不进入正式评分干净输入。
+
+## 5. 最小持久化与验证
+
+当前预计无需新增DDL：原Word三表、现有materials/file/version/relation/source lineage及append-only audit足够。若实现中缺稳定CAS或必须新schema，再先静审并由PM fresh，禁止运行库热补。
+
+验证至少覆盖：PDF旧链回归；single/multipart DOCX真实字节；混格式文件拒绝；真实OSS原件与Docker输出回读SHA；失败/partial保原件与就地PDF声明；Word取代旧PDF立即丧失旧资格；转换早于/晚于commit；新Word/人工选PDF/材料变化的迟到结果；真实非owner fence/取消/关闭阶段不发布；规范来源祖先及撤回不复活；标准gate及实际受检稿保持一致。模型调用0。Kafka在隔离broker验收，不启动review/research/assistant付费消费者。

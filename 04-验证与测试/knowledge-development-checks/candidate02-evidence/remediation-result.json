@@ -1,0 +1,57 @@
+{
+  "defect": "K01_unconfirmed_fact_used_as_knowledge_condition",
+  "original_independent_counterexample": {
+    "path": "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/unconfirmed-fact-counterexample.json",
+    "sha256": "9db66a9be59a68413f9614cee2be18db8158751a64565e149c740dd8c33357d6",
+    "unchanged": true
+  },
+  "original_developer_candidate01": {
+    "path": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate-01.json",
+    "sha256": "0f23c448a071ed86804911e69c7204d1da446ee9ae34f7f1caac7c104a1d7d87",
+    "sources_verified": 10,
+    "evidence_verified": 5,
+    "unchanged": true
+  },
+  "source_delta": [
+    "packages/knowledge/README.md",
+    "packages/knowledge/bridge.py",
+    "packages/knowledge/sources.py",
+    "tests/test_knowledge_integration.py"
+  ],
+  "changes": [
+    "all_matching_current_fact_items_require_effective_confirmed_decision",
+    "exact_subject_scope_name_value_type_unit_and_decision_evidence_identity",
+    "A1_shared_identity_decision_basis_current_evidence_basis_publish_false",
+    "multi_hop_explicit_equivalent_carryover_identity_and_audit_proof",
+    "source_head_change_withdrawal_old_parse_or_unknown_mapping_denies_new_use",
+    "unconfirmed_or_conflicting_duplicate_is_never_filtered_away",
+    "graph_authority_rejects_autocommit_repeatable_read_serializable"
+  ],
+  "validation": {
+    "original_cases": 21,
+    "new_real_PG_HTTP_cases": 23,
+    "all_cases": 44,
+    "local_S3": true,
+    "real_nonowner_LOGIN": true,
+    "actual_login_HTTP": true,
+    "same_key_reference_replay_revalidated": true,
+    "old_reference_preserved": true,
+    "project_lock_serialization": true,
+    "formal_score_still_denied": true,
+    "source_publish_side_effect": false,
+    "owner_or_worker_grants_added": false,
+    "paid_calls": 0
+  },
+  "protocol_change": "no public endpoint/schema or trusted bridge result shape change; final API adoption still must call check_reference for current fact conditions as well as knowledge source authority",
+  "not_claimed": [
+    "independent_QA",
+    "architecture_acceptance",
+    "frontend_business_journey",
+    "knowledge_summary_embedding",
+    "cross_project_RAG_end_to_end",
+    "automatic_follow_up_tasks",
+    "unregistered_experiment_model_complete_impact",
+    "production_capacity",
+    "real_company_knowledge_quality"
+  ]
+}

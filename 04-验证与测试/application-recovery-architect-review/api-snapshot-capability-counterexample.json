@@ -1,0 +1,14 @@
+{
+  "mode": "actual restricted API LOGIN read-only probe against existing same release schema; not pg_dump or restore execution",
+  "capabilities": {
+    "schema_usage": true,
+    "registrations_select": true,
+    "certifications_select": false
+  },
+  "certifications_read_sqlstate": "42501",
+  "DDL": 0,
+  "owner_connections": 0,
+  "object_requests": 0,
+  "model_calls": 0,
+  "consumers": 0
+}

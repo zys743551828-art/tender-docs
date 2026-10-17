@@ -1,0 +1,42 @@
+{
+  "scope": "A1 ordinary model-call ledger and stage execution review; offline tests only",
+  "status": "frozen_for_independent_review",
+  "external_business_calls": 0,
+  "bounds": {
+    "pipeline_calls": 10,
+    "reserved_max_output_tokens": 32768,
+    "single_output_tokens": 8192,
+    "provider_retries": 0
+  },
+  "sources": [
+    {
+      "path": "packages/domain/model_calls.py",
+      "sha256": "cc45d157051aa64b44b95368d76032ff8eb11617cd524e89a3a58cf672c490e0"
+    },
+    {
+      "path": "apps/worker/review_handlers.py",
+      "sha256": "bd2e8efe75ea2e9206d99d1da486cb055b2b035b9d7513f7c5df10220c4441df"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "23dce46fac9b2300394fd0ccd546ab4f87ec437170899ecca8e3199e42360c53"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "path": "packages/domain/reviews.py",
+      "sha256": "bf96b607d0820569f886327b0fcfc3b0f0f04c99a76f2cef09ccc10415ac39e0"
+    },
+    {
+      "path": "tests/test_model_ledger_integration.py",
+      "sha256": "a719b804c84ccad1378a460ea44739454fbce905480d169b88731ecefaf06014"
+    }
+  ],
+  "mechanism_tests": {
+    "path": "tests/test_model_ledger_integration.py",
+    "passed": 6,
+    "environment": "dedicated nonowner PG with explicit offline MockTransport; not Kafka/model efficacy"
+  }
+}

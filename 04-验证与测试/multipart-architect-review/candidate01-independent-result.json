@@ -1,0 +1,22 @@
+{
+  "candidate_sha256": "8fa3b069cf40b56f82b2bf09d13734eb400a9214b921baa50fa3c6d8781bec0a",
+  "passed": true,
+  "checks": 9,
+  "actual_postgresql_nonowner": true,
+  "object_port": "explicit in-memory OSS API fixture; real OSS not exercised by architect",
+  "actual_asgi": true,
+  "source_hashes_unchanged": true,
+  "observed_dependencies": {
+    "apps/api/object_transfer.py": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83",
+    "apps/api/auth.py": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+    "apps/api/views.py": "389172912a633017d8e32ea20e3eff3308df45b757597c83460c0d45f7fb725c",
+    "packages/domain/runtime.py": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "packages/domain/storage.py": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+    "packages/domain/providers/oss.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "apps/worker/handlers.py": "c57c7cd1b89a8fd2df2c59741ec7a64b83397a380e183257785e62b925207eda",
+    "apps/worker/engine.py": "23dce46fac9b2300394fd0ccd546ab4f87ec437170899ecca8e3199e42360c53"
+  },
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "credentials_read": false
+}

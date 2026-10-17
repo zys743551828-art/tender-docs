@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="10.916" timestamp="2026-10-17T03:08:33.409683+00:00" hostname="597cea30c71f"><testcase classname="tests.test_scoring_integration" name="test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable[current]" time="9.929"><failure message="AssertionError: {'code': 'AmbiguousColumn', 'diagnostic': 'column reference &quot;call.id&quot; is ambiguous', 'mock_calls': 3, 'ok': False, ...}&#10;assert (False)">project = (&lt;starlette.testclient.TestClient object at 0x7fac705318e0&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7fac72039bc0&gt;, '3...9-9fb0-713447e09e59","status":"published","valid_from":"2026-10-17T03:08:35.049490+00:00","valid_until":null}]}', ...})
+branch = 'current'
+
+    @pytest.mark.parametrize("branch", ["current", "historical"])
+    def test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable(project, branch):
+        web, _, _, _, _, _ = project
+        frozen, created = create_job(project, branch)
+        output = child("success", created.json()["id"])
+&gt;       assert output["ok"] and output["mock_calls"] == 3, output
+E       AssertionError: {'code': 'AmbiguousColumn', 'diagnostic': 'column reference "call.id" is ambiguous', 'mock_calls': 3, 'ok': False, ...}
+E       assert (False)
+
+tests/test_scoring_integration.py:117: AssertionError</failure></testcase></testsuite></testsuites>

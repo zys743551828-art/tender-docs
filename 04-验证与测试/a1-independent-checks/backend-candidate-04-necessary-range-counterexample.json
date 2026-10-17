@@ -1,0 +1,51 @@
+{
+  "status": "confirmed_blocking_counterexample",
+  "candidate_sha256": "eb5266493f8106fb2da16bbc5508a64dff8aae09264b134e2fe22696217431f7",
+  "runtime_manifest_sha256": "8ac063343d784e82bdd1d6a4066a1bcc8ef03b5dcfafb23bcb1692ae86f772ec",
+  "runtime_inputs_reverified_after_execution": true,
+  "execution_result_sha256": "77dc143e3967f18740d58649d21c76fc24ec4ac5b9cab899492dceb0ff8bbd41",
+  "executed_probe_sha256": "1dbde84f1fa9e62a7dfd8c1a4ff658c1801f07caaee5edda761e9efe375c4dec",
+  "evidence": "main04-exact-dependencies/necessary-range-counterexample/result.json",
+  "bid_id": "3044e98f-c7cf-449a-87c0-9a4d4ccae33e",
+  "review_id": "9fdd7ab5-5223-4d05-89c7-1c33fd3eed5a",
+  "affected_finding_id": "86e5814f-0c94-41fe-99fe-6d0c7ce2ed52",
+  "origin_review_id": "d102ab53-d802-4235-93ec-5349f38c66d9",
+  "severity": "critical",
+  "scenario": "Current real synthetic original page1 makes provisional90 explicitly subject to final duration schedule on page3; real original page3 states120. A controlled parser-output fixture exposes page3 as partial with necessary unread-schedule gap and no evidence blocks. Explicit Mock returns satisfied, real PG handler publishes succeeded matrix.",
+  "expected": "The prior90-day disqualification risk must remain open/pending until its necessary final schedule is actually covered; source effectiveness and positive matrix output alone do not prove sufficient recheck.",
+  "actual": {
+    "matrix": "succeeded/satisfied",
+    "source_scope": {
+      "gaps": [
+        "NECESSARY_FINAL_DURATION_SCHEDULE_UNREAD_PHYSICAL_PAGE_3"
+      ],
+      "state": "partial",
+      "planned": 6,
+      "completed": 5,
+      "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+    },
+    "model_block_pages": [
+      1
+    ],
+    "affected_finding_lifecycle": "resolved_by_recheck",
+    "gate_blockers": [
+      "CORE_COVERAGE_INCOMPLETE",
+      "CORE_RULE_CONFIRMATION_REQUIRED"
+    ],
+    "open_blocking_finding_present": false
+  },
+  "impact": "Old known critical risk is shown resolved and removed from blocking-risk projection although the decisive schedule page was unread. Separate incomplete-coverage gate remains, but does not correct lifecycle/history.",
+  "boundary": "Do not block every locally sufficient recheck merely because an unrelated page is partial; require the individual risk necessary-range evidence.",
+  "model_calls": 4,
+  "model_transport": "Explicit offline MockTransport",
+  "paid_generation_calls": 0,
+  "object_network_requests": 0,
+  "kafka_consumers_started": 0,
+  "parser_scope": "Real TCP parser03 used for fixture setup, then output deliberately replaced for new-body necessary-page fault. This is a protocol/lifecycle counterexample, not a claim of Parser03 extraction failure.",
+  "previous_independent_52_result": {
+    "path": "backend-candidate-04-submission-report-result.json",
+    "sha256": "9224c2d87a13c9e5493bc8d19fec06c402589df50b843edb412e6b2c33a22ff7",
+    "preserved": true,
+    "meaning": "Original scope remains passed; additional new adversarial case exposes a separate blocker."
+  }
+}

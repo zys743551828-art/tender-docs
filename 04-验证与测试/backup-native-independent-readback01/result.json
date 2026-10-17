@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "ten_frozen_sources_match",
+      "passed": true
+    },
+    {
+      "name": "actual_dump_and_three_archived_objects_validate",
+      "passed": true
+    },
+    {
+      "name": "retained_archive_is_private",
+      "passed": true
+    },
+    {
+      "name": "restore_defaults_read_only",
+      "passed": true
+    },
+    {
+      "name": "all_108_table_contents_match_archived_snapshot",
+      "passed": true
+    },
+    {
+      "name": "exact_catalog_extensions_and_schemas_match",
+      "passed": true
+    },
+    {
+      "name": "three_originals_and_blobs_only",
+      "passed": true
+    },
+    {
+      "name": "quoted_schema_vector_content_survives",
+      "passed": true
+    },
+    {
+      "name": "actual_insert_denied_with_readonly_default_disabled",
+      "passed": true
+    },
+    {
+      "name": "source_four_objects_and_two_rows_preserved",
+      "passed": true
+    },
+    {
+      "name": "exact_restored_object_bytes_1302554e-1c2d-4096-8eaa-342483bc84ff",
+      "passed": true
+    },
+    {
+      "name": "exact_restored_object_bytes_7b4a7000-ce59-45a9-9211-dc0fb8bd7aa3",
+      "passed": true
+    },
+    {
+      "name": "exact_restored_object_bytes_d65b7375-2070-44cc-92a9-c8f00352192a",
+      "passed": true
+    }
+  ],
+  "database_mutations": 0,
+  "new_databases_created": 0,
+  "model_calls": 0,
+  "consumers_started": 0,
+  "object_requests": {
+    "GET": 3,
+    "PUT": 0,
+    "LIST": 0,
+    "DELETE": 0
+  },
+  "full_application_restore_qualified": false,
+  "production_rpo_rto_qualified": false,
+  "tables_verified": 108,
+  "objects_verified": 3,
+  "object_bytes_verified": 524610,
+  "limitation": "Readback of existing synthetic developer restore; did not independently execute a new restore, newest schema or application recovery"
+}

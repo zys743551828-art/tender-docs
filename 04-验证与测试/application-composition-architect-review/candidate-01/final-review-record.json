@@ -1,0 +1,53 @@
+{
+  "candidate": "/workspace/tender-workbench/docs/application-composition-development-checks/candidate-01.json",
+  "candidate_sha256": "32630d1d1e8572760cc9ca991ebd436caf7cf4f09f66e88c919777f1b2f20df3",
+  "fixed_source_count": 399,
+  "original_sources_postcheck": "all_match",
+  "result": "有阻塞：AC01/P2 生命周期强ETag投影缺失；限定组合检查其余未见新增阻塞",
+  "unique_cases": 11,
+  "case_breakdown": {
+    "static": 6,
+    "existing_authenticated_asgi_pg": 4,
+    "own_counterexample": 1
+  },
+  "initial_fixture_failure": "TRAINING_PROTOCOL_EXISTS；已有全局合成协议重复，原XML保留。仅自有副本改随机seed后4原PG+1独立反例通过。",
+  "junit": {
+    "independent-junit.xml": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "0",
+        "tests": "10",
+        "time": "7.371",
+        "timestamp": "2026-10-17T03:49:54.833532+00:00",
+        "hostname": "597cea30c71f"
+      }
+    ],
+    "integration-fixture-fixed-junit.xml": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "5",
+        "time": "7.057",
+        "timestamp": "2026-10-17T03:50:54.454536+00:00",
+        "hostname": "597cea30c71f"
+      }
+    ]
+  },
+  "evidence_sha256": {
+    "input-record.json": "80eb817ee01c63ebcc3a71a1fa6ed0fc368b795ba90ba8ffb0e144483be54b37",
+    "independent-junit.xml": "83233641b2625fd8aeb162e64358e3b0aaaa187b749a6b45619cfc3c2251f680",
+    "integration-fixture-fixed-junit.xml": "92157371ec0c9be39a27b2f6280503780f8975e1cbf8d70f71e141ec5478822c",
+    "lifecycle-counterexample.json": "53e878cab5375b2345c8caed8e6d6133c447f825e94101d2d72a9e0072093c14",
+    "runtime/tests/test_application_composition_integration.py": "c7c0c86bbcd79dedc21a0a5437716427c9a2747daa4c73febf0347ee24ee899f",
+    "runtime/tests/conftest.py": "bc626de2092d98b65a120edda63523935db40a66778e093af64ebb3ab3cd36ce"
+  },
+  "executed_ddl": false,
+  "paid_calls": 0,
+  "kafka_consumers": 0,
+  "cloud_calls": 0,
+  "modified_reviewed_sources": false
+}

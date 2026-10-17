@@ -1,0 +1,280 @@
+{
+  "schema": "dedicated-score-software-independent-checks/1",
+  "created_at": "2026-10-17T03:33:19.933581+00:00",
+  "status": "passed_scoped_actual_software_mechanisms_only",
+  "blocking_findings": [],
+  "candidate_sha256": "32893b6df6fe1d6f0b5485bb3191aa8b4987fee8d690d4062b842d206ba3f9e7",
+  "candidate_owned_sources": 12,
+  "candidate_reference_inputs": 98,
+  "executed_closure": {
+    "files": 388,
+    "manifest": "runtime-manifest.json",
+    "sha256": "274ef817c125dec734f1ff48a5661ed58cc199b4c5c5780ef0009a9e93e90347",
+    "base": "Archived fixed Word/F05 executable dependency tree, then exact candidate 12 + 98 observed source bytes; not a claim entire shared main new combined release qualified",
+    "before_after_all_exact": true
+  },
+  "actual": {
+    "operations": 11,
+    "sha256": "7560f642b89a1231ddd2eb9ea137a3003662b9908e5f9ddab9faaeba8aa64810",
+    "cold_export_semantically_equals_candidate": true,
+    "local_test_explicit_registration": true,
+    "shared_main_registered": false,
+    "live": false
+  },
+  "sqlF": {
+    "sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be",
+    "fresh_profile": "score_execution02-runtime.env",
+    "catalog": "actual-score-catalog.json",
+    "catalog_sha256": "ecf5c59eb3558a6e3fc34b555ca8f2cb882256d90ffd37e2cce3c8c9495cdf6a",
+    "actual_functions": 21,
+    "actual_tables": 8,
+    "ddl_applied_by_qa": 0,
+    "old_E_database_unchanged": true
+  },
+  "unique_cases": 12,
+  "observations": [
+    {
+      "name": "full_range_and_reuse",
+      "current_calls": 6,
+      "per_rule_replicates": 3,
+      "same_full_messages_no_previous_answer": true,
+      "new_equivalent_job_calls": 0,
+      "bindings": 6,
+      "historical_complete": true,
+      "formal_eligibility": "unavailable",
+      "prediction": null
+    },
+    {
+      "name": "unknown_not_resent",
+      "actual_mock_requests": 1,
+      "pause_preserves_reserve": true,
+      "resume_blocked": true,
+      "equivalent_and_expanded_new_job_blocked": true
+    },
+    {
+      "name": "rule_scope_partial",
+      "actual_server_root": true,
+      "no_staged_score_input": true
+    },
+    {
+      "name": "rule_scope_conflict",
+      "actual_server_root": true,
+      "no_staged_score_input": true
+    },
+    {
+      "name": "closed_archive_history",
+      "current_refused": true,
+      "historical_research_only_completed": true,
+      "project_body_review_phase_archive_unchanged": true
+    },
+    {
+      "name": "late_cancel",
+      "succeeded_call_usage_preserved": true,
+      "new_requests": 1,
+      "no_result_publication": true
+    },
+    {
+      "name": "late_withdraw",
+      "succeeded_call_usage_preserved": true,
+      "new_requests": 1,
+      "no_result_publication": true
+    },
+    {
+      "name": "purpose_isolation",
+      "permissions": [
+        {
+          "query": "SELECT * FROM design.outcomes",
+          "state": "42501"
+        },
+        {
+          "query": "SELECT * FROM model_governance.exports",
+          "state": "42501"
+        },
+        {
+          "query": "SELECT * FROM historical_backtest.proofs",
+          "state": "42501"
+        },
+        {
+          "query": "SELECT * FROM score_execution.calls",
+          "state": "42501"
+        },
+        {
+          "query": "SELECT review_root_content FROM score_execution.inputs",
+          "state": "42501"
+        },
+        {
+          "query": "SELECT * FROM score_execution.current_chapters",
+          "state": "42501"
+        }
+      ],
+      "rr_refused": true,
+      "no_transport_before_claim": true,
+      "actual_child_environment_single_purpose": true
+    },
+    {
+      "name": "frozen_root_late_rule",
+      "no_score_inputs": true,
+      "actual_frozen_root_and_scope_rechecked": true
+    },
+    {
+      "name": "frozen_root_published_head",
+      "no_score_inputs": true,
+      "actual_frozen_root_and_scope_rechecked": true
+    },
+    {
+      "name": "frozen_root_forged_root",
+      "no_score_inputs": true,
+      "actual_frozen_root_and_scope_rechecked": true
+    },
+    {
+      "name": "shadow_same_result",
+      "same_result_digest": "fc8400f5fa345495d4c2805bbe94f79f804a00cde90c912bc88820346970ba0c",
+      "additional_score_calls": 0,
+      "one_snapshot": true,
+      "route_suspend_replay_refused": true,
+      "history_unchanged": true,
+      "training_setup": "Frozen developer fixture generator: 5 own synthetic samples/15 hard Mock judgments; actual purpose-only CPU train; no independent dataset accuracy claim"
+    }
+  ],
+  "observed_success_results": [
+    {
+      "items": 2,
+      "valid_replicates": [
+        3,
+        3
+      ],
+      "mock_calls": 6
+    },
+    {
+      "items": 2,
+      "valid_replicates": [
+        3,
+        3
+      ],
+      "mock_calls": 0
+    },
+    {
+      "items": 2,
+      "valid_replicates": [
+        3,
+        3
+      ],
+      "mock_calls": 0
+    },
+    {
+      "items": 2,
+      "valid_replicates": [
+        3,
+        3
+      ],
+      "mock_calls": 6
+    },
+    {
+      "items": 2,
+      "valid_replicates": [
+        3,
+        3
+      ],
+      "mock_calls": 6
+    }
+  ],
+  "child_mock_requests": 21,
+  "execution_evidence": [
+    {
+      "path": "primary-execution/executed-test.py",
+      "sha256": "85a56c83fef825132b0aa56e224fea12d2e60e80e62449d506f839eee9f731da",
+      "bytes": 13755
+    },
+    {
+      "path": "primary-execution/junit.xml",
+      "sha256": "361652654a5b19327e6e61ce36eef81dfd4f90871fb80a2993048427447a50f7",
+      "bytes": 367
+    },
+    {
+      "path": "primary-execution/observations.json",
+      "sha256": "9bd8e8391db88709c598e0ac8080d3751347b74b11bdecb4f4e6f2881478785b",
+      "bytes": 68101
+    },
+    {
+      "path": "adversarial-execution/executed-test.py",
+      "sha256": "85a56c83fef825132b0aa56e224fea12d2e60e80e62449d506f839eee9f731da",
+      "bytes": 13755
+    },
+    {
+      "path": "adversarial-execution/junit.xml",
+      "sha256": "a5b35bdfea0bf0a9f26745b190fda595f630d98d1bddd8962fd748be9c2abc6d",
+      "bytes": 1015
+    },
+    {
+      "path": "adversarial-execution/observations.json",
+      "sha256": "cd2e0f47af494602ccb33ee478b449485c869a931500aef62b2c58f19bd0e926",
+      "bytes": 74717
+    },
+    {
+      "path": "root-and-shadow-execution/executed-test.py",
+      "sha256": "982b71afca4aaefbb24b1ff09a8227d71612520bfe363ff6f99e0244306760f0",
+      "bytes": 20021
+    },
+    {
+      "path": "root-and-shadow-execution/junit.xml",
+      "sha256": "db507beef1e794fa2be6cb444fcb39bca1aeccf7619d3cd7390b3e5152062e1a",
+      "bytes": 2257
+    },
+    {
+      "path": "root-and-shadow-execution/observations.json",
+      "sha256": "cffc0b840f7aafcc2317ef11f6a5ea88370c6527a519749374fff6f7b2365d0d",
+      "bytes": 36595
+    },
+    {
+      "path": "shadow-mock-capacity-execution/executed-test.py",
+      "sha256": "109ec9e3b9d1670d5243ef66b3f6e08daef4bc5c7606632b25eec5f301ffedae",
+      "bytes": 20196
+    },
+    {
+      "path": "shadow-mock-capacity-execution/junit.xml",
+      "sha256": "897684cb037c578e402ab7453e4a568e1e4d8232f9fecb6263d83560bc7d4ed2",
+      "bytes": 356
+    },
+    {
+      "path": "shadow-mock-capacity-execution/observations.json",
+      "sha256": "80583eb086007847779e3d2a51df4cd8dab035d39fbfe9bd00f49402367d1e9a",
+      "bytes": 49251
+    }
+  ],
+  "ports": {
+    "database": "Actual dedicated fresh PG nonowner API/ordinary Worker/research Worker/score purpose/train purpose; no owner/no DDL/no permission patch",
+    "http": "Actual ASGI with Cookie/Origin/CSRF/CAS/idempotency; proof/input/scoring/registry/governance explicitly mounted in local test composition only",
+    "objects": "Explicit Memory with original complete PDFs parsed by actual isolated local CPU parser; no cloud network",
+    "rules": "Independent manual SQL full scoring-rule fixture tied to actual tender 30-point evidence; pending intent prepared_rule_set_id is explicit fixture, server freeze_intent creates authoritative root; no ordinary model extraction/core execution",
+    "score": "Actual production execute_job/scoring SQL RPC and native DeepSeekClient with hard MockTransport in dedicated -I child; single-purpose whitelist environment, no real key/network",
+    "shadow_setup": "Frozen developer 5-sample synthetic setup generator used only as fixture; no developer test conclusion inherited. 15 hard Mock research judgments and actual CPU training single-purpose profile. Only test process explicitly configured legal RESEARCH_RPM100/TPM100000000, not persisted/default throughput acceptance.",
+    "queue": "No Kafka/relay/consumer; direct authoritative operation envelopes and engine for ordinary parse only"
+  },
+  "counters": {
+    "real_model_requests": 0,
+    "real_cloud_object_requests": 0,
+    "consumers": 0,
+    "relay": 0,
+    "new_DDL": 0,
+    "owner_business_permission_changes": 0,
+    "live_service_changes": 0
+  },
+  "preserved_nonpassing_qa_rounds": [
+    {
+      "path": "root-and-shadow-execution",
+      "result": "3 independent root attacks passed; shadow prerequisite failed because frozen generator expected default session Cookie whereas independent client initially sends Cookie per request; corrected only QA cookie jar"
+    },
+    {
+      "path": "shadow-session-delta-execution",
+      "result": "Bounded own pytest interrupted by SIGINT after 134.96s; traceback at research/model_port.py:94 genuine default RPM/TPM local pre-reservation wait. No remote request retry or product deadlock inferred; original XML, executed script, observations and bounded-interrupt record retained. Narrow hard-Mock fixture capacity configured explicitly for later round."
+    }
+  ],
+  "not_accepted": [
+    "Paid/native provider dispatch (deliberately unavailable before claim without explicit transport)",
+    "Real official labels or historical authenticity, model effect/accuracy and formal qualification",
+    "Numeric business predictions or verified technical maximum; remains null/unavailable",
+    "Real StageA dataset qualification/group/time completeness or synthetic-to-real promotion",
+    "Kafka, cloud objects, browser and production/shared main deployment",
+    "All unrelated fixed-dependency features, upcoming TechnicalScale or moving main"
+  ]
+}

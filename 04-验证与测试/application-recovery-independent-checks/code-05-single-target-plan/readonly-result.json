@@ -1,0 +1,2701 @@
+{
+  "status": "read_only_archive_and_pure_boundary_checks_passed_actual_restore_pending",
+  "executed_at": "2026-10-17T04:14:53.101119+00:00",
+  "script": {
+    "path": "/workspace/tender-workbench/qa/inspect_application_recovery05.py",
+    "sha256": "b19d043798f982c91737c1117ed53c4b0ffcd18ca4e215642c770d99e1e1d0b8"
+  },
+  "candidate_sha256": "6436b14fbd0bd9278f6ae70bea10b1ee4d7e7e2faebda140dd77421d8def052a",
+  "private_evidence_count": 49,
+  "owned_sources": 19,
+  "observed_dependencies": 8,
+  "backend_files": 308,
+  "ordered_sql": 15,
+  "inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/candidate.json",
+      "sha256": "6436b14fbd0bd9278f6ae70bea10b1ee4d7e7e2faebda140dd77421d8def052a",
+      "bytes": 10409
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/actual-code05-serial01/result.json",
+      "sha256": "9176380c0083fc479354a819b9221db370783392c8ccb9ee898282ce2d59c3ab",
+      "bytes": 6895
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/actual-code05-serial01/evidence-index.json",
+      "sha256": "5533e3df11748a2e6ce74b67e37b9257184ca93d368b5eba6291e8f6b14d206d",
+      "bytes": 14446
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/__init__.py",
+      "sha256": "e4d465414abbe571ccc96c65d27f7ab0e4352ad53dbfd876cdd4e2c3eefa92d5",
+      "bytes": 90
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/__main__.py",
+      "sha256": "d4f45c5f50475a56e319d96a0299f0975a67a7e65b64dbf28d6862b8baeda192",
+      "bytes": 9221
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/application.py",
+      "sha256": "fad526efb5819653cd210d7b00924210dc5a2193948cd5fafbbfd4edea6901ec",
+      "bytes": 13879
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/archive.py",
+      "sha256": "47b1810034a6e4f205df7379dc699a9a92b7fe131e38842dde5a300e820f3ea6",
+      "bytes": 17483
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/assets.py",
+      "sha256": "c2943d06b95101229a6a662ece9682ef003e56720f8ee381e2a7c16e2a549e5b",
+      "bytes": 4346
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/binding.py",
+      "sha256": "7bef1c064ca49b9fa1d7230757dcf23bce6a015a093edff3805f3c4226a43a7d",
+      "bytes": 5780
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/cluster.py",
+      "sha256": "23d9d55c03c4e1ad2f1488407a9a139949d6e4a9f43195ff1c6cb509e9462713",
+      "bytes": 17501
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/fixture.py",
+      "sha256": "9ed445eb82e84c9769bad68624f6bcfe33e062493832af91ef11f28ebb880bcf",
+      "bytes": 13521
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/probes.py",
+      "sha256": "502913ec58fab64549099712f632e8fe31f7d9c49778da3521004de0545a381e",
+      "bytes": 2990
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/runtime_child.py",
+      "sha256": "5f3b0837f266caf80aa0e890b40316f69c75a3f8e554f63c299a97a9bcd96eff",
+      "bytes": 1347
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/security.py",
+      "sha256": "dd29109059060f463fbe9a69264bc9b0472bc2d0659baa3cdc536816d8d7fb8f",
+      "bytes": 8901
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/seed_retry.py",
+      "sha256": "a94fff1dc29bc9908fba93b79daa25b2a4d93b8391bb928235cf3ad114a2a86c",
+      "bytes": 3730
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery.py",
+      "sha256": "a5ab4a181d1fdf12dff3cb5f87e6396e9e7c0ee428d16b044325a0b363536a4a",
+      "bytes": 7117
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_binding.py",
+      "sha256": "5aa85f612b99dcefd6836445aac3556da7b7f96c3325e4ba68c46acba41de069",
+      "bytes": 7075
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_ddl.py",
+      "sha256": "2a097a95b1802478bd0a5d5759235f0837c2ec45f7316a848c41b25259ea32ac",
+      "bytes": 4520
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_fixture.py",
+      "sha256": "c8e876f03551c112ed201d55608f970f5d93aa20a996c78fbc73df6e2dd2209b",
+      "bytes": 3333
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_pause.py",
+      "sha256": "a015aa860b91caf25f5be77f1b132aa7143cc4f86fa53383a7912bfa7b091694",
+      "bytes": 4847
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/definition_equivalence.py",
+      "sha256": "1581e1b04c75bf1c5225c893a153aabae7320e5002ddcbc640fd6127d916dcca",
+      "bytes": 1111
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_definitions.py",
+      "sha256": "2c8a40d61b89f06f272f251310fe9665224df8ac9e3f3c3aa06dfe132e9bcc33",
+      "bytes": 2166
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/generic.py",
+      "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f",
+      "bytes": 18528
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/run.py",
+      "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "bytes": 17696
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "bytes": 1058
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements-rag.lock.txt",
+      "sha256": "2d7e749d61d11b1294a75b30df0ea0c55891a5a54138abcb232fa2a3c5830776",
+      "bytes": 751
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements-parsing.lock.txt",
+      "sha256": "fc8886726ba4ccf2a0e62291adc9da624f8c28cb08305b6327d1b739de7115a8",
+      "bytes": 532
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5",
+      "bytes": 635
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/parsing/core.py",
+      "sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3",
+      "bytes": 25673
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+      "bytes": 20303
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/runtime-manifest.json",
+      "sha256": "71fe0fb2c9dbde7d85e62d20bef2da8e188e59ac00e9eb056cc021a1bd75274e",
+      "bytes": 52026
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/README.md",
+      "sha256": "40a22814f3cfdcaf3dba86c58ab519d79589951b0f3d381e76f68fd4084cf221",
+      "bytes": 15736
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/__main__.py",
+      "sha256": "1f2f36250f2cff00c4ff891293cc2046455e8cb3049c22410c6aa7a2a694cf88",
+      "bytes": 127
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-candidate-01.json",
+      "sha256": "bd86798df5a661532b18d48214087c329ff572bcf680dcbba99ef25011597c94",
+      "bytes": 8626
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-candidate-02.json",
+      "sha256": "cf7b21da833975d49faf060fb8b4795e3872c118ecfd9b3bad32a3d82a5c63cd",
+      "bytes": 12897
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-ledger-candidate-01.json",
+      "sha256": "78441a80539fa76f128e6dcc56f42476edb7e5daffc3c334d328358f369a7c5f",
+      "bytes": 1395
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/assistant_routes.py",
+      "sha256": "31023b7a4f9dd1f42968b3947ef4337765be8fe6b141912f5a2165aa3d386b47",
+      "bytes": 17700
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+      "bytes": 2214
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/authoring.py",
+      "sha256": "c8e200a06df12bdb433951de6505d799b187e5b1f8229ef5a17c5a4e853b3621",
+      "bytes": 15422
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-01.json",
+      "sha256": "3c628c7f733cc9e197fdfa75301f03a3905701dbb7b51d04727f6ca3401e53e0",
+      "bytes": 3821
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-02.json",
+      "sha256": "b5307a48ca9b0531e2f482e28646b2d4adbcd9bdf5596b35af1dc23f5afb8bd7",
+      "bytes": 4850
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-03.json",
+      "sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+      "bytes": 5116
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b",
+      "bytes": 1060
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/build_coordinator.py",
+      "sha256": "fabcb0a5eda3a2f996a9a9c5ce4ed4ad1d77af7de6db189d0ffb0fd18f4a3ead",
+      "bytes": 1603
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_contracts.py",
+      "sha256": "d70d7a1ddb1ec20472396980f836397062d1d5f39a8a2651ff3aac7ae0859678",
+      "bytes": 5055
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_routes.py",
+      "sha256": "29e9380416132070b37883d9588229cc3c83b1f2d0bedbc984cd6310c42cd20e",
+      "bytes": 5364
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/event_routes.py",
+      "sha256": "e734f6f05ec2a5628a59e6bc53d9aace561d2b6399d567626ac9fcff37b25780",
+      "bytes": 5555
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/export_openapi.py",
+      "sha256": "57257e4bee443097c2b1361ef73e84c22c386afa0f4f0df4ab91f6f1de3ebd66",
+      "bytes": 6007
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/history_routes.py",
+      "sha256": "12eed771933f96000d8ec5542b1da0dce3167f93c4d2ab12419fdf3d0d9b6322",
+      "bytes": 2680
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_contracts.py",
+      "sha256": "9d6198d47b86aa7425676eadc2aaf8cb6876d28c5e1609517517c3c227dc7283",
+      "bytes": 3608
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_routes.py",
+      "sha256": "fa93a58c3d03eb540e162b588c053b81d21dd87d90b3fd8bd1b80187d20d30b5",
+      "bytes": 15981
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/identity_routes.py",
+      "sha256": "eb64c21f6084b59708d17aaebcfc6f0f9acfad6de6a5c6bbb283451337e067da",
+      "bytes": 8520
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi-02.json",
+      "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+      "bytes": 199274
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi-03.json",
+      "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+      "bytes": 199274
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi.json",
+      "sha256": "75c280f0422630ab8a8173bcaa03fc74e86a4d9b7c589af3ba1b223a5140a09e",
+      "bytes": 198309
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/knowledge_routes.py",
+      "sha256": "92ff3a1f880710749e53a0443bf2f2c43d45853b842b586ffbd9d32137209f13",
+      "bytes": 11571
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/lifecycle_routes.py",
+      "sha256": "8407a2ec81514691cec68b8a4c394563b27c7d953c595cdd68553ccd43d86be0",
+      "bytes": 4369
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/main.py",
+      "sha256": "1e60942fa43192ae3808cbcbcb7c634a0d7f5bab574c8c33ec45a32f43b307bb",
+      "bytes": 44536
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/metrics_routes.py",
+      "sha256": "d5dfc777f7d7bcb3d8c6141054c5f8ea1d4746693d50ab61e521d12a69d4be9e",
+      "bytes": 5976
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/model_governance_routes.py",
+      "sha256": "2d2e25f0b94892422363b9194bfe97b19eb9a0cc3fb5bc1a5ebeae59315a7088",
+      "bytes": 9473
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/multipart_routes.py",
+      "sha256": "38a245935634f70c4285389f9531685e3155d608b0e233364470f89f55854d43",
+      "bytes": 3973
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/object_transfer.py",
+      "sha256": "f32d0cffbd4f0bdfdb8ee74d5b60aa84e8b78d5a0c6c34fbb086f899a3dadfca",
+      "bytes": 17585
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/pricing_routes.py",
+      "sha256": "b2089d0aa3e32e433d19e7d3355bca0b2f7d654893cac0f76978f53b32da0014",
+      "bytes": 8548
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-candidate-01.json",
+      "sha256": "084ec7937bd2a048342e962c31c5547e3426e9f1a33c82938cacf46ba0f7b133",
+      "bytes": 2381
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-candidate-02.json",
+      "sha256": "b8e575a08a935bbabbbaa413269e4a86046817fe53482a67ad63ed964b385f9e",
+      "bytes": 2715
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-self-test-result-01.json",
+      "sha256": "84e60bfea132f05439211ab21666520c405816274a22541157597b9d648a4f45",
+      "bytes": 1702
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-self-test-result-02.json",
+      "sha256": "656f856c1a5d01787a1d52b8d4b1685a6975a94e7b6648b67b4c93e01271e8f2",
+      "bytes": 2079
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/rag_routes.py",
+      "sha256": "d5d41f9abab829f498aba0ade5784b83b9602021336d2349f7f30b03b19f5d68",
+      "bytes": 12166
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_contracts.py",
+      "sha256": "db87c5a97dd424eb9af746f7c2a1bf437ff16b993441ba96454e0c5bdcb9b4c1",
+      "bytes": 3063
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_routes.py",
+      "sha256": "78f7176d598949f24821f2786ed8c4a2f3554b43b6c1a2de291c729e30dfff99",
+      "bytes": 8131
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/research_routes.py",
+      "sha256": "008c5909a8fba2e97190d3a1bb23690e8ed7fc10b329251f613ea4190fe79eb0",
+      "bytes": 20973
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/retained_upload_routes.py",
+      "sha256": "ea601cf117d371cdf8a8dea19534683a15d45d940ef586575c1548354dff2689",
+      "bytes": 7591
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_contracts.py",
+      "sha256": "da0c7ad8282d35e3b17c4bb386f9f9c5cd3411768c4ae443cf6f3ca92d83f6db",
+      "bytes": 7781
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_coordinator.py",
+      "sha256": "af7b3ca26283d75095720a74d3deb41291f4538bb0296d0a7f233af689cf806d",
+      "bytes": 1704
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_routes.py",
+      "sha256": "86845d74fb5fd5eba3dfd34f798ed454cde9680fcd7e62fbab6d5404562841ff",
+      "bytes": 13507
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_views.py",
+      "sha256": "ca242ea615303ea209f47173611e3b1ba77c02cb2a5b93b94763c7a73eda1b39",
+      "bytes": 14363
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/settings_routes.py",
+      "sha256": "6f88c86dafb041aebb954051609473613bc6e54b48b15f885b331a9939707244",
+      "bytes": 3256
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_contracts.py",
+      "sha256": "6d36caa8d6e3b632b5e7e63b12da231431d8676407a9fc10a2fd6bb6807fb51d",
+      "bytes": 6062
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_routes.py",
+      "sha256": "f1eb03ea63edc244143b314923cd5b126c1e3e1d3d3c5b2e49ed0d86176f5554",
+      "bytes": 6359
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_contracts.py",
+      "sha256": "c79aef5382a5babb3a996d28bb1626f8327232b0e905bfef163a24fef77a290d",
+      "bytes": 7118
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_routes.py",
+      "sha256": "ce096665219bb8c3a86b823d9aa710db9fc39b4143c860503510954ec4bf51c5",
+      "bytes": 8913
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/task_routes.py",
+      "sha256": "18b5391b9ead5a082221cbf57868d317be121ba3f6461779fd2255737859068e",
+      "bytes": 10777
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_contracts.py",
+      "sha256": "2342c0788836ee25bcc565775e418db081f29416b4dfa5a2116396ee69158432",
+      "bytes": 5705
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_layout_routes.py",
+      "sha256": "f2d7f6c3183ab135def96267eec345ea76eda47a995d657186f0a177dc2c0ff8",
+      "bytes": 2385
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/views.py",
+      "sha256": "206794028670b986865c2aede747ed8d877271f4b3532395f3d48b7a899b0cda",
+      "bytes": 8520
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/web/node_modules/flatted/python/flatted.py",
+      "sha256": "f784c254de76a25435ebaa61c72942072733ae4b42619b943bf37b09fa45e644",
+      "bytes": 3773
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/web/scripts/generate-contracts.py",
+      "sha256": "23416ec4adefe6a38490405062b6dbb15b2f879c5cc9cf3ee30b498b3efd7ab5",
+      "bytes": 5586
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/__main__.py",
+      "sha256": "57c7f8b3bc6ca2afb17b22a64973e73def1f18edda5c33f630c0f52d51a9ef06",
+      "bytes": 1154
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/comparison_handlers.py",
+      "sha256": "7b8739725490d378f70049c89d3d07b360647b8ee9ddf5137be081b45be4af07",
+      "bytes": 2174
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/content_handlers.py",
+      "sha256": "d9f51c9cc968e8ed80ae0cf91757384a07f28ca9fbdf4d2954a1c571e122b0a7",
+      "bytes": 7465
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/engine.py",
+      "sha256": "9b233dc95bc4b8377a68e3f7d4f451b4a9899ededcad1f8b7012c63163fcc7c7",
+      "bytes": 34849
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/execution-policy-07.json",
+      "sha256": "72874d8f4d4ed43981433ed61351648ce493401f2d3014877d109c06b58e60fe",
+      "bytes": 5625
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/export_handlers.py",
+      "sha256": "bebf701d5fbcb800c04048016df3a8ac20475769eed0a0f7faaf0161f21ad609",
+      "bytes": 1008
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/handlers.py",
+      "sha256": "1f2cf6a16a99aa9494ef60d0df9817bd2abbb062c594ac2b24552978ead27b47",
+      "bytes": 14472
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/report_handlers.py",
+      "sha256": "0d109e6c35f9ff554a1643876fea70d409ac3ec79d720e709c1a15e8a523c0d4",
+      "bytes": 16040
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/review_handlers.py",
+      "sha256": "0a7bd3076d95b413c92326535de39f73e46de5844e73bc0b921349c95c1fac78",
+      "bytes": 25523
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/fetch_rag_assets.py",
+      "sha256": "7e25b7fc67165f931af26630e70d820f3c7090cfcd9aeae76be9a94000a4509b",
+      "bytes": 6468
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "bytes": 3445
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/review_acceptance.py",
+      "sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+      "bytes": 19843
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/run.py",
+      "sha256": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107",
+      "bytes": 1684
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "bytes": 449
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-backend-development-checks/frozen-inputs-05/apps/worker/content_handlers.py",
+      "sha256": "5eb882a2fd25740670c0f769ed71099f6e760c4c7e8fb861c13f6621eef5726c",
+      "bytes": 6754
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-backend-development-checks/review-fixture-05.md",
+      "sha256": "4cffd0b1c36d7d44131b8065da3c2a568148c0b65d1b7fcf72412b2b7b15e8c0",
+      "bytes": 3448
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-submission-report-product-review.md",
+      "sha256": "1c65cf6c6034a305715badd4616e41d8bb56bc953a2d5030876e3a726ce8f045",
+      "bytes": 3246
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/backend07-implementation.md",
+      "sha256": "aa8bc797ba668e9dd73ca16a7a108065bbd06a0cf31398241fc790c77d61f045",
+      "bytes": 3422
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/core-recheck-scope-development-checks/README.md",
+      "sha256": "bbaaf265c67b2a5905340f4e88ab5ed35e31ebda639476e6541884fe0af954bf",
+      "bytes": 1580
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/core-recheck-scope-development-checks/note-02.md",
+      "sha256": "ad2f88db7b66b070a823cf2a6bae94217b270357398b0d2b3fa51fbda399042e",
+      "bytes": 1166
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/metrics-development-checks/candidate03/implementation-protocol.md",
+      "sha256": "e79a749d8efd86d7defafdaa0a830380aa3a2c337bae32604a0e62ab3a377a97",
+      "bytes": 1557
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/metrics-development-checks/implementation-protocol.md",
+      "sha256": "638cc92b7c734d81f670507ab9763be0d27ca67d31b7727733d5b500c703ad67",
+      "bytes": 7454
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/README.md",
+      "sha256": "f4c4e0ba9d68c740b927a96095bbd233df6f10208141198e1cf014c0b7edb91c",
+      "bytes": 7795
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/__init__.py",
+      "sha256": "829cf0726d0d30b97cb61fb2949b210d70572baad678aebd77683bb2e1e3ee5e",
+      "bytes": 86
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/actions.py",
+      "sha256": "531581fb9f2c697dab0b89eba21eb06a3ad280a43dfa26bd2ca38307d9a0a248",
+      "bytes": 13824
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/actual.py",
+      "sha256": "e2d8446ea560ff1b663ece367a9d441915fb25eabd938c0d2f34fb27ba23a6dc",
+      "bytes": 14787
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/authority.py",
+      "sha256": "049bb7c182abed95154d1bac88d9c4ea6a1b2c42f032e3f26299ff48a520345e",
+      "bytes": 1753
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/context.py",
+      "sha256": "8616efab3bcab9f99a2d3e284a8d64dd5f2512d66c93ce7220cfd8c9347f5559",
+      "bytes": 21420
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/contracts.py",
+      "sha256": "91eb70db9b0b65ceb812a2c15931fbcc76953a1275a50fb4bfa012a630cf1ad2",
+      "bytes": 5617
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/conversations.py",
+      "sha256": "b60b95f3287bc2ff626a1101bd6fa6b1a06c1e01912ba2a6775355382c86ddf9",
+      "bytes": 5487
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/coordinator.py",
+      "sha256": "e1a1479128bf2e13d572eae9ca7aca61ec987bd4727358b3192eeabd8f0d54fb",
+      "bytes": 13720
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/generation.py",
+      "sha256": "29f991719d299106d28568c2502b8161d40f9ea6ef60dfa1cc352e5cc0fae399",
+      "bytes": 12116
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/global_runtime.py",
+      "sha256": "b46c21fbbaea777f5f4cbad471f650d3c0352061d82120d09fa9afb17f489905",
+      "bytes": 14765
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/jobs.py",
+      "sha256": "572c4abaf0a435d95c38491369767caba6fabf5375ccc2a2252e2455d18ec238",
+      "bytes": 18485
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/protocol.py",
+      "sha256": "6c0eccee978207b9698138a5b9b7605d367c4dd2d584f57fe6741d2f3dec8047",
+      "bytes": 5247
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/sql/assistant.sql",
+      "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9",
+      "bytes": 12229
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/tasks.py",
+      "sha256": "b3812d9c4342bb07a169c29da7591c6b918beca08b151b87d1899859d7683ac8",
+      "bytes": 4222
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/transport.py",
+      "sha256": "975327b735146397e59dc81ead12dc76c53c9994c47550955c03e2e51b60c486",
+      "bytes": 5583
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/__init__.py",
+      "sha256": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+      "bytes": 68
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build.py",
+      "sha256": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+      "bytes": 12940
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build_repository.py",
+      "sha256": "a98dc10e2cd4dcc4e06f676a5b8ea1feeb87c749107680a802e31084372b6184",
+      "bytes": 11799
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/content.py",
+      "sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "bytes": 4754
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/contracts.py",
+      "sha256": "5fd46773776351115ab85efea43735118d5b3b1e69c1f968300e2b4d445779ab",
+      "bytes": 9745
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/generation.py",
+      "sha256": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+      "bytes": 8365
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/patches.py",
+      "sha256": "268d1ef5f967ff7238a72a9bf1a000cbe958392d010adb57087abfe2a0b04af5",
+      "bytes": 6646
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/repository.py",
+      "sha256": "6014fef1c83754163cbfde6677e7abd162d73e77cc56688a43cb13d647919d35",
+      "bytes": 14180
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/design-source.json",
+      "sha256": "de56347ab7a90bb9825740e2d6b743aa496f96aadf0df7f198a6e7eeea51df57",
+      "bytes": 3052
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/implemented.openapi.json",
+      "sha256": "04dcfcc0aa6d25198658c1a2f3b39b370e69e7d21d67396285d74dbfc0d1b98d",
+      "bytes": 394287
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/openapi/http-examples.json",
+      "sha256": "665404f8f5887bc0ff177a9aeda2880a1d9511644a29c3551bcb90ce8d3f92ef",
+      "bytes": 7527
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af",
+      "bytes": 363849
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/policies/execution-policy.json",
+      "sha256": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+      "bytes": 1991
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/policies/retrieval-policy.json",
+      "sha256": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+      "bytes": 1150
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535",
+      "bytes": 131694
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/schemas/review-identity-vectors.json",
+      "sha256": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a",
+      "bytes": 13298
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "bytes": 12968
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "bytes": 32709
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "bytes": 7058
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "bytes": 5192
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "bytes": 5543
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/build_followups.py",
+      "sha256": "8dfab4c9178f24175d562c5d17f2754c7ec1a785ed33b0467c3a6d0db558dd47",
+      "bytes": 10911
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/comparisons.py",
+      "sha256": "8b56aee2f04cb30274f933646764afb23d5d488bfa18c7746d90b65ccb429bea",
+      "bytes": 5517
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_check_status.py",
+      "sha256": "3cf55d761abb3be207d0cdbbc98e4595b76c38410f17d04824c94876ebe2c503",
+      "bytes": 2832
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_checks.py",
+      "sha256": "1fc5d69a39e2b44b813bd1211f91f3847bc73e346e6f88a8faa41557dc96a5ad",
+      "bytes": 9267
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_decision_basis.py",
+      "sha256": "1a51b1ebcd369201dd6b0d3feda2e666157ccbfb329081a1d3c2f03c703a2e7a",
+      "bytes": 2345
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/core_recheck_scope.py",
+      "sha256": "422bd66cb2367b5a31d2de63226fa5813c1c500ee93d362f6edf64c8fa4786ed",
+      "bytes": 3954
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/engineering.py",
+      "sha256": "3c78510ca1e51341b5c4b3edc977cdb870d07464fd51a1357f8345a6f926edff",
+      "bytes": 11458
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/fact_sets.py",
+      "sha256": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38",
+      "bytes": 8948
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/finding_lifecycle.py",
+      "sha256": "f5ad72bb307538227c1aafb733b7c63486a6d837dc7544e548385fb2526e7ef8",
+      "bytes": 10633
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/human_decisions.py",
+      "sha256": "4634ece2d913d6dfe0a793df2b954829d57d957766fc8bea7911920679eda841",
+      "bytes": 3091
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a",
+      "bytes": 750
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/model_calls.py",
+      "sha256": "e846c5c81dd624346c1e65a804763f7e953f892750a9733a2ae098d22e1f7321",
+      "bytes": 11049
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/model_recovery.py",
+      "sha256": "6872d377d1fb5b9d36abd9f1bf5a4c7f0ba519e23ca6f19facb960107f6d59ef",
+      "bytes": 1313
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/parsing_profile.py",
+      "sha256": "f61a997b4af11a635660f431086f6d0c73fac8f96262674698ba7a6a9bd8e1db",
+      "bytes": 797
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/__init__.py",
+      "sha256": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+      "bytes": 88
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+      "bytes": 13083
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/oss.py",
+      "sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "bytes": 9155
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reports.py",
+      "sha256": "e9f747006c670a55fdcab83b44329fbd646d27bfd84a4b12522382712f8147df",
+      "bytes": 6584
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_comparison.py",
+      "sha256": "854786301ed939f0ba3c43a406289c2c4d46eb668d4429fe0c3f3fa5632637a8",
+      "bytes": 7939
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_data.py",
+      "sha256": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+      "bytes": 8313
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_identity.py",
+      "sha256": "d6f03e98fd5fee7a7699dfe7c9092d88b871b4b980cff0fb00e025aad90d1358",
+      "bytes": 2704
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reviews.py",
+      "sha256": "12cfcf0056066105000a29f4e591d645ed6b65ac67386ecea92a88924a661076",
+      "bytes": 29960
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_corrections.py",
+      "sha256": "635d76d36d5bb8163c7d37dcfcb79c883072daf1e75e6c7fc537e56a50b20e8f",
+      "bytes": 9697
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_sets.py",
+      "sha256": "fb4800911262cca213cc699a79b577c94bbfeeaec2bcbea2c9aec7c175127d67",
+      "bytes": 9579
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/runtime.py",
+      "sha256": "c333121a288ce2c4ea97d9a1904a17e1759ea7070898f5dce36244c1837afb1d",
+      "bytes": 12744
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/source_effectivity.py",
+      "sha256": "acdab0c772bea603152f7ec35036d3ace294f8e8cc000807497a3adfab282aa7",
+      "bytes": 16652
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "bytes": 1486
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submission_gate.py",
+      "sha256": "33ac41614487a34f7526a9636dc48a224cb268c5a5e7bb8492ef45d1bf570b62",
+      "bytes": 9118
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submissions.py",
+      "sha256": "909905a73bed084ea56d6f8b349132d395d6b061f6faafd26e5036379262df9d",
+      "bytes": 11939
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/work_access.py",
+      "sha256": "db728daea0b539da6f84e5985ad3be73810a4fa32eec101f65b4dd77435231d7",
+      "bytes": 608
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "bytes": 66
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/contracts.py",
+      "sha256": "87002f8b2637233295a70a2ecf86dbb8b30dc34439c0889e586dea4bc7e94cbe",
+      "bytes": 7560
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/pagination.py",
+      "sha256": "ecbbe5c08a8bcd4d9c4adb16cfc7ade5f8f226d0dca13f7b47f075338d8eed89",
+      "bytes": 1475
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "bytes": 11263
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/README.md",
+      "sha256": "01339c14171572b7f35a6c9fd5c233e153b79e7ab7e8e610877b9153703fea60",
+      "bytes": 16653
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/__init__.py",
+      "sha256": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+      "bytes": 75
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/bridge.py",
+      "sha256": "27394879760aed1cab619e4cf23a4964a675dfb6ca8c1ee9d9cba67217d96da5",
+      "bytes": 15875
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/content.py",
+      "sha256": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+      "bytes": 5884
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/contracts.py",
+      "sha256": "fe5959b68d1e6e4c44f1d52133f9f2f333007e501b870e28075b3217e8833d5b",
+      "bytes": 13581
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_api.py",
+      "sha256": "8f203c5e4732f57eb81a91e6663de54be7cd095187a35c4b668fc5652e578eaf",
+      "bytes": 3899
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_contracts.py",
+      "sha256": "d8d84e838ece2b18f59bcf87b5a31d3d5b9918a6ac820c8c470d81e73ed3cc1f",
+      "bytes": 8828
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_coordinator.py",
+      "sha256": "9d9c67a29d134f104bfaee790b4ba662e0cc07393cbbb2ab0670701dd309e906",
+      "bytes": 3676
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_index.py",
+      "sha256": "c86f605d4b12d80bc5ad72adebafa6b1faf7f6f6aafc1e19906f0ad5aaca212b",
+      "bytes": 3751
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_repository.py",
+      "sha256": "2abb83dbe679ccbd2f5fe150ce840b2ef9cd361e2b9055b40be8ea1e086781f1",
+      "bytes": 18858
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_search.py",
+      "sha256": "114b17bf9c7940ec9c9673e9774b81caf39105c7879c0011d821c4130201241c",
+      "bytes": 20466
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_tasks.py",
+      "sha256": "e8a4f3bfc2a0b782ef3efec8ce54843391dbf8e80b41621805d65120ddae9682",
+      "bytes": 2681
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_types.py",
+      "sha256": "317741f0eb1a38c9388cc4470c31986dd9ac44ca02eabc3d209f43e4c047df29",
+      "bytes": 5461
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/repository.py",
+      "sha256": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+      "bytes": 20142
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/sources.py",
+      "sha256": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127",
+      "bytes": 4588
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003",
+      "bytes": 8399
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/__init__.py",
+      "sha256": "46bb6bd088221b65fe100d175ed74b95ad91d2055603cfa6943ae3173f89311d",
+      "bytes": 87
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/batch_closures.sql",
+      "sha256": "0979d5dadedecfd9aab194684bbcbd1eddbae6c60ff74355a5b5ea23a6a2db73",
+      "bytes": 1000
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/contracts.py",
+      "sha256": "7f9494f833b0678fe25ceb1f95031bbbc3e00c3b7803b6f4063742c7d034be72",
+      "bytes": 6871
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/service.py",
+      "sha256": "b01dddff0e8496d4a6327c7a4d55d6879bb23f47abb18b6ba80821d658c915f9",
+      "bytes": 10566
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/__init__.py",
+      "sha256": "8928f40c9a970d97210328a29cd54e333ee2ded36db8caa965f3e7494e44d6aa",
+      "bytes": 90
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/contracts.py",
+      "sha256": "f6549612c78ad7ef6a35e7aed2af758e1337d8f9ef0e0a7c39a94e7dc57e3563",
+      "bytes": 11315
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/core.py",
+      "sha256": "9ddf4e93ba72c7b3f4e38a89eb63efc06ea3562282776770681a745c9d07b609",
+      "bytes": 4652
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/predictions.py",
+      "sha256": "b64c75572fecc536bc851251fed2419132ed175ee4a71f860af49018de733b02",
+      "bytes": 11221
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/records.py",
+      "sha256": "0ef3b58db374ce898df4e0eb27dec7d83bc6e9541c00f354b56b9b2dc0ac63ca",
+      "bytes": 2857
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/results.py",
+      "sha256": "6e7e2f5ccddc1e6bdde503d78936c63bc3b07a52019e266f312b2959db5de126",
+      "bytes": 11129
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/snapshots.py",
+      "sha256": "a17a6d186090571991528f3bc8264c6a3a485a69b179630a14219df359cd0ca2",
+      "bytes": 8925
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/sources.py",
+      "sha256": "3aa07ae2bf9edac94032d7e97edf81064baf47123883075ce388c31ae9a9d962",
+      "bytes": 8301
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/views.py",
+      "sha256": "cb4466734f401213a59d7e2537578a417f87cd0fe6bcb51b1f3058217b8f0d79",
+      "bytes": 12610
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/__init__.py",
+      "sha256": "293b5f097894aabc72fce0119f1ddd5b77c13a05f7aa7f8a9d356f398a3216f0",
+      "bytes": 91
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/common.py",
+      "sha256": "a6f237d4cfc4d6790d643b2a5109dca6385da01705af8251ebdd81f0020d21f4",
+      "bytes": 1975
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/contracts.py",
+      "sha256": "a76fbc0c08ac74977b569bc70b9c809ae3120f7595327eaca673c3df71a3cfc4",
+      "bytes": 806
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/evaluation.py",
+      "sha256": "4c1fbeea5d30fd9d1b7be01fb88505f2ec6fc45220b61d8036ccb7093997cd07",
+      "bytes": 7783
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/features.py",
+      "sha256": "5a0ccef1edfbe15d245052fced684e681fd35a9f41b2e7a926697a1b2abbec9b",
+      "bytes": 7439
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/intake.py",
+      "sha256": "8d287ed5fe2b6aed6255b1b1f6389b8a7837d6c90b271a4c7ef0acc9be484475",
+      "bytes": 16859
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/leakage.py",
+      "sha256": "d322192254d6a68d51aebf7160a6861e9b426aed42c2fe7e645842c875f4c351",
+      "bytes": 3048
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/purpose_runtime.py",
+      "sha256": "c91f58afe218119f463e0418f6b80d939a8a468a6fe0ba1fb660d2a7caad2c5c",
+      "bytes": 8825
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/repository.py",
+      "sha256": "206edbf7029eb926ec1f1cd2a6124d587b297e77781c4b0bdd6ba9b293da9e9d",
+      "bytes": 7583
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/statistics.py",
+      "sha256": "f4d87fd50eae53fc9ea1bc46df157f361a7c3765a65fd5cf8360063420f54d55",
+      "bytes": 10578
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/training.py",
+      "sha256": "9833ecd4a6173459f35a55bd1bd4cbe305a50db59d32b8c66514ae367d9b6af3",
+      "bytes": 8306
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/__init__.py",
+      "sha256": "39e97b51a4ad28b8e206a3ef2d11ca5df6530d0ec3a9b318e8eb73356efc413b",
+      "bytes": 84
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5",
+      "bytes": 635
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/core.py",
+      "sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3",
+      "bytes": 25673
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/fetch_assets.py",
+      "sha256": "3a4956df5d38b95bed8885e302935ccbb91212203b80fa02bcded86096f82947",
+      "bytes": 1506
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c",
+      "bytes": 4628
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/server.py",
+      "sha256": "12eaf57412c6af22f56816259d2b0c55011492da109d6a251ae28724329da97d",
+      "bytes": 3342
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/README.md",
+      "sha256": "d6a0050e672657988289b79ce60d7c457f781b1bfddf0c3f52c40ae7151dc4f3",
+      "bytes": 7520
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/__init__.py",
+      "sha256": "79a9c217fd20ac96f5dd2b7745b8cec5ffa116361f86681867e50cf4c9ed9f8d",
+      "bytes": 58
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/calculator.py",
+      "sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667",
+      "bytes": 8005
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/contracts.py",
+      "sha256": "6eaad06a69de35bf0a485d62598e1b161b275e9d4bb4870270997a047579b806",
+      "bytes": 10343
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/models.py",
+      "sha256": "a0d26b94c947681d360717774578a71e5700c0242a3e7e2a3db22d99b8251cd7",
+      "bytes": 3590
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/repository.py",
+      "sha256": "22e97621dec12c569544dfa3fd1e03a7af9ad7e43316656ce0039f5f451aac2d",
+      "bytes": 19871
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/sources.py",
+      "sha256": "cfc3edd58867c9c2e9ab8826c10d0a65d4ecda1cddffff63325357593de1ce4c",
+      "bytes": 10096
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/terms.py",
+      "sha256": "6621bbbe786f1c508a3db52a2f1a8fb4a695a41e4184603e83189d2a19547259",
+      "bytes": 3546
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/README.md",
+      "sha256": "fab00b08a1caf4b2ef14f4a5a8cd6659223f2dc98cc580627903c3dbff84cfb6",
+      "bytes": 4045
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7",
+      "bytes": 94
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/coordinator.py",
+      "sha256": "0fc60f87ef494bf058a99981c45f346fd379cc5ec244613a16086d6126366d3a",
+      "bytes": 4306
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3",
+      "bytes": 4979
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/http_port.py",
+      "sha256": "149cf1bef79c19d5857acd7b028f84d273ee2eb7e4d34b1a295babe2d8a3fad6",
+      "bytes": 4117
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad",
+      "bytes": 11828
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/lexical.py",
+      "sha256": "6198d8ec3e80039fcab28375bd0cfcc91e9488b284a25cdb1ce503198417272e",
+      "bytes": 789
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/local_models.py",
+      "sha256": "ce7fba2a39b08443964dfff8a1030b0074ca1d9eea9675cc56d589fc7a0fc194",
+      "bytes": 6588
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/repository.py",
+      "sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd",
+      "bytes": 14347
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/search.py",
+      "sha256": "26e6dd37d6ba2d0049bd910d4f94576ae528d354cc85f8a2734bb9496908ea84",
+      "bytes": 4578
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/server.py",
+      "sha256": "d1fa3ccb0fcd2797232f6567dc2ae925fa70a0de306547c35f3c47766ed34e9d",
+      "bytes": 4669
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/tasks.py",
+      "sha256": "154b52e2aa1e6f0b4d5a8cfa333de88767e3a6ef36205938ac7d8e4a766fda7f",
+      "bytes": 2278
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "bytes": 85
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264",
+      "bytes": 1571
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/authority.py",
+      "sha256": "855404c135231ea783031a6bf244cde1e90ab45a5bb5f8d67223121e7ca6e9f1",
+      "bytes": 7705
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/batches.py",
+      "sha256": "cf0299442661730043f17d5c45b29027ed16547ca39ee813e465d460e5bc9565",
+      "bytes": 23062
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a",
+      "bytes": 9101
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/contracts.py",
+      "sha256": "3b35d403d2124bc62a7573468677ccc1259d825403039860d70fa9646c423841",
+      "bytes": 16103
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "bytes": 10555
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/execution.py",
+      "sha256": "0b973858ade5aa81292a720473c59f42feb7b1c81c03a34a8d580a8b7c9868ad",
+      "bytes": 12883
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/identities.py",
+      "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+      "bytes": 2137
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/importing.py",
+      "sha256": "2833a43407134b8b64a86fd928e3fa58d3464dfdc5e4c780cb63aba73e5b4a93",
+      "bytes": 12793
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/ledger.py",
+      "sha256": "3b53f263360a766d0d5c2360de3189945ca1e71c0f6bef8d940285f784b41d50",
+      "bytes": 9852
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728",
+      "bytes": 7856
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/outcomes.py",
+      "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+      "bytes": 23029
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "bytes": 2097
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/research-candidate-01.json",
+      "sha256": "20e92d95e30325f3a44d98bb160fa680dcfe777c05ce60c64faa33326e1279d5",
+      "bytes": 4868
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/worker.py",
+      "sha256": "39673ab943b301169141ae7746102857c37cf209719277a42561deabdc46f685",
+      "bytes": 12229
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/__init__.py",
+      "sha256": "9ff031ab841b41e3c72cf5113c6d91631404b41ca084d81937f64ae878b98218",
+      "bytes": 63
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/coordinator.py",
+      "sha256": "97140bf4d0f975dd0631ba90055ca00237211304370a4967dd39fcc0c6626e49",
+      "bytes": 9448
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/inputs.py",
+      "sha256": "f11e879f1861a7d0791968b9650baa65a3ba4712d8b1729adb5f2f754e7a21c3",
+      "bytes": 5746
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/models.py",
+      "sha256": "d5f2a3dd33b022d0f12099c110dc3283c570d499807bb52626bcb8ef28e5dd5a",
+      "bytes": 4173
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/runner.py",
+      "sha256": "3e8f5c760828bcfd1218ca30c50d6ab860fcd2100e88b6e49e5dae53be6f9841",
+      "bytes": 3414
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/runs.py",
+      "sha256": "6a0cb5f69ab337fc66300e9317416bedc92f3444fa795cd71a0cb7b3b7179e09",
+      "bytes": 17810
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/scheduling.py",
+      "sha256": "6fd5270cb17079c2181e80d69c19064673ef1124d91c33d38e322a87f5ff70f2",
+      "bytes": 5518
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/templates.py",
+      "sha256": "7c3391641fa09ef570fe7257a0951254dfe74286e9b72aa0a1b92cf1ba138cb5",
+      "bytes": 7449
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/journal.py",
+      "sha256": "c912761b703d185b9d3d1a9752d554f1b78e1a2dc2ca2ca64de8a03de065ae41",
+      "bytes": 1150
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/native.py",
+      "sha256": "f836967db006a249abf79e87e4e53ec4a63ddc4eb6d5ddf4143f9f96df0fb5e5",
+      "bytes": 4533
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/protocol.py",
+      "sha256": "68a5ee4c07655aa4ae01d1ef8d3e04743cee00dabcdefbffc46326324103e4d2",
+      "bytes": 3532
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/read_model.py",
+      "sha256": "97318581c6b6105e2261d3dfa25628884328a9271014c12679821404cfd6a33d",
+      "bytes": 760
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/service.py",
+      "sha256": "0ea3784981134710dfa051f7b67049535fa3176174e48137a3b43b6bd5619619",
+      "bytes": 24923
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89",
+      "bytes": 395
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements-rag.in",
+      "sha256": "9a52dd8c517e2f6efa60a44ede2ccd53e4c44da78296e8110e83705ef2b94b13",
+      "bytes": 220
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements-rag.lock.txt",
+      "sha256": "2d7e749d61d11b1294a75b30df0ea0c55891a5a54138abcb232fa2a3c5830776",
+      "bytes": 751
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "bytes": 1058
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/probe_rag_pipeline.py",
+      "sha256": "87571d55b21408cf84cc3a67a04e713e1d9f7b8e187dfa2ad4b9c90ee2ed7600",
+      "bytes": 5462
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_actual_contract.py",
+      "sha256": "1c52569eb9c4def00e4a43d6b840efc04df52cf8638c5a0c07172198c45f36c7",
+      "bytes": 1577
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_assistant.py",
+      "sha256": "0d99ffc6d222ca771c1c3a1bc323cd7528083bb668ade3d908aa41838c337424",
+      "bytes": 4828
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_assistant_integration.py",
+      "sha256": "2d2f150e840d514c85d1f952f147c3532a6dcd2d901387ba331da55fd3082248",
+      "bytes": 56500
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_authoring_integration.py",
+      "sha256": "dd993f146d12c145e7f984fa5b19d09a538ea118508fee66a4abd9549a4b7009",
+      "bytes": 32278
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_authoring_knowledge_lifecycle.py",
+      "sha256": "b7d1814aa5121b5209c1c4a949939149eeeb19c40525204185b9898d1859809a",
+      "bytes": 7931
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_bid_list_integration.py",
+      "sha256": "6e73148fe01bfda237b22b2ca5ee424af5bf8ea9ce7b627f945b99c588eeadad",
+      "bytes": 4119
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_build_followups_integration.py",
+      "sha256": "3c2e238629ec8667f0118c28ba6aadf132fdf1f090a7bc1cb284cafa5c61d001",
+      "bytes": 9214
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_build_history_integration.py",
+      "sha256": "284d229bb895b31970e4a8eb3162225814ec910027818ba39b02d51c074b36ed",
+      "bytes": 4282
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_cancel_integration.py",
+      "sha256": "431619df6c2147ee35993b66f3b3e4bf11c9442dce5eb05ea1695d5d93ab5916",
+      "bytes": 6482
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_checks.py",
+      "sha256": "459b9062a3718d950b881e83e564641c2318ac4614b5f77456d8c4dd64cbd298",
+      "bytes": 8412
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_decision_applicability_integration.py",
+      "sha256": "8c9a0d69904059c629a0216d91df0bf34a07d4b397ef4f6e06609dbc72f11f89",
+      "bytes": 11193
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_findings_integration.py",
+      "sha256": "332142ca821efc940476436ee142f76308dbed888ec11360b0fd4c0004bb9417",
+      "bytes": 8059
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_core_recheck_scope_integration.py",
+      "sha256": "704a921aee0ecbf9efdda83ae6deee8d3252540600b0c1893bdde7c59bfff0e6",
+      "bytes": 12359
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_domain.py",
+      "sha256": "00fd78fb3ac840a2895eb37cf857c27f723cf29a3adf1a400e829b4b70a3df99",
+      "bytes": 1771
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_engineering.py",
+      "sha256": "acfc7900a194464326a14513a5a95d689954450e0ef3afbf6b64537e1ba5d65c",
+      "bytes": 5978
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_external_profile.py",
+      "sha256": "fa3045c6c91fd4bf65bc12ffed79f4b02fd25f402c84b72828502879431a43a0",
+      "bytes": 1958
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_fact_sets_integration.py",
+      "sha256": "16403d9c868c9fe3b619877e9c92cf82450a7b33b893a69bf9da383ca514aa79",
+      "bytes": 12103
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge.py",
+      "sha256": "bbe7472d1ec2a8d561d5cb9b9525db39f6dff266272f8b60095da0aab3fae199",
+      "bytes": 2412
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_integration.py",
+      "sha256": "1acc5af0ca09a283f6b8b5204ea91fc7e1b23c3faddd1bcb4661ea467bce42d8",
+      "bytes": 55306
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag.py",
+      "sha256": "eb1b0ec611c6dc21a4437dbaad4bbdc8b27dcdce36117c30ad9987b92cab719a",
+      "bytes": 6510
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag_integration.py",
+      "sha256": "102c152002663b2cf4368e3e3ca9cc08c0be2214a919819958c3dd2f6968f737",
+      "bytes": 51499
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag_schema_unavailable.py",
+      "sha256": "fcc227248b20b6c4c7d9c92820d8df798aa40eb095e3a35d87db31c654140aa9",
+      "bytes": 941
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_lifecycle_batch_closure_integration.py",
+      "sha256": "7ea890b6e775280c910dae0c1b2579eee49c9bc898aa1cee83c8508f99f3cd42",
+      "bytes": 13117
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_metrics.py",
+      "sha256": "e72cc3e448c29b1b265b50d7efab51858ffcc6facb69116ca876dd6bf87ba1b9",
+      "bytes": 4127
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_metrics_integration.py",
+      "sha256": "174231098d5aeeda0049f41646cbb52c061787f7a2e8a8be8b7c7954e5c8dd7f",
+      "bytes": 51346
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_model_ledger_integration.py",
+      "sha256": "de79b42b4a3bfa1520a8658fbc0a70f2eb22714b6a212e170aa744f35da2f300",
+      "bytes": 12604
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_model_purpose_integration.py",
+      "sha256": "b560ac7c909d971c3b0dd1ef234a1896bb3446cbf41332d11064fc855c092306",
+      "bytes": 4537
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_optional_stage_integration.py",
+      "sha256": "a1c4cf3d6bf87ed9c530d3cf1890e64056abaf842a06067ee63b16677d562392",
+      "bytes": 5387
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_parse_readable_integration.py",
+      "sha256": "bc0764dc8f1cd1cf47fe8cd59bec90b48efd2d7aba3ffa7af0685e544123d46f",
+      "bytes": 8785
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_calculator.py",
+      "sha256": "0d9eba8f726290b5e54f841ba8019495326cbf3bb2c1642cbc8260d0d41df5c2",
+      "bytes": 4932
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_contracts.py",
+      "sha256": "c48b19960eabe5ea3efd40c3ceddf72cc721dc9cb149b8c4d86406c0476cc251",
+      "bytes": 1648
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_integration.py",
+      "sha256": "e1501d49aa9e372d93c10f0f9da50c2245bfa975b42ba7853ff88a7008076ee5",
+      "bytes": 40596
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_native_oss.py",
+      "sha256": "dc8afb8a93807563778520a572b55258b160b23de1eb796a98cbcd60ceb009b2",
+      "bytes": 3191
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_project_lifecycle.py",
+      "sha256": "fc2c559708be41de6decc89c02f663bdf6a2c30db7c1d358f6631842183ada29",
+      "bytes": 9935
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_providers.py",
+      "sha256": "30ab844ac97afa34108ff2736fff8cd8f154c4294b4575c6c8e3916d6f91a71b",
+      "bytes": 12401
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_core.py",
+      "sha256": "6dc305619c5f444c5c4148e8c4590ad1b604b0e426037e3f5e23e97d45d8a655",
+      "bytes": 2248
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_http_port.py",
+      "sha256": "cf3e8fd8a089ef19b0f49a952497cc775709e66fa092c4d081b034b76e2b3cad",
+      "bytes": 2795
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_real_integration.py",
+      "sha256": "b41fab929f2f2e12f129cba3d563e3b83cdae3d6b9b1c3f20a56689556d5cf26",
+      "bytes": 8741
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_replay_guard.py",
+      "sha256": "224db47bccbab04e01387f182b9cb7c6e2dd89d237fbc3e080b62750d2e7f192",
+      "bytes": 3367
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_staged_api.py",
+      "sha256": "f69f2cc69ac5dcb32e99ac0e7295b026db59b7dfd8f703d928c380ff1b66a812",
+      "bytes": 10584
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_staged_indexing.py",
+      "sha256": "73dbbbe66e75ef52fc41bba61c1acb48c5e0611af8af89a54d62932d227659c8",
+      "bytes": 3975
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187",
+      "bytes": 7373
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_comparison.py",
+      "sha256": "1736c6bbe24695892c0664ec9564747206aa86dd39a5f4185f8985f17cc96f88",
+      "bytes": 6794
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_identity.py",
+      "sha256": "e0b5595f06232cc0f83520aa175fcc2cc3b3af925e26bb347194108529488e13",
+      "bytes": 441
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_input_limits.py",
+      "sha256": "55d5743aab4d6f2ee79f4d206c3ade94e911c6b2e77423803edb3a7151ad82b5",
+      "bytes": 1059
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_integration.py",
+      "sha256": "2a353da9d37fe8216fea68c7a89b51c55a72495d3196af97fb58f6b65e5c30b3",
+      "bytes": 59119
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_source_effectivity_integration.py",
+      "sha256": "58d83ca36fdc71737dbb3ae0264f760c1d986c3ee3b6a610b571f4bd66fb7450",
+      "bytes": 19378
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_submission_gate_integration.py",
+      "sha256": "5292582cd0849fa7d004571c8ac9e23f0e7c1664ccfdc4d534f7a8e5e105aca3",
+      "bytes": 3729
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_submission_lifecycle_integration.py",
+      "sha256": "fd1f4de18cfb2a4808e3af480de79fe45d71aa63cdba8fc7e599138162cae8f1",
+      "bytes": 3965
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_backend_hooks_integration.py",
+      "sha256": "4a742db742689361911f64279cc4fc07c1dbf95164f88c67310db7aa2f245bb6",
+      "bytes": 2120
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_runs_integration.py",
+      "sha256": "e72b4a1226fcb8a1cd2e1b6c0075f2a5979096222d9aeac46a3190643fc112a0",
+      "bytes": 26772
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_scheduling.py",
+      "sha256": "2d60850fcd2f9a5c03ca0867bb7972f2dd79edb22f28d5c89fd0fb0c82696844",
+      "bytes": 3403
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_templates_integration.py",
+      "sha256": "c69e2858be5dc6af68a4c71965d5641db2050d2fca397f22941f5fae45dbb5c2",
+      "bytes": 11727
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_upload_layout_integration.py",
+      "sha256": "5d2308d7712f442975040414501020bcb22b6bf965f76b3b6a98e9f494fa85d3",
+      "bytes": 7282
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_work_access_integration.py",
+      "sha256": "c0584f653c384534bdc336971f9deacf06f19c9b5339afe0657cf3ae80313499",
+      "bytes": 11034
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_work_conversations.py",
+      "sha256": "15581c9bea407784e119f12a9fb75c331c68d6b19a3a6e2b6339553927d58d13",
+      "bytes": 12026
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "bytes": 12968
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "bytes": 32709
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "bytes": 7058
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "bytes": 5543
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "bytes": 5192
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "bytes": 449
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+      "bytes": 19971
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003",
+      "bytes": 8399
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/model-governance.sql",
+      "sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a",
+      "bytes": 34551
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/model-governance-release.sql",
+      "sha256": "80d5c94246bbfe4c47f320c9ad749eea2328a0c66b30a5614556168e0398d936",
+      "bytes": 14289
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/historical-backtest.sql",
+      "sha256": "e811920d92478fd6e20a9b0d200c2769396eae92deee142a0cc2fbafd0086c44",
+      "bytes": 23867
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/lifecycle/batch_closures.sql",
+      "sha256": "0979d5dadedecfd9aab194684bbcbd1eddbae6c60ff74355a5b5ea23a6a2db73",
+      "bytes": 1000
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/assistant/sql/assistant.sql",
+      "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9",
+      "bytes": 12229
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/word_intake/schema.sql",
+      "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe",
+      "bytes": 7535
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/historical-input-qualification.sql",
+      "sha256": "a5d3823cfa1f9cd360649114da8026a07bf5b93b13ec900c22226117137c1052",
+      "bytes": 24745
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-origin.json",
+      "sha256": "17cce2e1386a51eb6739d131d2cbf8b945706e285a911ba2f09a36595e9de9b0",
+      "bytes": 386
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-permission-probes.json",
+      "sha256": "fad881f47e50ff30dc52d7c3aac28d948e1e409d4b0f07001c62f0062b9f583f",
+      "bytes": 201
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-definitions.json",
+      "sha256": "8fd7be6c5f1e5121dc42f512085abb75a258289e818a2273ddfdf7d607539cc9",
+      "bytes": 874285
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-snapshot.json",
+      "sha256": "ab5f2670183fd32cd34ba79f95c0f7dc0ff8f5826bcb6c0a681abcc8b5ae5e24",
+      "bytes": 31620
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-snapshot.json",
+      "sha256": "9cbc6992f52eca5def6f7e1c7fe58b02802c7fe032c02635300a327f01124a02",
+      "bytes": 31620
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-stop-verified.json",
+      "sha256": "e7dafe201b79218c717a40f49c7971767c559c2e5faf0fc6d718c9116d392745",
+      "bytes": 1088
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-container-removal-intent.json",
+      "sha256": "5d7ff91f97b07f0208bf26f356d5f33f8db7221eb4bc8bcd2d8fa8ec379ae396",
+      "bytes": 352
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-parked.json",
+      "sha256": "3bc4c67fc94bb1f7b10be9ac021b6caea16f339fe335c6b6d1c76f5feefb8f0f",
+      "bytes": 801
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/object-put-intent.json",
+      "sha256": "5f364ea722c70c24decb9dc8a837ed8a59e0979e90c770f0b98307a17fee3404",
+      "bytes": 2519
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/runtime-assets.json",
+      "sha256": "a5a4e37d2a74a065836c114c04f1ca08ce2e0b24178edf4b4dab10ca2d42d9ad",
+      "bytes": 145334
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-window-preflight.json",
+      "sha256": "12e872e8194f9d3df282787e5484818c1e1564a6fa3ab74934678070c0c8571f",
+      "bytes": 230
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01.json",
+      "sha256": "0cda15a7b496b0b11597938a352ac851d5edd9ebb411b130f78bdf2b4c1a054f",
+      "bytes": 325
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-readback.json",
+      "sha256": "fcf1ace7664f50c2b7edc9d8594eb6c4b0dd6aaf59ef094d68eec3fe0355b709",
+      "bytes": 995391
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-diff-summary.json",
+      "sha256": "7ae4a71ff2028bfab0adf98d45f21b73e5613995b9d8f6cdd6ceef33d4ea2a57",
+      "bytes": 203
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-equivalence-diagnosis.json",
+      "sha256": "060223508dcb66d8e504b4921e643770407241f19332c693854616086a4d59d7",
+      "bytes": 1401
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-role-readonly-proof.json",
+      "sha256": "ac664ddfd1f22f30e3da2da531c8e6d8e50f64a90b95deb53bad1a75de024d94",
+      "bytes": 902
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-continuation05-intent.json",
+      "sha256": "40a95a0150b3a3b643da8e9560e4936f8d9c49b49a70bf579c04d9cac212cb0f",
+      "bytes": 3263
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/restore-verified.json",
+      "sha256": "5939e0712d40ffbe9c31589034e074641b1e513356e05b8f3355fd79ad948779",
+      "bytes": 1504
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-permission-probes.json",
+      "sha256": "fad881f47e50ff30dc52d7c3aac28d948e1e409d4b0f07001c62f0062b9f583f",
+      "bytes": 201
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-target-verified.json",
+      "sha256": "57f10ea3f3d8c0187dedc93f003418ccd63f6c81a95730b37470de4498ff03cd",
+      "bytes": 31901
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-before-stop-verified.json",
+      "sha256": "79a76bbf45e28d08cd354ce5b393253d5954c3498edf19cfd64e8782358ccfb8",
+      "bytes": 834
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-container-removal-intent.json",
+      "sha256": "21d7a5a13a3d67e80cb36c5e0b66ab3494c6d9d2bfd1e7dcef992541731014b8",
+      "bytes": 321
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-parked.json",
+      "sha256": "56d652f0870fd7704a89a57b70bdc9e715050243a93a8e3ded9715dd471aed04",
+      "bytes": 809
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-resume-intent.json",
+      "sha256": "e71819ba9a4f2e75f88707f4387dc6cadacafa18e21886a57b0b7e45e87ce1fd",
+      "bytes": 653
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-permission-probes.json",
+      "sha256": "fad881f47e50ff30dc52d7c3aac28d948e1e409d4b0f07001c62f0062b9f583f",
+      "bytes": 201
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-verified.json",
+      "sha256": "9ce0764e420aebc375723839cd5c43035355368f1c5bf2ce22347e85ebb80643",
+      "bytes": 1297
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-verification-removal-intent.json",
+      "sha256": "d4d0801fac9e12e2ce945e85537c63dff4b9eca49327efe97f898537e6a56ebd",
+      "bytes": 338
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/serial-drill-cleanup.json",
+      "sha256": "982b540428f1627b64fcafdbef4b1b7ea4eb398239fa940d888fe8e881c2932e",
+      "bytes": 862
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-verified.json",
+      "sha256": "b5c2272d3f8fe7e3dd56cad061750d7a08e9635ad6d421968d982f9b77cb445d",
+      "bytes": 33503
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.json",
+      "sha256": "ccacb97792be19b157748580a71b0c8e4f891e249556aa3d8dcad1511598358b",
+      "bytes": 999957
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.sha256",
+      "sha256": "b583ab250f68c7d71465bfe56d2bc542238e8a1a60945886c1ea330d8c0936db",
+      "bytes": 64
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/database.dump",
+      "sha256": "6d568c5730a85cbf1dbf25406fd9fb1070cfc28b48c5b70acde5d87cb7ee3146",
+      "bytes": 852503
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.json",
+      "sha256": "3e1915b10af001bcd7c4cbbdce515a2d898f82a437cd1293f5d1c9a54f50ae53",
+      "bytes": 999955
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.sha256",
+      "sha256": "2fc103ea9937f74593a33be823d93218461c33593de31e371d91de0279c70eb3",
+      "bytes": 64
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/database.dump",
+      "sha256": "ce07d8b97a31f86e115e7d6764615791f653a4bb30c2e4f28e11d9aac7ef376a",
+      "bytes": 855203
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+      "sha256": "4699b9216dcf63a3f04850f28237be3ad262db97060fc3c0261afbcda60071bc",
+      "bytes": 51
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+      "sha256": "38cdaf368344075a95b6ec10bd89e6a7abfd5278556305e5457562e9db01caee",
+      "bytes": 53
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+      "sha256": "efa9c6d25c1caea32fd571d41337af057f305059e94decd2f14eefd39d54c306",
+      "bytes": 36
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+      "sha256": "82072b7bfc888d6bc5d7faac5fc50dfe2d4bd7edc32dbc183fb83ba6aa19163e",
+      "bytes": 40
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+      "sha256": "ea4e9101d0035f9e8b5285edc3997820f6f60c388b850afe987ee149624e255a",
+      "bytes": 43
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+      "sha256": "9803d3f74b11b0885a9672655b34cdcffb97d375b0d5a386316724f19682b43c",
+      "bytes": 43
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+      "sha256": "595a130a587e3d01284a00ee14782d80d9175fcf6b82f8c589c32812a261a5e4",
+      "bytes": 56
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+      "sha256": "4699b9216dcf63a3f04850f28237be3ad262db97060fc3c0261afbcda60071bc",
+      "bytes": 51
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+      "sha256": "38cdaf368344075a95b6ec10bd89e6a7abfd5278556305e5457562e9db01caee",
+      "bytes": 53
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+      "sha256": "efa9c6d25c1caea32fd571d41337af057f305059e94decd2f14eefd39d54c306",
+      "bytes": 36
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+      "sha256": "82072b7bfc888d6bc5d7faac5fc50dfe2d4bd7edc32dbc183fb83ba6aa19163e",
+      "bytes": 40
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+      "sha256": "ea4e9101d0035f9e8b5285edc3997820f6f60c388b850afe987ee149624e255a",
+      "bytes": 43
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+      "sha256": "9803d3f74b11b0885a9672655b34cdcffb97d375b0d5a386316724f19682b43c",
+      "bytes": 43
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+      "sha256": "595a130a587e3d01284a00ee14782d80d9175fcf6b82f8c589c32812a261a5e4",
+      "bytes": 56
+    }
+  ],
+  "assertions": [
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/candidate.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/actual-code05-serial01/result.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/actual-code05-serial01/evidence-index.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/__main__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/application.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/archive.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/assets.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/binding.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/cluster.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/fixture.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/probes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/runtime_child.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/security.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/seed_retry.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_binding.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_ddl.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_fixture.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_pause.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/definition_equivalence.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/tests/test_application_recovery_definitions.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/generic.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/run.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements.lock.txt",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements-rag.lock.txt",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/requirements-parsing.lock.txt",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/parsing/assets.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/parsing/core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/packages/word_intake/renderer.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/runtime-manifest.json",
+    "backend_exact_308",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/__main__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-candidate-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-candidate-02.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/a1-ledger-candidate-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/assistant_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/auth.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/authoring.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-02.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/backend-candidate-03.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/bootstrap.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/build_coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/event_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/export_openapi.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/history_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/identity_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi-02.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi-03.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/implemented.openapi.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/knowledge_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/lifecycle_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/main.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/metrics_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/model_governance_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/multipart_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/object_transfer.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/pricing_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-candidate-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-candidate-02.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-self-test-result-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/provider-self-test-result-02.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/rag_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/research_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/retained_upload_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_views.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/settings_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/task_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_layout_routes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/views.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/web/node_modules/flatted/python/flatted.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/web/scripts/generate-contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/__main__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/comparison_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/content_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/engine.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/execution-policy-07.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/export_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/report_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/worker/review_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/fetch_rag_assets.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/initialize_database.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/review_acceptance.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/run.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/deploy/sql/vector-runtime-grants.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-backend-development-checks/frozen-inputs-05/apps/worker/content_handlers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-backend-development-checks/review-fixture-05.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/a1-submission-report-product-review.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/backend07-implementation.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/core-recheck-scope-development-checks/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/core-recheck-scope-development-checks/note-02.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/metrics-development-checks/candidate03/implementation-protocol.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/docs/metrics-development-checks/implementation-protocol.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/actions.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/actual.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/authority.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/context.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/conversations.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/generation.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/global_runtime.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/jobs.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/protocol.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/sql/assistant.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/tasks.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/transport.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build_repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/content.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/generation.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/patches.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/design-source.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/implemented.openapi.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/openapi/http-examples.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/openapi/openapi.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/policies/execution-policy.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/policies/retrieval-policy.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/schemas/protocol.schema.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/schemas/review-identity-vectors.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/core.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/domain.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/retrieval.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/roles.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/contracts/sql/worker-functions.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/build_followups.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/comparisons.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_check_status.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_checks.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/content_decision_basis.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/core_recheck_scope.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/engineering.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/fact_sets.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/finding_lifecycle.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/human_decisions.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/input_changes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/model_calls.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/model_recovery.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/parsing_profile.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/deepseek.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/oss.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reports.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_comparison.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_data.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_identity.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reviews.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_corrections.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_sets.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/runtime.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/source_effectivity.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/storage.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submission_gate.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submissions.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/work_access.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/pagination.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/bridge.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/content.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_api.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_index.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_search.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_tasks.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_types.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/sources.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/sql/rag.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/batch_closures.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/service.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/predictions.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/records.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/results.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/snapshots.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/sources.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/views.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/common.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/evaluation.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/features.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/intake.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/leakage.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/purpose_runtime.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/statistics.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/model_governance/training.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/assets.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/fetch_assets.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/http_port.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/server.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/calculator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/models.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/sources.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/terms.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/README.md",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/http_port.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/indexing.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/lexical.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/local_models.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/repository.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/search.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/server.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/tasks.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/artifacts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/authority.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/batches.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/chapters.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/execution.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/identities.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/importing.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/ledger.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/model_port.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/outcomes.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/profile.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/research-candidate-01.json",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/worker.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/__init__.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/coordinator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/inputs.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/models.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/runner.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/runs.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/scheduling.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/templates.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/journal.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/native.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/protocol.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/read_model.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/service.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/pyproject.toml",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements-rag.in",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements-rag.lock.txt",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/requirements.lock.txt",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/probe_rag_pipeline.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_actual_contract.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_assistant.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_assistant_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_authoring_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_authoring_knowledge_lifecycle.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_bid_list_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_build_followups_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_build_history_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_cancel_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_checks.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_decision_applicability_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_content_findings_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_core_recheck_scope_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_domain.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_engineering.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_external_profile.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_fact_sets_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_knowledge_rag_schema_unavailable.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_lifecycle_batch_closure_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_metrics.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_metrics_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_model_ledger_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_model_purpose_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_optional_stage_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_parse_readable_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_calculator.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_contracts.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_pricing_native_oss.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_project_lifecycle.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_providers.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_core.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_http_port.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_real_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_replay_guard.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_staged_api.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_rag_staged_indexing.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_recovery_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_comparison.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_identity.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_input_limits.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_review_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_source_effectivity_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_submission_gate_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_submission_lifecycle_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_backend_hooks_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_runs_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_scheduling.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_task_templates_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_upload_layout_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_work_access_integration.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/tests/test_work_conversations.py",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/core.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/domain.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/retrieval.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/worker-functions.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/roles.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/vector-runtime-grants.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/research-source-qualification.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/knowledge/sql/rag.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/model-governance.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/model-governance-release.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/historical-backtest.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/lifecycle/batch_closures.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/assistant/sql/assistant.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/word_intake/schema.sql",
+    "bytes:/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/deploy/sql/historical-input-qualification.sql",
+    "sql_exact_15",
+    "private_evidence_49",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-origin.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-origin.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-origin.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-permission-probes.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-permission-probes.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-permission-probes.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-definitions.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-definitions.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-definitions.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-snapshot.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-snapshot.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-snapshot.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-snapshot.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-snapshot.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-snapshot.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-stop-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-stop-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-before-stop-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-container-removal-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-container-removal-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-container-removal-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-parked.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-parked.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-parked.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/object-put-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/object-put-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/object-put-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/runtime-assets.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/runtime-assets.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/runtime-assets.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-window-preflight.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-window-preflight.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-window-preflight.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-readback.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-readback.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-readback.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-diff-summary.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-diff-summary.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-diff-summary.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-equivalence-diagnosis.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-equivalence-diagnosis.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-equivalence-diagnosis.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-role-readonly-proof.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-role-readonly-proof.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-failure01-role-readonly-proof.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-continuation05-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-continuation05-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-continuation05-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/restore-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/restore-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/restore-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-permission-probes.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-permission-probes.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-permission-probes.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-target-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-target-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-target-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-before-stop-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-before-stop-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-before-stop-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-container-removal-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-container-removal-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-container-removal-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-parked.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-parked.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-parked.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-resume-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-resume-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-resume-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-permission-probes.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-permission-probes.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-permission-probes.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-after-target-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-verification-removal-intent.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-verification-removal-intent.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/source-verification-removal-intent.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/serial-drill-cleanup.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/serial-drill-cleanup.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/serial-drill-cleanup.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-verified.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-verified.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/application-verified.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.sha256",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.sha256",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/manifest.sha256",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/database.dump",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/database.dump",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/database.dump",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.json",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.json",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.json",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.sha256",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.sha256",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/manifest.sha256",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/database.dump",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/database.dump",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/database.dump",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+    "bytes:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "size:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "mode:/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71/target-archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+    "archive:manifest_seal",
+    "archive:custom_dump_header",
+    "archive:dump_hash",
+    "archive:164_tables",
+    "archive:complete_objects",
+    "archive:object_total_322",
+    "archive:object_identity:0b290532-d4dc-4f39-adc4-3e8e369d17d7",
+    "archive:object_sha:0b290532-d4dc-4f39-adc4-3e8e369d17d7",
+    "archive:object_identity:1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506",
+    "archive:object_sha:1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506",
+    "archive:object_identity:3ab792a8-c6de-434e-acc0-b92a50ca2bb1",
+    "archive:object_sha:3ab792a8-c6de-434e-acc0-b92a50ca2bb1",
+    "archive:object_identity:55256cda-6634-4edc-a2b8-86bc6be1a591",
+    "archive:object_sha:55256cda-6634-4edc-a2b8-86bc6be1a591",
+    "archive:object_identity:784e0aad-0df5-4f5f-a085-22c6f098a461",
+    "archive:object_sha:784e0aad-0df5-4f5f-a085-22c6f098a461",
+    "archive:object_identity:b9370b3c-d941-42a8-bc28-b77cedc85010",
+    "archive:object_sha:b9370b3c-d941-42a8-bc28-b77cedc85010",
+    "archive:object_identity:d8056b89-9ceb-4b9c-9db0-fe25a62eee32",
+    "archive:object_sha:d8056b89-9ceb-4b9c-9db0-fe25a62eee32",
+    "archive:paused",
+    "archive:snapshot_isolation_recorded",
+    "archive:no_staging_claim",
+    "target-archive:manifest_seal",
+    "target-archive:custom_dump_header",
+    "target-archive:dump_hash",
+    "target-archive:164_tables",
+    "target-archive:complete_objects",
+    "target-archive:object_total_322",
+    "target-archive:object_identity:0b290532-d4dc-4f39-adc4-3e8e369d17d7",
+    "target-archive:object_sha:0b290532-d4dc-4f39-adc4-3e8e369d17d7",
+    "target-archive:object_identity:1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506",
+    "target-archive:object_sha:1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506",
+    "target-archive:object_identity:3ab792a8-c6de-434e-acc0-b92a50ca2bb1",
+    "target-archive:object_sha:3ab792a8-c6de-434e-acc0-b92a50ca2bb1",
+    "target-archive:object_identity:55256cda-6634-4edc-a2b8-86bc6be1a591",
+    "target-archive:object_sha:55256cda-6634-4edc-a2b8-86bc6be1a591",
+    "target-archive:object_identity:784e0aad-0df5-4f5f-a085-22c6f098a461",
+    "target-archive:object_sha:784e0aad-0df5-4f5f-a085-22c6f098a461",
+    "target-archive:object_identity:b9370b3c-d941-42a8-bc28-b77cedc85010",
+    "target-archive:object_sha:b9370b3c-d941-42a8-bc28-b77cedc85010",
+    "target-archive:object_identity:d8056b89-9ceb-4b9c-9db0-fe25a62eee32",
+    "target-archive:object_sha:d8056b89-9ceb-4b9c-9db0-fe25a62eee32",
+    "target-archive:paused",
+    "target-archive:snapshot_isolation_recorded",
+    "target-archive:no_staging_claim",
+    "independent_cluster_ids_recorded",
+    "distinct_prefixes_recorded",
+    "catalogs_exact",
+    "objects_exact",
+    "source_snapshot_inventory_exact",
+    "post_snapshot_only_one_audit_row",
+    "unknown_queue_and_fee_archived",
+    "one_exact_check_delta",
+    "allowed_pair_compares",
+    "equivalence_rejects:weaken_size",
+    "equivalence_rejects:foreign_identity",
+    "equivalence_rejects:remove_function",
+    "equivalence_rejects:alter_default_acl",
+    "equivalence_rejects:remove_trigger",
+    "equivalence_rejects:remove_constraint",
+    "target_preserves_queue_table_hashes",
+    "source_definitions_original_exact",
+    "all_inputs_still_exact"
+  ],
+  "source_target_table_deltas_after_developer_api": [
+    {
+      "schema": "design",
+      "name": "audit_entries",
+      "source_rows": 3,
+      "target_rows": 6
+    },
+    {
+      "schema": "design",
+      "name": "bid_profiles",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "bid_rounds",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "bidders",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "bids",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "commands",
+      "source_rows": 1,
+      "target_rows": 3
+    },
+    {
+      "schema": "design",
+      "name": "engineering_projects",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "review_slots",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "sessions",
+      "source_rows": 1,
+      "target_rows": 2
+    },
+    {
+      "schema": "design",
+      "name": "stream_events",
+      "source_rows": 1,
+      "target_rows": 4
+    },
+    {
+      "schema": "design",
+      "name": "stream_heads",
+      "source_rows": 1,
+      "target_rows": 2
+    }
+  ],
+  "archive": {
+    "source_manifest_sha256": "ccacb97792be19b157748580a71b0c8e4f891e249556aa3d8dcad1511598358b",
+    "source_dump_sha256": "6d568c5730a85cbf1dbf25406fd9fb1070cfc28b48c5b70acde5d87cb7ee3146",
+    "source_dump_bytes": 852503,
+    "target_manifest_sha256": "3e1915b10af001bcd7c4cbbdce515a2d898f82a437cd1293f5d1c9a54f50ae53",
+    "target_dump_sha256": "ce07d8b97a31f86e115e7d6764615791f653a4bb30c2e4f28e11d9aac7ef376a",
+    "objects_per_archive": 7,
+    "object_bytes_per_archive": 322,
+    "constraints": 965,
+    "definition_delta_sections": [
+      "constraints"
+    ]
+  },
+  "disk": {
+    "free_bytes": 1210712064
+  },
+  "execution": {
+    "docker_calls": 0,
+    "pg_connections": 0,
+    "cloud_calls": 0,
+    "providers": 0,
+    "consumers": 0,
+    "objects_listed": 0,
+    "objects_deleted": 0
+  },
+  "limits": [
+    "No new target restore or actual PG ACL probes executed",
+    "Native object remote GET/PUT not executed by this inspection",
+    "Custom dump header and SHA verified; no host pg_restore is installed, TOC/physical restore pending target window",
+    "Snapshot acquisition concurrency is inherited input evidence, not independently re-executed",
+    "No production RPO/RTO, inflight multipart, newest A2/Score/Scale schema qualification"
+  ]
+}

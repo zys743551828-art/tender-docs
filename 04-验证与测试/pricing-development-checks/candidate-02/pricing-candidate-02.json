@@ -1,0 +1,182 @@
+{
+  "schema": "pricing-backend-candidate/2",
+  "created_at": "2026-10-16T19:22:23.227491+00:00",
+  "scope": "F02_whole_amount_unit_tokens_and_existing_formula_revalidation",
+  "source_root": "/workspace/tender-workbench",
+  "prior_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-01/pricing-candidate-01.json",
+    "sha256": "4d24f3ce889cea8309aa75ec7648d15343c0298e5802692061c4dc2348db3176"
+  },
+  "self_counterexample": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate01-unit-boundary-self-counterexample.json",
+    "sha256": "648146870043eda1ff0f88f18ad32668e0970d9aa18b5de0134a1df80efb77e1"
+  },
+  "sources": [
+    {
+      "path": "apps/api/pricing_routes.py",
+      "sha256": "354dbd12a3af873f4fae1371199978efbb579af9b86a95ec5664d027ee3701f4",
+      "bytes": 8403
+    },
+    {
+      "path": "packages/pricing/README.md",
+      "sha256": "975bfc02719573f7e1be79ed6cfd3ca9baf73a357a802aebed92e7c51ff86419",
+      "bytes": 6104
+    },
+    {
+      "path": "packages/pricing/__init__.py",
+      "sha256": "79a9c217fd20ac96f5dd2b7745b8cec5ffa116361f86681867e50cf4c9ed9f8d",
+      "bytes": 58
+    },
+    {
+      "path": "packages/pricing/calculator.py",
+      "sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667",
+      "bytes": 8005
+    },
+    {
+      "path": "packages/pricing/contracts.py",
+      "sha256": "6eaad06a69de35bf0a485d62598e1b161b275e9d4bb4870270997a047579b806",
+      "bytes": 10343
+    },
+    {
+      "path": "packages/pricing/models.py",
+      "sha256": "a0d26b94c947681d360717774578a71e5700c0242a3e7e2a3db22d99b8251cd7",
+      "bytes": 3590
+    },
+    {
+      "path": "packages/pricing/repository.py",
+      "sha256": "18c5ec16a437db3dfeafbda92f80ea29313774b86367f2e9a9af2f0ecb3a0b0c",
+      "bytes": 19900
+    },
+    {
+      "path": "packages/pricing/sources.py",
+      "sha256": "dc3489f7d0761354d7cb7650495c55e86cc17ae3bcfaec93eedd13ebb7c5468a",
+      "bytes": 9515
+    },
+    {
+      "path": "tests/test_pricing_calculator.py",
+      "sha256": "0d9eba8f726290b5e54f841ba8019495326cbf3bb2c1642cbc8260d0d41df5c2",
+      "bytes": 4932
+    },
+    {
+      "path": "tests/test_pricing_contracts.py",
+      "sha256": "c48b19960eabe5ea3efd40c3ceddf72cc721dc9cb149b8c4d86406c0476cc251",
+      "bytes": 1648
+    },
+    {
+      "path": "tests/test_pricing_integration.py",
+      "sha256": "7465c7b29f97ff4b43502d4427f4cdf859d7d645ffcd4bd26ec49793894409ad",
+      "bytes": 34988
+    },
+    {
+      "path": "tests/test_pricing_native_oss.py",
+      "sha256": "dc8afb8a93807563778520a572b55258b160b23de1eb796a98cbcd60ceb009b2",
+      "bytes": 3191
+    }
+  ],
+  "reference_inputs": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+    },
+    {
+      "path": "packages/domain/providers/oss.py",
+      "sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    }
+  ],
+  "product_protocol": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/报价最小产品协议.md",
+    "sha256": "44bb045e67571021eddf0b18c7342e9bbcb94666c5409a434615e339c2533cde"
+  },
+  "self_test": {
+    "status": "passed_development_engineering_not_product_acceptance",
+    "engineering_suite": {
+      "tests": "33",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "8.270"
+    },
+    "native_object_suite": {
+      "status": "not_reexecuted_for_candidate_02",
+      "prior_candidate": "candidate-01",
+      "prior_result": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-01/native-oss-result.json",
+      "prior_result_sha256": "a3a0f8567cf8eaed06351dce877352f5a3c5bf483d909f9c7d20aa344b8a311b",
+      "scope": "Candidate01 native OSS roundtrip only. Object I/O code unchanged by unit-token fix; no claim that a new native probe ran for02."
+    },
+    "actual_nonowner_postgresql": true,
+    "database": "tender_checks_research03",
+    "actual_session_csrf": true,
+    "model_calls": 0,
+    "kafka_processes_started": 0,
+    "real_business_formula_clauses": 0,
+    "engineering_object_port": "explicit_in_memory",
+    "native_probe": null,
+    "quality": {
+      "ruff": "passed",
+      "ruff_format": "passed",
+      "mypy": "passed",
+      "bandit": "passed"
+    },
+    "implemented_router_operations": 10,
+    "main_api_included_at_candidate_freeze": true,
+    "unverified": [
+      "independent_QA_and_architect_review",
+      "product_and_user_review",
+      "main_API_integration_and_actual_export",
+      "frontend_dirty_state_debounce_and_input_digest_response_order",
+      "browser_PRICE_01_to_11",
+      "whole_product_report_chat_reminder_display_setting_integration",
+      "representative_real_clause_applicability"
+    ],
+    "language_interpretation_boundary": "A single human attests complete sourced mapping to restricted semantics; known unsupported conditions are refused conservatively. No automatic proof for arbitrary natural-language clauses is claimed.",
+    "unit_regressions": [
+      "source_wanyuan_requested_yuan_rejected_before_put",
+      "source_yuan_requested_wanyuan_rejected_before_put",
+      "thousand_million_and_foreign_currency_not_stripped_to_supported_unit",
+      "valid_consistent_wanyuan_supported_without_conversion",
+      "mixed_units_rejected_before_put",
+      "earlier_wrong_formula_current_projection_invalid",
+      "earlier_wrong_formula_cannot_simulate_save_or_registration_replay",
+      "historical_wrong_simulation_keeps_original_value_with_current_invalidity"
+    ],
+    "new_native_oss_requests": 0,
+    "main_integration_accepted": false,
+    "live_deployment_tested": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "candidate_manifest_sha256": "c69aaf845c23db74b794a4e2b20e3bf78a9bf86a9d3d12202fdd5ca33ee91876",
+  "source_files_verified": 301,
+  "source_mutations_during_run": 0,
+  "suites": {
+    "guard-run": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "regression-run": {
+      "tests": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "sql_changed": false,
+  "external_model_object_calls": 0,
+  "limitations": [
+    "HIST02 mechanism repair only; no full HistoricalInput or scoring qualification",
+    "launcher initial failed before imports because frozen/deploy absent from PYTHONPATH; corrected launcher path; no product execution in failed attempt"
+  ]
+}

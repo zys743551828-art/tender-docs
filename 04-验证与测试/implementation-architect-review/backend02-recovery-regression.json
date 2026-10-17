@@ -1,0 +1,67 @@
+{
+  "scope": "actual candidate02 engine with isolated real PG and nonowner connections; no Kafka/S3/API/browser execution",
+  "passed": true,
+  "input_sha256": {
+    "apps/worker/engine.py": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb",
+    "packages/domain/runtime.py": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e",
+    "packages/contracts/sql/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "packages/contracts/sql/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "checks": [
+    {
+      "name": "expired owner cannot revive; new generation acquires and finishes once",
+      "state": {
+        "state": "succeeded",
+        "dispatch_generation": 2,
+        "task_outboxes": 2,
+        "effects": 1,
+        "dead_letters": 0
+      }
+    },
+    {
+      "name": "future/unpublished retry and fresh published grace preserve generation; same retry completes",
+      "state": {
+        "state": "succeeded",
+        "dispatch_generation": 2,
+        "task_outboxes": 2,
+        "effects": 1,
+        "dead_letters": 0
+      }
+    },
+    {
+      "name": "initial unpublished intent retained; only stale published delivery is redispatched",
+      "state": {
+        "state": "succeeded",
+        "dispatch_generation": 2,
+        "task_outboxes": 2,
+        "effects": 1,
+        "dead_letters": 0
+      }
+    },
+    {
+      "name": "reconcile enforces shared three-attempt budget with durable failure and one dead letter",
+      "state": {
+        "state": "failed",
+        "dispatch_generation": 1,
+        "task_outboxes": 1,
+        "effects": 1,
+        "dead_letters": 1
+      }
+    },
+    {
+      "name": "acquire enforces shared three-attempt budget with durable failure and one dead letter",
+      "state": {
+        "state": "failed",
+        "dispatch_generation": 1,
+        "task_outboxes": 1,
+        "effects": 1,
+        "dead_letters": 1
+      }
+    }
+  ],
+  "source_modified": false,
+  "shared_dev_or_qa_used": false
+}

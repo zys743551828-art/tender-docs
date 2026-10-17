@@ -1,0 +1,60 @@
+{
+  "PRICE-01": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-02": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-03": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-04": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-05": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-06": {
+    "backend": "partial",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed",
+    "detail": "input_digest and immutable input server-side; UI dirty protection/debounce/late response not executed"
+  },
+  "PRICE-07": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-08": {
+    "backend": "partial",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed",
+    "detail": "All ten pricing HTTP operations refuse disabled module; report/chat/reminder pricing surfaces not implemented or independently accepted"
+  },
+  "PRICE-09": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-10": {
+    "backend": "covered",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed"
+  },
+  "PRICE-11": {
+    "backend": "partial",
+    "browser": "not_executed",
+    "real_clause_business_acceptance": "not_executed",
+    "detail": "Real sessions/CSRF/idempotency/strong ETag and frozen history tested in router app; whole main integration/browser recovery pending"
+  }
+}

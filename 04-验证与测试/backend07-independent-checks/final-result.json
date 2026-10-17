@@ -1,0 +1,242 @@
+{
+  "status": "passed_scoped_independent_backend07_mechanisms_not_whole_lifecycle_release",
+  "blocking_findings": [],
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/candidate-07.json",
+    "sha256": "1804eca4c4325bf8666d4c4c2cdbe60e59110b407a1cc03e0f1ee72c0f99e1bd",
+    "own_sources": 27,
+    "frozen_runtime_inputs": 308,
+    "runtime_manifest_sha256": "71fe0fb2c9dbde7d85e62d20bef2da8e188e59ac00e9eb056cc021a1bd75274e"
+  },
+  "actual": {
+    "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/actual-main-07.openapi.json",
+    "sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+    "paths": 161,
+    "operations": 188,
+    "schemas": 310,
+    "exported_from_actual_frozen_main": true,
+    "lifecycle_router_registered_in_main": false
+  },
+  "actual_execution_profile": "delivery_protocols01-checks.env",
+  "database_roles": "Actual restricted API/ordinary Worker LOGIN, assert_role verified; own new UUID fixture, no owner mutation",
+  "latest_unique_tests": {
+    "test_archive_waiting_producer_sees_current_closed_state": true,
+    "test_producer_then_archive_preserves_old_ack_and_intent_blocker": true,
+    "test_noncurrent_snapshot_cannot_enter_work_mutation[REPEATABLE READ]": true,
+    "test_noncurrent_snapshot_cannot_enter_work_mutation[SERIALIZABLE]": true,
+    "test_worker_finish_after_termination_cannot_publish[False]": true,
+    "test_worker_finish_after_termination_cannot_publish[True]": true,
+    "test_closed_batch_reuse_is_new_identity_not_old_complete_or_commit": true,
+    "test_interim_multipart_ack_does_not_reauthorize_after_close": true,
+    "test_shared_registered_assistant_readonly_archive_and_authoring_block": true,
+    "test_authoring_late_model_reservation_and_new_generation_denied": true,
+    "test_real_task_input_hook_supersedes_instead_of_auto_rebase[advance]": true,
+    "test_real_task_input_hook_supersedes_instead_of_auto_rebase[freeze]": true,
+    "test_comparison_lane_rejects_valid_paid_envelopes_without_acquire": true,
+    "test_archive_offline_fact_and_identity_correction_are_honest_exceptions": true
+  },
+  "executions": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution",
+      "junit_sha256": "b08fba0ce7c8c22baf791e88f507a34b7a6567ea7afa8f64f1f2da8b8fe7a396",
+      "observations_sha256": "6109481fa21cadda372482d14b42c0bcff901ac03a676c08dea8a24154d3e2de",
+      "executed_test_sha256": "9d9cac376d33653ac99f716fa52bfa42e1d0b4a4e880087c913d8cd16832d37b",
+      "tests": 13,
+      "failures": 2,
+      "errors": 0,
+      "loaded_module_count": 149,
+      "loaded_source_root_verified": true,
+      "observations": [
+        {
+          "name": "archive_then_waiting_actual_api_producer",
+          "real_pg_blocking_observed": true,
+          "http_status": 409,
+          "new_batches": 0
+        },
+        {
+          "name": "producer_before_archive",
+          "unfinished_intent_blocks_archive": true,
+          "explicit_close_retains_batch": true,
+          "old_ack_replays_no_new_effect": true
+        },
+        {
+          "name": "snapshot_REPEATABLE READ",
+          "error": "CURRENT_AUTHORITY_REQUIRES_READ_COMMITTED"
+        },
+        {
+          "name": "snapshot_SERIALIZABLE",
+          "error": "CURRENT_AUTHORITY_REQUIRES_READ_COMMITTED"
+        },
+        {
+          "name": "worker_acquire_after_close",
+          "new_document_versions": 0,
+          "effects": 0,
+          "operation_state": "failed",
+          "actual_memory_verify_compute": false
+        },
+        {
+          "name": "verified_closed_batch_explicit_reselection",
+          "old_complete_ack_only": true,
+          "old_complete_and_commit_new_command_rejected": true,
+          "fresh_upload_version_binding": true,
+          "same_immutable_blob": true,
+          "new_batch_actual_commit": true
+        },
+        {
+          "name": "shared_assistant_readonly_archive",
+          "real_engine_registry_no_adapter": true,
+          "assistant_published": true,
+          "archived_state_preserved": true
+        },
+        {
+          "name": "authoring_lease_does_not_authorize_after_close",
+          "registered_dispatch": true,
+          "provider_invocations": 0,
+          "reservations": 0,
+          "draft_revision": 2
+        },
+        {
+          "name": "registered_task_guard_advance",
+          "frozen_revision_retained": true,
+          "despite_auto_review_true": true,
+          "review_runs": 0,
+          "model_calls": 0
+        },
+        {
+          "name": "registered_task_guard_freeze",
+          "frozen_revision_retained": true,
+          "despite_auto_review_true": true,
+          "review_runs": 0,
+          "model_calls": 0
+        },
+        {
+          "name": "comparison_lane_real_valid_envelopes",
+          "rejected_handlers": 4,
+          "receipts": 0,
+          "model_calls": 0,
+          "separate_topic_group_policy": true,
+          "no_consumer_instantiated": true
+        }
+      ]
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/corrected-assertion-delta-execution",
+      "junit_sha256": "719f9a2e85440a949b48e0a08c31ebad904fba90baa7e0fa658a4a4f513982ef",
+      "observations_sha256": "9eab494180121c471339fc03719fa7dd692d807a1557f9889225cd248db34a70",
+      "executed_test_sha256": "dc36674998dfe56e891352df69247ca4e9e117bc55eaf0dba78ecd599f15126e",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "loaded_module_count": 147,
+      "loaded_source_root_verified": true,
+      "observations": [
+        {
+          "name": "worker_acquire_after_close",
+          "new_document_versions": 0,
+          "business_effects": 0,
+          "failure_receipts": 0,
+          "operation_state": "failed",
+          "actual_memory_verify_compute": false
+        },
+        {
+          "name": "late_worker_started",
+          "new_document_versions": 0,
+          "business_effects": 0,
+          "failure_receipts": 1,
+          "operation_state": "failed",
+          "actual_memory_verify_compute": true
+        },
+        {
+          "name": "multipart_interim_ack_closed",
+          "explicit_fault_injection": true,
+          "native_mock_invocations_before": 1,
+          "native_mock_invocations_after": 1,
+          "no_verify_queue": true
+        }
+      ]
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/archival-exceptions-execution",
+      "junit_sha256": "8388452a0926c0e9f72440eea1299d7786de81438cc7f4bd26e02511ac81cc33",
+      "observations_sha256": "90783c9c8c97a811dffee4a1854678faf5dc5a076e30d25a15a71689830d88be",
+      "executed_test_sha256": "9021c30bd014d4d932d4823d92dd509838c3d1c2e2e19fccf4d8fd45ea6badb0",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "loaded_module_count": 147,
+      "loaded_source_root_verified": true,
+      "observations": []
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/archival-exceptions-fixed-shape-execution",
+      "junit_sha256": "eeee05b8f9ef468384ec5e72d5fbea51d6eaa9c9d0f54087ab1e726a6538ccc3",
+      "observations_sha256": "d5a4cbfc197d32ba7af3f208b6137e3584d45cae7d56c9e795472cc573100d5e",
+      "executed_test_sha256": "bd6cb140f6c043fdd410568701c961d882769be33fa59a01de794a9ae6beb37d",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "loaded_module_count": 147,
+      "loaded_source_root_verified": true,
+      "observations": [
+        {
+          "name": "archive_explicit_historical_exceptions",
+          "pending_identity_offline_fact_allowed": true,
+          "no_gate_or_verified_platform_claim": true,
+          "immutable_fact_keeps_original_identity": true,
+          "identity_correction_allowed": true,
+          "phase_and_archive_unchanged": true,
+          "new_work_still_blocked": true
+        }
+      ]
+    }
+  ],
+  "scoped_conclusions": [
+    "Real PG blocker observed via pg_blocking_pids: actual create_batch API waits the same bid lock held by terminate+archive and then returns409 PROJECT_WORK_CLOSED, no new batch. In the reverse order an already-created unfinished batch blocks archive until explicit closure; old ACK replays without a second batch.",
+    "Noncurrent REPEATABLE READ and SERIALIZABLE transactions cannot enter work mutation, even after SELECT has established their snapshot.",
+    "Real verify-upload handler with memory original computes before termination; actual Worker finish afterward persists failed PROJECT_WORK_CLOSED receipt/dead-letter handoff, no verified document/version/business effect. Unstarted work receives no lease and becomes failed.",
+    "Closed batch old successful complete ACK is historical only; fresh complete and commit reject. Explicit reselect verifies memory bytes and creates a different batch/upload/document-version/binding, retains the original and shares the same immutable blob. New batch actual commit succeeds.",
+    "Explicit fault-injected native multipart completion retains its interim ACK. Terminating before same-key replay rejects before any second native call or verify operation; no interim ACK reauthorizes work.",
+    "Actual shared engine registry/acquire/run_compute/finish publishes readonly archived-project assistant answer without any temporary adapter. Authoring acquired before termination cannot reserve or invoke a model afterward; fresh authoring still rejects, draft unchanged.",
+    "Actual main registers TASK_INPUT_GUARD is inputs.review_guard. Both actual _advance_head and freeze_candidate preserve old task material revision and persist TASK_INPUT_SUPERSEDED despite auto_review=true after head drift, zero new review runs/model calls.",
+    "Actual valid TaskEnvelope messages for prepare/review/assistant/authoring handlers are rejected by the comparison lane before receipts or model calls; other ordinary lanes reject foreign handlers. Comparison topic/group policy is distinct. No consumer is instantiated.",
+    "Archived terminated project allows explicit offline-fact HTTP recording for already-happened wrong/nonreviewed original with pending identity, without gate/verified-platform/prediction claims. Same-key replay is unique. Explicit identity correction succeeds without changing archive/phase or rewriting the old fact identity; ordinary new work remains blocked."
+  ],
+  "retained_test_error_classifications": [
+    {
+      "execution": "execution",
+      "issues": [
+        "QA initially required no effect_receipts after late finish; actual single receipt contains failure error_code PROJECT_WORK_CLOSED/result_ref null and is required honest failure accounting, not a successful business effect. Corrected assertions check exact failure and absence of document versions.",
+        "QA queried nonexistent commands.response_headers; actual immutable saved response stores headers under commands.response. Only QA query corrected."
+      ]
+    },
+    {
+      "execution": "archival-exceptions-execution",
+      "issues": [
+        "QA assumed raw gate_snapshot/evidence fields in HTTP view. Actual API uses gate_checked/platform_submission_verified; corrected QA separately checks raw persisted gate_snapshot null and immutable original identity. No source change."
+      ]
+    }
+  ],
+  "tooling": {
+    "helper_path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/qa-helpers/assistant_fixture.py",
+    "helper_sha256": "a0f09b1a36ecbc9ebe5a9a0b222e1f68ba83f3ef87d4759a8c4c77ebcf1a1860",
+    "scope": "Own prior independent fixture helper adapted only for private profile name; no developer tests executed",
+    "raw_fixture_path": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/external-inputs/synthetic-body.pdf",
+    "raw_fixture_sha256": "808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5",
+    "pytest_configuration_sha256": "aaabed120d2fb059160bb38bf8843dc0bbb6abca5f013dffb5228bfffb9a3404",
+    "wrapper_manifest": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/qa-bootstrap/manifest.json"
+  },
+  "limits": [
+    "Actual API is ASGI TestClient, not live8806/5176 or browser. Frozen main exports188 operations; lifecycle4 endpoints explicitly composed only in test process and are not claimed deployed/public by07.",
+    "Memory storage/native multipart fault and httpx.MockTransport are explicit. No real DeepSeek, OSS, Parser03 or LibreOffice in this batch; original magic/SHA verify uses real public PDF bytes but no model/parse business accuracy claim.",
+    "No general or paid consumer/controller/relay, Kafka socket/topic/group/offset acceptance. Comparison policy/valid-envelope dispatcher rejection is mechanism plus frozen policy identity, not broker transport validation.",
+    "No new SQL or owner business permissions. No frozen reviewed source edits, no live service changes. New own UUID fixtures have auto_review=false except explicit task drift adversary toggles true; no coordinator sweeps or execution occurs.",
+    "This targeted14-scene round does not cover every producer, all lifecycle transitions, current build adoption network race, knowledge authoring lifecycle peer matrix, report late publication, pricingF04, Word/HIST, production concurrency/capacity or whole-product release. Those need their own accepted records/combinations."
+  ],
+  "paid_calls": 0,
+  "real_provider_requests": 0,
+  "oss_requests": 0,
+  "consumers_started": 0,
+  "new_sql_applied": false,
+  "reviewed_source_modified": false,
+  "live_services_modified": false
+}

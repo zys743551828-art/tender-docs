@@ -1,0 +1,39 @@
+{
+  "state": "actual_failed_restore_readonly_diagnosis",
+  "observed_at": "2026-10-17T04:03:27.931027+00:00",
+  "catalog_equal": true,
+  "tables_equal": true,
+  "tables": 164,
+  "definition_categories_equal_except": [
+    "constraints"
+  ],
+  "constraints_total": 965,
+  "constraint_differences": 1,
+  "source_constraint": [
+    "historical_input",
+    "chapter_payloads_raw_content_check",
+    "chapter_payloads",
+    "",
+    "CHECK ((((octet_length(raw_content) >= 1) AND (octet_length(raw_content) <= 2097152)) AND (jsonb_typeof((raw_content)::jsonb) = 'object'::text)))"
+  ],
+  "target_constraint": [
+    "historical_input",
+    "chapter_payloads_raw_content_check",
+    "chapter_payloads",
+    "",
+    "CHECK (((octet_length(raw_content) >= 1) AND (octet_length(raw_content) <= 2097152) AND (jsonb_typeof((raw_content)::jsonb) = 'object'::text)))"
+  ],
+  "all_other_definition_fields_equal": true,
+  "actual_role_or_ACL_loss_observed": false,
+  "three_valued_conjunction_proof": {
+    "combinations": 27,
+    "differences": 0
+  },
+  "narrow_pair_comparator_passed": true,
+  "source_archive_not_modified": true,
+  "target_SQL_mutations_after_restore_failure": 0,
+  "target_OSS_PUTs": 0,
+  "API_checks": 0,
+  "source_archive_sha256": "ccacb97792be19b157748580a71b0c8e4f891e249556aa3d8dcad1511598358b",
+  "failure_receipt_sha256": "0cda15a7b496b0b11597938a352ac851d5edd9ebb411b130f78bdf2b4c1a054f"
+}

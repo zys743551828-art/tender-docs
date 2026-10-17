@@ -1,0 +1,183 @@
+{
+  "candidate_sha256": "c53c68b39f28a2ed145c68d3f99141b2918dbfa43c5197b0220544e2187807a9",
+  "conclusion": "RS01 and RS02 closed; candidate02 blocked by RS03 group mutation after admission",
+  "closed_findings": [
+    "RS01",
+    "RS02"
+  ],
+  "blocking_findings": [
+    "RS03"
+  ],
+  "sources": [
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "2fcf3a128c047285806d24c8d29f1840b12612bb356b78f0aea0801d2cd16b56",
+      "bytes": 20923
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0a587746a1f211dd39e48c8d9da42433ea5ac65d71334015e8521d3ad107a3dd",
+      "bytes": 14200
+    },
+    {
+      "path": "packages/research/README.md",
+      "sha256": "abb6d8789a6d0d25d452ebc1cd101f4be959717d5285c05d6f95e30469891381",
+      "bytes": 7507
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "bytes": 85
+    },
+    {
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264",
+      "bytes": 1571
+    },
+    {
+      "path": "packages/research/authority.py",
+      "sha256": "b11ea786df39a3c15ea812ba065bda89572f2b25747b5f5c2c2c2494d90817fa",
+      "bytes": 7570
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "82c3b407fd6bc0710056ec61e124338f9e56ce23b7b90ac246a9e807ed1d7570",
+      "bytes": 21908
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a",
+      "bytes": 9101
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "90d88eccc7c08610eaeef9149dc53a8f8426f4cbb2c5c7e180a3e47c2ac581be",
+      "bytes": 15798
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "bytes": 10555
+    },
+    {
+      "path": "packages/research/execution.py",
+      "sha256": "614d132848d6b42bfe7ec71be8c4534b1b344bca5030ddee6488c94818253e20",
+      "bytes": 12415
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "2833a43407134b8b64a86fd928e3fa58d3464dfdc5e4c780cb63aba73e5b4a93",
+      "bytes": 12793
+    },
+    {
+      "path": "packages/research/ledger.py",
+      "sha256": "5e5aec04ffc44396443f117a57292c8ca9c8d3fb85f0116b4c94cc3c7022d7ca",
+      "bytes": 9412
+    },
+    {
+      "path": "packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728",
+      "bytes": 7856
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "8dd73999232e7d71d58a1c9f2fe1d2f75a36d4ddeb9974e3d227b5285684f4f4",
+      "bytes": 21173
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "bytes": 2097
+    },
+    {
+      "path": "packages/research/worker.py",
+      "sha256": "dcf18d52d9968ae4bcba4783c1c8dda65536c5d23deb7ec567457a73c98f8686",
+      "bytes": 12106
+    },
+    {
+      "path": "tests/test_research_core.py",
+      "sha256": "425a60f0018774d5ef9793c5202f55391031456afb8060a774102a6bd7d2919e",
+      "bytes": 9630
+    },
+    {
+      "path": "tests/test_research_integration.py",
+      "sha256": "5a68935fe0057b1f0cc550e513799c26483f8866eb92a180d38cd7c995c4923e",
+      "bytes": 45811
+    }
+  ],
+  "reference_inputs": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237"
+    },
+    {
+      "path": "deploy/profiles/deepseek-research-price.json",
+      "sha256": "9771e2c00710e9bd14ef7bdc38f4ca882ed3dac69da3c3f8cc20ad0110c182c3"
+    }
+  ],
+  "evidence": {
+    "probe_candidate02.py": "fdb0a362b8f398c991ead1b8928cee60f5e1570b129a3d839bc8184e88cdb65a",
+    "candidate02-frozen-plus-original-regressions.py": "22d40e9baad02f2059706c70514617c27b4cef25151b1e376aad007d14b68f76",
+    "candidate02-independent-result.json": "24c215f40fb6b75e910c726c17286ad6669e8d6cb048060c4532984fbaadcfd5",
+    "candidate02-independent-junit.xml": "95f7e881900f62c20e8a48f745f76ae204d1b9e124d7bda150ea4588f8e4e4fb",
+    "candidate02-unconfigured-result.json": "b7de39e317010900827ed477df436e326e7dadb3547ebbab59a82a068f94ed99",
+    "candidate02-unconfigured-junit.xml": "2e734595ef6b9711c4a503f6af0f06d06c8b5e84ae05504840ee7820cc4afd1e",
+    "candidate02-budget-regression.json": "934510c18e9032acd70707c1d31bafd2546d1303e6f0234252792a914025b182",
+    "candidate02-withdrawal-regression.json": "0fc6325bbd2b92acfc5b49b7c43066270c18fdc694239b97d5371f2e19436ac4",
+    "probe_admission_group_delta.py": "2b5a21fe09b2e1aa417ec70f9f33388b3f8bdb3d833d17d4762e37d93e615957",
+    "candidate02-group-delta-tests.py": "70c1198d689062cf335a73718969143a8dc34e2edfe47767ded4b34d45aa42fe",
+    "candidate02-group-delta-junit.xml": "c9a61004bda5ae5a0585101391718b75553c8364eebec3fac93771b962bc24ae",
+    "candidate02-group-delta-result.json": "79b912023c0d4296bbd213d1f4ec44066bc902690258aa8bd3209404f8b2ddef",
+    "candidate02-admission-group-counterexample.json": "89fa91922984e7043d6da3a43d8594d2fa59bef2b2582ea67c44805243628dc2",
+    "group-fixture-round-collision-junit.xml": "33423a25a805d602376217c663f5fac3992ef9607b3b0245d81592e96c77a6f8",
+    "整改复核.md": "802486a12b54e36f4fb2238a98f7b53c775aeb078597af127ed7eaad21b80358"
+  },
+  "actual_candidate02_suite": {
+    "passed": 33,
+    "skipped": 1,
+    "pure_passed": 13,
+    "real_pg_passed": 20
+  },
+  "unconfigured_fresh_schema": {
+    "passed": 1
+  },
+  "group_admission_counterexample": {
+    "reproduced": true,
+    "actual_pg_cases": 1
+  },
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "credentials_read": false
+}

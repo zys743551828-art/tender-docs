@@ -1,0 +1,20 @@
+{
+  "archived_source_count": 21,
+  "archived_dependency_count": 152,
+  "archived_external_count": 1,
+  "all_archived_bytes_match": true,
+  "own_live_bytes_match": true,
+  "tests_executed_from": "frozen-tree",
+  "engine_override": "backend05 exact f8de4159850ff1ebe7c045f79ca2ea3796761964a4c58191720994867b4cc02b",
+  "project_execution": "Explicit test adapter to stable two compute/publish ports around actual backend05 acquire/finish; shared registration not exercised",
+  "pg_test_groups": {
+    "tests.test_assistant_integration": 28,
+    "tests.test_work_conversations": 5,
+    "tests.test_authoring_integration": 11
+  },
+  "actual_model_requests": 0,
+  "paid_model_requests": 0,
+  "actual_kafka_processes_started": 0,
+  "external_object_requests": 0,
+  "database_changes": "Only normal scoped synthetic business test rows via nonowner API/Worker; no DDL/grant change"
+}

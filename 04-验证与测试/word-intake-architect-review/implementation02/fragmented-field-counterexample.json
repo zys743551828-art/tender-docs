@@ -1,0 +1,49 @@
+{
+  "candidate_sha256": "5dcc4dfad4ee05df0ae326c9bb1f64eff9faaae2abd41e4aa40bb4717e7cb2db",
+  "mode": "pure synthetic OOXML inspection; no Docker/field/network execution",
+  "records": [
+    {
+      "segments": [
+        "DDEAUTO harmless-test-only no-execution"
+      ],
+      "joined_instruction": "DDEAUTO harmless-test-only no-execution",
+      "conversion_eligible": false,
+      "active_content_gaps": [
+        "EXTERNAL_OR_DYNAMIC_FIELD"
+      ],
+      "unsupported_layout_features": [
+        "fldChar",
+        "instrText"
+      ],
+      "sha256": "b03e49b645033e434795603829d3fcaee5d705efec9800998303a1bd2b06da86"
+    },
+    {
+      "segments": [
+        "DD",
+        "EAUTO harmless-test-only no-execution"
+      ],
+      "joined_instruction": "DDEAUTO harmless-test-only no-execution",
+      "conversion_eligible": true,
+      "active_content_gaps": [],
+      "unsupported_layout_features": [
+        "fldChar",
+        "instrText"
+      ],
+      "sha256": "fa8693fe755a45d641125fddee787dc39b1d6e4680ab9b6a3fefc36e0072eac3"
+    },
+    {
+      "segments": [
+        "INCLUDE",
+        "TEXT harmless-test-only"
+      ],
+      "joined_instruction": "INCLUDETEXT harmless-test-only",
+      "conversion_eligible": true,
+      "active_content_gaps": [],
+      "unsupported_layout_features": [
+        "fldChar",
+        "instrText"
+      ],
+      "sha256": "e71bfb5194ede33197a818771337a92ae380524362e0e75aaf630a2cce216a2f"
+    }
+  ]
+}

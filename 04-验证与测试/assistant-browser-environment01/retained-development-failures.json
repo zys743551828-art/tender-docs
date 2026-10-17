@@ -1,0 +1,25 @@
+{
+  "real_provider_attempts": 0,
+  "failures": [
+    {
+      "stage": "fixture03-first-http-turn",
+      "result": "MODEL_NOT_CONFIGURED before 202; no job or provider call was created",
+      "correction": "Explicit fixture-only API profile constructor; its Mock transport always refuses generation"
+    },
+    {
+      "stage": "fixture04-first-repeated-http-smoke",
+      "result": "A new global turn received 412 because asynchronous execution_finished advanced the conversation revision",
+      "correction": "Smoke refreshes ETag with bounded retry only for requests refused before 202; client_message_id and text stay unchanged; unknown never gets retried"
+    },
+    {
+      "stage": "facility-candidate01-quality",
+      "result": "mypy found freeze helper reused a bytes variable for manifest text; 14 runtime isolation tests passed",
+      "correction": "New facility candidate02 with distinct manifest_text; old candidate01 and its test XML retained"
+    },
+    {
+      "stage": "initial-network-guard-unit-with-restricted-sandbox",
+      "result": "Sandbox denied creation of the test socket before the installed connect guard could run",
+      "correction": "Reran the explicit no-provider guard probe with local network permission; sync and async real HTTP were blocked, non-loopback socket was blocked, MockTransport succeeded"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "actual_upload_grant_schema_and_private_two_part_layout",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "create_replay_keeps_exact_grant_and_native_session",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "missing_csrf_and_foreign_origin_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_member_other_session_ticket_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "wrong_media_and_wrong_pdf_magic_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "short_declared_part_size_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "denied_requests_have_no_native_parts",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "refresh_fences_inflight_stream_before_remote_publication",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_refresh_cas_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "old_ticket_revoked_after_refresh",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "discarded_ack_recovered_from_native_list_without_reupload",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "server_list_reconciles_poisoned_db_cache_from_real_oss",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "wrong_complete_receipt_reversible_and_exact_failure_replay",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "valid_full_sha_complete_exact_replay_one_verify_intent",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "complete_has_no_formal_document_before_normal_verifier",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "ordinary_direct_handler_verifies_large_pdf_exact_original",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_persisted_blob_sha_and_size_and_zero_model_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "verified_object_cannot_abort_or_new_complete",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "configured_origin": "http://127.0.0.1:8803",
+  "object_prefix": "workbench-checks/qa-multipart-http-2854868be636407e8d1881d5abbaae9f/",
+  "scope": "Dedicated frozen03 TCP8803, isolated rag-checks PG, real native OSS; direct document handler only. Not Kafka or browser acceptance.",
+  "bid_id": "17c9bf6d-bb4b-4229-98ab-a98b4116350f",
+  "upload_id": "bae3be26-e06e-4a70-a57e-cd925c3e3390",
+  "retained_registered_synthetic_objects": "Staging and content-addressed original remain referenced by this isolated DB fixture; no delete attempted. No other prefix touched.",
+  "document_version_id": "6b722311-4a7d-4e08-8d79-22fcbbccc270",
+  "original_sha256": "f03d84a100f5d7e6fac28f9fd87c64cb9a3fb430a6e4b4c3817ea9901931bdce",
+  "test_api_stopped": true,
+  "runtime_candidate_sha256": "ce01d25d5adb45bf5991b8802d3394d84b2567dce782dd5a193327204db92f91",
+  "probe_sha256": "1797174179667d14b1387f36c7742dd866eceba7291d6965602d2338007eb7f5"
+}

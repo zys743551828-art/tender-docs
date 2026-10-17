@@ -1,0 +1,15 @@
+# 研究03来源与冻结样本SQL静态复核
+
+结论：最终SQL字节可进入独立新空库初始化和受限LOGIN机制验证，当前无静态阻塞；尚不代表RS03或研究应用03已独立验收。未执行新DDL、访问业务库、启动消费者或收费调用。
+
+输入：`deploy/sql/research-source-qualification.sql`，SHA256 `0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027`；本次原字节保存为 `observed-research03-source-qualification.sql`。历史02／RS03反例与先前SQL摘要保持。
+
+新增research_preview_samples为API-only追加映射，绑定preview／sample、冻结组、人工grouping决定和明确submission.evidence.identity及其audit authority。普通Worker、研究Worker、评分／研究读取角色没有新增表扫描或写权限。资格函数比较整个preview样本ID精确集合，逐样本检查当前admitted、组ID、group决定、原submission identity、明确confirmed authority、当前typed公司／轮次／工程及完整association字段；最新绑定按identity02的epoch／时间／id顺序读取，不能通过改回相同公司ID或当前profile洗旧依据。at_time未作为正式身份替代。
+
+lock_research_run_scope是固定search_path的受限SECURITY DEFINER，仅返回void。它从真实run→API冻结preview映射→samples推导全部bid，在91143之后按bid排序调用已审受限行锁函数；不接Worker自报bid清单。PUBLIC已撤销，仅research_worker执行。qualify先取组锁、完整scope行锁，再图锁；来源、完整parse／证据／祖先、原业务as_of及fence／租约判断保留，非read committed失败关闭。返回资格／原因／摘要，不返回正文或官方标签。
+
+应用和新库必须证明：所有schedule／acquire／reserve／finish／reconcile需要完整scope的路径在任何单bid／op／run锁之前调用同一server scope锁，不能先持当前bid后补另一bid；调用前和发布资格与effect同事务，外部模型／对象I/O在连接外。真实usage结算即使资格失效仍可记账，不应因身份更正抹除费用。
+
+重点验收RS03原反例：自动sample-admission连通既有组后暂停受影响run，后续零新调用；计算中组变更拒旧成功发布并保留usage。还须覆盖另一个preview项目的身份更正与当前item提交竞争：更正先提交则拒新调用／发布，研究先持完整scope锁则更正等待；合法路径、未知计费、取消、RR和最小角色负例保持。身份无真实冻结依据先unavailable，不借新库探针声称真实历史身份或模型资格已验证。
+
+上述是允许新空库实证的静态判断；API构造映射、admit统一失效、应用锁顺序、实际角色合法路径和真实并发都仍需冻结应用候选及独立测试，不能以CREATE FUNCTION成功或开发测试数替代。

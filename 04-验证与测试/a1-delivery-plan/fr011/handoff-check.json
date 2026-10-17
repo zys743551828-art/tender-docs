@@ -1,0 +1,60 @@
+{
+  "scope": "FR011产品交接静态检查，不是软件/业务/真人验收",
+  "passed": true,
+  "checks": [
+    {
+      "name": "14项仍待执行",
+      "passed": true
+    },
+    {
+      "name": "前端04冻结摘要匹配",
+      "passed": true
+    },
+    {
+      "name": "本轮没有软件收费或凭据操作",
+      "passed": true
+    },
+    {
+      "name": "a1-acceptance.json原字节保留",
+      "passed": true
+    },
+    {
+      "name": "plan-check-result.json原字节保留",
+      "passed": true
+    },
+    {
+      "name": "product-progress/remaining-fr.json原字节保留",
+      "passed": true
+    },
+    {
+      "name": "补遗与恢复决策.md本地文件链接",
+      "passed": true
+    },
+    {
+      "name": "业务结果与指标交接.md本地文件链接",
+      "passed": true
+    }
+  ],
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/fr011/acceptance.json",
+      "sha256": "86ec1b10cbd7bf4b5e373ed37fef30c9c2b4d3cbdabfd1d38dc54cbaae6e6fb0"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/fr011/progress-delta.json",
+      "sha256": "bcdf7ca45dc62e70b93d089436de938613aed7040003075d7b1fd5dc83252f59"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/fr011/业务结果与指标交接.md",
+      "sha256": "106e8b54cdde87cb1ea027bd26954978a0f06bcf68f56a006f80c10c14d87366"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/fr011/补遗与恢复决策.md",
+      "sha256": "e5365775440a08f46d0ae180579fdafe3d399c52bf12784835f1cbfc8ee50f80"
+    }
+  ]
+}

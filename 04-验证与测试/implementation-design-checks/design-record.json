@@ -1,0 +1,72 @@
+{
+  "scope": "用户要求可落地详细设计的实现材料与独立机制验证，不是完整业务产品或真实模型验收",
+  "authorization_source": "user_request",
+  "request": "把详细设计写的更加细致一点，要可落地",
+  "recorded_at": "2026-10-16T11:32:36.948911+00:00",
+  "decisions": {
+    "greenfield": true,
+    "legacy_migration_required": false,
+    "message_infrastructure": "kafka",
+    "vector_store": "postgresql_pgvector",
+    "rag_required": true
+  },
+  "deliverables": {
+    "implementation_guides": 4,
+    "tables": 87,
+    "schema_definitions": 97,
+    "api_paths": 67,
+    "api_operations": 72,
+    "http_examples": 12
+  },
+  "executed": {
+    "database_checks": 27,
+    "kafka_checks": 10,
+    "compose_checks": 5,
+    "contract_checks": 318
+  },
+  "source_hashes": {
+    "05-技术与设计/detailed-design/RAG与评分实现规约.md": "fa694eaa75c8ce960ad3c9f03a0d18a5ee9e2fd92f1b3a228158e9c34cfd1ff9",
+    "05-技术与设计/detailed-design/README.md": "e40e9c7c2c40714648892e6f8dcc5235fe3abc7a952cab786db59eed8e9debb6",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/deploy/.env.example": "a7f9fbb224e6a902c816249513cef67f0fcadb0a3c2dd11c2c628624029922dd",
+    "05-技术与设计/detailed-design/deploy/.gitignore": "bbbf80609cf1d2384200c0eb228eba79b68facd469dc639a3a1aae1722baab31",
+    "05-技术与设计/detailed-design/deploy/compose.yaml": "38805155d0654162a05e2aab5ab0c7f5588a1dd9add406934c2f30f74f2decb9",
+    "05-技术与设计/detailed-design/deploy/init_topics.py": "bd47e25bb49b508d4d1a74091e4a87a6a46d5768323661990a2f5f8428af8cc6",
+    "05-技术与设计/detailed-design/domain.sql": "63e83db524d4ad97f0e11910379817f4a17473ab695c0fea5deec92592dbd920",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/http-examples.json": "ef1a7f01225fbde0f7eafec8be7b420fd98358bb665f68b456202d857fff7dc2",
+    "05-技术与设计/detailed-design/openapi.json": "7de861fcb1214a0032d6a46bc1c7dbb256bb0ae7f1b4596d38882146b6a25b4c",
+    "05-技术与设计/detailed-design/protocol.schema.json": "0492410b355f40778fa89f3e7dc7129c7a7704c2f614364ce4bf9a47bd3faf3c",
+    "05-技术与设计/detailed-design/retrieval-policy.json": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+    "05-技术与设计/detailed-design/retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "05-技术与设计/detailed-design/roles.sql": "0d993bd972be18c244d3007ec4b937f832997b14908666593dee1957a69f092a",
+    "05-技术与设计/detailed-design/sync_openapi.py": "a32aacd76b5f5bbf5bf58f2dea7f0cda87a51683929c5e8f900e48849c957233",
+    "05-技术与设计/detailed-design/worker-functions.sql": "0097f57f4ba891368a9e8465f03aa65757421f2e552b3c1b13c2de9535a10d21",
+    "05-技术与设计/detailed-design/接口与任务实现规约.md": "0729f6f9127930f9e6cec30c033a1bb332c9b8768aaa651cb9b82ce2cf9529ba",
+    "05-技术与设计/detailed-design/数据与事务实现规约.md": "bba8dadbd29f300e1961fad0267c67bc5cdeadaa55784f69a865b724cfb44cf5",
+    "05-技术与设计/detailed-design/部署与交付手册.md": "dad05f71af9fe4dee24ece717e83724d4a16df4db8eb3dd157ef2935c924a2db",
+    "04-验证与测试/implementation-design-checks/README.md": "23ec23eada1a4171a88517209842b38022b8f78c3691ad58da57ec8fefea7248",
+    "04-验证与测试/implementation-design-checks/requirements.lock.txt": "4f63ddb44fbb1e273acbe16f278647c1ec3395e98ed95d1061e66437ba61e740",
+    "04-验证与测试/implementation-design-checks/observations.json": "abf7ae103523c3948b9fa6a443c57980c99c79920a49b9114fa1ce8514d18e8c",
+    "04-验证与测试/implementation-design-checks/probe_database.py": "de5cce656d90bfe68d166b26a0a6af71e5152bf86d7a42347f311f1281e37c85",
+    "04-验证与测试/implementation-design-checks/probe_kafka.py": "d71924fe5d35a973cb9db7e5756d3367a22efbd1673d421ef2345693189ae25c",
+    "04-验证与测试/implementation-design-checks/probe_compose.py": "d95ef8334b5b529fb2583cf14d18ec442be8da46dfec84adea5d054d210f61b3",
+    "05-技术与设计/AI投标工作台详细技术设计.md": "356718cd6689395730d066435d4738449903b512a238a04056d2d5431f7ad68a"
+  },
+  "evidence": {
+    "database-result.json": "7d450a0dc9aae89e317ed0c78c5191c4a55b17711ac42a26c709c99f8ead65fe",
+    "kafka-result.json": "1dacdf00a0d5b58c4c75232cb23354c77063c5fb8f775f9fc1f56b4f02a8bc11",
+    "compose-result.json": "a5cfc175be5804b4be938d262faad098002e6cbcb3e67aaca5cb6d74f7967f96",
+    "contract-result.json": "cab8ccceaa5c70b39bcd7fac611967b288c570dd83e0e434562eb384c1a721f1",
+    "product-result.json": "fd19522fa78c10348c4624ca9a63690efcca37c6832cdfa52f4f3759c0fd1a49",
+    "architecture-result.json": "ec50b3339ab4f8842381a0e40fc405e2a7fe587d9778a51cd5f75d03cac07f87"
+  },
+  "historical_evidence_preserved": true,
+  "unexecuted": [
+    "业务API／页面／worker端到端",
+    "真实Embedding与RAG质量",
+    "真实解析与DOCX排版",
+    "多节点Kafka与生产恢复",
+    "官方成绩上的预测精度"
+  ]
+}

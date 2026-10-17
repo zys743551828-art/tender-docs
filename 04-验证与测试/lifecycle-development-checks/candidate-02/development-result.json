@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-17T01:33:25.533402+00:00",
+  "candidate_sha256": "867708e6756280691661671477a7f2491febaa9033da7484fe0e5564129608b3",
+  "actual_sha256": "77778055eabb09ba1005279876efee22dff9da4c6dd9cc231da1280c8c808567",
+  "own_sources": 7,
+  "frozen_runtime_sources": 270,
+  "actual_paths": 3,
+  "actual_operations": 4,
+  "fresh_pg_asgi_passed": 10,
+  "fresh_skipped": 1,
+  "skip": "old-schema case intentionally separate",
+  "actual_unconfigured_schema_passed": 1,
+  "tests": [
+    "no-operation open batch blocks archive",
+    "explicit closure retains staging and original batch state",
+    "new upload-state ETag rejects old closure",
+    "cross-project path rejects existing receipt",
+    "in-flight byte verification cannot be closed",
+    "partial committed batch retains unused verified original metadata",
+    "Worker read/lock boundaries and API receipt UPDATE denial",
+    "late producer waits bid then rejects closed batch",
+    "original lifecycle transitions/ETag/operation waits"
+  ],
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed_4_production_sources",
+    "bandit": "passed"
+  },
+  "initial_fixture_failure_preserved": "../candidate-02-preview/first-run.xml",
+  "object_network_calls": 0,
+  "provider_calls": 0,
+  "kafka_calls": 0,
+  "implemented_limits": "mechanism only, all production writers and callbacks must still adopt guards, verified-byte new-batch reuse not implemented; main/UI not exposed",
+  "independent_approved": false
+}

@@ -1,0 +1,19 @@
+{
+  "draft": "F",
+  "sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be",
+  "prior": "E a53bc2cbce417d121dc3a32c36266ca800b7c2035089410d90c46c4835e3b480",
+  "changes": [
+    "publish_result succeeded-call count SQL alias call collided with local call row variable (real PG42702); rename table alias actual_call, no privilege/logic broadening",
+    "Application start only ordinary-write guards sealed current_review branch; historical qualified input does not require reopening archived project"
+  ],
+  "first_E_actual_results": {
+    "passed": 6,
+    "failed": 4,
+    "main_SQL_diagnostic": "column reference call.id is ambiguous",
+    "other_API_diagnostic": "historical job start still applied ordinary closed-project guard"
+  },
+  "status": "static_review_requested_not_executed",
+  "paid_calls": 0,
+  "objects": "memory only",
+  "consumers": 0
+}

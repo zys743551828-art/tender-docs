@@ -1,0 +1,3 @@
+{
+  "reason": "QA reused constant offline response ID in a persistent DB but recreated ephemeral memory storage. Identical result digest correctly deduplicated to an earlier fixture object key absent from new memory store. New run uses unique synthetic response IDs; original failure retained. Not classified as application defect."
+}

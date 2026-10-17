@@ -1,0 +1,35 @@
+{
+  "scope": "实际Worker acquire/finish/reconcile及真实隔离PG；无Kafka/S3/业务API执行",
+  "input_sha256": {
+    "apps/worker/engine.py": "6ec8285a122848b29dd52bc39b0bf27d794273650aba02b75e005d98015607e8",
+    "packages/domain/runtime.py": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e",
+    "packages/contracts/sql/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "packages/contracts/sql/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "lease_takeover": {
+    "original_generation": 1,
+    "new_generation": 2,
+    "old_owner_renewed_after_takeover": true,
+    "new_generation_acquire": null,
+    "old_generation_finish": false,
+    "counterexample_reproduced": true
+  },
+  "retry_backoff": {
+    "retry_generation": 2,
+    "retry_was_not_due": true,
+    "reconciler_generation": 3,
+    "new_dispatch_due_now": true,
+    "counterexample_reproduced": true
+  },
+  "lost_attempt_budget": {
+    "attempt_count_before": 3,
+    "attempt_count_after": 4,
+    "fourth_attempt_acquired": true
+  },
+  "source_modified": false,
+  "shared_dev_or_qa_used": false
+}

@@ -1,0 +1,41 @@
+{
+  "state": "failed",
+  "coverage": "failed",
+  "conversion_attempted": true,
+  "error_code": "AUTHORING_GENERATED_CONVERSION_FAILED",
+  "retryable": true,
+  "gaps": [
+    "AUTHORING_GENERATED_CONVERSION_FAILED"
+  ],
+  "chain": {
+    "source_docx_digest": "7b194c219ae33746d8566c2e7011e89a5313afd216faf2e5f4a5005862a9f4a7",
+    "profile_digest": "813f347311fbc472d44a54c933c904e4edb887f252ebc6e0a6afe8efa4a53d78"
+  },
+  "isolation": {
+    "local_image_pinned": true,
+    "network_none": true,
+    "ipc_none": true,
+    "pid_private": true,
+    "uts_private": true,
+    "nonroot": true,
+    "read_only": true,
+    "not_privileged": true,
+    "capabilities_dropped": true,
+    "no_new_privileges": true,
+    "memory_limited": true,
+    "cpu_limited": true,
+    "pids_limited": true,
+    "no_daemon_document_logs": true,
+    "clean_environment": true,
+    "all_bind_mounts_readonly": true,
+    "exact_allowlisted_bind_mounts": true,
+    "no_anonymous_persistent_volumes": true,
+    "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+    "no_docker_socket_mount": true,
+    "bounded_tmpfs_output": true,
+    "own_job_cleanup_confirmed": true
+  },
+  "scope": "Exact architecture-reviewed PAGE port static01; real local Docker/LibreOffice/PDFium, public synthetic multi-page Chinese, no DB/model/Kafka/OSS",
+  "static_candidate_sha256": "ddd11c50e4191b865b7e423bf895bd620ceb42a97c4927167112f60ecc755c86",
+  "inputs_verified_before_after": 19
+}

@@ -1,0 +1,60 @@
+{
+  "gate": "design_to_implementation",
+  "decision": "passed",
+  "responsible": "project_manager",
+  "scope": "允许新工程分阶段源码开发；不表示软件或模型验收",
+  "remaining_design_blockers": 0,
+  "technical_candidate": {
+    "path": "04-验证与测试/design-remediation/technical-candidate-02.json",
+    "sha256": "d9e53659504a3f5dcb527266582495294de738fc92c036c97987e669d12175e4"
+  },
+  "evidence": [
+    {
+      "path": "04-验证与测试/architect-review-checks/remediation/final-review-record.json",
+      "sha256": "6dfea3caa6d3887de0042db806890c333719b9053bf2090e614c4ebeaf121e4a"
+    },
+    {
+      "path": "04-验证与测试/design-remediation-checks/final-result.json",
+      "sha256": "e43033e7a4a824accf51f0f5a56752befe1283449065b7a7c040a4eac66b9829"
+    },
+    {
+      "path": "04-验证与测试/user-review-checks/minimal-delta-review.json",
+      "sha256": "f7d5ea346a18b767ce293c905606c482354c5cab757de75c35a5cdc11b74c7bd"
+    },
+    {
+      "path": "04-验证与测试/design-remediation/product-note.md",
+      "sha256": "dc4533e29761869d786f3f0196e6cdbe92fb51b3daa16ecd025eb5f8e9c60c5f"
+    },
+    {
+      "path": "04-验证与测试/project-gates/product-chain-result.json",
+      "sha256": "98778b46df0891fcf7fbd9548187f421851387c6657f4617e33938c059c320f9"
+    },
+    {
+      "path": "00-项目管理/团队协作与质量准则.md",
+      "sha256": "50baa52a1d8deee1b48010b62af73a1c7a537a02cba03ee4cf936788abfde50d"
+    }
+  ],
+  "source_hashes_verified": 27,
+  "test_result_hashes_verified": 9,
+  "implementation_root": "/workspace/tender-workbench",
+  "first_slice": [
+    "T0身份与会话、项目、命令与操作、真实PG与Kafka执行",
+    "最小PDF资料核验、批次/版本、解析页与证据，明确缺口与未配置状态"
+  ],
+  "subsequent_delivery": [
+    "A1核心评审与复检/提交闭环",
+    "RAG及三判断评分研究",
+    "章节编制、导出、正式模型业务验收及运行验收"
+  ],
+  "software_end_to_end_executed": false,
+  "implementation_review_required": [
+    "testing",
+    "architecture",
+    "product",
+    "user_view"
+  ],
+  "not_authorized": [
+    "remote_publish",
+    "production_deploy"
+  ]
+}

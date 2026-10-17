@@ -1,0 +1,112 @@
+{
+  "registered_operations": [
+    {
+      "method": "POST",
+      "path": "/api/v1/bids/{bid_id}/conversations/main",
+      "operation_id": "ensureMainWorkConversation"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/{bid_id}/conversations/main",
+      "operation_id": "getMainWorkConversation"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/{bid_id}/conversations/{conversation_id}",
+      "operation_id": "getWorkConversation"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bids/{bid_id}/conversations/{conversation_id}/state",
+      "operation_id": "changeWorkConversationState"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bids/{bid_id}/conversations/{conversation_id}/messages",
+      "operation_id": "recordWorkMessage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/{bid_id}/conversations/{conversation_id}/messages",
+      "operation_id": "listWorkMessages"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "operation_id": "getAssistantGlobalConversation_assistant_global-conversations_main"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "operation_id": "postAssistantGlobalConversation_assistant_global-conversations_main"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/conversations",
+      "operation_id": "getAssistantConversationPage_assistant_conversations"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assistant/global-conversations/{conversation_id}/state",
+      "operation_id": "postAssistantGlobalConversation_assistant_global-conversations_conversation_id_state"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bids/{bid_id}/conversations/{conversation_id}/turns",
+      "operation_id": "postAssistantJob_bids_bid_id_conversations_conversation_id_turns"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assistant/global-conversations/{conversation_id}/turns",
+      "operation_id": "postAssistantJob_assistant_global-conversations_conversation_id_turns"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/{conversation_id}/messages",
+      "operation_id": "getAssistantGlobalMessagePage_assistant_global-conversations_conversation_id_messages"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/{conversation_id}/events",
+      "operation_id": "getAssistantGlobalEventPage_assistant_global-conversations_conversation_id_events"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/sources",
+      "operation_id": "getAssistantSourcePage_assistant_sources"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/{job_id}",
+      "operation_id": "getAssistantJob_assistant_jobs_job_id"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs",
+      "operation_id": "getAssistantJobPage_assistant_jobs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assistant/jobs/{job_id}/cancel",
+      "operation_id": "postAssistantJob_assistant_jobs_job_id_cancel"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/{action_id}",
+      "operation_id": "getAssistantAction_assistant_actions_action_id"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/assistant/actions/{action_id}/resolve",
+      "operation_id": "postAssistantAction_assistant_actions_action_id_resolve"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/bids/{bid_id}/authoring/generations",
+      "operation_id": "postAssistantJob_bids_bid_id_authoring_generations"
+    }
+  ],
+  "schemas_count": 289,
+  "sha256": "6e400b42bcdbd50e0ec9c2ec1fe4fdc4138048d17ca0f52ecd35b393f0531622",
+  "scope": "Independent assistant FastAPI app only; shared main/engine not registered by this candidate"
+}

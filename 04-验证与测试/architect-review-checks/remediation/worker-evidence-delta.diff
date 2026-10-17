@@ -1,0 +1,11 @@
+--- worker-probe-before-fixture-isolation.py
++++ probe_worker_login.py
+@@ -135,7 +135,7 @@
+         check('普通重复finish不产生第二effect',finish(60,'qa_worker',1,'duplicate'),'qa_worker')
+         check('取消后的研究finish拒绝发布',finish(70,'qa_research',1,'cancelled'),'qa_research')
+         check('取消研究无effect',f"SELECT count(*) FROM design.effect_receipts WHERE operation_id='{u(70)}';",expected='0')
+-        sql(f"UPDATE design.operations SET state='running',cancel_requested_at=null WHERE id='{u(70)}'; UPDATE design.step_receipts SET fence=2 WHERE operation_id='{u(70)}';")
++        sql(f"UPDATE design.research_runs SET cancel_requested_at=null WHERE id='{u(52)}'; UPDATE design.operations SET state='running',cancel_requested_at=null WHERE id='{u(70)}'; UPDATE design.step_receipts SET fence=2 WHERE operation_id='{u(70)}';")
+         check('迟到fence不能发布',finish(70,'qa_research',1,'late'),'qa_research')
+         check('迟到研究无effect',f"SELECT count(*) FROM design.effect_receipts WHERE operation_id='{u(70)}';",expected='0')
+         check('研究新fence合法finish',finish(70,'qa_research',2,'valid'),'qa_research')

@@ -1,0 +1,19 @@
+{
+  "fixture": "pure ASGI inner app stub, no actual DB project creation",
+  "new_bid_already_bound": "bcd6ebf8-3063-4c5e-8dfa-9646b115424a",
+  "request": "POST same allowlisted body with a fresh command key",
+  "forwarded": [
+    {
+      "path": "/api/v1/bids",
+      "method": "POST",
+      "headers": [
+        [
+          "idempotency-key",
+          "new-independent-command-after-first-project"
+        ]
+      ]
+    }
+  ],
+  "observed_status": 201,
+  "expected_boundary": "423 for a second project creation; old accepted key replay may remain allowed"
+}

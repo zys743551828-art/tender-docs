@@ -1,0 +1,178 @@
+{
+  "scope": "独立合成PDF与实际TCP解析端口；非Docling/Paddle或真实业务精度",
+  "passed": false,
+  "checks": [
+    {
+      "name": "实际服务身份与冻结parser/config匹配",
+      "passed": true
+    },
+    {
+      "name": "替代profile与目标/业务资格明确",
+      "passed": true
+    },
+    {
+      "name": "错误令牌/identity拒绝",
+      "passed": true,
+      "observation": {
+        "status": 401
+      }
+    },
+    {
+      "name": "错误令牌/parse拒绝",
+      "passed": true,
+      "observation": {
+        "status": 401
+      }
+    },
+    {
+      "name": "服务不暴露OpenAPI",
+      "passed": true
+    },
+    {
+      "name": "合成PDF实际HTTP200",
+      "passed": true,
+      "observation": {
+        "status": 200
+      }
+    },
+    {
+      "name": "物理页顺序与原件SHA绑定",
+      "passed": true
+    },
+    {
+      "name": "图像/扫描范围保持partial且质量未业务验收",
+      "passed": true
+    },
+    {
+      "name": "自制纯图像真实中文OCR",
+      "passed": true,
+      "observation": {
+        "method": "tesseract_ocr",
+        "contains_chinese": true,
+        "contains_90": true
+      }
+    },
+    {
+      "name": "扫描布局/表格/图理解不冒称完成",
+      "passed": true
+    },
+    {
+      "name": "空白页真实区分且无伪文字",
+      "passed": true
+    },
+    {
+      "name": "规则表格独立逐格数值和结构",
+      "passed": true
+    },
+    {
+      "name": "工程图保留未理解缺口",
+      "passed": true
+    },
+    {
+      "name": "完全隐藏文字不冒称可见读取",
+      "passed": true
+    },
+    {
+      "name": "混合页不可见错误条款不得成为无缺口可靠文字",
+      "passed": false,
+      "observation": {
+        "hidden_rule_in_text": true,
+        "quality": "usable",
+        "gaps": []
+      }
+    },
+    {
+      "name": "全部block页/摘要/旋转后point bbox有限且在页内",
+      "passed": true
+    },
+    {
+      "name": "rotation90尺寸与独立渲染墨迹point位置一致",
+      "passed": true,
+      "observation": {
+        "independent_ink_bbox": [
+          717,
+          67,
+          738,
+          305
+        ],
+        "width": 842.0,
+        "height": 595.0,
+        "rotation": 90
+      }
+    },
+    {
+      "name": "错误SHA实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "PDF_DIGEST_MISMATCH"
+      }
+    },
+    {
+      "name": "缺摘要实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "PARSING_SOURCE_DIGEST_REQUIRED"
+      }
+    },
+    {
+      "name": "损坏PDF实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "PDF_OPEN_FAILED_OR_ENCRYPTED"
+      }
+    },
+    {
+      "name": "非PDF实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "INVALID_PDF_OR_SIZE"
+      }
+    },
+    {
+      "name": "加密PDF实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "PDF_OPEN_FAILED_OR_ENCRYPTED"
+      }
+    },
+    {
+      "name": "1001物理页上限实际拒绝",
+      "passed": true,
+      "observation": {
+        "status": 422,
+        "code": "PDF_PAGE_LIMIT_OR_MISMATCH"
+      }
+    },
+    {
+      "name": "实际同时两文只一解析另一busy",
+      "passed": true,
+      "observation": {
+        "statuses": [
+          200,
+          429
+        ]
+      }
+    }
+  ],
+  "failures": [
+    {
+      "name": "混合页不可见错误条款不得成为无缺口可靠文字",
+      "passed": false,
+      "observation": {
+        "hidden_rule_in_text": true,
+        "quality": "usable",
+        "gaps": []
+      }
+    }
+  ],
+  "paid_model_requests": 0,
+  "fixture_sha256": "f3c1ec268c618dce708a17c67dfa079a97744cf7c8ad9d1550660ddfa9b87b9d",
+  "font_sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+  "candidate_sha256": "47a7720ac0a99f772cbde0cab56ae2a70e647b3527a638deeb0836289ca2bb10",
+  "probe_sha256": "ec41f5089542882c546f067a34880fe8ab0cb0319bfaa071f3c239d4105eefce"
+}

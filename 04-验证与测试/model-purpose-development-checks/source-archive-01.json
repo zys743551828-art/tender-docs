@@ -1,0 +1,52 @@
+{
+  "candidate_sha256": "76a562dd6c3a70b06810c688daf24ceabf123426a9e24ff16e9cbaabf44fde9a",
+  "sources": [
+    {
+      "path": "packages/domain/model_calls.py",
+      "sha256": "77a5e89799fdf46e130424634e8b61754efb7eff32c899cf3da1aed74a847f01",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/frozen-inputs-01/packages/domain/model_calls.py"
+    },
+    {
+      "path": "tests/test_model_purpose_integration.py",
+      "sha256": "b560ac7c909d971c3b0dd1ef234a1896bb3446cbf41332d11064fc855c092306",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/frozen-inputs-01/tests/test_model_purpose_integration.py"
+    },
+    {
+      "path": "docs/model-purpose-development-checks/README.md",
+      "sha256": "b380f980d28033641b16ae296046a4a49a5f9f1ceedef8f458ad58f6420b1886",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/frozen-inputs-01/docs/model-purpose-development-checks/README.md"
+    }
+  ],
+  "observed_dependencies": [
+    {
+      "path": "tests/test_model_ledger_integration.py",
+      "sha256": "de79b42b4a3bfa1520a8658fbc0a70f2eb22714b6a212e170aa744f35da2f300",
+      "archive": "docs/model-purpose-development-checks/dependency-inputs/tests/test_model_ledger_integration.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/dependencies-01/tests/test_model_ledger_integration.py"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "45b16f9f264999b27162c5befc04f346210783f1026baebd664ff5ee402bd069",
+      "archive": "docs/model-purpose-development-checks/dependency-inputs/apps/worker/engine.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/dependencies-01/apps/worker/engine.py"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "archive": "docs/model-purpose-development-checks/dependency-inputs/packages/domain/runtime.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/dependencies-01/packages/domain/runtime.py"
+    },
+    {
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+      "archive": "docs/model-purpose-development-checks/dependency-inputs/packages/domain/providers/deepseek.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/dependencies-01/packages/domain/providers/deepseek.py"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "archive": "docs/model-purpose-development-checks/dependency-inputs/packages/domain/storage.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/model-purpose-development-checks/dependencies-01/packages/domain/storage.py"
+    }
+  ]
+}

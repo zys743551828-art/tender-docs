@@ -1,0 +1,19 @@
+{
+  "scope": "Exact historical manifest keys read-only check; not dataset admission or legacy migration",
+  "objects": [
+    {
+      "file_id": "FILE-001",
+      "expected_sha256": "0ac3fc35e412cd8aeec7614f28c41743331dedd5d22be988feab553296006e25",
+      "status": 404,
+      "reason": "Known manifest object unavailable; no bucket listing performed"
+    },
+    {
+      "file_id": "FILE-002",
+      "expected_sha256": "5027159571bf015e6c0d01a8f782a868ad382a08c24520187f7d23fb2f23779f",
+      "status": 404,
+      "reason": "Known manifest object unavailable; no bucket listing performed"
+    }
+  ],
+  "bucket_mutations": 0,
+  "bucket_listing": false
+}

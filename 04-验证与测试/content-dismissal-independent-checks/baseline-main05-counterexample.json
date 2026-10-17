@@ -1,0 +1,29 @@
+{
+  "status": "confirmed_P1_new_content_inherits_old_dismissal",
+  "candidate05_sha256": "70d6adf9abbd525c0f9b2a0f5f0dea1ae3e39972b2d029cb7dbdba429a69dc09",
+  "fixed263_candidate_sha256": "9145507ce6a9aaa413b15b8945820c73ddd7a40b65f119f67d93e0d35338ca08",
+  "qa_runtime_files": 267,
+  "qa_runtime_manifest_sha256": "063b6abed2220947da341cf196510d7e6845c91e2709c6847bea7aff9670fc6c",
+  "fixture_manifest_sha256": "47874626fefa43ef520b84c8cbd25e80b3f4e43b7045338a0393f090944b3f4d",
+  "execution_result_sha256": "2ac183ff4058dd89ea9dbb59c8cc4b5e6d607d00afd867fe7f573b51501847df",
+  "executed_probe_sha256": "f3c41b013d341f18a6c6e7675bbe2f7cc9ac23d034d4e65ffd057f3879fa1377",
+  "expected_failed_assertion": "same_issue_group_does_not_authorize_old_human_decision_for_new_values",
+  "preconditions_and_controls_passed": 5,
+  "old_root_finding_id": "5b40a6a5-f0e2-4fd9-9350-946c43325cf8",
+  "new_finding_id": "58ea6431-5c40-43c9-91d2-29d40e67ceef",
+  "actual_new_state": "dismissed",
+  "actual_new_decision_id": "4d62ebf4-053a-47fe-a3da-18c67430006a",
+  "expected_new_state": "open with own origin and no inherited manual decision",
+  "old_body_sha256": "fd7b6c46b6c8ac8390e509c41c293ce6162d47cbb3fe059add9e1464564e6dac",
+  "new_body_sha256": "00d0bd1cb7c7f1bb845e976acb962729e9d97d4a242f464538da6348f024b185",
+  "scope": "Own synthetic real-PDF SHA and explicit parsed-page/model-output SQL fixtures; actual engineering validate_output and restricted Worker fenced content publish. A document/1 test envelope routes only publication through explicit patch to actual content publisher; not real model parsing/Kafka/API acceptance.",
+  "paid_calls": 0,
+  "model_calls": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "retained_fixture_failures": [
+    "execution/result.json",
+    "diagnostic-execution/result.json"
+  ],
+  "fixture_failure_explanation": "Initial explicit page evidence used JSON-string SHA. Real read_bundle rejected EVIDENCE_DIGEST_MISMATCH; raw UTF8 SHA corrected in test only. Candidate bytes unchanged."
+}

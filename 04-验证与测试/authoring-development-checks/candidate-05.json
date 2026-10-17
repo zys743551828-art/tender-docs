@@ -1,0 +1,62 @@
+{
+  "candidate": "authoring-backend-05",
+  "status": "developer_checks_passed_pending_incremental_review",
+  "scope": "candidate04_plus_real_readonly_build_followup_projection_and_closed_actual_schema",
+  "sources": {
+    "apps/api/authoring.py": "869e21439ccea3e024eccea35d5c4057181c81e59f5f1a2abdfef226b4f7d314",
+    "packages/authoring/README.md": "36607ac8e1a76db6d0598259bc1bc5a0bbefb3e36637c02382a6dd4c0db2d4dd",
+    "packages/authoring/__init__.py": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+    "packages/authoring/build.py": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+    "packages/authoring/build_repository.py": "a9bdda02b788fe9d209c9adef5063f75d09e3c9a9109145aa79ad0142738a91b",
+    "packages/authoring/content.py": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+    "packages/authoring/contracts.py": "5fd46773776351115ab85efea43735118d5b3b1e69c1f968300e2b4d445779ab",
+    "packages/authoring/generation.py": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+    "packages/authoring/patches.py": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+    "packages/authoring/repository.py": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+    "tests/test_authoring.py": "1c667ae951ea2f3a62848e089e275f45ed06bbe599036a745999fbb2c1fb116a",
+    "tests/test_authoring_integration.py": "dd993f146d12c145e7f984fa5b19d09a538ea118508fee66a4abd9549a4b7009"
+  },
+  "frozen_source_root": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-inputs",
+  "evidence": {
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-evidence/quality-result.json": "56076be39ef947951d0ab5ac3f923883851ebeb79716be377537b6195dbf6a5c",
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-evidence/projection-result.json": "8d98b046953974404c50a2c97a1c3fcee1019b36228320932a126dde386ed43f",
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-evidence/unit-result.xml": "7563e30d068b13b66e2f0a3075162048e9970cb907829d98c89244448ab1a1ec",
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-evidence/integration-result.xml": "238a352a2950ed6b20075b6041f32626b9db318c2bdf7a77126491d03212665c"
+  },
+  "prior_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate-04.json",
+    "sha256": "5b691078511b9d1904093fa0cce7fc19e8530f422f07edad72245b3595430ce1"
+  },
+  "dependency_source_sha256": {
+    "packages/domain/build_followups.py": "7b64d50e4b52392283a0fa6202a1e2b378e3e582211655632da78b33f4a183f5",
+    "packages/domain/runtime.py": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "packages/domain/reviews.py": "9fee5e6dbbc12c2e85d9dfdba19a259fef1d771e13312ff4a610d085e902a893",
+    "packages/domain/parsing_profile.py": "f61a997b4af11a635660f431086f6d0c73fac8f96262674698ba7a6a9bd8e1db",
+    "apps/worker/engine.py": "23dce46fac9b2300394fd0ccd546ab4f87ec437170899ecca8e3199e42360c53",
+    "apps/api/auth.py": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+  },
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "unit_and_real_LibreOffice": 15,
+    "real_PG_nonowner_S3_HTTP": 18
+  },
+  "not_claimed": [
+    "independent_API_follow_up_acceptance",
+    "Kafka_export_end_to_end",
+    "frontend",
+    "production_renderer_sandbox",
+    "real_model_quality"
+  ],
+  "paid_model_calls": 0,
+  "dependency_frozen_source_root": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate05-dependencies",
+  "source_delta": [
+    "apps/api/authoring.py",
+    "packages/authoring/README.md",
+    "packages/authoring/contracts.py",
+    "tests/test_authoring.py",
+    "tests/test_authoring_integration.py"
+  ]
+}

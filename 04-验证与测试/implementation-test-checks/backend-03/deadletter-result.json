@@ -1,0 +1,11 @@
+{
+  "scope": "实际失联预算耗尽后的Kafka死信及终态拒绝领取补验",
+  "passed": false,
+  "checks": [],
+  "failure": {
+    "type": "AssertionError",
+    "message": "拒绝领取不增预算或有效领域效果"
+  },
+  "probe_sha256": "83e17062cee6dba2c8fa432a5462ddd966b63253861a5a539c8f0510b8b9b096",
+  "recovery_result_sha256": "0a755d15c66e650116c6ad90426380f0f152b5778f861ead5758430061cd3fbc"
+}

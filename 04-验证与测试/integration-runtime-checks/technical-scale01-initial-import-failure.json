@@ -1,0 +1,6 @@
+{
+  "phase": "import bootstrap before any connection/DDL",
+  "error": "ModuleNotFoundError: deploy",
+  "cause": "driver invoked from evidence directory without project PYTHONPATH",
+  "correction": "explicit PYTHONPATH project root, unchanged reviewed initializer and SQL"
+}

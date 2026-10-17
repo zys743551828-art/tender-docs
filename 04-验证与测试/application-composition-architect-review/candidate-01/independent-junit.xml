@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="10" time="7.371" timestamp="2026-10-17T03:49:54.833532+00:00" hostname="597cea30c71f"><testcase classname="tests.test_application_composition" name="test_registered_paths_operation_ids_and_task_guard_are_unique" time="0.182" /><testcase classname="tests.test_application_composition" name="test_duplicate_registration_is_rejected_before_mutation" time="0.010" /><testcase classname="tests.test_application_composition" name="test_all_references_resolve_and_every_schema_is_valid" time="1.066" /><testcase classname="tests.test_application_composition" name="test_body_models_keep_their_validation_semantics_and_draft_names_are_distinct" time="0.120" /><testcase classname="tests.test_application_composition" name="test_target_and_fixed_base_are_not_mutated_by_export" time="0.504" /><testcase classname="tests.test_application_composition" name="test_declared_response_models_match_the_final_response_schema_semantics" time="0.255" /><testcase classname="tests.test_application_composition_integration" name="test_actual_capabilities_login_schema_and_no_formal_or_paid_upgrade" time="0.947" /><testcase classname="tests.test_application_composition_integration" name="test_lifecycle_closure_typed_task_replay_and_ordinary_new_work_guard" time="1.872" /><testcase classname="tests.test_application_composition_integration" name="test_archived_historical_pending_subject_is_explicit_exception_not_current_identity" time="1.374" /><testcase classname="tests.test_application_composition_integration" name="test_stage_a_protocol_immutable_replay_and_registry_do_not_promote_formal_models" time="0.090"><failure message="AssertionError: (409, 'TRAINING_PROTOCOL_EXISTS')">application = {'actor': UUID('43a05031-ca8c-425e-8d61-a62059e9164f'), 'bid': UUID('18833057-65ef-4950-8aed-9808764880ac'), 'client':....TestClient object at 0x7f3afee2a540&gt;, 'csrf': '4819c61ca50621e6265067625049c08adb9c3eca90ba10a13946f697f8e57975', ...}
+
+    def test_stage_a_protocol_immutable_replay_and_registry_do_not_promote_formal_models(application):
+        from tests.test_model_governance_statistics import bundle
+    
+        w = application
+        web = w["client"]
+        path = "/api/v1/model-governance/training-protocols"
+        body = {"document": bundle()["protocol"], "reason": "显式合成软件协议，非正式评分模型"}
+        h = headers(w)
+        first = web.post(path, json=body, headers=h)
+&gt;       validate(first, path, "post")
+
+/workspace/tender-docs/04-验证与测试/application-composition-architect-review/candidate-01/runtime/tests/test_application_composition_integration.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+response = &lt;Response [409 Conflict]&gt;
+path = '/api/v1/model-governance/training-protocols', method = 'post'
+
+    def validate(response, path, method="get"):
+&gt;       assert response.status_code in (200, 201), (response.status_code, response.json().get("code"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: (409, 'TRAINING_PROTOCOL_EXISTS')
+
+/workspace/tender-docs/04-验证与测试/application-composition-architect-review/candidate-01/runtime/tests/test_application_composition_integration.py:42: AssertionError</failure></testcase></testsuite></testsuites>

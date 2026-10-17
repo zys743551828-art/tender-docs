@@ -1,0 +1,31 @@
+{
+  "scope": "实际DeepSeek adapter的唯一极短结构化chat连通验证；非业务评审/评分/RAG效果",
+  "passed": true,
+  "chat_requests": 1,
+  "implicit_retries": false,
+  "started_at": "2026-10-16T16:29:59.575947+00:00",
+  "checks": [
+    "实际adapter唯一短chat返回有效JSON、指定模型、usage和requestID"
+  ],
+  "adapter_sha256": "81f03971e4ad491990054ab59cc946e9ad12eab1d8a1e2f0bfff68665f769c50",
+  "billing": "provider_usage_recorded",
+  "response": {
+    "model": "deepseek-flash",
+    "data": {
+      "ok": true
+    },
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 5,
+      "total_tokens": 80,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 75
+    },
+    "request_id": "3d129493-70df-4459-8e45-455e9d5ca339",
+    "response_id": "3d129493-70df-4459-8e45-455e9d5ca339",
+    "finish_reason": "stop",
+    "formal_scoring_eligible": false
+  },
+  "probe_sha256": "36130f179e981553a22b036ff61912115187487726ba684f47f681b5a3af89ab",
+  "finished_at": "2026-10-16T16:30:02.268240+00:00"
+}

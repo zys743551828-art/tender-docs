@@ -1,0 +1,37 @@
+{
+  "candidate_sha256": "b869f52da0ce31d56b48fe2ae51acd4a5aecbc63dbb94a8e08e45e4eadd7caae",
+  "sources_verified": 32,
+  "counterexample_cases": 1,
+  "actual_postgresql_nonowner": true,
+  "actual_loopback_HTTP": true,
+  "runtime": "explicit synthetic unit vectors/character tokenizer/zero rerank; not actual BGE",
+  "paid_calls": 0,
+  "private_configuration_read": false,
+  "consumers_started": false,
+  "cloud_requests": 0,
+  "loaded_frozen_sources": {
+    "apps.api.rag_routes": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/frozen-inputs/apps/api/rag_routes.py",
+    "packages.rag.search": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/frozen-inputs/packages/rag/search.py",
+    "packages.rag.indexing": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/frozen-inputs/packages/rag/indexing.py",
+    "packages.rag.repository": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/frozen-inputs/packages/rag/repository.py",
+    "packages.domain.source_effectivity": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/frozen-inputs/packages/domain/source_effectivity.py"
+  },
+  "observed_main_sha256": "408ca7518d5ce270e5f73a49ff8c174c720337b91da05ece328d7a9ab9f23007",
+  "RPC_paths": [
+    "/embed",
+    "/identity",
+    "/lexical",
+    "/rerank",
+    "/tokenize"
+  ],
+  "RPC_count": 9,
+  "evidence_sha256": {
+    "probe_candidate03_RR.py": "ae80830549769a315a6d9d7df132655b94753d3c02f6b231d0c8df05aacc235f",
+    "candidate03-RR-test.py": "c74ae1fb795a8968123a53277e83da21b89ddcf665ce4b9c22faa05e8ef09400",
+    "candidate03-RR-junit.xml": "3f8f46a7b5eccd15f1a51701cc89923be3be37e3ecfcf6290074ecb71c439522",
+    "candidate03-RR-counterexample.json": "fe57df2ae0c7a044718f3e4ed7a908af50dba00634f2e6cfa4f51fef816ecd16"
+  },
+  "counterexample_reproduced": true,
+  "executed_tests": 1,
+  "counterexample_fixture": "Only fresh isolated role startup configuration changes to repeatable read; source withdrawal uses a separate RC nonowner API transaction."
+}

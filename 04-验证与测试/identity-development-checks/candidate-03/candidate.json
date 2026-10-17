@@ -1,0 +1,76 @@
+{
+  "scope": "Explicit identity module02 plus discoverable pagination of bidding companies, engineering projects and rounds; no new DDL or snapshot/qualification semantics change",
+  "created_at": "2026-10-16T19:22:24.594722+00:00",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/packages/identity/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/packages/identity/repository.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/contracts.py",
+      "sha256": "87002f8b2637233295a70a2ecf86dbb8b30dc34439c0889e586dea4bc7e94cbe",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/packages/identity/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/identity_routes.py",
+      "sha256": "f7da0b453474b069341d5b32117191783e890829adfe574589aaab4ccb078c2c",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/apps/api/identity_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_identity.py",
+      "sha256": "7ff29e7b11762812950b2d3757bf783cea099ee473141f7f8cfd7f6a4fa9e5db",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/tests/test_identity.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/pagination.py",
+      "sha256": "ecbbe5c08a8bcd4d9c4adb16cfc7ade5f8f226d0dca13f7b47f075338d8eed89",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-03/frozen-inputs/packages/identity/pagination.py"
+    }
+  ],
+  "fresh_profile": "isolated tender_research_checks; nonowner API LOGIN only; no owner DSN loaded",
+  "self_checks": {
+    "pytest": {
+      "passed": 11,
+      "scope": "Previous10 + actual signed-cookie API pages for107 companies/107 engineering projects/107 rounds, limit25 across5pages each, no omissions/duplicates; strict actual page schemas; changed query/collection/engineering scope and tampered signature reject422"
+    },
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit_runtime": "passed"
+  },
+  "checks": [
+    "Two projects explicitly reuse one registered company ID; near names never merge",
+    "Visible default is opt-in; no bidder_id creates pending placeholder even if default exists",
+    "Same engineering new lots/new rounds get distinct round IDs; same round/different bidder is explicit",
+    "Placeholder correction stores immutable before/after audit and invalidates pending/current review context",
+    "Historical identity at_time never substitutes current profile; no recorded prior binding returns unavailable",
+    "Default and project strong ETags; exact idempotent replay; concurrent correction gives200/412",
+    "Registration declares identity only, company_facts stays empty, no qualification inferred"
+  ],
+  "database_ddl_changed": false,
+  "paid_calls": 0,
+  "kafka_consumers_started": 0,
+  "live_deployed": false,
+  "independent_review": "pending_pagination_delta",
+  "integration_pending": [
+    "main04 regenerate actual contract; frontend use next_cursor for three selectors",
+    "Existing identity02 frozen authority/at_time/RR review conclusions retain their original scope; this new03 pagination is not yet independently accepted",
+    "No live8802/8804 or shared web upgrade performed"
+  ],
+  "delta": [
+    "Three authenticated collection reads add signed next_cursor and cursor query argument, binding collection/filter/engineering scope",
+    "Nullable lot/descending round order and same-name object IDs provide deterministic paging; no user UUID input",
+    "Page actual schema now requires next_cursor:null|string as well as items/has_more"
+  ],
+  "previous_candidate_unchanged": true,
+  "previous_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/candidate.json",
+    "sha256": "e3644f59a564b4a2757a3a9fbee34b3b3be8800ffea05cb1fb42854ce46442b3"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "null_reconcile": {
+    "existing_reservation": true,
+    "native_terminal": true,
+    "decision": null,
+    "amount": 0,
+    "proof_reference": null,
+    "proof_sha": null,
+    "IF_invalid": null,
+    "IF_branch_runs": false,
+    "CASE_new_state": "settled",
+    "charged_minor": 0,
+    "manual_flag_after": false,
+    "reservation_checks_accept": true
+  },
+  "native_output_mismatch": {
+    "same_job_and_call": true,
+    "native_state": "reserved",
+    "execution_state": "running",
+    "live_lease": true,
+    "cancel": false,
+    "price_valid": true,
+    "reserved_output_upper": 2048,
+    "native_run_and_call_max_tokens": 8192,
+    "SQL02_dispatch_checked_output_equality": false,
+    "reserved_minor": 2148,
+    "actual_native_worst_case_minor": 8292,
+    "policy_limit": 5000,
+    "scope": "SQL relationship countermodel; not an end-to-end request or PG execution"
+  }
+}

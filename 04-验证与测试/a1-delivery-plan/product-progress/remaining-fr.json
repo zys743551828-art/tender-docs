@@ -1,0 +1,840 @@
+{
+  "scope": "当前跨阶段产品剩余范围；源码/候选/独立机制与业务验收分层记录，不改原passed证据",
+  "observation_method": "只读源码、生成actual OpenAPI及既有证据。当前无应用操作；live8802只读OpenAPI请求被执行沙箱EPERM拒绝，未获运行时响应。",
+  "actual_contract_snapshot": {
+    "path": "/workspace/tender-workbench/packages/contracts/implemented.openapi.json",
+    "sha256": "33517066d2b50b3e74cffa90e6f8bf3da2471e8531dbee4a5347f33d5ded85ca",
+    "paths": 73,
+    "operations": 80,
+    "operation_ids": [
+      "abortUpload",
+      "addAuthoringSection",
+      "applyAuthoringPatch",
+      "authorizeDownload",
+      "cancelOperation",
+      "cancelResearchRun",
+      "cancelReviewRequest",
+      "checkSampleAdmission",
+      "commitBatch",
+      "completeUpload",
+      "confirmHistoricalImport",
+      "correctOfficialOutcome",
+      "createBid",
+      "createBuild",
+      "createDraft",
+      "createUpload",
+      "createUploadBatch",
+      "freezeResearchDataset",
+      "getAuthoringCapabilities",
+      "getAuthoringSnapshot",
+      "getBid",
+      "getBuild",
+      "getDocument",
+      "getDocumentEvidence",
+      "getDraft",
+      "getEvidence",
+      "getEvidenceAuthoringReference",
+      "getFinding",
+      "getHistoricalImport",
+      "getMaterials",
+      "getMatrix",
+      "getOfficialOutcome",
+      "getOperation",
+      "getOutcomeRegistrationContext",
+      "getPrivateVersionBytes",
+      "getResearchCapabilities",
+      "getResearchRun",
+      "getReview",
+      "getReviewManifest",
+      "getReviewState",
+      "getRule",
+      "getRules",
+      "getSampleGrouping",
+      "getSection",
+      "getSession",
+      "getSettings",
+      "getUpload",
+      "getUploadBatch",
+      "getUploadParts",
+      "listAuthoringSectionRevisions",
+      "listBidOutcomes",
+      "listBids",
+      "listDrafts",
+      "listFindings",
+      "listResearchRunItems",
+      "listResearchSamples",
+      "listReviews",
+      "live_health_live_get",
+      "login",
+      "logout",
+      "prepareResearchChapters",
+      "previewAuthoringPatch",
+      "previewHistoricalImport",
+      "previewResearchRun",
+      "putPrivateUploadBytes",
+      "readEvents",
+      "ready_health_ready_get",
+      "rebindVerifiedUpload",
+      "recordSampleGrouping",
+      "refreshUploadAuthorization",
+      "registerOfficialOutcome",
+      "requestReview",
+      "restoreAuthoringSection",
+      "resumeResearchRun",
+      "retrieveEvidence",
+      "saveDraft",
+      "searchHistoricalBids",
+      "startResearchRun",
+      "updateSettings",
+      "verifyOfficialOutcome"
+    ],
+    "runtime_observed": false
+  },
+  "source_evidence_bindings": [
+    {
+      "id": "PDF_SCOPE_GATE",
+      "path": "/workspace/tender-docs/04-验证与测试/project-gates/software-slice-gate.json",
+      "sha256": "49c4013b4bc9f5ebdb655e93af9fc9c4c7ea00fcd5eb8037cb36ccdc4ccfc05d",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "PROVIDER_SCOPE_GATE",
+      "path": "/workspace/tender-docs/04-验证与测试/project-gates/external-services-gate.json",
+      "sha256": "67fbc61518c4520a9cb8307f6809c9fae7804b8d068665bf5eb0697e2a25dc05",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "A1_CORE_CANDIDATE",
+      "path": "/workspace/tender-docs/04-验证与测试/a1-backend-development-checks/candidate-01.json",
+      "sha256": "bd86798df5a661532b18d48214087c329ff572bcf680dcbba99ef25011597c94",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "A2_MODULE_CANDIDATE",
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate-03.json",
+      "sha256": "c63ad6c5974c99f99714fc1b706509d8d39f4554b7632da338b8f85769f0f6ee",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "A2_ARCHITECT_DELTA",
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-architect-review/candidate03-review-record.json",
+      "sha256": "3561bc0cd4b6bc50a70232ccb12f817ed6ad07b51b9c07deb7e34e30ca492514",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "BC_CANDIDATE",
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/research-candidate-01.json",
+      "sha256": "20e92d95e30325f3a44d98bb160fa680dcfe777c05ce60c64faa33326e1279d5",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "RAG_QA_MECHANISMS",
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/mechanisms-candidate-02/result.json",
+      "sha256": "5650b91b074a8e8e4f41508c7d6c03c099ae890582b1777ddadf8b9e720ebd39",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "RAG_QA_RACES",
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/races-candidate-02/result.json",
+      "sha256": "dac18f538c0819deefffd5fe84d259ddf2b0f502e2f3291aa78f548400961443",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "PARSER03_QA_VISIBILITY",
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-03/result.json",
+      "sha256": "9d73eb6a1213663d364ad6f9c657221134303d19466496f825cf4b016d93a9ac",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "PARSER03_QA_COMPOSITION",
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/composition-candidate-03/result.json",
+      "sha256": "6a5f7ea0960a3b79a21df23705c1b2313722723e7fd61e628e55bf85294c8d1d",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "PARSER03_QA_AFFECTED",
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/affected-regression-candidate-03/result.json",
+      "sha256": "149edb77ec450634adadaf5f751030f67968aee10f3bcd5b9ddeac3e20b5fc91",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "MATERIAL_OBJECT_GAP",
+      "path": "/workspace/tender-docs/04-验证与测试/project-gates/known-case-object-availability.json",
+      "sha256": "81c38c1e54b2d215a68a4de5953625af08ffed6c11080e50770c8fb0dc283f49",
+      "use": "仅保留该证据原声明范围，不推广为整项FR或软件通过"
+    },
+    {
+      "id": "SOURCE_main.py",
+      "path": "/workspace/tender-workbench/apps/api/main.py",
+      "sha256": "823748a06a583aa022d3a8416cba74a6abab552cd2ef35c7dbfb6beeb26ebbc6",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_README.md",
+      "path": "/workspace/tender-workbench/apps/api/README.md",
+      "sha256": "129f80f19f1730c2afd114a153c14f719353c19de4acc113b98203ae8fbc9fd1",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_README.md",
+      "path": "/workspace/tender-workbench/apps/web/README.md",
+      "sha256": "4d663a8995a6ac5816987c305fd4c0d53b0b362c6ed06dca93b6b6b0f644ed6c",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_review_handlers.py",
+      "path": "/workspace/tender-workbench/apps/worker/review_handlers.py",
+      "sha256": "bd2e8efe75ea2e9206d99d1da486cb055b2b035b9d7513f7c5df10220c4441df",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_calculator.py",
+      "path": "/workspace/tender-workbench/packages/pricing/calculator.py",
+      "sha256": "ef0a07d2bdde94e8d7bee31cf2dbf6507759d803b18321d76d958b0112997406",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_test_pricing_calculator.py",
+      "path": "/workspace/tender-workbench/tests/test_pricing_calculator.py",
+      "sha256": "30d9b720cb862e583881b6d80ea8630d52f2ba06dab1ce8ec333b5db3cf66ccb",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_knowledge_routes.py",
+      "path": "/workspace/tender-workbench/apps/api/knowledge_routes.py",
+      "sha256": "ddcd9afbd63e1fdab98f540bab7b4ff0bdb5011c00939e56c794c1bb24e5b125",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_contracts.py",
+      "path": "/workspace/tender-workbench/packages/knowledge/contracts.py",
+      "sha256": "7d6cb407f820a77d2fbc3ae766419cdc48d4623a8968c7e03ff87d55a7bec1b4",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_README.md",
+      "path": "/workspace/tender-workbench/packages/authoring/README.md",
+      "sha256": "1db2b21ed87f5a99c2194311355232ad795a3c20cc86f33537e1175704452c3c",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    },
+    {
+      "id": "SOURCE_README.md",
+      "path": "/workspace/tender-workbench/packages/research/README.md",
+      "sha256": "c3941c73c4111d895ad2af1cb9cbbc83cce79fb9749ba541eafe62addc98a2bf",
+      "use": "源码/说明观察；没有本次运行或业务验收"
+    }
+  ],
+  "software_runs_this_review": 0,
+  "browser_runs_this_review": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "functional_requirements": [
+    {
+      "id": "FR-001",
+      "name": "废标／否决及强制核对",
+      "priority": "P0_A1",
+      "implementation_signal": "A1.1有准备/核心核对候选与读取API；完整A1无验收gate",
+      "remaining": [
+        "接通独立实际API→Kafka→Worker→结果",
+        "A1.2决定/补漏/事实与A1.3提交",
+        "代表性否决漏检/误报评测"
+      ],
+      "next_batch": "A1.1→A1.2→A1.3",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-002",
+      "name": "评分预测与边界",
+      "priority": "P0_SCORE",
+      "implementation_signal": "B/C研究23ops候选；正式模型资格unavailable",
+      "remaining": [
+        "完整相关章节/必要图表与三独立判断真实运行",
+        "统计训练、基线、独立精度/校准、影子、人工发布回退",
+        "真实标签"
+      ],
+      "next_batch": "B+C",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-003",
+      "name": "响应矩阵",
+      "priority": "P0_A1",
+      "implementation_signal": "矩阵真实读模型注册，客户端已有组件",
+      "remaining": [
+        "真实行失败/未知/缺失原页与四层覆盖浏览器联动",
+        "当前/历史身份",
+        "空分母和pure scoring反例"
+      ],
+      "next_batch": "A1.1",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-004",
+      "name": "前后矛盾",
+      "priority": "P0_A1",
+      "implementation_signal": "consistency设置冻结及已知critical保留已有机制；未见独立新检测阶段",
+      "remaining": [
+        "实现跨章节矛盾可选检测、准确范围和两侧证据",
+        "先发现后关闭检测仍保留/处理/gate/报告"
+      ],
+      "next_batch": "A1.2后补检测",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-005",
+      "name": "范围残留",
+      "priority": "P0_A1",
+      "implementation_signal": "scope_residue设置冻结；未见独立新检测阶段",
+      "remaining": [
+        "实现工程名/主体/地名/范围残留的真实检测与来源",
+        "核误报及关闭模块",
+        "不把工程数值相同当同范围"
+      ],
+      "next_batch": "A1.2后补检测",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-006",
+      "name": "报价试算",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "有Decimal计算纯函数与手算测试，无报价API",
+      "remaining": [
+        "不可变有据公式登记/版本读、nullable试算、情景曲线、显式保存/历史、全入口开关与真实业务适配"
+      ],
+      "next_batch": "F报价",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-007",
+      "name": "报告与导出",
+      "priority": "P0_A1",
+      "implementation_signal": "PDF资料原件直接下载已验收；A2正文构建后端03候选",
+      "remaining": [
+        "A1 Word评审报告/批注PDF尚未实现",
+        "A2真实Worker/前端构建取件及独立格式失败",
+        "用途/来源显示一致"
+      ],
+      "next_batch": "A1.3+A2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-008",
+      "name": "规则、事实与依据",
+      "priority": "P0_A1",
+      "implementation_signal": "规则/原页读取及冻结事实身份已有候选；人工写入口未注册",
+      "remaining": [
+        "单条规则/显式批量/等价沿用、事实单条补替撤、补漏原子存续、强ETag与表单恢复"
+      ],
+      "next_batch": "A1.2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-009",
+      "name": "正式结果登记",
+      "priority": "P0_SCORE",
+      "implementation_signal": "B成绩登记/追加更正/核验及context候选",
+      "remaining": [
+        "真实页面绑定实交与原页/主体/轮次",
+        "未知/零/综合分冲突恢复",
+        "官方出处",
+        "独立QA与U05真人理解"
+      ],
+      "next_batch": "B",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-010",
+      "name": "问题复核与局部改稿",
+      "priority": "P0_A1",
+      "implementation_signal": "已知关键风险保留/有效新稿复检生命周期候选；A2补丁预览应用后端03",
+      "remaining": [
+        "人工confirm/dismiss/defer/reopen",
+        "直接问题建议/采纳",
+        "外部Word→PDF有效复检、旧轮回看",
+        "完整字段级数值校验"
+      ],
+      "next_batch": "A1.2+A2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-011",
+      "name": "业务指标与成绩对照",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "未注册业务指标actual API",
+      "remaining": [
+        "真实分母/未知/零、事前预测配对误差、入围/中标区别、风险闭环/因果限制及当前样本更正"
+      ],
+      "next_batch": "F指标",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-012",
+      "name": "项目资料与自动评审",
+      "priority": "P0_A1",
+      "implementation_signal": "单传PDF入库已验收；一键持久准备A1.1候选",
+      "remaining": [
+        "批次→自动/人工只一轮的真实端到端、准备失败/头变化/取消恢复",
+        "新解析与OSS组合",
+        "multipart独立验收"
+      ],
+      "next_batch": "A1.1+E",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-013",
+      "name": "项目功能开关",
+      "priority": "P0_A1",
+      "implementation_signal": "settings actual已注册、前端组件存在",
+      "remaining": [
+        "所有开关在操作/导航/AI卡/提醒/报告一致",
+        "已知critical关检测不洗掉",
+        "评分隐藏及报价全入口"
+      ],
+      "next_batch": "A1.2+A1.3+F",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-014",
+      "name": "项目、历史、资料等入口与跨入口导航",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "资料/原页/文件历史已验收；A1组件、A2开发中",
+      "remaining": [
+        "真实风险/矩阵/规则事实/章节工作面联动",
+        "B/C、D、F独立入口及深链接/390px/键盘",
+        "未实现菜单诚实"
+      ],
+      "next_batch": "A1+A2+B/C+D/F",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-015",
+      "name": "项目业务生命周期",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "项目初始preparation存在；未见完整业务阶段操作",
+      "remaining": [
+        "允许的准备/已提交/出结果/归档转换与真实提交/成绩绑定",
+        "业务阶段不混任务状态",
+        "不补造历史"
+      ],
+      "next_batch": "A1.3+B",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-016",
+      "name": "会话生命周期",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "无项目会话actual路由",
+      "remaining": [
+        "项目会话创建/恢复/收起/新开与完整清理边界",
+        "未实现模型会话不可用假响应补"
+      ],
+      "next_batch": "A1建议→F会话",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-017",
+      "name": "AI 操作与确认",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "A2结构化预览/应用候选；通用AI命令未注册",
+      "remaining": [
+        "可读预览、明确采纳/批准、对象/版本/证据守卫、断线不重放",
+        "既有明确按钮不重复确认"
+      ],
+      "next_batch": "A1建议+A2/F",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-018",
+      "name": "可操作卡片",
+      "priority": "P0_A1",
+      "implementation_signal": "A1/RAG/编辑组件与状态已有客户端代码",
+      "remaining": [
+        "真实卡片对接实际领域状态/冲突/失败/取消/恢复",
+        "只定位可用、写操作独立校验，不以source自测认业务通过"
+      ],
+      "next_batch": "A1.1→A1.3",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-019",
+      "name": "结构化项目记忆",
+      "priority": "P0_A1",
+      "implementation_signal": "ReviewManifest冻结已确认事实；facts写能力未注册",
+      "remaining": [
+        "结构化事实/决定记忆与已核验来源，新增/替换同事务保存并确认，撤回影响，不把聊天文字当正式事实"
+      ],
+      "next_batch": "A1.2+会话",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-020",
+      "name": "跨轮比较与可比性",
+      "priority": "P0_A1",
+      "implementation_signal": "评审历史读列表已注册，compareReviews actual缺失",
+      "remaining": [
+        "明确左右稿/规则/事实/方法、不可比断点、未复检与实际解决区分",
+        "有据展示，不把方法变更说改稿收益"
+      ],
+      "next_batch": "A1.2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-021",
+      "name": "历史搜索与档案",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "只读history研究候选，原件版本历史已有切片",
+      "remaining": [
+        "跨项目历史搜索/筛选/详情/实交成绩上下文及原页真实可恢复",
+        "独立界面验收"
+      ],
+      "next_batch": "B",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-022",
+      "name": "批量导入与异常队列",
+      "priority": "P0_SCORE",
+      "implementation_signal": "历史dry-run/读取/确认导入研究候选",
+      "remaining": [
+        "真实对象已收资料的批量异常/修正/幂等与跨批去重，按10—20份真实首批观察",
+        "不得造标准提交"
+      ],
+      "next_batch": "B",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-023",
+      "name": "案例比较与引用",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "RAG仅项目受控来源；历史搜索候选，案例复用完整链未验收",
+      "remaining": [
+        "可比较工程/主体/条件差异，显式引用出处，不能把他项目分数/事实搬到当前"
+      ],
+      "next_batch": "B+D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-024",
+      "name": "知识实体与分类",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "D知识包/路由源码开发，当前actual未注册",
+      "remaining": [
+        "候选分类/字段/主体/区域/专业/效期/适用性可信投影",
+        "FR034真实主体选择，别把published当适用"
+      ],
+      "next_batch": "D+FR034",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-025",
+      "name": "知识确认与版本发布",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "D版本/submit/publish等源码开发，无独立QA",
+      "remaining": [
+        "候选→待确认→明确发布/更新，原页与适用性完整",
+        "普通成员明确动作不升级成新岗位审批"
+      ],
+      "next_batch": "D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-026",
+      "name": "适用检索与可追溯引用",
+      "priority": "P0_A1",
+      "implementation_signal": "RAG真实BGE/PG机制与并发重放部分独立通过；非PDF业务召回验收",
+      "remaining": [
+        "实际PDF入库→索引→检索→引用端到端与界面",
+        "企业知识当前适用性/冲突",
+        "代表性召回质量"
+      ],
+      "next_batch": "R+D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-027",
+      "name": "知识失效及影响",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "RAG失效机制部分独立通过；D撤回/影响源码开发",
+      "remaining": [
+        "知识失效禁止新用、引用影响和旧原页可还原",
+        "当前/历史/未来有效、撤回竞争端到端"
+      ],
+      "next_batch": "R+D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-028",
+      "name": "评分样本严格准入",
+      "priority": "P0_SCORE",
+      "implementation_signal": "B样本准入/归组/数据冻结23ops候选",
+      "remaining": [
+        "真实标签/实交/主体/官方技术满分证据齐备",
+        "有据近重复归组",
+        "独立样本准入及整组/时间泄漏检查"
+      ],
+      "next_batch": "B+C",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-029",
+      "name": "模型评测与受控发布",
+      "priority": "P0_SCORE",
+      "implementation_signal": "研究预览/运行/恢复候选，不含训练和正式资格",
+      "remaining": [
+        "实际研究三判断与费用、统计拟合、独立评测/基线/影子、发布/回退/模型版本治理",
+        "标签及真实精度"
+      ],
+      "next_batch": "C",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-030",
+      "name": "错误更正与影响追踪",
+      "priority": "P0_A1",
+      "implementation_signal": "B官方成绩追加更正候选，其他跨模块影响未完整",
+      "remaining": [
+        "规则/事实/来源/实交/样本/知识/模型更正影响统一追踪",
+        "旧冻结结果可还原，不悄悄重用过期资格"
+      ],
+      "next_batch": "A1.2+B/C/D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-031",
+      "name": "归档、保留与清理边界",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "PDF历史保留已验收；完整归档清理未注册",
+      "remaining": [
+        "项目归档与保留、会话/知识引用/运行日志清理边界",
+        "禁止删除仍被引用证据",
+        "无需旧系统迁移"
+      ],
+      "next_batch": "B+E",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-032",
+      "name": "初始化、导出与恢复",
+      "priority": "CROSS_CUTTING",
+      "implementation_signal": "全新建库和局部开发基础设施已有证据；无完整产品备份恢复验收",
+      "remaining": [
+        "全量项目/原件/规则事实/引用/模型/审计导出与一致恢复，未来结构升级与真实演练"
+      ],
+      "next_batch": "E",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-033",
+      "name": "后台任务与站内通知",
+      "priority": "P0_A1",
+      "implementation_signal": "operation轮询、持久准备状态已候选；SSE实际路由注册",
+      "remaining": [
+        "浏览器断线补读/取消竞争/后台继续及站内事件任务状态",
+        "全类型通知/失败可恢复，不以断流当结束"
+      ],
+      "next_batch": "A1+E",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": "仅已冻结PDF资料切片及供应商适配原范围"
+    },
+    {
+      "id": "FR-034",
+      "name": "工程、标段、轮次、主体身份",
+      "priority": "P0_A1",
+      "implementation_signal": "当前create每项目新建占位bidder且拒已有身份ID，身份不可发现",
+      "remaining": [
+        "真实公司默认显式绑定/可搜索选择",
+        "工程多标段/新轮关联",
+        "已有占位逐项目有据纠正/影响历史",
+        "不能近名合并"
+      ],
+      "next_batch": "A1.2后身份底座+B/D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-035",
+      "name": "标准提交与已发生事实补录",
+      "priority": "P0_A1",
+      "implementation_signal": "标准gate/登记/独立补录actual尚未注册；B内部导入生成offline_fact",
+      "remaining": [
+        "服务端gate重新校验、标准/事实补录独立、实交更正与回执、列表可恢复",
+        "纯评分不额外阻断"
+      ],
+      "next_batch": "A1.3",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-036",
+      "name": "任务用途与事后信息隔离",
+      "priority": "P0_SCORE",
+      "implementation_signal": "A1完整输入冻结、RAG用途过滤与B/C白名单有模块证据",
+      "remaining": [
+        "跨RAG/会话/知识/研究的来源闭包+用途+时点+主体隔离长路径",
+        "杜绝事后信息进入事前评分"
+      ],
+      "next_batch": "A1+R+B/C/D",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-037",
+      "name": "章节编制、编写计划与AI修改预览",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "A2严格文本编辑/来源/修订/补丁后端03；前端持续开发",
+      "remaining": [
+        "完整前端保存ACK/412/恢复/差异/来源选择",
+        "AI生成经真实账本接线与质量，完整结构表图/章节计划未实现",
+        "保留可选"
+      ],
+      "next_batch": "A2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-038",
+      "name": "补遗变更及跨文档影响",
+      "priority": "P0_A1",
+      "implementation_signal": "A1源祖先/失效和A2引用守卫有候选，补遗效力命令未注册",
+      "remaining": [
+        "明确替代/局部变更/冲突三组有据决定、影响到要求/正文/草稿/报告/人工义务",
+        "不按上传顺序猜"
+      ],
+      "next_batch": "A1.2+A2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-039",
+      "name": "目录／版式模板、版本生成与版面核对",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "A2内置模板、冻结快照及实际DOCX/PDF模块03通过架构delta",
+      "remaining": [
+        "独立Kafka/真实私有存储/前端/各格式取件与构建后选稿复评",
+        "完整模板/暗标/占位/版面检查",
+        "Word接收/失败PDF接续待实施"
+      ],
+      "next_batch": "A2",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    },
+    {
+      "id": "FR-040",
+      "name": "可复用任务、触发与运行记录",
+      "priority": "P1_FULL_PRODUCT",
+      "implementation_signal": "固定底座任务/研究调度和运行对象已有候选；无通用任务定义actual",
+      "remaining": [
+        "可复用预置/配置任务、手动/事件/定时触发、暂停取消/运行历史/来源权限",
+        "不得替人正式决定"
+      ],
+      "next_batch": "F任务+E",
+      "whole_requirement_accepted": false,
+      "application_acceptance": "pending_application",
+      "accepted_subscope": null
+    }
+  ],
+  "original_13_cases": "原application-acceptance.json及本目录a1-acceptance.json均保留pending_application；不得由候选存在或模块自测自动更新。",
+  "true_material_dependencies": [
+    {
+      "item": "招标/正文原件",
+      "state": "handoff zip无PDF；已知两个OSS对象只读404",
+      "blocks": "真实代表性解析/漏提漏检/实际交付体验，不阻止合成工程开发和失败恢复"
+    },
+    {
+      "item": "正式官方成绩与主体/轮次/满分出处",
+      "state": "未齐备，PM已异步请求",
+      "blocks": "正式样本/统计训练独立精度/模型资格；不阻止A1合格核心核对和有据实交事实登记"
+    },
+    {
+      "item": "真实投标人员任务观察",
+      "state": "未执行",
+      "blocks": "U03—05发现性/理解结论，智能体浏览器可达不代替"
+    }
+  ],
+  "release_boundaries": {
+    "accepted_scoped": "PDF资料切片/供应商适配按原gate，不外推当前组合",
+    "A1_complete": "not_accepted",
+    "research_runnable": "candidate_not_independently_accepted_end_to_end",
+    "model_business_qualification": "unavailable",
+    "complete_product": "not_accepted",
+    "production": "not_accepted"
+  },
+  "priority_order": [
+    "先A1.1独立实际组合与准备/范围/证据正确性，解析03与RAG02按各自QA范围收口",
+    "A1.2人工决定/补漏/事实/效力/真实身份与FR004/005，A1.3 gate/补录/报告/长路径",
+    "RAG实际PDF/OSS/索引引用及窄屏恢复，B/C并行补真实官方证据及未实现训练/发布",
+    "A2人工保存/快照构建/各格式取件与D适用性并行，守住PDF主路径",
+    "F报价按独立最小协议实现，再指标/任务；E分片/事件/归档/导出/恢复/容量贯穿"
+  ]
+}

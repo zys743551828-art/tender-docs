@@ -1,0 +1,63 @@
+{
+  "draft": "C",
+  "sql_sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad",
+  "prior": "B 3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674",
+  "status": "static_review_requested_not_executed",
+  "sources": [
+    {
+      "path": "deploy/sql/technical-scale-authority.sql",
+      "sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad",
+      "bytes": 25209
+    },
+    {
+      "path": "apps/api/technical_scale_routes.py",
+      "sha256": "08af9ab341737eee455f9dd9a241aed53402dea98f2659696e084608ebe6bc32",
+      "bytes": 7226
+    },
+    {
+      "path": "packages/model_governance/scale_requests.py",
+      "sha256": "73c0e4bae831597744481cb6ed712e77ce48ea3930d6ca08378a26b7395edfeb",
+      "bytes": 5213
+    },
+    {
+      "path": "packages/model_governance/scale_evidence.py",
+      "sha256": "a880c5aebd69315ca85c2d76186aa65452a682a2be48104ddf45d2766b556ebc",
+      "bytes": 2604
+    },
+    {
+      "path": "packages/model_governance/scale_repository.py",
+      "sha256": "e294246026eeed6aab89d8308a5e555cd4096ea0aa0de6f06ee345f8d205d501",
+      "bytes": 22907
+    },
+    {
+      "path": "packages/model_governance/scale_contracts.py",
+      "sha256": "187389daebcd018ebad720fb1c9ea5be511e58595365bc76c56141790d838edd",
+      "bytes": 8285
+    },
+    {
+      "path": "packages/model_governance/TECHNICAL-SCALE-DEVELOPMENT.md",
+      "sha256": "fd17e32ddadc02199f435aef93237e06c96a353158c787241b32c9c9f36f5e58",
+      "bytes": 4519
+    },
+    {
+      "path": "tests/test_scale_authority.py",
+      "sha256": "f0f2d1fbc0865eaac34db2e1a14537dff47cd517e835e6ff659eb365143531b3",
+      "bytes": 10752
+    }
+  ],
+  "pure_checks": 45,
+  "actual_database_checks": 0,
+  "delta": [
+    "server DB full evidence.source_id ancestor closure DISTINCT document versions equals claims exact set",
+    "each mapped claim separately checked bid/submission/Subject/actual blob digest/current confirmed decision/current proofs/existed-known-effective original submission windows; no direct-quote-only loop",
+    "all source ancestor digests must equal their actual document blob digest",
+    "API uses canonical server _parse heads and mirrors exact membership/per-version checks; Word parents have no fabricated parse/evidence/chunks",
+    "all ancestor original blobs verified outside transactions and final capture/CAS rechecks full context",
+    "context gives ancestor original names and document IDs for UI trusted selection"
+  ],
+  "historical_scope": "actual submission head + confirmed HistoricalSubject and proof authority, never client purpose alone",
+  "word_representation_boundary": "sufficient synthetic independent Word and PDF visibility claims are mechanism fixtures; no inference that a newly rendered PDF existed/was known in 2019 from Word claim alone",
+  "paid_calls": 0,
+  "native_objects": 0,
+  "consumers": 0
+}

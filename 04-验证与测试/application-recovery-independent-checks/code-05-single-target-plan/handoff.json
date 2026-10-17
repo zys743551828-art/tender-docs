@@ -1,0 +1,79 @@
+{
+  "state": "prepared_readonly_and_pure_checks_only_actual_restore_pending_resource_window",
+  "candidate_sha256": "6436b14fbd0bd9278f6ae70bea10b1ee4d7e7e2faebda140dd77421d8def052a",
+  "protocol_revision": 2,
+  "records": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-independent-checks/code-05-single-target-plan/单目标独立恢复协议.md",
+      "sha256": "d4ad0221362a05746c6d892ae06149b56a9f804e3c6127f1b2bc48069d9c94a3"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-independent-checks/code-05-single-target-plan/单目标独立恢复协议-01.md",
+      "sha256": "5696223c756a365abd6db5a202ad535a26d87c13486ccee376cbdc80cab2fa21"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-independent-checks/code-05-single-target-plan/readonly-result.json",
+      "sha256": "d17e17578336b798265ae0c091cf4a9a44adf4e8685974a7776831dba2cc5949"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-independent-checks/code-05-single-target-plan/paused-boundary-result.json",
+      "sha256": "0842e38be17e69196771fb24f173c0397933daf2240531db58f68e72b15ea25f"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-independent-checks/code-05-single-target-plan/prepared-cold-load.json",
+      "sha256": "d634c97f49bebf238a7b2a3f1725c1b01b7edebd01091936686c9be24068bba3"
+    }
+  ],
+  "current_prepared": {
+    "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/prepared.json",
+    "sha256": "6c42fdc8ff830d3fb3a3c5b616d484698c8b579c84ae2723caafaab6b19c7ca4"
+  },
+  "superseded_prepared_preserved": {
+    "path": "/workspace/tender-workbench/.local/qa-recovery05-1909d6d8fc8440eeaab9316b4203370e/prepared.json",
+    "reason": "Protocol02 explicitly records seven precise object keys in private intent before archive.restore; old prep driver identity is now intentionally rejected"
+  },
+  "offline_checks": {
+    "input_files_before_after": 403,
+    "local_archive_tables": 164,
+    "local_objects_across_two_archives": 14,
+    "known_check_pair_only": true,
+    "equivalence_negative_mutations": 6,
+    "synthetic_paused_wrapper_cases": 15,
+    "cold_loaded_recovery_sources": 8,
+    "cold_loaded_backend_sources": 134,
+    "offline_openapi_semantically_matches_known_07": true,
+    "known_actual_openapi_file_sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+    "canonical_comparison_sha256": "d3a0f761b2a6f7677f0efd97d382899e411030803d8853278645b5be6b326627",
+    "paths": 161,
+    "operations": 188,
+    "schemas": 310
+  },
+  "resources": {
+    "required_free_MiB": 1536,
+    "free_bytes_now": 1062891520,
+    "current_decision": "NO_GO_BELOW_GATE",
+    "original_full_initial_gate_MiB_unchanged": 1600,
+    "original_each_container_gate_MiB_unchanged": 900,
+    "stage_floor_MiB": 256,
+    "max_pg_containers": 1
+  },
+  "external_execution": {
+    "docker": 0,
+    "pg": 0,
+    "cloud": 0,
+    "provider": 0,
+    "consumer": 0,
+    "bucket_list": 0,
+    "object_delete": 0
+  },
+  "pending": [
+    "PM/architect resource window and >=1536MiB",
+    "New target restore, real reader/API/worker ACL denials, seven fresh prefix native object PUT+GET and real ASGI login/CSRF/idempotency",
+    "Dump TOC requires target pg_restore; host tool absent",
+    "Exact own-container cleanup and volume retention after any actual attempt"
+  ],
+  "limitations": [
+    "No independent repeat of source snapshot acquisition or source-after-target live SQL; archive bytes only",
+    "Not production DR/RPO/RTO, inflight resume or latest A2/Score/Scale schema qualification"
+  ]
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="4" time="2.157" timestamp="2026-10-17T04:30:11.976568+00:00" hostname="597cea30c71f"><testcase classname="tests.test_authoring_rich_build_integration" name="test_actual_export_no_profile_retains_real_docx_pdf_failed_and_explicit_unknowns" time="0.890"><failure message="psycopg.errors.UndefinedColumn: column o.created_at does not exist&#10;LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...&#10;                                                             ^">environment = {'actor': UUID('88dd0e37-a3d6-49ee-8daf-139c6f6bf135'), 'api': &lt;starlette.testclient.TestClient object at 0x7f321fa2e5..., 'created_by': '88dd0e37-a3d6-49ee-8daf-139c6f6bf135', ...}, 'bid': UUID('ad02d93c-3a03-44a3-9230-908a13538b95'), ...}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7f32233ca4b0&gt;
+
+    def test_actual_export_no_profile_retains_real_docx_pdf_failed_and_explicit_unknowns(
+        environment, monkeypatch
+    ):
+        from apps.worker import engine, export_handlers
+    
+        env = environment
+&gt;       build, message = queue(env)
+                         ^^^^^^^^^^
+
+tests/test_authoring_rich_build_integration.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_authoring_rich_build_integration.py:84: in queue
+    row = c.execute(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7f321fabfe60&gt;
+query = "SELECT b.id,o.payload FROM builds b JOIN outbox o ON o.operation_id=b.operation_id WHERE b.bid_id=%s AND o.topic='tender.task.export.v1' ORDER BY o.created_at DESC LIMIT 1"
+params = (UUID('ad02d93c-3a03-44a3-9230-908a13538b95'),)
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.UndefinedColumn: column o.created_at does not exist
+E           LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...
+E                                                                        ^
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: UndefinedColumn</failure></testcase><testcase classname="tests.test_authoring_rich_build_integration" name="test_asset_withdraw_after_compute_rejects_all_publication_but_keeps_old_snapshot" time="0.277"><failure message="psycopg.errors.UndefinedColumn: column o.created_at does not exist&#10;LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...&#10;                                                             ^">environment = {'actor': UUID('f42f2bef-f943-4bb2-a508-5f0df3ebe84e'), 'api': &lt;starlette.testclient.TestClient object at 0x7f321fa6be..., 'created_by': 'f42f2bef-f943-4bb2-a508-5f0df3ebe84e', ...}, 'bid': UUID('39332e02-824f-4a03-8f72-732fffccb386'), ...}
+
+    def test_asset_withdraw_after_compute_rejects_all_publication_but_keeps_old_snapshot(environment):
+        from apps.worker import engine
+    
+        env = environment
+&gt;       build, message = queue(env)
+                         ^^^^^^^^^^
+
+tests/test_authoring_rich_build_integration.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_authoring_rich_build_integration.py:84: in queue
+    row = c.execute(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7f321faad130&gt;
+query = "SELECT b.id,o.payload FROM builds b JOIN outbox o ON o.operation_id=b.operation_id WHERE b.bid_id=%s AND o.topic='tender.task.export.v1' ORDER BY o.created_at DESC LIMIT 1"
+params = (UUID('39332e02-824f-4a03-8f72-732fffccb386'),)
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.UndefinedColumn: column o.created_at does not exist
+E           LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...
+E                                                                        ^
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: UndefinedColumn</failure></testcase><testcase classname="tests.test_authoring_rich_build_integration" name="test_rich_requires_explicit_mode_and_exact_template_versions_and_pdf_for_review" time="0.344" /><testcase classname="tests.test_authoring_rich_build_integration" name="test_tampered_snapshot_identity_cannot_publish_same_manifest" time="0.237"><failure message="psycopg.errors.UndefinedColumn: column o.created_at does not exist&#10;LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...&#10;                                                             ^">environment = {'actor': UUID('221e8c9a-16d1-4d40-b6eb-dcaff397b9ae'), 'api': &lt;starlette.testclient.TestClient object at 0x7f321e9249..., 'created_by': '221e8c9a-16d1-4d40-b6eb-dcaff397b9ae', ...}, 'bid': UUID('e3265f88-a179-40a8-8e3f-5c25ab685b31'), ...}
+
+    def test_tampered_snapshot_identity_cannot_publish_same_manifest(environment):
+        from apps.worker import engine
+    
+        env = environment
+&gt;       build, message = queue(env)
+                         ^^^^^^^^^^
+
+tests/test_authoring_rich_build_integration.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_authoring_rich_build_integration.py:84: in queue
+    row = c.execute(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7f321fb77530&gt;
+query = "SELECT b.id,o.payload FROM builds b JOIN outbox o ON o.operation_id=b.operation_id WHERE b.bid_id=%s AND o.topic='tender.task.export.v1' ORDER BY o.created_at DESC LIMIT 1"
+params = (UUID('e3265f88-a179-40a8-8e3f-5c25ab685b31'),)
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.UndefinedColumn: column o.created_at does not exist
+E           LINE 1: ...d=$1 AND o.topic='tender.task.export.v1' ORDER BY o.created_...
+E                                                                        ^
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: UndefinedColumn</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,11 @@
+# 批次结束收据SQL静审
+
+结论：静态阻塞0，可在修复后的fresh helper或另经审查的新库初始化路径使用；不执行现有库补丁。输入[原字节](observed-batch-closure-sql01.sql) SHA256 `0979d5dadedecfd9aab194684bbcbd1eddbae6c60ff74355a5b5ea23a6a2db73`。本次只核SQL及说明，未执行DDL。
+
+batch组合FK绑定真实bid，batch与command各唯一，追加不可变，API只SELECT/INSERT，Worker只SELECT，其他能力角色无新授权。不把uploads或batch状态改成假failed，不删除暂存字节，也不自动提交正文版本；结束意图与字节历史分开，方向符合显式结束未完成批次的语义。
+
+实现放行仍取决于完整producer接线：命令在真实bid锁内核项目phase、batch未完成与强CAS，插receipt与审计原子提交；所有旧ticket、multipart完成、verify/batch提交、对象传输采纳及迟到Worker/control-plane生产者在同bid锁下读取closure并拒绝新采纳。只在router入口查一次、或网络前查完而网络后不复查，均不足。远端已写字节但输掉CAS只能留隔离暂存，不创建正式版本。
+
+归档不能仅因存在receipt就忽略真实在途operation或已排生产任务。reopen不自动复活已closed批次；复用已核字节必须是显式新批次/专用补录命令，重新受当前身份、来源与生命周期约束。schema没有强制‘未完成’状态谓词，这项由实际API受控事务核验，不能把表存在当业务证明。
+
+fresh真实非owner应测API合法插入与重复批次/命令拒绝、Worker写拒绝、UPDATE/DELETE拒绝；应用阶段覆盖关闭与晚producer双向竞争、未提交暂存保留和旧ticket无effect。endpoint/UI及完整归档仍未审，不应因本静审include尚未完整guard的router。0收费/0消费者。

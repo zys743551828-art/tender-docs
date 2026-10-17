@@ -1,0 +1,15 @@
+{
+  "draft": "C",
+  "sql_path": "/workspace/tender-workbench/deploy/sql/score-denominator.sql",
+  "sql_sha256": "e771ab52c25cbd19ac0e48f5732de051c2f8f5ecc7b6599a0f7064826b169195",
+  "prior_sha256": "c3f3b86260e7c967e4e14ab63865955ad6c71df74bb43791743d435c9388bab2",
+  "delta": [
+    "strict StageA method bound through cohort->research_run->experiment.method_digest rather than ordinary core review method; current/historical and actual-confirmation guards unchanged"
+  ],
+  "executed": false,
+  "observed_nonowner_pg_methods": {
+    "review_method": "a06ec6859226408228c67f30fe87ee137e1e5cfd340859e171a398ae2b22d098",
+    "judgment_method": "276a2c953aa86d935d46aabba432f7503ab6ce8081a9375b490ecb2172fd4d48"
+  },
+  "observation_limit": "Actual ordinary new-upload review method observation only; no strict-cohort acceptance bypass claimed; B database not patched."
+}

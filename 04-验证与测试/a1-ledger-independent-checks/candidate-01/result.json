@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "distinct_restricted_login",
+      "passed": true,
+      "observation": {
+        "api": {
+          "current_user": "twb_rag_checks_api",
+          "rolsuper": false,
+          "rolbypassrls": false
+        },
+        "worker": {
+          "current_user": "twb_rag_checks_worker",
+          "rolsuper": false,
+          "rolbypassrls": false
+        }
+      }
+    },
+    {
+      "name": "eight_concurrent_identical_reservations_create_one",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "request_and_profile_conflict_have_no_second_reservation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "prepare_review_shared_count_concurrent_boundary",
+      "passed": true,
+      "observation": [
+        "MODEL_BUDGET_EXHAUSTED",
+        "MODEL_BUDGET_EXHAUSTED",
+        "reserved",
+        "MODEL_BUDGET_EXHAUSTED"
+      ]
+    },
+    {
+      "name": "shared_output_budget_exact_32768_then_reject",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "failed_transaction_persists_neither_call_nor_budget",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "generation_fence_owner_expired_lease_no_call",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unknown_billing_persisted_no_resend",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "reservation_committed_before_single_unlocked_send_then_sha_cache",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "corrupt_success_cache_rejects_without_paid_repeat",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_between_commit_and_send_never_sends",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "late_cancelled_response_records_usage_but_no_effect",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "paid_response_persistence_failure_retains_usage_no_resend",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "worker_cannot_read_official_labels_or_write_human_decisions_routes",
+      "passed": true,
+      "observation": [
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "paid_generation_calls": 0,
+  "scope": "Actual restricted API/Worker LOGIN and PG transactions with explicit offline MockTransport and in-memory object store; not Kafka or paid-review acceptance",
+  "candidate_sha256": "78441a80539fa76f128e6dcc56f42476edb7e5daffc3c334d328358f369a7c5f",
+  "probe_sha256": "c656fc940e9bd6c4a2559da9bc7ff5638435a8c76c0875d4b00f3593991feb5c"
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "T0+PDF资料入库切片产品review，非A1/P0/生产放行",
+  "decision": "产品实现review通过，三项P2已关闭，范围内产品阻塞0",
+  "frontend_manifest": {
+    "path": "/workspace/tender-workbench/apps/web/qa-previews/frontend-candidate.json",
+    "sha256": "7bef8d1038ed4da77776f2301a6694842df0efcc6bcf36efd6462df7919872b9",
+    "source_tree_sha256": "38814551decdbe081c0d2a9e022809feeff81207a46216b8b3f1ee54f9e1710e",
+    "source_files_checked": 25
+  },
+  "backend_manifest": {
+    "path": "/workspace/tender-workbench/apps/api/backend-candidate-02.json",
+    "sha256": "b5307a48ca9b0531e2f482e28646b2d4adbcd9bdf5596b35af1dc23f5afb8bd7",
+    "keys": [
+      "scope",
+      "predecessor",
+      "fixes",
+      "quality",
+      "pytest_runs",
+      "integration_assertions",
+      "not_claimed",
+      "actual_openapi",
+      "sources"
+    ]
+  },
+  "actual_api_contract_sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+  "baseline_evidence": "result.json",
+  "affected_delta_evidence": "delta-result.json",
+  "delta_checks_passed": 8,
+  "runtime_anchor_files_stable": 8,
+  "limits": [
+    "初查按当时实现执行，三项受影响路径针对冻结候选复验",
+    "未重跑未变化完整路径",
+    "未运行独立测试角色全部门禁",
+    "无真人参与、模型风险评审或评分业务验收"
+  ]
+}

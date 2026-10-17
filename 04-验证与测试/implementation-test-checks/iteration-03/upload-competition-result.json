@@ -1,0 +1,18 @@
+{
+  "scope": "实际HTTP/S3/Kafka上传head竞争、重绑定及禁止路径；不含multipart",
+  "passed": false,
+  "checks": [
+    "首版本序号和head修订的真实区分",
+    "真实并发仅一人推进，冲突保留verified字节并再次拒绝旧文件revision"
+  ],
+  "started_at": "2026-10-16T13:57:22.246721+00:00",
+  "bid_id": "b4d35ae9-398b-45e5-bff5-dd461f1a96b2",
+  "file_id": "0840384a-f0e8-4c14-a5be-ffc4a3f32b32",
+  "cross_bid_status": 404,
+  "failure": {
+    "stage": "禁止重绑",
+    "type": "AssertionError",
+    "message": "跨bid重绑明确409目标冲突"
+  },
+  "probe_sha256": "f2bbc82621b7963057ec7fc68da0c0fd849bc214c1a889eeae4bf07187058dbb"
+}

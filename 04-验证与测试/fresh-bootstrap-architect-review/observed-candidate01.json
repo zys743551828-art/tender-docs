@@ -1,0 +1,49 @@
+{
+  "status": "frozen_for_independent_review",
+  "source_root": "/workspace/tender-workbench",
+  "sources": {
+    "deploy/create_check_environment.py": "4d3603314f015f0718a74cb52a7bd77d1395ea2bc7b125460d555293ac8acd15",
+    "deploy/bootstrap_fresh.py": "b22942dd45a961f3529de51dadb0ed4d9569d4e922f4f5fc9071790ccfc1a16b",
+    "deploy/bootstrap_check_kafka.py": "34e5ef119d0a800a387dd1c9cebd1604b9deaec0c1d5699199faccde929eba13",
+    "deploy/probe_fresh_environment.py": "cebe9a30d797b8be7fdb86cff8c1f40c510845f6522342ecb38bf89114cc9ecb",
+    "tests/test_bootstrap_fresh.py": "559dd0e3bc9aca10d27e826be8b9ecd296003df0687a6d6d16baf62696ff5b7e",
+    "docs/fresh-combination-development-checks/implementation-protocol.md": "4d6c3d28d8dcfc2523a8bb8242d4aaaf62cb4f6227074ca9cd8bf4023d450d67"
+  },
+  "observed_dependencies": {
+    "packages/contracts/sql/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "packages/contracts/sql/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "deploy/sql/vector-runtime-grants.sql": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+    "deploy/sql/research-source-qualification.sql": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+    "packages/knowledge/sql/rag.sql": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003",
+    "deploy/sql/model-governance.sql": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a",
+    "deploy/compose.external.yaml": "b66b17fb463728912aed5a322133c9dc34a09171a280d3defbc1655571668f3b",
+    "deploy/initialize_database.py": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+    "deploy/run.py": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107",
+    "deploy/initialize_topics.py": "4af0947c05b51079ed79e7b1c09ca1896506a84668a94416826ebeeb7eb8e886",
+    "packages/domain/providers/oss.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "packages/domain/storage.py": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+  },
+  "evidence": {
+    "created-environment.json": "057fdb85bb3a70bd7f8dd558e54fc6f037781e2bf6c386a7b401c3bd1cffb7b7",
+    "identity-probes.json": "52330edef78340aa350704cf2a843a1a7d6a73a60524d18f416403bef0fef2ff",
+    "kafka-created.json": "15d0684b0f99f63d63af80b79e823f2f1a8093f85ea4628448b76408a58f19d8",
+    "topics-created.json": "45cb7170ddf91c775d25b9adec696f2f2b6baf234170e6646a4d2e7ec7e22925",
+    "kafka-isolation-probes.json": "8f6adfe461f9db112718f753a9cc37dbe03f112d6b45773ef09b6d2f85b2938b",
+    "prior-prefix-observation.json": "814d75615bc3613ec0f1859bda9ce73fb46aee8d2ee3909ff6bbd02209fc8db2",
+    "origin-pre-freeze-change.json": "bbc89f0823b5481758d170fd12e144bdcad1780960ddb4d8569c0280066b9d16",
+    "additional-fresh-probes.json": "14b4b430f7a7723b05ad3b5ff1df846e406b6bc5bb5630d44762b42bbe6e8709",
+    "development-junit.xml": "39a24d9749935e1261825fcf5800a840edbfdbe5d3b88363f721810e669e48a7",
+    "development-result.json": "4a7a3b1dc400453b6aad8407ad3f00a5bf01c84b1442ae3294d487b0dedca9fe"
+  },
+  "independent_approved": false,
+  "business_processes_started": false,
+  "private_profiles": {
+    "init": ".local/combined_delivery01-init.env",
+    "business": ".local/combined_delivery01-checks.env",
+    "model_train": ".local/combined_delivery01-model_train.env",
+    "model_evaluate": ".local/combined_delivery01-model_evaluate.env"
+  }
+}

@@ -1,0 +1,18 @@
+# 独立评分执行SQL草案C静审
+
+结论：C原字节需修正两处当前评审资格对齐问题，不执行C。输入SHA256 `13b6598051a88d9990eda463ba1df9f1785c84a50b55f5e5e89f10ae0ad58b76`。本轮仅阅读项目源与离线测试，没有DDL、账号创建、数据库或外部服务连接。
+
+原SE01的设计缺口在C静态上闭合：seal派生method＋排序干净章节摘要的execution_key；更直接的防重发依据是全域profile／chapter_digest／replicate唯一键和start／reserve／resume对共享章节的reserved／unknown／not_sent查询。它们在统一91143串行事务下执行，随机新input／job／command及新增必要章节不能隐去仍共享的未知调用。成功复用只通过当前job当前章节的不可变call_binding，要求request／profile一致并先核当前来源；返回new_reservation=false，不将原调用费用记到新job。owned success与结果发布只认可该binding，不接受任意旧call ID。
+
+当前输入增加实际评审根原UTF8及摘要，绑定review_inputs真实manifest blob、SHA、尺寸和evidence_manifest_digest；逐项比较主体、空事实范围、完整rule rows与ruleset、文档／原件／obtained_at、最新parse配置、完整页与证据。它修复了只看当前数据库必要ID而不看实际旧root的问题，但还有以下两处不一致：
+
+- **SE04：必要规则覆盖状态缺守卫。** C:203—207只比较root.rule_set等于数据库row，没有要求row.coverage=complete；现有已识别的scoring IDs仍会作为完整必要集合进入三判断。partial／conflict规则包不应由“当前已识别集合齐全”转成“必要集合完整”。开发收到反馈后新增API检查与D SQL守卫；不能倒记为C已有。此为SQL资格与应用应有前置不一致的静态发现，没有在新库执行partial发布反例。
+- **SE05：原评审根完整来源闭包没有重核。** C的frozen_review_current不比较root.source_closure，current_chapter比较新capsule的heads；来源仍eligible地改revision／延期时，新capsule可取新head而原root仍冻结旧head。Owner明确ScoreInputRequest只有review_id、没有旧内容显式重新授权动作，故采用与核心review_data.check_frozen_sources一致的严格语义：旧root权威变化先拒绝，不能借新capsule替换。此为语义收口和静态调用链发现，不是已执行的PG漏洞证明。若未来支持同内容重新授权，应有独立明确authority和新的上下文，不能修改旧input或默默授旧root新身份。
+
+历史档案分支与当前评审分支在C已分开：historical_input只能走已封口、当前仍有据的历史输入和其完整章节，允许独立research-only产物，不改原项目／review／实交；current_review对closed／terminated／archived全程拒绝。hist方法仍有完整证明、当前来源和预算条件，没有因归档豁免。正式资格、技术总满分、features及数字预测仍unavailable／NULL。
+
+三判断结果在SQL中核必要章节数量、成功binding数量、每章三次、独立call ID和replicate、实际响应payload、完整覆盖、有效档位与逐字引用；部分判断不能补零或当三次完成。结算允许真实usage在来源失效或租约过期后如实保留，发布仍须当前资格；unknown和not_sent暂停，不能自动清账或重发。成功跨job缓存与单job费用分别保留，未新增正式认证入口。
+
+**对旧SE03影响界限的更正：** 基础core rule_items本身已有正数／非NaN／非Infinity CHECK，旧A报告的标量条件反模型只证明局部辅助条件较弱，不能证明普通合法入库能产生那类值。C增加有限正数的入口校验属于防御一致性；旧证据保持原样，本轮明确不将其描述为现有核心约束被绕过。技术总满分authority仍缺失，绝不能从条款和或官方标签补入。
+
+已阅读离线执行器中逐章三请求、成功恢复零send、unknown不补发、来源变更后记usage但拒发布、partial不提升的显式MemoryAuthority／MockTransport测试；本轮未独立执行这些测试，不把开发40／43项计入本轮通过。完整owned RPC、跨等价输入并发、source锁等待后fresh读取、NULL与角色权限等必须在后续新库真实验证。

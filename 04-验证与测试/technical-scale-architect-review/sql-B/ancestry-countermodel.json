@@ -1,0 +1,45 @@
+{
+  "kind": "static relational set countermodel, not executed PostgreSQL qualification",
+  "sql_sha256": "3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674",
+  "direct_evidence_documents": [
+    "converted-pdf"
+  ],
+  "source_ancestor_document_versions": [
+    "converted-pdf",
+    "original-word"
+  ],
+  "all_possible_claim_subsets": [
+    {
+      "selected_claim_documents": [],
+      "line129_exact_direct_evidence": false,
+      "line168_all_ancestors_have_claim": false,
+      "both": false
+    },
+    {
+      "selected_claim_documents": [
+        "converted-pdf"
+      ],
+      "line129_exact_direct_evidence": true,
+      "line168_all_ancestors_have_claim": false,
+      "both": false
+    },
+    {
+      "selected_claim_documents": [
+        "original-word"
+      ],
+      "line129_exact_direct_evidence": false,
+      "line168_all_ancestors_have_claim": false,
+      "both": false
+    },
+    {
+      "selected_claim_documents": [
+        "converted-pdf",
+        "original-word"
+      ],
+      "line129_exact_direct_evidence": false,
+      "line168_all_ancestors_have_claim": true,
+      "both": false
+    }
+  ],
+  "conclusion": "No selected claim set can satisfy both guards for a distinct original-Word ancestor. Adding fake direct Word evidence is not a valid remedy: no complete readable Word parse is created by the actual bridge."
+}

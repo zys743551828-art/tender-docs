@@ -1,0 +1,103 @@
+{
+  "frontend_manifest_sha256": "31c298b5c905744e58be5345ef4077794e4941c350aed0811e8cd8750fc0c623",
+  "backend_manifest_sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee",
+  "frontend_sources": 112,
+  "frontend_source_mismatches": [],
+  "frontend_assets": 215,
+  "frontend_asset_mismatches": [],
+  "backend_sources": 310,
+  "backend_source_mismatches": [],
+  "auto_review_off": true,
+  "pricing_enabled_at_end": true,
+  "native_served_entry_assets": [
+    {
+      "path": "/assets/index-BI74Pw4T.js",
+      "status": 200,
+      "sha256": "4e1b49974ffaf3219474608324a590f6f5a914ff1d4ec6964f174c519d9d8f9c",
+      "matches": true
+    }
+  ],
+  "at": "2026-10-17T02:49:07.955232+00:00",
+  "actual_context": "native5178 frontend08 -> currentAPI8808 F05 dedicated workbench08; no asset overlay for pricing",
+  "api_contract_sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+  "events": [
+    {
+      "at": "2026-10-17T02:49:07.372536+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.465934+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/upload-batches/d62c6968-76af-42fb-a6f1-c0677b1a73fd",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.466369+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.466765+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.467062+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.467401+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.527212+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.541711+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.595749+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.628013+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.738564+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.744238+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:49:07.747755+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/identity",
+      "status": 200
+    }
+  ]
+}

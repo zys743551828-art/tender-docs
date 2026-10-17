@@ -1,0 +1,84 @@
+{
+  "candidate_sha256": "1eae16b06254bf4c2e62a563b0d70ec292f4734735b049d6498c4dec5aeae26f",
+  "source_files": {
+    "deploy/backups/generic.py": {
+      "expected": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f",
+      "observed": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f",
+      "match": true
+    },
+    "tests/test_backup_generic_native.py": {
+      "expected": "c3b36601aa879f6b8edcf08702d749f1d7d68a74a1dda842df97e9fc3fb776b1",
+      "observed": "c3b36601aa879f6b8edcf08702d749f1d7d68a74a1dda842df97e9fc3fb776b1",
+      "match": true
+    },
+    "docs/backup-generic-native-development-checks/implementation-protocol.md": {
+      "expected": "e49bbc79b4ffd6824d0ed3ab4461e4cd12b7a38a08bb8a923595542215044dff",
+      "observed": "e49bbc79b4ffd6824d0ed3ab4461e4cd12b7a38a08bb8a923595542215044dff",
+      "match": true
+    }
+  },
+  "dependencies": {
+    "deploy/backups/run.py": {
+      "expected": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "observed": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "match": true
+    },
+    "packages/domain/storage.py": {
+      "expected": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "observed": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "match": true
+    },
+    "packages/domain/providers/oss.py": {
+      "expected": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "observed": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "match": true
+    },
+    "packages/contracts/sql/core.sql": {
+      "expected": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "observed": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "match": true
+    },
+    "packages/contracts/sql/domain.sql": {
+      "expected": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "observed": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "match": true
+    },
+    "packages/contracts/sql/retrieval.sql": {
+      "expected": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "observed": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "match": true
+    },
+    "packages/contracts/sql/worker-functions.sql": {
+      "expected": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "observed": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "match": true
+    },
+    "packages/contracts/sql/roles.sql": {
+      "expected": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "observed": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "match": true
+    },
+    "deploy/sql/vector-runtime-grants.sql": {
+      "expected": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "observed": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "match": true
+    },
+    "deploy/sql/research-source-qualification.sql": {
+      "expected": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+      "observed": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+      "match": true
+    }
+  },
+  "evidence": {
+    "development-result.json": {
+      "expected": "ab6e824ad68ebe04696b4a29bf5b2264f9f9b6280b5a74101ee85eed611f1104",
+      "observed": "ab6e824ad68ebe04696b4a29bf5b2264f9f9b6280b5a74101ee85eed611f1104",
+      "match": true
+    },
+    "development-junit.xml": {
+      "expected": "6b86eba6c40880a88997a0c6b146f1f4ee6637237f978482fbf811eb423d5609",
+      "observed": "6b86eba6c40880a88997a0c6b146f1f4ee6637237f978482fbf811eb423d5609",
+      "match": true
+    }
+  }
+}

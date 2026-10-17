@@ -1,0 +1,17 @@
+--- /workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-E/score-execution.sql
++++ /workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-F/score-execution.sql
+@@ -1,4 +1,4 @@
+--- Dedicated scoring DRAFT E: static review, then NEW fresh DB only. No consumers enabled.
++-- Dedicated scoring DRAFT F: static review, then NEW fresh DB only. No consumers enabled.
+ -- Requires research03 source authority, historical input C and model release B.
+ BEGIN;
+ CREATE SCHEMA score_execution;
+@@ -473,7 +473,7 @@
+   OR document->'prediction'->'value' IS DISTINCT FROM 'null'::jsonb OR document->'prediction'->'intervals' IS DISTINCT FROM 'null'::jsonb
+   OR document->'features'->>'schema' IS DISTINCT FROM 'complete-three-band-features/1' OR document->'features'->>'status' IS DISTINCT FROM 'unavailable' OR document->'features'->'values' IS DISTINCT FROM 'null'::jsonb
+   OR jsonb_typeof(document->'items') IS DISTINCT FROM 'array' THEN RAISE EXCEPTION 'score_result_invalid' USING ERRCODE='23514'; END IF;
+- IF jsonb_array_length(document->'items')<>expected_count OR (SELECT count(*) FROM score_execution.call_bindings bind JOIN score_execution.calls call ON call.id=bind.call_id WHERE bind.job_id=target AND call.state='succeeded')<>expected_count*3 THEN RAISE EXCEPTION 'score_three_complete_required' USING ERRCODE='23514'; END IF;
++ IF jsonb_array_length(document->'items')<>expected_count OR (SELECT count(*) FROM score_execution.call_bindings bind JOIN score_execution.calls actual_call ON actual_call.id=bind.call_id WHERE bind.job_id=target AND actual_call.state='succeeded')<>expected_count*3 THEN RAISE EXCEPTION 'score_three_complete_required' USING ERRCODE='23514'; END IF;
+  FOR item IN SELECT value FROM jsonb_array_elements(document->'items') LOOP
+   IF i.historical_input_id IS NOT NULL THEN
+    SELECT c.id,p.raw_content::jsonb INTO item_chapter,package FROM historical_backtest.chapters c JOIN historical_input.chapter_payloads p ON p.chapter_id=c.id WHERE c.input_id=i.historical_input_id AND c.digest::text=item->>'package_digest';

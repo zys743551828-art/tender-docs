@@ -1,0 +1,17 @@
+[project]
+name = "tender-workbench"
+version = "0.1.0"
+requires-python = ">=3.12"
+description = "全新AI投标工作台后端"
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501", "B008"]
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+explicit_package_bases = true
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

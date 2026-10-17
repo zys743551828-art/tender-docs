@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "bounded_tool_stops_at_expected_state",
+      "passed": true,
+      "observation": {
+        "status": "stopped_business_validation_or_cancel",
+        "guarded_invocations": 0
+      }
+    },
+    {
+      "name": "foreign_messages_skipped_and_no_offset_commit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancellation_stops_without_transport",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "1ae1e333-89ef-4c9c-988e-aac0adaa7a6e",
+  "bounded_tool_result": {
+    "status": "stopped_business_validation_or_cancel",
+    "guarded_invocations": 0
+  },
+  "offline_consumer_observations": {
+    "foreign_skipped": false,
+    "closed": true,
+    "consumer_initializations": 1,
+    "handled": [
+      "prepare/1"
+    ],
+    "commits": 0,
+    "config": {
+      "bootstrap.servers": "127.0.0.1:19095",
+      "group.id": "tender-acceptance-bf7bc62c21e14b3bace86ef45269bfc7",
+      "enable.auto.commit": false,
+      "enable.auto.offset.store": false,
+      "auto.offset.reset": "earliest",
+      "max.poll.interval.ms": 300000
+    },
+    "topics": [
+      "tender.task.review.v1"
+    ]
+  },
+  "ledger": [],
+  "operations": [
+    {
+      "handler_version": "prepare/1",
+      "state": "cancel_requested"
+    }
+  ],
+  "offline_transport_requests": 0,
+  "tool_sha256": "b69a359f2099f844e3af164d3221eed607d5af4d99167fc8870eef5f83a53d85",
+  "probe_sha256": "a07e53272f7209635c78ed4fe60a3196ed756447f4393f91caf876b29fde8dcd"
+}

@@ -1,0 +1,17 @@
+# 有据分母与回溯时点（预交接01，不是整体完成）
+
+分母SQL C为`deploy/sql/score-denominator.sql`，B的受限新库5项current/history机制已过，C待独立静审及另fresh。C只将strict StageA method由普通review.method改为cohort→research_run→experiment.method；B新库真实普通review摘要a06ec…与三判断276a…确有不同。不能把B current/history通过外推成C strict正例已验。
+
+新router为`apps.api.denominator_routes.router`，actual为`packages.model_governance.denominator_contracts.extend_openapi`，9个操作覆盖ScoreInput／HistoricalInput／StageA成员上下文及绑定、绑定只读、coverage派生与只读。尚未接main/live。请求仅reason或已有job_id，不接受max、来源allowlist、当前／历史模式豁免、actor或资格旗。
+
+现有Score F输入的max NULL CHECK、旧结果、旧manifest及判断profile都原样保留。新的score_basis引用绑定服务器真实input／review／material／rule_set／method／identity／historical Subject／实交／as_of、Scale版本／确认决定／头修订。独立派生只消费原成功完整三判断，不创建或重放模型调用；缺或撤回分母为null。旧快照在recorded_document明确保留，current技术满分另外投影null；关闭show_prediction时屏蔽features／prediction，保留覆盖及已确认满分。
+
+当前已冻结review允许在一次人工确认满分后同源as_of重核再派生，无需重做收费评审。strict另要求版本及真实confirmed决定在actual submitted_at前已存在，不允许pending header把事后确认洗为事前。历史权威只用于明确历史输入；关闭／归档不重开项目。当前只将“未加权原始分”用于原始条款分母；已加权总分虽可登记，没有明确换算规则时链接仍不可用。条款和>有据满分显示结构冲突，不缩放；和<总分仅部分覆盖，三判断特征和正式总分仍不可用。
+
+B实际5项：真实普通上传／CPU解析／Mock提取之后current晚确认并复用原3Mock调用；原Score max仍NULL且旧features unavailable；缺权威0send；真实独立条款60与总满分30两页形成结构冲突；归档历史独立派生、撤回后只读快照保留而当前null；计算事务外撤回后无新派生effect。原冲突夹具一页只有30却Mock硬报60被core正确拒绝，原失败JUnit保留；改为两页各自真实原文和逐版本单proof，不放宽core或Scale。无Docker、云对象或实际provider；0消费者。
+
+四时点模块`research_timing.py`已实现独立retrospective请求／服务端时点冻结／whole-group跨提交边界默认排除／实际标签known截止／桥接检测；strict原StageA入口未修改。此时点模块目前只有纯检查，没有新DB权威或可运行训练API。完整新标签量尺／HistoricalSubject分组／封存final标签／独立train-eval job仍在`retrospective-research.sql`WIP，明确未送审、不得初始化，PUBLIC已撤权且没有用途EXECUTE grant。后续须补完权威／组人工核验／用途导出与执行、独立静审和PMfresh。
+
+StageA原synthetic软件构造仍使用label.maximum，不能称已完成有据分母训练port。当前新增strict成员引用只是接入基础；下一片必须有官方标签原页量尺核验authority＋新用途export，不能单凭两个数字一样认同量尺。新的真实时序正例应先真实tender→Scale确认→当前实交→之后label／训练冻结；不倒填2019的created/known/confirmed。真实历史首次生成PDF的派生表示权威依旧缺失，Word当年已知不证明新PDF当年存在。
+
+正式模型／真实标签效果／业务路由cert／可执行官方聚合仍独立未开放。旧Score32893、Scale9ad9及StageA3929证据均未覆盖或修改。此预交接用于释放静审slot，不是用户项目交付终版。

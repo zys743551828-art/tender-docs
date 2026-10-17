@@ -1,0 +1,68 @@
+{
+  "candidate_sha256": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9",
+  "source_count": 335,
+  "PAGE_five_same": true,
+  "source_checks_before_after": true,
+  "independent_PDFium_readback": {
+    "page_count": 7,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 8
+      },
+      {
+        "physical_page": 2,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 12
+      },
+      {
+        "physical_page": 3,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 881
+      },
+      {
+        "physical_page": 4,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 935
+      },
+      {
+        "physical_page": 5,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 935
+      },
+      {
+        "physical_page": 6,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 935
+      },
+      {
+        "physical_page": 7,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 715
+      }
+    ],
+    "expected_body_digest": "dc155814e3c6ed1dc01f36f620dc734d805cdb9bc7f236359a44eb402da1d486",
+    "actual_body_digest": "dc155814e3c6ed1dc01f36f620dc734d805cdb9bc7f236359a44eb402da1d486"
+  },
+  "original_external_intake_same_DOCX_conversion_eligible": false,
+  "verification_scope": "Raw saved actual Docker artifact readback, not a new conversion or DB publication run",
+  "actual_contract": {
+    "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/actual.openapi.json",
+    "sha256": "d9f95834559640aed7f95a632cb00d998306f40e3084fab29ffb3c1c3271d240"
+  },
+  "external_evidence_count": 40,
+  "DB": 0,
+  "Docker": 0,
+  "external_services": 0,
+  "models": 0,
+  "consumers": 0
+}

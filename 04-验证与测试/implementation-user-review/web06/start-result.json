@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-17T01:35:14.936752+00:00",
+  "events": [
+    {
+      "at": "2026-10-17T01:35:14.392863+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 401
+    },
+    {
+      "at": "2026-10-17T01:35:14.400788+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 401
+    },
+    {
+      "at": "2026-10-17T01:35:14.717875+00:00",
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T01:35:14.901104+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T01:35:14.920854+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T01:35:14.922226+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T01:35:14.923153+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T01:35:14.923806+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    }
+  ],
+  "fixture_scope": "synthetic API/Worker/Parser03/MockTransport mechanism fixture; not actual model quality",
+  "fixture_paid_calls": 0
+}

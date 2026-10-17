@@ -1,0 +1,25 @@
+{
+  "scope": "LangGraph+SQLite隔离机制实验，不是PostgreSQL checkpointer或产品测试",
+  "passed": true,
+  "versions": {
+    "langgraph": "1.2.15",
+    "langgraph-checkpoint-sqlite": "3.1.2"
+  },
+  "external_model_calls": 0,
+  "cases": [
+    {
+      "guarded": false,
+      "persistent_resume": true,
+      "node_executions": 2,
+      "business_effects": 2,
+      "observation": "中断前逻辑执行两次；幂等约束另行提供"
+    },
+    {
+      "guarded": true,
+      "persistent_resume": true,
+      "node_executions": 2,
+      "business_effects": 1,
+      "observation": "中断前逻辑执行两次；幂等约束另行提供"
+    }
+  ]
+}

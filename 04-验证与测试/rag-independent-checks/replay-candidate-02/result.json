@@ -1,0 +1,55 @@
+{
+  "scope": "独立真实本地BGE/受限PG/当前ASGI检索重放反例；SQL原文夹具非真实PDF解析，不冒充live8802",
+  "passed": true,
+  "paid_model_requests": 0,
+  "bid_id": "4a3a398e-6827-4c60-94be-0e8ed25f724f",
+  "source_id": "b06e77c6-9ab0-5635-b3e1-c4e6a742ae88",
+  "root_id": "dcea6500-d23c-5930-9024-7e7bd202ed2d",
+  "first_status": 200,
+  "unchanged_replay_status": 200,
+  "old_head_revision": 2,
+  "new_head_revision": 3,
+  "old_head_valid_until": "None",
+  "new_head_valid_until": "2026-11-15 17:52:43.610867+00:00",
+  "replay_after_head_change_status": 409,
+  "replayed_original": false,
+  "expected_after_change": 409,
+  "first_response": {
+    "trace_id": "80c2b157-cca8-4b8a-b25e-73f8c0719c9e",
+    "policy_digest": "105f74d3a0297bee33b86724dbe15e5bed7c0a467db01c66761e22b5f4402a57",
+    "hits": [
+      {
+        "chunk_id": "0b6b0d3c-d72b-5269-a7b8-9290eeb01543",
+        "source_version_id": "54e1d025-a2e3-43e2-85b6-7119462fd79b",
+        "parse_run_id": "02e3bb8c-2817-4248-83d6-eb4099c3839f",
+        "physical_page": 1,
+        "citation_id": "00eb45e4-aa5a-5a43-b2cc-71dc06bc5369",
+        "excerpt": "本项目道路围挡高度不得低于2米。排水沟宽度为0.6米。独立合成来源。",
+        "embedding_profile_id": "d1e6ebae-8268-5a9b-b482-1193be12f86e",
+        "rank": 1
+      }
+    ],
+    "coverage": "partial",
+    "gaps": [
+      "仅检索已建立索引的可读文字；扫描、结构化表格和图页范围以资料读取记录为准"
+    ]
+  },
+  "after_head_change_response": {
+    "code": "RETRIEVAL_SOURCE_CHANGED",
+    "message": "此前检索来源的版本或效力已变化，请重新查证",
+    "request_id": "9dc19bbf-3a45-43ec-bd95-323985b7e651",
+    "retryable": false,
+    "details": {}
+  },
+  "dense_identity": {
+    "model_name": "BAAI/bge-m3",
+    "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "weights_digest": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+    "preprocessing_digest": "3df98f34cdc8f2a82279c50f6c6ae7e8ec2313861f12de6281fecad0b14a7b3e"
+  },
+  "api_identity": {
+    "current_user": "twb_rag_checks_api",
+    "rolsuper": false
+  },
+  "probe_sha256": "15ef34da9bbeedec1b1ec061403b04e57bd100e0933be2e9a8e0d17fd090f1aa"
+}

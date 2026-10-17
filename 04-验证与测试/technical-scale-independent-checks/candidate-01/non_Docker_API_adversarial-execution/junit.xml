@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="3.802" timestamp="2026-10-17T03:52:50.656385+00:00" hostname="597cea30c71f"><testcase classname="" name="test_IO_source_change_rolls_back_scale_version_and_allows_graph_lock" time="2.724"><error message="failed on setup with &quot;KeyError: 'word-rendered/ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287'&quot;">+ Exception Group Traceback (most recent call last):
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 177, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 344, in from_call
+    |     result: TResult | None = func()
+    |                              ^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 246, in &lt;lambda&gt;
+    |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 843, in pytest_runtest_setup
+    |     yield
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 895, in pytest_runtest_setup
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 164, in pytest_runtest_setup
+    |     item.session._setupstate.setup(item)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 514, in setup
+    |     col.setup()
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1674, in setup
+    |     self._request._fillfixtures()
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 719, in _fillfixtures
+    |     item.funcargs[argname] = self.getfixturevalue(argname)
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 548, in getfixturevalue
+    |     fixturedef = self._get_active_fixturedef(argname)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 639, in _get_active_fixturedef
+    |     fixturedef.execute(request=subrequest)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 1127, in execute
+    |     result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 64, in run_old_style_hookwrapper
+    |     return result.get_result()
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_result.py", line 103, in get_result
+    |     raise exc.with_traceback(tb)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 49, in run_old_style_hookwrapper
+    |     res = yield
+    |           ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/setuponly.py", line 36, in pytest_fixture_setup
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 1195, in pytest_fixture_setup
+    |     result = call_fixture_func(fixturefunc, request, kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/fixtures.py", line 922, in call_fixture_func
+    |     fixture_result = next(generator)
+    |                      ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/qa/test_technical_scale_independent01.py", line 71, in light_w
+    |     raw=artifacts[0].read_bytes();u=word.upload(w,raw,name='独立API负例原始PDF.pdf',role='tender');accepted=word.commit(w,u);word.finish(accepted['operation']['id'])
+    |                                                                                                             ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py", line 72, in commit
+    |     return expect(api.post(f'/api/v1/bids/{bid}/upload-batches/{u["batch"]}/commit',json=dict(accepted_upload_ids=[u['upload_id']],accepted_binding_ids=[u['binding']],explicit_partial_acceptance=False),headers=w['h'](tag=r.headers['etag'])),202)
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    |     return super().post(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    |     return self.request(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    |     return super().request(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    |     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    |     response = self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    |     response = self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    |     response = self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    |     response = transport.handle_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    |     portal.call(self.app, scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    |     return cast(T_Retval, self.start_task_soon(func, *args).result())
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    |     return self.__get_result()
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    |     raise self._exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    |     retval = await retval_or_awaitable
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 150, in request_context
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    |     raise app_exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    |     return await future
+    |            ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    |     result = context.run(func, *args)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 733, in commit_batch
+    |     verify_retained_object(c, retained)
+    |   File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 250, in verify_retained_object
+    |     metadata = storage.client().head_object(Bucket=storage.bucket(), Key=info["object_key"])
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py", line 40, in head_object
+    |     def head_object(self,**kw):return dict(ContentLength=len(s['objects'][kw['Key']]))
+    |                                                              ~~~~~~~~~~~~^^^^^^^^^^^
+    | KeyError: 'word-rendered/ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287'
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/tender-workbench/qa/test_technical_scale_independent01.py", line 71, in light_w
+    raw=artifacts[0].read_bytes();u=word.upload(w,raw,name='独立API负例原始PDF.pdf',role='tender');accepted=word.commit(w,u);word.finish(accepted['operation']['id'])
+                                                                                                            ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py", line 72, in commit
+    return expect(api.post(f'/api/v1/bids/{bid}/upload-batches/{u["batch"]}/commit',json=dict(accepted_upload_ids=[u['upload_id']],accepted_binding_ids=[u['binding']],explicit_partial_acceptance=False),headers=w['h'](tag=r.headers['etag'])),202)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    return super().post(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    return self.request(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    return super().request(
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    portal.call(self.app, scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 150, in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    raise app_exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 733, in commit_batch
+    verify_retained_object(c, retained)
+  File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py", line 250, in verify_retained_object
+    metadata = storage.client().head_object(Bucket=storage.bucket(), Key=info["object_key"])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py", line 40, in head_object
+    def head_object(self,**kw):return dict(ContentLength=len(s['objects'][kw['Key']]))
+                                                             ~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'word-rendered/ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287'
+
+During handling of the above exception, another exception occurred:
+/workspace/tender-workbench/qa/test_technical_scale_independent01.py:71: in light_w
+    raw=artifacts[0].read_bytes();u=word.upload(w,raw,name='独立API负例原始PDF.pdf',role='tender');accepted=word.commit(w,u);word.finish(accepted['operation']['id'])
+                                                                                                      ^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py:72: in commit
+    return expect(api.post(f'/api/v1/bids/{bid}/upload-batches/{u["batch"]}/commit',json=dict(accepted_upload_ids=[u['upload_id']],accepted_binding_ids=[u['binding']],explicit_partial_acceptance=False),headers=w['h'](tag=r.headers['etag'])),202)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:538: in post
+    return super().post(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post
+    return self.request(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:437: in request
+    return super().request(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:340: in handle_request
+    raise exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:337: in handle_request
+    portal.call(self.app, scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:187: in __call__
+    raise exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:165: in __call__
+    await self.app(scope, receive, _send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:176: in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py:158: in __exit__
+    self.gen.throw(value)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py:82: in collapse_excgroups
+    raise exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:178: in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py:150: in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:156: in call_next
+    raise app_exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:141: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:62: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:734: in app
+    await route.handle(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:288: in handle
+    await self.app(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:76: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:73: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:301: in app
+    raw_response = await run_endpoint_function(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:214: in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py:37: in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py:65: in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2706: in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:1100: in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py:733: in commit_batch
+    verify_retained_object(c, retained)
+/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/execution-inputs/apps/api/main.py:250: in verify_retained_object
+    metadata = storage.client().head_object(Bucket=storage.bucket(), Key=info["object_key"])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/technical-scale-independent-checks/candidate-01/qa-helpers/word_bridge.py:40: in head_object
+    def head_object(self,**kw):return dict(ContentLength=len(s['objects'][kw['Key']]))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'word-rendered/ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287'</error></testcase></testsuite></testsuites>

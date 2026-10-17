@@ -1,0 +1,8 @@
+{
+  "scope": "Public trusted runner file mode only; source bytes unchanged; private configs untouched",
+  "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/page-port-static-01/frozen-tree/packages/word_intake/sandbox_runner.py",
+  "before_mode": "0o600",
+  "after_mode": "0o444",
+  "sha256_before_after": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289",
+  "reason": "Exact frozen copy created under private umask was unreadable by container uid65534, causing empty stdout/nonzero runner exit; this is fixture packaging, not relaxation of field or sandbox rules."
+}

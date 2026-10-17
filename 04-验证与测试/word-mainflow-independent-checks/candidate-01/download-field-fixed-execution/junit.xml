@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="68.330" timestamp="2026-10-17T03:14:56.141042+00:00" hostname="597cea30c71f"><testcase classname="" name="test_actual_docker_pdf_adoption_real_parse_and_byte_download[early]" time="11.493" /><testcase classname="" name="test_actual_docker_pdf_adoption_real_parse_and_byte_download[late]" time="12.356" /><testcase classname="" name="test_corrupted_rendered_bytes_cannot_be_adopted" time="15.857" /><testcase classname="" name="test_late_old_render_does_not_replace_new_word" time="16.438" /><testcase classname="" name="test_word_ancestor_withdrawal_prevents_adoption" time="11.285"><failure message="AssertionError: assert 'adopted' == 'needs_selection'&#10;  &#10;  - needs_selection&#10;  + adopted">/workspace/tender-workbench/qa/test_word_mainflow_independent01.py:138: in test_word_ancestor_withdrawal_prevents_adoption
+    result=word_coordinator.tick(w['bid'],UUID(u['version']));assert result['state']=='needs_selection';assert expect(material(w,u),200)['current_body_version_id'] is None
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'adopted' == 'needs_selection'
+E     
+E     - needs_selection
+E     + adopted</failure></testcase></testsuite></testsuites>

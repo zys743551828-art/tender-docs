@@ -1,0 +1,28 @@
+{
+  "scope": "supplemental read-only external infrastructure evidence review",
+  "evidence_path": "/workspace/tender-docs/04-验证与测试/provider-deployment-checks/external-infrastructure.json",
+  "evidence_sha256": "0c8d28938f8b165409dbbc9c2814043ee6f9e8697a9a2a9fa937def44254eefd",
+  "script_path": "/workspace/tender-workbench/deploy/check_external.py",
+  "script_sha256": "cec9779b3777f7e9e014959603e37d57a800d165e90c32358fe119e4e9c9d5a2",
+  "script_matches_evidence": true,
+  "observed_nonowner_logins": 4,
+  "observed_topic_count": 6,
+  "topic_partitions": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "ports": [
+    55441,
+    19095
+  ],
+  "credentials_read_by_architect": false,
+  "network_calls_by_architect": 0,
+  "limitations": [
+    "role probe checks nonowner and expected capability membership; business legal/forbidden paths belong to module tests",
+    "no API/browser/RAG/scoring/production acceptance implied"
+  ]
+}

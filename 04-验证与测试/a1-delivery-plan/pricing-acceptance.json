@@ -1,0 +1,177 @@
+{
+  "scope": "报价FR-006待执行应用/API/浏览器任务，非实际通过记录",
+  "product_protocol": "报价最小产品协议.md",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "PRICE-01",
+      "title": "两种有据公式及每点重算",
+      "execution_steps": [
+        "为两方法登记具有精确原文/物理页的合成公式，明确有效区间80—120、满分30、至少2个有效报价及取整。",
+        "最低价比例法本方100、对手90/110/70；比较80/100/120曲线；均值法本方110、对手90，系数上2下1。"
+      ],
+      "ui_assertions": [
+        "前者主分27.00，80报价改变基准可达30，120为22.50；后者24.00，每点明示自己的基准。",
+        "对手70排除原因可见；详情保留公式、假设、量尺与步骤。"
+      ],
+      "backend_assertions": [
+        "来源登记及试算有真实API/会话/CSRF与审计；纯函数测试不能代替实际取件。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-02",
+      "title": "未知与数值不满足不填零",
+      "execution_steps": [
+        "主候选121超区间；另主候选100且对手只有70/130，min_valid=2。",
+        "比较主候选、候选行和曲线点的eligible/score/notes。"
+      ],
+      "ui_assertions": [
+        "超区间eligible=false、价格分null；数量不足eligible=true但价格分null并写原因。",
+        "两者不画成0，不写整体投标不合格，未知曲线点断开/标未知。"
+      ],
+      "backend_assertions": [
+        "actual主price_score允许null，主notes/eligible与PricePoint一致，无假0默认值。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-03",
+      "title": "真实零与未知分开",
+      "execution_steps": [
+        "均值法明确允许0至满分截断，上偏系数100，本方120、对手90。",
+        "再切数量不足夹具。"
+      ],
+      "ui_assertions": [
+        "真实计算为0.00时显示0分；后者显示无法计算及缺假设，不能复用旧0。"
+      ],
+      "backend_assertions": [
+        "合法真实零保持十进制字符串；null与0在保存、读取和报告中不混。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-04",
+      "title": "公式原子登记与非法来源拒绝",
+      "execution_steps": [
+        "从本项目生效原页选择精确证据，点击一次确认并登记公式。",
+        "分别注入错误quote、旧解析source配新evidence、跨项目、撤回祖先、未读条件或不明补遗；同key重放。"
+      ],
+      "ui_assertions": [
+        "合法只一次明确动作，无第二确认或岗位审批；失败留表单并定位字段/原页。"
+      ],
+      "backend_assertions": [
+        "合法manifest blob+feature来源链+人工决定同事务；无模板/规则ID滥用；非法无部分新公式；幂等不重复。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-05",
+      "title": "新补遗与来源并发",
+      "execution_steps": [
+        "公式已确认后新增冲突补遗或撤回祖先，在试算/保存前制造竞争。",
+        "查看旧模拟/方案，再以有据新版本重算。"
+      ],
+      "ui_assertions": [
+        "给公式依据已更新及具体范围；旧方案可还原并有历史影响提示，不冒充当前可用。"
+      ],
+      "backend_assertions": [
+        "登记/试算/保存重新核验精确来源及效力，冲突整笔409/412，旧manifest不改；不能用幂等重放绕过已变化来源。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-06",
+      "title": "预填保护与迟到响应",
+      "execution_steps": [
+        "先人工输入报价和假设，后到达公式预填；快速变更多次参数让旧响应最后返回。",
+        "保留旧曲线观察待更新状态，再等待当前请求。"
+      ],
+      "ui_assertions": [
+        "已编辑字段不被覆盖；新依据可看差异；400ms防抖，旧曲线待更新，只有当前input_digest结果成为当前。"
+      ],
+      "backend_assertions": [
+        "每次模拟冻结公式/输入/算法身份；页面不靠到达顺序抢结果，失败不抹掉输入。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-07",
+      "title": "显式保存与多历史情景",
+      "execution_steps": [
+        "试算后不点保存，检查方案列表；再点保存当前情景方案，包括一次score=null的情景。",
+        "修改公式及输入，读取指定旧方案并刷新列表。"
+      ],
+      "ui_assertions": [
+        "试算不自动成为方案；保存保留用途/操作者/时间，未知情景持续显缺口，旧值不随新公式变化。"
+      ],
+      "backend_assertions": [
+        "保存引用服务端simulation_id而非客户端分数；同key一方案；历史列表分页及指定读可恢复，不改旧结果。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-08",
+      "title": "功能关闭全入口一致",
+      "execution_steps": [
+        "报价有公式和方案后关闭pricing，尝试导航、直接链接、AI动作、提醒、报告及服务器新命令。",
+        "开启后回看旧方案和未提交输入。"
+      ],
+      "ui_assertions": [
+        "关闭不泄露结果、不诱导新试算，直接链接解释可在设置开启；历史不删除。",
+        "开启不自动重跑/保存；旧下载文件按生成时点说明。"
+      ],
+      "backend_assertions": [
+        "服务端也拒绝新登记/试算/保存；报告缓存受展示设置影响，不返回含报价旧副本。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-09",
+      "title": "不支持不近似",
+      "execution_steps": [
+        "给去极值/抽签系数/不同有效集合/先取整基准价/其他精度/分段等原文。",
+        "试图以通用字符串公式或脚本替代。"
+      ],
+      "ui_assertions": [
+        "明确暂不支持，保留输入和出处，其他工作可继续；没有猜最优价、价格分或必中率。"
+      ],
+      "backend_assertions": [
+        "受限方法/字段验证拒绝任意表达式和未支持口径；原文不一致不能登记可计算公式。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-10",
+      "title": "单位与有界数量",
+      "execution_steps": [
+        "元/万元混用、min_valid不明确、非法小数；补充候选51、对手201、曲线102或区间不递增。",
+        "再输入同价两个不同对手情景及重复本方候选。"
+      ],
+      "ui_assertions": [
+        "单位及范围错误定位，未知不变0；同价不同对手保留数量，本方候选去重但主候选保留。"
+      ],
+      "backend_assertions": [
+        "无币种/单位自动转换；50补充/200对手/101曲线点边界，非有限/指数/浮点数拒绝。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "PRICE-11",
+      "title": "实际读写与恢复",
+      "execution_steps": [
+        "无公式进入，登记后刷新新会话可发现；注入会话过期、412、503和取列表失败。",
+        "重登后检查没有自动执行旧确认。"
+      ],
+      "ui_assertions": [
+        "未就绪/空/失败说明准确，待输入不丢，原页可回看；没有永久转圈或演示分数。"
+      ],
+      "backend_assertions": [
+        "权限/CSRF/幂等/强ETag/审计经独立测试；浏览器未执行和真实业务未验收分别记录。"
+      ],
+      "status": "pending_application"
+    }
+  ]
+}

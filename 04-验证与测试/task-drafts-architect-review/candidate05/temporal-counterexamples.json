@@ -1,0 +1,87 @@
+[
+  {
+    "request": "每天9点以后核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "trigger",
+        "reason": "触发条件或时刻不明确，草案保留手动；请在表单确认"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "每天9点之前核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "trigger",
+        "reason": "触发条件或时刻不明确，草案保留手动；请在表单确认"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "工作日9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "trigger",
+        "reason": "触发条件或时刻不明确，草案保留手动；请在表单确认"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "明天9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "trigger",
+        "reason": "触发条件或时刻不明确，草案保留手动；请在表单确认"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "指定9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "trigger",
+        "reason": "触发条件或时刻不明确，草案保留手动；请在表单确认"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "每天9:30核对否决项",
+    "trigger": {
+      "mode": "schedule",
+      "cron": "30 9 * * *",
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  }
+]

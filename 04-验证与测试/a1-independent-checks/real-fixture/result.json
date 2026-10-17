@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "paid_generation_calls": 0,
+  "review_consumers_started": 0,
+  "review_ticks": 0,
+  "scope": "Only real synthetic original upload/verification/material commit/parser03; no paid-review execution",
+  "bid_id": "da2d5493-2732-4f17-b8c4-5b237cf7abfa",
+  "auto_review_disabled_for_this_synthetic_bid": true,
+  "inputs": [
+    {
+      "role": "tender",
+      "filename": "合成工期-tender.pdf",
+      "sha256": "1216aa4bb1b8531d2e55d665a2eee89bc4dbd68dd84f598ee8a259434c2a0b56",
+      "byte_size": 661,
+      "upload_id": "2356d787-012c-46a2-be46-0614a0a6b375",
+      "source_text": "Mandatory construction period is 90 days. A period over 90 days disqualifies the bid.",
+      "document_version_id": "c5a1b932-73df-4a4b-b4c7-0114997837cf",
+      "parse_run_id": "aa5caf6e-b78d-4d6f-a2e9-56de7ce18326",
+      "coverage": "complete",
+      "gaps": [],
+      "evidence_ids": [
+        "f4a5843e-7021-4e1b-8d7f-48080cd652c1"
+      ]
+    },
+    {
+      "role": "body",
+      "filename": "合成工期-body.pdf",
+      "sha256": "d1f712ce14e1149c0a94a076b69e3eebf2fec001114eaa1d497ddef177a5a541",
+      "byte_size": 628,
+      "upload_id": "1eeecb56-8c8b-44c1-af3c-381ed4fce240",
+      "source_text": "We commit to completing all construction in 120 days.",
+      "document_version_id": "96e3cdc4-c60a-450c-9a36-61786ce27345",
+      "parse_run_id": "e6530b95-82f9-49cb-8108-a8e70c68e423",
+      "coverage": "complete",
+      "gaps": [],
+      "evidence_ids": [
+        "43218a85-7749-46d6-b7bd-efc83a4361b1"
+      ]
+    }
+  ],
+  "parse_operation_id": "3be0aa11-6f30-4f37-91a8-cb35977d9ce8",
+  "model_call_rows": 0,
+  "operations": [
+    {
+      "id": "6f8fbac9-170d-4d69-b748-2d9eada6447c",
+      "kind": "verify-upload",
+      "state": "succeeded"
+    },
+    {
+      "id": "9d7c5443-4c18-48bb-9b25-fa6dd25b9f10",
+      "kind": "verify-upload",
+      "state": "succeeded"
+    },
+    {
+      "id": "3be0aa11-6f30-4f37-91a8-cb35977d9ce8",
+      "kind": "parse-materials",
+      "state": "succeeded"
+    }
+  ],
+  "actual_parses": [
+    {
+      "parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+      "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+      "page_count": 1,
+      "coverage": "complete"
+    },
+    {
+      "parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+      "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+      "page_count": 1,
+      "coverage": "complete"
+    }
+  ],
+  "review_state": {
+    "bid_id": "da2d5493-2732-4f17-b8c4-5b237cf7abfa",
+    "revision": 1,
+    "current_body_id": "96e3cdc4-c60a-450c-9a36-61786ce27345",
+    "material_revision": 2,
+    "current_material_snapshot_id": "cf6f5a94-2ce6-4626-8c75-e92530c0e0ee",
+    "current_rule_set_id": null,
+    "request": null,
+    "current_review": null
+  },
+  "probe_sha256": "b72e9a5ca73c3e524430cf99919b8faa757e4f814840a9fdd60e2a3354b1c1c1"
+}

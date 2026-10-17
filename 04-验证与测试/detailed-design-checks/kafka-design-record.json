@@ -1,0 +1,45 @@
+{
+  "scope": "用户指定Kafka、RAG与全新建设约束的独立设计更新；不冒充Kafka、RAG或完整软件已运行验收",
+  "authorization_source": "user_request",
+  "request": "mq换成kafka，为什么没有向量数据库，我们不需要rag吗，我们是全新的系统没有迁移需求，记住",
+  "recorded_at": "2026-10-16T10:49:16.186214+00:00",
+  "decisions": {
+    "message_infrastructure": "kafka",
+    "worker": "python",
+    "vector_store": "postgresql_pgvector",
+    "rag_required": true,
+    "old_system_migration_required": false
+  },
+  "project_constraint_file": {
+    "path": "/workspace/AGENTS.md",
+    "sha256": "0aaa6496930fb537beb591aeda5d6ca72d0e3a5448415bb649d262fbd8a143d6"
+  },
+  "validation": "目标协议及产品／架构规格检查通过；Kafka集群、消费者故障和真实RAG质量未执行",
+  "historical_evidence_preserved": [
+    "review-rounds.json",
+    "contract-result.json",
+    "sql-result.json",
+    "product-regression-result.json",
+    "architecture-regression-result.json"
+  ],
+  "unchanged_sql_evidence": "核心DDL与SQL探针未改动，复用原21项实际PostgreSQL机制记录，不声称本次重跑",
+  "current_design_inputs": {
+    "05-技术与设计/AI投标工作台详细技术设计.md": "88fa9369aabde3ea5c8e93d62f62cc7967ce6d363863bbf267c8d6d6b8e26e40",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/protocol.schema.json": "a2b9b1a24220402296d0ddcc0e097712799ac4ff41a60f441f6f041180c894e6",
+    "05-技术与设计/detailed-design/openapi.json": "131b829b7fd3db1e0bf666bc1758197f41e72ec4bf36e9e4add446c411557491",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/retrieval-policy.json": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+    "05-技术与设计/detailed-design/README.md": "014a1ef0eda2b086f62aa9999a035aa492345275540c509d6cc91a95dfe4af51",
+    "04-验证与测试/detailed-design-checks/requirements-trace.json": "6a52e025770dd664b363c6ea9c094f2cf693e2b3ae2d72c1c1744d5a11747f13",
+    "04-验证与测试/detailed-design-checks/README.md": "d090657631c09e31c3f2be1c88176a9fec57559469d0c1dc919a0b99f2e03153",
+    "04-验证与测试/detailed-design-checks/requirements.lock.txt": "b6694358b23abb4512fb238325091f75cde5ba11ce6faa4aa13d3f55ec200dab",
+    "04-验证与测试/detailed-design-checks/check_contracts.py": "a9ba2f4e08b8c3bb8c5a82cef05d196db37264248cc65df5b13be7c01a1bd95f"
+  },
+  "current_evidence": {
+    "kafka-contract-result.json": "0c4c67fda3a4ee01487706903abc0ad65dcb7fefc6899cec7eac0a0cc1aaa9cc",
+    "kafka-product-regression-result.json": "baaea68faa6e843b431713081300fd3b3fc8af5a80d6e2c3832f7ffa07ea2ca8",
+    "kafka-architecture-regression-result.json": "838876350508102f4a7192925f9b107869a2d864c56127abde51608cd5d07e16"
+  },
+  "user_followups_sha256": "4554082f3058876352d47c5bfd710d85395a5ff6b29938ff25a9a8d439bd2166"
+}

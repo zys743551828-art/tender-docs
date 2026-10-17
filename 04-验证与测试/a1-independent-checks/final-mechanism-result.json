@@ -1,0 +1,51 @@
+{
+  "status": "passed_scoped_frozen_a1_1_mechanisms_real_document_fixture_ready",
+  "blocking_findings": 0,
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/candidate-01.json",
+    "sha256": "bd86798df5a661532b18d48214087c329ff572bcf680dcbba99ef25011597c94"
+  },
+  "execution_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/input-manifest.json",
+    "sha256": "737938bdac61d2454999c7c2b8aa9a2ee100f7dcebf7739595189d5abc0dc2c2"
+  },
+  "original_execution": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/execution/result.json",
+    "sha256": "86ca86dc433683630243e6040042729b269dbae63bcf5374b786dd8f9790ee3a"
+  },
+  "corrected_readonly_critical_assertion": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/execution/risk-readonly-observation.json",
+    "sha256": "701344bd4d0dc0310dcc3b9ec084e137697f4f84bbb9cc8f04b331a8060dab9b"
+  },
+  "preparation_execution": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/preparation-execution/result.json",
+    "sha256": "618e641e6af5c16c95b33c84ae5d7cb3b3a7f08d79caba68f9138645b91289a3"
+  },
+  "real_document_fixture": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/real-fixture/result.json",
+    "sha256": "fe5334e948c8a23f38eac6fa5386e897724d18a04bf6bfb8364b52044c51ce6e"
+  },
+  "source_boundary": "36 original frozen01 sources executed from isolated overlay, plus 89 explicitly captured dependency files; no current moving main/reviews source substituted",
+  "qa_failure": "Original full-run probe incorrectly required major as well as critical findings to preserve first origin. It is retained with passed=false. Independent read-only PG projection confirms the product critical guarantee: exactly one critical finding with first-round origin. Other13 assertions are unchanged.",
+  "paid_generation_calls": 0,
+  "kafka_review_consumers_started": 0,
+  "verified": [
+    "Durable preparing request and refresh consistency before freeze",
+    "Cancel during actual byte verification prevents late prepare; missing/stale CAS and changed same-key body rejected",
+    "Auto-review disabled and head change supersedes old request without model execution",
+    "Actual original SHA corruption blocks before any model reservation",
+    "Actual TCP parser03 multi-page originals in explicit in-memory object port; full3 physical body pages/evidence including blank and last page reach core, no RAG substitute",
+    "Frozen original/evidence blob/manifest SHA identity and current body binding",
+    "Four layers:2 core judgments,1 scoring not-run outside core denominator;3 human confirmations pending; formal prediction unavailable",
+    "Same semantic content without nonce reuses round; explicit nonce creates new execution with same input digest",
+    "Critical risk dedup/origin retention; new body keeps unresolved critical before valid recheck, then resolves through effective per-rule recheck",
+    "Prior round/history and immutable frozen manifest retained",
+    "Separate release fixture actual OSS+HTTP+Kafka document2+parser03, two one-page originals90/120, auto-reviewfalse and0model calls"
+  ],
+  "not_verified": [
+    "Actual paid extract/core end-to-end; automatic approval rejected consumer start and no execution occurred",
+    "Actual review Kafka consumption; ASGI mechanism uses direct single-bid tick plus authoritative Outbox handler execution",
+    "Model effect/recognition/real-business-user quality and formal scoring qualification",
+    "A1.2+ later implementation deltas, complete13 pending application acceptance, authoring/research/full product workflows"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "probes": {
+    "api_lock_scope_grant": {
+      "status": "passed",
+      "sqlstate": null
+    },
+    "api_cannot_forge_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "api_cannot_mint_certification": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "worker_cannot_read_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "score_cannot_read_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "research_cannot_read_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "null_command_rejected": {
+      "status": "passed",
+      "sqlstate": "22023"
+    },
+    "model_train_no_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    },
+    "model_evaluate_no_registry": {
+      "status": "passed",
+      "sqlstate": "42501"
+    }
+  },
+  "no_rows_changed": true,
+  "owner_used_for_business": false,
+  "provider_calls": 0,
+  "oss_calls": 0
+}

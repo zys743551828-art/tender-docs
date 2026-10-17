@@ -1,0 +1,87 @@
+{
+  "observed_at": "2026-10-16T19:09:09.215769+00:00",
+  "database": "tender_checks_knowledge_rag",
+  "scope": "Fresh empty initialization + six table/column capabilities only, not knowledge indexing/search/role-write business acceptance",
+  "business_configuration_owner_removed": true,
+  "business_file_mode": "0o600",
+  "roles": {
+    "api": {
+      "nonowner": true,
+      "retrieval_schema_usage": true,
+      "readable_knowledge_tables": [
+        "knowledge_indexes",
+        "knowledge_index_heads",
+        "knowledge_units",
+        "knowledge_unit_embeddings",
+        "knowledge_retrieval_traces",
+        "knowledge_unit_references"
+      ],
+      "column_privileges": {
+        "knowledge_indexes.input_manifest.INSERT": true,
+        "knowledge_indexes.input_manifest.UPDATE": false,
+        "knowledge_indexes.state.UPDATE": false,
+        "knowledge_index_heads.ready_index_id.UPDATE": false
+      }
+    },
+    "worker": {
+      "nonowner": true,
+      "retrieval_schema_usage": true,
+      "readable_knowledge_tables": [
+        "knowledge_indexes",
+        "knowledge_index_heads",
+        "knowledge_units",
+        "knowledge_unit_embeddings"
+      ],
+      "column_privileges": {
+        "knowledge_indexes.input_manifest.INSERT": false,
+        "knowledge_indexes.input_manifest.UPDATE": false,
+        "knowledge_indexes.state.UPDATE": true,
+        "knowledge_index_heads.ready_index_id.UPDATE": true
+      }
+    },
+    "research_worker": {
+      "nonowner": true,
+      "retrieval_schema_usage": false,
+      "readable_knowledge_tables": [],
+      "column_privileges": {
+        "knowledge_indexes.input_manifest.INSERT": false,
+        "knowledge_indexes.input_manifest.UPDATE": false,
+        "knowledge_indexes.state.UPDATE": false,
+        "knowledge_index_heads.ready_index_id.UPDATE": false
+      }
+    },
+    "score_read": {
+      "nonowner": true,
+      "retrieval_schema_usage": true,
+      "readable_knowledge_tables": [],
+      "column_privileges": {
+        "knowledge_indexes.input_manifest.INSERT": false,
+        "knowledge_indexes.input_manifest.UPDATE": false,
+        "knowledge_indexes.state.UPDATE": false,
+        "knowledge_index_heads.ready_index_id.UPDATE": false
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/deploy/create_check_environment.py",
+      "sha256": "33b2e0946a57edcc7b00305f9f1277a44e99f3780c11a6eb7e4dc408aa80d53a"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003"
+    }
+  ],
+  "old_release_modified": false,
+  "kafka_processes_started": 0,
+  "paid_calls": 0,
+  "probe_note": "Initial metadata probe attempted a name-resolved table privilege lookup for research role without retrieval schema USAGE and correctly got42501; final probe checks schema capability first. No grants changed."
+}

@@ -1,0 +1,34 @@
+{
+  "status": "passed_scoped_actual_sse_recovery_and_privacy",
+  "blocking_findings": 0,
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/event-stream-development-checks/candidate.json",
+    "sha256": "6d475901b14d5fb54151b86bb736a4b5c048693c2d8505a6f658618ad4abe3ed"
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/sse-independent-checks/live-window/result.json",
+      "sha256": "97f68b97e4feaa46bc8ec50e4e347c05e6248dc4dcbd68afc10d409d80d5b6cf"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/sse-independent-checks/backlog-retention/result.json",
+      "sha256": "2581c26bbf7997ff3847f595c42a0323209b58702312c823297902c57c8cb8ee"
+    }
+  ],
+  "paid_generation_calls": 0,
+  "review_scheduled": false,
+  "verified": [
+    "Actual56.01s TCP8802 connection,3keepalives and reconnect notice; exact cursor replays only new event",
+    "Active logout emits SESSION_EXPIRED control and closes; retained old cookie cannot reconnect",
+    "Future cursor410/cross-project cursor422 before streaming; anonymous401",
+    "251ordered events across200row batches, exact suffix resume; no private payload and boolean revision becomesnull",
+    "Actual same-origin5175 Vite proxy streams first frame in0.073s",
+    "Append-only SQL temporal fixture with8day old event:410 reset, real GET bid snapshot, reconnect gets retained eventonly"
+  ],
+  "runtime_boundary": "Long55s test ran while PM held API01 live73/80 stable. Additional backlog/retention ran after API02 restart and stores its own live81path OpenAPI hash. SSE module bytes unchanged and candidate verified; no other API route acceptance inferred.",
+  "not_verified": [
+    "Production reverse proxy/load balancer behavior",
+    "Browser EventSource UI wiring and production scaling",
+    "No full product or model quality conclusion"
+  ]
+}

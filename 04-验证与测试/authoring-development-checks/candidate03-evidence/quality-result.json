@@ -1,0 +1,51 @@
+[
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "check",
+      "packages/authoring",
+      "apps/api/authoring.py",
+      "tests/test_authoring.py",
+      "tests/test_authoring_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "format",
+      "--check",
+      "packages/authoring",
+      "apps/api/authoring.py",
+      "tests/test_authoring.py",
+      "tests/test_authoring_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "11 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/mypy",
+      "packages/authoring",
+      "apps/api/authoring.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Success: no issues found in 9 source files\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/bandit",
+      "-q",
+      "-r",
+      "packages/authoring",
+      "apps/api/authoring.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "[tester]\tWARNING\tnosec encountered (B603), but no failed test on line 196\n[tester]\tWARNING\tnosec encountered (B603), but no failed test on line 196\n"
+  }
+]

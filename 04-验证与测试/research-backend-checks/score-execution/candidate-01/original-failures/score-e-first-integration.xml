@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="10" time="45.935" timestamp="2026-10-17T03:07:26.941297+00:00" hostname="597cea30c71f"><testcase classname="tests.test_scoring_integration" name="test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable[current]" time="5.481"><failure message="AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}&#10;assert (False)">project = (&lt;starlette.testclient.TestClient object at 0x7f55fa3e8d40&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f55fd079620&gt;, 'b...8-8755-d03c9b5be8d2","status":"published","valid_from":"2026-10-17T03:07:28.633271+00:00","valid_until":null}]}', ...})
+branch = 'current'
+
+    @pytest.mark.parametrize("branch", ["current", "historical"])
+    def test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable(project, branch):
+        web, _, _, _, _, _ = project
+        frozen, created = create_job(project, branch)
+        output = child("success", created.json()["id"])
+&gt;       assert output["ok"] and output["mock_calls"] == 3, output
+E       AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}
+E       assert (False)
+
+tests/test_scoring_integration.py:117: AssertionError</failure></testcase><testcase classname="tests.test_scoring_integration" name="test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable[historical]" time="4.763"><failure message="AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}&#10;assert (False)">project = (&lt;starlette.testclient.TestClient object at 0x7f55f9fb0860&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f55fa2ee3e0&gt;, '0...rsion_id":"e287b713-c626-4a80-854b-2d396112c2da","id":"b21344ad-8d60-5005-ba13-07317b7ff415","kind":"tender"}]}', ...})
+branch = 'historical'
+
+    @pytest.mark.parametrize("branch", ["current", "historical"])
+    def test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable(project, branch):
+        web, _, _, _, _, _ = project
+        frozen, created = create_job(project, branch)
+        output = child("success", created.json()["id"])
+&gt;       assert output["ok"] and output["mock_calls"] == 3, output
+E       AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}
+E       assert (False)
+
+tests/test_scoring_integration.py:117: AssertionError</failure></testcase><testcase classname="tests.test_scoring_integration" name="test_unknown_billing_keeps_reserve_pauses_and_rejects_resume_or_second_nonce" time="5.998" /><testcase classname="tests.test_scoring_integration" name="test_score_purpose_has_no_raw_label_proof_export_or_call_table_read" time="0.384" /><testcase classname="tests.test_scoring_integration" name="test_equivalent_new_input_success_reuses_actual_calls_and_charges_no_new_fee" time="4.415"><failure message="AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}&#10;assert (False)">project = (&lt;starlette.testclient.TestClient object at 0x7f55fa2d1940&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f55fa2e2020&gt;, '8...00000 n \n0000000242 00000 n \n0000000312 00000 n \ntrailer\n&lt;&lt; /Size 6 /Root 1 0 R &gt;&gt;\nstartxref\n543\n%%EOF\n', ...})
+
+    def test_equivalent_new_input_success_reuses_actual_calls_and_charges_no_new_fee(project):
+        web, _, _, _, _, _ = project
+        first_input, first_job = create_job(project, "current")
+        first = child("success", first_job.json()["id"])
+&gt;       assert first["ok"] and first["mock_calls"] == 3, first
+E       AssertionError: {'code': 'AmbiguousColumn', 'mock_calls': 3, 'ok': False, 'sqlstate': '42702'}
+E       assert (False)
+
+tests/test_scoring_integration.py:183: AssertionError</failure></testcase><testcase classname="tests.test_scoring_integration" name="test_equivalent_new_input_cannot_wash_unknown_call_with_new_command" time="5.677" /><testcase classname="tests.test_scoring_integration" name="test_appended_rule_cannot_expand_old_frozen_review_and_rejects_before_put" time="3.759" /><testcase classname="tests.test_scoring_integration" name="test_archived_history_research_does_not_reopen_project_or_enable_current_scoring" time="3.717"><failure message="AssertionError: {&quot;code&quot;:&quot;PROJECT_WORK_CLOSED&quot;,&quot;message&quot;:&quot;项目已结束或归档；继续编制请明确重新打开，补录或更正请用专用入口&quot;,&quot;request_id&quot;:&quot;a447c2ba-a1a2-476d-b66d-416d6b1f728b&quot;,&quot;retryable&quot;:false,&quot;details&quot;:{&quot;bid_id&quot;:&quot;ee5313dc-61b2-4b1d-a997-6001d080a0d8&quot;,&quot;phase&quot;:&quot;closed&quot;,&quot;archived&quot;:true}}&#10;assert 409 == 201&#10; +  where 409 = &lt;Response [409 Conflict]&gt;.status_code">project = (&lt;starlette.testclient.TestClient object at 0x7f5601a8dd30&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f55fa25c0e0&gt;, 'e...rsion_id":"a4fde358-2331-4848-92be-9b6a44808c4d","id":"e022bcaa-b970-59ec-954e-93e5de83d061","kind":"tender"}]}', ...})
+
+    def test_archived_history_research_does_not_reopen_project_or_enable_current_scoring(project):
+        web, headers, bid, review, _, _ = project
+        with connection() as c:
+            c.execute(
+                "UPDATE bid_profiles SET archived_at=clock_timestamp(),phase='closed' WHERE bid_id=%s",
+                (bid,),
+            )
+&gt;       history_input, history_job = create_job(project, "historical")
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_scoring_integration.py:271: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+project = (&lt;starlette.testclient.TestClient object at 0x7f5601a8dd30&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f55fa25c0e0&gt;, 'e...rsion_id":"a4fde358-2331-4848-92be-9b6a44808c4d","id":"e022bcaa-b970-59ec-954e-93e5de83d061","kind":"tender"}]}', ...})
+branch = 'historical'
+
+    def create_job(project, branch):
+        web, headers, bid, review, history, _ = project
+        context = web.get(f"/api/v1/bids/{bid}/score-context")
+        assert context.status_code == 200, context.text
+        validate(web, context, "ScoreInputContext")
+        frozen = web.post(
+            f"/api/v1/bids/{bid}/score-inputs",
+            json={
+                "reason": "显式合成完整三判断",
+                "review_id" if branch == "current" else "historical_input_id": review
+                if branch == "current"
+                else history,
+            },
+            headers=headers(context.headers["etag"]),
+        )
+        assert frozen.status_code == 201, frozen.text
+        validate(web, frozen, "ScoreInputView")
+        assert frozen.json()["technical_maximum"] is None and not frozen.json()["maximum_verified"]
+        created = web.post(
+            f"/api/v1/score-inputs/{frozen.json()['id']}/jobs",
+            json={"budget": "1", "reason": "只执行显式合成Mock用途子进程"},
+            headers=headers(frozen.headers["etag"]),
+        )
+&gt;       assert created.status_code == 201, created.text
+E       AssertionError: {"code":"PROJECT_WORK_CLOSED","message":"项目已结束或归档；继续编制请明确重新打开，补录或更正请用专用入口","request_id":"a447c2ba-a1a2-476d-b66d-416d6b1f728b","retryable":false,"details":{"bid_id":"ee5313dc-61b2-4b1d-a997-6001d080a0d8","phase":"closed","archived":true}}
+E       assert 409 == 201
+E        +  where 409 = &lt;Response [409 Conflict]&gt;.status_code
+
+tests/test_scoring_integration.py:107: AssertionError</failure></testcase><testcase classname="tests.test_scoring_integration" name="test_withdrawal_during_mock_http_records_usage_but_cannot_publish_old_result" time="6.809" /><testcase classname="tests.test_scoring_integration" name="test_still_published_head_revision_cannot_recapture_an_old_review_as_current" time="3.976" /></testsuite></testsuites>

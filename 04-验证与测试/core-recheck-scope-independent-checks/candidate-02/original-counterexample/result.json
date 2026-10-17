@@ -1,0 +1,537 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 6,
+          "completed": 6,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_content_without_nonce_reuses_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "nonce_new_execution_same_content_digest",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "repeat_critical_deduplicates_and_retains_origin",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_body_unreviewed_keeps_known_critical",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "necessary_final_duration_page_unread_must_not_auto_resolve_prior_critical",
+      "passed": true,
+      "observation": {
+        "findings": [
+          {
+            "id": "bf438cb1-a85e-467c-8e9a-8d94a92812f2",
+            "review_id": "c619450f-4c9a-47f7-84f5-8eac8b2e3d91",
+            "rule_id": "bbf95e1d-2ed1-4332-9e39-4d519593383c",
+            "category": "disqualification",
+            "severity": "critical",
+            "verdict": "violated",
+            "statement": "Offline controlled verdict for protocol validation",
+            "evidence_ids": [
+              "7e675ed0-cd7a-4d5a-8cbd-cd45794df901",
+              "2baae744-c0a5-414d-ad33-b47ed32eb3ef"
+            ],
+            "searched_ranges": [],
+            "decision": null,
+            "decision_revision": 1,
+            "origin_review_id": "6478ff09-ac59-4d21-9cfb-c7bcc87993e9",
+            "retained_known_critical": true,
+            "detection_run_state": "not_run_this_round",
+            "lifecycle": "open"
+          },
+          {
+            "id": "d20d7fd6-96bb-4b48-afd5-f071b8cac1a2",
+            "review_id": "c619450f-4c9a-47f7-84f5-8eac8b2e3d91",
+            "rule_id": "09c514af-b7ee-4bfe-bf2e-0d9f29343eda",
+            "category": "disqualification",
+            "severity": "critical",
+            "verdict": "violated",
+            "statement": "Offline controlled verdict for protocol validation",
+            "evidence_ids": [
+              "36d3dcb9-7cde-46e2-a6c1-500d9236329d",
+              "2baae744-c0a5-414d-ad33-b47ed32eb3ef"
+            ],
+            "searched_ranges": [],
+            "decision": null,
+            "decision_revision": 1,
+            "origin_review_id": "6478ff09-ac59-4d21-9cfb-c7bcc87993e9",
+            "retained_known_critical": true,
+            "detection_run_state": "not_run_this_round",
+            "lifecycle": "open"
+          }
+        ],
+        "coverage": {
+          "scoring": {
+            "gaps": [
+              "正式评分尚未具备完整章节三次判断与模型准入"
+            ],
+            "state": "not_run",
+            "planned": 1,
+            "completed": 0,
+            "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+          },
+          "judgment": {
+            "gaps": [],
+            "state": "complete",
+            "planned": 2,
+            "completed": 2,
+            "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+          },
+          "source_scope": {
+            "gaps": [
+              "NECESSARY_FINAL_DURATION_SCHEDULE_UNREAD_PHYSICAL_PAGE_3"
+            ],
+            "state": "partial",
+            "planned": 6,
+            "completed": 5,
+            "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+          },
+          "core_extraction": {
+            "gaps": [],
+            "state": "complete",
+            "planned": 2,
+            "completed": 2,
+            "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+          },
+          "quality_report_id": null,
+          "extraction_quality": "not_measured",
+          "human_confirmation_pending": 3
+        },
+        "matrix": {
+          "review_id": "c619450f-4c9a-47f7-84f5-8eac8b2e3d91",
+          "coverage": "partial",
+          "rows": [
+            {
+              "rule": {
+                "id": "09c514af-b7ee-4bfe-bf2e-0d9f29343eda",
+                "rule_set_id": "88c9252e-d643-4e31-9f3e-2c084be26915",
+                "kind": "disqualification",
+                "statement": "Unsigned bids are disqualified.",
+                "conditions": [],
+                "exceptions": [],
+                "maximum": null,
+                "evidence_ids": [
+                  "36d3dcb9-7cde-46e2-a6c1-500d9236329d"
+                ],
+                "confirmation": "pending",
+                "decision_revision": 1,
+                "carryover": null,
+                "scope": {
+                  "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+                  "description": "Current synthetic project"
+                },
+                "bands": [],
+                "origin_kind": "model_extracted",
+                "manual_origin_rule_id": null,
+                "provenance_status": "effective"
+              },
+              "verdict": "satisfied",
+              "finding_ids": [
+                "d20d7fd6-96bb-4b48-afd5-f071b8cac1a2"
+              ],
+              "evidence_ids": [
+                "877d5f7b-0b0e-456d-a617-271d07b4c88b"
+              ],
+              "check_status": "succeeded",
+              "error_code": null
+            },
+            {
+              "rule": {
+                "id": "bbf95e1d-2ed1-4332-9e39-4d519593383c",
+                "rule_set_id": "88c9252e-d643-4e31-9f3e-2c084be26915",
+                "kind": "disqualification",
+                "statement": "Construction period must be 90 days or bid is disqualified.",
+                "conditions": [],
+                "exceptions": [],
+                "maximum": null,
+                "evidence_ids": [
+                  "7e675ed0-cd7a-4d5a-8cbd-cd45794df901"
+                ],
+                "confirmation": "pending",
+                "decision_revision": 1,
+                "carryover": null,
+                "scope": {
+                  "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+                  "description": "Current synthetic project"
+                },
+                "bands": [],
+                "origin_kind": "model_extracted",
+                "manual_origin_rule_id": null,
+                "provenance_status": "effective"
+              },
+              "verdict": "satisfied",
+              "finding_ids": [
+                "bf438cb1-a85e-467c-8e9a-8d94a92812f2"
+              ],
+              "evidence_ids": [
+                "877d5f7b-0b0e-456d-a617-271d07b4c88b"
+              ],
+              "check_status": "succeeded",
+              "error_code": null
+            },
+            {
+              "rule": {
+                "id": "f865a5e6-bfc1-4a25-8b08-86150255742a",
+                "rule_set_id": "88c9252e-d643-4e31-9f3e-2c084be26915",
+                "kind": "scoring",
+                "statement": "Technical method maximum is 5 points.",
+                "conditions": [],
+                "exceptions": [],
+                "maximum": "5",
+                "evidence_ids": [
+                  "9df7a8ae-b85c-4304-b49d-a05504532d0c"
+                ],
+                "confirmation": "pending",
+                "decision_revision": 1,
+                "carryover": null,
+                "scope": {
+                  "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+                  "description": "Current synthetic project"
+                },
+                "bands": [],
+                "origin_kind": "model_extracted",
+                "manual_origin_rule_id": null,
+                "provenance_status": "effective"
+              },
+              "verdict": null,
+              "finding_ids": [],
+              "evidence_ids": [],
+              "check_status": "pending",
+              "error_code": null
+            }
+          ],
+          "coverage_layers": {
+            "scoring": {
+              "gaps": [
+                "正式评分尚未具备完整章节三次判断与模型准入"
+              ],
+              "state": "not_run",
+              "planned": 1,
+              "completed": 0,
+              "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+            },
+            "judgment": {
+              "gaps": [],
+              "state": "complete",
+              "planned": 2,
+              "completed": 2,
+              "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+            },
+            "source_scope": {
+              "gaps": [
+                "NECESSARY_FINAL_DURATION_SCHEDULE_UNREAD_PHYSICAL_PAGE_3"
+              ],
+              "state": "partial",
+              "planned": 6,
+              "completed": 5,
+              "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+            },
+            "core_extraction": {
+              "gaps": [],
+              "state": "complete",
+              "planned": 2,
+              "completed": 2,
+              "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+            },
+            "quality_report_id": null,
+            "extraction_quality": "not_measured",
+            "human_confirmation_pending": 3
+          }
+        },
+        "gate": {
+          "allowed": false,
+          "bid_revision": 3,
+          "body_version_id": "662c368d-3dd5-4735-b989-b2a05a54e6bc",
+          "blockers": [
+            {
+              "code": "CORE_COVERAGE_INCOMPLETE",
+              "object_id": "c619450f-4c9a-47f7-84f5-8eac8b2e3d91",
+              "message": "必要来源、核心提取或核对范围仍有已知缺口；评分采用独立覆盖"
+            },
+            {
+              "code": "CORE_RULE_CONFIRMATION_REQUIRED",
+              "object_id": "88c9252e-d643-4e31-9f3e-2c084be26915",
+              "message": "尚有2项否决或强制要求需人工确认"
+            },
+            {
+              "code": "OPEN_BLOCKING_FINDING",
+              "object_id": "7dda5c11-1636-4bf9-870d-458637bb9f82",
+              "message": "Offline controlled verdict for protocol validation"
+            },
+            {
+              "code": "OPEN_BLOCKING_FINDING",
+              "object_id": "9b9715b1-f373-4592-b7a9-04dc151e4ad3",
+              "message": "Offline controlled verdict for protocol validation"
+            }
+          ],
+          "review_id": "c619450f-4c9a-47f7-84f5-8eac8b2e3d91",
+          "material_revision": 2,
+          "current_identity_digest": "f872566a9ee00ac29e2d51abbec159e4b04ff706213fb39d4865e527edf76822",
+          "current_review_manifest_digest": "7e374e7b9410179a119d143bd37818bc02efe553ffa3674ffdbfe22026254920",
+          "pending_core_rule_ids": [
+            "09c514af-b7ee-4bfe-bf2e-0d9f29343eda",
+            "bbf95e1d-2ed1-4332-9e39-4d519593383c"
+          ],
+          "blocking_finding_ids": [
+            "7dda5c11-1636-4bf9-870d-458637bb9f82",
+            "9b9715b1-f373-4592-b7a9-04dc151e4ad3"
+          ],
+          "warnings": [
+            "登记记录不等于交易平台提交成功；评分不可预测本身不阻断核心提交检查"
+          ]
+        },
+        "actual_unread_page_text": "FINAL DURATION SCHEDULE: construction period is 120 days.",
+        "controlled_parser_gap": "NECESSARY_FINAL_DURATION_SCHEDULE_UNREAD_PHYSICAL_PAGE_3",
+        "actual_model_pages": [
+          {
+            "gaps": [],
+            "physical_page": 1,
+            "quality": "usable"
+          },
+          {
+            "gaps": [],
+            "physical_page": 2,
+            "quality": "usable"
+          },
+          {
+            "gaps": [
+              "NECESSARY_FINAL_DURATION_SCHEDULE_UNREAD_PHYSICAL_PAGE_3"
+            ],
+            "physical_page": 3,
+            "quality": "partial"
+          }
+        ],
+        "actual_model_blocks": [
+          {
+            "bbox": [
+              45.0,
+              72.48400000000004,
+              563.9040000000006,
+              84.48400000000004
+            ],
+            "digest": "040f673c7241f7016c3e9f49c19426dacb9520724f5d945e630f41c6514dc9b9",
+            "id": "877d5f7b-0b0e-456d-a617-271d07b4c88b",
+            "kind": "text",
+            "ordinal": 0,
+            "physical_page": 1,
+            "structure": null,
+            "text_content": "Construction period is provisionally 90 days, subject to final duration schedule on physical page 3."
+          }
+        ]
+      }
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+  "parser_setup_observations": [
+    {
+      "role": "tender",
+      "document_version_id": "28f73fdc-4a6c-40cf-87f8-a39d29e83f8a",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    },
+    {
+      "role": "body",
+      "document_version_id": "504b3405-c309-48aa-a2c2-7af0f20cd2dd",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    },
+    {
+      "role": "body",
+      "document_version_id": "662c368d-3dd5-4735-b989-b2a05a54e6bc",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    }
+  ],
+  "offline_transport_requests": 4,
+  "review_ids": [
+    "6478ff09-ac59-4d21-9cfb-c7bcc87993e9",
+    "40f05ebd-1578-4974-a8da-694f6cd02698",
+    "c619450f-4c9a-47f7-84f5-8eac8b2e3d91"
+  ],
+  "first_review": {
+    "id": "6478ff09-ac59-4d21-9cfb-c7bcc87993e9",
+    "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+    "operation_id": "47801cd4-4829-4fe0-9485-cf76b57544ce",
+    "input_digest": "de816807dcdb281c6864faf9abadc627430de4e91fc5d76aeeed0cb04a110b12",
+    "core_coverage": "complete",
+    "risk_count": 2,
+    "current": true,
+    "prediction": {
+      "review_id": "6478ff09-ac59-4d21-9cfb-c7bcc87993e9",
+      "mode": "unavailable",
+      "maximum": null,
+      "reasons": [
+        "正式评分尚未完成独立模型准入；当前核心核对不产生预测分"
+      ],
+      "method_digest": "3a8709bf6e0661b96f6eda3f5932819ae70400c3e06d8ca9d31bc570ba314907"
+    },
+    "next_action": {
+      "action": "inspect_findings",
+      "reason": "查看已核对结果及未覆盖范围",
+      "target_url": "/bids/f5d7695d-8645-463b-88c1-1b6a55369813/review",
+      "blocked": false
+    },
+    "source_impact_revision": 8,
+    "manifest_digest": "16210472b435845dac70060a4a9b60fdbf22e6c8be6aa1036a7fc72f616f6421",
+    "coverage_layers": {
+      "scoring": {
+        "gaps": [
+          "正式评分尚未具备完整章节三次判断与模型准入"
+        ],
+        "state": "not_run",
+        "planned": 1,
+        "completed": 0,
+        "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+      },
+      "judgment": {
+        "gaps": [],
+        "state": "complete",
+        "planned": 2,
+        "completed": 2,
+        "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+      },
+      "source_scope": {
+        "gaps": [],
+        "state": "complete",
+        "planned": 6,
+        "completed": 6,
+        "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+      },
+      "core_extraction": {
+        "gaps": [],
+        "state": "complete",
+        "planned": 2,
+        "completed": 2,
+        "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+      },
+      "quality_report_id": null,
+      "extraction_quality": "not_measured",
+      "human_confirmation_pending": 3
+    }
+  },
+  "first_manifest": {
+    "as_of": "2026-10-16T20:18:13.317363+00:00",
+    "bid_id": "f5d7695d-8645-463b-88c1-1b6a55369813",
+    "purpose": "compliance_and_scoring",
+    "frozen_at": "2026-10-16T20:18:13.379195+00:00",
+    "fact_set_id": null,
+    "rule_set_id": "ad9a3b4b-89eb-4dbe-8dfe-dd0ea6599a45",
+    "source_refs": [
+      {
+        "id": "c5f931f0-af93-59a0-9183-f38e9be44de0",
+        "kind": "body",
+        "digest": "67a219a033dcccd77682e304be893db36d570e9107fa245542135507313bdae8",
+        "known_at": "2026-10-16T19:18:12.704090+00:00",
+        "lineage_manifest_digest": "d0206b4d735cc86cd69d5620d565247c7dc86eec204b2ab669a1caaf7b0cfb96"
+      },
+      {
+        "id": "38109cd8-df6e-5d68-afb9-73938e2e5b9d",
+        "kind": "tender",
+        "digest": "335c45de08f2cef9271d7ff533e78699fa79587fe11ce0b794cd3b17f9a9e115",
+        "known_at": "2026-10-16T19:18:12.599462+00:00",
+        "lineage_manifest_digest": "ae6f906a02c064e1a426f36e8fe4232e6ae120c7093a90bf6a786cc3d3bfb7a2"
+      }
+    ],
+    "method_digest": "3a8709bf6e0661b96f6eda3f5932819ae70400c3e06d8ca9d31bc570ba314907",
+    "parse_run_ids": [
+      "648423dc-fad6-49b1-9c87-9aafa4f59ccc",
+      "c04bd7d9-7752-4141-9438-87fb3b565d49"
+    ],
+    "policy_digest": "2b5d6201232c68e52350f37abc21bd241cc61d424b583b3e5b178fb614b575d0",
+    "content_checks": {
+      "consistency": true,
+      "scope_residue": true
+    },
+    "body_version_id": "504b3405-c309-48aa-a2c2-7af0f20cd2dd",
+    "material_revision": 1,
+    "material_snapshot_id": "c7d06a2a-63c9-440f-b7d3-59b53b91db6c",
+    "evidence_manifest_digest": "e76771de9ba2b2857e6c1b530e7962fdade653d4e46a20389cef50cef4d7fcf2",
+    "evaluation_context_digest": "fdeb60c0aff39b61b7d8f5cf9434ce9ba223d0ee28edf156ed6e6f1118d0faa4"
+  },
+  "runtime_manifest_sha256": "f541fb01ea865a40ef04e96310c2e9389271e6edfd9d1aacd49a2995a17f8dec",
+  "probe_sha256": "1dbde84f1fa9e62a7dfd8c1a4ff658c1801f07caaee5edda761e9efe375c4dec"
+}

@@ -1,0 +1,64 @@
+{
+  "database": "tender_checks_model_release01",
+  "profiles": {
+    "init": ".local/model_release01-init.env",
+    "business": ".local/model_release01-checks.env",
+    "model_train": ".local/model_release01-model_train.env",
+    "model_evaluate": ".local/model_release01-model_evaluate.env"
+  },
+  "ordered_sql": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "path": "deploy/sql/model-governance.sql",
+      "sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a"
+    },
+    {
+      "path": "deploy/sql/model-governance-release.sql",
+      "sha256": "80d5c94246bbfe4c47f320c9ad749eea2328a0c66b30a5614556168e0398d936"
+    }
+  ],
+  "logins": {
+    "api": "twb_checks_model_release01_6874426d_api",
+    "worker": "twb_checks_model_release01_6874426d_worker",
+    "research_worker": "twb_checks_model_release01_6874426d_research_worker",
+    "score_read": "twb_checks_model_release01_6874426d_score_read",
+    "model_train": "twb_checks_model_release01_6874426d_model_train",
+    "model_evaluate": "twb_checks_model_release01_6874426d_model_evaluate"
+  },
+  "kafka_bootstrap": "",
+  "compose_project": null,
+  "app_origin": "http://127.0.0.1:5175",
+  "no_business_process_started": true,
+  "observed_at": "2026-10-17T01:18:32.707912+00:00",
+  "review": "release B80d5... static pass only; application acceptance pending",
+  "provider_calls": 0,
+  "native_oss_requests": 0,
+  "consumers_started": false
+}

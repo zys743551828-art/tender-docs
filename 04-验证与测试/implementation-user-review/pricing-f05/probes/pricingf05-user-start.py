@@ -1,0 +1,14 @@
+import json,uuid,os
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+from pricingf05_user_helpers import *
+accounts=json.load(open('/workspace/tender-workbench/.local/workbench08-test-members.json'));selected=min(x['id']for x in accounts);account=next(x for x in accounts if x['id']==selected);f={'uuid':uuid.uuid4().hex[:10]};events=[];result={}
+with sync_playwright()as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox']);c=b.new_context(viewport={'width':1440,'height':1000});guarded(c,events);page=c.new_page();page.set_default_timeout(20000)
+ try:
+  page.goto(BASE,wait_until='domcontentloaded');page.get_by_label('账号',exact=True).fill(account['login']);page.get_by_label('密码',exact=True).fill(account['password']);page.get_by_role('button',name='登录工作区',exact=True).click();page.get_by_role('button',name='＋ 新建投标',exact=True).click();page.get_by_label('项目名称',exact=True).fill('用户F05独立报价全流程-'+f['uuid']);page.get_by_role('button',name='创建并上传资料',exact=True).click();page.wait_for_url('**/bids/**');f['own_url']=page.url;f['own_bid_id']=page.url.split('/')[4];Path('/tmp/pricingf05-user-fixture.json').write_text(json.dumps(f,ensure_ascii=False));page.get_by_role('link',name='项目设置',exact=True).click();sw=page.get_by_role('switch').first;sw.wait_for();
+  if sw.is_checked():sw.uncheck();page.get_by_role('button',name='保存当前项目设置',exact=True).click();page.wait_for_timeout(500)
+  capture(page,'01-own-project-auto-review-off');page.get_by_role('link',name='项目资料',exact=True).click();page.locator('input[type=file]').first.set_input_files(str(ROOT/'fixtures/original-ratio.pdf'));page.get_by_label('资料用途',exact=False).select_option('tender');page.get_by_role('button',name='上传并核验原件',exact=True).click();page.get_by_role('button',name='确认 1 份资料入库',exact=True).wait_for(timeout=45000);page.get_by_role('button',name='确认 1 份资料入库',exact=True).click();page.get_by_text('已入库资料 1',exact=False).wait_for();capture(page,'02-unmodified-legal-source-uploaded');page.get_by_role('link',name='报价情景',exact=True).click();page.get_by_role('button',name='登记新的有据公式',exact=True).click();page.wait_for_timeout(800);capture(page,'03-formula-registration-native08-f05');f['pricing_url']=page.url;Path('/tmp/pricingf05-user-fixture.json').write_text(json.dumps(f,ensure_ascii=False));print(page.locator('body').inner_text())
+ except Exception as e:result['exception']=type(e).__name__;capture(page,'start-probe-current');print(type(e).__name__,page.locator('body').inner_text())
+ finally:
+  result.update({'at':stamp(),'events':events,'fixtures':f});(ROOT/'start-upload-result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));c.storage_state(path='/tmp/pricingf05-user-auth.json');os.chmod('/tmp/pricingf05-user-auth.json',0o600);b.close()

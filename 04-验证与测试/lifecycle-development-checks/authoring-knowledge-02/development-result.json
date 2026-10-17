@@ -1,0 +1,27 @@
+{
+  "candidate_sha256": "a733281214f64553094a9800f0719581ff103796a8002aee2b373432b8c534cf",
+  "sources_verified": 179,
+  "unchanged_from_01": 178,
+  "only_added_dependency": "packages/knowledge/rag_coordinator.py",
+  "own_production_files": 6,
+  "new_tests_passed_under_identical_01_sources": 5,
+  "regressions_passed_under_identical_01_sources": 106,
+  "regression_skips": 3,
+  "deselected_real_build_cases": 7,
+  "coordinator_rerun": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "quality": {
+    "ruff": "passed frozen 7 delta inputs",
+    "format": "passed frozen 6 production",
+    "mypy": "passed frozen 6 production",
+    "bandit": "passed frozen 6 production"
+  },
+  "sql_changed": false,
+  "model_object_calls": 0,
+  "scope": "Authoring and new project-reference producer lifecycle only; not full07 integration acceptance",
+  "correction": "01 missing dependency import occurred inside test body, not pytest collection; original failure preserved"
+}

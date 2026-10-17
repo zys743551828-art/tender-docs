@@ -1,0 +1,69 @@
+{
+  "status": "confirmation_material_only_not_executed",
+  "sensitive_egress_rejection_preserved": true,
+  "source_manifest_sha256": "ccacb97792be19b157748580a71b0c8e4f891e249556aa3d8dcad1511598358b",
+  "source_dump_sha256": "6d568c5730a85cbf1dbf25406fd9fb1070cfc28b48c5b70acde5d87cb7ee3146",
+  "frozen_fixture_source_sha256": "9ed445eb82e84c9769bad68624f6bcfe33e062493832af91ef11f28ebb880bcf",
+  "synthetic_proof": "Every payload equals one of seven byte literals declared by frozen fixture.create raw_objects; verified directly against local sealed archive bytes, not merely names or metadata",
+  "all_seven_payloads_exact_fixture_literals": true,
+  "user_original_documents_in_payload": false,
+  "bucket": "tender-base",
+  "region": "Hangzhou",
+  "planned_exact_target_prefix": "workbench-checks/7f9f160a-9154-48fd-8ac8-f33e9ce5337c/recovery-qa/",
+  "objects": [
+    {
+      "synthetic_kind": "report",
+      "blob_uuid": "0b290532-d4dc-4f39-adc4-3e8e369d17d7",
+      "bytes": 51,
+      "sha256": "4699b9216dcf63a3f04850f28237be3ad262db97060fc3c0261afbcda60071bc"
+    },
+    {
+      "synthetic_kind": "model",
+      "blob_uuid": "1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506",
+      "bytes": 53,
+      "sha256": "38cdaf368344075a95b6ec10bd89e6a7abfd5278556305e5457562e9db01caee"
+    },
+    {
+      "synthetic_kind": "template",
+      "blob_uuid": "3ab792a8-c6de-434e-acc0-b92a50ca2bb1",
+      "bytes": 36,
+      "sha256": "efa9c6d25c1caea32fd571d41337af057f305059e94decd2f14eefd39d54c306"
+    },
+    {
+      "synthetic_kind": "response",
+      "blob_uuid": "55256cda-6634-4edc-a2b8-86bc6be1a591",
+      "bytes": 40,
+      "sha256": "82072b7bfc888d6bc5d7faac5fc50dfe2d4bd7edc32dbc183fb83ba6aa19163e"
+    },
+    {
+      "synthetic_kind": "method",
+      "blob_uuid": "784e0aad-0df5-4f5f-a085-22c6f098a461",
+      "bytes": 43,
+      "sha256": "ea4e9101d0035f9e8b5285edc3997820f6f60c388b850afe987ee149624e255a"
+    },
+    {
+      "synthetic_kind": "chapter",
+      "blob_uuid": "b9370b3c-d941-42a8-bc28-b77cedc85010",
+      "bytes": 43,
+      "sha256": "9803d3f74b11b0885a9672655b34cdcffb97d375b0d5a386316724f19682b43c"
+    },
+    {
+      "synthetic_kind": "original",
+      "blob_uuid": "d8056b89-9ceb-4b9c-9db0-fe25a62eee32",
+      "bytes": 56,
+      "sha256": "595a130a587e3d01284a00ee14782d80d9175fcf6b82f8c589c32812a261a5e4"
+    }
+  ],
+  "total_objects": 7,
+  "total_bytes": 322,
+  "operations": "For each object, one conditional PUT then GET and SHA-256/size verification; at most seven PUT plus seven GET. Existing object identity conflict or unknown outcome stops; no automatic resend, no alternate key",
+  "forbidden": [
+    "No bucket LIST",
+    "No DELETE or overwrite of existing registered objects",
+    "No ACL/CORS/versioning/policy changes",
+    "No model/provider call",
+    "No transfer of database.dump, manifest, credentials, member records, cookies or any other archive files"
+  ],
+  "execution_authorized": false,
+  "network_requests_performed": 0
+}

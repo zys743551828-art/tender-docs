@@ -1,0 +1,42 @@
+{
+  "state": "failed",
+  "coverage": "failed",
+  "conversion_attempted": true,
+  "error_code": "WORD_CONVERSION_TIMEOUT",
+  "retryable": true,
+  "gaps": [
+    "WORD_CONVERSION_TIMEOUT"
+  ],
+  "chain": {
+    "source_docx_digest": "4c5feb7a20cef99fdf1fb46ff860fab94418ecfa8d17ab3f4937f2558d865b5b",
+    "profile_digest": "f2890064b43a3f2da9da56fc0218c0a63640f78f9e8cb6308509a6dff1828a72",
+    "renderer_digest": "b37fc2930a1628eadd2830f77317929ed5660f842099d3754827248472faecc5",
+    "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+    "options_digest": "0ea354236ad7923b9b531b62d8f15d9a4a932aa23d802a5e377a12e7f3b7cb39"
+  },
+  "isolation": {
+    "local_image_pinned": true,
+    "network_none": true,
+    "ipc_none": true,
+    "pid_private": true,
+    "uts_private": true,
+    "nonroot": true,
+    "read_only": true,
+    "not_privileged": true,
+    "capabilities_dropped": true,
+    "no_new_privileges": true,
+    "memory_limited": true,
+    "cpu_limited": true,
+    "pids_limited": true,
+    "no_daemon_document_logs": true,
+    "clean_environment": true,
+    "all_bind_mounts_readonly": true,
+    "exact_allowlisted_bind_mounts": true,
+    "no_anonymous_persistent_volumes": true,
+    "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+    "no_docker_socket_mount": true,
+    "bounded_tmpfs_output": true,
+    "own_job_cleanup_confirmed": true
+  },
+  "test_fault_injection": "Test-only host deadline 0.001s; actual local Docker started and own-job cleanup confirmed. Not a capacity test."
+}

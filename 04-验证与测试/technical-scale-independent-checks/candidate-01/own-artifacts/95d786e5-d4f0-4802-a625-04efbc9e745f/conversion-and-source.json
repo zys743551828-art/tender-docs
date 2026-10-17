@@ -1,0 +1,58 @@
+{
+  "outcome": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "conversion_attempted": true,
+    "error_code": null,
+    "retryable": false,
+    "gaps": [],
+    "chain": {
+      "source_docx_digest": "1429de4a94be99ad0cb2fceb443c558ee3f749e4af6f15068d4ee7af12c6b6b9",
+      "pdf_digest": "ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287",
+      "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+      "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+      "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+      "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+      "page_count": 1
+    },
+    "isolation": {
+      "local_image_pinned": true,
+      "network_none": true,
+      "ipc_none": true,
+      "pid_private": true,
+      "uts_private": true,
+      "nonroot": true,
+      "read_only": true,
+      "not_privileged": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_limited": true,
+      "cpu_limited": true,
+      "pids_limited": true,
+      "no_daemon_document_logs": true,
+      "clean_environment": true,
+      "all_bind_mounts_readonly": true,
+      "exact_allowlisted_bind_mounts": true,
+      "no_anonymous_persistent_volumes": true,
+      "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+      "no_docker_socket_mount": true,
+      "bounded_tmpfs_output": true,
+      "own_job_cleanup_confirmed": true
+    }
+  },
+  "source_ref": {
+    "document_version_id": "e1df7e35-68cd-47ee-b216-a0a2ca7bf884",
+    "blob_digest": "ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287",
+    "parse_id": "f767e726-8f64-4224-895c-5215301173f2",
+    "evidence_id": "44974d26-e215-4319-bc2a-d7ccd7f0f4b6",
+    "physical_page": 1,
+    "evidence_digest": "2832da92fa9099afee3e02006c9c43dfeaade4d3723f438090febf76052c552f",
+    "quote": "技术总分满分为 70 分，量尺为未加权原始分。"
+  },
+  "pdf_times": {
+    "id": "e1df7e35-68cd-47ee-b216-a0a2ca7bf884",
+    "created_at": "2026-10-17T03:51:18.325499+00:00",
+    "obtained_at": "2026-10-17T03:51:18.325499+00:00",
+    "known_at": "2026-10-17T03:51:18.325499+00:00"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "status": "passed_tested_tool03_boundaries_not_permission_to_execute",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/candidate-03/candidate.json",
+    "sha256": "2867b7b571a444045a7f558cbca34fca2078c60aa80cd4f4de9826075bec3292"
+  },
+  "runtime_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/runtime-candidate.json",
+    "sha256": "000aa789b2c0f31e530323022795529823b2fddffbaf1280a532a2fe7c1806ff"
+  },
+  "backend_candidate_sha256": "cf7b21da833975d49faf060fb8b4795e3872c118ecfd9b3bad32a3d82a5c63cd",
+  "runtime_source_count": 140,
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/scope-delta-immutable-fixtures/result.json",
+      "sha256": "1be92322abaadeb97b6e24635a6a74b82a7d604a98a41193a3c57aaca5499858"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/post-validation-execution/result.json",
+      "sha256": "73b1ad8cdd5d21e5f9016707d1b94fe98f1cb49125a78d9bbbbdf8793b6d0ed0"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/unknown-execution/result.json",
+      "sha256": "a568682b83de7519ce79ad82e82069157a42cb81cd6ae24e47b1cf02a3a4c169"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/success-execution/result.json",
+      "sha256": "8a8b4e6373b07561ffb5ea97a6c1a008af25c343fae8dd66d90b89e53b8e86d5"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/real-fixture-readonly-corrected/result.json",
+      "sha256": "4b2e7d32bd0e70d5ff7a27300f98998ce5dc0294641c350ca13e01612d1a9afb"
+    }
+  ],
+  "unchanged_guard_observation": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/unchanged-guard-observation.json",
+    "sha256": "d1e062b68845942c39e42079549c496ba07b16a506b33dec373096955123394b"
+  },
+  "retained_candidate02_result": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/candidate-02-result.json",
+    "sha256": "dfde41b5d848942fba97d4844a444b900bb86eac32b2dbd46612f86dccdd1409"
+  },
+  "test_fixture_errors_retained": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/scope-delta-execution/result.json",
+      "sha256": "36e5048f53a13630fde87cde858cccffab4a1ab1755515c3b12f5dfdac95f06e"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-03/real-fixture-readonly-preflight/result.json",
+      "sha256": "59e4f76754917bc38e0988018c41dc3cde63617df75a4a1352431db34ba64200"
+    }
+  ],
+  "verified": [
+    "Actual restricted PG and frozen140 source/import identities; complete3physicalpage body and prepared model rule payload accepted",
+    "Changed words, omitted blank/end page, omitted evidence, extra facts/fields, forged rules, multiple user payloads and new identical-text parse identity rejected",
+    "Same bid other actual command, operation input_digest/handler and unrelated review ref rejected",
+    "Approved fixture SHA rechecked each send; current body/material heads and any nonnull fact head rechecked",
+    "No same-command prepare, wrong effect ruleset, ambiguous two prepares and actual human-origin rules rejected",
+    "Parallel16 fake invocations admitted each of2logical keys only once; foreign project and rejected payload never enter upstream",
+    "Frozen03 ordinary handlers with MockTransport: schema-valid but business-invalid1call stops; unknown1call stops; complete extract/core2calls finalizes; same-bid other command skipped and ordinary offsets never committed",
+    "Read-only real90/120 fixture retains exact approved heads/all documents; auto=false, no facts, no model calls or prepare/review operations"
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "scope_limitations": [
+    "Scope tests use own synthetic PG metadata and fake upstream; complete handler tests use actualPG/ASGI/parser and in-memory model artifact storage with MockTransport, not actual paid Kafka acceptance",
+    "Selected runtime is frozen backend02 plus tool03; backend03 needs separate frozen mapping and affected delta before its use",
+    "Provider-confirmed billing and enforced dollar cap absent; USD0.0350208 is PM conservative planning estimate and USD0.05 allowance only",
+    "No execute or consumer startup authorization; prior automatic approval refusal remains in force"
+  ],
+  "test_fixture_corrections": [
+    "Initial own probe tried to UPDATE immutable rule/effect records and PG55000 rejected; rewritten to append separate explicitly synthetic command/input/rule/effect records, no trigger bypass",
+    "Initial readonly probe used nonexistent bid_settings; corrected to actual bids.settings JSON, initial read-only transaction aborted"
+  ]
+}

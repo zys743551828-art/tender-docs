@@ -1,0 +1,31 @@
+{
+  "status": "passed_original05_scoped_mechanisms_only",
+  "candidate05_sha256": "70d6adf9abbd525c0f9b2a0f5f0dea1ae3e39972b2d029cb7dbdba429a69dc09",
+  "runtime_manifest_sha256": "063b6abed2220947da341cf196510d7e6845c91e2709c6847bea7aff9670fc6c",
+  "source_files": 263,
+  "unexecuted_copied_pytest_cache_files": 4,
+  "groups": [
+    {
+      "evidence": "optional-isolation-execution/result.json",
+      "result_sha256": "8506a3e2468875adc7122941ef65a52e6223feb0ae96334ea45429e02fc2dc62",
+      "probe_sha256": "a4f21a241d7565df9cf1b1128191aa6dab37daee6fc438b0097163a8297386be",
+      "assertions": 8,
+      "scope": "Actual restrictedPG ordinary engine and reservation ledger. Synthetic document/1 optional-stage plan and no-op artifact publisher only, no real detector/model/Kafka claim."
+    },
+    {
+      "evidence": "conversation-persistence-execution/result.json",
+      "result_sha256": "7dab875de8044aac3c274c4bfd34ef410cc9bf467ef40dcd97d57bd192fa2ae1",
+      "probe_sha256": "a80301e2b668bbced2e10066db6b25e21e4618a9cb6dfa164d49a27874bc68a5",
+      "assertions": 9,
+      "scope": "Actual work-conversation01 ASGI and restrictedPG. Persistence only: no generated response, action/tool execution or formal scoring."
+    }
+  ],
+  "paid_calls": 0,
+  "consumers_started": 0,
+  "limitations": [
+    "No claim of main05 release: content dismissal P1 remains blocked pending frozen repair",
+    "Optional synthetic document1 plan and no-op artifact publishing, not actual detector effects or Kafka",
+    "Work conversation persistence01 only; not generated assistant answers/actions/global scope",
+    "No phase lifecycle route registered in fixed263; new separately-owned lifecycle/assistant capability candidates require separate exact input"
+  ]
+}

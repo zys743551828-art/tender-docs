@@ -1,0 +1,31 @@
+{
+  "candidate_sha256": "bf309a1d0f9435666bdb1cc6c6bfd485094cda4dcbd372b8ed951761c365edbb",
+  "sources_verified": 12,
+  "reference_inputs_verified": 11,
+  "candidate_cases": 33,
+  "independent_counterexamples_reproduced": 2,
+  "actual_postgresql_nonowner": true,
+  "actual_login_asgi": true,
+  "object_port": "explicit in-memory",
+  "source": "synthetic SQL parse fixtures, not actual PDF",
+  "paid_calls": 0,
+  "cloud_requests": 0,
+  "consumers_started": false,
+  "private_config_read": false,
+  "loaded_modules": {
+    "apps.api.pricing_routes": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-02/frozen-inputs/apps/api/pricing_routes.py",
+    "packages.pricing.repository": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-02/frozen-inputs/packages/pricing/repository.py",
+    "packages.pricing.sources": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-02/frozen-inputs/packages/pricing/sources.py",
+    "packages.pricing.calculator": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-02/frozen-inputs/packages/pricing/calculator.py"
+  },
+  "conclusion": "blocked_F02_incomplete_monetary_unit_boundary",
+  "blocking_findings": 1,
+  "original_engineering_cases_passed": 33,
+  "additional_counterexamples_reproduced": 2,
+  "evidence_sha256": {
+    "probe_candidate02.py": "a0e00b39d8c67247077afb73fab830461fa6b949bf63d8ed893d01a514c39682",
+    "candidate02-independent-junit.xml": "112de2d46d45f74b3d2670b4800f9d9fa7bbecca047aede658efe21b1a1348a0",
+    "unit-CNY-counterexample.json": "9b1df602d281503b73868cc391fb936dd27c00624801753b636cb9e26d2fb7a3",
+    "unit-KRW-counterexample.json": "cddcd54ddecf0cacca3fb72180236a8e3c0868d223ce6e01dd118df822172558"
+  }
+}

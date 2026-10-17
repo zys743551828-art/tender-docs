@@ -1,0 +1,17 @@
+# FR029 SQL草案C静审交接
+
+尚未执行DDL。仅供新独立fresh库初始化；不修改既有设计表、权限及运行库。SQL SHA为95cd518b35f88cc7208d6add50dc0b19bc1297715169a549a9252c023da85ef0。A原稿c476f8877f9d9fa9def79476175a43be29c00f2bb8d539baa0d2148ad59cb38b及B原稿6fa825a27743889352bb1958dea53350da919feda3a472270f4bf4811d095b6e各自归档。
+
+A→C的具体变化：
+
+1. MG01：assert_lease在current_cohort取得组/完整bid/graph锁后重新SELECT当前job FOR UPDATE，重新核kind、用途角色、state和当前generation，再比lease.generation/fence/owner/到期。claim沿用锁后重读。新增renew_job同一守卫供CPU心跳，不在拟合期间挂事务。
+2. MG02：新增chapter_bindings、parse_bindings及evidence_bindings，API-only append-only。当前资格核submitted review/body、规则所属冻结ruleset及完整必要规则集合、每个parse的最新身份、完整无缺口页面、逐块parse/page/ordinal/digest、全部正文证据、规则原文证据和核验决定的官方证据集合；再核原件blob/node/父边与全部typed祖先head。canonical UUID由API冻结时强制复用RAG helper；SQL核真实文档、parse和父边，未自行实现第二套UUID5函数。
+3. 身份重核完整association投影：企业/名称、round、工程ID/名称、地区/工程类型、标段及轮次；实交冻结evidence.identity、authority、当前串行epoch head必须一致。不能用当前profile补旧身份。
+4. 时间分清两个维度：prebid known_at≤min(真实submitted_at、chapter authority.as_of)，official_label known_at≤成绩取得known_at，全部known_at≤cohort冻结可见时点。另prebid head.valid_from≤冻结chapter as_of，official head.valid_from≤cohort冻结时点；同时当前仍published、当前有效。新历史资料可在本系统现在登记，不伪造其当年发布head。fit/development/calibration的提交与标签均严格早于test_start，final提交不早于边界。另核已核验公布时间、实际取得原件时间。
+5. 全局曝光不由客户端allowlist给出。open_final从cohort final相关组出发，查询真实samples整个组的项目、正文、模板、近重复及样本/组身份，逐kind/identity唯一约束；锁范围也扩到该相关组全部bid。改变manifest/实验/顺序或只取不同组内子集不能重新打开同一底层来源。
+6. read_final要求exposure.created_xact不同于当前顶层pg_current_xact_id；曝光必须前一事务提交才可读标签。失败、取消、重试不删除旧曝光。训练角色只读training导出，评测角色只读自身已提交曝光的final_labels；两者无表SELECT、无source/标签大表、无整桶凭据。API有编排读取权，CPU进程由白名单环境启动，不继承通用.env/API/owner/S3/provider变量。
+7. protocol/cohort/model origin沿不可变关系保持，finish_job拒绝origin升级、synthetic research_only=false及任何formal_eligibility非unavailable。JSON参数和评测数值由纯软件代码校验；不将worker自报报告授正式资格。
+
+当前C只包含训练/评测的最小存储与受限CPU RPC，不表示正式验收/发布/回退、shadow或当前项目score handler已交付。score角色目前零业务权限；完整章节owned-operation authority与专用费用账本另稿交审。当前新API也仅创建synthetic研究协议和不可用正式资格，真实来源登记及最终门槛仍独立阻塞；不使用合成报告取得正式模型资格。
+
+拟fresh反例：purpose跨角色/任意表/最终标签拒绝；同事务曝光读标签拒绝，提交后读成功，rollback/失败不擦除曝光；改变manifest/组子集仍重复曝光拒绝；旧generation在图锁等待期间变化拒绝；同原件新parse且heads不变拒绝；同UUID名称/地区变化拒绝；未来known/candidate/withdrawn、完整章节漏项/错parse/evidence拒绝；CPU与外部对象期间无idle-in-transaction。全部使用显式合成资料，0收费/0消费者，不授精度资格。

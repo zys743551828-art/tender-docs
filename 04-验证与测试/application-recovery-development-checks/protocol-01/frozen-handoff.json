@@ -1,0 +1,44 @@
+{
+  "candidate": "application-recovery-protocol-01",
+  "state": "frozen_for_architecture_review_no_implementation",
+  "files": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-01/baseline-inputs.json",
+      "sha256": "a98a2a97f91200e76ba2b60c1b608cb6071139818c21e4c1b2c0f5884607c676"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-01/review-request.json",
+      "sha256": "9408ba8b21eeeb1b4ec07db8e0c77eb79c768063e5ad5c4d846171140a12c04d"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-01/应用恢复执行协议.md",
+      "sha256": "bb471300c53d128d344d3a0f472996a42424d96be64e6709fec7d9be565b5397"
+    }
+  ],
+  "owned_paths": [
+    "deploy/application_recovery/*",
+    "tests/test_application_recovery*.py",
+    "application-recovery-development-checks/*"
+  ],
+  "review_scope": [
+    "fresh dedicated PG cluster identity and refusal of existing resources",
+    "NOLOGIN source owner labels, complete ACL/default ACL/definer preservation, new limited LOGIN",
+    "15 reviewed SQL exact inputs and 308 backend07 byte identity",
+    "consistent snapshot and typed blob/artifact/template/audit closure",
+    "external CPU/OCR/font/renderer version and byte binding without private config export",
+    "new isolated OSS prefix exact key restore and source immutability",
+    "initial work paused; only explicit synchronous ASGI test allowlist after verification",
+    "old queue and unknown fee preservation; no inflight recovery or consumer qualification"
+  ],
+  "execution": {
+    "resources_created": 0,
+    "DDL_executed": false,
+    "owner_connections": 0,
+    "OSS_calls": 0,
+    "model_calls": 0,
+    "consumers_started": false
+  },
+  "default_application_state": "work_paused",
+  "old_inflight_resume_qualified": false,
+  "next_step": "PM schedule independent architecture review then reactivate OPS implementation"
+}

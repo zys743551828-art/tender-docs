@@ -1,0 +1,33 @@
+{
+  "scope": "module candidate02 absolute URI delta architecture review; main/API/browser final release pending",
+  "candidate_path": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/developer-candidate-02.json",
+  "candidate_sha256": "90617425e936283c99222cbe1c3a7011ebc5c5800f840b1efb920b6e95fe8356",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/object_transfer.py",
+      "snapshot": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-02/apps/api/object_transfer.py",
+      "sha256": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_object_transfer.py",
+      "snapshot": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-02/tests/test_object_transfer.py",
+      "sha256": "d35691740b9088de65fb957008a3f1ee62d261d4f8133127115b2f0ab7ae64c4",
+      "matches": true
+    }
+  ],
+  "offline_tests": {
+    "passed": 73,
+    "failed": 0,
+    "seconds": 0.92,
+    "private_dotenv_read_suppressed": true,
+    "explicit_storage_fixtures_only": true
+  },
+  "blocking_findings_observed": 0,
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "pending": [
+    "actual main candidate and QA real PG/browser scope",
+    "ticket access log removal or disabled access logs"
+  ]
+}

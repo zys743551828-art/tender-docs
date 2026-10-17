@@ -1,0 +1,1909 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/historical-inputs/capabilities": {
+      "get": {
+        "tags": [
+          "historical-inputs"
+        ],
+        "summary": "Capabilities",
+        "operationId": "capabilities_api_v1_historical_inputs_capabilities_get",
+        "responses": {
+          "200": {
+            "description": "Current reconstruction authority; never an old prediction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalInputCapabilities"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/historical-inputs/submissions/{submission_id}/context": {
+      "get": {
+        "tags": [
+          "historical-inputs"
+        ],
+        "summary": "Context",
+        "operationId": "context_api_v1_historical_inputs_submissions__submission_id__context_get",
+        "parameters": [
+          {
+            "name": "submission_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Submission Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Current reconstruction authority; never an old prediction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalInputContext"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/historical-inputs/{input_id}": {
+      "get": {
+        "tags": [
+          "historical-inputs"
+        ],
+        "summary": "Get Input",
+        "operationId": "get_input_api_v1_historical_inputs__input_id__get",
+        "parameters": [
+          {
+            "name": "input_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Input Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Current reconstruction authority; never an old prediction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalInputView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/historical-inputs": {
+      "post": {
+        "tags": [
+          "historical-inputs"
+        ],
+        "summary": "Create Input",
+        "operationId": "create_input_api_v1_historical_inputs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoricalInputRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Current reconstruction authority; never an old prediction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalInputView"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HistoricalInputRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "submission_id": {
+            "format": "uuid",
+            "title": "Submission Id",
+            "type": "string"
+          },
+          "historical_subject_authority_id": {
+            "format": "uuid",
+            "title": "Historical Subject Authority Id",
+            "type": "string"
+          },
+          "source_claim_ids": {
+            "items": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Source Claim Ids",
+            "type": "array"
+          },
+          "material_version_ids": {
+            "items": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Material Version Ids",
+            "type": "array"
+          },
+          "rule_set_id": {
+            "format": "uuid",
+            "title": "Rule Set Id",
+            "type": "string"
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "submission_id",
+          "historical_subject_authority_id",
+          "source_claim_ids",
+          "material_version_ids",
+          "rule_set_id",
+          "reason"
+        ],
+        "title": "HistoricalInputRequest",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "HistoricalConfirmationRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "HistoricalConfirmationRequest",
+        "type": "object"
+      },
+      "HistoricalIdentityProjection": {
+        "additionalProperties": false,
+        "properties": {
+          "bidder_id": {
+            "format": "uuid",
+            "title": "Bidder Id",
+            "type": "string"
+          },
+          "bidder_name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Bidder Name",
+            "type": "string"
+          },
+          "round_id": {
+            "format": "uuid",
+            "title": "Round Id",
+            "type": "string"
+          },
+          "engineering_project_id": {
+            "format": "uuid",
+            "title": "Engineering Project Id",
+            "type": "string"
+          },
+          "engineering_title": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Engineering Title",
+            "type": "string"
+          },
+          "region": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region"
+          },
+          "engineering_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Engineering Type"
+          },
+          "lot": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lot"
+          },
+          "round_no": {
+            "minimum": 1,
+            "title": "Round No",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "bidder_id",
+          "bidder_name",
+          "round_id",
+          "engineering_project_id",
+          "engineering_title",
+          "region",
+          "engineering_type",
+          "lot",
+          "round_no"
+        ],
+        "title": "HistoricalIdentityProjection",
+        "type": "object"
+      },
+      "ProofReference": {
+        "additionalProperties": false,
+        "properties": {
+          "document_version_id": {
+            "format": "uuid",
+            "title": "Document Version Id",
+            "type": "string"
+          },
+          "blob_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Blob Digest",
+            "type": "string"
+          },
+          "parse_id": {
+            "format": "uuid",
+            "title": "Parse Id",
+            "type": "string"
+          },
+          "evidence_id": {
+            "format": "uuid",
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "physical_page": {
+            "minimum": 1,
+            "title": "Physical Page",
+            "type": "integer"
+          },
+          "evidence_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Evidence Digest",
+            "type": "string"
+          },
+          "quote": {
+            "maxLength": 16000,
+            "minLength": 1,
+            "title": "Quote",
+            "type": "string"
+          },
+          "explanation": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          }
+        },
+        "required": [
+          "document_version_id",
+          "blob_digest",
+          "parse_id",
+          "evidence_id",
+          "physical_page",
+          "evidence_digest",
+          "quote",
+          "explanation"
+        ],
+        "title": "ProofReference",
+        "type": "object"
+      },
+      "HistoricalSubjectRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "submission_id": {
+            "format": "uuid",
+            "title": "Submission Id",
+            "type": "string"
+          },
+          "proposed_identity": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HistoricalIdentityProjection"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "proof_refs": {
+            "items": {
+              "$ref": "#/components/schemas/ProofReference"
+            },
+            "maxItems": 50,
+            "title": "Proof Refs",
+            "type": "array"
+          },
+          "declared_data_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ],
+            "title": "Declared Data Origin",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Supersedes Id"
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "submission_id",
+          "proof_refs",
+          "declared_data_origin",
+          "reason"
+        ],
+        "title": "HistoricalSubjectRequest",
+        "type": "object"
+      },
+      "HistoricalFact": {
+        "additionalProperties": false,
+        "properties": {
+          "fact_kind": {
+            "enum": [
+              "content_existed",
+              "published",
+              "effective",
+              "known_to_bidder",
+              "received_by_bidder"
+            ],
+            "title": "Fact Kind",
+            "type": "string"
+          },
+          "claimed_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Claimed At"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Valid Until"
+          },
+          "proof_refs": {
+            "items": {
+              "$ref": "#/components/schemas/ProofReference"
+            },
+            "maxItems": 50,
+            "title": "Proof Refs",
+            "type": "array"
+          },
+          "explanation": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          }
+        },
+        "required": [
+          "fact_kind",
+          "claimed_at",
+          "proof_refs",
+          "explanation"
+        ],
+        "title": "HistoricalFact",
+        "type": "object"
+      },
+      "HistorySourceClaimRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "submission_id": {
+            "format": "uuid",
+            "title": "Submission Id",
+            "type": "string"
+          },
+          "document_version_id": {
+            "format": "uuid",
+            "title": "Document Version Id",
+            "type": "string"
+          },
+          "historical_subject_authority_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Historical Subject Authority Id"
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/HistoricalFact"
+            },
+            "maxItems": 5,
+            "minItems": 1,
+            "title": "Facts",
+            "type": "array"
+          },
+          "declared_data_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ],
+            "title": "Declared Data Origin",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Supersedes Id"
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "submission_id",
+          "document_version_id",
+          "facts",
+          "declared_data_origin",
+          "reason"
+        ],
+        "title": "HistorySourceClaimRequest",
+        "type": "object"
+      },
+      "HistoricalSubjectAuthorityView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submission_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "declared_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "actor_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "last_own_decision": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  },
+                  "actor_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": [
+                  "id",
+                  "decision",
+                  "actor_id",
+                  "reason",
+                  "created_at"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "head_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "is_current_head": {
+            "type": "boolean"
+          },
+          "submission_current": {
+            "type": "boolean"
+          },
+          "manual_decision": {
+            "enum": [
+              "pending",
+              "confirmed",
+              "rejected",
+              "superseded"
+            ]
+          },
+          "proofs_current": {
+            "type": "boolean"
+          },
+          "proof_refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "bid_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "subject_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "claim_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "fact_kind": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "content_existed",
+                        "published",
+                        "effective",
+                        "known_to_bidder",
+                        "received_by_bidder"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "document_version_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "document_digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "parse_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "evidence_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "physical_page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "evidence_digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "source_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "root_source_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "bid_id",
+                "subject_id",
+                "claim_id",
+                "fact_kind",
+                "document_version_id",
+                "document_digest",
+                "parse_id",
+                "evidence_id",
+                "physical_page",
+                "evidence_digest",
+                "source_id",
+                "root_source_id",
+                "quote",
+                "explanation"
+              ]
+            }
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "kind": {
+            "const": "subject"
+          },
+          "body_version_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "submitted_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "bidder_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "round_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "engineering_project_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "identity_snapshot": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HistoricalIdentityProjection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_relationship_current": {
+            "type": "boolean"
+          },
+          "related_subject_current": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "submission_id",
+          "declared_origin",
+          "supersedes_id",
+          "reason",
+          "actor_id",
+          "created_at",
+          "last_own_decision",
+          "head_revision",
+          "is_current_head",
+          "submission_current",
+          "manual_decision",
+          "proofs_current",
+          "proof_refs",
+          "historical_input_available",
+          "formal_eligibility",
+          "kind",
+          "body_version_id",
+          "body_digest",
+          "submitted_at",
+          "bidder_id",
+          "round_id",
+          "engineering_project_id",
+          "identity_snapshot",
+          "subject_relationship_current",
+          "related_subject_current"
+        ]
+      },
+      "HistorySourceClaimView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submission_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "declared_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "actor_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "last_own_decision": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  },
+                  "actor_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": [
+                  "id",
+                  "decision",
+                  "actor_id",
+                  "reason",
+                  "created_at"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "head_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "is_current_head": {
+            "type": "boolean"
+          },
+          "submission_current": {
+            "type": "boolean"
+          },
+          "manual_decision": {
+            "enum": [
+              "pending",
+              "confirmed",
+              "rejected",
+              "superseded"
+            ]
+          },
+          "proofs_current": {
+            "type": "boolean"
+          },
+          "proof_refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "bid_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "subject_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "claim_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "fact_kind": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "content_existed",
+                        "published",
+                        "effective",
+                        "known_to_bidder",
+                        "received_by_bidder"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "document_version_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "document_digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "parse_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "evidence_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "physical_page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "evidence_digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "source_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "root_source_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "bid_id",
+                "subject_id",
+                "claim_id",
+                "fact_kind",
+                "document_version_id",
+                "document_digest",
+                "parse_id",
+                "evidence_id",
+                "physical_page",
+                "evidence_digest",
+                "source_id",
+                "root_source_id",
+                "quote",
+                "explanation"
+              ]
+            }
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "kind": {
+            "const": "claim"
+          },
+          "document_version_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "document_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "subject_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_relationship_current": {
+            "type": "null"
+          },
+          "related_subject_current": {
+            "type": "boolean"
+          },
+          "facts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "claim_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "fact_kind": {
+                  "enum": [
+                    "content_existed",
+                    "published",
+                    "effective",
+                    "known_to_bidder",
+                    "received_by_bidder"
+                  ]
+                },
+                "claimed_at": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "valid_until": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "claim_id",
+                "fact_kind",
+                "claimed_at",
+                "valid_until",
+                "explanation"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "submission_id",
+          "declared_origin",
+          "supersedes_id",
+          "reason",
+          "actor_id",
+          "created_at",
+          "last_own_decision",
+          "head_revision",
+          "is_current_head",
+          "submission_current",
+          "manual_decision",
+          "proofs_current",
+          "proof_refs",
+          "historical_input_available",
+          "formal_eligibility",
+          "kind",
+          "document_version_id",
+          "document_digest",
+          "subject_id",
+          "subject_relationship_current",
+          "related_subject_current",
+          "facts"
+        ]
+      },
+      "HistoricalProofCapabilities": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_configured": {
+            "type": "boolean"
+          },
+          "proof_and_subject_commands": {
+            "type": "boolean"
+          },
+          "historical_input_execution": {
+            "const": false
+          },
+          "formal_model_eligibility": {
+            "const": "unavailable"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "schema_configured",
+          "proof_and_subject_commands",
+          "historical_input_execution",
+          "formal_model_eligibility",
+          "paid_execution_enabled"
+        ]
+      },
+      "HistoricalProofContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "submission_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_version_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "submitted_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "original_review_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_head": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "subject_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "decision_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "revision": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "decision_id",
+                  "revision",
+                  "decision"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "claim_heads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "document_version_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "claim_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "decision_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "decision": {
+                  "enum": [
+                    "pending",
+                    "confirmed",
+                    "rejected"
+                  ]
+                }
+              },
+              "required": [
+                "document_version_id",
+                "claim_id",
+                "decision_id",
+                "revision",
+                "decision"
+              ]
+            }
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "prediction_timing": {
+            "const": "retrospective"
+          }
+        },
+        "required": [
+          "submission_id",
+          "bid_id",
+          "body_version_id",
+          "body_digest",
+          "submitted_at",
+          "original_review_id",
+          "subject_head",
+          "claim_heads",
+          "historical_input_available",
+          "formal_eligibility",
+          "prediction_timing"
+        ]
+      },
+      "HistoricalInputCapabilities": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_configured": {
+            "type": "boolean"
+          },
+          "historical_input_registration": {
+            "type": "boolean"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "execution_available": {
+            "const": false
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "schema_configured",
+          "historical_input_registration",
+          "formal_eligibility",
+          "execution_available",
+          "paid_execution_enabled"
+        ]
+      },
+      "HistoricalInputContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "submission_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_version_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "submitted_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "original_review_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_head": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "subject_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "decision_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "revision": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "decision_id",
+                  "revision",
+                  "decision"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "claim_heads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "document_version_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "claim_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "decision_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "decision": {
+                  "enum": [
+                    "pending",
+                    "confirmed",
+                    "rejected"
+                  ]
+                }
+              },
+              "required": [
+                "document_version_id",
+                "claim_id",
+                "decision_id",
+                "revision",
+                "decision"
+              ]
+            }
+          },
+          "historical_input_available": {
+            "const": true
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "prediction_timing": {
+            "const": "retrospective"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          },
+          "rule_sets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "material_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "coverage": {
+                  "enum": [
+                    "complete",
+                    "partial",
+                    "conflict"
+                  ]
+                },
+                "material_versions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "document_version_id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "role": {
+                        "enum": [
+                          "tender",
+                          "supplement"
+                        ]
+                      },
+                      "original_name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "document_version_id",
+                      "role",
+                      "original_name"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "material_id",
+                "revision",
+                "digest",
+                "coverage",
+                "material_versions"
+              ]
+            }
+          },
+          "document_versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "artifact_kind": {
+                  "enum": [
+                    "source_original",
+                    "bid_body"
+                  ]
+                },
+                "original_name": {
+                  "type": "string"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "latest_parse_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "coverage": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "complete",
+                        "partial",
+                        "failed"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "artifact_kind",
+                "original_name",
+                "digest",
+                "latest_parse_id",
+                "coverage"
+              ]
+            }
+          }
+        },
+        "required": [
+          "submission_id",
+          "bid_id",
+          "body_version_id",
+          "body_digest",
+          "submitted_at",
+          "original_review_id",
+          "subject_head",
+          "claim_heads",
+          "historical_input_available",
+          "formal_eligibility",
+          "prediction_timing",
+          "paid_execution_enabled",
+          "rule_sets",
+          "document_versions"
+        ]
+      },
+      "HistoricalInputView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "submission_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_version_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "body_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "subject_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "subject_decision_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "historical_as_of": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rule_set_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "material_snapshot_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "method_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "manifest_blob_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "manifest_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "origin": {
+            "enum": [
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "prediction_timing": {
+            "const": "retrospective"
+          },
+          "execution_purpose": {
+            "const": "historical_backtest"
+          },
+          "research_only": {
+            "const": true
+          },
+          "actor_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "authority_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "rule_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "current": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "chapters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "rule_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "body_parse_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "manifest_blob_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "required": [
+                "id",
+                "rule_id",
+                "body_parse_id",
+                "manifest_blob_id",
+                "digest"
+              ]
+            }
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "execution_available": {
+            "const": false
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "submission_id",
+          "body_version_id",
+          "body_digest",
+          "subject_id",
+          "subject_decision_id",
+          "historical_as_of",
+          "rule_set_id",
+          "material_snapshot_id",
+          "method_digest",
+          "manifest_blob_id",
+          "manifest_digest",
+          "origin",
+          "prediction_timing",
+          "execution_purpose",
+          "research_only",
+          "actor_id",
+          "created_at",
+          "authority_digest",
+          "rule_count",
+          "current",
+          "notes",
+          "chapters",
+          "formal_eligibility",
+          "execution_available",
+          "paid_execution_enabled"
+        ]
+      }
+    }
+  }
+}

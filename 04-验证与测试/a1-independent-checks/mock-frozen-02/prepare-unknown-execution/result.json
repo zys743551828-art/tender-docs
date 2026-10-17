@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unknown_call_record_exists_without_automatic_retry",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_command_or_nonce_is_not_paid_retry_authorization",
+      "passed": true,
+      "observation": {
+        "phase": "prepare",
+        "denials": [
+          true,
+          true
+        ],
+        "operations_before": 2,
+        "operations_after": 2
+      }
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "34006e24-55cb-4ff1-a7cf-a077bf921f63",
+  "offline_transport_requests": 1,
+  "ledger": [
+    {
+      "state": "unknown"
+    }
+  ],
+  "probe_sha256": "fb0719dd9847e1d573e96b2c7c5d9d1e050b8c2d4619e4739cd31fb474e2909a"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "passed_scoped_synthetic_regression",
+  "transport": "real_loopback_http",
+  "parser_digest": "a7678861fc3b487a4096eaf88f3bbf24e74d49ac03bf5b3dacadb87f2d4b915d",
+  "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+  "identity": {
+    "profile": "pdfium-pdfplumber-tesseract-cpu-v1",
+    "packages": {
+      "pypdfium2": "5.13.0",
+      "pdfplumber": "0.11.9",
+      "Pillow": "12.3.0"
+    },
+    "ocr_binary_digest": "74b76a5b994adcc18be362bf64ed5118082b2401d5d9a35242e92fc4c62e2b4b",
+    "parser_source_digest": "ff346f529d508901b48f7c98462909d044b3a03a01961e6d97ec317fc17e0d1e",
+    "font_manifest_digest": "961f928446c805c30e2039f9fa30701cd5f35215998d1e2db513488e29e7b3d6",
+    "assets": {
+      "chi_sim": {
+        "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
+        "sha256": "a5fcb6f0db1e1d6d8522f39db4e848f05984669172e584e8d76b6b3141e1f730",
+        "bytes": 2469156,
+        "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/chi_sim.traineddata"
+      },
+      "eng": {
+        "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
+        "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+        "bytes": 4113088,
+        "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/eng.traineddata"
+      }
+    },
+    "preprocessing": {
+      "dpi": 200,
+      "psm": 3,
+      "languages": "chi_sim+eng",
+      "max_pixels": 12000000
+    },
+    "layout": "ruled-table-grid-and-pdf-word-lines",
+    "text_visibility": "PDFium object render mode and alpha; any hidden/unknown object routes entire page to rendered OCR without PDF text or table extraction",
+    "visual_understanding": false,
+    "target_baseline_qualified": false
+  },
+  "checks": {
+    "minimal_mixed_hidden": {
+      "source_path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-01/minimal-mixed-hidden.pdf",
+      "sha256": "c1bd2c1de22e835ae9ecd41d4132860d47b60939d3a3a4050c4e8e7aa801249f",
+      "coverage": "partial",
+      "page_count": 1,
+      "passed": true
+    },
+    "previous_six_page_fixture": {
+      "source_path": "packages/parsing/qa/synthetic-source.pdf",
+      "sha256": "0470da42403d6a4201c7ff4c7afe39afbedb1490b6b464bb9538c06c289a78c0",
+      "coverage": "partial",
+      "page_count": 6,
+      "passed": true
+    }
+  },
+  "business_documents": 0,
+  "business_accuracy_accepted": false,
+  "target_baseline_qualified": false
+}

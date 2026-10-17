@@ -1,0 +1,49 @@
+{
+  "scope": "实际QA配置的非owner LOGIN与禁止权限，不使用初始化owner",
+  "passed": true,
+  "checks": [
+    "API实际LOGIN无owner/超级/建库/建角色能力",
+    "WORKER实际LOGIN无owner/超级/建库/建角色能力",
+    "RESEARCH_WORKER实际LOGIN无owner/超级/建库/建角色能力",
+    "SCORE_READ实际LOGIN无owner/超级/建库/建角色能力",
+    "SCORE_READ禁止 SELECT * FROM design.outcomes",
+    "SCORE_READ禁止 SELECT * FROM design.messages",
+    "WORKER禁止 UPDATE design.decisions SET decision=decision",
+    "WORKER禁止 UPDATE design.model_routes SET revision=revision+1",
+    "WORKER禁止 SELECT * FROM design.outcomes",
+    "RESEARCH_WORKER禁止 SELECT * FROM design.outcomes",
+    "RESEARCH_WORKER禁止 UPDATE design.model_routes SET revision=revision+1"
+  ],
+  "identities": [
+    {
+      "capability": "API",
+      "login": "twb_api",
+      "database": "tender",
+      "superuser": false,
+      "owns_tables": false
+    },
+    {
+      "capability": "WORKER",
+      "login": "twb_worker",
+      "database": "tender",
+      "superuser": false,
+      "owns_tables": false
+    },
+    {
+      "capability": "RESEARCH_WORKER",
+      "login": "twb_research_worker",
+      "database": "tender",
+      "superuser": false,
+      "owns_tables": false
+    },
+    {
+      "capability": "SCORE_READ",
+      "login": "twb_score_read",
+      "database": "tender",
+      "superuser": false,
+      "owns_tables": false
+    }
+  ],
+  "executed_at": "2026-10-16T14:09:34.734000+00:00",
+  "probe_sha256": "597d2a723d32273f92e6179467f4345fc3f4a8a6df6ea4a7e089cd10b4cf849f"
+}

@@ -1,0 +1,165 @@
+{
+  "format": "application-recovery-developer-actual-result/1",
+  "state": "real_serial_drill_passed_independent_actual_acceptance_pending",
+  "completed_at": "2026-10-17T04:07:15.171450+00:00",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/candidate.json",
+    "sha256": "6436b14fbd0bd9278f6ae70bea10b1ee4d7e7e2faebda140dd77421d8def052a"
+  },
+  "protocol03": {
+    "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-03/handoff.json",
+    "sha256": "5dc82fe2f9652ba9f260caf49e0d116cd20b1fbf64d770eecd9a98bb1ec44599"
+  },
+  "baseline": {
+    "backend_files": 308,
+    "ordered_SQL": 15,
+    "source_tables": 164,
+    "schemas": [
+      "design",
+      "historical_backtest",
+      "historical_input",
+      "model_governance",
+      "model_release",
+      "recovery_control",
+      "retrieval"
+    ],
+    "current_latest_A2_Score_Scale_included": false
+  },
+  "initial_source03_failure": {
+    "sqlstate": "23502",
+    "business_rows_rolled_back": true,
+    "7_original_self_owned_unreferenced_objects_retained": true,
+    "source_initialized_nonpinned_ddl_and_permission_probes_passed": true
+  },
+  "source04": {
+    "fixture_ordinary_API": true,
+    "all_schema_complete_snapshot": true,
+    "same_reader_repeatable_read_exported_snapshot_and_pg_dump": true,
+    "separate_post_snapshot_commit_excluded": true,
+    "tables": 164,
+    "objects": 7,
+    "object_bytes": 322,
+    "dump_bytes": 852503,
+    "typed_reference_samples": {
+      "chapter_packages": 1,
+      "model_artifacts": 1,
+      "model_response_refs": 1,
+      "template_originals": 1
+    },
+    "backup_reader_certifications_select": true,
+    "certifications_rows": 0,
+    "certifications_positive_nonempty_record_not_seeded": true,
+    "business_API_certifications_42501": true
+  },
+  "target": {
+    "source_and_target_cluster_ids_distinct": true,
+    "pg_restore_complete_164_tables": true,
+    "all_rows_SHA_equal_source_snapshot_before_API": true,
+    "all_owner_ACL_functions_types_indexes_triggers_defaultACL_sequences_equal": true,
+    "strict_original_failure_preserved": true,
+    "CHECK_difference_exact_one_of_965": true,
+    "CHECK_two_spelling_pair_only": true,
+    "actual_27_SQL_boolean_truth_cases_0_differences": true,
+    "DDL_or_permission_mutations_after_failure": 0,
+    "target_objects_PUT_and_GET_SHA": 7,
+    "object_bytes": 322,
+    "fresh_prefix_distinct_source": true,
+    "reader_nonowner_all_tables_and_denial_probes_passed": true,
+    "business_API_certifications_42501": true,
+    "worker_CONNECT_denied": true,
+    "temporary_DDL_oid": 16384,
+    "temporary_DDL_NOLOGIN_NOSUPER_passwordNULL_no_dependencies": true,
+    "infra_pinned_initial_owner_not_reassigned": true,
+    "final_owner_shared_set_only_own_new_DB": true,
+    "post_application_complete_snapshot_preserved": true
+  },
+  "application": {
+    "login_verified": true,
+    "restored_reads": [
+      "project",
+      "knowledge",
+      "report"
+    ],
+    "old_cookie_rejected": true,
+    "csrf_verified": true,
+    "idempotency_verified": true,
+    "new_sync_work_verified": true,
+    "existing_history_unchanged": true,
+    "old_queues_and_unknown_fees_unchanged": true,
+    "exactly_one_new_bid": true,
+    "runtime_excludes_backup_worker_owner_and_model_credentials": true
+  },
+  "paused_boundary": {
+    "work_paused": true,
+    "exact_same_command_replay_same_UUID": true,
+    "new_idempotency_key_second_UUID_rejected_423": true,
+    "old_project_write_upload_operation_access_rejected_423": true,
+    "old_queued_operations_outbox_unknown_fees_unchanged": true,
+    "old_inflight_resume_qualified": false,
+    "consumer_started": false,
+    "Kafka_or_global_consumers_started": false,
+    "model_calls": 0,
+    "staging_multipart_resume_qualified": false
+  },
+  "source_after_target": {
+    "original_volume_remounted_only_after_target_container_removed": true,
+    "same_system_identifier_nonce_and_reader": true,
+    "all_164_current_table_hashes_equal_pre_stop": true,
+    "all_original_raw_definitions_and_ACL_equal": true,
+    "referenced_objects_exact_GET_SHA": 7,
+    "initial_unreferenced_objects_exact_GET_SHA": 7,
+    "all_14_source_objects_retained": true,
+    "permission_probes_repeated": true,
+    "DDL_or_permission_changes": 0
+  },
+  "disk_and_cleanup": {
+    "initial_plan_minimum_MiB": 1600,
+    "each_container_minimum_MiB": 900,
+    "target_before_MiB": 1464,
+    "source_verification_before_MiB": 1381,
+    "all_own_containers_removed": true,
+    "both_own_volumes_retained": true,
+    "source_and_target_archives_retained": true,
+    "all_21_self_owned_native_objects_retained": true,
+    "object_DELETE": 0,
+    "bucket_LIST": 0,
+    "free_after_cleanup_MiB": 1379,
+    "other_owner_resources_changed": false,
+    "image_pull": false
+  },
+  "timeline": {
+    "source_started_at": "2026-10-17T03:47:21.953160253Z",
+    "source_finished_at": "2026-10-17T03:58:17.904777374Z",
+    "source_removed_at": "2026-10-17T03:58:18.391338+00:00",
+    "target_started_at": "2026-10-17T04:01:33.107575114Z",
+    "application_completed_at": "2026-10-17T04:05:37.233991+00:00",
+    "target_finished_at": "2026-10-17T04:06:06.828718632Z",
+    "target_removed_at": "2026-10-17T04:06:07.469917+00:00",
+    "source_verification_started_at": "2026-10-17T04:06:45.412410273Z",
+    "source_verified_at": "2026-10-17T04:06:50.637145+00:00",
+    "source_verification_finished_at": "2026-10-17T04:07:14.572802622Z",
+    "cleanup_completed_at": "2026-10-17T04:07:15.171450+00:00"
+  },
+  "runtime_asset_capabilities": {
+    "dense": "bytes_verified_no_inference",
+    "ocr": "bytes_verified_no_inference",
+    "parser_execution": "not_executed",
+    "rag_inference": "not_executed",
+    "reranker": "bytes_verified_no_inference",
+    "word_renderer": "pending_separate_pinned_sandbox_verification"
+  },
+  "limits": [
+    "fixed07 plus 15 reviewed SQL, not newest A2/Score/Scale composition",
+    "serial local developer drill, not production RPO/RTO or offsite backup qualification",
+    "no paid/provider model/OCR/parser/RAG execution; CPU model/font bytes only verified",
+    "Word renderer configured/bound, not rerun in this drill",
+    "no in-flight or unknown-fee resumption; work remains paused",
+    "pre-PUT intent closed before PUT but no fsync: process-failure traceability only",
+    "CLI application-check assumes source live; this constrained serial drill used staged package functions and separate receipts",
+    "sealed governance/certification schema and ACL fully preserved but nonempty sealed labels/certifications were not seeded"
+  ],
+  "evidence_index": {
+    "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/actual-code05-serial01/evidence-index.json",
+    "sha256": "5533e3df11748a2e6ce74b67e37b9257184ca93d368b5eba6291e8f6b14d206d"
+  }
+}

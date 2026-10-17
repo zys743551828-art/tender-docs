@@ -1,0 +1,97 @@
+{
+  "scope": "后续应用/用户验收任务，非软件执行证据",
+  "software_executed": 0,
+  "cases": [
+    {
+      "id": "PPR-AC-01",
+      "setup": "已有已确认关键矛盾，关闭检测后刷新、导出并尝试标准登记",
+      "expected": "统一风险清单与报告仍可定位该问题并处理；未处理仍阻断。模块普通催办停止。",
+      "requires": "应用/API与浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-02",
+      "setup": "关闭检测再创建一轮无此检测的评审，随后分别有效复检或有理由驳回",
+      "expected": "本轮标未运行，旧问题不自动解决；仅有效复检或有理由决定改变实际状态。",
+      "requires": "应用/API与浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-03",
+      "setup": "标注核心来源11项而抽取10项，当前10项均完成；人工补回遗漏项",
+      "expected": "只称已识别核心规则10/10，来源范围和遗漏分别表达；补回新规则包使旧评审过期。",
+      "requires": "应用/API与代表性人工标注来源",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-04",
+      "setup": "核心核对均有效，纯评分失败；另造兼有否决条件的同条款核心核对失败",
+      "expected": "前者保留评分缺口且可按核心闸门登记，后者阻断；不以评分资格代替核心条件。",
+      "requires": "应用/API",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-05",
+      "setup": "模型未验收条件下演示相同稿件的风险与完整章节三判断研究产物",
+      "expected": "A1、研究链路、模型业务验收三个独立状态；无合并评分通过绿标，禁止正式总分冒充。",
+      "requires": "应用与交付验收",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-06",
+      "setup": "真实官方标签尚未齐备",
+      "expected": "开发及有边界试用可继续，真实精度验收保持未通过并标所缺材料。",
+      "requires": "交付验收",
+      "status": "pending_application"
+    },
+    {
+      "id": "U01-A",
+      "setup": "取得修改依据，再取得实际投标正文，并离开页面从下载文件辨认",
+      "expected": "分别独立取得用途正确的产物，文件名和详情可区分正文、评审报告与批注审阅稿。",
+      "requires": "真实用户/浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "U02-A",
+      "setup": "外部DOCX转换失败后，用户自导出PDF继续",
+      "expected": "原Word保存明确、本轮未检查明确；就地补传同项目/逻辑文件目标PDF，无需重传招标；同名不自动认证同稿，当前评审指向实际PDF。",
+      "requires": "真实转换/对象存储/API/浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "U03-A",
+      "setup": "两个关键阻断与数项普通建议，处理第一个主要动作",
+      "expected": "无提示发现第二项关键风险，能区分普通建议；提交拦截不能替代可发现性观察。",
+      "requires": "真实用户/浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "U04-A",
+      "setup": "明确替代、局部变更、互相矛盾三组补遗",
+      "expected": "能看原页，仅确认有依据关系，冲突保留待核实；不按上传顺序猜。",
+      "requires": "真实用户/浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "U05-A",
+      "setup": "最终技术分、只有综合分、主体冲突三份官方材料",
+      "expected": "复用身份只核差异，未知不写零，预测不抄为官方分，冲突留待核验。",
+      "requires": "真实用户/浏览器",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-03-B",
+      "setup": "当前包存在漏提，使用补充并确认命令；分别注入逐字证据错误、跨bid/失效来源、条件歧义及并发补入",
+      "expected": "合法请求原子追加新包和新增人工confirmed，原条款决定等价沿用不伪造actor；旧评审过期需重新评审正文；同key只一包，非法全部拒绝且保留输入，两个当前包CAS仅一个通过；不自动放行或新增二次确认。",
+      "requires": "实际应用/API/真实证据校验",
+      "status": "pending_application"
+    },
+    {
+      "id": "PPR-AC-03-C",
+      "setup": "人工有据补入并确认的核心条款完成新包；随后触发同来源重提取但模型再次漏提，再分别变更补遗效力或出现来源冲突",
+      "expected": "来源仍有效且适用时人工条款不能因模型漏提消失；来源或适用变化有明确保留/待核验/重新确认状态和审计，未决关键问题不静默消失或放行；不把模型重提取当人工撤回。",
+      "requires": "实际提取应用/API/规则版本与来源效力夹具",
+      "status": "pending_application"
+    }
+  ]
+}

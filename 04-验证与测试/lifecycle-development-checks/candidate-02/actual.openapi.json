@@ -1,0 +1,662 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/bids/{bid_id}/lifecycle": {
+      "get": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Get Project Lifecycle",
+        "operationId": "getProjectLifecycle",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "业务阶段与归档维度；不代替实际提交事实",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectLifecycleView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Change Project Lifecycle",
+        "operationId": "changeProjectLifecycle",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectLifecycleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "业务阶段与归档维度；不代替实际提交事实",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectLifecycleView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/upload-batches/{batch_id}/closure-state": {
+      "get": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Get Batch Closure State",
+        "operationId": "getBatchClosureState",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Batch Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "明确结束未入库意图并保留暂存资料；不更改已入库记录",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchClosureView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/upload-batches/{batch_id}/close": {
+      "post": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Close Batch Keep Staging",
+        "operationId": "closeBatchKeepStaging",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Batch Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchClosureRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "明确结束未入库意图并保留暂存资料；不更改已入库记录",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchClosureView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "BatchClosureRequest": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "BatchClosureView": {
+        "type": "object",
+        "properties": {
+          "batch": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "bid_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "state": {
+                "enum": [
+                  "open",
+                  "verifying",
+                  "committed",
+                  "failed"
+                ]
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "id",
+              "bid_id",
+              "state",
+              "revision"
+            ],
+            "additionalProperties": false
+          },
+          "uploads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "state": {
+                  "enum": [
+                    "authorized",
+                    "uploaded",
+                    "verifying",
+                    "verified",
+                    "quarantined",
+                    "expired"
+                  ]
+                },
+                "verified_version_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "uuid"
+                },
+                "revision": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                },
+                "aborted_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "committed_binding_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "uuid"
+                }
+              },
+              "required": [
+                "id",
+                "state",
+                "verified_version_id",
+                "revision",
+                "aborted_at",
+                "committed_binding_id"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "closure": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "bid_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "batch_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "actor_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "command_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": [
+                  "id",
+                  "bid_id",
+                  "batch_id",
+                  "actor_id",
+                  "command_id",
+                  "reason",
+                  "created_at"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "available": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "batch",
+          "uploads",
+          "closure",
+          "available"
+        ],
+        "additionalProperties": false
+      },
+      "ProjectLifecycleRequest": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "enum": [
+              "start",
+              "end",
+              "terminate",
+              "archive",
+              "reopen"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "action",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "ProjectLifecycleView": {
+        "type": "object",
+        "properties": {
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "phase": {
+            "enum": [
+              "preparation",
+              "working",
+              "submitted",
+              "closed",
+              "terminated"
+            ]
+          },
+          "archived_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "allowed_actions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "start",
+                "end",
+                "terminate",
+                "archive",
+                "reopen"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "archive_blockers": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "OPERATIONS_IN_FLIGHT",
+                "UPLOADS_UNFINISHED",
+                "BATCHES_UNFINISHED"
+              ]
+            }
+          },
+          "batch_closure_available": {
+            "type": "boolean"
+          },
+          "unfinished_uploads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "batch_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "state": {
+                  "enum": [
+                    "authorized",
+                    "uploaded",
+                    "verifying",
+                    "verified"
+                  ]
+                },
+                "verified_version_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "uuid"
+                },
+                "aborted_at": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              },
+              "required": [
+                "id",
+                "batch_id",
+                "state",
+                "verified_version_id",
+                "aborted_at"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "unfinished_batches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "state": {
+                  "enum": [
+                    "open",
+                    "verifying"
+                  ]
+                },
+                "revision": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "id",
+                "state",
+                "revision"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "active_operations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "state": {
+                  "enum": [
+                    "queued",
+                    "running",
+                    "cancel_requested"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "kind",
+                "state"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "bid_id",
+          "phase",
+          "archived_at",
+          "revision",
+          "allowed_actions",
+          "archive_blockers",
+          "batch_closure_available",
+          "unfinished_uploads",
+          "unfinished_batches",
+          "active_operations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

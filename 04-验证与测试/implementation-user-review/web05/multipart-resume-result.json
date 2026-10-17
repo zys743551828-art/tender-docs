@@ -1,0 +1,560 @@
+{
+  "at": "2026-10-16T20:15:54.532476+00:00",
+  "parts": [
+    {
+      "at": "2026-10-16T20:15:37.027765+00:00",
+      "part_number": 2,
+      "path": "/api/v1/object-transfers/multipart/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts/2",
+      "bytes": 4217886
+    }
+  ],
+  "completes": [
+    {
+      "at": "2026-10-16T20:15:40.262220+00:00",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/complete",
+      "idempotency_key": "25af299b-e3de-42a7-8089-6556d90ea837",
+      "if_match": "\"upload:c89d5be5-e1fd-4e81-9f9d-a94fc69d9971:3\"",
+      "body_sha": "52cbeee441746796e39da83697aa903790f668ed9d44136da3d8acf7c2ca2c22",
+      "committed_status": 202,
+      "injected_ack_loss": true
+    },
+    {
+      "at": "2026-10-16T20:15:46.033765+00:00",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/complete",
+      "idempotency_key": "25af299b-e3de-42a7-8089-6556d90ea837",
+      "if_match": "\"upload:c89d5be5-e1fd-4e81-9f9d-a94fc69d9971:3\"",
+      "body_sha": "52cbeee441746796e39da83697aa903790f668ed9d44136da3d8acf7c2ca2c22"
+    }
+  ],
+  "state": {
+    "part_abort": false,
+    "lose_ack": false,
+    "ack_committed": true,
+    "ack_loss_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n外\n退出\n投标工作 / 投标项目\n投标项目\n项目档案\n评分研究\n企业知识\n资料工作区\n返回项目列表\n项目工作区\n用户05-region_mismatch-6e5726c669\n准备资料\n资料包 1\n上传资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n实交与成绩\n处理记录\n项目设置\n\n左右滑动可查看全部工作面，包括章节编制、实交与成绩。\n\n查证资料\n资料处理下一步\n完成本批资料核验并确认入库\n\n可直接上传已有PDF，不需要先设置目录、模板或企业知识。\n\n添加项目资料\n\n先选择文件，再核对用途。单文件不超过100 MiB，原件保存在私有存储。\n\nPDF 快速路径\n选择需要上传的资料\n当前仅支持PDF；请从Word导出PDF后上传\nuser05-large-three-pages.pdf\n12.0 MB · 此文件未完成\n\n沿用本次上传已固定的资料用途与入库目标，只接续原件传输。\n\n本次操作未完成\n\n暂时无法连接服务。已完成的资料仍保留，请稍后重试。\n\nNETWORK_ERROR\n同名文件不自动覆盖。需要替换时请选择对应文件的新版本。\n重试未完成的文件\n本批资料核验\n\n传输完成后由服务端核对原件。核验通过不表示已完成评审。\n\n待确认\nuser05-large-three-pages.pdf\n正在核验原件\n查询已收到的传输状态\n核对上传完成受理结果\n\n原件完整清单已提交，但受理响应尚未确认。此处会重放原请求，不新建上传，也不改用新稿。\n\n分片传输\n\n存储已收到 1 片／共2片，合计 8,388,608 字节。这是传输观测，不表示原件已通过完整摘要核验或已入库。\n\n已收到片号：1\n\n已入库资料 0\n\n查看每一个版本的原件与解析依据，不以文件名判断同稿关系。\n\n已核验文件经确认入库后，会在这里显示。\n资料入库与评审分别记录\n\n解析完成不表示核心规则已满足。进入评审工作面查看真实执行范围、风险与下一步；已有历史原件及评审身份保留。\n\n查看评审与风险",
+    "recovery_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n外\n退出\n投标工作 / 投标项目\n投标项目\n项目档案\n评分研究\n企业知识\n资料工作区\n返回项目列表\n项目工作区\n用户05-region_mismatch-6e5726c669\n准备资料\n资料包 1\n上传资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n实交与成绩\n处理记录\n项目设置\n\n左右滑动可查看全部工作面，包括章节编制、实交与成绩。\n\n查证资料\n资料处理下一步\n完成本批资料核验并确认入库\n\n可直接上传已有PDF，不需要先设置目录、模板或企业知识。\n\n添加项目资料\n\n先选择文件，再核对用途。单文件不超过100 MiB，原件保存在私有存储。\n\nPDF 快速路径\n选择需要上传的资料\n当前仅支持PDF；请从Word导出PDF后上传\n本批资料核验\n\n传输完成后由服务端核对原件。核验通过不表示已完成评审。\n\n待确认\nuser05-large-three-pages.pdf\n原件已核验，待入库\n调整入库目标\n确认 1 份资料入库\n处理已完成 · 资料处理，文件状态以各份资料记录为准。\n已入库资料 0\n\n查看每一个版本的原件与解析依据，不以文件名判断同稿关系。\n\n已核验文件经确认入库后，会在这里显示。\n资料入库与评审分别记录\n\n解析完成不表示核心规则已满足。进入评审工作面查看真实执行范围、风险与下一步；已有历史原件及评审身份保留。\n\n查看评审与风险"
+  },
+  "events": [
+    {
+      "at": "2026-10-16T20:15:33.715300+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.716041+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.825004+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.834386+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.838021+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.848182+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.853258+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.869475+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.872616+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.886366+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.889425+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.895550+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.928895+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.931542+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.955321+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.956397+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/e3b26cca-21d8-420c-813b-d115558adb68/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:33.959010+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:34.289718+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:34.299401+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.160076+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.195970+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.235247+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/layout",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.477221+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/layout",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.929663+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:35.969037+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:36.012385+00:00",
+      "method": "POST",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/authorizations",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:36.728327+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:36.756308+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:37.037826+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:37.047120+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:37.095362+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:37.096116+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:38.681710+00:00",
+      "method": "PUT",
+      "path": "/api/v1/object-transfers/multipart/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts/2",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:38.826566+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.742452+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.772521+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.829019+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.844788+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.886863+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:39.899295+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:40.223515+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:40.260030+00:00",
+      "method": "GET",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.071002+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.086547+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.342804+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.347374+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.863483+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:43.912877+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:44.743726+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:44.747319+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.192769+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.194040+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.283411+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.294684+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.311343+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.316876+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.342046+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.348529+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.357421+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.371216+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.392741+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.399577+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.476286+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.477461+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.494454+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:45.523685+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:46.110210+00:00",
+      "method": "POST",
+      "path": "/api/v1/uploads/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/complete",
+      "status": 202
+    },
+    {
+      "at": "2026-10-16T20:15:46.158561+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:48.168363+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/8f9139c7-3e30-4a62-976b-10207f963de4",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:48.246253+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:48.247285+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:48.284138+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:48.285478+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:50.221250+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/8f9139c7-3e30-4a62-976b-10207f963de4",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:50.245886+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:51.253556+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:51.270361+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:51.308103+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:51.309765+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:52.261013+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/8f9139c7-3e30-4a62-976b-10207f963de4",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:52.603474+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/e3b26cca-21d8-420c-813b-d115558adb68/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:52.940034+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:52.947912+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:54.237826+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:54.238637+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/upload-batches/b00a96da-37ae-415e-b619-36dd05246052",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:54.277058+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:15:54.279764+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    }
+  ]
+}

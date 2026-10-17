@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "97dd8683-36ab-4cb0-888e-bfbb40a6230d",
+  "fatal": {
+    "stage": "durable_prepare_cancel",
+    "type": "UndefinedColumn",
+    "message": "Independent frozen A1 probe incomplete; no private configuration or request credentials logged"
+  },
+  "probe_sha256": "b1aa04e864eb8811b4dc88ac761bb04fddf8c4bd5e13525f6cee7c56ccaf8ab1"
+}

@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all127_sources_and_loaded_required_origins_match",
+      "passed": true
+    },
+    {
+      "name": "wrong_approved_manifest_hash_rejected",
+      "passed": true
+    },
+    {
+      "name": "manifest_bytes_mutated_with_same_semantics_rejected_on_verify",
+      "passed": true
+    },
+    {
+      "name": "valid_manifest_hash_cannot_omit_required_provider",
+      "passed": true
+    },
+    {
+      "name": "duplicate_source_identity_rejected",
+      "passed": true
+    },
+    {
+      "name": "foreign_loaded_module_path_rejected_even_with_manifest_hash_valid",
+      "passed": true
+    },
+    {
+      "name": "actual_source_mutation_after_preflight_rejected",
+      "passed": true
+    },
+    {
+      "name": "full_manifest_verification_under_concurrent_two_key_limit",
+      "passed": true
+    },
+    {
+      "name": "foreign_bid_rejected_before_upstream",
+      "passed": true
+    },
+    {
+      "name": "preview_is_offline_and_declares_start_window_semantics",
+      "passed": true
+    },
+    {
+      "name": "cli_requires_explicit_manifest_sha",
+      "passed": true
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "runtime_candidate_sha256": "fe338be6eb4aa31c7af5cb949500ab3688c392c67e630694fc8f85327ccbee10",
+  "tool_sha256": "97d37e942c04007ee2dfbd218f5cab6a4bbb9e05e9d737608e2bbe08cd448e0f",
+  "probe_sha256": "93e31deab2bbe9d0757ff79e2edf1c71b3647c6b3e0554efe43f28c9c12ab803"
+}

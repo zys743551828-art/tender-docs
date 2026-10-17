@@ -1,0 +1,1692 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/scoring-capabilities": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Capabilities",
+        "operationId": "capabilities_api_v1_scoring_capabilities_get",
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreCapabilities"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/score-context": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Context",
+        "operationId": "context_api_v1_bids__bid_id__score_context_get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreInputContext"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/score-inputs": {
+      "post": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Create Input",
+        "operationId": "create_input_api_v1_bids__bid_id__score_inputs_post",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScoreInputRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreInputView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-inputs/{input_id}": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Get Input",
+        "operationId": "get_input_api_v1_score_inputs__input_id__get",
+        "parameters": [
+          {
+            "name": "input_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Input Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreInputView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-inputs/{input_id}/jobs": {
+      "post": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Start Job",
+        "operationId": "start_job_api_v1_score_inputs__input_id__jobs_post",
+        "parameters": [
+          {
+            "name": "input_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Input Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScoreJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreJobView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Get Job",
+        "operationId": "get_job_api_v1_score_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreJobView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-jobs/{job_id}/state": {
+      "post": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Change Job",
+        "operationId": "change_job_api_v1_score_jobs__job_id__state_post",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScoreJobChange"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreJobView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-jobs/{job_id}/result": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Get Result",
+        "operationId": "get_result_api_v1_score_jobs__job_id__result_get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreResultView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-jobs/{job_id}/shadow-context": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Get Shadow Context",
+        "operationId": "get_shadow_context_api_v1_score_jobs__job_id__shadow_context_get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "model_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Model Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreShadowContext"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-jobs/{job_id}/shadows": {
+      "post": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Save Shadow",
+        "operationId": "save_shadow_api_v1_score_jobs__job_id__shadows_post",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ShadowRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreShadowView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score-shadows/{shadow_id}": {
+      "get": {
+        "tags": [
+          "complete scoring"
+        ],
+        "summary": "Get Shadow",
+        "operationId": "get_shadow_api_v1_score_shadows__shadow_id__get",
+        "parameters": [
+          {
+            "name": "shadow_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Shadow Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Complete judgment software; formal qualification unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScoreShadowView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ScoreInputRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "review_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Review Id"
+          },
+          "historical_input_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Historical Input Id"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "ScoreInputRequest",
+        "type": "object"
+      },
+      "ScoreJobChange": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "action": {
+            "enum": [
+              "pause",
+              "resume",
+              "cancel"
+            ],
+            "title": "Action",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "action"
+        ],
+        "title": "ScoreJobChange",
+        "type": "object"
+      },
+      "ScoreJobRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "budget": {
+            "pattern": "^(?:0|[1-9][0-9]{0,7})(?:\\.[0-9]{1,12})?$",
+            "title": "Budget",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "budget"
+        ],
+        "title": "ScoreJobRequest",
+        "type": "object"
+      },
+      "ShadowRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "model_id": {
+            "format": "uuid",
+            "title": "Model Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "model_id"
+        ],
+        "title": "ShadowRequest",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "ScoreCapabilities": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_configured": {
+            "type": "boolean"
+          },
+          "complete_judgment_registration": {
+            "type": "boolean"
+          },
+          "score_dispatch_configured": {
+            "const": false
+          },
+          "numeric_prediction_available": {
+            "const": false
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "schema_configured",
+          "complete_judgment_registration",
+          "score_dispatch_configured",
+          "numeric_prediction_available",
+          "formal_eligibility",
+          "paid_execution_enabled"
+        ]
+      },
+      "ScoreInputContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "current_body_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "current_material_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "current_rule_set_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "current_review_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phase": {
+            "enum": [
+              "preparation",
+              "working",
+              "submitted",
+              "closed",
+              "terminated"
+            ]
+          },
+          "archived_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "identity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "bidder_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "round_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "engineering_project_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "bidder_name": {
+                "type": "string"
+              },
+              "engineering_title": {
+                "type": "string"
+              },
+              "region": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "engineering_type": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "lot": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "round_no": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "binding_status": {
+                "enum": [
+                  "pending",
+                  "confirmed"
+                ]
+              },
+              "authority_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "bidder_id",
+              "round_id",
+              "engineering_project_id",
+              "bidder_name",
+              "engineering_title",
+              "region",
+              "engineering_type",
+              "lot",
+              "round_no",
+              "binding_status",
+              "authority_id",
+              "digest"
+            ]
+          },
+          "judgment_method_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "price_config_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "full_chapters_required": {
+            "const": true
+          },
+          "valid_replicates_required": {
+            "const": 3
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "bid_id",
+          "current_body_id",
+          "current_material_id",
+          "current_rule_set_id",
+          "current_review_id",
+          "phase",
+          "archived_at",
+          "identity",
+          "judgment_method_digest",
+          "price_config_digest",
+          "full_chapters_required",
+          "valid_replicates_required",
+          "formal_eligibility",
+          "paid_execution_enabled"
+        ]
+      },
+      "ScoreInputView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "actor_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "review_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "historical_input_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "origin": {
+            "enum": [
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "method_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "technical_maximum": {
+            "type": "null"
+          },
+          "maximum_verified": {
+            "const": false
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "input_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "execution_key": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "rule_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "call_count": {
+            "type": "integer",
+            "minimum": 3,
+            "maximum": 3000
+          },
+          "conservative_budget": {
+            "type": "string"
+          },
+          "currency": {
+            "const": "USD"
+          },
+          "fee_basis": {
+            "const": "conservative_peak_cache_miss_upper_bound"
+          },
+          "current": {
+            "type": "boolean"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "actor_id",
+          "review_id",
+          "historical_input_id",
+          "origin",
+          "method_digest",
+          "technical_maximum",
+          "maximum_verified",
+          "created_at",
+          "input_digest",
+          "execution_key",
+          "rule_count",
+          "call_count",
+          "conservative_budget",
+          "currency",
+          "fee_basis",
+          "current",
+          "formal_eligibility",
+          "paid_execution_enabled"
+        ]
+      },
+      "ScoreJobView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "input_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "command_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_by": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "review_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "historical_input_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "state": {
+            "enum": [
+              "queued",
+              "running",
+              "paused",
+              "succeeded",
+              "cancelled",
+              "failed"
+            ]
+          },
+          "execution_key": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "generation": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "fence": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "budget": {
+            "type": "string"
+          },
+          "reserved_fee": {
+            "type": "string"
+          },
+          "estimated_fee": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finished_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_current": {
+            "type": "boolean"
+          },
+          "reused_calls": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "calls": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "state": {
+                  "enum": [
+                    "reserved",
+                    "succeeded",
+                    "not_sent",
+                    "unknown"
+                  ]
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "state",
+                "count"
+              ]
+            }
+          },
+          "result": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "digest": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": [
+                  "digest",
+                  "created_at"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fee_basis": {
+            "const": "usage_price_estimate_not_invoice"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "input_id",
+          "command_id",
+          "created_by",
+          "bid_id",
+          "review_id",
+          "historical_input_id",
+          "state",
+          "execution_key",
+          "generation",
+          "fence",
+          "budget",
+          "reserved_fee",
+          "estimated_fee",
+          "created_at",
+          "finished_at",
+          "source_current",
+          "reused_calls",
+          "calls",
+          "result",
+          "fee_basis",
+          "formal_eligibility",
+          "paid_execution_enabled"
+        ]
+      },
+      "ScoreResultView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "input_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "result_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source_current": {
+            "type": "boolean"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "package_digest": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "valid_replicates": {
+                  "const": 3
+                },
+                "judgments": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "replicate": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 3
+                      },
+                      "call_id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "payload": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "band_id": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "reason": {
+                            "type": "string"
+                          },
+                          "coverage": {
+                            "const": "complete"
+                          },
+                          "status": {
+                            "const": "valid"
+                          },
+                          "evidence": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "evidence_id": {
+                                  "type": "string",
+                                  "format": "uuid"
+                                },
+                                "quote": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "evidence_id",
+                                "quote"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "band_id",
+                          "reason",
+                          "coverage",
+                          "status",
+                          "evidence"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "replicate",
+                      "call_id",
+                      "payload"
+                    ]
+                  }
+                },
+                "prediction": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "mode": {
+                      "const": "unavailable"
+                    },
+                    "reasons": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "reasons"
+                  ]
+                }
+              },
+              "required": [
+                "package_digest",
+                "valid_replicates",
+                "judgments",
+                "prediction"
+              ]
+            }
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "prediction_hidden": {
+            "type": "boolean"
+          },
+          "features": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "schema": {
+                "const": "complete-three-band-features/1"
+              },
+              "status": {
+                "const": "unavailable"
+              },
+              "values": {
+                "type": "null"
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "schema",
+              "status",
+              "values",
+              "reasons"
+            ]
+          },
+          "prediction": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mode": {
+                "const": "unavailable"
+              },
+              "value": {
+                "type": "null"
+              },
+              "intervals": {
+                "type": "null"
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "mode",
+              "value",
+              "intervals",
+              "reasons"
+            ]
+          }
+        },
+        "required": [
+          "job_id",
+          "input_id",
+          "result_digest",
+          "created_at",
+          "source_current",
+          "items",
+          "formal_eligibility",
+          "prediction_hidden"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "prediction_hidden": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "features"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "prediction"
+                    ]
+                  }
+                ]
+              }
+            },
+            "else": {
+              "required": [
+                "features",
+                "prediction"
+              ]
+            }
+          }
+        ]
+      },
+      "ScoreShadowContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "model_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "route_key": {
+            "type": "string"
+          },
+          "route_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "input_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "score_result_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "model_artifact_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "method_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_current": {
+            "type": "boolean"
+          },
+          "model_current": {
+            "type": "boolean"
+          },
+          "route_current": {
+            "type": "boolean"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "additional_model_calls": {
+            "const": 0
+          },
+          "numeric_prediction_available": {
+            "const": false
+          }
+        },
+        "required": [
+          "job_id",
+          "model_id",
+          "route_key",
+          "route_revision",
+          "input_digest",
+          "score_result_digest",
+          "model_artifact_digest",
+          "method_digest",
+          "source_current",
+          "model_current",
+          "route_current",
+          "formal_eligibility",
+          "additional_model_calls",
+          "numeric_prediction_available"
+        ]
+      },
+      "ScoreShadowView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "job_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "model_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_by": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "route_key": {
+            "type": "string"
+          },
+          "route_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "historical_snapshot": {
+            "const": true
+          },
+          "prediction_hidden": {
+            "type": "boolean"
+          },
+          "additional_model_calls": {
+            "const": 0
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "comparison": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "schema": {
+                "const": "persisted-score-shadow/1"
+              },
+              "job_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "model_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "input_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "score_result_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "model_artifact_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "method_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "prediction": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "mode": {
+                    "const": "unavailable"
+                  },
+                  "value": {
+                    "type": "null"
+                  },
+                  "intervals": {
+                    "type": "null"
+                  },
+                  "reasons": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "mode",
+                  "value",
+                  "intervals",
+                  "reasons"
+                ]
+              },
+              "formal_eligibility": {
+                "const": "unavailable"
+              }
+            },
+            "required": [
+              "schema",
+              "job_id",
+              "model_id",
+              "input_digest",
+              "score_result_digest",
+              "model_artifact_digest",
+              "method_digest",
+              "prediction",
+              "formal_eligibility"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "job_id",
+          "model_id",
+          "created_by",
+          "bid_id",
+          "route_key",
+          "route_revision",
+          "digest",
+          "created_at",
+          "historical_snapshot",
+          "prediction_hidden",
+          "additional_model_calls",
+          "formal_eligibility"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "prediction_hidden": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "not": {
+                "required": [
+                  "comparison"
+                ]
+              }
+            },
+            "else": {
+              "required": [
+                "comparison"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

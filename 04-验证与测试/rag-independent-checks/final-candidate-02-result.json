@@ -1,0 +1,69 @@
+{
+  "status": "passed_scoped_rag_mechanisms_and_live_pdf_retrieval",
+  "blocking_findings": 0,
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-02/candidate.json",
+    "sha256": "03cbcf424b021d91c08d398e4a482b38b957c7fa0def1c6f2be7a86bd095e101"
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/replay-candidate-02/result.json",
+      "sha256": "b2a8fc52879ab6f26be784278fc5bf6a7aba720c8e5908e8d94eddab223334e1"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/mechanisms-candidate-02/result.json",
+      "sha256": "5650b91b074a8e8e4f41508c7d6c03c099ae890582b1777ddadf8b9e720ebd39"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/races-candidate-02/result.json",
+      "sha256": "dac18f538c0819deefffd5fe84d259ddf2b0f502e2f3291aa78f548400961443"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/live-candidate-02-verified/result.json",
+      "sha256": "4f63a8926a66387fd3b1d2d66f4c46cdad785935c99f39687f69301cc096edc2"
+    }
+  ],
+  "database_schema_observation": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/database-identity/actual-database-schema.json",
+    "sha256": "020fc8ea388c159e4f7ba0be8ebb60d7839e47ed4583f4cde0b54ae4b92e67a6"
+  },
+  "source_sql_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/database-identity/source-sql-manifest.json",
+    "sha256": "002a04b89e357f9b130417c2dbfb7d3d69a59355e56cee41f0577f1b45fc5c28"
+  },
+  "retained_counterexample": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/replay-candidate-01/result.json",
+    "sha256": "b646a0a53b8c38b6056f3c626db8a65177a59ec40bbab5244c6ea7c92232919d"
+  },
+  "retained_probe_failures": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/live-candidate-02/failure.json",
+      "sha256": "e7ad6a0d1a8477a9f428ccde3310cca1d893bf9c86ad480655bbc86a837c3e79"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/live-candidate-02-final/result.json",
+      "sha256": "0f71d49d36e648a9e61b6042c2ad35a84bd7deb2cbe3c3e2795a2f03a7f621d3"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/live-candidate-02-final/qa-assertion-note.json",
+      "sha256": "129e0c850db6ff04f58c804b86462493a26c8948d25c3a2fc6a313b0c38af51b"
+    }
+  ],
+  "paid_generation_calls": 0,
+  "verified": [
+    "Real local BGE dense1024 finite L2, fixed profile, lexical SQL exact whitelist materialization and real reranker or explicit fallback",
+    "Restricted distinct API/Worker LOGIN; source graph future/withdrawn/group/purpose/cross-project and inclusive/exclusive time bounds",
+    "Compute outside DB graph lock, publish with no HTTP, apply graph lock until commit; no resurrection on reindex",
+    "Exact quote and physical page citation validation, profile mismatch rejected before inference",
+    "Same-key replay unchanged200; still-eligible ancestor head mutation409",
+    "Controlled actual-ASGI races after real BGE retrieval: another connection changes body/material scope;409 with trace and command rollback",
+    "Actual TCP8802 live73paths80ops matches export; anonymous401/missingCSRF403; own real OSS PDF V2 query partial hit matches existing parse/page/exact text and same-key revalidation"
+  ],
+  "not_verified": [
+    "Labeled business retrieval recall/ranking quality",
+    "Enterprise reusable knowledge and complete formal scoring",
+    "RAG browser final candidate while frontend A2 source is changing",
+    "Full review/prepare paid workflows or consumer scheduling"
+  ],
+  "fixture_boundary": "Mechanism/race tests use explicit synthetic SQL original/evidence fixtures with real BGE and PG, not actual PDF parsing. Live HTTP uses separately ingested synthetic OSS PDF. Controlled race hook is in independent test only; product source unchanged."
+}

@@ -1,0 +1,11 @@
+# 模型登记路由SQL复核
+
+结论：草案B允许由PM仅在全新隔离库初始化；静态阻塞0。输入[原字节副本](observed-release-draft-B.sql) SHA256 `80d5c94246bbfe4c47f320c9ad749eea2328a0c66b30a5614556168e0398d936`，逐字比较A→B。没有执行DDL或数据库探针，不替代实际语法/LOGIN权限验证。
+
+A缺少的tender_api对lock_scope(uuid[])执行权已单独补齐，未扩大CPU/Worker/score角色权限。route命令对必填NULL、动作、目标组合、非负expected_revision作前置校验；publish必须有模型、suspend必须无模型，null目标不能携cert。rollback要求已有route，非null候选必须精确等于旧rollback_model_id，明确null回退允许。suspend保留当前或已存在的rollback候选；实际恢复仍核当前来源及认证。
+
+CAS仍在91143串行锁内读取真实route revision；候选/当前/rollback的全部真实scope先合并排序锁bid，再核current_cohort与图。revision不匹配拒绝，不写事件或route。NULL新目标只表示不使用模型，不授正式资格。
+
+登记与scope/digest逻辑未改；shadow仍不写design.model_routes。非null business仍须real、独立certification和accepted模型配对，当前没有业务铸造certification入口。baseline API宽写权的既有边界按A报告保留，本结论只覆盖受控registry authority路径。方法SHA相同也不能替代认证，不声明实际影子/score producer已实现。
+
+fresh阶段必须以实际非owner API验证helper正向；CPU/研究/score角色直接调用拒绝；覆盖同revision竞争、非法NULL/动作组合0effect、null暂停/回退单调revision、synthetic非null business拒绝。模型对象实际字节与模型加载器、应用API、资格授予及业务评分另审。禁止热改既有库，A原件和记录保持。

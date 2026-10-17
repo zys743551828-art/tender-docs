@@ -1,0 +1,122 @@
+{
+  "scope": "开发自测，专用开发PG/Kafka/S3；不是独立验收",
+  "quality": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "pytest": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "pure_tests": 4,
+    "real_integration_tests": 1,
+    "duration_seconds": 3.25
+  },
+  "actual_integration": [
+    "Cookie/会话恢复/CSRF拒绝",
+    "PG创建与幂等重放",
+    "真实S3签名PUT",
+    "真实Kafka→Worker核验与收据",
+    "文件版本序号与head修订分离的批次CAS提交",
+    "PDF物理页文字及OCR/表图partial缺口",
+    "真实返回对象JSON Schema验证",
+    "模型未配置503及退出后401"
+  ],
+  "not_claimed": [
+    "multipart",
+    "SSE接口",
+    "OCR/表图识别",
+    "完整核心评审/RAG/正式评分",
+    "正式提交/成绩",
+    "独立故障/并发/生产恢复验收"
+  ],
+  "warnings": [
+    "上游Starlette AnyIO alias及botocore.utcnow弃用警告，不影响本次断言"
+  ],
+  "actual_openapi": {
+    "path": "apps/api/implemented.openapi.json",
+    "sha256": "75c280f0422630ab8a8173bcaa03fc74e86a4d9b7c589af3ba1b223a5140a09e",
+    "paths": 24,
+    "operations": 25
+  },
+  "sources": [
+    {
+      "path": "apps/api/README.md",
+      "sha256": "b5091ee9ed5aa896f2a79943ea0e919152b98f880277b5a79a8b678e93055611"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "53edc0b60ad9c45ec156257e05e8c1bf5028f55ae1553a3d95d079fa388c2490"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "ebbddf7e866c61ed0f01e952be8d2827ded6ad0f41ffc82ed5f6fb8e305b01cc"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "86cbc8059f4640540070eacfec65b6c82229c7512c9c8d54a019e02026f453df"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "2e88b08836d00b9618d04cb75ed7749ceabc952a706a5041ed1ea7c8991278fa"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "30e3d70f5f87e5a8f7d47a9258d62cc3c9c69962bd0d8e9d1d0999bd3635bbeb"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "6ec8285a122848b29dd52bc39b0bf27d794273650aba02b75e005d98015607e8"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "30ab9a451b5e8ec2ebf3c8961675715398d5d3a34e30981766ef2e3b825c3bd0"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "03819df24d185ac4d446fcfa254047720a2d9063129a62ed4b11272b3b1859ed"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "81ea4155ed0463359809353d0ce3f20d6f1f556ccf9c3ef6f7ab3239e6bcd448"
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "sha256": "c9f10634bdfa1a8a74a9cd6423f0b1ab030aa51fef5c96c24d7345b80de1db5c"
+    }
+  ]
+}

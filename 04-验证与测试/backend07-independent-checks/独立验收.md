@@ -1,0 +1,9 @@
+后端07本批独立机制验收通过，无生产阻塞。绑定候选 `1804eca4c4325bf8666d4c4c2cdbe60e59110b407a1cc03e0f1ee72c0f99e1bd` 的27份自有源和308份固定运行输入；实际加载模块均位于独立运行根。冻结main冷导出实际161路径、188操作、310 Schema，摘要 `3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7`。完整字节和执行证据见[final-result.json](final-result.json)。
+
+14个自有场景通过真实非owner PG/ASGI/Worker验证：已观察到归档事务持有bid锁时普通API真实等待，提交后拒绝新批次；先进入的上传意图阻止归档；旧ACK只返回原结果；迟到Worker不发布已核验版本，并诚实记录失败收据。关闭批次的保留原件须显式进入全新批次/upload/version/binding，原件blob仍相同且旧批次不复活，新批次实际commit通过。分片故障留下的interim ACK在终止后不能再次调用native端口。
+
+共享engine正式登记的只读助手在归档项目可完成回答，全程无临时adapter；authoring旧lease也不能绕过关闭安排新模型预留。TASK_INPUT_GUARD两个真实入口在auto_review=true的资料漂移后保留冻结输入并使旧运行过期。比较lane拒绝具有合法协议身份的prepare/review/assistant/authoring消息，零收据/模型调用，独立topic/group策略核对一致。归档后的显式线下错传事实补录和身份更正仍可用，不伪造通过、不重开工作、不改旧快照。
+
+原QA失败均保留：把正常失败收据误认成发布、查询了不存在的response_headers列、误用HTTP视图字段；只修QA后完成相应增量，没有改被测源。
+
+全程0真实模型、0OSS、0消费者、0SQL变更或owner业务修权，未动8806/5176。对象/分片故障为Memory显式端口，模型为MockTransport。生命周期router仅在测试进程明确组合，冻结main仍未公开。该14场景不是全producer或全生命周期放行；真实Kafka、剩余构建/报告/知识组合、F04、Word/HIST、前端和正式模型效果仍需后续独立验收。

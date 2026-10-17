@@ -1,0 +1,74 @@
+{
+  "scope": "文档、来源与执行产物身份检查；不重跑实验，不代表整套产品或真实评分验收",
+  "passed": true,
+  "requirements_traced": 54,
+  "official_repositories": 28,
+  "official_files": 77,
+  "source_files_rehashed": 0,
+  "source_rehash_status": "未提供缓存，仅核对清单，未重新访问远端",
+  "supplemental_source_checks": [
+    {
+      "manifest": "orchestration-sources.json",
+      "repositories": 6,
+      "files": 44,
+      "files_rehashed": 44,
+      "cache_status": "已复核原文缓存"
+    },
+    {
+      "manifest": "product-architecture-sources.json",
+      "repositories": 4,
+      "files": 26,
+      "files_rehashed": 26,
+      "cache_status": "已复核原文缓存"
+    }
+  ],
+  "web_source_checks": {
+    "manifest": "product-web-sources.json",
+    "files": 14,
+    "files_rehashed": 14,
+    "extracted_texts_rehashed": 14,
+    "cache_status": "已复核原文；提取文本按可用性单独计数",
+    "scope": "官方网页披露与云厂商客户文章；未运行产品、真实模型或生产故障试验"
+  },
+  "govdash_reference_checks": {
+    "pages": 8,
+    "images": 10,
+    "artifacts_rehashed": 18,
+    "cache_status": "已核对公开参考缓存",
+    "scope": "GovDash产品和界面公开对标；8份正文与10项原始界面图片；不是登录产品测试或软件验收"
+  },
+  "isolated_probe_scripts": 5,
+  "result_groups": 5,
+  "local_links_checked": 124,
+  "failures": [],
+  "input_hashes": {
+    "01-背景与市场研究/成熟AI系统与技术组件调研.md": "05cfbe533600244832330712ab1baea9e3a4d8c2eaddbd2e4ea5a05e5559175b",
+    "05-技术与设计/AI投标工作台全新系统技术方案.md": "d1a9876ff84c8c68dc7e6e5c7368399fa0d2e7b8171b78494d9e0cb8fc43a3e0",
+    "04-验证与测试/全新技术方案验证与自审.md": "00890989db4bd67029eebed64f792c60c98a79256331e34037e6397cf770d8c8",
+    "README.md": "a5a8c5e8fb6d9883f9e7af1a7e430e1f6f57bf9aa976cbb0410ce00d8d7b349d",
+    "04-验证与测试/architecture-checks/README.md": "a373ede84f1a5186347438058278780217f2f0e97546ff0763e338d4ee3adcbe",
+    "05-技术与设计/评分预测训练与验收方案.md": "5dcafcea30e92d40655de254e87c37ed6ab439c42c3cce5579de9c5f422afa62",
+    "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+    "05-技术与设计/LangGraph路线技术方案.md": "732957577f9f692cc9265d8d0652f2419bd8abc510056c2916bec59f9ad155c9",
+    "01-背景与市场研究/AI执行与工作流选型复核.md": "cc9eeb2bc93f26768b2a56897d0f8fc62ed765dcb989ae33ab44c5d3ee5dde29",
+    "01-背景与市场研究/相似AI产品技术路线核查.md": "28114b8d25283fdc42e9ac0cf88cae8713593a5a17decc98ec01eaa2700071a6",
+    "00-项目管理/决策与依赖.md": "e210590e048a27682bbdda14e39f924f549912143695c64e71958cff56e0f1d9",
+    "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+    "04-验证与测试/architecture-checks/orchestration-sources.json": "ae3d7477c45b17353475ab7e407b13b025f2ed6877154862867d2c2f07d90a6f",
+    "04-验证与测试/architecture-checks/product-architecture-sources.json": "ddb6b232d4e45c2ab7172eae50e5248ca237bca8e7cbaa00b5be11e441083333",
+    "04-验证与测试/architecture-checks/product-web-sources.json": "dddd5c00eb82146f559ac56b091b1304a6f0178b515d7676392c120ba207d8f9",
+    "04-验证与测试/architecture-checks/govdash-product-sources.json": "48b40af669869747705335bcb6cc75ff5de3935ce858e941c83a3535eebf02e1",
+    "05-技术与设计/assets/govdash-projects.svg": "62721f001ae9eeea2481d8fdc330a98978aed7d1694c1051909b2eeaad43e5b4",
+    "05-技术与设计/assets/govdash-projects.png": "5a35155ad840ffe9efa4f71a7b4c99773b666ec14927fd304f82df9d1e9eb039",
+    "05-技术与设计/assets/govdash-workspace.svg": "95e1a0635458208c318b366baaf54eeb7c22d2288b3355bcaedf5770be28fa10",
+    "05-技术与设计/assets/govdash-workspace.png": "dee3638e8111342312c3fbcf7ed8b19fa6faef61870d68314e2bd5ccf8353603",
+    "05-技术与设计/assets/fused-review.svg": "a3206ced4a1c750cd155925799c4637e27584fadcfe91d6e3a5b0252a187334b",
+    "05-技术与设计/assets/fused-review.png": "99d26a4cdc524ebcd87f6b293faddd4f34d71687f7f4773038cb731de8a2ab0f",
+    "02-业务与产品/AI投标工作台PRD.md": "900172789bca1bbacee8c0b62554ef1018af4f7c17b5f6d4eef9ba14c0e66926",
+    "04-验证与测试/architecture-checks/official-sources.json": "06380ba48dbeae6e8f08a3f3a4b588aea136740b1500f5a4b05bbb4088dd52de",
+    "04-验证与测试/architecture-checks/requirements-trace.json": "1bfbb754b65f588d1002bd850694caf4b75fcb7bcf68f954eda13b15ed62868f",
+    "04-验证与测试/architecture-checks/run-manifest.json": "67c09287026b23b311715cbe2b1efcd7c26c2e70376bfd343e2d57a429113a83",
+    "04-验证与测试/architecture-checks/check_design_assets.py": "ebac7a34fa4150a784d26378cfcb43faca7a6a0c869b769932bd6160b8b1dc94",
+    "04-验证与测试/architecture-checks/fetch_official_sources.py": "d666687d21f1c0ce5ef1a2367f8736fc4df7f9f7acba5f4bcd5f64d062aaae50"
+  }
+}

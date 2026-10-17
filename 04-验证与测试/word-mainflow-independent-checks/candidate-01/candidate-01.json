@@ -1,0 +1,219 @@
+{
+  "candidate": "word-mainflow-01",
+  "status": "developer checks passed; independent QA/architecture pending; no service deployed",
+  "own_source_count": 21,
+  "own_sources": [
+    {
+      "path": "apps/api/main.py",
+      "sha256": "8a5392a9188ea89c58a0945a8fce83488f6f7967d284c4a882b578f9c52523d9",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/main.py"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "bb2d4316bcbd0847023240dd5994a44f7c041e0e9a3039461411da887ef1b18b",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/views.py"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "d4031c969022a07a95f891dbdb79e28e0b3f7c29da1f2c35f268d614c5d755ab",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/export_openapi.py"
+    },
+    {
+      "path": "apps/api/object_transfer.py",
+      "sha256": "45beec66bd277e84cba51a3715ea9adf8d418dbe1d6137f955f449b7d66fe0d5",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/object_transfer.py"
+    },
+    {
+      "path": "apps/api/multipart_routes.py",
+      "sha256": "362067f62119d7a154ae15881a32eb342bf6dd325417aae6b2aa9347c137a07f",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/multipart_routes.py"
+    },
+    {
+      "path": "apps/api/retained_upload_routes.py",
+      "sha256": "c3e02e0f71193d0383097063f654997820ccf38dc7940385c2b202c39717888f",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/retained_upload_routes.py"
+    },
+    {
+      "path": "apps/api/word_coordinator.py",
+      "sha256": "833702bd276d5699ec3f6727f7355ffacdaa6d92ec012e710ea1ecaaa3082fbe",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/word_coordinator.py"
+    },
+    {
+      "path": "apps/api/word_material_routes.py",
+      "sha256": "a51a4e22a619b50a7a9e7ded71dc2d23e3ca40c18f4df8e12d88959c26d4b197",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/api/word_material_routes.py"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "d1255be436920489d9e06b0dfb9fda067f1fb607e5cf2c54e212508d938a67af",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/worker/handlers.py"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "8fa3fe1b04fc58aef2b6fa5915029a982d96f19a0b749824e1222de95b748b9b",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/worker/engine.py"
+    },
+    {
+      "path": "apps/worker/execution-policy-word.json",
+      "sha256": "c1f2d12fc4e5f893232f3854c4798491fa7a72f9e3af1db50ee0b2101bdf635f",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/apps/worker/execution-policy-word.json"
+    },
+    {
+      "path": "packages/domain/word_materials.py",
+      "sha256": "a7fa4125847ab9f1f53ad88862e41d86de9f2190a9966ce08131cc2cf6dcd3e5",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/domain/word_materials.py"
+    },
+    {
+      "path": "packages/domain/word_lineage.py",
+      "sha256": "dc4cc726e53ad24678736f029c2075235ee48de4ef9f55d3a7679e93ebe4a621",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/domain/word_lineage.py"
+    },
+    {
+      "path": "packages/domain/word_transport.py",
+      "sha256": "cda7b73d13dad6eba7a5278cd732ba8dc1ba64e13a1a08ef1f28147948a935bc",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/domain/word_transport.py"
+    },
+    {
+      "path": "packages/domain/reviews.py",
+      "sha256": "81e55c4551005c3a7f250cd0200b437016983318c0f4d6d2c7b4bbc737d16a39",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/domain/reviews.py"
+    },
+    {
+      "path": "packages/uploads/service.py",
+      "sha256": "f8de1654cc9386c01db2c4a3938946afa034514dd962a455e2820c4dd8f748b9",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/uploads/service.py"
+    },
+    {
+      "path": "packages/uploads/native.py",
+      "sha256": "733b7852c82b70753fe7df214e7798ff38353891a858ee12112717e1b82f2732",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/packages/uploads/native.py"
+    },
+    {
+      "path": "tests/test_object_transfer.py",
+      "sha256": "a5be2eaecbafd65634a6a86eebf46c04355295fc18a5cca0555dc8aae205d64f",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/tests/test_object_transfer.py"
+    },
+    {
+      "path": "tests/test_word_materials_integration.py",
+      "sha256": "17d8733841304a930f9949252d5ef1cc4253f6e09063dc193fbc6e029fb25aee",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/tests/test_word_materials_integration.py"
+    },
+    {
+      "path": "tests/test_word_mainflow_integration.py",
+      "sha256": "38f7c1b509c16bdd9fe4be8291aadc829d31ed5cd73d8436551403ab90daad03",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/tests/test_word_mainflow_integration.py"
+    },
+    {
+      "path": "docs/word-mainflow-bridge-protocol.md",
+      "sha256": "855a5eb63fd87c7b2130f7bfabfa5e63dbb809192ee4b241e2ccf0091d8c28c9",
+      "layer": "bridge-own",
+      "frozen_path": "frozen-own-01/docs/word-mainflow-bridge-protocol.md"
+    }
+  ],
+  "fixed_runtime_root": "/workspace/tender-workbench/docs/word-mainflow-development-checks/runtime-preview-02",
+  "source_count": 335,
+  "runtime_manifest": {
+    "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/source-preview-02.json",
+    "sha256": "d176e49a1e6a75ccb0ee5bac06d033689b1adf53e5a79ec7769ab4fabe8f6132"
+  },
+  "base": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-05/pricing-candidate-05.json",
+    "sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee"
+  },
+  "word03": {
+    "path": "/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/candidate.json",
+    "sha256": "b12e2e456ead217296510ae6fde3f7747198d75adffe42706bb3692c28406fa6"
+  },
+  "word_request_order04": {
+    "path": "/workspace/tender-workbench/docs/word-request-order-development-checks/candidate-04.json",
+    "sha256": "a8c6f52ae0ad6e430ee32a4005170d9ca3832085716f00307b290f9ccd0425bd"
+  },
+  "actual": {
+    "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/actual-02.openapi.json",
+    "sha256": "e1f7c5389386d7a9224ffc469bd878500a79e819780fee8c581781f73758e602",
+    "paths": 165,
+    "operations": 192,
+    "schemas": 315
+  },
+  "validation_only_fixture_manifest": {
+    "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/validation-fixtures.json",
+    "sha256": "dd2dd2f7b7424505dd3122824c41aefb5f87a41a04752a281924ba50d422ce74"
+  },
+  "renderer_profile_public": {
+    "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/renderer-profile-02.json",
+    "sha256": "8f97a6a660cf06a6d4fdaeb6ba6c0d1b5027124e2db416c1c223fdc15fea4528"
+  },
+  "checks": {
+    "mainflow_real_nonowner_pg_http": 13,
+    "native_oss_full_pipeline_cases": 1,
+    "explicit_memory_port_for_other_cases": true,
+    "request_order_pg": 3,
+    "pure": 124,
+    "static_quality": true,
+    "schema_refs_complete": true,
+    "fixed_sources_unchanged": true
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/fixed-mainflow-02.xml",
+      "sha256": "2df4fb614caf1fff10bbbd2de91259cdc7f6de90f173f428ca75b2c502edeaa8"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/fixed-pure-02-complete.xml",
+      "sha256": "73fdf8c4a06a97086bbf1badcb6c882205f3de389f921570a95eeb4fc7f5e647"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/quality-02.json",
+      "sha256": "c114f69f7a833eca9681312b11f773aa98f0af4ffb17b48e7aac49eff2eef91d"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/contract-check-02.json",
+      "sha256": "3c0c564dee940c4d7d6ee3c7bcf8cafa858a6986e72a55c4f93cc4f9508b14c1"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/native-readback-02.json",
+      "sha256": "1911fd5ab1ea6b8431bca638f82ba17af9e7848139fc92281b3555762273e9ba"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-request-order-development-checks/fixed-preview03.xml",
+      "sha256": "107fab254ae0e08d396f9f35beb72fd752f49574f9c011e7f815e6bdef25c8fa"
+    },
+    {
+      "path": "/workspace/tender-workbench/docs/word-request-order-development-checks/fixed-preview03-order-result.json",
+      "sha256": "2e3e4d93475bbebb93fa99b0382b3d29c95e010059bca60bf800b00af6c4e9a0"
+    }
+  ],
+  "handoff": {
+    "path": "/workspace/tender-workbench/docs/word-mainflow-development-checks/HANDOFF.md",
+    "sha256": "dd89573a6b26abb2ca87363a9405456b2180b0845456a336ef1074bbf1317236"
+  },
+  "model_calls_in_isolated_db": 0,
+  "kafka_started": false,
+  "live_services_changed": false,
+  "formal_scoring_eligible": false,
+  "Word_delivery_check_eligible": false,
+  "fresh_environment_evidence": {
+    "path": "/workspace/tender-docs/04-验证与测试/word-mainflow-environment03/fresh-initialization.json",
+    "sha256": "bc3660ca0e58424dbec440f4b2b5efd5717af80cdbef691a9621e9b79198712b"
+  }
+}

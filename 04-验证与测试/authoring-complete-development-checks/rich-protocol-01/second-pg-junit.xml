@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.553" timestamp="2026-10-17T03:50:06.233305+00:00" hostname="597cea30c71f"><testcase classname="tests.test_authoring_rich_integration" name="test_real_nonowner_asset_roundtrip_worker_read_and_exact_memory_bytes" time="0.123"><failure message="KeyError: 'authoring-images/17313266-1f65-4072-ab03-9b905a200a14/34815748-2f3c-4a8d-8dab-177ffabe7ccd/normalized'">images = {'actor': UUID('b48b74df-9e56-4d52-8bbc-c0b4b4bdb46f'), 'bid': UUID('1fbbb49f-650e-4812-9742-197caeb21013'), 'normaliz...8IDATx\x9cc\xac8!\xc2@\x080\x11T1\xaa\x88\x81\x81\x81\x01\x00\xc5\x11\x01f[{\xc7p\x00\x00\x00\x00IEND\xaeB`\x82'}, ...}
+
+    def test_real_nonowner_asset_roundtrip_worker_read_and_exact_memory_bytes(images):
+        assert_role()
+        assert_role(True)
+        value, _, _, _ = register(images)
+        identities = [(value["asset_id"], 1, value["id"])]
+        with connection(True) as c:
+            frozen = rich_assets.freeze_assets(c, images["bid"], identities, worker=True)
+            assert len(frozen) == 1
+            assert frozen[0]["asset_version_id"] == value["id"]
+            for role in ["tender_worker", "tender_score_read", "tender_research_read"]:
+                assert not c.execute(
+                    "SELECT has_table_privilege(%s,'design.authoring_image_versions','INSERT') AS ok",
+                    (role,),
+                ).fetchone()["ok"]
+&gt;       data = images["objects"][frozen[0]["normalized_blob"]["object_key"]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'authoring-images/17313266-1f65-4072-ab03-9b905a200a14/34815748-2f3c-4a8d-8dab-177ffabe7ccd/normalized'
+
+tests/test_authoring_rich_integration.py:107: KeyError</failure></testcase></testsuite></testsuites>

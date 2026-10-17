@@ -1,0 +1,200 @@
+{
+  "status": "passed_scoped_independent_mechanisms_not_whole_product_release",
+  "blocking_findings": [],
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/candidate.json",
+    "sha256": "9f9ae6f12aa95127458d53e8218918f3d7b2519d2ed70897bd0e94d45d652f97",
+    "own_sources": 21,
+    "frozen_dependencies": 152,
+    "public_raw_fixture": 1,
+    "runtime_manifest_sha256": "8bc0834d7878b49e553ec6545f780060f41e2e338f7d441803d15850c13e6c51"
+  },
+  "actual": {
+    "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/cold-identity-execution/actual.openapi.json",
+    "sha256": "6e400b42bcdbd50e0ec9c2ec1fe4fdc4138048d17ca0f52ecd35b393f0531622",
+    "registered_operations": 21,
+    "schemas": 289,
+    "cold_identity_result_sha256": "c596f19a820b4d72f8bd77ba4227c56f9fdc4420652785993e4acfeed3e57b0c",
+    "scope": "Standalone assistant router through real FastAPI/ASGI; not shared main registration"
+  },
+  "independent_executions": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/fixed-fixture-execution",
+      "tests": 9,
+      "junit_sha256": "77321a1c72f888b55a744274382b24ecdcd82673ccc77a77149b0b815f0608b7",
+      "observations_sha256": "262b17165492e3998aea3ff79908cc806efe8412ec4db30c84177c842336ed63",
+      "executed_test_sha256": "b9d4d7dd6eef7590510aba7282c03c337953f45b922a1d0cb49abc83c97dd6c3",
+      "loaded_modules": 50,
+      "source_root_verified": true,
+      "observations": [
+        {
+          "name": "global_member_isolation",
+          "forbidden_reads": 4,
+          "forbidden_writes": 3,
+          "null_scope": true,
+          "no_surrogate_bid": true,
+          "free_text_not_action": true
+        },
+        {
+          "name": "cross_member_confirm_confirm",
+          "winning_state": "executed",
+          "global_receipts": 1,
+          "actual_domain_creations": 1
+        },
+        {
+          "name": "cross_member_confirm_reject",
+          "winning_state": "executed",
+          "global_receipts": 1,
+          "actual_domain_creations": 1
+        },
+        {
+          "name": "selection_and_source_staleness",
+          "bad_physical_page_rejected": true,
+          "before_dispatch_calls": 0,
+          "after_call_billing_retained": true,
+          "stale_publication": true,
+          "action_side_effects": 0
+        },
+        {
+          "name": "unknown_billing_and_cancel",
+          "timeout_invocations": 1,
+          "changed_budget_does_not_repay": true,
+          "other_member_independent": true,
+          "no_fabricated_assistant_history": true,
+          "cancellation_has_real_terminal": true
+        },
+        {
+          "name": "late_fence_and_cancelled_response",
+          "old_owner_cannot_renew_publish": true,
+          "known_result_reused_without_second_invocation": true,
+          "cancelled_reply_not_published": true,
+          "known_usage_preserved": true
+        },
+        {
+          "name": "authoring_selection_and_reject",
+          "outside_marks_preserved": true,
+          "candidate_not_applied": true,
+          "native_cannot_bypass_rejection": true,
+          "purpose": "authoring"
+        },
+        {
+          "name": "native_and_action_identity_change",
+          "same_ids_new_identity_authority_rejected": true,
+          "section_revision_unchanged": true
+        },
+        {
+          "name": "authoring_confirm_once",
+          "draft_revision": 3,
+          "global_receipts": 1,
+          "native_second_entry_rejected": true
+        }
+      ]
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/native-source-delta-execution",
+      "tests": 2,
+      "junit_sha256": "252210e7ca1d102eda241648a37fa41173d0ee1a524e50edec77e26e805ef590",
+      "observations_sha256": "d20a1f46ab6a628a1dccb4101a668a93878e6048f4e79e588c421c29b21436c4",
+      "executed_test_sha256": "0242fb7d665e1a9a1506cd183803a0fe6ae7d3f7f38f5121662fb0d5300dedc5",
+      "loaded_modules": 50,
+      "source_root_verified": true,
+      "observations": [
+        {
+          "name": "native_apply_first_and_source_lineage",
+          "exact_current_parse_evidence_preserved": true,
+          "citation_written": true,
+          "draft_revision": 3,
+          "assistant_opposite_decision_replays_original_effect": true
+        },
+        {
+          "name": "native_source_withdrawal_guard",
+          "exact_source_authority_error": "AUTHORING_SOURCE_STALE",
+          "no_new_section_revision": true,
+          "no_false_consumption": true
+        }
+      ]
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/project-ledger-delta-execution",
+      "tests": 3,
+      "junit_sha256": "6e42802dd7b402a88dd3a33d5059059b3d643fecedfc0f82cd72e82072c4404a",
+      "observations_sha256": "c34cc14045a5ad631cd1c5e13be332af1b4ac7538716ebb6f79425459c9a8893",
+      "executed_test_sha256": "a46c13f8d3920a666009ae59e51b6506a5fda85a1fbdf834fdf50227b6869d54",
+      "loaded_modules": 50,
+      "source_root_verified": true,
+      "observations": [
+        {
+          "name": "authoring_unknown_billing",
+          "mock_invocations": 1,
+          "new_member_command_cannot_repay": true,
+          "no_candidate": true,
+          "draft_unchanged": true
+        },
+        {
+          "name": "project_answer_ledger",
+          "foreign_source_rejected": true,
+          "assistant_purpose": true,
+          "known_usage_retained": true,
+          "history_roles": [
+            "user",
+            "assistant"
+          ],
+          "explicit_old_engine_adapter": true
+        },
+        {
+          "name": "project_answer_cancelled",
+          "foreign_source_rejected": true,
+          "assistant_purpose": true,
+          "known_usage_retained": true,
+          "history_roles": [
+            "user"
+          ],
+          "explicit_old_engine_adapter": true
+        }
+      ]
+    }
+  ],
+  "tested_semantics": [
+    "Private per-member global main conversations/jobs/messages/events are genuine NULL bid/operation scope. Four unauthorized reads and three writes return404, no surrogate project. Plain yes/execute prose creates no Action.",
+    "Two members concurrently confirm the same source-backed knowledge-candidate Action, or race confirm against reject: one immutable consumption, one shared result, at most one actual knowledge candidate; subsequent opposite decision returns the original effect.",
+    "Server-selected @ source page/version is validated. Invalid physical page rejected; ancestor withdrawal before compute prevents any invocation; withdrawal during response keeps known billed result but final materialization is stale, no assistant message; withdrawal before Action confirmation creates no knowledge object.",
+    "Unknown global fee outcome is shown as failed/unknown with reconciliation required, no fabricated assistant history; same question with new client ID and changed token budget cannot repay; the other member remains independent.",
+    "Expired global fence cannot renew or publish; successor reuses the exact existing response without another invocation. Pre-acquire cancel becomes terminal only when runtime acknowledges; cancel during model response keeps succeeded billing and suppresses answer.",
+    "A2 purpose authoring uses ordinary ledger and exact selected range. Proposal alone does not modify draft; prefix/suffix marks survive; rejection cannot be bypassed by native apply. New identity authority on same UUID blocks both native and Action confirmation.",
+    "A2 Action confirmation applies once then native rejects consumed. Native apply first also records the same global receipt; later opposite assistant decision replays executed. Exact selected current parse evidence/source/document references and authoring citation persist into revision3.",
+    "A2 ancestor withdrawal blocks native apply with no section revision or false consumption. A2 unknown call fails honestly and blocks another member new command without another invocation.",
+    "Actual project-answer core ledger uses assistant purpose, rejects another project source, publishes to the original shared project conversation. Cancellation during response retains known usage and real cancel_requested state with user-only history, no fabricated terminal."
+  ],
+  "retained_failed_rounds": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/execution/junit.xml",
+      "sha256": "51ea67e03ec632ed9f5cf415fdafebe9ea36a1fc9b7cfc85ac90a16359516ae7",
+      "classification": "Invalid QA loader/fixture round retained, not candidate verdict: repository pytest pythonpath selected moving apps.api init; closed-root teardown correctly failed. QA also queried nonexistent billing_profile column and selected latest other project."
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/frozen-execution/junit.xml",
+      "sha256": "af5a4b53a2e39e32417250b65305733aa4837383d7a3450400a8b5df55057614",
+      "classification": "Closed-source round retained:6pass3fixture failures. Independent chooser omitted exact target bid; server correctly rejected ASSISTANT_TARGET_REQUIRED. Only QA chooser corrected; source untouched."
+    }
+  ],
+  "execution_tooling": {
+    "path": "/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01/qa-bootstrap/manifest.json",
+    "sha256": "7da7c96be6961b46ea7d9f932e86a0198862963775241268af73ca0937815acf",
+    "scope": "Additional QA-only environment wrapper/initializer snapshot, outside target173; private profile not copied. Initial failed run wrapper was observed after invocation, later valid rounds use frozen wrapper."
+  },
+  "limitations": [
+    "Explicit httpx.MockTransport, in-memory object port and synthetic parsed-page/source SQL; no real model or OSS/provider network, parser precision or company answer quality acceptance.",
+    "Project/authoring use actual frozen old engine acquire/finish with explicit whitelist + tasks.publish adapter; no claim shared engine07 registry/dispatch/topic/lifecycle exemptions are registered.",
+    "No relay/consumer/controller or Kafka offset/topic acceptance; no shared8806/5176 changes; no new SQL or owner business privilege repairs.",
+    "No real Word/PDF build, frontend, production deployment, full lifecycle matrix or whole-product acceptance. Review.request and tool-generated authoring queue effects are not independently exercised in these14 groups.",
+    "Global/API execution ledger and history checks establish honest mechanism state, not monetary hard cap, formal scoring eligibility or model quality. Actual input page text was explicit SQL fixture, not inferred from the public PDF by a real parser."
+  ],
+  "paid_calls": 0,
+  "real_provider_requests": 0,
+  "oss_requests": 0,
+  "consumers_started": 0,
+  "new_sql_applied": false,
+  "reviewed_source_modified": false,
+  "private_profile": "assistant01-checks.env",
+  "roles": "actual nonowner API and Worker LOGIN verified via assert_role; new own UUID data with auto_review=false"
+}

@@ -1,0 +1,66 @@
+{
+  "scope": "SQL B and product implementation consistency static review; application read only to locate same claims constraint",
+  "inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/technical-scale-authority.sql",
+      "sha256": "3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/评分满分与档案研究协议.md",
+      "sha256": "2a2dec284f3013897abebf50318de749a32a82eff15a907608510b0b4cf1ad73"
+    },
+    {
+      "path": "/workspace/tender-docs/02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "16f776ef3115f9bace2ff7cf63bfff6652770199c4432e72965bb1369a693297"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/draft.json",
+      "sha256": "e47bbeed041e9544d368381bf3a4d3827230d85b6663526345d9faf666d608e9"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/runtime/packages/model_governance/TECHNICAL-SCALE-DEVELOPMENT.md",
+      "sha256": "bf2fc15f99afa553c7ca8807ddd5b575e5d16c6dad15c93b4df7def730f96814"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/runtime/packages/model_governance/scale_repository.py",
+      "sha256": "d2e4fa0a80941eeedba9765b1561ff4b3ad6cd47800771393d4b31546f1a1e75"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/runtime/packages/model_governance/scale_evidence.py",
+      "sha256": "a880c5aebd69315ca85c2d76186aa65452a682a2be48104ddf45d2766b556ebc"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/original-A-free-description-counterexample.xml",
+      "sha256": "375986222dd31d9ecc706a2849be75a3731e4ccf4320f6cddf061488cd27b0a6"
+    }
+  ],
+  "conclusion": "Blocked for historical ancestry claim set contradiction; B not approved for fresh",
+  "finding": "TS01 P2 module availability, not a demonstrated unauthorized qualification or database exploit",
+  "performed": [
+    "fixed SQL text read",
+    "A-to-B diff",
+    "protocol comparison",
+    "offline exhaustive claim-set model for distinct Word ancestor"
+  ],
+  "not_performed": [
+    "SQL execution",
+    "DDL",
+    "DB connection",
+    "account creation",
+    "PG runtime/permissions tests",
+    "31 developer pure tests",
+    "external services",
+    "fees",
+    "consumers"
+  ],
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/technical-scale-architect-review/sql-B/ancestry_countermodel.py",
+      "sha256": "156a9cc2eda6fc1f1c414ec470a3fa670d517f1d60e3da31671e1ba66ec592d2"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/technical-scale-architect-review/sql-B/ancestry-countermodel.json",
+      "sha256": "4aa31c76acb769ab8d73676640af718e2f3c863face267d3fb181234c5f86b24"
+    }
+  ]
+}

@@ -1,0 +1,2266 @@
+{
+  "scope": "PRD设计场景；software_execution均未执行；静态完整性检查不代表软件验收",
+  "scenarios": [
+    {
+      "id": "AC-001",
+      "requirements": [
+        "FR-012",
+        "FR-014",
+        "FR-018"
+      ],
+      "sections": [
+        "3",
+        "6",
+        "7"
+      ],
+      "title": "首次上传即工作",
+      "given": "项目不存在，身份明确，招标与正文有效",
+      "action": "一次上传资料",
+      "expected": "建立项目、资料包与主会话，归类后按资料和自动开始设置执行，显示输入版本",
+      "forbidden": "要求逐页配置模型或知识索引才能开始",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-002",
+      "requirements": [
+        "FR-012",
+        "NFR-003"
+      ],
+      "sections": [
+        "6",
+        "7"
+      ],
+      "title": "只有正文",
+      "given": "仅有施组，没有招标资料",
+      "action": "请求完整评审",
+      "expected": "保留正文，可有限问答，说明缺少依据",
+      "forbidden": "给出完整合规通过或技术总分",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-003",
+      "requirements": [
+        "FR-012",
+        "NFR-013"
+      ],
+      "sections": [
+        "7",
+        "16"
+      ],
+      "title": "扫描或损坏文件",
+      "given": "同批部分 PDF 无法可靠解析",
+      "action": "开始解析",
+      "expected": "区分已收到原件与解析质量，保留成功文件并给失败范围",
+      "forbidden": "显示所有文件已完整读取",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-004",
+      "requirements": [
+        "FR-012",
+        "FR-022",
+        "FR-028"
+      ],
+      "sections": [
+        "7",
+        "11",
+        "13"
+      ],
+      "title": "重复内容",
+      "given": "已有相同摘要文件与已入库案例",
+      "action": "重复上传或重跑导入",
+      "expected": "保留来源关联，独立样本数不增加",
+      "forbidden": "因改文件名计成独立样本",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-005",
+      "requirements": [
+        "FR-012",
+        "FR-020"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "同名异稿",
+      "given": "已有施组.pdf，收到同名不同内容文件",
+      "action": "上传并复评",
+      "expected": "新内容为新版本，明确两轮输入",
+      "forbidden": "覆盖原文件及旧评审",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-006",
+      "requirements": [
+        "FR-022",
+        "FR-034"
+      ],
+      "sections": [
+        "4",
+        "11"
+      ],
+      "title": "身份归组冲突",
+      "given": "资料同时涉及两个主体或标段",
+      "action": "批量导入",
+      "expected": "无争议组可确认，争议组暂存并请求核对",
+      "forbidden": "按名称相似静默合并",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-007",
+      "requirements": [
+        "FR-034",
+        "FR-015"
+      ],
+      "sections": [
+        "4",
+        "5"
+      ],
+      "title": "重新招标",
+      "given": "旧轮次已结束，招标重新发布",
+      "action": "建立新投标工作",
+      "expected": "关联新轮次，规则提交成绩独立",
+      "forbidden": "延用旧轮次成绩或自动认定规则相同",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-008",
+      "requirements": [
+        "FR-012",
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "5",
+        "7"
+      ],
+      "title": "批次重复触发",
+      "given": "一批多文件完成并收到重复事件",
+      "action": "自动启动评审",
+      "expected": "相同冻结输入和方法不产生重复生效任务",
+      "forbidden": "每个重复事件创建一轮",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-009",
+      "requirements": [
+        "FR-016",
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "5",
+        "8"
+      ],
+      "title": "关闭浏览器",
+      "given": "后台任务正在运行",
+      "action": "关闭页面后重新进入",
+      "expected": "任务继续，恢复服务端状态与当前对象",
+      "forbidden": "丢任务或重复开始",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-010",
+      "requirements": [
+        "FR-016",
+        "FR-033"
+      ],
+      "sections": [
+        "5",
+        "8"
+      ],
+      "title": "结束工作会话",
+      "given": "会话内启动的任务仍运行",
+      "action": "结束该会话",
+      "expected": "会话结束，任务状态独立并可从项目找到",
+      "forbidden": "把结束会话解释为取消任务",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-011",
+      "requirements": [
+        "FR-016",
+        "FR-031",
+        "NFR-002"
+      ],
+      "sections": [
+        "5",
+        "17"
+      ],
+      "title": "隐藏会话",
+      "given": "已通过会话登记正式提交和知识引用",
+      "action": "隐藏或删除会话展示",
+      "expected": "业务对象和审计仍在且可查询",
+      "forbidden": "级联删除文件结果或引用",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-012",
+      "requirements": [
+        "FR-014",
+        "FR-019"
+      ],
+      "sections": [
+        "3",
+        "8"
+      ],
+      "title": "切换项目",
+      "given": "在项目甲输入草稿，项目乙也在办",
+      "action": "切换乙并发送消息",
+      "expected": "草稿与附件按项目保留，操作绑定乙",
+      "forbidden": "使用甲的工程参数和确认卡写入乙",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-013",
+      "requirements": [
+        "FR-016",
+        "FR-019"
+      ],
+      "sections": [
+        "5",
+        "8"
+      ],
+      "title": "会话上下文恢复",
+      "given": "项目有已确认事实和待处理问题",
+      "action": "重新进入主会话",
+      "expected": "从正式记录恢复状态，不需再次上传",
+      "forbidden": "仅凭失真的聊天摘要覆盖正式事实",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-014",
+      "requirements": [
+        "FR-010",
+        "FR-019"
+      ],
+      "sections": [
+        "8",
+        "10"
+      ],
+      "title": "聊天说改好了",
+      "given": "没有收到新稿",
+      "action": "用户说已经修改完成",
+      "expected": "提示生成新的评审版本或上传外部新稿，保持待复检",
+      "forbidden": "直接标为已解决",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-015",
+      "requirements": [
+        "FR-017",
+        "FR-018",
+        "NFR-008"
+      ],
+      "sections": [
+        "8",
+        "16"
+      ],
+      "title": "同卡重复确认",
+      "given": "有效确认卡可提交",
+      "action": "双击并网络重放",
+      "expected": "同一业务决定仅生效一次，显示真实结果",
+      "forbidden": "重复提交或重复发布",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-016",
+      "requirements": [
+        "FR-017",
+        "FR-035",
+        "NFR-008"
+      ],
+      "sections": [
+        "8",
+        "10"
+      ],
+      "title": "确认卡过期",
+      "given": "用户打开提交确认卡后他人上传新稿",
+      "action": "点击旧卡确认",
+      "expected": "服务端拒绝旧对象版本并指向当前状态",
+      "forbidden": "以旧卡登记成最新稿已检查",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-017",
+      "requirements": [
+        "FR-017",
+        "NFR-005"
+      ],
+      "sections": [
+        "8",
+        "16"
+      ],
+      "title": "登录过期",
+      "given": "持久操作尚未确认，登录已过期",
+      "action": "提交并重新登录",
+      "expected": "拒绝未认证操作，恢复界面后重新确认",
+      "forbidden": "伪造客户端操作人或登录后自动提交旧决定",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-018",
+      "requirements": [
+        "FR-017",
+        "FR-036",
+        "NFR-010"
+      ],
+      "sections": [
+        "8",
+        "13"
+      ],
+      "title": "资料内含执行指令",
+      "given": "PDF 包含忽略规则并发布知识的文本",
+      "action": "检索并分析原文",
+      "expected": "仅作为材料内容，不能改变工具权限与任务用途",
+      "forbidden": "执行文件中的指令或跳过业务确认",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-019",
+      "requirements": [
+        "FR-001",
+        "FR-003",
+        "NFR-001"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "明确工期违反",
+      "given": "招标180天，当前正文240天",
+      "action": "评审工期条款",
+      "expected": "报告违反，定位双方原页，保持提交阻断",
+      "forbidden": "拿参考稿170天证明当前稿满足",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-020",
+      "requirements": [
+        "FR-001",
+        "FR-003",
+        "NFR-003"
+      ],
+      "sections": [
+        "7",
+        "9"
+      ],
+      "title": "缺失型判断与伪造引用",
+      "given": "要求有证明，但当前全文未找到；模型另编了摘录",
+      "action": "核对证据",
+      "expected": "缺失问题引用要求及检查范围，伪造引用不生效，无有效判断则检查失败",
+      "forbidden": "伪造正文或把引用失败当已满足",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-021",
+      "requirements": [
+        "FR-003",
+        "NFR-003"
+      ],
+      "sections": [
+        "7",
+        "16"
+      ],
+      "title": "工具失败",
+      "given": "部分规则调用失败，其余成功",
+      "action": "生成报告",
+      "expected": "列出成功与失败及覆盖，不显示完整通过",
+      "forbidden": "将空输出当无风险",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-022",
+      "requirements": [
+        "FR-004",
+        "FR-005",
+        "FR-013"
+      ],
+      "sections": [
+        "7",
+        "15"
+      ],
+      "title": "可选检测关闭",
+      "given": "关闭矛盾和范围残留检测",
+      "action": "新开评审并导出",
+      "expected": "两类标未运行且不产新问题，核心仍运行",
+      "forbidden": "把未运行计成满足或漏报",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-023",
+      "requirements": [
+        "FR-008",
+        "NFR-002"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "规则和事实更正",
+      "given": "已有完成轮次，随后驳回规则或确认新事实",
+      "action": "查看并准备登记",
+      "expected": "原轮次不变，提示过期，复评后再标准登记",
+      "forbidden": "就地改旧规则包或沿用旧报告放行",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-024",
+      "requirements": [
+        "FR-002",
+        "NFR-004"
+      ],
+      "sections": [
+        "9"
+      ],
+      "title": "部分条款分数",
+      "given": "当前4/8，技术满分60",
+      "action": "打开评分卡",
+      "expected": "显示部分条款4/8和覆盖8/60，拒绝技术总分",
+      "forbidden": "显示技术总分4或外推30/60",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-025",
+      "requirements": [
+        "FR-002",
+        "NFR-004"
+      ],
+      "sections": [
+        "9"
+      ],
+      "title": "在线组数与模型资格",
+      "given": "已有25组在线配对，没有独立验收通过模型",
+      "action": "查看预测状态",
+      "expected": "可说明统计资格但模型仍未验收",
+      "forbidden": "因超过20组就给模型验收绿标",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-026",
+      "requirements": [
+        "FR-002",
+        "FR-029",
+        "NFR-004"
+      ],
+      "sections": [
+        "9",
+        "14"
+      ],
+      "title": "模型范围外",
+      "given": "模型只适用既定道路规则，当前是未知办法",
+      "action": "请求总分",
+      "expected": "提示不适用，保留有效逐项判断或拒绝总分",
+      "forbidden": "套用已有精度或缩窄区间",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-027",
+      "requirements": [
+        "FR-002",
+        "NFR-004"
+      ],
+      "sections": [
+        "9"
+      ],
+      "title": "伪预测区间",
+      "given": "逐项LLM重复结果有波动，区间未独立验证",
+      "action": "展示结果",
+      "expected": "不把重复分布当正式技术分预测区间",
+      "forbidden": "展示经过校准的90%区间字样",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-028",
+      "requirements": [
+        "FR-002",
+        "FR-008"
+      ],
+      "sections": [
+        "7",
+        "9"
+      ],
+      "title": "评分满分冲突",
+      "given": "提取项满分合计与技术满分不一致",
+      "action": "开始总分预测",
+      "expected": "要求核对重复漏项与口径，暂不可靠总分",
+      "forbidden": "直接比例缩放掩盖冲突",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-029",
+      "requirements": [
+        "FR-010",
+        "FR-018"
+      ],
+      "sections": [
+        "8",
+        "10"
+      ],
+      "title": "采纳建议",
+      "given": "AI 已生成局部修改草稿",
+      "action": "点击采纳",
+      "expected": "记录采纳决定；预览后可应用工作草稿，提示生成评审版本或上传外部新稿",
+      "forbidden": "自动更改原PDF或标问题解决",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-030",
+      "requirements": [
+        "FR-010",
+        "FR-020"
+      ],
+      "sections": [
+        "10"
+      ],
+      "title": "新稿仍有其他风险",
+      "given": "V2 解决工期冲突但增加资源矛盾",
+      "action": "复评比较",
+      "expected": "分别展示已解决、新增和未复检项",
+      "forbidden": "笼统称所有问题解决",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-031",
+      "requirements": [
+        "FR-020",
+        "FR-002"
+      ],
+      "sections": [
+        "9",
+        "10"
+      ],
+      "title": "不同方法下的涨分",
+      "given": "两轮提示或评分办法不同",
+      "action": "查看前后对比",
+      "expected": "说明不可直接归因，可按同方法另跑",
+      "forbidden": "把差值称改稿必然收益",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-032",
+      "requirements": [
+        "FR-001",
+        "FR-035"
+      ],
+      "sections": [
+        "10"
+      ],
+      "title": "标准提交阻断",
+      "given": "有未处理的关键或否决响应问题",
+      "action": "点击登记提交稿",
+      "expected": "逐项拒绝并提供处理入口",
+      "forbidden": "通过普通聊天确认绕过闸门",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-033",
+      "requirements": [
+        "FR-013",
+        "FR-035"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "按原文接受的限度",
+      "given": "开启按原文接受，但核对不完整",
+      "action": "登记提交稿",
+      "expected": "仅放宽未确认规则，仍阻断不完整核对",
+      "forbidden": "将开关解释为跳过全部检查",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-034",
+      "requirements": [
+        "FR-035",
+        "FR-010"
+      ],
+      "sections": [
+        "10"
+      ],
+      "title": "仅剩普通建议",
+      "given": "输入最新，核心核对完整，只有非阻断建议",
+      "action": "登记提交稿",
+      "expected": "允许明确登记并显示剩余建议",
+      "forbidden": "强制所有建议处理后才能登记",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-035",
+      "requirements": [
+        "FR-035",
+        "FR-021"
+      ],
+      "sections": [
+        "10",
+        "11"
+      ],
+      "title": "补录线下提交",
+      "given": "投标已经发生，系统当时未运行",
+      "action": "补录真实稿件时间和依据",
+      "expected": "记录事实并标未完整检查，不造当时预测",
+      "forbidden": "拒绝保存真实历史或伪造闸门通过",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-036",
+      "requirements": [
+        "FR-035",
+        "FR-030"
+      ],
+      "sections": [
+        "10",
+        "14"
+      ],
+      "title": "截止后新稿",
+      "given": "实际提交V3，截止后收到V4",
+      "action": "上传或要求替换提交稿",
+      "expected": "新版本保留，实际提交仍V3；更正需真实依据",
+      "forbidden": "默认把V4配旧成绩",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-037",
+      "requirements": [
+        "FR-009",
+        "NFR-006"
+      ],
+      "sections": [
+        "13"
+      ],
+      "title": "未知与零",
+      "given": "官方技术分未披露，被否决但未给分",
+      "action": "登记结果",
+      "expected": "保存结果与未知技术分",
+      "forbidden": "把未知或被否决填技术0分",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-038",
+      "requirements": [
+        "FR-009",
+        "FR-028"
+      ],
+      "sections": [
+        "13"
+      ],
+      "title": "仅综合总分",
+      "given": "只有综合成绩，含价格和商务",
+      "action": "录入并请求训练",
+      "expected": "保留综合成绩，技术标签仍缺失",
+      "forbidden": "直接当技术标签或猜分项",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-039",
+      "requirements": [
+        "FR-009",
+        "FR-028"
+      ],
+      "sections": [
+        "13"
+      ],
+      "title": "成绩来源待核验",
+      "given": "公司台账记录52.1/60，无官方对应证明",
+      "action": "登记成绩",
+      "expected": "待核验，探索与官方主验收分开，不进正式在线统计",
+      "forbidden": "因为非冲突而直接当官方已核验",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-040",
+      "requirements": [
+        "FR-009",
+        "FR-030",
+        "FR-028"
+      ],
+      "sections": [
+        "13",
+        "14"
+      ],
+      "title": "新冲突不能回退旧分",
+      "given": "旧分已核验，后来出现相互矛盾的新来源",
+      "action": "补录冲突成绩",
+      "expected": "暂停该提交有效统计与准入，等待解决",
+      "forbidden": "选最新非冲突旧记录继续算作无争议",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-041",
+      "requirements": [
+        "FR-009",
+        "FR-030",
+        "FR-011"
+      ],
+      "sections": [
+        "13",
+        "14",
+        "15"
+      ],
+      "title": "更正正式成绩",
+      "given": "原正式分关联有误，已进入统计",
+      "action": "追加核验更正",
+      "expected": "旧记录可查，当前有效配对单一，统计重算并标影响",
+      "forbidden": "覆盖旧记录或多算样本",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-042",
+      "requirements": [
+        "FR-021",
+        "FR-011"
+      ],
+      "sections": [
+        "11",
+        "15"
+      ],
+      "title": "高分未中标",
+      "given": "历史案例技术54.6/60且正式未中标",
+      "action": "搜索并查看案例",
+      "expected": "分开显示技术分与结果",
+      "forbidden": "宣称高分等于中标或候选即中标",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-043",
+      "requirements": [
+        "FR-023",
+        "FR-026"
+      ],
+      "sections": [
+        "11",
+        "12"
+      ],
+      "title": "引用外部案例",
+      "given": "相似工程属于其他企业",
+      "action": "要求参考组织措施",
+      "expected": "保留外部身份和条件差异，只引用可用方法",
+      "forbidden": "把其人员设备业绩写成公司事实",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-044",
+      "requirements": [
+        "FR-022",
+        "NFR-013"
+      ],
+      "sections": [
+        "11",
+        "16"
+      ],
+      "title": "批量部分失败",
+      "given": "20组中部分无争议，部分缺资料",
+      "action": "确认导入后中断再续跑",
+      "expected": "成功组保留，剩余可续跑，报告分类数",
+      "forbidden": "整批丢失或重复入库",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-045",
+      "requirements": [
+        "FR-022",
+        "FR-034"
+      ],
+      "sections": [
+        "4",
+        "11"
+      ],
+      "title": "一份结果多企业",
+      "given": "同一评分表包含多家成绩",
+      "action": "批量入库",
+      "expected": "同一原件分别关联主体提交并核验",
+      "forbidden": "把多家分数归成一个平均样本",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-046",
+      "requirements": [
+        "FR-024",
+        "FR-025"
+      ],
+      "sections": [
+        "5",
+        "12"
+      ],
+      "title": "候选不是事实",
+      "given": "从归档项目提取设备数量",
+      "action": "保存候选并询问当前可用设备",
+      "expected": "保持候选，要求本公司当前可用依据",
+      "forbidden": "自动发布为本公司已确认资源",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-047",
+      "requirements": [
+        "FR-025",
+        "NFR-008"
+      ],
+      "sections": [
+        "12",
+        "16"
+      ],
+      "title": "并发发布知识",
+      "given": "两成员同时修改同条知识",
+      "action": "确认发布旧草稿",
+      "expected": "检测版本冲突，以当前对象重新确认",
+      "forbidden": "后一次覆盖已发布决定",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-048",
+      "requirements": [
+        "FR-026",
+        "FR-024"
+      ],
+      "sections": [
+        "12"
+      ],
+      "title": "已发布仍需适用",
+      "given": "知识已发布但地区工况不适用",
+      "action": "自动找施工建议",
+      "expected": "过滤或解释不适用，不加入正式参考",
+      "forbidden": "因为已发布就通用于所有项目",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-049",
+      "requirements": [
+        "FR-027",
+        "FR-026"
+      ],
+      "sections": [
+        "5",
+        "12"
+      ],
+      "title": "失效缓存",
+      "given": "索引仍能召回已停用版本",
+      "action": "准备引用",
+      "expected": "执行前检查当前状态并阻止新引用",
+      "forbidden": "依赖旧缓存继续使用",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-050",
+      "requirements": [
+        "FR-027",
+        "FR-033",
+        "NFR-012"
+      ],
+      "sections": [
+        "8",
+        "12"
+      ],
+      "title": "运行中来源失效",
+      "given": "任务已读取知识，随后知识停用",
+      "action": "任务完成",
+      "expected": "保留运行记录，标受影响并建议复评",
+      "forbidden": "自动把受影响结果当最新可信结论",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-051",
+      "requirements": [
+        "FR-025",
+        "FR-027",
+        "NFR-002"
+      ],
+      "sections": [
+        "5",
+        "12"
+      ],
+      "title": "知识更新保留旧报告",
+      "given": "旧评审引用知识v1，现发布v2",
+      "action": "回看旧报告并开始新任务",
+      "expected": "旧报告仍引v1，新任务选合适v2",
+      "forbidden": "静默替换旧引用和旧工程措施",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-052",
+      "requirements": [
+        "FR-026",
+        "FR-008"
+      ],
+      "sections": [
+        "7",
+        "12"
+      ],
+      "title": "规范与项目要求冲突",
+      "given": "招标与可能适用的强制规范存在矛盾",
+      "action": "请求建议",
+      "expected": "显示冲突及依据，要求核验适用性",
+      "forbidden": "按最近日期或历史高分例子简单覆盖",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-053",
+      "requirements": [
+        "FR-028",
+        "FR-036"
+      ],
+      "sections": [
+        "13"
+      ],
+      "title": "同模板跨训练测试",
+      "given": "不同项目正文高度相似，模板形成连通组",
+      "action": "划分实验",
+      "expected": "整组分配，报告独立组数",
+      "forbidden": "把300份近重复当300份独立证据",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-054",
+      "requirements": [
+        "FR-036",
+        "FR-002"
+      ],
+      "sections": [
+        "8",
+        "13"
+      ],
+      "title": "聊天已见正式分再评分",
+      "given": "会话已展示目标成绩和评委意见",
+      "action": "用户要求重新评分",
+      "expected": "从结构化白名单启动隔离任务，标回测身份",
+      "forbidden": "把整段聊天或带分摘要送入评分",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-055",
+      "requirements": [
+        "FR-036",
+        "FR-029"
+      ],
+      "sections": [
+        "13",
+        "14"
+      ],
+      "title": "知识间接泄漏",
+      "given": "测试项目正文和评委复盘已提炼为知识",
+      "action": "离线独立测试",
+      "expected": "隔离同组派生知识检索与缓存",
+      "forbidden": "只删目标分数就称完全无泄漏",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-056",
+      "requirements": [
+        "FR-036",
+        "FR-029"
+      ],
+      "sections": [
+        "13",
+        "14"
+      ],
+      "title": "未来锚点",
+      "given": "锚点成绩在测试起点之后取得",
+      "action": "训练验证或调参",
+      "expected": "排除未来和测试组来源，保存实际清单",
+      "forbidden": "全数据预算锚点特征再做交叉验证",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-057",
+      "requirements": [
+        "FR-028",
+        "FR-011"
+      ],
+      "sections": [
+        "13",
+        "15"
+      ],
+      "title": "回测不是事前预测",
+      "given": "已取得成绩后才生成预测",
+      "action": "计算真实在线误差",
+      "expected": "保留回测结果，但排除事前误差统计",
+      "forbidden": "补造预测时间或挑最接近的一轮",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-058",
+      "requirements": [
+        "FR-029",
+        "NFR-004"
+      ],
+      "sections": [
+        "9",
+        "14"
+      ],
+      "title": "未通过模型发布",
+      "given": "候选模型训练误差低但独立测试未通过",
+      "action": "请求切业务模型",
+      "expected": "保持候选或未通过，保留当前模型",
+      "forbidden": "因数据增多或训练拟合好自动上线",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-059",
+      "requirements": [
+        "FR-029",
+        "NFR-002"
+      ],
+      "sections": [
+        "14"
+      ],
+      "title": "业务模型切换",
+      "given": "旧任务用模型甲，新模型乙通过发布",
+      "action": "发布后完成旧任务并启动新任务",
+      "expected": "旧任务和报告保留甲，之后适用任务用乙",
+      "forbidden": "用乙改写旧预测",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-060",
+      "requirements": [
+        "FR-030",
+        "FR-029",
+        "FR-027"
+      ],
+      "sections": [
+        "12",
+        "14"
+      ],
+      "title": "错误标签传播",
+      "given": "一条错误成绩已用于知识和模型",
+      "action": "核验发现错误",
+      "expected": "追踪批次实验模型知识，暂停受影响新增使用，组织复核",
+      "forbidden": "只修数据库单行而忽略下游",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-061",
+      "requirements": [
+        "FR-006",
+        "NFR-006"
+      ],
+      "sections": [
+        "15"
+      ],
+      "title": "报价情景",
+      "given": "平均值基准依赖未知对手报价",
+      "action": "对话请求试算并保存",
+      "expected": "结构化计算，标假设，人工保存；无成本利润",
+      "forbidden": "编造对手实际报价或必中标价",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-062",
+      "requirements": [
+        "FR-007",
+        "FR-013",
+        "NFR-012"
+      ],
+      "sections": [
+        "7",
+        "15"
+      ],
+      "title": "关闭分数跨入口一致",
+      "given": "项目关闭显示预测分数",
+      "action": "问分数并导出报告",
+      "expected": "卡片聊天与导出都隐藏数值，后台预测仍可回流",
+      "forbidden": "聊天泄露被隐藏分数或导出遗漏状态说明",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-063",
+      "requirements": [
+        "FR-007",
+        "NFR-001"
+      ],
+      "sections": [
+        "15"
+      ],
+      "title": "旧稿PDF批注",
+      "given": "已有V1批注坐标，当前查看V2",
+      "action": "请求批注PDF",
+      "expected": "使用对应版本的证据与坐标，失败明确",
+      "forbidden": "把旧稿坐标套到新稿",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-064",
+      "requirements": [
+        "FR-011",
+        "NFR-004"
+      ],
+      "sections": [
+        "15"
+      ],
+      "title": "分母为零",
+      "given": "没有有效正式结果或合格配对",
+      "action": "打开业务对照",
+      "expected": "显示无可计算数据与样本缺口",
+      "forbidden": "显示中标率0%或预测误差0分",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-065",
+      "requirements": [
+        "FR-015",
+        "FR-031",
+        "FR-009"
+      ],
+      "sections": [
+        "5",
+        "17"
+      ],
+      "title": "缺成绩归档",
+      "given": "项目工作结束但没有正式技术分",
+      "action": "归档后补成绩",
+      "expected": "允许归档并保留待补；通过补录入口追加结果",
+      "forbidden": "阻止归档或覆盖冻结报告",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-066",
+      "requirements": [
+        "FR-015",
+        "FR-033"
+      ],
+      "sections": [
+        "5"
+      ],
+      "title": "运行任务与归档",
+      "given": "项目仍有运行任务",
+      "action": "请求归档",
+      "expected": "选择等完成或请求取消并等待终态",
+      "forbidden": "留下归档后无处展示的任务写入",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-067",
+      "requirements": [
+        "FR-031",
+        "NFR-002"
+      ],
+      "sections": [
+        "17"
+      ],
+      "title": "删除有依赖原件",
+      "given": "原件被提交、知识和模型引用",
+      "action": "请求物理删除",
+      "expected": "展示依赖，专门处理；默认保留正式对象",
+      "forbidden": "通过删会话级联物理清理",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-068",
+      "requirements": [
+        "FR-032",
+        "FR-015"
+      ],
+      "sections": [
+        "17"
+      ],
+      "title": "全新初始化与资料入库",
+      "given": "空库首次部署，另有待核验的历史标书和成绩资料",
+      "action": "初始化并对新资料批次执行dry-run",
+      "expected": "独立建立新身份，核验摘要和出处，异常待核对；不连接旧系统",
+      "forbidden": "要求旧库迁移或兼容状态映射，把资料入库当作模型验收",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-069",
+      "requirements": [
+        "FR-032",
+        "NFR-011"
+      ],
+      "sections": [
+        "17"
+      ],
+      "title": "恢复完整关系",
+      "given": "数据库与对象存储已有一致备份",
+      "action": "在独立环境恢复",
+      "expected": "可重开提交成绩知识版本审计和模型关系，摘要一致",
+      "forbidden": "只恢复文件不恢复出处或声称未经演练已完成",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-070",
+      "requirements": [
+        "FR-032",
+        "FR-007",
+        "NFR-013"
+      ],
+      "sections": [
+        "15",
+        "17"
+      ],
+      "title": "导出有缺件",
+      "given": "部分对象存储原件不可用",
+      "action": "迁出项目",
+      "expected": "清单标缺件并报告不完整",
+      "forbidden": "空包或失效临时链接称完整归档",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-071",
+      "requirements": [
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "5",
+        "8"
+      ],
+      "title": "旧任务晚完成",
+      "given": "V2任务先完成，V1后完成",
+      "action": "接收任务结果",
+      "expected": "V1只进历史，不改变当前V2指针",
+      "forbidden": "最后完成结果自动成为最新",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-072",
+      "requirements": [
+        "FR-033",
+        "NFR-013"
+      ],
+      "sections": [
+        "5",
+        "16"
+      ],
+      "title": "取消请求尚未完成",
+      "given": "执行器尚未确认停止",
+      "action": "点击取消",
+      "expected": "显示正在取消，确认后为已取消，已完成范围不丢",
+      "forbidden": "立即宣称已取消而后台继续写入",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-073",
+      "requirements": [
+        "NFR-007",
+        "FR-014",
+        "FR-018"
+      ],
+      "sections": [
+        "3",
+        "16"
+      ],
+      "title": "手机与键盘路径",
+      "given": "390px屏宽或只用键盘",
+      "action": "上传看证据复评核验",
+      "expected": "状态有文字，焦点可见，抽屉可返回，无整页横溢",
+      "forbidden": "必须悬停或只靠颜色才能理解状态",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-074",
+      "requirements": [
+        "NFR-009",
+        "FR-033"
+      ],
+      "sections": [
+        "16"
+      ],
+      "title": "容量与超时",
+      "given": "文件超当前部署限制或任务超过配置时限",
+      "action": "上传或运行",
+      "expected": "明确限额，及时受理，超时有状态和重试",
+      "forbidden": "无限展开压缩包或永久转圈",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-075",
+      "requirements": [
+        "NFR-010",
+        "NFR-014"
+      ],
+      "sections": [
+        "13",
+        "16"
+      ],
+      "title": "日志和数据出口",
+      "given": "含公司原件和模型凭据的任务",
+      "action": "失败并记录诊断",
+      "expected": "可按任务定位，日志不输出密钥和无关原文，出口按配置",
+      "forbidden": "为调试dump环境或把资料发未配置服务",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-076",
+      "requirements": [
+        "FR-029",
+        "NFR-004"
+      ],
+      "sections": [
+        "9",
+        "14",
+        "20"
+      ],
+      "title": "精度门槛尚未冻结",
+      "given": "尚未确定最终MAE等业务门槛",
+      "action": "运行开发实验并请求正式发布",
+      "expected": "开发可继续，正式验收发布被阻断",
+      "forbidden": "把建议目标当已同意或依据测试倒调门槛",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-077",
+      "requirements": [
+        "FR-012",
+        "FR-035",
+        "NFR-006"
+      ],
+      "sections": [
+        "7",
+        "10",
+        "13"
+      ],
+      "title": "时间来源不同",
+      "given": "历史文件晚入库，实际生效早；另有截止后改稿",
+      "action": "回测并登记提交",
+      "expected": "分别核实生效取得录入时间；晚入库不伪造旧取得，事后改稿不能替代实交",
+      "forbidden": "将文件名日期或入库时间当全部时间真值",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-078",
+      "requirements": [
+        "FR-002",
+        "FR-035"
+      ],
+      "sections": [
+        "9",
+        "10"
+      ],
+      "title": "预测失败但核心核对完整",
+      "given": "核心闸门满足，评分服务失败",
+      "action": "登记提交稿",
+      "expected": "如实显示预测失败但可登记；不造预测",
+      "forbidden": "因没有技术总分就放宽核心闸门或伪造分数",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-079",
+      "requirements": [
+        "FR-026",
+        "FR-023",
+        "FR-014"
+      ],
+      "sections": [
+        "3",
+        "11",
+        "12"
+      ],
+      "title": "无目标项目时选参考",
+      "given": "用户从全局知识进入，多个在办项目",
+      "action": "点击用于当前项目",
+      "expected": "选择明确目标并回到原工作上下文",
+      "forbidden": "随意加入最近一次浏览项目",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-080",
+      "requirements": [
+        "FR-015",
+        "FR-034"
+      ],
+      "sections": [
+        "4",
+        "5"
+      ],
+      "title": "取消流标后重启",
+      "given": "旧项目已终止",
+      "action": "收到恢复或重新招标通知",
+      "expected": "同轮有据重开；重新招标关联新轮次",
+      "forbidden": "取消就清空历史或无条件复用成绩",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-081",
+      "requirements": [
+        "FR-024",
+        "FR-027"
+      ],
+      "sections": [
+        "5",
+        "12"
+      ],
+      "title": "时效未知",
+      "given": "资质或规范来源有效期待核实",
+      "action": "尝试正式自动引用",
+      "expected": "待确认或不通过适用检查，不视为永久有效",
+      "forbidden": "空有效期自动表示无限期可信",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-082",
+      "requirements": [
+        "FR-002",
+        "FR-029",
+        "NFR-004"
+      ],
+      "sections": [
+        "9",
+        "14"
+      ],
+      "title": "只报告成功样本的高精度",
+      "given": "测试有大量失败或拒绝估分",
+      "action": "生成评测报告",
+      "expected": "列全部应评成功失败拒绝无标签及分层，按协议判断",
+      "forbidden": "筛去难例后宣称整体精准",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-083",
+      "requirements": [
+        "FR-007",
+        "NFR-002",
+        "NFR-012"
+      ],
+      "sections": [
+        "15",
+        "17"
+      ],
+      "title": "跨入口历史状态一致",
+      "given": "旧报告引用后续失效知识，项目已归档",
+      "action": "查看卡片详情与导出",
+      "expected": "保留当时内容并附失效说明，各入口一致",
+      "forbidden": "一处仍称当前有效另一处已失效",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-084",
+      "requirements": [
+        "FR-022",
+        "FR-028",
+        "FR-029"
+      ],
+      "sections": [
+        "11",
+        "13",
+        "14"
+      ],
+      "title": "导入不自动训练",
+      "given": "用户仅授权导入大量案例",
+      "action": "确认入库",
+      "expected": "完成档案与质量报告，评分运行另有范围与费用估算",
+      "forbidden": "静默启动全库付费预测或替换模型",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-085",
+      "requirements": [
+        "FR-008",
+        "FR-036"
+      ],
+      "sections": [
+        "7",
+        "13"
+      ],
+      "title": "当前项目事实与共享知识",
+      "given": "相似项目工期180天，当前招标要求不同",
+      "action": "生成建议并评分",
+      "expected": "只承认当前项目已核实事实，知识作为有身份参考",
+      "forbidden": "把历史工期自动覆盖本项目要求",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-086",
+      "requirements": [
+        "FR-014",
+        "FR-012",
+        "FR-021",
+        "FR-024",
+        "NFR-003"
+      ],
+      "sections": [
+        "3",
+        "6"
+      ],
+      "title": "空库也能开始工作",
+      "given": "用户没有历史案例或企业知识",
+      "action": "上传首个当前项目，另查看空库",
+      "expected": "可以评审当前项目，空库解释导入方式，检索失败与没有内容区分",
+      "forbidden": "要求先建设知识库或填演示结果",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-087",
+      "requirements": [
+        "FR-002",
+        "FR-011",
+        "FR-029",
+        "NFR-004"
+      ],
+      "sections": [
+        "9",
+        "15"
+      ],
+      "title": "新旧模型统计不混资格",
+      "given": "旧模型有大量配对，新模型只有少量新项目",
+      "action": "查看新模型在线误差",
+      "expected": "按方法版本和适用范围显示有效分母，样本不足明确",
+      "forbidden": "用全库旧配对宣称新模型已经精准",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-088",
+      "requirements": [
+        "FR-028",
+        "FR-009",
+        "FR-036"
+      ],
+      "sections": [
+        "10",
+        "13"
+      ],
+      "title": "实际提交时冻结预测绑定",
+      "given": "同一冻结输入有多次预测，后续又重跑",
+      "action": "登记提交并补正式成绩",
+      "expected": "绑定实交前最新合格预测ID，后续回测不覆盖，不事后择优",
+      "forbidden": "取成绩最接近的一次或提交后回测替换",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-089",
+      "requirements": [
+        "FR-014",
+        "FR-017",
+        "NFR-007"
+      ],
+      "sections": [
+        "3",
+        "8"
+      ],
+      "title": "GovDash式页面与就地助手",
+      "given": "用户在项目列表和章节页之间切换",
+      "action": "展开和收起助手，返回上一项目",
+      "expected": "业务页面保持位置，当前项目与来源清楚，键盘可达直接按钮",
+      "forbidden": "强制全屏聊天或切页后沿用另一项目上下文",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-090",
+      "requirements": [
+        "FR-017",
+        "FR-036",
+        "NFR-010"
+      ],
+      "sections": [
+        "3",
+        "8",
+        "13"
+      ],
+      "title": "AI来源选择不扩大评分输入",
+      "given": "全局助手选入带成绩的历史材料",
+      "action": "在同页发起正式评分",
+      "expected": "新任务从冻结白名单构建，成绩及其派生材料不进入评分，选择范围可查看",
+      "forbidden": "把普通聊天来源和历史成绩直接拼入评分",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-091",
+      "requirements": [
+        "FR-037",
+        "FR-010",
+        "NFR-002"
+      ],
+      "sections": [
+        "4",
+        "10"
+      ],
+      "title": "章节编辑与原件分离",
+      "given": "有上传PDF、工作草稿和旧评审",
+      "action": "编辑章节并采纳建议",
+      "expected": "保存章节新修订，原件与旧报告不变，问题仍待复检",
+      "forbidden": "把保存正文当成生成新评审稿或问题已解决",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-092",
+      "requirements": [
+        "FR-037",
+        "NFR-008"
+      ],
+      "sections": [
+        "8",
+        "10"
+      ],
+      "title": "旧基准AI修改与并发冲突",
+      "given": "AI建议基于章节修订1，另一成员已保存修订2",
+      "action": "应用旧建议或自动保存旧草稿",
+      "expected": "提示差异与冲突，保留双方内容，重新比较后再保存",
+      "forbidden": "最后写入覆盖或整章静默重生成",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-093",
+      "requirements": [
+        "FR-037",
+        "FR-038",
+        "NFR-002"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "目录重建保留人工内容",
+      "given": "目录已有人工正文、计划和要求关联",
+      "action": "重新生成目录或批量删移动章节",
+      "expected": "先预览影响，可逐项接受，保存可恢复修订，未选内容保留",
+      "forbidden": "覆写全文或因删关联将生效要求移出矩阵",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-094",
+      "requirements": [
+        "FR-038",
+        "FR-001",
+        "NFR-003"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "title": "补遗影响未完整定位",
+      "given": "补遗改变要求，部分章节关系未知",
+      "action": "生成影响清单并局部复检",
+      "expected": "列出变更、已知影响与未判定范围，旧结论标过期，人工正文不自动改",
+      "forbidden": "把局部任务完成当整稿合规通过",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-095",
+      "requirements": [
+        "FR-039",
+        "NFR-001"
+      ],
+      "sections": [
+        "10",
+        "15"
+      ],
+      "title": "目录与版式模板冲突",
+      "given": "企业模板含署名，生效招标要求暗标",
+      "action": "选模板并生成文件",
+      "expected": "目录和版式分别选择，冲突可核对，实际PDF版面与残留检查有结果",
+      "forbidden": "模板默认值覆盖强制条款或估算页数当真实页数",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-096",
+      "requirements": [
+        "FR-039",
+        "NFR-002",
+        "NFR-008"
+      ],
+      "sections": [
+        "10"
+      ],
+      "title": "生成版本期间继续编辑",
+      "given": "构建已固定草稿修订3",
+      "action": "编辑成修订4并等旧构建结束",
+      "expected": "产物仍对应修订3，最新草稿和评审版本分别显示",
+      "forbidden": "把旧产物标成修订4或覆盖较新版本指针",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-097",
+      "requirements": [
+        "FR-039",
+        "FR-007",
+        "NFR-003"
+      ],
+      "sections": [
+        "10",
+        "15"
+      ],
+      "title": "Word与PDF部分生成失败",
+      "given": "Word生成成功而PDF缺图或转换失败",
+      "action": "下载并请求正式评审",
+      "expected": "按格式显示结果和缺口，不能用不可靠PDF完成正式评分，成功文件可独立取回",
+      "forbidden": "统一绿色成功或把编辑器截图当真实PDF证据",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-098",
+      "requirements": [
+        "FR-039",
+        "FR-035",
+        "FR-020"
+      ],
+      "sections": [
+        "10"
+      ],
+      "title": "外部Word改稿后重新绑定",
+      "given": "已导出Word并有对应PDF评审",
+      "action": "外部改Word后要求登记提交",
+      "expected": "上传实际新稿并重建页级证据，明确重评和实交绑定，不继承旧稿结论",
+      "forbidden": "沿用旧PDF通过状态或只按文件名认定同稿",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-099",
+      "requirements": [
+        "FR-040",
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "8"
+      ],
+      "title": "事件重复触发与模板更新",
+      "given": "同一输入资料事件重复投递，旧任务已运行",
+      "action": "更新任务模板后再次收到旧事件",
+      "expected": "旧运行固定原模板与输入，同事件去重，新输入新运行可追踪",
+      "forbidden": "重复决定或运行中静默改模板与来源",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-100",
+      "requirements": [
+        "FR-040",
+        "NFR-009"
+      ],
+      "sections": [
+        "8"
+      ],
+      "title": "暂停任务与错过定时",
+      "given": "任务有上海时区计划且一轮正在运行",
+      "action": "暂停计划后恢复",
+      "expected": "阻止新触发，运行取消另操作，展示下次时间及有限补跑范围",
+      "forbidden": "暂停即假装当前运行已取消或无界追赶全部错过计划",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-101",
+      "requirements": [
+        "FR-040",
+        "FR-017",
+        "FR-035",
+        "FR-036"
+      ],
+      "sections": [
+        "8",
+        "10",
+        "13"
+      ],
+      "title": "任务模板不能代替人工决定",
+      "given": "模板或附件要求自动登记提交、核验成绩或扩大来源",
+      "action": "运行模板",
+      "expected": "只输出允许的检查草稿与待确认提案，服务端执行对象和用途核验",
+      "forbidden": "自动消费正式确认或把资料内指令视为工具授权",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-102",
+      "requirements": [
+        "FR-040",
+        "FR-033",
+        "FR-018"
+      ],
+      "sections": [
+        "8"
+      ],
+      "title": "助手关闭后产物可恢复",
+      "given": "后台章节或检查任务已受理",
+      "action": "关闭助手并换页面后回来",
+      "expected": "运行记录可打开原项目产物，通知有意义变化且不重复，保存状态真实",
+      "forbidden": "只在丢失的聊天里保留结果或自动重启同一任务",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-103",
+      "requirements": [
+        "FR-037",
+        "NFR-007",
+        "NFR-008"
+      ],
+      "sections": [
+        "3",
+        "10",
+        "16"
+      ],
+      "title": "手机编辑与来源返回",
+      "given": "390px屏幕正在编辑章节，有未保存内容",
+      "action": "打开来源、助手，再返回并模拟断线",
+      "expected": "单个主要详情全屏，返回保留选区滚动和内容，保存失败可恢复",
+      "forbidden": "横向挤四栏、丢稿或用短暂提示掩盖保存失败",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-104",
+      "requirements": [
+        "FR-014",
+        "FR-012",
+        "FR-017"
+      ],
+      "sections": [
+        "3",
+        "6",
+        "7"
+      ],
+      "title": "现成标书保留快速评审",
+      "given": "用户已有生效招标和完整PDF正文，自动开始开启",
+      "action": "拖入资料并完成必要身份核对",
+      "expected": "直接开始评审并进入关键风险结果，不要求目录模板、编写计划或任务配置",
+      "forbidden": "为了模仿完整编制流程增加无关必填步骤",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-105",
+      "requirements": [
+        "FR-037",
+        "FR-039",
+        "FR-012"
+      ],
+      "sections": [
+        "3",
+        "7",
+        "10"
+      ],
+      "title": "生成并评审遵守自动开始设置",
+      "given": "章节草稿可生成且项目有自动开始设置",
+      "action": "点击当前自动开始设置下的默认生成按钮",
+      "expected": "开启时按钮为生成并评审，关闭时为生成版本；保存和转换成功后分别接续或等待，失败不给完整通过",
+      "forbidden": "按钮承诺评审却只生成，或关闭自动开始仍无人发起地调用评审",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-106",
+      "requirements": [
+        "FR-014",
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "3",
+        "8",
+        "10"
+      ],
+      "title": "完成通知不打断当前编辑",
+      "given": "用户正在编辑另一章节，后台评审完成",
+      "action": "收到完成通知并打开结果后返回",
+      "expected": "站内通知带正确对象，用户主动打开后可返回原章节与未提交内容",
+      "forbidden": "自动跳转结果导致选区和草稿丢失",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-107",
+      "requirements": [
+        "FR-014",
+        "FR-037",
+        "FR-020",
+        "NFR-012"
+      ],
+      "sections": [
+        "3",
+        "10"
+      ],
+      "title": "快速评审与章节编制共用项目",
+      "given": "一个项目已有评审、问题、采纳决定及引用",
+      "action": "从结果进入章节修改，生成新稿复检，再回结果",
+      "expected": "项目和问题链身份保留，旧输入可还原，新稿有独立轮次，返回原工作位置",
+      "forbidden": "复制第二个项目、丢失处理进度或把同稿计为新独立样本",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-108",
+      "requirements": [
+        "FR-018",
+        "FR-007",
+        "FR-017",
+        "NFR-012"
+      ],
+      "sections": [
+        "3",
+        "8",
+        "15"
+      ],
+      "title": "简洁结果保留完整能力",
+      "given": "评审有多项风险和其他待办",
+      "action": "打开默认结果、展开其余待办并取完整报告",
+      "expected": "先显示关键结论和一个主要动作，完整问题与报告仍可直接访问，输入区复用项目主会话",
+      "forbidden": "只留摘要删掉完整结果，或一句话与按钮启动重复业务操作",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-109",
+      "requirements": [
+        "FR-013",
+        "FR-012",
+        "FR-035",
+        "FR-040"
+      ],
+      "sections": [
+        "3",
+        "7",
+        "10"
+      ],
+      "title": "可选功能不阻塞核心评审",
+      "given": "关闭报价与可选检测，未配置在线编辑或任务模板",
+      "action": "上传现成PDF评审并处理必要提交条件",
+      "expected": "核心核对正常，关闭模块在导航、助手、待办和导出一致隐藏，非阻断建议不妨碍登记",
+      "forbidden": "要求配置编辑器、填报价或建立任务模板才可评审提交",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-110",
+      "requirements": [
+        "FR-014",
+        "FR-024",
+        "FR-026",
+        "FR-027"
+      ],
+      "sections": [
+        "3",
+        "12"
+      ],
+      "title": "企业知识独立入口与同源记录",
+      "given": "企业知识有已发布及已停用条目",
+      "action": "从主导航和资料库分别访问并选择参考",
+      "expected": "两处读取同一版本和状态，不需先选项目或进入会话即可浏览，选用时明确目标",
+      "forbidden": "另建副本、入口状态不一致或停用知识从另一个入口仍可引用",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-111",
+      "requirements": [
+        "FR-001",
+        "FR-002",
+        "FR-012",
+        "FR-037",
+        "FR-039"
+      ],
+      "sections": [
+        "2",
+        "3",
+        "9",
+        "19"
+      ],
+      "title": "双P0不等待完整编制平台",
+      "given": "基本身份、私有文件、证据、隔离和模型端口可用，但在线编辑及模板未交付",
+      "action": "启动现成稿否决核对及受控评分实验",
+      "expected": "按已验证能力独立执行并如实显示质量资格，不因扩展编制功能推迟双P0验证",
+      "forbidden": "把页面或编制平台完成当核心效果验收，或声称未实现能力已可用",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-112",
+      "title": "入口与历史深链优先级",
+      "requirements": [
+        "FR-014",
+        "FR-020",
+        "NFR-002"
+      ],
+      "sections": [
+        "3",
+        "10"
+      ],
+      "given": "上次编辑V3但用户打开V1历史报告或已归档项目链接",
+      "action": "通过明确对象链接进入",
+      "expected": "打开指定只读对象并显示历史身份，失效位置给可恢复落点，不套用最新通过结论",
+      "forbidden": "最近位置覆盖深链或恢复过期确认按钮",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-113",
+      "title": "当前失败与旧关键问题的主动作",
+      "requirements": [
+        "FR-018",
+        "FR-033",
+        "NFR-003",
+        "NFR-012"
+      ],
+      "sections": [
+        "3",
+        "7"
+      ],
+      "given": "旧轮有关键风险，新输入解析失败且未完成核心核对",
+      "action": "打开结果和助手建议",
+      "expected": "主动作定位当前输入缺口，旧风险明确历史且仍可查看，报告状态一致",
+      "forbidden": "用旧稿风险操作掩盖当前不可判断或标绿色通过",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-114",
+      "title": "同批多文件和跨入口不重复评审",
+      "requirements": [
+        "FR-012",
+        "FR-033",
+        "NFR-008"
+      ],
+      "sections": [
+        "3",
+        "7",
+        "8"
+      ],
+      "given": "一批多份资料陆续完成且同一冻结输入已受理",
+      "action": "自动触发后又点按钮并用对话请求相同检查",
+      "expected": "必要资料明确后归并一轮，等价在途请求返回已有运行，更新只保留最新待评请求",
+      "forbidden": "每完成一个文件就重评或重复计为独立业务运行",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-115",
+      "title": "逐章汇编与无审核整稿的范围",
+      "requirements": [
+        "FR-037",
+        "FR-039",
+        "FR-035"
+      ],
+      "sections": [
+        "2",
+        "10"
+      ],
+      "given": "目录和人工章节已确认，尚无可提交资格",
+      "action": "汇编DOCX和PDF并请求登记提交",
+      "expected": "允许生成固定版本，仍核对实际文件与核心闸门，不声称无人核验自动交付",
+      "forbidden": "因范围外措辞拒绝正常汇编或生成后直接视为可提交",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-116",
+      "title": "A1交付不等待A2与模型验收",
+      "requirements": [
+        "FR-001",
+        "FR-002",
+        "FR-012",
+        "FR-035"
+      ],
+      "sections": [
+        "3",
+        "9",
+        "19"
+      ],
+      "given": "现成PDF核心核对完整，但章节模板未交付且预测模型未验收",
+      "action": "请求风险检查与符合条件的实交登记",
+      "expected": "A1独立可用，分数保持未验收身份，不因A2和模型资格缺失阻止满足闸门的登记",
+      "forbidden": "把完整编制或已验收分数设为实交前置条件",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-117",
+      "title": "未保存内容禁止静默生成旧稿",
+      "requirements": [
+        "FR-037",
+        "FR-039",
+        "NFR-008"
+      ],
+      "sections": [
+        "4",
+        "10"
+      ],
+      "given": "本地有未确认保存内容，服务端仍为修订3",
+      "action": "点击生成并评审时保存失败",
+      "expected": "保留待保存内容并停止新构建，显式选择旧保存版时标明其身份",
+      "forbidden": "以修订3生成并误称包含当前全部编辑",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-118",
+      "title": "草稿修改与实际PDF提交分别校验",
+      "requirements": [
+        "FR-035",
+        "FR-037",
+        "NFR-002"
+      ],
+      "sections": [
+        "4",
+        "10"
+      ],
+      "given": "已评审PDF未变化，草稿有未生成修改，核心闸门满足",
+      "action": "明确选择原PDF登记实际提交",
+      "expected": "卡片显示具体PDF及未包含草稿修改，不替换正文；新补遗或新目标稿存在则重核当前资格",
+      "forbidden": "草稿自动替换实交文件或因任意未生成编辑一概阻止合格PDF登记",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-119",
+      "title": "同名Word和PDF不自动认定同稿",
+      "requirements": [
+        "FR-039",
+        "FR-035",
+        "NFR-001"
+      ],
+      "sections": [
+        "7",
+        "10"
+      ],
+      "given": "同时上传同名DOCX和PDF但无可追溯转换关系",
+      "action": "评审PDF并查看Word交付资格",
+      "expected": "PDF结论只适用于该PDF，Word对应关系待核验，保留独立PDF检查路径",
+      "forbidden": "凭同名和时间相近就声明Word也已检查通过",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-120",
+      "title": "取消请求与完成竞争保留真实终态",
+      "requirements": [
+        "FR-033",
+        "FR-040",
+        "NFR-008"
+      ],
+      "sections": [
+        "8",
+        "16"
+      ],
+      "given": "任务结果提交与取消请求相邻到达",
+      "action": "请求取消并收到迟到回调",
+      "expected": "按服务端顺序返回已完成或已取消，不回滚已提交决定，取消后迟到结果不更新当前指针",
+      "forbidden": "立即把按钮当取消成功或丢弃已提交结果后重复执行",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-121",
+      "title": "应用建议前复核失效来源",
+      "requirements": [
+        "FR-037",
+        "FR-027",
+        "FR-036"
+      ],
+      "sections": [
+        "10",
+        "12",
+        "13"
+      ],
+      "given": "AI候选正文基准未变，但引用知识已停用或用途已禁止",
+      "action": "应用候选修改",
+      "expected": "拒绝新增失效引用并保留候选原因，可移除来源重生成；历史记录仍可还原",
+      "forbidden": "只检查正文revision而用旧缓存把失效来源写入新稿",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-122",
+      "title": "编辑与任务接口保留对象约束",
+      "requirements": [
+        "FR-037",
+        "FR-039",
+        "FR-040",
+        "NFR-008"
+      ],
+      "sections": [
+        "4",
+        "8",
+        "10",
+        "16"
+      ],
+      "given": "草稿、构建、任务和业务确认有各自稳定身份",
+      "action": "从页面或助手提交保存、生成和运行请求",
+      "expected": "返回明确revision和operation，冲突可恢复，来源与输入可追踪；重试同请求不重复决定",
+      "forbidden": "只有界面假状态或靠聊天字符串认定保存与生成成功",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-123",
+      "title": "隐藏预测分数仍可登记正式成绩",
+      "requirements": [
+        "FR-013",
+        "FR-009",
+        "FR-007",
+        "NFR-012"
+      ],
+      "sections": [
+        "7",
+        "13",
+        "15"
+      ],
+      "given": "项目隐藏预测分数，既有预测和官方成绩原件",
+      "action": "查看页面、复制回复、生成报告并登记技术分",
+      "expected": "预测数值和派生区间分差统一隐藏，风险缺口与正式成绩字段保留，后台用途仍隔离",
+      "forbidden": "误删或隐藏官方成绩输入，或从图表复制文本泄漏预测数值",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-124",
+      "title": "可受理部分检查不等于完整通过",
+      "requirements": [
+        "FR-012",
+        "FR-008",
+        "NFR-003"
+      ],
+      "sections": [
+        "3",
+        "7",
+        "10"
+      ],
+      "given": "正文可读但疑似必要图纸或附表解析失败",
+      "action": "结束上传批次并先检查可用范围",
+      "expected": "保留成功内容和部分有效结果，未知关键范围仍阻断完整结论，主动作可补对应资料",
+      "forbidden": "将失败附件随意当非必要并宣称整稿通过",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-125",
+      "title": "同字节改归属或角色形成新输入",
+      "requirements": [
+        "FR-012",
+        "FR-034",
+        "FR-036",
+        "NFR-008"
+      ],
+      "sections": [
+        "4",
+        "7",
+        "13"
+      ],
+      "given": "一份PDF先作普通参考，后核实是生效补遗或归错项目",
+      "action": "更正资料角色和归属并请求评审",
+      "expected": "复用字节但更新语义资料修订，按正确项目输入核对，保留原运行身份",
+      "forbidden": "仅按文件哈希去重而跳过新补遗或串项目",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-126",
+      "title": "当前展示设置与不可变历史导出",
+      "requirements": [
+        "FR-007",
+        "FR-013",
+        "FR-027",
+        "NFR-002"
+      ],
+      "sections": [
+        "7",
+        "12",
+        "15"
+      ],
+      "given": "已有含预测分数的报告文件，之后关闭预测显示或来源失效",
+      "action": "重新下载报告",
+      "expected": "按当前设置和影响状态生成独立展示副本，原产物不覆盖，不增加评审样本，不声称离线文件自动改变",
+      "forbidden": "返回旧数字缓存、改写原文件或假装撤回已下载文件",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-127",
+      "title": "正文报告批注三类导出不能混淆",
+      "requirements": [
+        "FR-039",
+        "FR-007",
+        "FR-035"
+      ],
+      "sections": [
+        "10",
+        "15"
+      ],
+      "given": "有正文PDF、评审报告与批注审阅稿",
+      "action": "下载并在标准提交中误选批注稿",
+      "expected": "按钮和对象标明用途，提示改选对应正文；已发生错误提交可据实补录，正文不自动夹带系统审查说明",
+      "forbidden": "误把报告当正式正文，删除待补标记掩盖缺口，或用干净稿替换实际错误提交",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "AC-128",
+      "title": "自动开始关闭仍可明确人工生成并评审",
+      "requirements": [
+        "FR-012",
+        "FR-017",
+        "FR-039"
+      ],
+      "sections": [
+        "3",
+        "7",
+        "8",
+        "10"
+      ],
+      "given": "项目关闭自动开始且草稿可生成",
+      "action": "用户明确说生成后检查这份稿或生成后点击开始评审",
+      "expected": "作为人工请求固定范围并正常执行，复用等价在途任务，不要求开启自动开始",
+      "forbidden": "把自动开始开关当禁止人工检查，或要求无意义地重复开启确认",
+      "software_execution": "未执行"
+    }
+  ]
+}

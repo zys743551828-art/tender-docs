@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-17T02:34:45.646667+00:00",
+  "kind": "probe_limitations_not_product_defects",
+  "episodes": [
+    {
+      "observation": "Registration selection cached before async new-company response; target first used blankID and remained pending; corrected through own actual identity UI",
+      "evidence": [
+        "11-working-reference-target.txt",
+        "target-identity-corrected-result.json"
+      ]
+    },
+    {
+      "observation": "Initial failed retrieval raw result was overwritten by a later attempt; below is a transcript note from contemporaneous tool output, not preserved raw API response",
+      "code": "KNOWLEDGE_PROJECT_CONTEXT_CHANGED",
+      "diagnostic_id": "d5d8c186-3a9f-4aca-849b-7b87f983c708",
+      "raw_original_retained": false
+    },
+    {
+      "observation": "Early RAG probe closed after1.2s while UI still in progress; passing case waited actual response",
+      "partial_evidence": "rag-search-result.json",
+      "passing_evidence": "rag-completed-search-result.json"
+    },
+    {
+      "observation": "Exact-label stage-correction locator included old textarea content; failed before any POST, final prefix locator succeeded",
+      "failed_evidence": [
+        "stage-correction-history-result.json",
+        "stage-correction-validity-result.json",
+        "stage-correction-locator-observation.json"
+      ],
+      "passing_evidence": "stage-correction-final-history-result.json"
+    }
+  ]
+}

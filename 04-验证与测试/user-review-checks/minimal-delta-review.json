@@ -1,0 +1,201 @@
+{
+  "role": "independent_user_view_reviewer",
+  "scope": "three_product_deltas_only",
+  "decision": "design_delivery_approved",
+  "user_design_blockers": 0,
+  "sources": [
+    {
+      "id": "P",
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e"
+    },
+    {
+      "id": "V",
+      "path": "05-技术与设计/交互与视觉设计.md",
+      "sha256": "2ee6809cc12fbb4450ff1b8b038d71c4e5fb7f8e4f361def215743de83150dc9"
+    }
+  ],
+  "citations": [
+    {
+      "id": "M01",
+      "source": "V",
+      "line": 51,
+      "excerpt": "全新前端的目标路由"
+    },
+    {
+      "id": "M02",
+      "source": "V",
+      "line": 62,
+      "excerpt": "新系统内部历史对象与深链接必须打开所指对象及版本"
+    },
+    {
+      "id": "M03",
+      "source": "V",
+      "line": 62,
+      "excerpt": "不承接旧app路由兼容或迁移"
+    },
+    {
+      "id": "M04",
+      "source": "P",
+      "line": 363,
+      "excerpt": "补充并确认条款"
+    },
+    {
+      "id": "M05",
+      "source": "P",
+      "line": 363,
+      "excerpt": "才原子追加新规则包及新增条款的人工确认决定"
+    },
+    {
+      "id": "M06",
+      "source": "P",
+      "line": 363,
+      "excerpt": "不得确认或部分写入，保留输入供修正"
+    },
+    {
+      "id": "M07",
+      "source": "P",
+      "line": 363,
+      "excerpt": "确认仅确认条款解释，不代表正文满足"
+    },
+    {
+      "id": "M08",
+      "source": "P",
+      "line": 363,
+      "excerpt": "旧评审标过期并提供按新包重新评审入口"
+    },
+    {
+      "id": "M09",
+      "source": "P",
+      "line": 363,
+      "excerpt": "不重复要求第二次确认或新增岗位审批"
+    },
+    {
+      "id": "M10",
+      "source": "P",
+      "line": 365,
+      "excerpt": "不以后续模型提取清单决定其存续"
+    },
+    {
+      "id": "M11",
+      "source": "P",
+      "line": 365,
+      "excerpt": "来源仍生效且条件／范围未变的要求继续纳入新包并沿用确认"
+    },
+    {
+      "id": "M12",
+      "source": "P",
+      "line": 365,
+      "excerpt": "与等价提取项合并而不重复计数"
+    },
+    {
+      "id": "M13",
+      "source": "P",
+      "line": 365,
+      "excerpt": "保留待核验项与影响提示，不静默消失或冒充仍有效"
+    },
+    {
+      "id": "M14",
+      "source": "P",
+      "line": 365,
+      "excerpt": "可以结束当前义务并保留历史，不新增默认步骤或岗位审批"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "MD01",
+      "task": "历史对象深链接",
+      "citations": [
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    },
+    {
+      "id": "MD02",
+      "task": "补漏成功一次确认并复评",
+      "citations": [
+        "M04",
+        "M05",
+        "M07",
+        "M08",
+        "M09"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    },
+    {
+      "id": "MD03",
+      "task": "校验失败保留输入且不部分写",
+      "citations": [
+        "M06"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    },
+    {
+      "id": "MD04",
+      "task": "有效人工要求重提延续并去重",
+      "citations": [
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    },
+    {
+      "id": "MD05",
+      "task": "效力不明待核验",
+      "citations": [
+        "M13"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    },
+    {
+      "id": "MD06",
+      "task": "有据结束义务且保留历史",
+      "citations": [
+        "M14"
+      ],
+      "method": "document_role_simulation",
+      "result": "no_user_design_blocker",
+      "software_executed": false
+    }
+  ],
+  "default_extra_approvals_added": false,
+  "default_second_confirmation_added": false,
+  "unchanged_seven_paths_rerun": false,
+  "previous_records_sha256": {
+    "04-验证与测试/用户视角模拟评审.md": "3e7229afaea4ed7c100e7bf1892183e026fe393114683cd845009b4fdc32cb3a",
+    "04-验证与测试/用户视角整改复审.md": "e78cd6e765814709c322c6ce130b38df86d791582a36e44874425e66e5b9e5d4",
+    "04-验证与测试/user-review-checks/evidence.json": "d3fde3356d49cda758a269c7e7bfd72823776138faf989d96ec47850c0dff3d9",
+    "04-验证与测试/user-review-checks/result.json": "5c2317510d927c312b5fb13944c1379a5f62518bc34e85bdaee32f110c40b602",
+    "04-验证与测试/user-review-checks/review-followup.json": "0121e04ce7c9a3441f9ebd091093141ea084234d625729ad72d222d1172fb0dc"
+  },
+  "report": "04-验证与测试/用户视角最小增量复核.md",
+  "report_sha256": "7596201e15c54f564969c75df24297d1f1a4d8ff47a252575fb893d9e34bf8da",
+  "checks": {
+    "requested_candidate_hashes_match": true,
+    "citation_excerpt_count": 14,
+    "targeted_scenarios": 6,
+    "prior_report_and_evidence_content_preserved": true
+  },
+  "real_participants": 0,
+  "browser_runs": 0,
+  "business_software_tests": 0,
+  "pending": [
+    "actual_ui_review",
+    "real_task_observations_U03_U04_U05",
+    "transaction_implementation_tests_by_testing_role",
+    "overall_stage_decision_by_pm"
+  ]
+}

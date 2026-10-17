@@ -1,0 +1,87 @@
+{
+  "qa_result": "/workspace/tender-docs/04-验证与测试/authoring-complete-independent-checks/candidate-02/final-result.json",
+  "sha256": "bcaa389af2ef55c3577d9dbb550adf7ab172d27ec0ee01a0ba976cec7aa67ac0",
+  "candidate_sha256": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9",
+  "execution_and_artifact_hashes_verified": 12,
+  "cases": 4,
+  "actual": {
+    "sha256": "d9f95834559640aed7f95a632cb00d998306f40e3084fab29ffb3c1c3271d240",
+    "paths": 173,
+    "operations": 200,
+    "schemas": 331,
+    "cold_composed_export_equals_frozen": true,
+    "composition": "Fixed main plus explicit authoring_structure router in local TestClient; no shared/live service changed"
+  },
+  "qa_observations": [
+    {
+      "name": "actual_HTTP_registered_export",
+      "physical_pages": [
+        {
+          "physical_page": 1,
+          "footer": "1"
+        },
+        {
+          "physical_page": 2,
+          "footer": "2"
+        },
+        {
+          "physical_page": 3,
+          "footer": "3"
+        },
+        {
+          "physical_page": 4,
+          "footer": "4"
+        },
+        {
+          "physical_page": 5,
+          "footer": "5"
+        },
+        {
+          "physical_page": 6,
+          "footer": "6"
+        },
+        {
+          "physical_page": 7,
+          "footer": "7"
+        },
+        {
+          "physical_page": 8,
+          "footer": "8"
+        }
+      ],
+      "docx_sha256": "e0a1b0ef746a6daf819ddf1bc83aaff239db6cd733613d860034c4693d84b061",
+      "pdf_sha256": "7d58070820a9879d2bdebd3d0f4df5dc7b71b77007c54db8345767bf2e47517c",
+      "body_text_sha256": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e",
+      "body_digits": 1102,
+      "expected_digest": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e",
+      "connections_closed_before_Docker": true,
+      "one_effect_and_duplicate_not_acquired": true,
+      "no_automatic_body_adoption": true,
+      "explicit_unknown_gaps": [
+        "ACTUAL_SECTION_PAGE_RANGES_UNKNOWN",
+        "TOC_PAGE_NUMBERS_UNKNOWN"
+      ]
+    },
+    {
+      "name": "cancel_late",
+      "actual_render_complete": true,
+      "outputs": 0,
+      "effects": 0
+    },
+    {
+      "name": "late_editor_revision",
+      "frozen_outputs_retained": 2,
+      "new_body_not_adopted": true,
+      "follow_up": "needs_selection"
+    },
+    {
+      "name": "source_withdrawal_late",
+      "real_pdf_original_bytes": true,
+      "source_fixture": "actual PDFium local parse explicitly published metadata, not Parser03 accuracy acceptance",
+      "outputs": 0,
+      "effects": 0
+    }
+  ],
+  "architect_execution": "read and hash only; no rerun",
+  "scope": "Complements previous structural report; no TREE/RICH/TOC actual section-page or full A2 claim"
+}

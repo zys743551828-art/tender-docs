@@ -1,0 +1,29 @@
+{
+  "code": null,
+  "error_type": "NotNullViolation",
+  "frames": [
+    {
+      "file": "<stdin>",
+      "function": "<module>",
+      "line": 8
+    },
+    {
+      "file": "deploy/application_recovery/__main__.py",
+      "function": "main",
+      "line": 85
+    },
+    {
+      "file": "deploy/application_recovery/fixture.py",
+      "function": "create",
+      "line": 176
+    },
+    {
+      "file": ".venv/lib/python3.12/site-packages/psycopg/connection.py",
+      "function": "execute",
+      "line": 257
+    }
+  ],
+  "sqlstate": "23502",
+  "stage": "source",
+  "status": "failed"
+}

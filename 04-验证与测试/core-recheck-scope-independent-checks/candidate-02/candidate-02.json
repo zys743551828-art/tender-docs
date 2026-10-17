@@ -1,0 +1,55 @@
+{
+  "status": "frozen_for_independent_review",
+  "predecessor": {
+    "path": "docs/core-recheck-scope-development-checks/candidate-01.json",
+    "sha256": "71ad1d8ec7211fe49ee8d85d31a9b15c5aadf434cf34972c3569bd5b79316dbd"
+  },
+  "scope": "Full server-frozen body scope, not natural-language cross-document page-number inference",
+  "sources": [
+    {
+      "path": "packages/domain/core_recheck_scope.py",
+      "sha256": "422bd66cb2367b5a31d2de63226fa5813c1c500ee93d362f6edf64c8fa4786ed"
+    },
+    {
+      "path": "tests/test_core_recheck_scope_integration.py",
+      "sha256": "be8a5f38cee28e0669bc7d8b17badbba89e4140e355354ff6fcbd2e243d892a1"
+    },
+    {
+      "path": "docs/core-recheck-scope-development-checks/note-02.md",
+      "sha256": "ad2f88db7b66b070a823cf2a6bae94217b270357398b0d2b3fa51fbda399042e"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "packages/domain/finding_lifecycle.py",
+      "sha256": "938d10838a8fa7f69a6d6dd48013712f9fadec5176c37275d181c160140369d3"
+    },
+    {
+      "path": "packages/domain/engineering.py",
+      "sha256": "a813334a9d68764d9a5b928e3d79ae88cc1e3a3ec65e1a7e9cccdfe4266e03fc"
+    },
+    {
+      "path": "tests/test_engineering.py",
+      "sha256": "2af7004b52e8d1bfba4fb4db987a11c0b452b926ca53891e7b2c75a1327b0bd1"
+    }
+  ],
+  "validation": {
+    "real_nonowner_pg_worker": 8,
+    "pure_engineering": 29,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "result": {
+      "path": "docs/core-recheck-scope-development-checks/developer-result-02.xml",
+      "sha256": "3a0401d449a0a2091473b43dc2b75bc9b9d91cab03989996ff76df7c9790ed5d"
+    },
+    "business_paid_calls": 0,
+    "parser_or_model_quality_claim": false
+  },
+  "pending": [
+    "independent original main04 counterexample",
+    "independent cross-document-reference and physical-page-set delta",
+    "architecture review"
+  ]
+}

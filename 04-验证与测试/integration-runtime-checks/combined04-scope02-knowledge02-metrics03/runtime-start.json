@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-17T01:07:20.049576+00:00",
+  "candidate_sha256": "965b1587759edc558bfd99030cda68583ee8ac4de11d3b5e6f521694f6e34be2",
+  "runtime_root": "/workspace/tender-docs/04-验证与测试/integration-runtime-checks/combined04-scope02-knowledge02-metrics03/runtime",
+  "profile": ".local/combined_delivery01-checks.env",
+  "database": "tender_checks_combined_delivery01",
+  "kafka": "127.0.0.1:19096",
+  "origin": "http://127.0.0.1:5176",
+  "api": "http://127.0.0.1:8806",
+  "processes": [
+    {
+      "pid": 1228878,
+      "uid": 1000,
+      "role": "api8806",
+      "argv": "/workspace/tender-workbench/.venv/bin/python -m uvicorn apps.api.main:app --host 127.0.0.1 --port 8806 --no-access-log --log-level warning"
+    },
+    {
+      "pid": 1233829,
+      "uid": 1000,
+      "role": "relay",
+      "argv": "/workspace/tender-workbench/.venv/bin/python -m apps.worker relay"
+    },
+    {
+      "pid": 1234898,
+      "uid": 1000,
+      "role": "reconcile",
+      "argv": "/workspace/tender-workbench/.venv/bin/python -m apps.worker reconcile"
+    },
+    {
+      "pid": 1235354,
+      "uid": 1000,
+      "role": "document",
+      "argv": "/workspace/tender-workbench/.venv/bin/python -m apps.worker consume"
+    },
+    {
+      "pid": 1235903,
+      "uid": 1000,
+      "role": "export",
+      "argv": "/workspace/tender-workbench/.venv/bin/python -m apps.worker consume-export"
+    }
+  ],
+  "execution_sessions": {
+    "api": 88198,
+    "relay": 96021,
+    "reconcile": 83188,
+    "document": 29734,
+    "export": 60848,
+    "project_index_coordinator": 33512,
+    "knowledge_index_coordinator": 78767
+  },
+  "binding_evidence": "cold-api-binding.json",
+  "proof_limit": "Commands launched with frozen root PYTHONPATH and fixed role launcher; no /proc environment/cwd read, independent service testing remains pending",
+  "paid_review_consumer_started": false,
+  "research_consumer_started": false,
+  "provider_calls": 0,
+  "old_8802_5175_untouched": true
+}

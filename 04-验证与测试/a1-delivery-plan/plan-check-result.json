@@ -1,0 +1,732 @@
+{
+  "scope": "产品计划静态完整性与引用校验，非软件验收",
+  "static_plan_validation_only": true,
+  "software_runs": 0,
+  "browser_runs": 0,
+  "human_participants": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "checks": [
+    {
+      "name": "原验收输入绑定",
+      "passed": true,
+      "detail": "只校验原记录摘要，不更改历史状态。"
+    },
+    {
+      "name": "原13项ID完整且顺序一致",
+      "passed": true,
+      "detail": "执行拆解不得增删、改名或覆盖原13项。"
+    },
+    {
+      "name": "原场景语义逐字保留",
+      "passed": true,
+      "detail": "原文中的旧表述仅作原证据；实现按当前PRD及交接执行。"
+    },
+    {
+      "name": "未来执行状态仍待应用验证",
+      "passed": true,
+      "detail": "本检查无软件运行、凭据读取、真人或收费调用。"
+    },
+    {
+      "name": "PPR-AC-01执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-01目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-01:ProjectSettings字段引用",
+      "passed": true,
+      "detail": "consistency"
+    },
+    {
+      "name": "PPR-AC-01:FindingView字段引用",
+      "passed": true,
+      "detail": "id, origin_review_id, retained_known_critical, detection_run_state, lifecycle, decision"
+    },
+    {
+      "name": "PPR-AC-01:GateView字段引用",
+      "passed": true,
+      "detail": "allowed, blockers"
+    },
+    {
+      "name": "PPR-AC-01:ArtifactView字段引用",
+      "passed": true,
+      "detail": "artifact_kind, state, sha256"
+    },
+    {
+      "name": "PPR-AC-01契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-02执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-02目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-02:FindingView字段引用",
+      "passed": true,
+      "detail": "id, review_id, origin_review_id, detection_run_state, lifecycle, decision_revision"
+    },
+    {
+      "name": "PPR-AC-02:DecisionRequest字段引用",
+      "passed": true,
+      "detail": "decision, reason, evidence_ids"
+    },
+    {
+      "name": "PPR-AC-02:DecisionView字段引用",
+      "passed": true,
+      "detail": "actor_id, created_at, object_revision"
+    },
+    {
+      "name": "PPR-AC-02契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-03执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-03目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-03:ReviewCoverage字段引用",
+      "passed": true,
+      "detail": "source_scope, core_extraction, judgment, scoring, extraction_quality, quality_report_id, human_confirmation_pending"
+    },
+    {
+      "name": "PPR-AC-03:CoverageLayer字段引用",
+      "passed": true,
+      "detail": "state, planned, completed, denominator_basis, gaps"
+    },
+    {
+      "name": "PPR-AC-03:RuleSetView字段引用",
+      "passed": true,
+      "detail": "id, material_revision, rules, revision"
+    },
+    {
+      "name": "PPR-AC-03:ReviewManifest字段引用",
+      "passed": true,
+      "detail": "rule_set_id, material_revision, body_version_id"
+    },
+    {
+      "name": "PPR-AC-03契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-04执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-04目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-04:RuleView字段引用",
+      "passed": true,
+      "detail": "kind, statement, conditions"
+    },
+    {
+      "name": "PPR-AC-04:MatrixRow字段引用",
+      "passed": true,
+      "detail": "rule, check_status, verdict, error_code"
+    },
+    {
+      "name": "PPR-AC-04:ReviewCoverage字段引用",
+      "passed": true,
+      "detail": "judgment, scoring"
+    },
+    {
+      "name": "PPR-AC-04:PredictionView字段引用",
+      "passed": true,
+      "detail": "mode, reasons"
+    },
+    {
+      "name": "PPR-AC-04:SubmissionRequest字段引用",
+      "passed": true,
+      "detail": "body_version_id, review_id, material_revision, submitted_at, evidence_ref"
+    },
+    {
+      "name": "PPR-AC-04契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-05执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-05目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-05:ReviewManifest字段引用",
+      "passed": true,
+      "detail": "body_version_id, purpose, source_refs, method_digest"
+    },
+    {
+      "name": "PPR-AC-05:PredictionView字段引用",
+      "passed": true,
+      "detail": "mode, reasons, method_digest"
+    },
+    {
+      "name": "PPR-AC-05:ResearchRunView字段引用",
+      "passed": true,
+      "detail": "id, manifest_digest, state, succeeded, failed, pending"
+    },
+    {
+      "name": "PPR-AC-05:ResearchPreviewView字段引用",
+      "passed": true,
+      "detail": "estimated_calls, estimated_fee, estimate_notes"
+    },
+    {
+      "name": "PPR-AC-05契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-06执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-06目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-06:PredictionView字段引用",
+      "passed": true,
+      "detail": "mode, reasons"
+    },
+    {
+      "name": "PPR-AC-06:OutcomeView字段引用",
+      "passed": true,
+      "detail": "score_kind, value, verification, source_version_id"
+    },
+    {
+      "name": "PPR-AC-06契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "U01-A执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "U01-A目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "U01-A:ReportRequest字段引用",
+      "passed": true,
+      "detail": "artifact_kind, format, presentation_revision, source_impact_revision"
+    },
+    {
+      "name": "U01-A:ArtifactView字段引用",
+      "passed": true,
+      "detail": "id, artifact_kind, format, state, sha256, gaps"
+    },
+    {
+      "name": "U01-A:ReviewManifest字段引用",
+      "passed": true,
+      "detail": "body_version_id"
+    },
+    {
+      "name": "U01-A契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "U02-A执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "U02-A目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "U02-A:DocumentView字段引用",
+      "passed": true,
+      "detail": "id, filename, media_type, parse_coverage, file_id, file_revision, source_relation"
+    },
+    {
+      "name": "U02-A:ReviewManifest字段引用",
+      "passed": true,
+      "detail": "body_version_id, parse_run_ids, content_checks"
+    },
+    {
+      "name": "U02-A契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "U03-A执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "U03-A目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "U03-A:NextAction字段引用",
+      "passed": true,
+      "detail": "action, reason, target_url, blocked"
+    },
+    {
+      "name": "U03-A:ReviewView字段引用",
+      "passed": true,
+      "detail": "risk_count, next_action"
+    },
+    {
+      "name": "U03-A:FindingPage字段引用",
+      "passed": true,
+      "detail": "items, next_cursor, has_more"
+    },
+    {
+      "name": "U03-A:FindingView字段引用",
+      "passed": true,
+      "detail": "severity, verdict, lifecycle"
+    },
+    {
+      "name": "U03-A契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "U04-A执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "U04-A目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "U04-A:RuleView字段引用",
+      "passed": true,
+      "detail": "conditions, exceptions, provenance_status, manual_origin_rule_id"
+    },
+    {
+      "name": "U04-A:ReviewView字段引用",
+      "passed": true,
+      "detail": "source_impact_revision, current"
+    },
+    {
+      "name": "U04-A:ReviewCoverage字段引用",
+      "passed": true,
+      "detail": "source_scope, core_extraction"
+    },
+    {
+      "name": "U04-A契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "U05-A执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "U05-A目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "U05-A:OutcomeRequest字段引用",
+      "passed": true,
+      "detail": "submission_id, score_kind, value, maximum, source_version_id, known_at"
+    },
+    {
+      "name": "U05-A:OutcomeView字段引用",
+      "passed": true,
+      "detail": "verification, score_kind, value"
+    },
+    {
+      "name": "U05-A:SubmissionView字段引用",
+      "passed": true,
+      "detail": "id, body_version_id, kind, submitted_at"
+    },
+    {
+      "name": "U05-A契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-03-B执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-03-B目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-03-B:RuleSetCorrectionRequest字段引用",
+      "passed": true,
+      "detail": "base_rule_set_id, reason, additions"
+    },
+    {
+      "name": "PPR-AC-03-B:RuleAddition字段引用",
+      "passed": true,
+      "detail": "kind, statement, conditions, exceptions, scope, maximum, bands, evidence_quotes"
+    },
+    {
+      "name": "PPR-AC-03-B:RuleEvidenceQuote字段引用",
+      "passed": true,
+      "detail": "evidence_id, quote"
+    },
+    {
+      "name": "PPR-AC-03-B:RuleView字段引用",
+      "passed": true,
+      "detail": "origin_kind, manual_origin_rule_id, confirmation, carryover"
+    },
+    {
+      "name": "PPR-AC-03-B:DecisionView字段引用",
+      "passed": true,
+      "detail": "actor_id, object_id, decision"
+    },
+    {
+      "name": "PPR-AC-03-B契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "PPR-AC-03-C执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "PPR-AC-03-C目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "PPR-AC-03-C:RuleView字段引用",
+      "passed": true,
+      "detail": "id, origin_kind, manual_origin_rule_id, provenance_status, confirmation, evidence_ids"
+    },
+    {
+      "name": "PPR-AC-03-C:RuleCarryoverView字段引用",
+      "passed": true,
+      "detail": "from_rule_id, from_decision_id, equivalence_digest, adopted_at"
+    },
+    {
+      "name": "PPR-AC-03-C:GateView字段引用",
+      "passed": true,
+      "detail": "allowed, blockers"
+    },
+    {
+      "name": "PPR-AC-03-C契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S01执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S01目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S01:ReviewRequest字段引用",
+      "passed": true,
+      "detail": "body_version_id, material_revision, trigger"
+    },
+    {
+      "name": "A1-S01:ReviewManifest字段引用",
+      "passed": true,
+      "detail": "body_version_id, rule_set_id, fact_set_id, material_revision"
+    },
+    {
+      "name": "A1-S01:ReviewView字段引用",
+      "passed": true,
+      "detail": "current, operation_id"
+    },
+    {
+      "name": "A1-S01契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S02执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S02目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S02:MatrixRow字段引用",
+      "passed": true,
+      "detail": "check_status, verdict, error_code, evidence_ids"
+    },
+    {
+      "name": "A1-S02:FindingView字段引用",
+      "passed": true,
+      "detail": "searched_ranges, evidence_ids, verdict"
+    },
+    {
+      "name": "A1-S02:CoverageLayer字段引用",
+      "passed": true,
+      "detail": "state, planned, completed, gaps"
+    },
+    {
+      "name": "A1-S02契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S03执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S03目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S03:FactSetView字段引用",
+      "passed": true,
+      "detail": "id, revision, facts"
+    },
+    {
+      "name": "A1-S03:FactView字段引用",
+      "passed": true,
+      "detail": "subject, scope, name, value, unit, evidence_ids, confirmation, decision_revision"
+    },
+    {
+      "name": "A1-S03:FactChangeRequest字段引用",
+      "passed": true,
+      "detail": "fact, replaces_fact_id"
+    },
+    {
+      "name": "A1-S03契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S04执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S04目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S04:RuleView字段引用",
+      "passed": true,
+      "detail": "confirmation, decision_revision, carryover"
+    },
+    {
+      "name": "A1-S04:BatchRuleConfirmationRequest字段引用",
+      "passed": true,
+      "detail": "items"
+    },
+    {
+      "name": "A1-S04:RuleConfirmationItem字段引用",
+      "passed": true,
+      "detail": "rule_id, expected_decision_revision"
+    },
+    {
+      "name": "A1-S04契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S05执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S05目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S05:ComparisonRequest字段引用",
+      "passed": true,
+      "detail": "left_review_id, right_review_id, same_method_rerun"
+    },
+    {
+      "name": "A1-S05:MessageRequest字段引用",
+      "passed": true,
+      "detail": "client_message_id, text, source_version_ids"
+    },
+    {
+      "name": "A1-S05:FindingView字段引用",
+      "passed": true,
+      "detail": "lifecycle, origin_review_id"
+    },
+    {
+      "name": "A1-S05:ReviewView字段引用",
+      "passed": true,
+      "detail": "current, input_digest, manifest_digest"
+    },
+    {
+      "name": "A1-S05契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "A1-S06执行任务齐备",
+      "passed": true,
+      "detail": "场景须含动作、界面、后端及交付批次。"
+    },
+    {
+      "name": "A1-S06目标接口引用",
+      "passed": true,
+      "detail": "仅证明目标operation存在，不证明当前实现可调用。"
+    },
+    {
+      "name": "A1-S06:SubmissionRequest字段引用",
+      "passed": true,
+      "detail": "body_version_id, review_id, material_revision, submitted_at, evidence_ref"
+    },
+    {
+      "name": "A1-S06:OfflineSubmissionRequest字段引用",
+      "passed": true,
+      "detail": "actual_document_version_id, submitted_at, evidence_ref, explanation"
+    },
+    {
+      "name": "A1-S06:SubmissionView字段引用",
+      "passed": true,
+      "detail": "kind, review_id, gate_checked"
+    },
+    {
+      "name": "A1-S06:Error字段引用",
+      "passed": true,
+      "detail": "code, message, retryable, details"
+    },
+    {
+      "name": "A1-S06契约缺口追踪",
+      "passed": true,
+      "detail": "缺口由下一批实际契约闭合，不假造目标字段。"
+    },
+    {
+      "name": "GAP-PREPARE-INTENT已有接口引用",
+      "passed": true,
+      "detail": "首次缺规则包的持久准备请求、operation及刷新恢复查询；就绪自动接续，无第二次开始"
+    },
+    {
+      "name": "GAP-MANIFEST-READ已有接口引用",
+      "passed": true,
+      "detail": "可读取冻结ReviewManifest，精确历史轮输入身份；ReviewView只给digest不够"
+    },
+    {
+      "name": "GAP-HISTORY-READ已有接口引用",
+      "passed": true,
+      "detail": "本项目评审历史/实交列表刷新可发现，不依赖localStorage"
+    },
+    {
+      "name": "GAP-DECISION-ETAG已有接口引用",
+      "passed": true,
+      "detail": "规则/事实/问题单对象读取的强决定ETag，不猜拼法或用集合令牌"
+    },
+    {
+      "name": "GAP-SOURCE-EFFECTIVITY已有接口引用",
+      "passed": true,
+      "detail": "明确有据生效/取代/局部关系的领域受理动作；只读source impacts不足"
+    },
+    {
+      "name": "GAP-FINDING-SUGGESTION已有接口引用",
+      "passed": true,
+      "detail": "直接从问题绑定当前稿/来源发起建议，复用conversation/action领域，不依赖通用任务平台"
+    },
+    {
+      "name": "GAP-DECISION-WHITELIST已有接口引用",
+      "passed": true,
+      "detail": "将通用DecisionRequest.string落实对象级白名单；人工新增事实单事务保存并确认"
+    },
+    {
+      "name": "FR-001至040全量追踪",
+      "passed": true,
+      "detail": "每条需求保留既有编号与名称。"
+    },
+    {
+      "name": "需求与批次双向一致",
+      "passed": true,
+      "detail": "拆批不会遗失需求或默认为已完成。"
+    },
+    {
+      "name": "阶段依赖及退出门槛",
+      "passed": true,
+      "detail": "现有资料片与未来研究/模型/完整产品保持独立完成边界。"
+    },
+    {
+      "name": "所有来源摘要绑定",
+      "passed": true,
+      "detail": "后续源材料变化应做影响评估，不能覆盖旧执行证据。"
+    },
+    {
+      "name": "A1验收与界面数据交接.md本地链接存在",
+      "passed": true,
+      "detail": "只检查文件链接，不把引用数量当验证覆盖。"
+    },
+    {
+      "name": "README.md本地链接存在",
+      "passed": true,
+      "detail": "只检查文件链接，不把引用数量当验证覆盖。"
+    }
+  ],
+  "passed": true,
+  "original_cases": 13,
+  "supporting_tasks": 6,
+  "functional_requirements": 40,
+  "input_bindings": [
+    {
+      "path": "README.md",
+      "sha256": "8bb051d49cbeeccdc2efe8f5fc1bc9b10dad8882196077721af334257d0a1575"
+    },
+    {
+      "path": "A1验收与界面数据交接.md",
+      "sha256": "35271c689e3dd756d73c4756b3f9a755f0c3dac2796ee966a411b24b13a114e5"
+    },
+    {
+      "path": "a1-acceptance.json",
+      "sha256": "8a12eb0a6932f9fb05869986ecd5504a448af6e80bed68f8a025bf929a1d16b8"
+    },
+    {
+      "path": "delivery-plan.json",
+      "sha256": "c81c52e6585e7988db3063ca860ba32051ac409a5c05b1d5c36f5351e24a6947"
+    },
+    {
+      "path": "check_plan.py",
+      "sha256": "43a81f2c6072fcab44f8cfacb657a10f98a511518cece1022f040e057122a298"
+    }
+  ]
+}

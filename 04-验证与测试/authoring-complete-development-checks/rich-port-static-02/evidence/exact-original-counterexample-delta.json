@@ -1,0 +1,68 @@
+{
+  "scope": "same original architect PDF bytes, actual PDFium only, no Docker/PG/network/model",
+  "module_sha256": "fda40797bc2950a809ba92e42d5cc009b9b073da42e13798a7e01f5991e32597",
+  "results": {
+    "baseline": {
+      "input_sha256": "b672a45d843bf05886f75f4cad6416313ddd05e8210c02cf1a4016576ddd69b2",
+      "proof": {
+        "protocol": "authoring-PDF-raster-correspondence/1",
+        "coverage": "complete",
+        "gaps": [],
+        "expected_drawings": 1,
+        "matched_drawings": 1,
+        "visibility_render_pixels": 1003664,
+        "images": [
+          {
+            "physical_page": 1,
+            "matched": true,
+            "node_id": "architect-original",
+            "asset_version_id": "d0add27c-fbc4-42af-9cf9-5e99e9941017",
+            "decoded_pixel_digest": "191191da54423efa6674a93ed1a90612e3f3563c46096b2919a27ec2d79ad511",
+            "bbox": [
+              72.0,
+              600.0,
+              192.0,
+              690.0
+            ],
+            "page_pixel_mean_error": 0.0,
+            "page_pixel_maximum_channel_error": 0,
+            "gaps": []
+          }
+        ]
+      }
+    },
+    "covered": {
+      "input_sha256": "ce9dd28abb846daa5f303682d6e372e4d24f70f0b48191ff3f131f236ca6b70d",
+      "proof": {
+        "protocol": "authoring-PDF-raster-correspondence/1",
+        "coverage": "partial",
+        "gaps": [
+          "AUTHORING_IMAGE_VISIBILITY_UNVERIFIED"
+        ],
+        "expected_drawings": 1,
+        "matched_drawings": 1,
+        "visibility_render_pixels": 1003664,
+        "images": [
+          {
+            "physical_page": 1,
+            "matched": true,
+            "node_id": "architect-original",
+            "asset_version_id": "d0add27c-fbc4-42af-9cf9-5e99e9941017",
+            "decoded_pixel_digest": "191191da54423efa6674a93ed1a90612e3f3563c46096b2919a27ec2d79ad511",
+            "bbox": [
+              72.0,
+              600.0,
+              192.0,
+              690.0
+            ],
+            "page_pixel_mean_error": 0.4121296296296297,
+            "page_pixel_maximum_channel_error": 176,
+            "gaps": [
+              "AUTHORING_IMAGE_VISIBILITY_UNVERIFIED"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

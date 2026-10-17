@@ -1,0 +1,50 @@
+{
+  "classification": "test-fixture failure; not a product concurrency or stale-publication failure",
+  "first_run": {
+    "junit": "first-pg-junit.xml",
+    "outcome": "2 passed; third failed; fourth not reached",
+    "cause": "memory put/get fixture omitted storage.client().get_object; build_followups._verify_pdf attempted actual OSS GET of the exact synthetic output key and received NoSuchKey404",
+    "effects": "No bucket scan, policy change, private user document, paid model call or OSS write from this omitted get branch"
+  },
+  "second_run": {
+    "junit": "corrected-pg-junit.xml",
+    "outcome": "1 passed then own pytest interrupted",
+    "cause": "wrong workdir left original fixture in repack; own process was stopped before its third test repeated the missing-client branch"
+  },
+  "correction": {
+    "storage": "Explicit in-memory put/get/client.get_object; actual domain PDF verification remains enabled",
+    "network": "requests.Session.request and httpx real HTTP/AsyncHTTP transports raise AssertionError; in-process ASGI remains real",
+    "model": "DeepSeekClient.from_env hard-fails and DEEPSEEK_API_KEY removed; no model is expected",
+    "parser": "PARSING_RUNTIME_TOKEN removed; these four tests do not require CPU parser",
+    "approved_actual_paths": [
+      "restricted PostgreSQL connections",
+      "approved local Docker socket and pinned Word03 sandbox"
+    ]
+  },
+  "raw_preservation": [
+    {
+      "file": "first-pg-junit.xml",
+      "sha256": "3c5e3eee7e12fbd63b348c881a2b1ef790e5b316f952c19c593e8c40b9b4b9bc"
+    },
+    {
+      "file": "corrected-pg-junit.xml",
+      "sha256": "3de4f8b0bee092203b773f0d857725d0d004bd08a4d9c302ae1dda0c91e968c3"
+    },
+    {
+      "file": "runtime-preflight-01-inputs.json",
+      "sha256": "7b5659ebd9bf837ac47a327a83f20ed282c371ce01f5a82a0ec588883d4930d6"
+    },
+    {
+      "file": "runtime-preflight-02-inputs.json",
+      "sha256": "7b5659ebd9bf837ac47a327a83f20ed282c371ce01f5a82a0ec588883d4930d6"
+    },
+    {
+      "file": "runtime-preflight-01-map.json",
+      "sha256": "a91ef292ead420e94575e0d2ab742273db40bfb2cea8bcbc46dee9262fa0ee54"
+    },
+    {
+      "file": "runtime-preflight-02-map.json",
+      "sha256": "a5b4e792dbff9e61811bb5f25144e3cef53fa777a0eb56538b6ffa09f9b5a7a4"
+    }
+  ]
+}

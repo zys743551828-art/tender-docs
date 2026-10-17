@@ -1,0 +1,16 @@
+{
+  "status": "offline_marker_binding_passed_not_restore",
+  "script_sha256": "bfaf841ae77cc01313dc95cfcff2ed007205c690d41860981b577cbecef22665",
+  "protocol_sha256": "db7abef9a5b6ee4ead27a6506953696c557af47ea52bf2b84b5c15f597d96e7c",
+  "source_plan_sha256": "62a347bdd144c80f1e8ebcbb4c81fb579b70068598aebb4120e4dc8317bc82da",
+  "checks": [
+    "source_original_plan_and_sealed_row_digest_match",
+    "new_uuid:rejected",
+    "zero_rows:rejected",
+    "wrong_digest:rejected",
+    "duplicate_marker_table:rejected"
+  ],
+  "docker": 0,
+  "pg": 0,
+  "cloud": 0
+}

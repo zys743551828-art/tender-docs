@@ -1,0 +1,9 @@
+{
+  "not_frozen_claims": true,
+  "notes": [
+    "During unfrozen development, defusedxml was absent; locally generated OOXML parsing uses stdlib with no uploaded XML admitted.",
+    "Old truncated-PDF pure fixture initially supplied obsolete unsandboxed profile; fixed test keeps real PDFium invalid-byte assertion directly and checks runtime refusal of obsolete profile.",
+    "Unfrozen legacy adopted test ran without approved controlled renderer profile and returned failed, not adopted; test positive prerequisite now explicit skip. Its synthetic DOCX OSS write remains referenced and recorded, not deleted."
+  ],
+  "raw_output_boundary": "These unfrozen observations summarize tool transcript; no pre-change source hash or retrospective passing conclusion is fabricated. Fixed initial and final runs retain actual raw inputs/JUnit/logs."
+}

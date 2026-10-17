@@ -1,0 +1,20 @@
+{
+  "scenario": "db_only_no_cloud",
+  "execution_uuid": "abc9d774ce4846348bddcac10dcb57c4",
+  "root": "/workspace/tender-workbench/.local/qa-recovery05-ea8eb4ed0a5945ac920e75620ea2717e",
+  "directory": "/workspace/tender-workbench/.local/qa-recovery05-ea8eb4ed0a5945ac920e75620ea2717e/.local/backups/application/db-only-abc9d774ce4846348bddcac10dcb57c4",
+  "archive": "/workspace/tender-workbench/.local/qa-recovery05-ea8eb4ed0a5945ac920e75620ea2717e/.local/backups/application/single-target-ea8eb4ed0a5945ac920e75620ea2717e/archive",
+  "backend": {
+    "manifest": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/runtime-manifest.json",
+    "sha256": "71fe0fb2c9dbde7d85e62d20bef2da8e188e59ac00e9eb056cc021a1bd75274e",
+    "file_count": 308,
+    "source_root": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs"
+  },
+  "target_port": 55531,
+  "protocol_sha256": "766bfd56327fd246d22473fb7deac21a52c14f76f96288e79b7a54714c0bbb9c",
+  "driver_sha256": "f03fdd4e28b9bb7427f016ecdeaa25ed3641d1e2f69dd3d1f72d107c78935a16",
+  "child_sha256": "5150900dc18a8e65b1117d60296a74478d615638dc39540c5f85bd9b7a742752",
+  "base_prepared_sha256": "3ca8de5f3490ac1e204d6a6040003d21ebbd8b95d3d1cfc26bd5739a7a044a84",
+  "created_at": "2026-10-17T04:34:43.090205+00:00",
+  "state": "prepared_no_docker_or_external_io"
+}

@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-16T20:00:50.671039+00:00",
+  "sql_sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a",
+  "database": "tender_checks_model_governance02",
+  "initialization": "fresh extension applied",
+  "restricted_base_roles": 4,
+  "restricted_cpu_roles": [
+    {
+      "capability": "model_train",
+      "superuser": false,
+      "bypass_rls": false,
+      "business_schema_usage": false,
+      "raw_outcomes_and_export_table_reads": "denied42501"
+    },
+    {
+      "capability": "model_evaluate",
+      "superuser": false,
+      "bypass_rls": false,
+      "business_schema_usage": false,
+      "raw_outcomes_and_export_table_reads": "denied42501"
+    }
+  ],
+  "owner_used_only_for_fresh_schema_accounts": true,
+  "business_rows": 0,
+  "paid_calls": 0,
+  "kafka_started": false,
+  "scope": "DDL initialization and initial purpose-role denial probes only; not positive worker execution, model qualification or production acceptance"
+}

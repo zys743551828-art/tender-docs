@@ -1,0 +1,731 @@
+{
+  "checks": [
+    {
+      "case": "other-member-private-draft404-localized-error-notification-empty-shared-template200-private-global-history",
+      "pass": true
+    },
+    {
+      "case": "390-mobile-task-no-horizontal-overflow",
+      "pass": true
+    },
+    {
+      "case": "390-assistant-unknown-disabled-no-overflow",
+      "pass": true
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/review-state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/streams/95549aac-8817-4026-9c69-e3c223d9f89d/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/task-kinds",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/task-kinds",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-notifications",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-runs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-schedule-recoveries",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/task-kinds",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/review-state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/6adab6a4-e86c-4cfd-bf84-4f6d85f1a222",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/0eed5c4b-1238-4444-8a60-9b86d744d4e6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/37663b01-9e95-466b-8383-d33b810f9be2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/6f9138a1-6025-4308-889d-91d152937f17",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/74e5920b-ae96-4ff5-b07c-78db7ae19fc3",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/deee8afd-a71d-5a51-9d3b-24a6400d26b1/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/deee8afd-a71d-5a51-9d3b-24a6400d26b1/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/79bca244-5926-4a32-a9e0-79573a34e216",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/ee778175-adb6-429b-97a9-f5f4f778e79d",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/a5d83a7a-b87c-46db-9c61-02a37909b245",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/c3f604a9-bb58-4098-890d-fdea923f9657",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/d0fa1b79-5d2c-4a02-9861-24a0f73851de",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/0aabfffa-703d-44df-80aa-31d6e7b1f96f",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/848debaa-5589-4259-9d12-3d6e2ddb040c",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/69cd6044-c4ee-494b-871e-3395bfcbff7c",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/review-state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/streams/95549aac-8817-4026-9c69-e3c223d9f89d/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/task-kinds",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-runs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/task-kinds",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-notifications",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-schedule-recoveries",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/review-state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/37663b01-9e95-466b-8383-d33b810f9be2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/0eed5c4b-1238-4444-8a60-9b86d744d4e6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/6f9138a1-6025-4308-889d-91d152937f17",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/6adab6a4-e86c-4cfd-bf84-4f6d85f1a222",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/74e5920b-ae96-4ff5-b07c-78db7ae19fc3",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/cc03576f-9521-4a92-ab7d-d671fec93d34",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/b8e013e6-69bd-4df8-9520-8cde9f16982b",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/acffde42-7bde-4fec-b1d7-e69666379847",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/90110e14-e937-43ca-a5bd-1cc209575ef1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/0589c290-fad7-4ada-bbc1-b5c2b5fe76d5",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/e1100e84-9274-4db3-9786-034a2b70ee4a",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/718bae3d-6cc2-45f9-a380-7bc0227933c6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/9a6a1582-1026-4807-b414-22d20ceecea8",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/c210c181-84f7-4c04-8990-9d3dcc25b3ec",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/1bd7f7a1-882b-4972-b2f4-42a54a76a9cc",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/1a520efb-7a14-4b2d-8849-216fe666ed6f",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/59140511-ba70-4726-8920-7a6dbbd4f10e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/5f493050-4d22-4f5d-96a1-c84e3493deef",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/86c6ee41-846a-41fa-9225-bd4d0b35add4",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/6a0326f6-92ab-42d5-baa1-b4a1035791c2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/e1666625-66bf-47f1-933b-55f8241d8d26",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/04e72ed0-2a8d-4c27-8efc-f44a94e01c7e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/df6664b4-1b9e-402f-bd07-b630fac8e1b9",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/0b8308f7-96c4-46e6-a9cf-96ea5c4eb266",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/c12d8020-4ec1-4618-91b6-890c162a6b7f",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/events",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/global-conversations/555be9c4-ea98-53f8-be9d-db6348564e93/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/b8e013e6-69bd-4df8-9520-8cde9f16982b",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/cc03576f-9521-4a92-ab7d-d671fec93d34",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/0589c290-fad7-4ada-bbc1-b5c2b5fe76d5",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/acffde42-7bde-4fec-b1d7-e69666379847",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/1a520efb-7a14-4b2d-8849-216fe666ed6f",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/9a6a1582-1026-4807-b414-22d20ceecea8",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/718bae3d-6cc2-45f9-a380-7bc0227933c6",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/c210c181-84f7-4c04-8990-9d3dcc25b3ec",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/e1100e84-9274-4db3-9786-034a2b70ee4a",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/1bd7f7a1-882b-4972-b2f4-42a54a76a9cc",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/6a0326f6-92ab-42d5-baa1-b4a1035791c2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/59140511-ba70-4726-8920-7a6dbbd4f10e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/86c6ee41-846a-41fa-9225-bd4d0b35add4",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/0b8308f7-96c4-46e6-a9cf-96ea5c4eb266",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/04e72ed0-2a8d-4c27-8efc-f44a94e01c7e",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/actions/90110e14-e937-43ca-a5bd-1cc209575ef1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/5f493050-4d22-4f5d-96a1-c84e3493deef",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/e1666625-66bf-47f1-933b-55f8241d8d26",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/df6664b4-1b9e-402f-bd07-b630fac8e1b9",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/assistant/jobs/c12d8020-4ec1-4618-91b6-890c162a6b7f",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/bids/c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "status": 200
+    }
+  ],
+  "action_target_loaded": true,
+  "mobile_composer_top": 9080,
+  "at": "2026-10-17T03:43:52.572663+00:00"
+}

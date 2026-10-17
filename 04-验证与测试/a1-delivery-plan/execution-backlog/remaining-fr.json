@@ -1,0 +1,846 @@
+{
+  "scope": "当前40FR可执行剩余清单，旧product-progress快照是当时证据；不改旧通过记录",
+  "source_observation_only": true,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "authoritative_candidate_contract": {
+    "candidate": "main04",
+    "declared_paths": 129,
+    "declared_operations": 150,
+    "path": "/tmp/a1-implemented-04.openapi.json",
+    "sha256": "33e3e86a956778919fb7929d41e1d4e61a91921452a1a1ac857bfa0f80037472",
+    "matches_candidate_manifest": true,
+    "runtime_observed": false
+  },
+  "source_bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-backend-development-checks/candidate-04.json",
+      "sha256": "eb5266493f8106fb2da16bbc5508a64dff8aae09264b134e2fe22696217431f7"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/pricing-candidate-03.json",
+      "sha256": "5679b97595cf181c2250ddc03d1abd167212975c62583ff2853793e5f2f75d84"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-architect-review/candidate03-review-record.json",
+      "sha256": "280c4403c80a325ca54070a495a49c043ef34b7e66bc74d8895a72deb15085ef"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/metrics-independent-checks/final-candidate-03-result.json",
+      "sha256": "e9be7ac4bb96edb0987cd7c829edc0c5ddeb9beda3e0b891a5084deadb5d5a9d"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/metrics-architect-review/candidate03-review-record.json",
+      "sha256": "3a8b81de1b1b04eb90789f6fb7cb95e6939658c3de203e2bae90ae0a2b1923cc"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/identity-architect-review/candidate03-independent-result.json",
+      "sha256": "4e4c9c5dff12c5b90c3458845c24b3e95807f5986cf4f70b7622bf94d89402ed"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate-03.json",
+      "sha256": "c3baf1544ad5af5b32230eb9030484be223a955db74ebf99afa48266b96ac5d8"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag-candidate-02.json",
+      "sha256": "2a79e75949479819d3b27e689eb24b2847a32184ee2340a73857267f5859fa4a"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/research-candidate-03.json",
+      "sha256": "2877c2a331e4d3a5ca3884626322b6731b3311cd27a4fea779949dc935dfb9ce"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/fr029-development-checks/candidate-01/model-governance-candidate-01.json",
+      "sha256": "3929d000f1f3f8f2f19f4c7a6d22f32afad389c3b8fda700a28dfef825074c54"
+    }
+  ],
+  "functional_requirements": [
+    {
+      "id": "FR-001",
+      "name": "废标／否决及强制核对",
+      "implementation_signal": "main04已有完整核心+人工处置+实交gate/报告候选，独立全链未验收",
+      "next_deliverable": "部署冻结组合并贯通PDF→风险→人工核验→外部新稿→有效复检→标准/补录→报告",
+      "acceptance_criteria": "真实API/Kafka/Worker/私有存储+浏览器成功与失败恢复；已知关键风险不洗；代表性漏检/误报另验",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1"
+      ]
+    },
+    {
+      "id": "FR-002",
+      "name": "评分预测与边界",
+      "implementation_signal": "研究03和StageA合成训练模块有候选，real资格仍unavailable",
+      "next_deliverable": "先历史proof合法可达，再真实研究完整章节/三判断、未来真实模型独立训练评测/发布",
+      "acceptance_criteria": "真实标签与干净输入/完整图文、三有效独立判断；独立协议/基线/组时间隔离、校准与发布回退；不能以合成或20对冒资格",
+      "work_packages": [
+        "HISTORY",
+        "MODEL"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL"
+      ]
+    },
+    {
+      "id": "FR-003",
+      "name": "响应矩阵",
+      "implementation_signal": "main04矩阵/四层覆盖读与人工操作具备候选",
+      "next_deliverable": "做当前/历史矩阵→两侧原页及逐行失败/无法判断/空分母联调",
+      "acceptance_criteria": "覆盖和业务满足分开，10/10不声称零漏提，纯评分缺口不混核心分母，引用版本真实",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1"
+      ]
+    },
+    {
+      "id": "FR-004",
+      "name": "前后矛盾",
+      "implementation_signal": "主候选明确未实施独立跨章节矛盾；仅开关/冻结/保留机制",
+      "next_deliverable": "实现独立检测阶段、两侧证据与可选覆盖状态，再已知问题关闭开关反例",
+      "acceptance_criteria": "完整相关文字/范围；未运行/失败不计满足；已知critical仍可定位处理/阻断；无有效复检不解决",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1-DETECT"
+      ]
+    },
+    {
+      "id": "FR-005",
+      "name": "范围残留",
+      "implementation_signal": "主候选明确未实施独立范围残留检测",
+      "next_deliverable": "实现项目/主体/地名/工程范围残留及准确出处、单位/范围断言",
+      "acceptance_criteria": "不把同数字/近名当同工程；开关/失败与已知风险规则同FR004，误报可有理由驳回",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1-DETECT"
+      ]
+    },
+    {
+      "id": "FR-006",
+      "name": "报价试算",
+      "implementation_signal": "F03受限公式/版本/10路由候选，架构针对问题复核通过；界面/全链未验收",
+      "next_deliverable": "联调可信原页公式登记→两法多情景/曲线→显式保存/历史，补PRICE01—11",
+      "acceptance_criteria": "金额单位完整声明/Decimal/主分null和真0、每点重算、预填/迟到保护、全入口开关、来源并发重核",
+      "work_packages": [
+        "F"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "F"
+      ]
+    },
+    {
+      "id": "FR-007",
+      "name": "报告与导出",
+      "implementation_signal": "main04真实Word/PDF报告/原页PDF批注与A2生成模块候选",
+      "next_deliverable": "验收用途明确报告/批注/正文取件、展示设置变化/来源变化、失败分格式",
+      "acceptance_criteria": "产物真字节/原页/输入可还原；无精确范围仅物理页注释；DOCX批注unsupported；不能当正文标准提交",
+      "work_packages": [
+        "A1",
+        "A2"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-008",
+      "name": "规则、事实与依据",
+      "implementation_signal": "main04规则500/事实/问题决定、补漏/效力候选已有处理器",
+      "next_deliverable": "联调单条/显式选中批量、事实补替撤、补漏存续及并发/非法证据恢复",
+      "acceptance_criteria": "一次明确确认、原子新包/集、强ETag/幂等；纯confirmed/deferred不收费重跑；缺证保表单无部分绿",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1"
+      ]
+    },
+    {
+      "id": "FR-009",
+      "name": "正式结果登记",
+      "implementation_signal": "研究03有技术分/更正/核验；业务阶段另由metrics模块候选支持",
+      "next_deliverable": "真实结果身份/官方原页/时间核验；历史主体/标签出处缺证继续pending",
+      "acceptance_criteria": "零/未知/综合分分开，官方技术分与stage独立；旧verified不绕新冲突；U05在实际页面/真人分别留证",
+      "work_packages": [
+        "HISTORY",
+        "F"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY",
+        "F"
+      ]
+    },
+    {
+      "id": "FR-010",
+      "name": "问题复核与局部改稿",
+      "implementation_signal": "main04风险confirm/dismiss/defer/reopen及有效新稿复检；A2补丁模块",
+      "next_deliverable": "贯通直接问题建议、外部改稿与复检；补A2真实AI建议与差异应用",
+      "acceptance_criteria": "采纳/确认非解决，failed/partial不解决；原根风险/历史/新问题可见；数值/工期有范围依据",
+      "work_packages": [
+        "A1",
+        "A2",
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "A2",
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-011",
+      "name": "业务指标与成绩对照",
+      "implementation_signal": "指标03 targeted独立机制通过，main04包含结果/metrics/trends处理器；全界面未验收",
+      "next_deliverable": "按FR011协议联调九阶段、有据追加/更正、率、风险快照、逐轮/在线误差",
+      "acceptance_criteria": "有效实交唯一；candidate非awarded、未知/冲突/取消/流标不乱入分母；零分母null、隐藏不泄分、20门槛无资格升级",
+      "work_packages": [
+        "F"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "F"
+      ]
+    },
+    {
+      "id": "FR-012",
+      "name": "项目资料与自动评审",
+      "implementation_signal": "首PDF片已验收；main04含持久准备、multipart/恢复布局、构建接续候选",
+      "next_deliverable": "部署统一输入与自动/按钮/事件去重，真实multipart/解析/OSS/评审组合",
+      "acceptance_criteria": "无需第二次开始；成功资料保留；新head/迟到不抢当前；Word未接收时不说已保存；全长路径可恢复",
+      "work_packages": [
+        "A1",
+        "OPS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "OPS"
+      ]
+    },
+    {
+      "id": "FR-013",
+      "name": "项目功能开关",
+      "implementation_signal": "main04 settings与领域命令候选、F/metrics/报告各有投影",
+      "next_deliverable": "全入口对齐auto/consistency/scope/score/pricing/reminder/原文接受",
+      "acceptance_criteria": "已知critical关检测不洗；评分/报价隐藏同报告与卡；提醒关闭不禁止记录事实；可选失败不造第五gate",
+      "work_packages": [
+        "A1",
+        "F"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "F"
+      ]
+    },
+    {
+      "id": "FR-014",
+      "name": "项目、历史、资料等入口与跨入口导航",
+      "implementation_signal": "前端04/05有工作面及早期用户delta；main04新API组合未全验收",
+      "next_deliverable": "按冻结前端/后端实际匹配验收风险/矩阵/原页/A2/知识/历史与新F页",
+      "acceptance_criteria": "GovDash紧凑、风险一个下一步，显式历史/版本不换对象；390px/键盘/返回恢复；未提供功能不假按钮",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "UI"
+      ]
+    },
+    {
+      "id": "FR-015",
+      "name": "项目业务生命周期",
+      "implementation_signal": "真实实交可改变submitted阶段；完整end/terminate/reopen/archive命令尚缺",
+      "next_deliverable": "落实准备/编制/已提交/结束/终止与独立归档的服务端命令及页",
+      "acceptance_criteria": "缺分可结束/归档，真实提交才已提交；在途等/明确取消后归档；重开不改旧实交/截止，新招标新轮；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "LIFECYCLE"
+      ]
+    },
+    {
+      "id": "FR-016",
+      "name": "会话生命周期",
+      "implementation_signal": "通用global/project会话actual未交付；现有查证/工作面不是完整助手",
+      "next_deliverable": "唯一主会话/全局scope、服务端列表恢复、active/closed/hidden与继续",
+      "acceptance_criteria": "全局bid=null不假ID；跨项目草稿/来源不串；结束/隐藏不取消任务或删业务审计",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-017",
+      "name": "AI 操作与确认",
+      "implementation_signal": "A2受限差异提案应用模块已有；通用Action能力尚缺",
+      "next_deliverable": "实现可信读/候选/确认动作白名单与一次Action卡，复用领域命令",
+      "acceptance_criteria": "模型不直接写正式状态；按钮明确提交不二次聊天确认；stale/expired/幂等与输入保留",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-018",
+      "name": "可操作卡片",
+      "implementation_signal": "风险/规则/事实/进度/来源与A2客户端卡片部分已有",
+      "next_deliverable": "通用卡结构化引用实际业务对象、运行记录和状态恢复",
+      "acceptance_criteria": "确认/任务终态/业务待办分离；纯定位blocked仍可进入处理，写操作服务端守卫；不靠模型话术认成功",
+      "work_packages": [
+        "A1",
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-019",
+      "name": "结构化项目记忆",
+      "implementation_signal": "规则/事实可冻结与人工更正，项目会话结构化记忆未交付",
+      "next_deliverable": "让助手从当前结构化身份/事实/问题/决定恢复上下文，追踪来源与冲突",
+      "acceptance_criteria": "摘要不覆盖正式记录；其他公司事实不搬；聊天声明不confirmed；变更使相关输入过期且不丢旧依据",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-020",
+      "name": "跨轮比较与可比性",
+      "implementation_signal": "完整双轮业务比较主候选仍未实施",
+      "next_deliverable": "新增真实两轮比较投影/页面及方法差异说明",
+      "acceptance_criteria": "新增/仍在/已解决/未复检逐项；正文/规则/事实/方法可见，不可比分断点，不归因改稿/不自动再收费",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1-COMPARE"
+      ]
+    },
+    {
+      "id": "FR-021",
+      "name": "历史搜索与档案",
+      "implementation_signal": "研究历史搜索/实交成绩列表已有候选，早期用户只读走查有限",
+      "next_deliverable": "联调档案筛选/详情/原件/结果/历史版本可发现与范围恢复",
+      "acceptance_criteria": "同一真实对象不复制档案；无分未知可存；原页/实交身份固定，来源无权限/失效如实",
+      "work_packages": [
+        "HISTORY",
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY",
+        "UI"
+      ]
+    },
+    {
+      "id": "FR-022",
+      "name": "批量导入与异常队列",
+      "implementation_signal": "研究03有dry-run/异常/确认导入，真实历史proof缺口明确",
+      "next_deliverable": "加就地历史proof/subject/input authority入口并完成真实普通上传到导入后补证",
+      "acceptance_criteria": "当前时间不倒造；offline_fact reviewNULL可合法研究但不标准通过；批次异常保留且无重复提交/伪事前预测",
+      "work_packages": [
+        "HISTORY"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY"
+      ]
+    },
+    {
+      "id": "FR-023",
+      "name": "案例比较与引用",
+      "implementation_signal": "D/RAG受限引用与档案模块有候选，案例比较复用完整路径未验收",
+      "next_deliverable": "做有身份来源的案例差异比较/章节选参考",
+      "acceptance_criteria": "工程/轮次/主体条件显式，不转移他案分数/资格/事实；当前用途适用性和失效并发重核",
+      "work_packages": [
+        "D-RAG",
+        "HISTORY"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "D",
+        "HISTORY"
+      ]
+    },
+    {
+      "id": "FR-024",
+      "name": "知识实体与分类",
+      "implementation_signal": "D03知识版本/适用性实际模块候选，前端05并有06小呈现整改",
+      "next_deliverable": "冻结可信主体/工程/期限/条件/来源投影并走完整维护与引用",
+      "acceptance_criteria": "空集合不代表全适用，pending主体不新用；候选和当前发布版区分；字段缺口直接说明",
+      "work_packages": [
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-025",
+      "name": "知识确认与版本发布",
+      "implementation_signal": "D03发布/版本/撤回处理器候选，有早期用户观察非全验收",
+      "next_deliverable": "联调候选→待确认→发布/版本更新和有据停用",
+      "acceptance_criteria": "一次明确人工决定；新候选不抢有效已发布版，错误旧版即时停用，失效版不能原地复活",
+      "work_packages": [
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-026",
+      "name": "适用检索与可追溯引用",
+      "implementation_signal": "项目RAG02独立机制；企业知识RAG02衍生/trace完整性另有候选",
+      "next_deliverable": "实际PDF→发布可读来源→索引→项目/知识检索→原页引用及失效恢复",
+      "acceptance_criteria": "向量/词法/融合重排真实且用途/主体/时点过滤；空命中非无要求；普通RAG不继承历史proof时间豁免",
+      "work_packages": [
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "RAG",
+        "D"
+      ]
+    },
+    {
+      "id": "FR-027",
+      "name": "知识失效及影响",
+      "implementation_signal": "失效/历史引用和影响模块候选，影响数呈现已有用户delta",
+      "next_deliverable": "完成原件/知识撤回、到期、更新对当前引用/任务的影响联动",
+      "acceptance_criteria": "按项目数和引用处数区分；禁止新增失效引用，旧版原件可还原；未注册模型影响不冒称完整追踪",
+      "work_packages": [
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-028",
+      "name": "评分样本严格准入",
+      "implementation_signal": "研究03准入/组隔离守卫通过模块审查，真实历史可达性尚无实现",
+      "next_deliverable": "实现三authority及专用历史分支，再real/uncertain/synthetic与组/时间协议",
+      "acceptance_criteria": "精确body/lot/round/bidder与官方技术标签；缺本方历史known/received证据pending；不靠current profile/旧admitted放行",
+      "work_packages": [
+        "HISTORY",
+        "MODEL"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL"
+      ]
+    },
+    {
+      "id": "FR-029",
+      "name": "模型评测与受控发布",
+      "implementation_signal": "StageA合成训练/独立执行数学模块候选，当前actual仅synthetic且未进main",
+      "next_deliverable": "先历史合法分支；StageA剩余CPU/Kafka/模型blob/基线影子/验收观察/发布回退/当前评分authority；再真实数据模型",
+      "acceptance_criteria": "训练/最终标签访问隔离、最终曝光不可重选；real独立协议和模型资格另验；research_only回测不冒事前，real历史不永久污染未来训练",
+      "work_packages": [
+        "MODEL"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "MODEL"
+      ]
+    },
+    {
+      "id": "FR-030",
+      "name": "错误更正与影响追踪",
+      "implementation_signal": "main04规则事实/身份/实交/成绩/知识更正各有处理器候选",
+      "next_deliverable": "串起源变化/更正到review、引用、样本、研究和模型影响",
+      "acceptance_criteria": "追加不覆写，当前冲突不回退旧绿；运行/缓存/冻结authority重核，旧产物可还原但不当当前",
+      "work_packages": [
+        "A1",
+        "HISTORY",
+        "D-RAG",
+        "MODEL"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "HISTORY",
+        "D",
+        "MODEL"
+      ]
+    },
+    {
+      "id": "FR-031",
+      "name": "归档、保留与清理边界",
+      "implementation_signal": "原件/旧版本保留底座已有，完整项目归档/清理实际命令缺",
+      "next_deliverable": "实现归档与可追加补录，依赖查询和清理边界",
+      "acceptance_criteria": "不自动物理删正式原件/知识/审计；删除会话不删业务，仍引用文件不可直接清，归档不藏待补成绩；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS",
+        "OPS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "LIFECYCLE",
+        "OPS"
+      ]
+    },
+    {
+      "id": "FR-032",
+      "name": "初始化、导出与恢复",
+      "implementation_signal": "空库初始化/局部环境检查及旧资料片证据，完整导出恢复未验收",
+      "next_deliverable": "实现全项目/知识/模型/原件/审计清单导出和一致恢复演练/结构升级",
+      "acceptance_criteria": "原件SHA和引用/版本/决定关系可核；缺文件报告不装完整；无密钥导出；恢复为新系统正常运维非旧迁移",
+      "work_packages": [
+        "OPS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "OPS"
+      ]
+    },
+    {
+      "id": "FR-033",
+      "name": "后台任务与站内通知",
+      "implementation_signal": "真实operation/SSE/准备状态和multipart恢复模块有候选",
+      "next_deliverable": "跨任务/助手/新研究/事件通知恢复与取消/重试同一状态",
+      "acceptance_criteria": "断流非成功/取消，离开继续、事件游标补读/去重、401不重放人工决定、未知费用不普通重发；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "work_packages": [
+        "A1",
+        "ASSIST-LIFECYCLE-TASKS",
+        "OPS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "ASSIST",
+        "TASKS",
+        "OPS"
+      ]
+    },
+    {
+      "id": "FR-034",
+      "name": "工程、标段、轮次、主体身份",
+      "implementation_signal": "identity03真实选择/有据更正与分页模块静审通过，main04集成候选",
+      "next_deliverable": "验同公司默认显式绑定/多标段/新轮/历史subject authority与D/B联动",
+      "acceptance_criteria": "近名不合并、pending主体不授可靠新用；旧冻结身份不被current profile改写，历史lot/round/body精确有据",
+      "work_packages": [
+        "HISTORY",
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "IDENTITY",
+        "HISTORY",
+        "D"
+      ]
+    },
+    {
+      "id": "FR-035",
+      "name": "标准提交与已发生事实补录",
+      "implementation_signal": "main04标准/补录/更正/列表/gate处理器，Owner三语义已定但软件未验",
+      "next_deliverable": "标准事前检查/真实身份/证据声明、补录pending、risk snapshot与报告真实长路径",
+      "acceptance_criteria": "严格四类gate、纯评分不额外阻断；自身附件只用户声明非平台回执；事后检查走补录，不未来时间/假UUID/伪事前",
+      "work_packages": [
+        "A1"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1"
+      ]
+    },
+    {
+      "id": "FR-036",
+      "name": "任务用途与事后信息隔离",
+      "implementation_signal": "研究03/StageA/RAG各有用途隔离机制，历史分支尚待新增",
+      "next_deliverable": "全路径验证proof/官方标签/聊天衍生物和真实模型输入/缓存/锚点分离",
+      "acceptance_criteria": "完整章节三判断、当前真实时间不回填、普通RAG不获历史豁免，测试组及未来信息不得穿来源祖先泄漏",
+      "work_packages": [
+        "HISTORY",
+        "MODEL",
+        "ASSIST-LIFECYCLE-TASKS",
+        "D-RAG"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL",
+        "ASSIST",
+        "RAG"
+      ]
+    },
+    {
+      "id": "FR-037",
+      "name": "章节编制、编写计划与AI修改预览",
+      "implementation_signal": "A2人工文本编辑/受控补丁/保存/构建模块及前端04候选，未完整AI",
+      "next_deliverable": "真实生成端口接model_calls/取消与差异；补树目录/编写计划/页数预算/表图/导入等完整余项",
+      "acceptance_criteria": "ACK才已保存/生成；冲突不覆盖，局部不动未选章节，失效引用拒绝；采纳非风险解决；PDF主路不被迫编辑器",
+      "work_packages": [
+        "A2",
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A2",
+        "ASSIST"
+      ]
+    },
+    {
+      "id": "FR-038",
+      "name": "补遗变更及跨文档影响",
+      "implementation_signal": "main04有补遗整份/局部/待核验及新规则包候选",
+      "next_deliverable": "三组有据效力与A2章节/已知风险/人工条款影响联动",
+      "acceptance_criteria": "机器只校字节/出处不假法律理解；多来源共同支撑不整批结束；notes不无谓造包，未知不猜最后上传",
+      "work_packages": [
+        "A1",
+        "A2"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-039",
+      "name": "目录／版式模板、版本生成与版面核对",
+      "implementation_signal": "A2真实快照/DOCX/PDF/构建接续候选和用户04早期观察",
+      "next_deliverable": "补目录/版式模板分别版本化、真实版面暗标检查，外部Word接收/转换/失败PDF接续",
+      "acceptance_criteria": "受控Word→PDF链可追；外部同名不认同稿，失败Word保持未检查；格式分开、迟到不抢新稿；生产sandbox另验",
+      "work_packages": [
+        "A2"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-040",
+      "name": "可复用任务、触发与运行记录",
+      "implementation_signal": "通用四类模板/版本/事件/cron实际服务尚缺，固定任务底座不等于模板",
+      "next_deliverable": "按既有协议四类手动→事件去重→有界cron和暂停/恢复/运行记录",
+      "acceptance_criteria": "默认manual，AsiaShanghai/next_at明确，重复/漏时不无界收费；模板永不替人规则确认/提交/核分/发布",
+      "work_packages": [
+        "ASSIST-LIFECYCLE-TASKS"
+      ],
+      "whole_requirement_accepted": false,
+      "status": "pending_application",
+      "implementation_streams": [
+        "TASKS"
+      ]
+    }
+  ],
+  "work_packages": [
+    {
+      "id": "A1",
+      "name": "主风险与实交完整闭环",
+      "depends": [
+        "PM冻结统一前后端/依赖候选"
+      ],
+      "deliver": [
+        "部署main04并独立实际API/Kafka/Worker/私有存储与浏览器",
+        "落实FR004/005独立检测及完整双轮比较，现有未实施项不改绿"
+      ],
+      "exit": [
+        "原13中A1相关+6串联任务按实际能力执行",
+        "软件/API/用户角色与真实材料质量分别结论"
+      ]
+    },
+    {
+      "id": "HISTORY",
+      "name": "真实历史合法可达性",
+      "depends": [
+        "Owner历史协议",
+        "架构对actual Schema/受限SQL静审"
+      ],
+      "deliver": [
+        "source claim/subject authority/input authority三追加入口",
+        "当前普通上传→缺证pending→一次有据确认→reviewNULL历史冻结→研究候选"
+      ],
+      "exit": [
+        "HIST01—13真API/fresh非owner正反例及浏览器",
+        "不改旧03、不倒造时间、不授在线/模型资格"
+      ]
+    },
+    {
+      "id": "MODEL",
+      "name": "真实评分与受控模型完整交付",
+      "depends": [
+        "HISTORY",
+        "真实官方标签及独立协议"
+      ],
+      "deliver": [
+        "合成StageA剩余执行/registry/基线影子/观察发布回退/当前评分owned authority",
+        "真实完整章节三判断/数据准入/组时间隔离/独立模型评测"
+      ],
+      "exit": [
+        "研究可运行与模型业务资格分开；synthetic不冒real，retrospective不冒prospective",
+        "真正双P0完成；无真数据时软件继续而资格pending"
+      ]
+    },
+    {
+      "id": "D-RAG",
+      "name": "可靠知识与索引引用",
+      "depends": [
+        "identity03",
+        "D03/RAG02与索引任务独立候选"
+      ],
+      "deliver": [
+        "资料可读来源发布→索引→检索原页",
+        "项目适用知识维护/版本/失效/影响→实际引用"
+      ],
+      "exit": [
+        "当前上下文/主体/用途/头变化并发检查+窄屏任务",
+        "真实召回/知识质量独立留待代表性材料"
+      ]
+    },
+    {
+      "id": "ASSIST-LIFECYCLE-TASKS",
+      "name": "助手/项目生命周期/任务",
+      "depends": [
+        "existing领域命令和执行器"
+      ],
+      "deliver": [
+        "全局/项目主会话、可信来源和一次Action",
+        "阶段归档/在途与补录",
+        "四类手动模板→事件→受限cron"
+      ],
+      "exit": [
+        "remaining-work-protocols 13项真实路径与越权/幂等/恢复",
+        "来源/评分隔离，不替人正式决定，不要求先配置助手才PDF",
+        "归档覆盖无active op的上传/批次意图及complete/commit竞争，显式结束保留暂存字节"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "完整可选编制与Word",
+      "depends": [
+        "A2人工编辑/构建基础",
+        "受控模型账本"
+      ],
+      "deliver": [
+        "局部AI差异/树目录/计划/表图/模板/导入",
+        "外部DOCX真实接收/受控渲染/失败就地PDF续评"
+      ],
+      "exit": [
+        "保存/冲突/版本/格式/对应关系真实测试",
+        "未支持范围持续明确，PDF路径保持独立，生产渲染另验"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "报价与真实业务复盘",
+      "depends": [
+        "F03/metrics03及main04"
+      ],
+      "deliver": [
+        "PRICE01—11真实UI/API恢复",
+        "FR011 14项阶段事实/分母/快照/趋势误差"
+      ],
+      "exit": [
+        "来源与金额口径/未知/0/隐藏/当前头真实一致",
+        "不承诺中标因果，不因20样本授模型资格"
+      ]
+    },
+    {
+      "id": "OPS",
+      "name": "底座与正式运行",
+      "depends": [
+        "贯穿各包"
+      ],
+      "deliver": [
+        "multipart/SSE/状态恢复、权限审计和容量故障",
+        "全量导出/备份恢复/结构升级、生产网络/渲染/模型预算与回退"
+      ],
+      "exit": [
+        "NFR001—014各自真环境证据、恢复演练",
+        "开发单节点不外推生产，私有数据/密钥不进入导出日志"
+      ]
+    }
+  ],
+  "overall_acceptance": "not_accepted",
+  "qualified_model": "unavailable",
+  "real_material_gaps": [
+    "精确历史招标/正文及当年可见/主体/标段轮次证据",
+    "官方技术分/满分/聚合及实际取得时点",
+    "代表性否决/范围/矛盾标注及真人任务观察"
+  ],
+  "preservation": "原13应用任务、旧40FR观察、研究03与StageA候选不修改；源码/架构/模块QA只保留其原scope，不转整项FRpassed",
+  "deployment_note": "PM已报告live8806/新隔离DB+broker，248固定源及同129路径150操作组合；本轮产品未直访或验收，部署存在不改变pending。"
+}

@@ -1,0 +1,18 @@
+...............ss.......................s..................              [100%]
+=============================== warnings summary ===============================
+tests/test_authoring_integration.py::test_real_worker_build_uses_frozen_draft_and_publishes_independent_outputs
+tests/test_authoring_integration.py::test_real_worker_build_uses_frozen_draft_and_publishes_independent_outputs
+tests/test_authoring_integration.py::test_real_worker_build_uses_frozen_draft_and_publishes_independent_outputs
+tests/test_authoring_integration.py::test_actual_build_http_projects_real_followup_state_and_no_invented_review[failed]
+tests/test_authoring_integration.py::test_actual_build_http_projects_real_followup_state_and_no_invented_review[failed]
+tests/test_authoring_integration.py::test_actual_build_http_projects_real_followup_state_and_no_invented_review[failed]
+  /workspace/tender-workbench/.venv/lib/python3.12/site-packages/oss2/auth.py:540: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now_datetime = datetime.utcnow()
+
+tests/test_authoring_integration.py::test_real_authenticated_http_save_replay_restore_and_build_freeze
+  /workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-01-staging/evidence/fixed-junit.xml -
+56 passed, 3 skipped, 7 warnings in 12.25s

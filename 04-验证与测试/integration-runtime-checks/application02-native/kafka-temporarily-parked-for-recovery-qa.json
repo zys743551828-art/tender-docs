@@ -1,0 +1,27 @@
+{
+  "pid": 3407403,
+  "uid": 1000,
+  "verified_role": "native Kafka4.1.2 only, config matches",
+  "cluster_id": "N8d3T4cNR6Wt6Ba9RX3kgA",
+  "topics": [
+    "tender.domain.events.v1",
+    "tender.task.assistant-global.v1",
+    "tender.task.assistant.v1",
+    "tender.task.comparison.v1",
+    "tender.task.dead-letter.v1",
+    "tender.task.document.v1",
+    "tender.task.export.v1",
+    "tender.task.research.v1",
+    "tender.task.review.v1"
+  ],
+  "consumer_groups": 0,
+  "retained_cluster_data": "/workspace/tender-workbench/.local/kafka-app02-data",
+  "retained_config": "/workspace/tender-workbench/.local/kafka-app02-server.properties",
+  "retained_logs": true,
+  "removed_only": "rebuildable pinned-image binary cache; per-file original SHA manifest retained",
+  "cached_source_image": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+  "old_brokers_modified": false,
+  "free_before": 1525354496,
+  "free_after": 1745035264,
+  "restart": "docker cp unchanged cached Kafka /opt/kafka into same cache path; verify every original manifest SHA; restart existing config/data with same positive env"
+}

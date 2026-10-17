@@ -1,0 +1,101 @@
+{
+  "identity": [
+    "tender_recovery_1ef3578f791e4e948d3a136a7f6057c1",
+    "twb_ar_reader_a376f5f05de7cd2866e482ae",
+    "17.11 (Debian 17.11-1.pgdg12+2)"
+  ],
+  "roles": [
+    [
+      20640,
+      "twb_ar_api_909bea83a6ee80dd0c9d34e8",
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      16384,
+      "twb_ar_ddl_4c2a4c0a1ce3ba6c80a38082",
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      10,
+      "twb_ar_owner_7823eb8799a25a1a6774a75c",
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      20644,
+      "twb_ar_reader_a376f5f05de7cd2866e482ae",
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      20642,
+      "twb_ar_worker_973d41c27c80bcb766056c35",
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      16394,
+      "twb_archive_owner_b7a9612329ca4d829b19883b45b71ea9",
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      16395,
+      "twb_backup_read_290d6c42bd874eab89b7d1b76f399a74",
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  ],
+  "extensions": [
+    [
+      "plpgsql",
+      "1.0",
+      "pg_catalog",
+      "twb_ar_owner_7823eb8799a25a1a6774a75c"
+    ],
+    [
+      "vector",
+      "0.8.7",
+      "design",
+      "twb_archive_owner_b7a9612329ca4d829b19883b45b71ea9"
+    ]
+  ],
+  "business_owner_dependencies": [
+    [
+      "twb_archive_owner_b7a9612329ca4d829b19883b45b71ea9",
+      429
+    ]
+  ],
+  "source_only": true,
+  "code03_sha256": "5e2ab741c3f39227dc1436b83aa7a714252ec94f18abb3536a7f01f478992391"
+}

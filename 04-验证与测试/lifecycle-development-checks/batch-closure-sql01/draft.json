@@ -1,0 +1,20 @@
+{
+  "draft": "lifecycle batch closure SQL01",
+  "at": "2026-10-17T01:21:53.116816+00:00",
+  "sha256": "0979d5dadedecfd9aab194684bbcbd1eddbae6c60ff74355a5b5ea23a6a2db73",
+  "review": "pending static review; not executed",
+  "semantics": [
+    "append immutable explicit closure receipt for an unfinished batch",
+    "no mutation to uploads.state or fake failed state",
+    "retained staging bytes stay detached; archive ignores only explicitly closed intents",
+    "API/Worker producers must check closure under bid lock",
+    "future explicit new-batch rebind after reopen or archival supplement may reuse verified bytes; never auto reactivate closed batch"
+  ],
+  "not_implemented": [
+    "producer and delayed callback guards",
+    "closure endpoint and UI",
+    "full archive acceptance"
+  ],
+  "provider_calls": 0,
+  "ddl_executed": false
+}

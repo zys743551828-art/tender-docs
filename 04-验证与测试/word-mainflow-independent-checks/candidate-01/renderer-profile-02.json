@@ -1,0 +1,48 @@
+{
+  "identity": {
+    "protocol": "word-docker-render/1",
+    "image_id": "sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c",
+    "renderer_digest": "ded4ef0900bf1d0fba1bc8ebcfbebd618f170d159edccb708226b217aa8b56f8",
+    "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+    "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+    "adapter_source_digest": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+    "inspection_source_digest": "76032305050a35450cf96272708ac0db3ad3d1eafddf78ff80e74b7f84339792",
+    "assets": {
+      "/usr/local/bin/docker": "bab79bfe6e2f1611599390ea221c13c767f129686b802058e0b09bece79ab2d4",
+      "/usr/bin/fc-match": "87b1a590e9199229add8438d4fcf54a77630b38559769e4068fe11c2b42f4c90",
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice": "ca564d637524bb5f0acef04f235bb550327d42568867a54fb5b1773550c4d7d9",
+      "/usr/lib/x86_64-linux-gnu": "81c7b3f1ea463e41fc6dfbcfbfa2720e9ed016f237f86be8e88fd073a2821230",
+      "/usr/share/fonts": "f1e97419d3ab60bd8842c5e901438eda7ffd3077050a084ca3fdd43d63ce7f6d",
+      "/etc/fonts": "7d62cbf2b3d7d77103b462ec5ce31ae7ac4ca954367bc22a3e40f63815eb741d",
+      "/usr/share/fontconfig": "18625b0c1389c48e6e347a193108cf90527e6e58d3b9570f5eb917000375dfbb",
+      "/usr/bin/python3.13": "963d2888870a93eeef837fbd0fc174179ee4e92e7ccf25634f4b41841de02b48",
+      "/usr/lib/python3.13": "2292f26f3eec7c770c9121fe9c9ddcc4d441be82a80099a2a6a79f12d4ee7749",
+      "/workspace/tender-workbench/docs/word-mainflow-development-checks/runtime-preview-02/packages/word_intake/sandbox_runner.py": "d4ef7ee9ef096e3f741d2e25991295287bd2f928044380aee7bbca2d9894d5fa"
+    },
+    "image_environment_names": [
+      "GOSU_VERSION",
+      "LANG",
+      "PATH",
+      "PGDATA",
+      "PG_MAJOR",
+      "PG_VERSION"
+    ],
+    "options": {
+      "filter": "writer_pdf_Export",
+      "network": "none",
+      "ipc": "none",
+      "user": "65534:65534",
+      "read_only": true,
+      "cap_drop": "ALL",
+      "no_new_privileges": true,
+      "memory": 536870912,
+      "cpus": 1,
+      "pids": 64,
+      "tmp_bytes": 134217728,
+      "output_bytes": 67108864,
+      "timeout": 50,
+      "max_pdf_bytes": 52428800
+    }
+  },
+  "profile_digest": "61284d08db2703f4d753a3d098e0e54d8d84926ec5fa65c7ee3d3cf1f14a406b"
+}

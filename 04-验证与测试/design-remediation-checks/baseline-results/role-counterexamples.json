@@ -1,0 +1,60 @@
+{
+  "scope": "独立架构审查：实际PG角色正向执行反例；不是产品端到端测试",
+  "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "postgres_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "input_sha256": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "495afc7150ddab97baddeff4d35f55dabaa66e8381b3fa6b063f2cdc6aaeb254",
+    "retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "worker-functions.sql": "0097f57f4ba891368a9e8465f03aa65757421f2e552b3c1b13c2de9535a10d21",
+    "roles.sql": "5ea6d9ab6bd90e180732364fea2e95cc3a5e75a9fbc8b61da8cc67cea5fb1ffd"
+  },
+  "counterexamples": [
+    {
+      "name": "普通worker不能执行acquire所要求的bid行锁",
+      "reproduced": true,
+      "expected": "42501",
+      "exit_code": 3,
+      "stdout": "",
+      "stderr": "ERROR:  42501: permission denied for table bids\nLOCATION:  aclcheck_error, aclchk.c:2843",
+      "sql": "BEGIN; SET LOCAL ROLE tender_worker; SELECT id FROM design.bids WHERE id='00000000-0000-0000-0000-000000000010' FOR UPDATE; COMMIT;"
+    },
+    {
+      "name": "研究worker也不能执行统一bid行锁",
+      "reproduced": true,
+      "expected": "42501",
+      "exit_code": 3,
+      "stdout": "",
+      "stderr": "ERROR:  42501: permission denied for table bids\nLOCATION:  aclcheck_error, aclchk.c:2843",
+      "sql": "BEGIN; SET LOCAL ROLE tender_research_worker; SELECT id FROM design.bids WHERE id='00000000-0000-0000-0000-000000000010' FOR UPDATE; COMMIT;"
+    },
+    {
+      "name": "研究worker不能写费用预留所需model_calls",
+      "reproduced": true,
+      "expected": "42501",
+      "exit_code": 3,
+      "stdout": "",
+      "stderr": "ERROR:  42501: permission denied for table model_calls\nLOCATION:  aclcheck_error, aclchk.c:2843",
+      "sql": "BEGIN; SET LOCAL ROLE tender_research_worker; INSERT INTO design.model_calls(id,operation_id,logical_call_key,attempt_no,request_digest,profile_digest,state) SELECT NULL::uuid,NULL::uuid,'fixture',1,repeat('a',64)::design.sha256,repeat('b',64)::design.sha256,'reserved' WHERE false; COMMIT;"
+    },
+    {
+      "name": "研究worker不能读取阶段收据",
+      "reproduced": true,
+      "expected": "42501",
+      "exit_code": 3,
+      "stdout": "",
+      "stderr": "ERROR:  42501: permission denied for table step_receipts\nLOCATION:  aclcheck_error, aclchk.c:2843",
+      "sql": "BEGIN; SET LOCAL ROLE tender_research_worker; SELECT * FROM design.step_receipts LIMIT 0; COMMIT;"
+    },
+    {
+      "name": "普通worker不能反过来代理研究费用预留",
+      "reproduced": true,
+      "expected": "42501",
+      "exit_code": 3,
+      "stdout": "",
+      "stderr": "ERROR:  42501: permission denied for function reserve_research_fee\nLOCATION:  aclcheck_error, aclchk.c:2843",
+      "sql": "BEGIN; SET LOCAL ROLE tender_worker; SELECT design.reserve_research_fee('00000000-0000-0000-0000-000000000099',1); COMMIT;"
+    }
+  ],
+  "software_end_to_end_executed": false
+}

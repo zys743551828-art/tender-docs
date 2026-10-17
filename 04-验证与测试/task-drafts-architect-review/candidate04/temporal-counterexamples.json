@@ -1,0 +1,67 @@
+[
+  {
+    "request": "每天9点以后核对否决项",
+    "trigger": {
+      "mode": "schedule",
+      "cron": "0 9 * * *",
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  },
+  {
+    "request": "每天9点之前核对否决项",
+    "trigger": {
+      "mode": "schedule",
+      "cron": "0 9 * * *",
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  },
+  {
+    "request": "工作日9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  },
+  {
+    "request": "明天9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  },
+  {
+    "request": "指定9:30核对否决项",
+    "trigger": {
+      "mode": "manual",
+      "cron": null,
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [
+      {
+        "field": "source_selection",
+        "reason": "请求指向特定资料，请从可信版本列表明确选择"
+      }
+    ],
+    "ready": false
+  },
+  {
+    "request": "每天9:30核对否决项",
+    "trigger": {
+      "mode": "schedule",
+      "cron": "30 9 * * *",
+      "timezone": "Asia/Shanghai"
+    },
+    "unresolved": [],
+    "ready": true
+  }
+]

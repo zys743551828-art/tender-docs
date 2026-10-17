@@ -1,0 +1,46 @@
+{
+  "actual_file_sha256": "4af4b5d611539485be74aeed8b98f07d95fb4bc4e9c16572a781f219e5877ae2",
+  "http_openapi_sha256": "0d58cc41360a6ad5abec7e9068217629675950fb8c744b90fd8e1d9ce871f0ab",
+  "exact_json_object_equal": true,
+  "file_and_http_whitespace_formats_differ": true,
+  "paths": 164,
+  "schemas": 325,
+  "original_sha256": "808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5",
+  "download_via_actual_authenticated_proxy": true,
+  "original_and_prior_jobs_preserved": [
+    {
+      "case": "global_answer_persisted",
+      "job_id": "48e607e5-bf18-4193-8835-ed4a57fd2f62",
+      "state": "succeeded"
+    },
+    {
+      "case": "global_sourced_action_exactly_once",
+      "job_id": "cb1748ed-8cfb-465e-85f9-388e5d13053f",
+      "state": "succeeded"
+    },
+    {
+      "case": "global_unknown_no_second_attempt",
+      "job_id": "98832f62-3393-4f56-aed5-32b024c250f7",
+      "state": "failed"
+    },
+    {
+      "case": "global_cancel_before_mock",
+      "job_id": "81bee8b3-3e5e-4ee3-8bed-60ef557e86dd",
+      "state": "cancelled"
+    },
+    {
+      "case": "project_actual_engine_answer_persisted",
+      "job_id": "18e3d59c-562f-4584-a1ce-5d1ef7272b72",
+      "state": "succeeded"
+    }
+  ],
+  "loaded_module_counts": {
+    "api": 135,
+    "worker": 40,
+    "publisher": 38
+  },
+  "candidate_sha256": "4f91d6aafcc397e89c19acbf626631853663a5c53e8ed95db300bc802856d650",
+  "real_provider_attempts": 0,
+  "unexpected_http_or_nonloopback_attempts": 0,
+  "fixture_only": true
+}

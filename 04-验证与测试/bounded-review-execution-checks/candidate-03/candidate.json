@@ -1,0 +1,54 @@
+{
+  "scope": "Bounded acceptance TOOL only, not backend application acceptance or permission to execute",
+  "created_at": "2026-10-16T18:37:32.689309+00:00",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/deploy/review_acceptance.py",
+      "sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/candidate-03/frozen-inputs/deploy/review_acceptance.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_review_acceptance.py",
+      "sha256": "6d5e1db9cf1f5664f04151dbf82441a8fbb4f2cb8dd9c751c5f2f18863b20740",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/candidate-03/frozen-inputs/tests/test_review_acceptance.py"
+    }
+  ],
+  "fixture": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/fixture-90-120.json",
+    "sha256": "17099eecfabad42a1fecf75ca393502bbec004cbcd987c0ac41cdd1b227153f7"
+  },
+  "self_checks": {
+    "restricted_pg_tests_passed": 12,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy_runtime": "passed",
+    "bandit_runtime": "passed"
+  },
+  "execution_authorized": false,
+  "paid_generation_calls": 0,
+  "consumer_started": false,
+  "limits": {
+    "stages": [
+      "extract-rules",
+      "core-judgment"
+    ],
+    "new_invocations": 2,
+    "max_input_bytes_each": 24576,
+    "max_output_tokens_each": 8192,
+    "new_call_start_window_seconds": 180,
+    "deadline_semantics": "In-flight native request may finish after the start window; native45s provider timeout and bounded storage/finalization apply",
+    "estimated_peak_usd": 0.0350208,
+    "planning_allowance_usd": 0.05,
+    "estimate_is_not_hard_provider_billing_cap": true
+  },
+  "guard03_delta": [
+    "Approved fixture SHA rechecked every scope check",
+    "Exact current original bytes identities and full parse/evidence/pages plus heads",
+    "No fact head allowed",
+    "One exact API-generated command required at execution; filter actual operation bid/command/handler/input_digest",
+    "Exact extraction payload and exact body payload; core rules must match one same-command prepared set and only model_extracted origins",
+    "Source manifest SHA and mandatory runtime import identity still enforced"
+  ],
+  "independent_review": "pending",
+  "backend_execution_overlay": "not prepared for moving backend; must independently bind complete frozen runtime before any approved execution"
+}

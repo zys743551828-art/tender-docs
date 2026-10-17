@@ -1,0 +1,280 @@
+{
+  "schema": "technical-scale-independent-application-checks/1",
+  "created_at": "2026-10-17T03:55:01.180884+00:00",
+  "status": "passed_scoped_independent_authority_application",
+  "blocking_findings": [],
+  "candidate_sha256": "9ad9becd41065d334ff03246026da4f9a79f90db89a5aa0696b3a0ada01c6f62",
+  "own_sources": 10,
+  "reference_inputs": 235,
+  "runtime": {
+    "files": 416,
+    "manifest": "runtime-manifest.json",
+    "sha256": "0d743dcdd69d045b83ca088c55f91a2e24005b0a3db66cb4265c4c307a60d0ac",
+    "all_before_after_exact": true,
+    "base": "Previously fixed score/Word dependency closure then exact TechnicalScale10src235ref override; no moving sources used"
+  },
+  "sqlC_sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad",
+  "actual": {
+    "sha256": "9f437d87adb153958ad098aa36d875d8d1740ae2493203a10206a7f31967d6ba",
+    "operations": 7,
+    "cold_standalone_export_equals_frozen": true,
+    "actual_typed_http_responses_valid": true,
+    "composition": "Local TestClient explicitly mounts proof/input/TechnicalScale routers; shared main/live not mounted"
+  },
+  "profile": {
+    "actual_frozen_runtime_profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+    "private_600_file_sha256": "e7737198e58bd59edcdece6e5600851e83005b09f0172f2b6e7a5a167407871f",
+    "mode_correction": "Only own copied runtime public runner600→444; exact original candidate files/source bytes untouched"
+  },
+  "unique_tests": 10,
+  "observations": [
+    {
+      "name": "seven_typed_api_lifecycle",
+      "all_7_operations": true,
+      "pending_null": true,
+      "confirmation_once": true,
+      "correction_append_history": true,
+      "stale_replay_refused": true,
+      "formal_eligibility": "unavailable"
+    },
+    {
+      "name": "real_word_full_claim_closure",
+      "Word_no_parse_chunks": true,
+      "actual_no_net_Docker_and_CPU_parse": true,
+      "pdf_2026_times_preserved": {
+        "id": "e1df7e35-68cd-47ee-b216-a0a2ca7bf884",
+        "created_at": "2026-10-17T03:51:18.325499+00:00",
+        "obtained_at": "2026-10-17T03:51:18.325499+00:00",
+        "known_at": "2026-10-17T03:51:18.325499+00:00"
+      },
+      "only_Word_old_proof_not_PDF": true,
+      "missing_parent_extra_mixed_rejected": true,
+      "separate_synthetic_claims_required": true,
+      "Word_root_withdrawal_null": true,
+      "replay_refused": true
+    },
+    {
+      "name": "object_IO_final_CAS",
+      "parent_withdrawn_during_IO": true,
+      "graph_lock_obtainable": true,
+      "no_capture_transaction_held": true,
+      "versions": 0
+    },
+    {
+      "name": "archive_and_historical_time",
+      "current_closed_refused": true,
+      "historical_no_project_changes": true,
+      "late_known_claim_invalidates_old_max": true,
+      "post_submit_knowledge_correction_rejected": true
+    },
+    {
+      "name": "declaration_quote_number",
+      "rejected_before_objects": true,
+      "status": 409
+    },
+    {
+      "name": "declaration_false_max",
+      "rejected_before_objects": true,
+      "status": 409
+    },
+    {
+      "name": "declaration_cross_parse",
+      "rejected_before_objects": true,
+      "status": 409
+    },
+    {
+      "name": "declaration_foreign_document",
+      "rejected_before_objects": true,
+      "status": 409
+    },
+    {
+      "name": "declaration_ambiguity",
+      "rejected_before_objects": true,
+      "status": 409
+    },
+    {
+      "name": "actual_roles_and_RC",
+      "old_RR_refused": true,
+      "ordinary_Worker_authority_select": "42501"
+    }
+  ],
+  "execution_evidence": [
+    {
+      "path": "literal-quote-fixed-execution/executed-test.py",
+      "sha256": "0e11d9078dd9b92df39fea5d02895b085ab85e28301caec9de49ce1e9afcd63b",
+      "bytes": 17300
+    },
+    {
+      "path": "literal-quote-fixed-execution/junit.xml",
+      "sha256": "2257679dd817c31fe75bbf147b730dc347570cae641985b85237924a64d05efc",
+      "bytes": 469
+    },
+    {
+      "path": "literal-quote-fixed-execution/observations.json",
+      "sha256": "49cfc5a955694038ecb739766b26b6ed6bdd3c6f35c6a9a55c762d003e8dc6e4",
+      "bytes": 37796
+    },
+    {
+      "path": "unique_plain_PDF_API-execution/executed-test.py",
+      "sha256": "28224bcdc6818cbc383a5fe2fdc0dd4af62f8f4493bdaaa715b8bb55054fd761",
+      "bytes": 19641
+    },
+    {
+      "path": "unique_plain_PDF_API-execution/junit.xml",
+      "sha256": "136c8d5eef141565da4603bbfea7bd8d174e1e2bf4fe62b14c4f5f6466701000",
+      "bytes": 1198
+    },
+    {
+      "path": "unique_plain_PDF_API-execution/observations.json",
+      "sha256": "57fe90b58429522e9da2b2112c2a680be065df4f7b063f12137ba94c102aa9ce",
+      "bytes": 37835
+    }
+  ],
+  "own_artifacts": [
+    {
+      "path": "own-artifacts/95d786e5-d4f0-4802-a625-04efbc9e745f/conversion-and-source.json",
+      "sha256": "003d9b370c419bcd6a82d2bf20b9f426fe1ab83ca8ac12d1550f2e1ce3eb6892",
+      "bytes": 2275
+    },
+    {
+      "path": "own-artifacts/95d786e5-d4f0-4802-a625-04efbc9e745f/derived.pdf",
+      "sha256": "ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287",
+      "bytes": 16018
+    },
+    {
+      "path": "own-artifacts/95d786e5-d4f0-4802-a625-04efbc9e745f/original.docx",
+      "sha256": "1429de4a94be99ad0cb2fceb443c558ee3f749e4af6f15068d4ee7af12c6b6b9",
+      "bytes": 898
+    },
+    {
+      "path": "own-artifacts/cda66cd4-e4ee-43b2-9b95-60b22120f289/conversion-and-source.json",
+      "sha256": "8e1723cdc4e8b3988456901d141693402d0389c2df6ce24ecc3ef43e5566f465",
+      "bytes": 2275
+    },
+    {
+      "path": "own-artifacts/cda66cd4-e4ee-43b2-9b95-60b22120f289/derived.pdf",
+      "sha256": "b503271aad2ad34773e695dffd807d9e662f88d6647d2d352d12420d4422f76d",
+      "bytes": 16018
+    },
+    {
+      "path": "own-artifacts/cda66cd4-e4ee-43b2-9b95-60b22120f289/original.docx",
+      "sha256": "5d8c3745f3f629065e07e524f5eaa4e10af1772aa5909dc0151fdecd4e0fb4c8",
+      "bytes": 898
+    }
+  ],
+  "catalog": {
+    "path": "actual-scale-catalog-and-cleanup.json",
+    "sha256": "3a3e8297554dd669f50e162091b16bfe62dac7192c41dc2cc8be819e0b7617d4",
+    "actual_technical_scale_functions": 8,
+    "own_Word_runs": 4,
+    "all_own_cleanup_confirmed": true,
+    "actual_score_inputs_maximum_null_CHECK_unchanged": true
+  },
+  "score_32893_sources_all_12_exact_unchanged": [
+    {
+      "path": "apps/api/scoring_routes.py",
+      "sha256": "46c8fa11ba1f3f244cd00a9ad8b6838d394d30ff7f9b151bca14573e564b29b5",
+      "bytes": 11230
+    },
+    {
+      "path": "deploy/sql/score-execution.sql",
+      "sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be",
+      "bytes": 62414
+    },
+    {
+      "path": "packages/model_governance/scoring_contracts.py",
+      "sha256": "d0d2f713e4f0c0c8d769f8bdcf77e002c759d270ca30a3567eec0e068a0611fd",
+      "bytes": 9780
+    },
+    {
+      "path": "packages/model_governance/scoring_producer.py",
+      "sha256": "07a8b1b6a6631d911a16b3d1255dc631081759418bcaac1e0d23ed45383f256d",
+      "bytes": 9942
+    },
+    {
+      "path": "packages/model_governance/scoring_profiles.py",
+      "sha256": "4e906e8176fc8cb1a5d232cffb9617798fa9a7bd4ef854b9ae816978c15f8c29",
+      "bytes": 1830
+    },
+    {
+      "path": "packages/model_governance/scoring_repository.py",
+      "sha256": "055b16510d9209298ddb33529c65911554f90a2e82673c8f0097ae6d8fadac7d",
+      "bytes": 22424
+    },
+    {
+      "path": "packages/model_governance/scoring_runtime.py",
+      "sha256": "e68e16f3b491062ac75df618344ef650c0a11ab33424d43b5a01dff1197eab13",
+      "bytes": 7018
+    },
+    {
+      "path": "packages/model_governance/SCORING-DEVELOPMENT.md",
+      "sha256": "66936c8e9c32df52828079e48d5963958b621e98eca8829232e15ef369efe6cd",
+      "bytes": 5518
+    },
+    {
+      "path": "tests/test_scoring_contracts_profiles.py",
+      "sha256": "cfa6d9739270f608093ff0ca25f99ff2fbdadb758b491157cd3220ccfac53ed3",
+      "bytes": 7399
+    },
+    {
+      "path": "tests/test_scoring_integration.py",
+      "sha256": "27761111b3a2ae381417cf75939d026d398f59edc3004205f3c916cb2d765208",
+      "bytes": 35418
+    },
+    {
+      "path": "tests/test_scoring_producer.py",
+      "sha256": "73241ce8400dfe121a1edf24062d2e846dad87b9c886aef38da741610f1662d3",
+      "bytes": 8344
+    },
+    {
+      "path": "tests/test_scoring_purpose_helper.py",
+      "sha256": "29fb88a5e3319944fb485a8e19df9c5cea2323aac173a289739630a88e364274",
+      "bytes": 5253
+    }
+  ],
+  "ports": {
+    "database": "Actual fresh technical_scale01 nonowner API+ordinary Worker; no initialization/grants/DDL",
+    "http": "Actual ASGI Cookie/Origin/CSRF/If-Match/idempotency; no TCP/browser deployment",
+    "objects": "Complete explicit Memory GET/put/client facade, actual Word/PDF/original byte SHA retained; external requests/httpx/provider hard blocked",
+    "Word": "First two successful tests use actual pinned no-net Docker controlled Word→PDF, isolated CPU parser and canonical full ancestry. Word no parse/chunks. All 4 own initial/final sandbox attempts cleaned.",
+    "remaining": "After PM resource pause, remaining8 tests use NEW ordinary PDF intake of own synthetic declaration plus unique PDF comment, actual CPU parsing/PG/ASGI; _docker hard blocked. No new conversion or image operation.",
+    "historical": "Word and PDF old facts are separately declared synthetic per-version proofs; ordinary system created/known/obtained2026 retained, no representation authority or real historical truth claimed",
+    "queue": "Only actual authoritative ordinary-document Outbox/engine direct calls; no Kafka/consumer",
+    "models": "No extraction/native model invocation; manual fixture rules only; provider/key hard blocked"
+  },
+  "counters": {
+    "real_model_calls": 0,
+    "cloud_object_requests": 0,
+    "consumers": 0,
+    "relay": 0,
+    "new_DDL": 0,
+    "owner_permission_changes": 0,
+    "live_changes": 0,
+    "new_Docker_runs_after_PM_pause": 0
+  },
+  "preserved_failed_qa_rounds": [
+    {
+      "path": "primary-execution",
+      "cause": "Own runtime assembled archive had public runner mode600; sandbox nonroot could not read it and conversion failed. Original result observed in render-failure.json; only own runtime mode corrected444 with unchanged bytes."
+    },
+    {
+      "path": "runner-mode-fixed-execution",
+      "cause": "Actual CPU text inserted spaces around70; QA asserted exact no-space expected string before API stage. Changed only fixture identity assertion to normalize whitespace; API receives unmodified exact actual block quote."
+    },
+    {
+      "path": "non_Docker_API_adversarial-execution",
+      "cause": "Memory isolated fixture tried same rawPDF bytes whose globally deduplicated blob key was original word-rendered key absent in fresh Memory map. Corrected only new plain PDF fixture by unique valid trailing PDF comment; complete client facade retained, no network request made."
+    },
+    {
+      "path": "catalog-query-first-failed.py",
+      "cause": "QA catalog query asked versions.state which belongs to decisions; corrected readonly query only"
+    }
+  ],
+  "not_accepted": [
+    "Score/HistoricalInput denominator integration; score NULL constraint unchanged",
+    "Historical derived-representation authority or Word2019→newPDF2019 implied knowledge",
+    "Official aggregation execution (unknown/unsupported), actual label/model/business qualification",
+    "Real historical evidence authenticity, parser/model accuracy, training four-time authority",
+    "Native OSS/Kafka/browser/main/live/production/full-system delivery"
+  ]
+}

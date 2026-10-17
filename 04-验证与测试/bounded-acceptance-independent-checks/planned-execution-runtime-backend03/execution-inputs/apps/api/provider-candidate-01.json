@@ -1,0 +1,53 @@
+{
+  "candidate": "provider-01",
+  "base_backend": {
+    "path": "/workspace/tender-workbench/apps/api/backend-candidate-03.json",
+    "sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3"
+  },
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/__init__.py",
+      "sha256": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/oss.py",
+      "sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/deepseek.py",
+      "sha256": "fd4e701d5e8c57d80b5f6134bbbfbb910ae9efb6237bf356305411349f73e1f0"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/README.md",
+      "sha256": "4b76a42593c2cc28952918fe9c39bccadf0662eb275511c1356859aa2a819570"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_providers.py",
+      "sha256": "e13f47150913ba53a5036dbd8527db99239117e86cb7a7011a60c5e236f3aa28"
+    },
+    {
+      "path": "/workspace/tender-workbench/requirements.lock.txt",
+      "sha256": "3db81efd8d21c0a6da74fded790948c7b636bb2fa5cdc4b614120fbf9698f921"
+    }
+  ],
+  "source_count": 7,
+  "self_test": {
+    "path": "/workspace/tender-workbench/apps/api/provider-self-test-result-01.json",
+    "sha256": "84e60bfea132f05439211ab21666520c405816274a22541157597b9d648a4f45"
+  },
+  "actual_api_change": false,
+  "configuration_selection": "OBJECT_STORE_BACKEND=s3或oss；仅OSS统一OBJECT_STORE_PREFIX；私有配置由部署入口注入",
+  "external_model_requests": {
+    "developer": 0,
+    "independent_qa": 1,
+    "implicit_retries": 0
+  },
+  "deepseek_actual_executed_source_sha256": "81f03971e4ad491990054ab59cc946e9ad12eab1d8a1e2f0bfff68665f769c50",
+  "deepseek_final_delta": "仅Schema根内引用/anchor付费前合法性检查，传输/有效请求/响应解析不变；最终源须以离线QA复核",
+  "oss_actual_executed_source_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+  "claims": "适配器可运行；核心评审/RAG/正式评分仍不可声明完成"
+}

@@ -1,0 +1,53 @@
+{
+  "one_page": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "gaps": [],
+    "pages": 1,
+    "cleanup": true
+  },
+  "native_lists": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "gaps": [],
+    "pages": 1,
+    "cleanup": true
+  },
+  "serif_font": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "gaps": [],
+    "pages": 1,
+    "cleanup": true
+  },
+  "missing_glyph": {
+    "state": "succeeded",
+    "coverage": "partial",
+    "gaps": [
+      "AUTHORING_COMPLETE_BODY_TEXT_UNVERIFIED"
+    ],
+    "pages": 1,
+    "cleanup": true
+  },
+  "tight_regions": {
+    "state": "succeeded",
+    "coverage": "partial",
+    "gaps": [
+      "AUTHORING_HEADER_FOOTER_REGION_OVERLAP",
+      "AUTHORING_PAGE_NUMBER_OR_FOOTER_UNVERIFIED",
+      "AUTHORING_HEADER_UNVERIFIED",
+      "AUTHORING_COMPLETE_BODY_TEXT_UNVERIFIED"
+    ],
+    "pages": 1,
+    "cleanup": true
+  },
+  "timeout": {
+    "state": "failed",
+    "coverage": "failed",
+    "gaps": [
+      "AUTHORING_GENERATED_CONVERSION_TIMEOUT"
+    ],
+    "pages": null,
+    "cleanup": true
+  }
+}

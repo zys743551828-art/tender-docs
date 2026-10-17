@@ -1,0 +1,71 @@
+{
+  "scope": "真实DeepSeek/杭州OSS连通与适配器验收；不代表业务评审、RAG、评分、浏览器OSS或生产验收",
+  "conclusion": "passed_provider_adapter_scope",
+  "blocking_failures": 0,
+  "provider_candidate_sha256": "b8e575a08a935bbabbbaa413269e4a86046817fe53482a67ad63ed964b385f9e",
+  "frozen_manifest_sha256": "a0ef17e4f29f2bb2e2b43310c8c531a1417b120a2acc2da856d7cca4897987a2",
+  "source_files_verified": 7,
+  "results": [
+    {
+      "path": "readonly-configured-result.json",
+      "sha256": "47aec7427216ceef04801c3539d6eb33ea55033070afaeac2caad442f491db11",
+      "scope": "DeepSeek模型列表及指定杭州OSS bucket信息/ACL只读预检；无对象扫描/付费chat"
+    },
+    {
+      "path": "oss-object-result.json",
+      "sha256": "e38d0dd98acceea395f9166e355a2795aeca7079fc8a1455acb0f188dbfe797e",
+      "scope": "指定真实杭州OSS bucket的本次合成UUID前缀PUT/GET/私有签名/匿名拒绝/中文名/条件写/清理"
+    },
+    {
+      "path": "oss-adapter-result.json",
+      "sha256": "dacc753283178267bfc3359f92191e17991ef653d772cb78406cd6d5c8a97ddc",
+      "scope": "原生OSS adapter真实条件写/幂等/冲突/私有下载/签名上传；无AI业务结论"
+    },
+    {
+      "path": "deepseek-chat-result.json",
+      "sha256": "ecff8282017dadca84537f63b8d5d3aef26d453c61bbd1e511aa1e7c31a61a38",
+      "scope": "实际DeepSeek adapter的唯一极短结构化chat连通验证；非业务评审/评分/RAG效果"
+    },
+    {
+      "path": "negative-candidate-02-bound-result.json",
+      "sha256": "2987172c139b09180b58735a1cb1d5ceab350efb410c2551f4327902eb3b6d1c",
+      "scope": "独立显式MockTransport/无网络负例，不代表真实模型效果"
+    }
+  ],
+  "paid_chat_requests": 1,
+  "paid_chat_model": "deepseek-flash",
+  "paid_chat_usage": {
+    "prompt_tokens": 75,
+    "completion_tokens": 5,
+    "total_tokens": 80,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 75
+  },
+  "implicit_retries": 0,
+  "object_list_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "created_test_objects": 3,
+  "cleanup_acknowledged_objects": 3,
+  "test_prefix": "workbench-checks/unique UUID only",
+  "deepseek_source_binding": {
+    "actual_paid_sha256": "81f03971e4ad491990054ab59cc946e9ad12eab1d8a1e2f0bfff68665f769c50",
+    "final_sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+    "delta": "付费前Schema悬空引用/anchor/嵌套$id校验，以及运行时Unresolvable映射为保留usage且不可重试的安全错误；合法请求构造/传输保持不变，最终16项离线负例通过；没有追加真实chat/OSS请求"
+  },
+  "formal_scoring_eligible": false,
+  "unverified": [
+    "实际A1评审业务端到端与模型检测质量",
+    "RAG/真实Embedding与重排（另批待测试）",
+    "OSS浏览器CORS及项目完整上传流程",
+    "正式评分/三判断/预算调用账本接线",
+    "真实投标资料/真人/生产运行"
+  ],
+  "previous_independent_result_sha256": "11ea431313ac189297761f4a67a67e3cd158ffb730e3a8308c4142acf894ec62",
+  "remediation": {
+    "finding": "嵌套Schema资源根导致引用解析异常未安全收口",
+    "original_architect_evidence": "../provider-architect-review/schema-resolution-counterexample.json",
+    "final_offline_tests": 16,
+    "nested_id_http_attempts": 0,
+    "runtime_unresolvable": "MODEL_OUTPUT_INVALID,usage_reported,retryable=false; one mock POST, no live request"
+  }
+}

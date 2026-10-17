@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="11" time="65.021" timestamp="2026-10-17T03:43:05.061105+00:00" hostname="597cea30c71f"><testcase classname="tests.test_scale_integration" name="test_seven_api_current_confirm_correction_withdraw_history" time="4.791" /><testcase classname="tests.test_scale_integration" name="test_historical_confirm_without_fake_review_and_extra_claim_rejected" time="6.171" /><testcase classname="tests.test_scale_integration" name="test_invalid_evidence_rejected_before_object_get[wrong_quote]" time="3.905" /><testcase classname="tests.test_scale_integration" name="test_invalid_evidence_rejected_before_object_get[cross_parse]" time="3.252" /><testcase classname="tests.test_scale_integration" name="test_invalid_evidence_rejected_before_object_get[false_maximum]" time="4.091" /><testcase classname="tests.test_scale_integration" name="test_source_change_during_object_io_rejected_at_final_cas" time="3.974" /><testcase classname="tests.test_scale_integration" name="test_real_controlled_word_full_ancestor_claims_missing_extra_and_withdrawal" time="22.829" /><testcase classname="tests.test_scale_integration" name="test_pending_preserves_unknown_denominator" time="4.396" /><testcase classname="tests.test_scale_integration" name="test_closed_current_refused_but_separate_historical_registration_allowed" time="5.148" /><testcase classname="tests.test_scale_integration" name="test_replay_after_source_withdrawal_is_not_current_confirmation" time="5.904" /><testcase classname="tests.test_scale_integration" name="test_worker_has_no_authority_access_and_api_rr_fails_closed" time="0.041"><failure message="AssertionError: assert 'CURRENT_AUTH...EAD_COMMITTED' == 'READ_COMMITTED_REQUIRED'&#10;  &#10;  - READ_COMMITTED_REQUIRED&#10;  + CURRENT_AUTHORITY_REQUIRES_READ_COMMITTED">research_client = (&lt;starlette.testclient.TestClient object at 0x7fe9acf43590&gt;, UUID('765bb705-a079-4fdf-a14a-f5d6a60e376b'), &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7fe9ad129a80&gt;, {})
+
+    def test_worker_has_no_authority_access_and_api_rr_fails_closed(research_client):  # noqa: F811
+        import psycopg
+    
+        from packages.domain.runtime import DomainError
+        from packages.model_governance import scale_repository
+    
+        with pytest.raises(psycopg.errors.InsufficientPrivilege):
+            with connection(True) as c:
+                c.execute("SELECT * FROM technical_scale.versions LIMIT 1")
+        with pytest.raises(DomainError) as error:
+            with connection() as c:
+                c.execute("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ")
+&gt;               scale_repository.lock(c, uuid4())
+E               AssertionError: assert 'CURRENT_AUTH...EAD_COMMITTED' == 'READ_COMMITTED_REQUIRED'
+E                 
+E                 - READ_COMMITTED_REQUIRED
+E                 + CURRENT_AUTHORITY_REQUIRES_READ_COMMITTED
+
+tests/test_scale_integration.py:462: AssertionError</failure></testcase></testsuite></testsuites>

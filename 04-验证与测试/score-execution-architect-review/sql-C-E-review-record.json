@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "C": "13b6598051a88d9990eda463ba1df9f1785c84a50b55f5e5e89f10ae0ad58b76",
+    "D": "cc81543052f53f5fbab28e0fc90dd393ae012f8ea83d4e37bf81d159ae569887",
+    "E": "a53bc2cbce417d121dc3a32c36266ca800b7c2035089410d90c46c4835e3b480"
+  },
+  "conclusion": "C requires coverage/source-closure alignment; E static delta permits new isolated DB initialization only",
+  "execution": {
+    "DB_connections": 0,
+    "DDL": 0,
+    "new_accounts": 0,
+    "external_services": 0,
+    "paid_calls": 0
+  },
+  "evidence": {
+    "独立评分执行SQL草案C静审.md": "3e89c6786c3b705e6cf52d0aba5ba39a0fd59a688f244bd1d01c837dee36ae95",
+    "独立评分执行SQL草案E增量复核.md": "e202a81aafbf52f71f7856c6e1ca4e0bc808c9252c48f2ffe5feea5858505408"
+  }
+}

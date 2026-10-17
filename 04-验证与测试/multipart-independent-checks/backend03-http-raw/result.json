@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "chunked_without_content_length_rejects_without_remote_part",
+      "passed": true,
+      "observation": {
+        "status": 411
+      }
+    },
+    {
+      "name": "actual_stream_exceeds_declared_part_rejects_without_remote_part",
+      "passed": true,
+      "observation": {
+        "status": 422
+      }
+    },
+    {
+      "name": "actual_stream_ends_early_rejects_without_remote_part",
+      "passed": true,
+      "observation": {
+        "status": null
+      }
+    },
+    {
+      "name": "exact_own_empty_native_session_aborted",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "configured_origin": "http://127.0.0.1:8803",
+  "object_prefix": "workbench-checks/qa-multipart-http-038db316628b4d36a774425b0237404f/",
+  "scope": "Dedicated frozen03 TCP8803, isolated rag-checks PG, real native OSS; direct document handler only. Not Kafka or browser acceptance.",
+  "bid_id": "059dc908-90c5-4393-99da-d6cc1dc29265",
+  "upload_id": "ee1de90b-23e2-4acc-8d76-162d7767fbf4",
+  "transport_statuses": {
+    "chunked_without_content_length": 411,
+    "actual_stream_exceeds_declared_part": 422,
+    "actual_stream_ends_early": null
+  },
+  "test_api_stopped": true,
+  "runtime_candidate_sha256": "ce01d25d5adb45bf5991b8802d3394d84b2567dce782dd5a193327204db92f91",
+  "probe_sha256": "ee17518cc87477e0c695073cbd56bcad6f99405a030c2288c93e087bd3a73b91"
+}

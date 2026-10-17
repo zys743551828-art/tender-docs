@@ -1,0 +1,273 @@
+{
+  "scope": "Independent restrictedPG + actual assistant routers ASGI; synthetic page/response fixture and memory object port; explicit adapter for old engine project hooks. No real model/OSS/Kafka/shared API or frontend acceptance.",
+  "observations": [
+    {
+      "name": "native_apply_first_and_source_lineage",
+      "exact_current_parse_evidence_preserved": true,
+      "citation_written": true,
+      "draft_revision": 3,
+      "assistant_opposite_decision_replays_original_effect": true
+    },
+    {
+      "name": "native_source_withdrawal_guard",
+      "exact_source_authority_error": "AUTHORING_SOURCE_STALE",
+      "no_new_section_revision": true,
+      "no_false_consumption": true
+    }
+  ],
+  "loaded_modules": [
+    {
+      "module": "apps.api.assistant_routes",
+      "path": "apps/api/assistant_routes.py",
+      "sha256": "31023b7a4f9dd1f42968b3947ef4337765be8fe6b141912f5a2165aa3d386b47"
+    },
+    {
+      "module": "apps.api.auth",
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "module": "apps.worker",
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "apps.worker.engine",
+      "path": "apps/worker/engine.py",
+      "sha256": "f8de4159850ff1ebe7c045f79ca2ea3796761964a4c58191720994867b4cc02b"
+    },
+    {
+      "module": "apps.worker.handlers",
+      "path": "apps/worker/handlers.py",
+      "sha256": "1f2cf6a16a99aa9494ef60d0df9817bd2abbb062c594ac2b24552978ead27b47"
+    },
+    {
+      "module": "packages.assistant",
+      "path": "packages/assistant/__init__.py",
+      "sha256": "829cf0726d0d30b97cb61fb2949b210d70572baad678aebd77683bb2e1e3ee5e"
+    },
+    {
+      "module": "packages.assistant.actions",
+      "path": "packages/assistant/actions.py",
+      "sha256": "531581fb9f2c697dab0b89eba21eb06a3ad280a43dfa26bd2ca38307d9a0a248"
+    },
+    {
+      "module": "packages.assistant.authority",
+      "path": "packages/assistant/authority.py",
+      "sha256": "049bb7c182abed95154d1bac88d9c4ea6a1b2c42f032e3f26299ff48a520345e"
+    },
+    {
+      "module": "packages.assistant.context",
+      "path": "packages/assistant/context.py",
+      "sha256": "8616efab3bcab9f99a2d3e284a8d64dd5f2512d66c93ce7220cfd8c9347f5559"
+    },
+    {
+      "module": "packages.assistant.contracts",
+      "path": "packages/assistant/contracts.py",
+      "sha256": "91eb70db9b0b65ceb812a2c15931fbcc76953a1275a50fb4bfa012a630cf1ad2"
+    },
+    {
+      "module": "packages.assistant.conversations",
+      "path": "packages/assistant/conversations.py",
+      "sha256": "b60b95f3287bc2ff626a1101bd6fa6b1a06c1e01912ba2a6775355382c86ddf9"
+    },
+    {
+      "module": "packages.assistant.coordinator",
+      "path": "packages/assistant/coordinator.py",
+      "sha256": "e1a1479128bf2e13d572eae9ca7aca61ec987bd4727358b3192eeabd8f0d54fb"
+    },
+    {
+      "module": "packages.assistant.generation",
+      "path": "packages/assistant/generation.py",
+      "sha256": "29f991719d299106d28568c2502b8161d40f9ea6ef60dfa1cc352e5cc0fae399"
+    },
+    {
+      "module": "packages.assistant.global_runtime",
+      "path": "packages/assistant/global_runtime.py",
+      "sha256": "b46c21fbbaea777f5f4cbad471f650d3c0352061d82120d09fa9afb17f489905"
+    },
+    {
+      "module": "packages.assistant.jobs",
+      "path": "packages/assistant/jobs.py",
+      "sha256": "572c4abaf0a435d95c38491369767caba6fabf5375ccc2a2252e2455d18ec238"
+    },
+    {
+      "module": "packages.assistant.protocol",
+      "path": "packages/assistant/protocol.py",
+      "sha256": "6c0eccee978207b9698138a5b9b7605d367c4dd2d584f57fe6741d2f3dec8047"
+    },
+    {
+      "module": "packages.assistant.tasks",
+      "path": "packages/assistant/tasks.py",
+      "sha256": "b3812d9c4342bb07a169c29da7591c6b918beca08b151b87d1899859d7683ac8"
+    },
+    {
+      "module": "packages.authoring.content",
+      "path": "packages/authoring/content.py",
+      "sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377"
+    },
+    {
+      "module": "packages.authoring.generation",
+      "path": "packages/authoring/generation.py",
+      "sha256": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463"
+    },
+    {
+      "module": "packages.authoring.patches",
+      "path": "packages/authoring/patches.py",
+      "sha256": "268d1ef5f967ff7238a72a9bf1a000cbe958392d010adb57087abfe2a0b04af5"
+    },
+    {
+      "module": "packages.authoring.repository",
+      "path": "packages/authoring/repository.py",
+      "sha256": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885"
+    },
+    {
+      "module": "packages.domain",
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "packages.domain.fact_sets",
+      "path": "packages/domain/fact_sets.py",
+      "sha256": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38"
+    },
+    {
+      "module": "packages.domain.finding_lifecycle",
+      "path": "packages/domain/finding_lifecycle.py",
+      "sha256": "f5ad72bb307538227c1aafb733b7c63486a6d837dc7544e548385fb2526e7ef8"
+    },
+    {
+      "module": "packages.domain.human_decisions",
+      "path": "packages/domain/human_decisions.py",
+      "sha256": "4634ece2d913d6dfe0a793df2b954829d57d957766fc8bea7911920679eda841"
+    },
+    {
+      "module": "packages.domain.input_changes",
+      "path": "packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a"
+    },
+    {
+      "module": "packages.domain.model_calls",
+      "path": "packages/domain/model_calls.py",
+      "sha256": "77a5e89799fdf46e130424634e8b61754efb7eff32c899cf3da1aed74a847f01"
+    },
+    {
+      "module": "packages.domain.parsing_profile",
+      "path": "packages/domain/parsing_profile.py",
+      "sha256": "f61a997b4af11a635660f431086f6d0c73fac8f96262674698ba7a6a9bd8e1db"
+    },
+    {
+      "module": "packages.domain.providers.deepseek",
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237"
+    },
+    {
+      "module": "packages.domain.review_data",
+      "path": "packages/domain/review_data.py",
+      "sha256": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822"
+    },
+    {
+      "module": "packages.domain.rule_sets",
+      "path": "packages/domain/rule_sets.py",
+      "sha256": "fb4800911262cca213cc699a79b577c94bbfeeaec2bcbea2c9aec7c175127d67"
+    },
+    {
+      "module": "packages.domain.runtime",
+      "path": "packages/domain/runtime.py",
+      "sha256": "c333121a288ce2c4ea97d9a1904a17e1759ea7070898f5dce36244c1837afb1d"
+    },
+    {
+      "module": "packages.domain.storage",
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+    },
+    {
+      "module": "packages.identity",
+      "path": "packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e"
+    },
+    {
+      "module": "packages.identity.repository",
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22"
+    },
+    {
+      "module": "packages.knowledge",
+      "path": "packages/knowledge/__init__.py",
+      "sha256": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188"
+    },
+    {
+      "module": "packages.knowledge.bridge",
+      "path": "packages/knowledge/bridge.py",
+      "sha256": "084ba465b63c5cd124b0b135edcf60095e44099695fc055424fc16f392093986"
+    },
+    {
+      "module": "packages.knowledge.content",
+      "path": "packages/knowledge/content.py",
+      "sha256": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218"
+    },
+    {
+      "module": "packages.knowledge.rag_index",
+      "path": "packages/knowledge/rag_index.py",
+      "sha256": "c86f605d4b12d80bc5ad72adebafa6b1faf7f6f6aafc1e19906f0ad5aaca212b"
+    },
+    {
+      "module": "packages.knowledge.rag_repository",
+      "path": "packages/knowledge/rag_repository.py",
+      "sha256": "2abb83dbe679ccbd2f5fe150ce840b2ef9cd361e2b9055b40be8ea1e086781f1"
+    },
+    {
+      "module": "packages.knowledge.rag_search",
+      "path": "packages/knowledge/rag_search.py",
+      "sha256": "7b150f102907588d892c4ab41acef13e6a63ec28f9bb5ee00281352a7acc3ee5"
+    },
+    {
+      "module": "packages.knowledge.rag_types",
+      "path": "packages/knowledge/rag_types.py",
+      "sha256": "317741f0eb1a38c9388cc4470c31986dd9ac44ca02eabc3d209f43e4c047df29"
+    },
+    {
+      "module": "packages.knowledge.repository",
+      "path": "packages/knowledge/repository.py",
+      "sha256": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c"
+    },
+    {
+      "module": "packages.knowledge.sources",
+      "path": "packages/knowledge/sources.py",
+      "sha256": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127"
+    },
+    {
+      "module": "packages.lifecycle.service",
+      "path": "packages/lifecycle/service.py",
+      "sha256": "e8a214125eb207a51ec323d1a638960babab54b4eded0e6d81325c58cc2da06d"
+    },
+    {
+      "module": "packages.parsing.http_port",
+      "path": "packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c"
+    },
+    {
+      "module": "packages.rag",
+      "path": "packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7"
+    },
+    {
+      "module": "packages.rag.core",
+      "path": "packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3"
+    },
+    {
+      "module": "packages.rag.indexing",
+      "path": "packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad"
+    },
+    {
+      "module": "packages.rag.repository",
+      "path": "packages/rag/repository.py",
+      "sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd"
+    }
+  ],
+  "paid_calls": 0,
+  "oss_requests": 0,
+  "consumers_started": 0
+}

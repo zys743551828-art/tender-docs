@@ -1,0 +1,445 @@
+{
+  "at": "2026-10-17T01:34:26.211225+00:00",
+  "kind": "actual_agent_browser_not_real_user_research",
+  "manifest_sha256": "3b91bb56ea766b94fd46edd161d85b67ef516cbc676abd10875ec202f8af8631",
+  "source_count": 91,
+  "source_matches": true,
+  "source_checks": [
+    {
+      "path": ".gitignore",
+      "match": true
+    },
+    {
+      "path": ".prettierignore",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "match": true
+    },
+    {
+      "path": "eslint.config.js",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "package-lock.json",
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "match": true
+    },
+    {
+      "path": "scripts/copy-pdf-resources.mjs",
+      "match": true
+    },
+    {
+      "path": "scripts/generate-contracts.py",
+      "match": true
+    },
+    {
+      "path": "src/A1Recovery.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/A1Workspace.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/App.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/App.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Archives.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ArtifactActions.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringBuilds.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringBuilds.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringHistory.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringPatchPreview.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringReferences.tsx",
+      "match": true
+    },
+    {
+      "path": "src/CoverageSummary.tsx",
+      "match": true
+    },
+    {
+      "path": "src/DecisionForm.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Evidence.tsx",
+      "match": true
+    },
+    {
+      "path": "src/EvidenceLinks.tsx",
+      "match": true
+    },
+    {
+      "path": "src/FactsPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/HistoryPanel.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/HistoryPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Identity.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Identity.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Knowledge.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Knowledge.tsx",
+      "match": true
+    },
+    {
+      "path": "src/KnowledgeVersionEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ManualRuleForm.tsx",
+      "match": true
+    },
+    {
+      "path": "src/MatrixPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/NavigationGuard.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/NextActionControl.tsx",
+      "match": true
+    },
+    {
+      "path": "src/OperationCenter.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PdfPreview.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Project.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Project.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ProjectWorkspace.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Research.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Research.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ResourceState.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RetrievalDrawer.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RetrievalDrawer.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewHistory.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewIdentity.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewProgress.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RulesPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SectionEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SettingsPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SourceEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SourceSelection.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadBatchDiscovery.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadBatchDiscovery.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadStatus.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadStatus.tsx",
+      "match": true
+    },
+    {
+      "path": "src/WorkspaceNavigation.tsx",
+      "match": true
+    },
+    {
+      "path": "src/api.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/api.ts",
+      "match": true
+    },
+    {
+      "path": "src/artifactNames.ts",
+      "match": true
+    },
+    {
+      "path": "src/components.tsx",
+      "match": true
+    },
+    {
+      "path": "src/contracts.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorSchema.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorSchema.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/eventStream.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/eventStream.ts",
+      "match": true
+    },
+    {
+      "path": "src/knowledgeNames.ts",
+      "match": true
+    },
+    {
+      "path": "src/knowledgeStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/main.tsx",
+      "match": true
+    },
+    {
+      "path": "src/navigationGuard.ts",
+      "match": true
+    },
+    {
+      "path": "src/operationStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/previewContracts.ts",
+      "match": true
+    },
+    {
+      "path": "src/styles.css",
+      "match": true
+    },
+    {
+      "path": "src/test-setup.ts",
+      "match": true
+    },
+    {
+      "path": "src/uploadTransport.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/uploadTransport.ts",
+      "match": true
+    },
+    {
+      "path": "src/useBidChoices.ts",
+      "match": true
+    },
+    {
+      "path": "src/useCommand.ts",
+      "match": true
+    },
+    {
+      "path": "src/useDirectory.ts",
+      "match": true
+    },
+    {
+      "path": "src/useProjectStream.ts",
+      "match": true
+    },
+    {
+      "path": "src/useResource.ts",
+      "match": true
+    },
+    {
+      "path": "src/useSaveQueue.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/useSaveQueue.ts",
+      "match": true
+    },
+    {
+      "path": "src/workspaceTypes.ts",
+      "match": true
+    },
+    {
+      "path": "tsconfig.json",
+      "match": true
+    },
+    {
+      "path": "vite.config.ts",
+      "match": true
+    }
+  ],
+  "actual_contract": {
+    "path": "packages/contracts/implemented.openapi.json",
+    "sha256": "31486f282d5a266c7f4adda5d3950c6335ceda60f21c023c2e5063256adad446",
+    "paths": 101,
+    "operations": 115,
+    "live_api": "http://127.0.0.1:8802",
+    "browser_origin": "http://127.0.0.1:5175",
+    "runtime_candidate_sha256": "90ef280de20c17877715cc4522ce36ecd53dd26c0da0acbe2d8ec791fbcda232",
+    "runtime_sources": 172
+  },
+  "fixtures": {
+    "uuid": "6e5726c669",
+    "company_name": "用户走查合成市政主体-6e5726c669",
+    "company_id": "ad0183da-f8f3-4418-b12c-0156a768d792",
+    "source_url": "http://127.0.0.1:5175/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+    "target_url": "http://127.0.0.1:5175/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+    "region_mismatch_url": "http://127.0.0.1:5175/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+    "knowledge_url": "http://127.0.0.1:5175/knowledge?item=4d47c2e3-5036-4d67-bb73-7b72c4cb5b9e",
+    "citation_url": "http://127.0.0.1:5175/knowledge?item=4d47c2e3-5036-4d67-bb73-7b72c4cb5b9e"
+  },
+  "conclusion": "核心上传恢复与知识引用停用路径实际可完成；2项P2待下一候选复核，不构成全项目或真人可用性通过",
+  "real_participants": 0,
+  "paid_model_review_research_writes": 0,
+  "p2_open": [
+    "W05-U01 缺项时保存禁用未说明原因",
+    "W05-U02 影响范围项目计数实际混入来源引用条目"
+  ],
+  "part_abort_upload": [
+    {
+      "at": "2026-10-16T20:14:03.695424+00:00",
+      "part_number": 2,
+      "path": "/api/v1/object-transfers/multipart/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts/2",
+      "bytes": 4217886,
+      "injected_abort": true
+    },
+    {
+      "at": "2026-10-16T20:14:04.230468+00:00",
+      "part_number": 1,
+      "path": "/api/v1/object-transfers/multipart/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts/1",
+      "bytes": 8388608
+    }
+  ],
+  "resume_parts": [
+    {
+      "at": "2026-10-16T20:15:37.027765+00:00",
+      "part_number": 2,
+      "path": "/api/v1/object-transfers/multipart/c89d5be5-e1fd-4e81-9f9d-a94fc69d9971/parts/2",
+      "bytes": 4217886
+    }
+  ],
+  "complete_replay_identical": true,
+  "ack_loss_after_actual_202": true,
+  "facts_unchanged": true,
+  "tab_focus_in_dialog": true,
+  "escape_restored": "打开物理页 1 · 文件版本 1",
+  "physical_pages": [
+    "2",
+    "3"
+  ],
+  "known_limits": [
+    "Owner指路后完成缺字段定位与历史影响入口，不代表新用户独立发现",
+    "首次来源200，SOURCE_NOT_READY恢复未实际覆盖",
+    "仅2分片非容量验收",
+    "报告内逐项保存早期探针限制"
+  ],
+  "reason_field_dom": {
+    "label": "特殊条件与范围说明",
+    "required": true,
+    "empty_valid": false,
+    "native_validation_message": "Please fill out this field.",
+    "save_button_disabled": true
+  }
+}

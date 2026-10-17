@@ -1,0 +1,70 @@
+[
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "check",
+      "apps/api/knowledge_routes.py",
+      "packages/knowledge/__init__.py",
+      "packages/knowledge/bridge.py",
+      "packages/knowledge/content.py",
+      "packages/knowledge/contracts.py",
+      "packages/knowledge/repository.py",
+      "packages/knowledge/sources.py",
+      "tests/test_knowledge.py",
+      "tests/test_knowledge_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "format",
+      "--check",
+      "apps/api/knowledge_routes.py",
+      "packages/knowledge/__init__.py",
+      "packages/knowledge/bridge.py",
+      "packages/knowledge/content.py",
+      "packages/knowledge/contracts.py",
+      "packages/knowledge/repository.py",
+      "packages/knowledge/sources.py",
+      "tests/test_knowledge.py",
+      "tests/test_knowledge_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "9 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/mypy",
+      "apps/api/knowledge_routes.py",
+      "packages/knowledge/__init__.py",
+      "packages/knowledge/bridge.py",
+      "packages/knowledge/content.py",
+      "packages/knowledge/contracts.py",
+      "packages/knowledge/repository.py",
+      "packages/knowledge/sources.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Success: no issues found in 7 source files\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/bandit",
+      "-q",
+      "apps/api/knowledge_routes.py",
+      "packages/knowledge/__init__.py",
+      "packages/knowledge/bridge.py",
+      "packages/knowledge/content.py",
+      "packages/knowledge/contracts.py",
+      "packages/knowledge/repository.py",
+      "packages/knowledge/sources.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

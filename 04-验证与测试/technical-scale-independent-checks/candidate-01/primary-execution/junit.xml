@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="16.865" timestamp="2026-10-17T03:49:11.708707+00:00" hostname="597cea30c71f"><testcase classname="" name="test_seven_api_pending_confirm_correct_withdraw_and_stale_replay" time="15.463"><error message="failed on setup with &quot;AssertionError: assert 'failed' == 'complete'&#10;  &#10;  - complete&#10;  + failed&quot;">/workspace/tender-workbench/qa/test_technical_scale_independent01.py:43: in w
+    raw=word.docx('技术总分满分为70分，量尺为未加权原始分。');u=word.upload(w,raw,name='独立技术满分招标.docx',role='tender');computed,_=word.finish(u['verified']['conversion_operation_id']);assert computed['outcome']['coverage']=='complete'
+                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'failed' == 'complete'
+E     
+E     - complete
+E     + failed</error></testcase></testsuite></testsuites>

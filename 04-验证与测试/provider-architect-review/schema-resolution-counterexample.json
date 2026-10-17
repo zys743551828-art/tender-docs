@@ -1,0 +1,26 @@
+{
+  "outcome": "exception",
+  "exception_type": "_WrappedReferencingError",
+  "domain_error": false,
+  "code": null,
+  "billing_state": null,
+  "probe": "nested-id-local-ref",
+  "schema": {
+    "type": "object",
+    "$defs": {
+      "truth": {
+        "const": true
+      }
+    },
+    "properties": {
+      "ok": {
+        "$id": "https://synthetic.invalid/nested",
+        "type": "boolean",
+        "$ref": "#/$defs/truth"
+      }
+    }
+  },
+  "mock_external_attempts": 1,
+  "real_network_requests": 0,
+  "credentials_read": false
+}

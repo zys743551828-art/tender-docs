@@ -1,0 +1,81 @@
+{
+  "scope": "independent_user_a1_acceptance_task_preparation",
+  "status": "prepared_product_owner_scope_aligned_waiting_actual_frontend",
+  "sources": [
+    {
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e"
+    },
+    {
+      "path": "04-验证与测试/implementation-product-review/README.md",
+      "sha256": "cf29814538d13f30024ecd938c62c9e542b547140b21f60fa77a3ca9c9381ac9"
+    },
+    {
+      "path": "04-验证与测试/design-remediation-checks/application-acceptance.json",
+      "sha256": "4f796c81ab029881b872821ca9b0d328b539a98df52f546586cd6bdec91b18f9"
+    }
+  ],
+  "report": "验收场景.md",
+  "report_sha256": "fc2da93ada0e2e0acba5e5a0160555d9bb466e04c73933e506a0256f1c1f0d6c",
+  "core_tasks": [
+    "AU-01",
+    "AU-02",
+    "AU-03",
+    "AU-04",
+    "AU-05",
+    "AU-06",
+    "AU-07",
+    "AU-08"
+  ],
+  "recovery_tasks": [
+    "AU-R01",
+    "AU-R02",
+    "AU-R03",
+    "AU-R04",
+    "AU-R05",
+    "AU-R06",
+    "AU-R07",
+    "AU-R08"
+  ],
+  "later_task": "AU-L01",
+  "original_13_application_tasks_traced": [
+    "PPR-AC-01",
+    "PPR-AC-02",
+    "PPR-AC-03",
+    "PPR-AC-04",
+    "PPR-AC-05",
+    "PPR-AC-06",
+    "U01-A",
+    "U02-A",
+    "U03-A",
+    "U04-A",
+    "U05-A",
+    "PPR-AC-03-B",
+    "PPR-AC-03-C"
+  ],
+  "original_application_statuses_modified": false,
+  "new_browser_runs": 0,
+  "real_participants": 0,
+  "paid_model_calls": 0,
+  "credential_reads": 0,
+  "unimplemented_paths": "pending_execution_not_passed",
+  "checks": {
+    "all_13_original_ids_traced": true,
+    "local_links_valid": 3,
+    "core_tasks": 8,
+    "recovery_tasks": 8
+  },
+  "product_owner_scope_alignment": {
+    "original_13_tasks_stay_pending": true,
+    "docx_conditional": true,
+    "official_results_later": true,
+    "research_parallel": true,
+    "finding_actions": [
+      "confirm",
+      "dismiss",
+      "defer",
+      "reopen"
+    ],
+    "manual_resolve_not_supported": true
+  }
+}

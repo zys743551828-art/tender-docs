@@ -1,0 +1,49 @@
+{
+  "candidate": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate04/candidate.json",
+  "candidate_sha256": "63a3954f61eadd944c666f5d4d7a20a83b622eefacbef9edb6296c038efdaa66",
+  "sources_verified_before_after": 317,
+  "result": "Blocked within task draft slice: temporal qualification and strong ETag projection",
+  "independent_tests": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "bounded interpreter, actual contracts, A2 schema preservation, nonowner PG + real session ASGI private draft mechanisms + own save ETag counterexample"
+  },
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/probe.py",
+      "sha256": "4f84fd027b0db64d3d6b519c226d962362aec18a8c19f4ce67853bf79c73b0df"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/input-record.json",
+      "sha256": "abb2d96ddd870e920560a48370eb053204febfbdde3af92337ceabfb80cbfc7a"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/auxiliary.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/temporal-counterexamples.json",
+      "sha256": "c840ec17b835b71db39c0ceef57b600635c214fa368ea844cb7b84fc25d63ea9"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/etag-counterexample.json",
+      "sha256": "47dced215cd64d95973ab2118a228c1245c16f53d6c06f7e4fcbc80553f1a096"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate04/independent-junit.xml",
+      "sha256": "facbe2d0bdacf9fe3fd0cc59abca16113f7132847a1a9489db7d7dd7c21869ec"
+    }
+  ],
+  "not_executed": [
+    "DDL",
+    "owner business actions",
+    "cloud object operations",
+    "model calls",
+    "Kafka consumers",
+    "live server upgrade",
+    "browser integration",
+    "full natural language understanding"
+  ],
+  "fixture_overlay": "Own runtime test_task_drafts_integration.py appends one reproducer; production sources remain byte identical. Frozen source317 before/after verified. Public target OpenAPI auxiliary identified separately."
+}

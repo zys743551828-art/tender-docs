@@ -1,0 +1,5 @@
+{
+  "classification": "probe_defect",
+  "note": "前7组真实通过含三页像素与下载；历史附加探针错误把/bids/{id}/materials末段materials当bid_id，产生422；这是QA路由解析错误，不是应用故障。修复只取正确bid_id，后续backend-03/browser-final 8组实际通过。",
+  "original_result_retained": true
+}

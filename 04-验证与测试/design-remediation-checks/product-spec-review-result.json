@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "scope": "测试角色独立人工阅读产品整改规格，非应用行为验证",
+  "checks": [
+    {
+      "id": "PPR-01",
+      "location": "PRD7.4、10.3",
+      "judgment": "关闭只停止新检测；已知关键风险仍显示且可处理；已解决/有理由驳回不再阻断，历史保留。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-02",
+      "location": "PRD7.3、10.3",
+      "judgment": "来源、核心提取、已识别核心规则执行、评分四层；人工确认独立；不以10/10证明零漏提，纯评分失败不混核心分母。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-03",
+      "location": "PRD19.2",
+      "judgment": "A1、研究链路、模型业务验收三个状态独立，双路径演示不代替精度验收。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-04",
+      "location": "产品化5—6、BRD6/8",
+      "judgment": "Kafka固定，模板为按需A2；真实环境验收是依赖而非永久范围外。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U01",
+      "location": "PRD15.2、交互9/12",
+      "judgment": "用途命名为实现规格，图片只布局参考，实际按钮/文件辨认待浏览器验收。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U02",
+      "location": "PRD10.7、交互11.1",
+      "judgment": "原DOCX失败卡可就地补PDF，原项目与角色承接；不同格式独立版本且声明关系不等于受控渲染，实际受检PDF明确。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U03—U05",
+      "location": "PRD18.3、交互12",
+      "judgment": "保留真实任务观察，不新增未经验证的复杂审批或配置。",
+      "status": "specification_clear"
+    }
+  ],
+  "input_sha256": {
+    "02-业务与产品/AI投标工作台PRD.md": "8645da16533498772955e7aa3fecfc0af9eddb92ad845621378ed371f74cebc1",
+    "02-业务与产品/AI投标工作台产品化方案.md": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2",
+    "02-业务与产品/业务需求说明书.md": "69213453dacfdc4fa7f7ae4a93f0567add7b8e2530956b0f17a8a33866f17fc4",
+    "05-技术与设计/交互与视觉设计.md": "e18b371961e136891478a855f2b435d8d5b5994a166bcea0ca9bb8ca442b1237"
+  },
+  "software_executed": 0,
+  "pending_application_cases": "application-acceptance.json"
+}

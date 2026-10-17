@@ -1,0 +1,68 @@
+{
+  "scope": "解析隐藏字受影响增量真实TCP，不包含稳定鉴权/损坏全量重跑",
+  "passed": true,
+  "checks": [
+    {
+      "name": "INVISIBLE_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "NONVISIBLE_TEXT_LAYER_EXCLUDED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "ALPHA_ZERO_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "NONVISIBLE_TEXT_LAYER_EXCLUDED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "WHITE_ON_WHITE_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "TEXT_VISUAL_COMPOSITION_UNVERIFIED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "OCCLUDED_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "TEXT_VISUAL_COMPOSITION_UNVERIFIED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "CLIPPED_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "TEXT_VISUAL_COMPOSITION_UNVERIFIED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "normal-visible-text-kept",
+      "passed": true
+    },
+    {
+      "name": "white-visible-on-black-kept",
+      "passed": true
+    }
+  ],
+  "paid_model_requests": 0,
+  "candidate_sha256": "2c94690cabd1a29fdf461d2879b8000d527fa404d3b1249d4082d5ba66e9309f",
+  "actual_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "probe_sha256": "944a6813675c634661ff1fcaefa00cc65afca4916317c94bb7f9d97526186adf"
+}

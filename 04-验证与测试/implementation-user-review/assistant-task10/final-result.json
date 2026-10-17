@@ -1,0 +1,154 @@
+{
+  "at": "2026-10-17T03:45:11.387423+00:00",
+  "status": "changes_requested_P2_U10_01",
+  "candidate_sha256": "d1be8aa67adfa75adaf7f904efcc626b720e5931b694adec8fca115126af3aee",
+  "source_files_verified_before_after": 128,
+  "compiled_assets_verified_before_after": 215,
+  "native_origin": "http://127.0.0.1:5184",
+  "api": "http://127.0.0.1:8816",
+  "actual_openapi_sha256": "4af4b5d611539485be74aeed8b98f07d95fb4bc4e9c16572a781f219e5877ae2",
+  "actual_openapi_objects_checked": true,
+  "loaded_assets": {
+    "/assets/index-jD9WPLOk.css": "2fc5a96edefe7b63d7f833076bf6737e00c7299100e86f9c68216481b84ebcae",
+    "/assets/index-C9mWuFz1.js": "6214d928299b16cc0df82dc023a2980b984ad7f4f76201c63241166af16652b6",
+    "/assets/TaskPanel-Col0Xejm.js": "015c8c87ef376f7aebf93f5f6330b5385a75e8765e157cf013e431377b424124"
+  },
+  "actual_browser_checks": 14,
+  "known_findings": [
+    {
+      "id": "U10-01",
+      "priority": "P2",
+      "problem": "长会话首次进入停在页顶，输入框位于全部消息及处理记录之后，无固定输入区或直达最新/继续提问控制。",
+      "measured_composer_top": 7375,
+      "viewport_height": 1000,
+      "source": "native /assistant existing 14 ended jobs + unknown fixture, screenshot 02"
+    }
+  ],
+  "desktop_composer_top_px": 7375,
+  "mobile_composer_top_px": 9080,
+  "round01_stop": "after 11 passed groups, harness expected English REQUEST_NOT_FOUND but UI presents localized alert; original result and traceback kept; readonly02 verified actual404+alert and completed 3 groups",
+  "application_writes": [
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071/save",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e/pause",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "method": "PUT",
+      "status": 200
+    }
+  ],
+  "own_created_template_final_paused": true,
+  "own_runs_created": 0,
+  "assistant_turn_commands": 0,
+  "provider_calls_requested": 0,
+  "transport_scope": "explicit existing fixture only; no real provider/OSS/Kafka, no automation runner, no unknown reset/control change",
+  "not_validated": [
+    "fresh global positive provider turn",
+    "new in-flight cancellation timing; verified historical actual cancelled terminal only",
+    "event/cron transport and missed-run recovery",
+    "real model quality",
+    "real user study",
+    "whole product acceptance"
+  ],
+  "artifacts": [
+    {
+      "path": "01-global-unknown-desktop.png",
+      "sha256": "1204163b962d5070e40b32fccf98ffd2d5ee534a2d4ca034cef12ef1e7465fd6"
+    },
+    {
+      "path": "02-long-conversation-top.png",
+      "sha256": "1204163b962d5070e40b32fccf98ffd2d5ee534a2d4ca034cef12ef1e7465fd6"
+    },
+    {
+      "path": "03-drawer-mobile.png",
+      "sha256": "14444392354c4fa9757d3091bf09ac088fcb7fa61a25a5f079e58d052c38ebcd"
+    },
+    {
+      "path": "04-notification-opens-fixed-local-run.png",
+      "sha256": "5f076840279b45be27ce583788a4be91d474ce6d670f4118376735633495eb3f"
+    },
+    {
+      "path": "06-cross-member-private-draft-ui.png",
+      "sha256": "85b949d8eeb3b3d908d3b737167fc044ad7aff0533c4c1d42453e362af2a5898"
+    },
+    {
+      "path": "06-cross-member-private-draft-ui.txt",
+      "sha256": "cb685a48d8ce21c41139f583835b79179c20cff9cc7d87d84f2abeaff7539740"
+    },
+    {
+      "path": "07-independent-NL-mobile.png",
+      "sha256": "b75bd23f53389c6bc19b738a77f730b4d0e0e09d81cbbd50913b18cb221f63b0"
+    },
+    {
+      "path": "08-action-card-readonly-text.json",
+      "sha256": "d129cc449ba086729ef80f516ea04e5c78465dbcfa00aa6866b59415cc69fbe1"
+    },
+    {
+      "path": "08-action-card-readonly.png",
+      "sha256": "6fd676c680b822146d023fb9768ea4bbe720fcb2ace1bb120c16b3a35252dc5b"
+    },
+    {
+      "path": "09-long-assistant-mobile-top.png",
+      "sha256": "a29f4316e3f0824b024188873ab68a09a0303f09384d1a4f6591d9e880c15cce"
+    },
+    {
+      "path": "assistant-desktop.png",
+      "sha256": "cc4caa4b9120666ee58b21cef827c8f11f55892e33d696abc6a1498ef77c1707"
+    },
+    {
+      "path": "assistant-text.txt",
+      "sha256": "36e08230f2027fe008abc92cdccc4e1d39e837b069189555d3f77483f16f4905"
+    },
+    {
+      "path": "cross-member-private-failure.png",
+      "sha256": "18489862cfc0cd39fdb2ff54ac047765d86e4abd05fd17537a2ec2f8f17c5807"
+    },
+    {
+      "path": "tasks-desktop.png",
+      "sha256": "486a320a7274bb80fbfa254af802a46bea909bb1e105ab7f71a5f297edd3fe2c"
+    },
+    {
+      "path": "tasks-text.txt",
+      "sha256": "b38d40e120e8fb0db7f24ee44a742ff814750ab6618fcfd1d97818b60a30cf52"
+    },
+    {
+      "path": "user-readback02-result.json",
+      "sha256": "6d1095a69e4301a955aa82837339a7daa70f78b88404c62cec3b80c3761f4db6"
+    },
+    {
+      "path": "user-review01-result.json",
+      "sha256": "9b35358fc4cc970e15f21db110b15149321dcafe5d9d2341e7ccb64faf22b932"
+    },
+    {
+      "path": "助手与任务前端10独立用户复验.md",
+      "sha256": "eb143a12c08cce085c5f1fff5609dbd80c5bc58cdaffc2f02380c1d1f1048625"
+    }
+  ]
+}

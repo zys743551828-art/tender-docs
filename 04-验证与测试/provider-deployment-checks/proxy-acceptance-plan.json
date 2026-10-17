@@ -1,0 +1,109 @@
+{
+  "scope": "同源代理独立验收计划，当前软件执行0",
+  "software_executed": 0,
+  "bucket_configuration_mutations": 0,
+  "new_chat_requests": 0,
+  "references": [
+    "oss-cors-readonly.json",
+    "cors-configuration-decision.json"
+  ],
+  "dependencies": [
+    "PM冻结同源router路由/请求头/错误和授权TTL契约",
+    "API8802+Worker与web5175启动通知",
+    "私有external临时成员",
+    "有界PDF-only或A1模型调用窗口，防止上传回归自动触发收费评审"
+  ],
+  "cases": [
+    {
+      "id": "PRX-01",
+      "status": "pending_application",
+      "area": "合法会话与独立授权",
+      "actions": "已登录成员取合法upload/下载授权，另无Cookie请求相同短授权",
+      "expected": "合法路径可用；匿名拒绝且不写对象、不暴露对象内容"
+    },
+    {
+      "id": "PRX-02",
+      "status": "pending_application",
+      "area": "写入CSRF与Origin",
+      "actions": "持有效会话和grant，分别缺/错CSRF与foreign Origin PUT",
+      "expected": "每种均拒绝，原件与上传状态不前进；合法CSRF+允许Origin才写"
+    },
+    {
+      "id": "PRX-03",
+      "status": "pending_application",
+      "area": "短授权完整性与对象绑定",
+      "actions": "改token一字节、换upload id、换artifact/doc id、交换PUT/GET方法",
+      "expected": "无法凭合法grant任意选key/对象/方法；拒绝且目标无副作用"
+    },
+    {
+      "id": "PRX-04",
+      "status": "pending_application",
+      "area": "短授权过期及会话撤销",
+      "actions": "自然到期的grant与logout后的同grant分别请求",
+      "expected": "到期/撤销拒绝；不把过期授权默认为新的长期公开URL；具体TTL由实际契约提供"
+    },
+    {
+      "id": "PRX-05",
+      "status": "pending_application",
+      "area": "目标状态与身份",
+      "actions": "已committed/aborted/expired upload、跨bid错upload；保留相同大小的不同PDF",
+      "expected": "不写错原件或已提交对象，拒绝状态可定位；同名不代替版本身份"
+    },
+    {
+      "id": "PRX-06",
+      "status": "pending_application",
+      "area": "请求与流长度上限",
+      "actions": "合法小文件、过大Content-Length、长度与实流不符、无Content-Length流",
+      "expected": "按实际字节执行有界读取；超限/不符拒绝且不制造verified或有效版本"
+    },
+    {
+      "id": "PRX-07",
+      "status": "pending_application",
+      "area": "服务端摘要及大小核验",
+      "actions": "声明SHA错误、同大小不同内容、零字节/截断、合法PDF",
+      "expected": "最终大小和SHA以服务端实际字节为准；非法不能成为verified/有效资料；不是只信header/ETag"
+    },
+    {
+      "id": "PRX-08",
+      "status": "pending_application",
+      "area": "网络中断与重复",
+      "actions": "中断一次上传再显式重试，同grant/命令重复",
+      "expected": "未完成不冒认成功；原件身份与命令规则保持；不同字节不得覆盖正式原件"
+    },
+    {
+      "id": "PRX-09",
+      "status": "pending_application",
+      "area": "真实私有下载",
+      "actions": "通过同源router实际GET原件及历史版本",
+      "expected": "真实字节SHA/文件名/版本与选择一致；Content-Disposition安全，不返回任意外部redirect"
+    },
+    {
+      "id": "PRX-10",
+      "status": "pending_application",
+      "area": "授权URL与日志",
+      "actions": "合法和失败调用后检查代理/API日志及公开测试产物",
+      "expected": "不记录grant token/签名URL/Authorization/Cookie/原文；错误仅安全字段"
+    },
+    {
+      "id": "PRX-11",
+      "status": "pending_application",
+      "area": "浏览器真实链路",
+      "actions": "external web5175经同源路由上传三页PDF、commit、Kafka核验/解析、原页和下载",
+      "expected": "文字/空白/图像页实际canvas，当前与历史原件SHA，session和CSRF真实，无CORS绕过或mock"
+    },
+    {
+      "id": "PRX-12",
+      "status": "pending_application",
+      "area": "390px与恢复",
+      "actions": "窄屏/键盘打开上传、错误恢复、原页、历史、下载",
+      "expected": "无横向操作丢失、焦点和已保存状态保持；不以宽屏截图代替"
+    },
+    {
+      "id": "PRX-13",
+      "status": "pending_application",
+      "area": "依赖失败",
+      "actions": "OSS拒绝/超时/对象缺失及客户端中断代理下载",
+      "expected": "如实安全错误且不向其他host转发凭据、不自动切测试存储、无假成功"
+    }
+  ]
+}

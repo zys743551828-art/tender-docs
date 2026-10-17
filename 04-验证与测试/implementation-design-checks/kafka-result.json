@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "scope": "真实单节点Kafka及PG效果收据，验证topic初始化、delivery、未提交offset重放和broker重启；非产品worker及多节点容灾",
+  "executed_at": "2026-10-16T11:31:19.490128+00:00",
+  "kafka_image": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+  "python_client": "2.16.0",
+  "checks": [
+    {
+      "name": "六类任务／领域／死信topic真实创建并核对配置",
+      "passed": true
+    },
+    {
+      "name": "topic初始化可重跑且检查已有配置",
+      "passed": true
+    },
+    {
+      "name": "幂等Producer收到两份重复事件的真实delivery回执",
+      "passed": true
+    },
+    {
+      "name": "首次消费从未提交位点读取offset0",
+      "passed": true
+    },
+    {
+      "name": "PG已提交但未commit offset，消费者重启重放同一消息",
+      "passed": true
+    },
+    {
+      "name": "下一条重复事件仍有独立Kafka offset",
+      "passed": true
+    },
+    {
+      "name": "重复消费只产生一份PG业务效果收据",
+      "passed": true
+    },
+    {
+      "name": "完成后提交下一消费位点2",
+      "passed": true
+    },
+    {
+      "name": "单节点broker重启后group位点仍为2",
+      "passed": true
+    },
+    {
+      "name": "重启后PG正式收据仍只有一份",
+      "passed": true
+    }
+  ],
+  "inputs": {
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/protocol.schema.json": "0492410b355f40778fa89f3e7dc7129c7a7704c2f614364ce4bf9a47bd3faf3c",
+    "05-技术与设计/detailed-design/deploy/init_topics.py": "bd47e25bb49b508d4d1a74091e4a87a6a46d5768323661990a2f5f8428af8cc6",
+    "04-验证与测试/implementation-design-checks/probe_kafka.py": "d71924fe5d35a973cb9db7e5756d3367a22efbd1673d421ef2345693189ae25c"
+  },
+  "real_models_executed": false,
+  "product_end_to_end_executed": false,
+  "multi_broker_failure_executed": false
+}

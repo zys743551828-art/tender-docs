@@ -1,0 +1,37 @@
+{
+  "candidate01_sha256": "928e19e08f2ae979dd3a44abbc6b7850f2b51b60fc7fe5e9b8b98d9df4b646c0",
+  "candidate02_sha256": "03cbcf424b021d91c08d398e4a482b38b957c7fa0def1c6f2be7a86bd095e101",
+  "frozen_sources_verified": {
+    "candidate01": 22,
+    "candidate02": 23
+  },
+  "source_delta": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/rag_routes.py",
+      "old_sha256": "16690b3cdf123f006d51bc064fc70f4e07d5ff34cfc99f3778503b03769d43bd",
+      "new_sha256": "6b249abf5d833cf1e069f0f994b1bdf411aa57f90198bafa464cc7d4218011a8"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/repository.py",
+      "old_sha256": "47dbd2b4292623c3fa4e6681ea526bc0ddc4728624f1c85b206fbf5cc15fb9c9",
+      "new_sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_replay_guard.py",
+      "old_sha256": null,
+      "new_sha256": "d662f954e86bef5379a1e0087392d118ccb71af298dffebcd9208f68c2a65b27"
+    }
+  ],
+  "evidence": {
+    "/workspace/tender-docs/04-验证与测试/rag-independent-checks/replay-candidate-01/result.json": "b646a0a53b8c38b6056f3c626db8a65177a59ec40bbab5244c6ea7c92232919d",
+    "/workspace/tender-docs/04-验证与测试/rag-independent-checks/replay-candidate-02/result.json": "b2a8fc52879ab6f26be784278fc5bf6a7aba720c8e5908e8d94eddab223334e1",
+    "/workspace/tender-docs/04-验证与测试/rag-independent-checks/mechanisms-candidate-02/result.json": "5650b91b074a8e8e4f41508c7d6c03c099ae890582b1777ddadf8b9e720ebd39",
+    "/workspace/tender-docs/04-验证与测试/rag-development-checks/actual-pipeline-final-result.json": "24cd51c1e389de65fb4c025a3b838fdcda0143eca7ba634bc51665ed9a219f6f",
+    "/workspace/tender-docs/04-验证与测试/rag-architect-review/candidate02-independent-result.json": "578d487b99a254804dec9c6f4711fee7fe50d6029c6b2517df32bc056db17f36",
+    "/workspace/tender-docs/04-验证与测试/rag-architect-review/initializer-fidelity-run/delta-pg-result.json": "8ea75e47448279ae61a5f4581b52e19357b32a9337b93be20c70d85f2d7576c4",
+    "/workspace/tender-docs/04-验证与测试/rag-architect-review/extension-minimal-grant-result.json": "37a1f01ce54dfc05e457fbb4d081dc3fafbe26916cabd405c66a5d8e4d86db29",
+    "/workspace/tender-docs/04-验证与测试/rag-independent-checks/final-candidate-02-result.json": "2cbf7c33de4da4ab99a587bd6b9100982e531c49d19d3829ef66548c2e2ce6aa"
+  },
+  "paid_calls_by_architect": 0,
+  "credentials_read_by_architect": false
+}

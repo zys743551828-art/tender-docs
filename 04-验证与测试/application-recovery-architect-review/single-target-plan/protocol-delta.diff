@@ -1,0 +1,26 @@
+--- 
++++ 
+@@ -1,4 +1,4 @@
+-# OPS05 单目标独立恢复协议（待资源窗口，不执行）
++# OPS05 单目标独立恢复协议02（待资源窗口，不执行）
+ 
+ 本轮仅使用已封存的完整源档案，创建一个全新恢复目标。不会新建、重启或挂载源集群，也不挂载开发已保留的两个卷。它是独立的单目标场景，不是原完整场景复跑；原 `cluster.plan()` 的1600 MiB初始门槛和 `cluster.create()` 的900 MiB容器门槛均不改、不屏蔽。当前只读检查通过，实际恢复、真实目标权限、云对象及API验收均待执行。
+ 
+@@ -40,8 +40,8 @@
+ 1. 独立编排器再核本协议SHA、候选/308/15SQL、49原证据、archive seal以及可用空间。调用原 `cluster.validate_inputs(protocol02_baseline)` 只读核输入，再 `binding.install(backend)`；不调用full `cluster.plan()`，不生成伪造的full-plan通过记录。
+ 2. 私有单目标receipt写明 `scenario=immutable_archive_to_one_fresh_target`、随机nonce、原backend、target_port和本协议SHA。以该目标参数调用冻结 `cluster.create(directory, parameters, 'target', owner_label=manifest['owner_label'], backup_group=manifest['backup_group'])`。保留其900门槛、缓存digest、容器标签、loopback、memory384m/cpu1等原检查。owner仅本次新集群bootstrap；临时DDL仅restore，业务验收不使用它。
+ 3. 在这个唯一新目标中，对原dump运行 `pg_restore --list`（只列dump目录，不是对象桶LIST），独立记录TOC/164 TABLE DATA及禁止不受控源LOGIN的检查结果；不使用宿主缺失的pg_restore冒称已列目录。
+-4. 调用冻结 `archive.restore(target, manifest, copied_archive, new_object_values)`：原 `--exit-on-error --single-transaction`，原owner/ACL映射，恢复失败不补SQL/GRANT；完成后禁用临时DDL。随后由新非owner reader独立核164表逐表行数/内容SHA、13类完整定义、965 CHECK。只允许既定一条CHECK完整嵌套/扁平写法，其他差异全拒。
+-5. 对7个明确blob逐一真实PUT/GET SHA（总322字节），仅新前缀、先落私有intent；不列桶、不读未登记对象、不DELETE。出现unknown先停止保留，不换key批量重试。旧7个孤儿不清理。本轮若未实际云写读，不借开发证据填通过。
++4. **调用restore前**先落新私有intent，固定目标locator及7个逻辑key/id/SHA/size/media_type。调用冻结 `archive.restore(target, manifest, copied_archive, new_object_values)`：原 `--exit-on-error --single-transaction`，原owner/ACL映射，恢复失败不补SQL/GRANT；完成后禁用临时DDL。随后由新非owner reader独立核164表逐表行数/内容SHA、13类完整定义、965 CHECK。只允许既定一条CHECK完整嵌套/扁平写法，其他差异全拒。
++5. 第4步的同一次 `archive.restore()` 在DB核验后负责7个明确blob的唯一一轮真实PUT/GET SHA（总322字节）；本步核该轮证据并另加7次独立GET，不再次PUT。仅新前缀；不列桶、不读未登记对象、不DELETE。出现unknown先停止保留，不换key批量重试。旧7个孤儿不清理。本轮若未实际云写读，不借开发证据填通过。
+ 6. 新reader真实SQL负例：即使关闭default readonly，仍不能INSERT/UPDATE/DELETE/TRUNCATE/DDL/序列写/RPC/SET ROLE；能读全部164表及空certifications。新API不能读certifications/CREATE/SET ROLE；worker不能CONNECT。所有负例回滚，不能由owner修权使它过。
+ 7. 独立API子进程从308固定树启动ASGI（不对外服务）。登录恢复的合成成员；旧Cookie401；CSRF403；读原项目/知识/报告真实200；唯一新合成bid创建与同key重放一致；只允许新bid同步设置；第二新key及旧项目写、upload、operation为423。依据真实前后全表多重集合证明所有原历史行保留，旧outbox/operations/model_calls逐字不变，未知费不重发，恰好新增一个bid。另加自己的断言，不以 `application.check()` 返回true替代。
+ 8. 原49项输入及封存源/目标dump/object副本运行后重新SHA。源仍不挂载，因此本轮只声明原档案文件未变，不声称重新验证源在线SQL/源云对象或原完整source→target→source序列。
+@@ -51,4 +51,6 @@
+ 
+ 只读检查只能证明封存输入的字节一致性、档案之间关系和纯比较边界。未来全部执行后最多证明“固定07+15SQL的小型合成完整档案在新单目标上恢复、非owner隔离、暂停状态下有限同步API工作”。不授生产RPO/RTO、异地灾备、断电恢复、在途任务/多段上传接续、最新A2/Score/Scale全schema、模型/RAG/Word运行、真实业务资料质量或新模型资格。
+ 
++原协议01（SHA5696223c756a365abd6db5a202ad535a26d87c13486ccee376cbdc80cab2fa21）已另存，02只澄清restore内置云PUT顺序及前置intent，不改变生产源、原1536/900/256门槛。Seaweed临时停放由PM另行授权，不属于本协议隐含操作。
++
+ 当前状态：**只读核验已执行；单目标实际恢复待PM/架构审核与容量窗口，未启动Docker。**

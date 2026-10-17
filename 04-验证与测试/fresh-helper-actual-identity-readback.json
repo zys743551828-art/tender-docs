@@ -1,0 +1,110 @@
+{
+  "purpose": "read-only actual environment check after URI query override design defect discovery",
+  "checks": [
+    {
+      "environment": "assistant01",
+      "database": "tender_checks_assistant01",
+      "observations": [
+        {
+          "role": "api",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "research_worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "score_read",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        }
+      ]
+    },
+    {
+      "environment": "model_release01",
+      "database": "tender_checks_model_release01",
+      "observations": [
+        {
+          "role": "api",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "research_worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "score_read",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "model_train",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "model_evaluate",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        }
+      ]
+    },
+    {
+      "environment": "combined_delivery01",
+      "database": "tender_checks_combined_delivery01",
+      "observations": [
+        {
+          "role": "api",
+          "database_matches_receipt": true,
+          "login_matches_receipt": true,
+          "non_superuser": true
+        },
+        {
+          "role": "worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": "combined API matching prefix and restricted role already probed; only API receipt identity used here",
+          "non_superuser": true
+        },
+        {
+          "role": "research_worker",
+          "database_matches_receipt": true,
+          "login_matches_receipt": "combined API matching prefix and restricted role already probed; only API receipt identity used here",
+          "non_superuser": true
+        },
+        {
+          "role": "score_read",
+          "database_matches_receipt": true,
+          "login_matches_receipt": "combined API matching prefix and restricted role already probed; only API receipt identity used here",
+          "non_superuser": true
+        }
+      ]
+    }
+  ],
+  "old_helper_additional_use": "paused pending candidate02",
+  "owner_connections": 0,
+  "changes": 0
+}

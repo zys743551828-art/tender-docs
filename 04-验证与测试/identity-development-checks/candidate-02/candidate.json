@@ -1,0 +1,70 @@
+{
+  "scope": "Explicit company/engineering/round selection module, API router not yet included in main application",
+  "created_at": "2026-10-16T18:47:03.428499+00:00",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/repository.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/contracts.py",
+      "sha256": "df93792d9681837cc5757883f6b9e0b051339759a8feb7661a5929789331e16d",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/identity_routes.py",
+      "sha256": "e1b9dea87ab12a6b41acff20eeffa769a0785f30cd0d7965dd3b2312c08de989",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/apps/api/identity_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_identity.py",
+      "sha256": "a311ddeb70f73c39b4237189e0fc155c0229d319c591e2483e787e5bee3f2598",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/tests/test_identity.py"
+    }
+  ],
+  "fresh_profile": "isolated tender_research_checks; nonowner API LOGIN only; no owner DSN loaded",
+  "self_checks": {
+    "pytest": {
+      "passed": 10,
+      "scope": "Previous8 + actual delayed PG transaction default ordering and historical cutoff; real HTTP responses validate strict actual schemas"
+    },
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit_runtime": "passed"
+  },
+  "checks": [
+    "Two projects explicitly reuse one registered company ID; near names never merge",
+    "Visible default is opt-in; no bidder_id creates pending placeholder even if default exists",
+    "Same engineering new lots/new rounds get distinct round IDs; same round/different bidder is explicit",
+    "Placeholder correction stores immutable before/after audit and invalidates pending/current review context",
+    "Historical identity at_time never substitutes current profile; no recorded prior binding returns unavailable",
+    "Default and project strong ETags; exact idempotent replay; concurrent correction gives200/412",
+    "Registration declares identity only, company_facts stays empty, no qualification inferred"
+  ],
+  "database_ddl_changed": false,
+  "paid_calls": 0,
+  "kafka_consumers_started": 0,
+  "live_deployed": false,
+  "independent_review": "pending_identity02_delta",
+  "integration_pending": [
+    "main.create_bid uses create_association then record_binding; explicit selected ID not silently default",
+    "Bid view identity projection and actual OpenAPI extender",
+    "New review frozen root/evaluation context and submission evidence include identity snapshot",
+    "B/C uses explicit frozen historical identity; current profile correction must not wash old labels or samples",
+    "Frontend identity discovery/default/selection/correction usability"
+  ],
+  "delta": [
+    "Identity event records actual action clock_timestamp after serialization lock, not transaction-start now()",
+    "Monotonic per-member-default or per-project-binding epoch determines current head; no semantic reliance on UUID timestamp ties",
+    "at_time is explicitly audit observation, qualification_evidence=false; business sample qualification requires frozen submission or review identity evidence",
+    "Actual eight operations have strict response schemas; Bid.identity actual type extension provided"
+  ],
+  "previous_candidate_unchanged": true
+}

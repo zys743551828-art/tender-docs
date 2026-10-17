@@ -1,0 +1,91 @@
+{
+  "scope": "实际Chromium与QA API/S3/Kafka的单PDF资料UI；无模型评审/真人使用结论",
+  "passed": true,
+  "started_at": "2026-10-16T17:09:45.621029+00:00",
+  "checks": [
+    "真实浏览器Cookie登录",
+    "不经模板/目录即可建项目",
+    "浏览器真实S3 CORS上传、Worker核验和资料入库",
+    "独立三页夹具的文字/空白/栅格页均导航并实际绘制像素",
+    "真正触发浏览器取件，原文件名/字节SHA/用途一致",
+    "原页/缺口/用途可见，Escape焦点返回，刷新恢复已保存资料",
+    "390px与键盘可打开/关闭原页且保持单层阅读",
+    "真实UI二版→元数据head/previous→历史V1第三页canvas和原名SHA取件，390px入口可达"
+  ],
+  "requests_failed": [],
+  "model_executed": false,
+  "project_path": "/bids/79a7fdd5-71ab-4d20-9af3-2bd1853de6e7/materials",
+  "rendered_pages": [
+    {
+      "physical_page": 1,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 2214
+    },
+    {
+      "physical_page": 2,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 0
+    },
+    {
+      "physical_page": 3,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 25200
+    }
+  ],
+  "history": {
+    "current_id": "165ac5e4-aa41-4cdb-a97c-10602a700807",
+    "previous_id": "f029706a-7040-49f8-a7bf-97e230ee2cc3",
+    "file_id": "9f26394a-48d3-4e5d-aac0-ce3202198d19",
+    "current_revision": 2,
+    "previous_revision": 1,
+    "historical_sha256": "b5842284843d3d3769ceb7d2e9caf5e820f7388335f223f55cc7156da3c2c22a"
+  },
+  "probe_sha256": "3a4e78e647749fcb5dbba9feb077b5a22202f11cc1799700a3b6580794e5b88a",
+  "frontend_sources": {
+    "apps/web/src/DecisionForm.tsx": "963b154cbe3d0665b786e41d37e761b3b5e15823e300d2d67778d20a451de158",
+    "apps/web/src/useCommand.ts": "b3d0fa8ae65026eaf2ba39c7927938f4833d1dfcd44f61cbe8d8e753f463b19b",
+    "apps/web/src/HistoryPanel.test.tsx": "2aa330d950143974fb420c9a5243fa8ccc4fee88e18ba52b2ee1e8584bc9d7db",
+    "apps/web/src/A1Workspace.test.tsx": "6b3c9ccfdd0ca650ec8eb806547785b9c324b2f11ba0985a4f11915147c43a88",
+    "apps/web/src/contracts.ts": "2ff7d43359e180b9ae008319934f2b12b40eff2c76b777ed98c944a5188672fb",
+    "apps/web/src/ManualRuleForm.tsx": "a5840d1bf8ee4b9706ff592b3f4014e3090d512b70190b4ddcf3d6f0b6a595c5",
+    "apps/web/src/styles.css": "bb248a4c1d9aedbcd1253a32ce03c9ca4781762413cc954978988794efb30087",
+    "apps/web/src/RetrievalDrawer.tsx": "3fbff05cc402c588b1392fa55a7831e0e5075feee192083b0471b73cd7f63cc4",
+    "apps/web/src/PdfPreview.tsx": "7e7648e1775b86c2eab23d4ae06c0a75583aed539b637ca9113907a78a8b7da5",
+    "apps/web/src/main.tsx": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0",
+    "apps/web/src/test-setup.ts": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d",
+    "apps/web/src/MatrixPanel.tsx": "6806b87010dcefbb91448e335b778ddbb75c9ce7bba71ebfb9bcbe860d73b4fd",
+    "apps/web/src/useResource.ts": "7fae684d463c17b5a60596facd31ee2282d589fa20919f405b19daa63703ee60",
+    "apps/web/src/App.tsx": "abf033ccc620b2630b3c4b20564e05cf5bf461daf035dd5a20c6d87a6ab61ab1",
+    "apps/web/src/ReviewPanel.tsx": "6bc32118ae95d23511c2a10fd939257c2d7c1cff6be58e6cac017508d6a0b808",
+    "apps/web/src/workspaceTypes.ts": "588171abcc655be1a720d3ba826605685fd68e2e1b0ab2d7fe80bab6e386a846",
+    "apps/web/src/api.ts": "66d6d18c792730512aa3c3762bfca9846a0eae15cf95e3ce9c055e4e0c380224",
+    "apps/web/src/components.tsx": "19fe3596ce269d8466ba6510f4cd3de8876608bd44e0aabcd57871d7460afc3b",
+    "apps/web/src/RulesPanel.tsx": "8c68a4e0e05482783a80d74577fe20b9f826a4d1aaedbcbd87312046652b955d",
+    "apps/web/src/Evidence.tsx": "544adb0c528304c81935feb9155c8d12d29b56f7a2f55d15f958c0cec3dcb7ef",
+    "apps/web/src/EvidenceLinks.tsx": "8a9936688836dcfee14e2b8c307d2a13facae78d4902a888c8c5cf83d4b858db",
+    "apps/web/src/SettingsPanel.tsx": "f8e80bfbf2aec047c05fcfaff2016edef868c93bfabb616e1d905fcde102ea8a",
+    "apps/web/src/NextActionControl.tsx": "6f06efa209300433e55bb6a77f58f45bff5884d3e4363e05adbf5971d931f41b",
+    "apps/web/src/ReviewIdentity.tsx": "15f5dbd91b46da4161586f253cccb6a7e5a670c7e906493e2d732e5a88b81618",
+    "apps/web/src/WorkspaceNavigation.tsx": "2cf2e8ea767b2303279815e12f5f27d3d9f63aa054d9dac957d104a44031f6c9",
+    "apps/web/src/OperationCenter.tsx": "2f484ac8e603e5c441879cc9df5c1ade2ae19dcbfc0967478cc22ae88aea2c82",
+    "apps/web/src/CoverageSummary.tsx": "2989ebb8910cc2be6ef4b87cd914bd2a81b1701515b53dbc90aa9176faeb3821",
+    "apps/web/src/ResourceState.tsx": "af3c31c1fc371e8f59ebd1ec3837a3580476d3621002fc0fab88c778b5156420",
+    "apps/web/src/FactsPanel.tsx": "374451e23e837caf0ef5a1ee66e51a15872d0825920d65265c20c595dfb3b400",
+    "apps/web/src/HistoryPanel.tsx": "42bae1fe6658fb34661034fdb652a17dad2b263474a276f705a9e1eac0e700d9",
+    "apps/web/src/App.test.tsx": "2a2f89df9affd76c69da8b662592ce88901d2acbf7527d9a0acdf3f2657ab6e6",
+    "apps/web/src/Project.tsx": "abcfd4ba6785f26b36c09e8c4368d1a995ab27cd265cb10563419a048e7aed3c",
+    "apps/web/src/SourceSelection.tsx": "656010602199776d24db98d106c483a3f812d9111b77c1f18c15cb6be3d034fc",
+    "apps/web/src/api.test.ts": "d8a8f1db98cc1657ad066054c4530957716fa15215c7fc4bcddf79ab376615eb",
+    "apps/web/src/RetrievalDrawer.test.tsx": "936b362d5bbed432d0fd88dc2d68780dbac7e0c86dd0e2c69ad1a647fa7069e7",
+    "apps/web/src/Project.test.tsx": "f8e7c83bf90f4b0671b7fedefe68d5bceade6f4e9805d673aa2aaaaa5c31f0f6",
+    "apps/web/src/ProjectWorkspace.tsx": "91d594858d1e7109119a6dc14e338cd8f0a7b7e5018ebe959f78e679134b2fb6",
+    "apps/web/src/operationStorage.ts": "c847beeae243d2369eb854e570ffc5501516648506ab0df17f352958ac153031"
+  },
+  "finished_at": "2026-10-16T17:10:09.407491+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "candidate": "event-stream-01",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/event_routes.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/event-stream-development-checks/frozen-inputs/apps/api/event_routes.py",
+      "sha256": "e734f6f05ec2a5628a59e6bc53d9aace561d2b6399d567626ac9fcff37b25780"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_event_stream.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/event-stream-development-checks/frozen-inputs/tests/test_event_stream.py",
+      "sha256": "37ce38662452900d11bb98d48ac9f6626e24a8821b0c1de82fa7201397bdf940"
+    }
+  ],
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "real_pg_asgi_tests": 6
+  },
+  "independent_acceptance": "pending",
+  "protocol": {
+    "cookie_auth": true,
+    "cursor": "streamUUID:seq",
+    "retained_window_days": 7,
+    "expired_cursor_status": 410,
+    "keepalive_seconds": 15,
+    "max_connection_seconds": 55,
+    "control_events": [
+      "SESSION_EXPIRED",
+      "RESET_REQUIRED",
+      "STREAM_UNAVAILABLE"
+    ],
+    "raw_payload_replay": false
+  },
+  "scope": "受限API真实PG与ASGI；未做反向代理/浏览器独立验收，尚未接main",
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/event-stream-development-checks/real-pg-junit.xml",
+      "sha256": "333447743a93b772a27e59864a3a222fdfdcc0e4a7ea8ac64cb8d2a2d8fec0c1"
+    }
+  ]
+}

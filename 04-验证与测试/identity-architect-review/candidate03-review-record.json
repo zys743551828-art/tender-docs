@@ -1,0 +1,26 @@
+{
+  "candidate_sha256": "99d693de54f1d828bf7705bbafc51fddbeb9ab0a48ea93e2a220ebbaf7d5dd47",
+  "candidate_cases_passed": 11,
+  "additional_original_regressions_passed": 2,
+  "blocking_findings": 0,
+  "actual_nonowner_postgresql": true,
+  "actual_login_asgi": true,
+  "paid_calls": 0,
+  "external_requests": 0,
+  "credentials_read": false,
+  "additional_directory_tie_case": 1,
+  "total_passed": 14,
+  "conclusion": "passed_scoped_identity03_pagination_delta",
+  "evidence_sha256": {
+    "probe_candidate03.py": "fc62ae2d7d167aff39a560ba71d58e537eb8f9e78619fd17777ad5b4e7c524ae",
+    "probe_candidate03_ties.py": "b30e7d4357f6bf5b3192b2e8df20e1bbb5169563080a8b1ce91d680d2a2ef97c",
+    "candidate03-independent-junit.xml": "642edf1b4583200013589ef6f4eb20e429c41423ce18a3272edf86c6174f8794",
+    "candidate03-directory-tie-junit.xml": "bf3d7f1c47bc3d583be1b4544677cc0c41d3adec16bf422a626e8d6b0899ee11"
+  },
+  "unverified": [
+    "main_actual_export",
+    "frontend_next_cursor_adoption",
+    "live_deployment",
+    "concurrent_directory_mutation_snapshot_guarantee_not_promised"
+  ]
+}

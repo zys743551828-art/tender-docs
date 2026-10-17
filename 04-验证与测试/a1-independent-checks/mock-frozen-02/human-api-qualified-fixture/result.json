@@ -1,0 +1,296 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 7,
+          "completed": 7,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "rule_confirmation_cas_kind_and_exact_replay",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "confirmed_deferred_change_only_human_layer_without_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "batch_rejects_already_confirmed_without_partial_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "invalid_second_addition_rolls_back_entire_manual_pack",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "manual_add_and_confirm_atomic_new_pack_no_auto_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_manual_pack_cannot_overwrite_current_pack",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "reextraction_omission_preserves_human_rule_and_confirmation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unassigned_fact_proof_rejected_without_partial_fact_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "manual_fact_save_confirms_once_atomically",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unchanged_fact_confirmation_carryover_explicit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "confirmed_fact_proof_original_pages_parse_frozen_in_root",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "fact_withdrawal_new_set_keeps_original_history_and_no_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "withdrawn_ancestor_invalidates_live_fact_confirmation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_confirmed_fact_proof_blocks_new_freeze_no_model",
+      "passed": false,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "0d793346-69db-4dcf-b56d-bcf9f72589e9",
+  "human_cases_sha256": "75c5a4b711bfda03e44c1686952461d3bceef12f45b9b83f2365a7f791ff5234",
+  "first_human_rule": {
+    "id": "90fbc885-40a7-4d29-bb9e-828ab54d9376",
+    "rule_set_id": "73c2810b-0ae9-4f27-acc0-4cb1291bd9d7",
+    "kind": "mandatory",
+    "statement": "A site visit is required.",
+    "conditions": [],
+    "exceptions": [],
+    "maximum": null,
+    "evidence_ids": [
+      "a1fb4f3b-dd8e-4bb2-8524-9557ed9169b3"
+    ],
+    "confirmation": "confirmed",
+    "decision_revision": 2,
+    "carryover": null,
+    "scope": {
+      "bid_id": "0d793346-69db-4dcf-b56d-bcf9f72589e9",
+      "description": "Current synthetic project"
+    },
+    "bands": [],
+    "origin_kind": "human_added",
+    "manual_origin_rule_id": "90fbc885-40a7-4d29-bb9e-828ab54d9376",
+    "provenance_status": "effective"
+  },
+  "retained_human_rule": [
+    {
+      "id": "b7f01b12-da6b-433f-83c0-7b95f48559a5",
+      "rule_set_id": "71e76855-79a0-424b-803e-e6ad5b91ec4c",
+      "kind": "mandatory",
+      "statement": "A site visit is required.",
+      "conditions": [],
+      "exceptions": [],
+      "maximum": null,
+      "evidence_ids": [
+        "a1fb4f3b-dd8e-4bb2-8524-9557ed9169b3"
+      ],
+      "confirmation": "confirmed",
+      "decision_revision": 1,
+      "carryover": {
+        "from_rule_id": "90fbc885-40a7-4d29-bb9e-828ab54d9376",
+        "from_decision_id": "70e56a96-c398-490e-a5c7-5c280832a2c2",
+        "equivalence_digest": "f8bbd38cd24ff7cd02ba373c045b403f1d027aacb3bf0cdd2e5cc4e2e26d3a40",
+        "adopted_at": "2026-10-16T18:39:25.202355+00:00"
+      },
+      "scope": {
+        "bid_id": "0d793346-69db-4dcf-b56d-bcf9f72589e9",
+        "description": "Current synthetic project"
+      },
+      "bands": [],
+      "origin_kind": "carried_human",
+      "manual_origin_rule_id": "90fbc885-40a7-4d29-bb9e-828ab54d9376",
+      "provenance_status": "effective"
+    }
+  ],
+  "confirmed_fact_root_manifest": {
+    "as_of": "2026-10-16T18:39:26.289343+00:00",
+    "bid_id": "0d793346-69db-4dcf-b56d-bcf9f72589e9",
+    "purpose": "compliance_and_scoring",
+    "frozen_at": "2026-10-16T18:39:26.387356+00:00",
+    "fact_set_id": "5e8b1635-1c70-4b22-a785-2976d4b528cb",
+    "rule_set_id": "d4cde263-d471-405f-84e4-a42748c201f0",
+    "source_refs": [
+      {
+        "id": "5c7af82c-de5d-5a7f-a169-99816b96ba88",
+        "kind": "body",
+        "digest": "844211e6ee08917e2b8c3efec1aa477e571eec2069608ad453baae5dc8188b80",
+        "known_at": "2026-10-16T17:39:22.955723+00:00",
+        "lineage_manifest_digest": "ec0559ac2808d16202622e5dadcdac7d4c11846cf9f243cc4531de168eb90c61"
+      },
+      {
+        "id": "2bae2512-bb72-5789-a878-b6517e1569b0",
+        "kind": "supplement",
+        "digest": "782923a4076ddd3deb103925eb1ee90867716a6ca01a9612fbe0dfc10e1072eb",
+        "known_at": "2026-10-16T17:39:24.876837+00:00",
+        "lineage_manifest_digest": "b2a4a8b0d451adacf1e78ca6c657ee0965f220cb0cd00b678bc9b3aa337b6f7c"
+      },
+      {
+        "id": "f81be3f8-e3e0-5589-a798-3b130115646d",
+        "kind": "tender",
+        "digest": "bc070300a5fdc5672734e43d7e17ff2178430f391f048c3a5b4cbde419e9548f",
+        "known_at": "2026-10-16T17:39:22.839876+00:00",
+        "lineage_manifest_digest": "55b7a10cbd31d38d9929e921ae2fcd470a7908736f30e3f0bd6983850fb76054"
+      },
+      {
+        "id": "434bcad9-3af0-5417-8b28-ca4c0f11de21",
+        "kind": "prebid_fact",
+        "digest": "72246fc83e59c73a3cb91dff1a63386f221cf8373fa969a66bd18309171a31a5",
+        "known_at": "2026-10-16T17:39:25.731994+00:00",
+        "lineage_manifest_digest": "9ba7cd92e80225f93a578fa853a579b2a6900558a95c97c8bd8caca8237e830c"
+      }
+    ],
+    "method_digest": "31b00fdb890dfbe971e6e5efe7471fa0e5bc21ec14cd839c5e35d5673c060d51",
+    "parse_run_ids": [
+      "00d54dc5-7f50-4b31-bfd9-2f3931e267d9",
+      "1fa3ad12-97f9-4187-a09d-3a4d1a9f3702",
+      "3967361b-8ede-4ed0-b653-7f9e2740db96",
+      "ee625561-c1e6-4f67-b70c-84e078a8f663"
+    ],
+    "policy_digest": "2b5d6201232c68e52350f37abc21bd241cc61d424b583b3e5b178fb614b575d0",
+    "content_checks": {
+      "consistency": true,
+      "scope_residue": true
+    },
+    "body_version_id": "c86d058d-fca4-479d-9f0a-9a0e403ebb1a",
+    "material_revision": 3,
+    "material_snapshot_id": "d5f05b10-5781-4a92-9017-d5a157a39d0c",
+    "evidence_manifest_digest": "8951b3280ad534ffb59a9e703caa2b0ec3e9dc2ff87457bcf9a24a672a227bde",
+    "evaluation_context_digest": "6fa3ad4541e950a84c7a65263b0fef7bcf71ea7ed425dbc05b6a53c10844493f"
+  },
+  "invalidated_fact": {
+    "id": "616469e4-9f0b-4da1-ba56-e8775ba604eb",
+    "subject": "本投标人",
+    "scope": "当前合成项目",
+    "name": "合成证书编号",
+    "value": "QA123",
+    "unit": null,
+    "evidence_ids": [
+      "0684de40-3090-4acc-989c-d2ac540b7ac7"
+    ],
+    "confirmation": "pending",
+    "decision_revision": 1,
+    "source_validity": "needs_revalidation",
+    "source_issues": [
+      "FACT_SOURCE_REVALIDATION_NEEDED"
+    ],
+    "carryover": {
+      "from_fact_id": "bbcfd417-ccae-4f33-8b0e-e47dd7025edf",
+      "from_decision_id": "2f92fa94-9d22-4ab2-840c-dcbca75e21ac",
+      "equivalence_digest": "9c4ee23013c786ee82c67ce24731f5774a9f3167c896a4234f4ff9f8ad5fe94c",
+      "adopted_at": "2026-10-16T18:39:27.001062+00:00"
+    },
+    "decision": {
+      "id": "2f92fa94-9d22-4ab2-840c-dcbca75e21ac",
+      "object_id": "dc23feb3-2125-485a-be77-f010a4f2c62e",
+      "object_revision": 1,
+      "decision": "confirmed",
+      "reason": "保存并确认合成证书原页",
+      "actor_id": "e22f4286-47af-45d5-bb67-411ab27d644b",
+      "created_at": "2026-10-16T18:39:25.862813+00:00"
+    }
+  },
+  "offline_transport_requests": 5,
+  "probe_sha256": "b0d7da906dcadf3cdb2ae9c7d5f455bc6fc807d714100e63ce974a44592e371b"
+}

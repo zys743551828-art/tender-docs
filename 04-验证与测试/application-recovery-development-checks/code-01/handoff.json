@@ -1,0 +1,20 @@
+{
+  "candidate_sha256": "a886ce893db31eeb36b7e3a4f74152b46c1d932b2b5780a3f3b5f05aa05460cd",
+  "state": "released_slot_pending_static_review_no_resources",
+  "owned_sources_verified": 10,
+  "observed_dependencies_verified": 8,
+  "next_actions": [
+    "Independent architecture static review exact frozen code01",
+    "If changed, preserve code01 and freeze code02 before resources",
+    "Run actual fresh source/target only after static gate, then independent QA"
+  ],
+  "self_review_followup": [
+    "Snapshot/target object_port currently imports provider via ordinary module search; bind frozen backend root in every phase before production imports (source fixture and application already pin it). Review before resources.",
+    "Runtime asset comparison remains bytes-only: no CPU inference/Word sandbox/production qualification."
+  ],
+  "resources_created": 0,
+  "DDL_executed": false,
+  "OSS_requests": 0,
+  "model_calls": 0,
+  "consumers_started": false
+}

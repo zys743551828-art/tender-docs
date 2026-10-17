@@ -1,0 +1,87 @@
+{
+  "mode": "offline libpq parser only; mirrors frozen URI replacement, not database execution",
+  "frozen_source_sha256": "b22942dd45a961f3529de51dadb0ed4d9569d4e922f4f5fc9071790ccfc1a16b",
+  "synthetic_credentials_only": true,
+  "connections": 0,
+  "DDL_executed": false,
+  "counterexamples": [
+    {
+      "scenario": "new_owner",
+      "query_keys": [
+        "dbname"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_owner",
+      "actual_dbname": "tender_existing_release",
+      "actual_user": "synthetic_owner",
+      "wrong_database": true,
+      "wrong_user": false
+    },
+    {
+      "scenario": "new_api",
+      "query_keys": [
+        "dbname"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_new_api",
+      "actual_dbname": "tender_existing_release",
+      "actual_user": "synthetic_new_api",
+      "wrong_database": true,
+      "wrong_user": false
+    },
+    {
+      "scenario": "new_owner",
+      "query_keys": [
+        "user",
+        "password"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_owner",
+      "actual_dbname": "tender_checks_synthetic",
+      "actual_user": "synthetic_owner",
+      "wrong_database": false,
+      "wrong_user": false
+    },
+    {
+      "scenario": "new_api",
+      "query_keys": [
+        "user",
+        "password"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_new_api",
+      "actual_dbname": "tender_checks_synthetic",
+      "actual_user": "synthetic_owner",
+      "wrong_database": false,
+      "wrong_user": true
+    },
+    {
+      "scenario": "new_owner",
+      "query_keys": [
+        "dbname",
+        "user",
+        "password"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_owner",
+      "actual_dbname": "tender_existing_release",
+      "actual_user": "synthetic_owner",
+      "wrong_database": true,
+      "wrong_user": false
+    },
+    {
+      "scenario": "new_api",
+      "query_keys": [
+        "dbname",
+        "user",
+        "password"
+      ],
+      "path_dbname": "tender_checks_synthetic",
+      "expected_user": "synthetic_new_api",
+      "actual_dbname": "tender_existing_release",
+      "actual_user": "synthetic_owner",
+      "wrong_database": true,
+      "wrong_user": true
+    }
+  ]
+}

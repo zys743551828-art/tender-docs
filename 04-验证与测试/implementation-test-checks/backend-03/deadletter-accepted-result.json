@@ -1,0 +1,15 @@
+{
+  "scope": "实际失联预算耗尽后的Kafka死信及终态拒绝领取补验",
+  "passed": true,
+  "checks": [
+    "三次失联耗尽的死信真实到达Kafka，意图一次，终态重复领取拒绝且无有效原件"
+  ],
+  "operation_id": "81c5753a-2de1-4933-a7e7-c5e1a2294013",
+  "deadletter_intents": 1,
+  "actual_kafka_message": true,
+  "attempt_count": 3,
+  "terminal_failure_receipts": 1,
+  "valid_document_versions": 0,
+  "probe_sha256": "4c5987ae91b34ed2755db38b6f11a0e58f885d4ea352f97165761863e028d609",
+  "recovery_result_sha256": "0a755d15c66e650116c6ad90426380f0f152b5778f861ead5758430061cd3fbc"
+}

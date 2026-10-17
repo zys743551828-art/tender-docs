@@ -1,0 +1,23 @@
+{
+  "candidate_sha256": "c53c68b39f28a2ed145c68d3f99141b2918dbfa43c5197b0220544e2187807a9",
+  "sources_verified": 19,
+  "group_delta_cases": 1,
+  "counterexample_reproduced": true,
+  "actual_postgresql_nonowner": true,
+  "model_transport": "explicit native DeepSeekClient MockTransport",
+  "object_port": "explicit in-memory",
+  "paid_calls": 0,
+  "credentials_read": false,
+  "source_module_directory": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs",
+  "loaded_frozen_modules": {
+    "packages.research.batches": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/batches.py",
+    "packages.research.chapters": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/chapters.py",
+    "packages.research.execution": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/execution.py",
+    "packages.research.ledger": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/ledger.py",
+    "packages.research.model_port": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/model_port.py",
+    "packages.research.worker": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/research-backend-checks/candidate-02/frozen-inputs/packages/research/worker.py",
+    "apps.api.research_routes": "/workspace/tender-workbench/apps/api/research_routes.py"
+  },
+  "reference_inputs_verified": 10,
+  "source_authority_installed": true
+}

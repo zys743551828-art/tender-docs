@@ -1,0 +1,581 @@
+{
+  "at": "2026-10-17T02:22:10.605500+00:00",
+  "kind": "independent_actual_agent_browser_not_real_user_research",
+  "manifest_sha256": "9954c6e6f02450df944a7c5f75f8d7f80072ef12a25aa1082dd9a8900f039f6d",
+  "source_count": 104,
+  "source_matches": true,
+  "source_checks": [
+    {
+      "path": ".gitignore",
+      "match": true
+    },
+    {
+      "path": ".prettierignore",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "match": true
+    },
+    {
+      "path": "eslint.config.js",
+      "match": true
+    },
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "package-lock.json",
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "match": true
+    },
+    {
+      "path": "scripts/copy-pdf-resources.mjs",
+      "match": true
+    },
+    {
+      "path": "scripts/generate-contracts.py",
+      "match": true
+    },
+    {
+      "path": "src/A1Recovery.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/A1Workspace.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/App.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/App.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Archives.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ArtifactActions.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringBuilds.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringBuilds.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringHistory.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringPatchPreview.tsx",
+      "match": true
+    },
+    {
+      "path": "src/AuthoringReferences.tsx",
+      "match": true
+    },
+    {
+      "path": "src/CoverageSummary.tsx",
+      "match": true
+    },
+    {
+      "path": "src/DecisionForm.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Evidence.tsx",
+      "match": true
+    },
+    {
+      "path": "src/EvidenceLinks.tsx",
+      "match": true
+    },
+    {
+      "path": "src/FactsPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/HistoryPanel.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/HistoryPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Identity.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Identity.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Knowledge.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Knowledge.tsx",
+      "match": true
+    },
+    {
+      "path": "src/KnowledgeVersionEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ManualRuleForm.tsx",
+      "match": true
+    },
+    {
+      "path": "src/MatrixPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/NavigationGuard.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/NextActionControl.tsx",
+      "match": true
+    },
+    {
+      "path": "src/OperationCenter.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PdfPreview.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PricingFormulaEditor.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PricingFormulaEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PricingPanel.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PricingPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/PricingResults.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Project.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Project.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ProjectWorkspace.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReportPanel.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReportPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Research.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/Research.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ResourceState.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RetrievalDrawer.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RetrievalDrawer.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewHistory.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewIdentity.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/ReviewProgress.tsx",
+      "match": true
+    },
+    {
+      "path": "src/RulesPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SectionEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SettingsPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SourceEditor.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SourceSelection.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SubmissionDocuments.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SubmissionPanel.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/SubmissionPanel.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadBatchDiscovery.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadBatchDiscovery.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadStatus.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/UploadStatus.tsx",
+      "match": true
+    },
+    {
+      "path": "src/WorkspaceNavigation.tsx",
+      "match": true
+    },
+    {
+      "path": "src/api.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/api.ts",
+      "match": true
+    },
+    {
+      "path": "src/artifactNames.ts",
+      "match": true
+    },
+    {
+      "path": "src/components.tsx",
+      "match": true
+    },
+    {
+      "path": "src/contracts.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorSchema.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorSchema.ts",
+      "match": true
+    },
+    {
+      "path": "src/editorStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/eventStream.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/eventStream.ts",
+      "match": true
+    },
+    {
+      "path": "src/knowledgeNames.ts",
+      "match": true
+    },
+    {
+      "path": "src/knowledgeStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/main.tsx",
+      "match": true
+    },
+    {
+      "path": "src/navigationGuard.ts",
+      "match": true
+    },
+    {
+      "path": "src/operationStorage.ts",
+      "match": true
+    },
+    {
+      "path": "src/pricingInput.ts",
+      "match": true
+    },
+    {
+      "path": "src/styles.css",
+      "match": true
+    },
+    {
+      "path": "src/test-setup.ts",
+      "match": true
+    },
+    {
+      "path": "src/uploadTransport.test.ts",
+      "match": true
+    },
+    {
+      "path": "src/uploadTransport.ts",
+      "match": true
+    },
+    {
+      "path": "src/useBidChoices.ts",
+      "match": true
+    },
+    {
+      "path": "src/useCommand.ts",
+      "match": true
+    },
+    {
+      "path": "src/useCursorList.ts",
+      "match": true
+    },
+    {
+      "path": "src/useDirectory.ts",
+      "match": true
+    },
+    {
+      "path": "src/useProjectStream.ts",
+      "match": true
+    },
+    {
+      "path": "src/useRecordedCommand.ts",
+      "match": true
+    },
+    {
+      "path": "src/useResource.ts",
+      "match": true
+    },
+    {
+      "path": "src/useSaveQueue.test.tsx",
+      "match": true
+    },
+    {
+      "path": "src/useSaveQueue.ts",
+      "match": true
+    },
+    {
+      "path": "src/useSubmissionDocuments.ts",
+      "match": true
+    },
+    {
+      "path": "src/workspaceTypes.ts",
+      "match": true
+    },
+    {
+      "path": "tsconfig.json",
+      "match": true
+    },
+    {
+      "path": "vite.config.ts",
+      "match": true
+    }
+  ],
+  "actual_contract": {
+    "path": "packages/contracts/implemented.openapi.json",
+    "sha256": "33e3e86a956778919fb7929d41e1d4e61a91921452a1a1ac857bfa0f80037472",
+    "paths": 129,
+    "operations": 150,
+    "generated_types": "src/contracts.ts (all consumed schema closures and actual operation flags)"
+  },
+  "fixtures": {
+    "uuid": "3157b22e-5",
+    "standard_bid_id": "606845b4-eb73-4b90-ba32-b275d71f6b01",
+    "standard_review_id": "512ab15f-2261-41ba-aec4-5ec42690f72c",
+    "fixture_scope": "synthetic API/Worker/Parser03/MockTransport mechanism fixture; not actual model quality",
+    "fixture_paid_calls": 0,
+    "fixture_origin": "http://127.0.0.1:5176",
+    "own_url": "http://127.0.0.1:5176/bids/db413e7a-7c25-4161-843e-54e37a123c97/materials",
+    "own_bid_id": "db413e7a-7c25-4161-843e-54e37a123c97",
+    "pricing_url": "http://127.0.0.1:5176/bids/db413e7a-7c25-4161-843e-54e37a123c97/pricing",
+    "standard_review_url": "http://127.0.0.1:5176/bids/606845b4-eb73-4b90-ba32-b275d71f6b01/review"
+  },
+  "real_participants": 0,
+  "new_review_research_assistant_paid_writes": 0,
+  "conclusion": "实交更正/真实失ACK恢复/报告用途与新任务终态/D缺项提示实际通过所述任务；F03有据登记阻塞，后续保存等未执行；评审页密度P2，非全项目通过",
+  "findings": [
+    {
+      "id": "W06-U01",
+      "severity": "P2",
+      "scope": "F03 formula registration",
+      "state": "blocked_pending_delta",
+      "evidence": "pricing-formula-register-result.json"
+    },
+    {
+      "id": "W06-U02",
+      "severity": "P2",
+      "scope": "completed operation density/report access",
+      "state": "pending_frozen07_delta",
+      "evidence": "review-density-result.json"
+    }
+  ],
+  "correction_replay_same_request": true,
+  "correction_ack_loss_after_actual_201": true,
+  "report_operation_terminal_reads": [
+    {
+      "path": "/api/v1/operations/cc223fd1-5181-4c0e-8e56-8208f153dd83",
+      "http": 200,
+      "keys": [
+        "id",
+        "bid_id",
+        "kind",
+        "state",
+        "input_digest",
+        "handler_version",
+        "result_ref"
+      ],
+      "id": "cc223fd1-5181-4c0e-8e56-8208f153dd83",
+      "kind": "report",
+      "state": "succeeded",
+      "status": null,
+      "phase": null,
+      "failure_code": null
+    },
+    {
+      "path": "/api/v1/operations/30da3d83-f84d-45b7-b654-a309255eea5a",
+      "http": 200,
+      "keys": [
+        "id",
+        "bid_id",
+        "kind",
+        "state",
+        "input_digest",
+        "handler_version",
+        "result_ref"
+      ],
+      "id": "30da3d83-f84d-45b7-b654-a309255eea5a",
+      "kind": "report",
+      "state": "succeeded",
+      "status": null,
+      "phase": null,
+      "failure_code": null
+    },
+    {
+      "path": "/api/v1/operations/9cc133fe-7233-4356-b498-fdb21044c1b8",
+      "http": 200,
+      "keys": [
+        "id",
+        "bid_id",
+        "kind",
+        "state",
+        "input_digest",
+        "handler_version",
+        "result_ref"
+      ],
+      "id": "9cc133fe-7233-4356-b498-fdb21044c1b8",
+      "kind": "report",
+      "state": "succeeded",
+      "status": null,
+      "phase": null,
+      "failure_code": null
+    }
+  ],
+  "report_exports": [
+    {
+      "purpose": "评审报告（Word）",
+      "accepted_status": 202,
+      "operation_id": null,
+      "ack_keys": [
+        "resource_id",
+        "resource_kind",
+        "operation",
+        "disposition",
+        "operation_url"
+      ],
+      "filename": "离线模型核心纵向_评审报告_f09bd11b-5d0.docx",
+      "sha256": "728b73d8814afc10e07ecf6f418d42b922923929036bcb4e0454aa44083b88b3",
+      "bytes": 3564
+    },
+    {
+      "purpose": "评审报告（PDF）",
+      "accepted_status": 202,
+      "operation_id": null,
+      "ack_keys": [
+        "resource_id",
+        "resource_kind",
+        "operation",
+        "disposition",
+        "operation_url"
+      ],
+      "filename": "离线模型核心纵向_评审报告_dc94b07d-4a9.pdf",
+      "sha256": "ee02acf2df8785be899dad522895010f30bc82618838b9ef712f0b836449f9cc",
+      "bytes": 83842
+    },
+    {
+      "purpose": "批注审阅稿（PDF）",
+      "accepted_status": 202,
+      "operation_id": null,
+      "ack_keys": [
+        "resource_id",
+        "resource_kind",
+        "operation",
+        "disposition",
+        "operation_url"
+      ],
+      "filename": "离线模型核心纵向_批注审阅稿_d65c29e6-e50.pdf",
+      "sha256": "5e2f8fcdc7aab5e4102d692264b62b39d01c2430f6f045742b19ccd7fdcbb50c",
+      "bytes": 1293
+    }
+  ],
+  "d_hint_actual": true,
+  "F03_unexecuted": [
+    "trial",
+    "save",
+    "refresh_saved_plan",
+    "old_plan_immutable",
+    "close_reopen",
+    "390_keyboard_scenario"
+  ],
+  "extra_synthetic_source_disclosure": "ratio-zero-source-upload-result.json represents extra own test preparation before PM steering, not a passing evidence; no formula registered or scenario computed/saved with it"
+}

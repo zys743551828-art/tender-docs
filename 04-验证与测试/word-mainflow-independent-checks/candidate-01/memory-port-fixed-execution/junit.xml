@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.112" timestamp="2026-10-17T03:14:02.734314+00:00" hostname="597cea30c71f"><testcase classname="" name="test_default_disabled_and_cross_bid_no_original_leak" time="0.985"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">/workspace/tender-workbench/qa/test_word_mainflow_independent01.py:79: in test_default_disabled_and_cross_bid_no_original_leak
+    monkeypatch.setenv('WORD_INTAKE_ENABLED','1');u=upload(w)
+                                                    ^^^^^^^^^
+/workspace/tender-workbench/qa/test_word_mainflow_independent01.py:67: in upload
+    expect(api.put(g['upload_url'],content=raw,headers=w['h']()|{'Content-Type':DOCX if name.endswith('.docx') else PDF}),200)
+/workspace/tender-workbench/qa/test_word_mainflow_independent01.py:20: in expect
+    def expect(r,code):return helper.expect(r,code)
+                              ^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/word-mainflow-independent-checks/candidate-01/qa-helpers/independent_fixture.py:43: in expect
+    return response.json()
+           ^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_models.py:832: in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/decoder.py:356: in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+E   json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)</failure></testcase></testsuite></testsuites>

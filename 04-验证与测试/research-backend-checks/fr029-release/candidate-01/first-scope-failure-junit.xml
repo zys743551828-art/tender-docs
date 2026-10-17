@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="6.484" timestamp="2026-10-17T01:19:44.661001+00:00" hostname="597cea30c71f"><testcase classname="tests.test_model_governance_registry_integration" name="test_registry_actual_bytes_shadow_cas_restore_permissions_and_invalidation" time="6.032"><failure message="AssertionError: {&quot;code&quot;:&quot;ARTIFACT_SCOPE&quot;,&quot;message&quot;:&quot;Server-derived finite scope required&quot;,&quot;details&quot;:{}}&#10;assert 409 == 200&#10; +  where 409 = &lt;Response [409 Conflict]&gt;.status_code">client = (&lt;starlette.testclient.TestClient object at 0x7fc05b2350d0&gt;, UUID('69bc1eb3-f05e-4e55-80d4-642e8ef8eaef'), &lt;function c...dc04329ff59e1aa9e53f2bae25edada9088862d","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7fc05b396060&gt;
+
+    def test_registry_actual_bytes_shadow_cas_restore_permissions_and_invalidation(client, monkeypatch):
+        web, actor, headers, objects = client
+        job, _, items = queued_training(client)
+        completed = purpose_profiles.launch(
+            "train", job.json()["id"], profile=".local/model_release01-model_train.env"
+        )
+        assert completed.returncode == 0, completed.stdout
+        preview = web.get(f"/api/v1/model-registry/training-jobs/{job.json()['id']}/model-preview")
+&gt;       assert preview.status_code == 200, preview.text
+E       AssertionError: {"code":"ARTIFACT_SCOPE","message":"Server-derived finite scope required","details":{}}
+E       assert 409 == 200
+E        +  where 409 = &lt;Response [409 Conflict]&gt;.status_code
+
+tests/test_model_governance_registry_integration.py:61: AssertionError</failure></testcase></testsuite></testsuites>

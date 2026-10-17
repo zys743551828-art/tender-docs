@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="11.355" timestamp="2026-10-17T03:14:31.114381+00:00" hostname="597cea30c71f"><testcase classname="" name="test_actual_docker_pdf_adoption_real_parse_and_byte_download[early]" time="10.546"><failure message="KeyError: 'url'">/workspace/tender-workbench/qa/test_word_mainflow_independent01.py:110: in test_actual_docker_pdf_adoption_real_parse_and_byte_download
+    grant=expect(w['api'].get(f'/api/v1/artifacts/{identity}/download',headers=w['h']()),200);download=w['api'].get(grant['url'],headers=w['h']());expect_status=download.status_code;assert expect_status==200 and download.content==expected
+                                                                                                                    ^^^^^^^^^^^^
+E   KeyError: 'url'</failure></testcase></testsuite></testsuites>

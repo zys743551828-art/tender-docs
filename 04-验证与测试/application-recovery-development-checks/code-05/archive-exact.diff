@@ -1,0 +1,31 @@
+--- code04/archive.py
++++ code05/archive.py
+@@ -10,7 +10,7 @@
+ 
+ import psycopg
+ 
+-from deploy.application_recovery import binding
++from deploy.application_recovery import binding, definition_equivalence
+ from deploy.application_recovery import cluster as clusters
+ from deploy.application_recovery import security as s
+ from deploy.backups import generic
+@@ -124,7 +124,9 @@
+         snapshot_id = exported[0]
+         catalog = generic.catalog(c)
+         definitions = detail(c, cluster)
+-        if expected_definitions is None or definitions != expected_definitions:
++        if expected_definitions is None or not definition_equivalence.equivalent(
++            expected_definitions, definitions
++        ):
+             raise s.RecoveryError("SOURCE_INITIALIZATION_DEFINITIONS_CHANGED")
+         tables = generic.inventory(c, catalog)
+         queues = {
+@@ -287,7 +289,7 @@
+         if (
+             generic.catalog(c) != manifest["catalog"]
+             or generic.inventory(c) != manifest["tables"]
+-            or detail(c, cluster) != manifest["definitions"]
++            or not definition_equivalence.equivalent(manifest["definitions"], detail(c, cluster))
+         ):
+             raise s.RecoveryError("RESTORED_CATALOG_DATA_ACL_OR_DEFINITION_MISMATCH")
+     port = object_port(values)

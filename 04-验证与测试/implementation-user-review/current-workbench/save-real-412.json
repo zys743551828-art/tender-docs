@@ -1,0 +1,299 @@
+{
+  "started_at": "2026-10-16T18:26:25.430532+00:00",
+  "project_id": "557bfffa-b99d-4812-80f9-58be782124c8",
+  "method": "real_two_context_save_conflict_with_delayed_local_request",
+  "remote_saved_at": "2026-10-16T18:26:29.911862+00:00",
+  "conflict_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n市\n市政投标工作区\n内部协作空间\n\n投标工作\n\n投标项目\n项目档案\n评分研究\n资料在私有工作区保存\n外\n外部联调测试员1\n已登录成员\n退出\n投标工作 / 投标项目\n资料工作区\n返回项目列表\n项目工作区\n用户早期走查-独立人工章节-01\n准备资料\n资料修订 2\n上传新版资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n实交与成绩\n处理记录\n项目设置\n查证资料\n按需编制正文\n\n已有稿件可以继续走PDF资料评审；在这里人工编写章节，生成固定版本后再核对。无需先配置模板或企业事实库。\n\n可选工作面\n打开已有正文草稿\n选择正文草稿\n用户人工草稿-道路保通-01 · 草稿修订 5\n新正文草稿名称\n创建正文草稿\n\n本批支持文字、标题和列表，内置A4版式；图片、表格及外部Word无损导入尚未开放，未接收的对象不会被称为已保真。\n\n章节目录\n\n草稿修订 5\n\n1\n交通导改与保通\n章节修订 5 · 关联 0 条要求\n新增章节名称\n新增章节\n保存未完成，本地内容保留\n重试保存\n本次操作未完成\n\n对象已更新，请核对最新内容\n\nREVISION_CONFLICT · 排查编号 37af5823-c818-4dd3-984a-958dc88e4200\n查看具体字段和影响范围\n服务器章节或依据已变化，请人工合并\n\n本地稿仍可编辑；下面只读显示当前服务器稿。不会自动最后写入覆盖。\n\n本地待保存\n本章为用户走查合成内容。\n施工期间保留沿街出入口通行，并设置临时提示。\n分阶段围挡与夜间照明由现场确认。\n用户走查：失响应保存后仍保留这段文字。\n用户走查本地B：待合并内容。\n服务器 · 章节修订 6／草稿修订 6\n本章为用户走查合成内容。\n施工期间保留沿街出入口通行，并设置临时提示。\n分阶段围挡与夜间照明由现场确认。\n用户走查：失响应保存后仍保留这段文字。\n用户走查远端A：另一窗口已保存内容。\n保存已合并的本地稿\n放弃本地待保存，使用服务器稿\n章节名称\n正文段落\n标题 1\n标题 2\n标题 3\n标题 4\n标题 5\n标题 6\n粗体\n斜体\n无序列表\n有序列表\n减少缩进\n增加缩进\n撤销文字修改\n重做文字修改\n\n本章为用户走查合成内容。\n\n施工期间保留沿街出入口通行，并设置临时提示。\n\n分阶段围挡与夜间照明由现场确认。\n\n用户走查：失响应保存后仍保留这段文字。\n\n用户走查本地B：待合并内容。\n\n支持段落、标题、列表、粗体和斜体。粘贴按纯文字接收；图片和表格请保留在PDF原件中。编辑器内容需保存确认，再生成正式文件。\n\n本章要求与来源 · 0 条要求／1 处来源\n手动段落修改预览\n查看章节历史修订\n\n已定位当前段落，可在修改预览中提出替换。 关联 0 条要求、1 条来源；文字保存不代表满足要求。\n\n生成固定版本\n\n先等待所有章节保存确认，再冻结该草稿修订。后续编辑不会改变本次输出。\n\n内置A4版式\nWord\nPDF\n保存确认后生成文件\n\n本次仅生成文件，不自动切换受检正文或开始评审。Word与PDF独立显示结果，生成成功不表示内容通过。",
+  "local_text_retained": true,
+  "requests": [
+    {
+      "at": "2026-10-16T18:26:27.313821+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.314686+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.411120+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.427746+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.432591+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.434582+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.512955+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.513386+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.522322+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.528705+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/a9ead50a-4d10-4132-a618-74ec1734a728/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.542421+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.695107+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.702486+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.753645+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.754551+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.955363+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.973433+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.975388+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:27.975888+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.030436+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.046381+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.759229+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.765732+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.897225+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.898590+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.899436+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.900246+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.974842+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:28.990585+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.001947+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/a9ead50a-4d10-4132-a618-74ec1734a728/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.006484+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.008294+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.162644+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.165414+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.212819+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.228309+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.373958+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.387844+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.389167+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.389838+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.408378+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.412089+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.875827+00:00",
+      "method": "PATCH",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.901264+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.941598+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.947251+00:00",
+      "method": "PATCH",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 412
+    },
+    {
+      "at": "2026-10-16T18:26:29.976907+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:26:29.977984+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    }
+  ],
+  "ended_at": "2026-10-16T18:26:30.162968+00:00"
+}

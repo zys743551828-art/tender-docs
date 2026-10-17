@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="3.021" timestamp="2026-10-17T02:27:48.861158+00:00" hostname="597cea30c71f"><testcase classname="" name="test_archive_offline_fact_and_identity_correction_are_honest_exceptions" time="1.074"><failure message="KeyError: 'gate_snapshot'">/workspace/tender-workbench/qa/test_backend07_independent.py:228: in test_archive_offline_fact_and_identity_correction_are_honest_exceptions
+    assert value['kind']=='offline_fact' and value['gate_snapshot'] is None and value['checks_label']=='未经过系统完整检查' and value['evidence']['platform_submission_verified'] is False
+                                             ^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'gate_snapshot'</failure></testcase></testsuite></testsuites>

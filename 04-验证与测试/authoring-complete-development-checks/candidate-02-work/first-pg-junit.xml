@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="32.050" timestamp="2026-10-17T03:27:41.280488+00:00" hostname="597cea30c71f"><testcase classname="tests.test_authoring_generated_integration" name="test_actual_registered_export_engine_closes_db_then_publishes_verified_PAGE" time="13.352" /><testcase classname="tests.test_authoring_generated_integration" name="test_real_http_cancel_discards_computed_late_PAGE_without_publication" time="8.819" /><testcase classname="tests.test_authoring_generated_integration" name="test_old_verified_PAGE_result_stays_history_after_editor_moves" time="9.432"><failure message="packages.domain.runtime.DomainError: ('BUILD_PDF_STORAGE_UNAVAILABLE', '生成PDF暂时无法读取；产物已保留', 503)">pdf = {'byte_size': 16163, 'digest': 'dd4eb9d6fa225967147a81dd69a2c77a91aa8c72df681197ccbf0f2c07a80278', 'file_id': UUID('0d798ee5-4065-4e9b-8844-27928963833b'), 'id': UUID('47d3f6f3-6592-456f-a0c5-a43d19032b8b'), ...}
+
+    def _verify_pdf(pdf):
+        try:
+&gt;           body = storage.client().get_object(Bucket=storage.bucket(), Key=pdf["object_key"])["Body"]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+runtime/packages/domain/build_followups.py:201: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;packages.domain.providers.oss.OssClient object at 0x7f02f2abf920&gt;
+
+    def get_object(self, *, Bucket, Key):
+        key = self._key(Bucket, Key)
+        try:
+            native = self.native.get_object(key)
+            return {**self._meta(native), "Body": SafeBody(native)}
+        except oss2.exceptions.OssError as exc:
+&gt;           raise _error(exc) from None
+E           botocore.exceptions.ClientError: An error occurred (NoSuchKey) when calling the Object operation: 对象不存在
+
+runtime/packages/domain/providers/oss.py:150: ClientError
+
+The above exception was the direct cause of the following exception:
+
+environment = {'actor': UUID('0d88e321-26d1-4081-8be6-964426eb594f'), 'bid': UUID('560fbcf5-1105-46b8-97bf-c222eca044d5'), 'draft': ...57E326E3F01A88DF8288D80D3F383&gt; ]\n/DocChecksum /BF059B99456ADFCD4A9412FF5E5DC9DD\n&gt;&gt;\nstartxref\n15279\n%%EOF\n'}, ...}
+
+    def test_old_verified_PAGE_result_stays_history_after_editor_moves(environment):
+        from apps.worker import engine
+        from packages.domain.build_followups import tick
+    
+        env = environment
+        build, message, _ = queue_build(env, "review")
+        lease = engine.acquire(message)
+        computed = engine.run_compute(message, lease)
+        assert computed["render_coverage"] == "complete"
+        content = env["section"]["content"]
+        content["content"][0]["content"] = [{"type": "text", "text": "后续编辑不能被旧生成抢头"}]
+        with connection() as c:
+            save_draft(
+                c,
+                env["bid"],
+                env["draft"],
+                env["actor"],
+                {
+                    "base_draft_revision": 2,
+                    "changes": [
+                        {
+                            "section_id": str(env["section"]["section_id"]),
+                            "base_section_revision": 1,
+                            "schema_digest": env["section"]["schema_digest"],
+                            "content": content,
+                        }
+                    ],
+                },
+                etag("draft", env["draft"], 2),
+            )
+        assert engine.finish(message, lease, computed)
+&gt;       outcome = tick(build)
+                  ^^^^^^^^^^^
+
+runtime/tests/test_authoring_generated_integration.py:246: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+runtime/packages/domain/build_followups.py:227: in tick
+    _verify_pdf(pdf)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+pdf = {'byte_size': 16163, 'digest': 'dd4eb9d6fa225967147a81dd69a2c77a91aa8c72df681197ccbf0f2c07a80278', 'file_id': UUID('0d798ee5-4065-4e9b-8844-27928963833b'), 'id': UUID('47d3f6f3-6592-456f-a0c5-a43d19032b8b'), ...}
+
+    def _verify_pdf(pdf):
+        try:
+            body = storage.client().get_object(Bucket=storage.bucket(), Key=pdf["object_key"])["Body"]
+            try:
+                raw = body.read()
+            finally:
+                body.close()
+        except (BotoCoreError, ClientError) as error:
+&gt;           raise DomainError(
+                "BUILD_PDF_STORAGE_UNAVAILABLE", "生成PDF暂时无法读取；产物已保留", 503, retryable=True
+            ) from error
+E           packages.domain.runtime.DomainError: ('BUILD_PDF_STORAGE_UNAVAILABLE', '生成PDF暂时无法读取；产物已保留', 503)
+
+runtime/packages/domain/build_followups.py:207: DomainError</failure></testcase></testsuite></testsuites>

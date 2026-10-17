@@ -1,0 +1,70 @@
+{
+  "scope": "exact original architect PDFs, real PDFium, no Docker/DB/network/model",
+  "module_sha256": "48defb45a20258c0caf0107a13f049e0a22933008edaf1c5a8c7d4556eb51793",
+  "results": {
+    "baseline": {
+      "input_path": "/workspace/tender-docs/04-验证与测试/authoring-rich-port-architect-review/static-01/image-digit-baseline.pdf",
+      "input_sha256": "b672a45d843bf05886f75f4cad6416313ddd05e8210c02cf1a4016576ddd69b2",
+      "result": {
+        "protocol": "authoring-PDF-raster-correspondence/1",
+        "coverage": "complete",
+        "gaps": [],
+        "expected_drawings": 1,
+        "matched_drawings": 1,
+        "visibility_render_pixels": 1003664,
+        "images": [
+          {
+            "physical_page": 1,
+            "matched": true,
+            "node_id": "original-architect-counterexample",
+            "asset_version_id": "0f4e444f-8310-45a6-8d27-71ad74fa3045",
+            "decoded_pixel_digest": "191191da54423efa6674a93ed1a90612e3f3563c46096b2919a27ec2d79ad511",
+            "bbox": [
+              72.0,
+              600.0,
+              192.0,
+              690.0
+            ],
+            "page_pixel_mean_error": 0.0,
+            "page_pixel_maximum_channel_error": 0,
+            "gaps": []
+          }
+        ]
+      }
+    },
+    "covered": {
+      "input_path": "/workspace/tender-docs/04-验证与测试/authoring-rich-port-architect-review/static-01/image-digit-covered.pdf",
+      "input_sha256": "ce9dd28abb846daa5f303682d6e372e4d24f70f0b48191ff3f131f236ca6b70d",
+      "result": {
+        "protocol": "authoring-PDF-raster-correspondence/1",
+        "coverage": "partial",
+        "gaps": [
+          "AUTHORING_IMAGE_VISIBILITY_UNVERIFIED"
+        ],
+        "expected_drawings": 1,
+        "matched_drawings": 1,
+        "visibility_render_pixels": 1003664,
+        "images": [
+          {
+            "physical_page": 1,
+            "matched": true,
+            "node_id": "original-architect-counterexample",
+            "asset_version_id": "0f4e444f-8310-45a6-8d27-71ad74fa3045",
+            "decoded_pixel_digest": "191191da54423efa6674a93ed1a90612e3f3563c46096b2919a27ec2d79ad511",
+            "bbox": [
+              72.0,
+              600.0,
+              192.0,
+              690.0
+            ],
+            "page_pixel_mean_error": 0.4121296296296297,
+            "page_pixel_maximum_channel_error": 176,
+            "gaps": [
+              "AUTHORING_IMAGE_VISIBILITY_UNVERIFIED"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

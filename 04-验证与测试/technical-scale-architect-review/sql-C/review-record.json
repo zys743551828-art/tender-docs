@@ -1,0 +1,14 @@
+{
+  "scope": "SQL C delta only against static-reviewed B",
+  "input": "/workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-C/technical-scale-authority.sql",
+  "sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad",
+  "prior_sha256": "3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674",
+  "declaration": "TS01 static closure fixed; allow only separate fresh initialization, actual PG/API verification pending",
+  "executed": {
+    "SQL": false,
+    "DDL": false,
+    "DB": false,
+    "external_calls": 0
+  },
+  "assumptions": "Each distinct ancestor document must have its OWN confirmed supported historical claims; provenance edge alone does not prove derived PDF byte version existed/known at historical submission."
+}

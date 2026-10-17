@@ -1,0 +1,61 @@
+{
+  "review_scope": "独立架构审查，主设计和历史证据未改动",
+  "recorded_at": "2026-10-16T13:04:01.848186+00:00",
+  "finding_counts": {
+    "P1": 2,
+    "P2": 1
+  },
+  "conclusion": "带条件可开工",
+  "source_hashes": {
+    "02-业务与产品/AI投标工作台PRD.md": "897b39ee97e9678f0582b7b7ed2313921703b892c568bc213389b6c56200ed78",
+    "02-业务与产品/GitHub实现功能保留对照.md": "a3ba5207818c6c942251d245ddc2181491d4a2521beb939008d0f6ee34d93be4",
+    "04-验证与测试/development-readiness-checks/README.md": "481dc932c4c3cca24b62807618229d006836344f0914b321a00dae9898c15e7e",
+    "04-验证与测试/development-readiness-checks/check_retained_design.py": "6a6c950ad8b516089e8a108ae87501c93ede57cc6c1448f2fcdf2effe00465e1",
+    "04-验证与测试/development-readiness-checks/probe_retained_sql.py": "2ccddde092d001e0d244040a70f56390aded165e41b1f5c96504c6f767134ad1",
+    "04-验证与测试/development-readiness-checks/verify_readiness.py": "d16b1cfe9957069d496674231d703e6f777d362ddc0ca97458c9e44037c4f9b1",
+    "04-验证与测试/feature-preservation-checks/README.md": "f9942ef39f25399ea3ecfb1db0872b263f58776788ef9b5ea76612467ecfc99f",
+    "04-验证与测试/feature-preservation-checks/retention-matrix.json": "4e3be2b3bd131df41e28a279f8e3d2e2fe25fd3d8e5042d804dde942ee31ea48",
+    "04-验证与测试/prd-checks/spec-followups.json": "06c3dc2855c3cbcec6f9f209df690d3ab9dd0e534a05fad59b6a18a0b2ee1418",
+    "05-技术与设计/AI投标工作台详细技术设计.md": "74779a1f26c93c204c23cf5f6b1f25ef0f7c05be1b7f48a2c4760ba854cc7c0d",
+    "05-技术与设计/detailed-design/RAG与评分实现规约.md": "f249403ac9498dfb136eae6c7fe37719982eac58ff1f6147e4e2dcd5718c5faf",
+    "05-技术与设计/detailed-design/README.md": "95d350a3c0814f0ebf905e94b4029002bc7203c85536dc96387ea0c56a238dce",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/domain.sql": "495afc7150ddab97baddeff4d35f55dabaa66e8381b3fa6b063f2cdc6aaeb254",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/http-examples.json": "ef1a7f01225fbde0f7eafec8be7b420fd98358bb665f68b456202d857fff7dc2",
+    "05-技术与设计/detailed-design/openapi.json": "a430765630606efaa6f078b44a5d024c618475321f97a1073b508780e67fd157",
+    "05-技术与设计/detailed-design/protocol.schema.json": "351bec989d34d622f01d0302eb20fd73c1e51791942f535dc037c5ea061f4c93",
+    "05-技术与设计/detailed-design/retrieval-policy.json": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+    "05-技术与设计/detailed-design/retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "05-技术与设计/detailed-design/roles.sql": "5ea6d9ab6bd90e180732364fea2e95cc3a5e75a9fbc8b61da8cc67cea5fb1ffd",
+    "05-技术与设计/detailed-design/worker-functions.sql": "0097f57f4ba891368a9e8465f03aa65757421f2e552b3c1b13c2de9535a10d21",
+    "05-技术与设计/detailed-design/保留功能实现规约.md": "5caf65913cfd37ed165fadab4397e6820b779be2fd19e33c84c069b2e40f8c84",
+    "05-技术与设计/detailed-design/接口与任务实现规约.md": "5f7e759f9d628105f4cd88ec04a24d12ead8f1dd07b08f8a801502744f37376b",
+    "05-技术与设计/detailed-design/数据与事务实现规约.md": "a4918a449a7fe190d1e26b33b622e4f096c2eeb5c0776db9332ee4fdaa118283",
+    "05-技术与设计/detailed-design/部署与交付手册.md": "7b97fcd3e72d6908ee3833c0ebeac95188c7a9e1127ba3957cc072e9ca2b91cd",
+    "README.md": "e05709d400f80b7b523036e112fea2591456284caab736dd25711b3f4583cb43"
+  },
+  "inherited_result_hashes": {
+    "04-验证与测试/development-readiness-checks/contract-result.json": "cc2f5b6424bd85dae7f8d9bd73ed669ea7ca4ec6c4130ef8b43b56ed5acc3d93",
+    "04-验证与测试/development-readiness-checks/retained-contract-result.json": "8097d392b282e6ab4d1fcd36fd615984edcf848d781c6cfe58691a021318d1d2",
+    "04-验证与测试/development-readiness-checks/database-result.json": "32f8136d840c6614e4d9921f6a557acfd99861b5824ff78cc42de2f587182e9c",
+    "04-验证与测试/development-readiness-checks/retained-database-result.json": "fd8e04d7f861a81c9dc1c343cdef3f2d5df9eed5582cb7bff02fe2c93e341c94",
+    "04-验证与测试/development-readiness-checks/product-result.json": "6e9fd00ac575c26ebc0f722a9970d4f8bae4cbc48d09a00c036408d24757300c"
+  },
+  "report_sha256": "2444d582b16956cc6808c19221f46ab14f2ee975e8b079574e2c8d355e7f14ac",
+  "artifacts": {
+    "probe_architect.py": "e90ff828c237d9658275b00f1ecbcc53349c0703a0c0e508b7dd93c57b4e6ba3",
+    "probe_contract_paths.py": "3b1971ed9ee435c7ba4458e8b525a3f4ff3ee073fe420c0b406a605f60456bb2",
+    "role-counterexamples.json": "fd75e52e2f0829162d5f59215edf6f63550caf2548dc37b168917dcfd7949f10",
+    "contract-counterexamples.json": "0e8b69f0665a3a52ca2d64b7bfedfbe8f6e208a05e889a2bdba01f52f9412d6d",
+    "finalize_review.py": "f3ab1e29368e6658bde5f436e5fffd709edb75d005e1cf89cd90cf3c2bfb896d"
+  },
+  "checks": {
+    "source_inputs_unchanged": true,
+    "local_links_valid": true,
+    "reproduced_role_counterexamples": 5,
+    "synthetic_identity_counterexample": true,
+    "conflict_recovery_contract_gap": true,
+    "product_software_end_to_end_executed": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "static function readset, not a DB execution",
+  "function": "assistant_check_target",
+  "confirms_fact_head_and_decision_evidence_id_set": true,
+  "reads_live_source_heads": false,
+  "compares_confirmation_basis": false,
+  "countermodel": "Change only evidence-source current state published\u2192withdrawn; keep selected fact/head/decision/value/evidence IDs unchanged; this function has no read dependency on changed source state.",
+  "requires_caller_or_new_authority_bridge": true
+}

@@ -1,0 +1,16 @@
+{
+  "draft": "E",
+  "sha256": "a53bc2cbce417d121dc3a32c36266ca800b7c2035089410d90c46c4835e3b480",
+  "prior": "D cc81543052f53f5fbab28e0fc90dd393ae012f8ea83d4e37bf81d159ae569887",
+  "changes": [
+    "Root source_closure exact full ancestor pairs compared to server manifest source_refs-derived current closure, using typed UUID/timestamp/revision/status/digest equality and duplicate rejection",
+    "API reuses ordinary review_data.check_frozen_sources under leading bid/graph locks before object PUT; eligible head revision/interval change cannot be recaptured into old root",
+    "Additional real non-owner ASGI regression queued: published root revision increase/valid_until extension leaves 0PUT/0scoreinput from old review"
+  ],
+  "status": "static_review_requested_not_executed",
+  "pure_tests": 43,
+  "fresh_tests": 0,
+  "paid_calls": 0,
+  "inherited_D": "actual complete rule-set coverage required in DB and API",
+  "finite_guard_scope": "defensive; core CHECK already disallows legal nonpositive/nonfinite maxima"
+}

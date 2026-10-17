@@ -1,0 +1,56 @@
+{
+  "status": "passed_tested_backend03_delta_not_full_A1_A2",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/candidate-03.json",
+    "sha256": "100234b0775f63f107123a915bbee21a52505a16feed0571e1e1df6b91fadb7f"
+  },
+  "input_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/input-manifest.json",
+    "sha256": "5da70c21b470b0a15f4a05bd55df4d781bd47f1dbaa4974bad274b6b3e35eaed"
+  },
+  "all59_own_sources_verified": true,
+  "observed_runtime_files": 154,
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/reuse-after-clone-regression/result.json",
+      "sha256": "b39b56c2797e843d2f651b62eee95709dde86013bdc61a27405cc6a8d216adcc"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/reuse-provenance-and-changed-source/result.json",
+      "sha256": "4a6171e921072aba3515241020cc97b65fe9f015bfe76f56cdc0ac1488e85563"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/human-api-serial-regression/result.json",
+      "sha256": "12dc13fcfd19772fb5ad175cf6ec584c11c166f9a871aa5522790939285f2528"
+    }
+  ],
+  "retained_backend02_counterexample": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-02/reuse-after-clone-counterexample/result.json",
+    "sha256": "c9491f3816b674eb6a8d0ee9889f327979b872fc8f12a124025ea65676f598d8"
+  },
+  "retained_incomplete_parallel_human_probe": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-03/human-api-regression/result.json",
+    "sha256": "3e157036c64fdeaebc822ba694f8033736ba240f90663ab309037b4be9a49dd1"
+  },
+  "human_probe_note": "Parallel run stopped during parser setup before new material was written; exact HTTP status was not captured in that historical run and cause is unclassified. Serial rerun recorded all parser statuses200 and passed22. No application change was made between these executions.",
+  "first_counterexample_probe_label_note": "First positive regression retained old generic finding label from counterexample harness; its actual assertion/result shows fixed. New provenance run uses neutral scenario label. Historical bytes are not rewritten.",
+  "verified": [
+    "Same unchanged heads and source after body-only rule cloning reuse same review, one prepare total and no extra model call",
+    "Derived immutable audit matches actual same-bid extraction effect/result SHA, source fingerprint and method digest",
+    "Changed nonbody source after cloning still queues fresh extraction; model not invoked for that last negative check",
+    "Manual rules confirmation/deferred, bulk rejection atomicity, add-and-confirm failure/success CAS, human omission retention through real reextraction, facts confirmation/carry/withdraw/history and original proof complete freeze all pass22",
+    "Stale fact proof blocks freeze before new core; corrected cache reduces this fixture from6 to5offline calls"
+  ],
+  "no_fee_protocol_carry": "model_calls, ordinary engine and DeepSeek sources identical to tested02; prior17restrictedPG ledger and unknown nonce results retain their original binding, not relabeled rerun03",
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "scope": "RestrictedPG/ASGI, actual8812parser03, direct own-bid tick/outbox engine, explicit MockTransport and in-memory artifacts; not real Kafka or paid quality",
+  "not_yet_accepted": [
+    "new source-effectivity three-action business cases",
+    "controlled build whole Kafka/browser vertical",
+    "native multipart application whole vertical",
+    "knowledge/identity/research separate owner gates",
+    "formal scoring/real business document accuracy",
+    "global gate/submission/report and complete product"
+  ]
+}

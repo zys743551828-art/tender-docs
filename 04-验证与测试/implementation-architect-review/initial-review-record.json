@@ -1,0 +1,105 @@
+{
+  "conclusion": "有阻塞：恢复协议需整改，候选01非最终放行",
+  "candidate_sha256": "3c628c7f733cc9e197fdfa75301f03a3905701dbb7b51d04727f6ca3401e53e0",
+  "source_snapshot": [
+    {
+      "path": "apps/api/README.md",
+      "captured": true
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/auth.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/main.py",
+      "captured": true
+    },
+    {
+      "path": "apps/api/views.py",
+      "captured": true
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "captured": true
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "captured": true
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "captured": true
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "captured": true
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "captured": true
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "captured": true
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "captured": true
+    },
+    {
+      "path": "pyproject.toml",
+      "captured": true
+    },
+    {
+      "path": "requirements.lock.txt",
+      "captured": true
+    },
+    {
+      "path": "tests/test_domain.py",
+      "captured": true
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "captured": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "IMPL-A01",
+      "priority": "P1"
+    },
+    {
+      "id": "IMPL-A02",
+      "priority": "P2"
+    },
+    {
+      "id": "IMPL-A03",
+      "priority": "P2"
+    }
+  ],
+  "evidence": {
+    "初审.md": "7e32579bc8b789714af05db7527326c8fc8e8f0ab402bd0536daecea58dac848",
+    "probe_reconcile.py": "9a898de29b78e99521beff44ed1da5fab35ef8713017b3d101b7afec20b60d34",
+    "reconcile-counterexamples.json": "80cfedfafbaeff5c983fd6d71333fdbc2479409115746409aa8ba6ed18b03846",
+    "probe_reconcile_frozen01.py": "d29ce7a5deef6e138a17d6aa82c917473ba411b94ae52dae9f8affa1dda8f54f",
+    "frozen01-recovery-counterexamples.json": "07109d72e8dc7c679a6fefc516bb8416f1bb19cea59f5fd767a94250027cbb5e"
+  },
+  "source_modified": false,
+  "shared_environments_used": false
+}

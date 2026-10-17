@@ -1,0 +1,114 @@
+{
+  "conclusion": "本批T0/PDF切片源码架构review通过",
+  "architecture_blockers": 0,
+  "candidate_sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+  "sources": [
+    {
+      "path": "apps/api/README.md",
+      "sha256": "cd5d092ca1b3e1eab24622050e8a65cfa9bf6b00061caaebe7e5cacf44bc2971"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "53edc0b60ad9c45ec156257e05e8c1bf5028f55ae1553a3d95d079fa388c2490"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "8eb2ea5f2254d5a7809763e86ca56094d9a4ee1d72b9ae8af1dee179296d41be"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "5ee6e4f615f1aaeb83710e8057fbe72a4c2e3e0ccc31d5adbf73dad047392025"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "522c52ca4f19ea4fab612833c3a01ac3cd24f90b1f3f5b2153757c12c4ba0322"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "30e3d70f5f87e5a8f7d47a9258d62cc3c9c69962bd0d8e9d1d0999bd3635bbeb"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "30ab9a451b5e8ec2ebf3c8961675715398d5d3a34e30981766ef2e3b825c3bd0"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "03819df24d185ac4d446fcfa254047720a2d9063129a62ed4b11272b3b1859ed"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+    },
+    {
+      "path": "tests/test_cancel_integration.py",
+      "sha256": "431619df6c2147ee35993b66f3b3e4bf11c9442dce5eb05ea1695d5d93ab5916"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "81ea4155ed0463359809353d0ce3f20d6f1f556ccf9c3ef6f7ab3239e6bcd448"
+    },
+    {
+      "path": "tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187"
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "sha256": "6827ff28f692b48a06f20aabbbbb9cd6c7e57dc661d7931aa2b43addd1f984ac"
+    }
+  ],
+  "actual_openapi_sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+  "closed_findings": [
+    "IMPL-A01/R01",
+    "IMPL-A02/R02",
+    "IMPL-A03/R03",
+    "取消If-Match/ETag"
+  ],
+  "evidence": {
+    "复审.md": "4f7d3635d6fa723b036bf016da0b53cfb1ee4a5ca9badfdef192941978c2191b",
+    "backend02-recovery-regression.json": "c9060e25a4fbd21408c8e4ecb6ff5b2dd750748d27767406e1321f246fd324ec",
+    "probe_backend02_recovery.py": "d9d3e82731cdf3ced0db669f0471f171af3ee67a0e90e72e594fa77815cd009c",
+    "backend03-cancel-regression.json": "4ef7849ca9bb63b51d4269fc79e10106a02c679325ee34bb63226f29a1bb67cd",
+    "probe_backend03_cancel.py": "3a1d8b2c828843ff00085da83958fcc269b29a570cb69549d59b487a53056864",
+    "infrastructure-review.json": "0114b2a31fc05a82839c0389d2a3547764c70a28f5aa860ebfc006731b40edd6",
+    "initial-review-record.json": "0b4f760242005624efb11b622c565036c168d2c4ad144808000d4cca33166bbb",
+    "backend02-recovery-review.json": "4959cf0ffdb0f60ece5bfa178962c4656b1e9af0be9093912f2e6bd5b1e9908e"
+  },
+  "independent_qa_and_product_user_gates_required": true,
+  "real_kafka_executed_by_architect": false,
+  "browser_executed_by_architect": false,
+  "source_modified": false,
+  "shared_dev_or_qa_modified": false,
+  "full_A1_RAG_formal_score_or_production_accepted": false
+}

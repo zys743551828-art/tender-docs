@@ -1,0 +1,17 @@
+{
+  "candidate_sha256": "f4306991dafab46f6e1c9364132c0617ecfaeda16692bf2f02828df6da76e865",
+  "primary_files": 12,
+  "reference_files": 47,
+  "actual_nonowner_PG_ASGI_and_isolated_CPU": true,
+  "profile_location_only_substituted": "delivery_protocols01 for API and CPU train/evaluate",
+  "object_port": "explicit in-memory",
+  "model_port": "explicit httpx.MockTransport, not paid provider",
+  "loaded_source": {
+    "registry": "/workspace/tender-docs/04-验证与测试/fr029-release-architect-review/application01-runtime/packages/model_governance/registry.py",
+    "routes": "/workspace/tender-docs/04-验证与测试/fr029-release-architect-review/application01-runtime/apps/api/model_registry_routes.py",
+    "purpose_profiles": "/workspace/tender-docs/04-验证与测试/fr029-release-architect-review/application01-runtime/packages/model_governance/purpose_profiles.py"
+  },
+  "paid_calls": 0,
+  "native_OSS": 0,
+  "consumers_started": false
+}

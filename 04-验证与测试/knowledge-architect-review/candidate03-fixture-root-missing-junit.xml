@@ -1,0 +1,2211 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="21" skipped="0" tests="50" time="12.286" timestamp="2026-10-16T19:08:31.599538+00:00" hostname="597cea30c71f"><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_closed_actual_schema_and_semantic_validation" time="0.001" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[bidder_ids-value0]" time="0.001" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[regions-value1]" time="0.000" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[engineering_types-value2]" time="0.000" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[purposes-value3]" time="0.000" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[valid_from-2026-01-01T00:00:00]" time="0.000" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_unknown_or_broad_scope_cannot_become_implicit_all[valid_until-None]" time="0.000" /><testcase classname="tender-docs.04-验证与测试.knowledge-development-checks.candidate03-inputs.tests.test_knowledge" name="test_schema_rejects_extra_scope_and_source_url_instead_of_identity" time="0.001" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_candidate_unknown_metadata_is_never_published_and_draft_is_preserved" time="0.099" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_publish_subject_scope_reference_withdraw_and_old_originals_restore" time="0.321" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_version_cas_keeps_published_old_until_explicit_new_publication" time="0.380" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_parent_withdrawal_invalidates_published_knowledge_and_old_quote_remains" time="0.190" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_expiry_unknown_and_missing_conditions_never_become_applicable" time="0.304" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_foreign_company_fact_and_forged_positions_do_not_create_versions" time="0.164" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_published_knowledge_expires_at_the_boundary_without_rewriting_history" time="0.207" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_actual_login_http_cas_replay_withdraw_and_reference_history" time="0.428"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">+ Exception Group Traceback (most recent call last):
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 177, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 344, in from_call
+    |     result: TResult | None = func()
+    |                              ^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 246, in &lt;lambda&gt;
+    |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    |     yield
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    |     item.runtest()
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1671, in runtest
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    |     result = testfunction(**testargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 451, in test_actual_login_http_cas_replay_withdraw_and_reference_history
+    |     signed = client.post(
+    |              ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    |     return super().post(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    |     return self.request(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    |     return super().request(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    |     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    |     response = self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    |     response = self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    |     response = self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    |     response = transport.handle_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    |     portal.call(self.app, scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    |     return cast(T_Retval, self.start_task_soon(func, *args).result())
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    |     return self.__get_result()
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    |     raise self._exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    |     retval = await retval_or_awaitable
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    |     raise app_exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    |     return await future
+    |            ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    |     result = context.run(func, *args)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    |     validate("LoginRequest", body)
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    |     schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    |     def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+    |                                                                          ^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    |     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    |     return io.open(self, mode, buffering, encoding, errors, newline)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 451, in test_actual_login_http_cas_replay_withdraw_and_reference_history
+    signed = client.post(
+             ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    return super().post(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    return self.request(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    return super().request(
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    portal.call(self.app, scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    raise app_exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    validate("LoginRequest", body)
+  File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+During handling of the above exception, another exception occurred:
+
+environment = {'actor': UUID('c3d7d0c8-81d5-428f-a17b-7d7665618a40'), 'bidder': UUID('e23cd06a-2193-4baf-ab84-33c38594a977'), 'blob_...ies': ['method', 'chapter_reference'], 'content': '以原件技术措施作为参考，具体工期和数量需按当前项目另行核实。', 'scope': '浙江市政道路条件下的参考', ...}, ...}
+
+    def test_actual_login_http_cas_replay_withdraw_and_reference_history(environment):
+        from fastapi.testclient import TestClient
+    
+        from apps.api.auth import password_hash
+        from apps.api.knowledge_routes import router
+        from apps.api.main import app
+        from packages.domain.runtime import required
+        from packages.knowledge.contracts import validate_actual
+    
+        env = environment
+        login, password = "knowledge-" + uuid4().hex, uuid4().hex
+        with connection() as c:
+            c.execute(
+                "INSERT INTO credentials(member_id,login_name,password_hash) VALUES(%s,%s,%s)",
+                (env["actor"], login, password_hash(password)),
+            )
+        if not any(getattr(route, "path", "") == "/api/v1/knowledge" for route in app.routes):
+            app.include_router(router)
+        with TestClient(app) as client:
+            assert client.get("/api/v1/knowledge").status_code == 401
+            origin = required("APP_ORIGIN")
+&gt;           signed = client.post(
+                "/api/v1/auth/login",
+                json={"login_name": login, "password": password},
+                headers={"Origin": origin},
+            )
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:451: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:538: in post
+    return super().post(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post
+    return self.request(
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:437: in request
+    return super().request(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:340: in handle_request
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:337: in handle_request
+    portal.call(self.app, scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:187: in __call__
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:165: in __call__
+    await self.app(scope, receive, _send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:176: in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py:158: in __exit__
+    self.gen.throw(value)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py:82: in collapse_excgroups
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:178: in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:109: in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:156: in call_next
+    raise app_exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:141: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:62: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:734: in app
+    await route.handle(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:288: in handle
+    await self.app(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:76: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:73: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:301: in app
+    raw_response = await run_endpoint_function(
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:214: in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py:37: in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py:65: in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2706: in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:1100: in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:219: in login
+    validate("LoginRequest", body)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_source_republication_cannot_resurrect_knowledge_and_changes_strong_etag" time="0.257" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_worker_does_not_gain_project_metadata_capabilities_and_only_reads_frozen_source_authority" time="0.207" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_impact_groups_follow_real_project_phase_and_never_rewrite_reference" time="0.293" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_source_positions_are_authoritative_not_client_inferred" time="0.102" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_later_publication_is_not_backfilled_into_earlier_reference_scope" time="0.195" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_unconfirmed_matching_fact_without_evidence_is_not_knowledge_permission[3_0]" time="0.354" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_unconfirmed_matching_fact_without_evidence_is_not_knowledge_permission[3_1]" time="0.382" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_current_confirmed_fact_and_multiple_exact_carryovers_are_usable" time="0.272"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['8926fcac-8dd8-4132-b820-a555d1391d35'], 'conditions': [{'...d8-4132-b820-a555d1391d35'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    def test_current_confirmed_fact_and_multiple_exact_carryovers_are_usable(conditional):
+        from packages.domain.fact_sets import current_facts
+        from packages.domain.rule_sets import current_decision
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:839: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_non_effective_decision_cannot_satisfy_condition[rejected]" time="0.230"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['6f6e2945-f87e-4741-82c6-59060cd565e9'], 'conditions': [{'...7e-4741-82c6-59060cd565e9'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+state = 'rejected'
+
+    @pytest.mark.parametrize("state", ["rejected", "deferred", "confirmed_without_basis"])
+    def test_non_effective_decision_cannot_satisfy_condition(conditional, state):
+        from packages.domain.human_decisions import append_decision
+    
+        env = conditional
+&gt;       fact = add_confirmed_fact(env)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:870: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_non_effective_decision_cannot_satisfy_condition[deferred]" time="0.200"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['ef528d18-a293-4bb0-981c-0d16c3bccdc3'], 'conditions': [{'...93-4bb0-981c-0d16c3bccdc3'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+state = 'deferred'
+
+    @pytest.mark.parametrize("state", ["rejected", "deferred", "confirmed_without_basis"])
+    def test_non_effective_decision_cannot_satisfy_condition(conditional, state):
+        from packages.domain.human_decisions import append_decision
+    
+        env = conditional
+&gt;       fact = add_confirmed_fact(env)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:870: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_non_effective_decision_cannot_satisfy_condition[confirmed_without_basis]" time="0.198"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['0fe5bf2e-742c-4190-8871-667bb99011c2'], 'conditions': [{'...2c-4190-8871-667bb99011c2'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+state = 'confirmed_without_basis'
+
+    @pytest.mark.parametrize("state", ["rejected", "deferred", "confirmed_without_basis"])
+    def test_non_effective_decision_cannot_satisfy_condition(conditional, state):
+        from packages.domain.human_decisions import append_decision
+    
+        env = conditional
+&gt;       fact = add_confirmed_fact(env)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:870: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change0]" time="0.213"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['ddbf0f44-d5f2-4190-a94a-b3282da60947'], 'conditions': [{'...f2-4190-a94a-b3282da60947'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = {'subject': '其他主体'}
+
+    @pytest.mark.parametrize(
+        "change",
+        [{"subject": "其他主体"}, {"scope": "历史项目"}, {"value": "4"}, {"unit": "cm"}],
+    )
+    def test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch(conditional, change):
+        env = conditional
+&gt;       add_confirmed_fact(env, **change)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:908: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change1]" time="0.253"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['7ea69395-ac3b-42b0-b02d-6826f82cd421'], 'conditions': [{'...3b-42b0-b02d-6826f82cd421'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = {'scope': '历史项目'}
+
+    @pytest.mark.parametrize(
+        "change",
+        [{"subject": "其他主体"}, {"scope": "历史项目"}, {"value": "4"}, {"unit": "cm"}],
+    )
+    def test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch(conditional, change):
+        env = conditional
+&gt;       add_confirmed_fact(env, **change)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:908: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change2]" time="0.201"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['862a0893-7f80-4028-9e1c-f166b465721c'], 'conditions': [{'...80-4028-9e1c-f166b465721c'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = {'value': '4'}
+
+    @pytest.mark.parametrize(
+        "change",
+        [{"subject": "其他主体"}, {"scope": "历史项目"}, {"value": "4"}, {"unit": "cm"}],
+    )
+    def test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch(conditional, change):
+        env = conditional
+&gt;       add_confirmed_fact(env, **change)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:908: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change3]" time="0.208"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['9fdc5fba-9268-4200-9ab7-52d4f3ed2795'], 'conditions': [{'...68-4200-9ab7-52d4f3ed2795'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = {'unit': 'cm'}
+
+    @pytest.mark.parametrize(
+        "change",
+        [{"subject": "其他主体"}, {"scope": "历史项目"}, {"value": "4"}, {"unit": "cm"}],
+    )
+    def test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch(conditional, change):
+        env = conditional
+&gt;       add_confirmed_fact(env, **change)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:908: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_conflicting_or_pending_matching_fact_is_not_filtered_out[conflicting_confirmed]" time="0.263"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['8de33a64-b766-4f55-ad2a-5851919ba81e'], 'conditions': [{'...66-4f55-ad2a-5851919ba81e'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+mode = 'conflicting_confirmed'
+
+    @pytest.mark.parametrize("mode", ["conflicting_confirmed", "pending_equal"])
+    def test_conflicting_or_pending_matching_fact_is_not_filtered_out(conditional, mode):
+        from packages.domain.fact_sets import current_facts
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:917: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_conflicting_or_pending_matching_fact_is_not_filtered_out[pending_equal]" time="0.235"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['ff9bce9c-18b2-4fab-9ae2-566615642007'], 'conditions': [{'...b2-4fab-9ae2-566615642007'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+mode = 'pending_equal'
+
+    @pytest.mark.parametrize("mode", ["conflicting_confirmed", "pending_equal"])
+    def test_conflicting_or_pending_matching_fact_is_not_filtered_out(conditional, mode):
+        from packages.domain.fact_sets import current_facts
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:917: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[ancestor_head]" time="0.228"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['4b19a0a6-fd89-419c-b945-48cba7c8c534'], 'conditions': [{'...89-419c-b945-48cba7c8c534'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = 'ancestor_head'
+
+    @pytest.mark.parametrize("change", ["ancestor_head", "withdrawn", "new_parse", "missing_carryover"])
+    def test_changed_confirmation_basis_or_unknown_carryover_stops_new_use(conditional, change):
+        from packages.domain.fact_sets import current_facts
+        from packages.domain.rule_sets import current_decision
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:939: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[withdrawn]" time="0.248"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['e5323385-061a-4119-8492-e271037679ea'], 'conditions': [{'...1a-4119-8492-e271037679ea'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = 'withdrawn'
+
+    @pytest.mark.parametrize("change", ["ancestor_head", "withdrawn", "new_parse", "missing_carryover"])
+    def test_changed_confirmation_basis_or_unknown_carryover_stops_new_use(conditional, change):
+        from packages.domain.fact_sets import current_facts
+        from packages.domain.rule_sets import current_decision
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:939: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[new_parse]" time="0.205"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['0be998a7-054b-4dbe-8c11-49d744910cdb'], 'conditions': [{'...4b-4dbe-8c11-49d744910cdb'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = 'new_parse'
+
+    @pytest.mark.parametrize("change", ["ancestor_head", "withdrawn", "new_parse", "missing_carryover"])
+    def test_changed_confirmation_basis_or_unknown_carryover_stops_new_use(conditional, change):
+        from packages.domain.fact_sets import current_facts
+        from packages.domain.rule_sets import current_decision
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:939: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[missing_carryover]" time="0.261"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['38c1688f-1019-418a-973c-96a3b6c4a056'], 'conditions': [{'...19-418a-973c-96a3b6c4a056'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+change = 'missing_carryover'
+
+    @pytest.mark.parametrize("change", ["ancestor_head", "withdrawn", "new_parse", "missing_carryover"])
+    def test_changed_confirmation_basis_or_unknown_carryover_stops_new_use(conditional, change):
+        from packages.domain.fact_sets import current_facts
+        from packages.domain.rule_sets import current_decision
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:939: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_fact_source_change_rechecks_authenticated_reference_replay_and_preserves_history" time="0.245"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['a188f561-7eac-4db0-afdb-7335cf175fce'], 'conditions': [{'...ac-4db0-afdb-7335cf175fce'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    def test_fact_source_change_rechecks_authenticated_reference_replay_and_preserves_history(
+        conditional,
+    ):
+        from fastapi.testclient import TestClient
+    
+        from apps.api.auth import password_hash
+        from apps.api.main import app
+        from packages.domain.runtime import required
+    
+        env = conditional
+&gt;       add_confirmed_fact(env)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:985: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[autocommit]" time="0.069" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[REPEATABLE READ]" time="0.056" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[SERIALIZABLE]" time="0.058" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition[3]" time="0.235"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['6ad30cbc-331a-4479-88b4-8faa6cc0d38a'], 'conditions': [{'...1a-4479-88b4-8faa6cc0d38a'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    @pytest.mark.parametrize("conditional", [3, True], indirect=True)
+    def test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition(conditional):
+        env = conditional
+&gt;       add_confirmed_fact(env)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:1055: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition[True]" time="0.207"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['7bb32bb1-cb35-4e96-a4ce-324d525a4e84'], 'conditions': [{'...35-4e96-a4ce-324d525a4e84'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    @pytest.mark.parametrize("conditional", [3, True], indirect=True)
+    def test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition(conditional):
+        env = conditional
+&gt;       add_confirmed_fact(env)
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:1055: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_fact_change_under_project_lock_is_seen_after_bridge_wait" time="0.201"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">conditional = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['7027f1b9-20f3-419f-aa49-9167c851a871'], 'conditions': [{'...f3-419f-aa49-9167c851a871'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    def test_fact_change_under_project_lock_is_seen_after_bridge_wait(conditional):
+        from threading import Event
+    
+        from packages.domain.fact_sets import replace_set
+    
+        env = conditional
+&gt;       original = add_confirmed_fact(env)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:1065: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:753: in add_confirmed_fact
+    return replace_set(
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/fact_sets.py:126: in replace_set
+    validate("FactInput", new_fact)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[missing]" time="0.361" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[pending]" time="0.364" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[profile_changed_same_bidder]" time="0.475" /><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_identity_context_freeze_and_http_replay_reject_pending_and_reconfirmed_same_uuid" time="0.312"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">+ Exception Group Traceback (most recent call last):
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 177, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 344, in from_call
+    |     result: TResult | None = func()
+    |                              ^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 246, in &lt;lambda&gt;
+    |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    |     yield
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    |     item.runtest()
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1671, in runtest
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    |     result = testfunction(**testargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 1171, in test_identity_context_freeze_and_http_replay_reject_pending_and_reconfirmed_same_uuid
+    |     signed = client.post(
+    |              ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    |     return super().post(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    |     return self.request(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    |     return super().request(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    |     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    |     response = self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    |     response = self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    |     response = self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    |     response = transport.handle_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    |     portal.call(self.app, scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    |     return cast(T_Retval, self.start_task_soon(func, *args).result())
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    |     return self.__get_result()
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    |     raise self._exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    |     retval = await retval_or_awaitable
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    |     raise app_exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    |     return await future
+    |            ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    |     result = context.run(func, *args)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    |     validate("LoginRequest", body)
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    |     schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    |     def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+    |                                                                          ^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    |     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    |     return io.open(self, mode, buffering, encoding, errors, newline)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 1171, in test_identity_context_freeze_and_http_replay_reject_pending_and_reconfirmed_same_uuid
+    signed = client.post(
+             ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    return super().post(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    return self.request(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    return super().request(
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    portal.call(self.app, scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    raise app_exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    validate("LoginRequest", body)
+  File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+During handling of the above exception, another exception occurred:
+
+environment = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['abc8ffcc-78dc-44b3-94f2-28e2d0c3c07a'], 'conditions': [],...dc-44b3-94f2-28e2d0c3c07a'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    def test_identity_context_freeze_and_http_replay_reject_pending_and_reconfirmed_same_uuid(
+        environment,
+    ):
+        from fastapi.testclient import TestClient
+    
+        from apps.api.auth import password_hash
+        from apps.api.main import app
+        from packages.domain.runtime import required
+        from packages.knowledge.contracts import validate_actual
+    
+        env = environment
+        env["active"] = publish(env)
+        login, password = "knowledge-identity-" + uuid4().hex, uuid4().hex
+        with connection() as c:
+            c.execute(
+                "INSERT INTO credentials(member_id,login_name,password_hash) VALUES(%s,%s,%s)",
+                (env["actor"], login, password_hash(password)),
+            )
+            initial = bridge.check_reference(
+                c, env["target"], env["item"], UUID(env["active"]["version_id"]), "authoring"
+            )
+            frozen = initial["project_context"]
+            round_id = frozen["identity"]["round_id"]
+            assert (
+                frozen["identity"]["binding_status"] == "confirmed"
+                and frozen["identity"]["authority_id"]
+            )
+        with TestClient(app) as client:
+            origin = required("APP_ORIGIN")
+&gt;           signed = client.post(
+                "/api/v1/auth/login",
+                json={"login_name": login, "password": password},
+                headers={"Origin": origin},
+            )
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:1171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:538: in post
+    return super().post(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post
+    return self.request(
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:437: in request
+    return super().request(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:340: in handle_request
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:337: in handle_request
+    portal.call(self.app, scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:187: in __call__
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:165: in __call__
+    await self.app(scope, receive, _send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:176: in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py:158: in __exit__
+    self.gen.throw(value)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py:82: in collapse_excgroups
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:178: in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:109: in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:156: in call_next
+    raise app_exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:141: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:62: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:734: in app
+    await route.handle(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:288: in handle
+    await self.app(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:76: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:73: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:301: in app
+    raw_response = await run_endpoint_function(
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:214: in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py:37: in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py:65: in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2706: in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:1100: in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:219: in login
+    validate("LoginRequest", body)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_older_reference_without_identity_context_remains_readable_but_cannot_replay_new_use" time="0.329"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'">+ Exception Group Traceback (most recent call last):
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 177, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 344, in from_call
+    |     result: TResult | None = func()
+    |                              ^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 246, in &lt;lambda&gt;
+    |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    |     yield
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 167, in _multicall
+    |     teardown.throw(exception)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/skipping.py", line 263, in pytest_runtest_call
+    |     return (yield)
+    |             ^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 178, in pytest_runtest_call
+    |     item.runtest()
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1671, in runtest
+    |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_caller.py", line 197, in __call__
+    |     return self._hookexec(
+    |            ^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 183, in _hookexec
+    |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 195, in _multicall
+    |     raise exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/pluggy/_execution.py", line 147, in _multicall
+    |     res = hook_impl.function(*args)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/_pytest/python.py", line 157, in pytest_pyfunc_call
+    |     result = testfunction(**testargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 1301, in test_older_reference_without_identity_context_remains_readable_but_cannot_replay_new_use
+    |     signed = client.post(
+    |              ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    |     return super().post(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    |     return self.request(
+    |            ^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    |     return super().request(
+    |            ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    |     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    |     response = self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    |     response = self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    |     response = self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    |     response = transport.handle_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    |     portal.call(self.app, scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    |     return cast(T_Retval, self.start_task_soon(func, *args).result())
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    |     return self.__get_result()
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    |     raise self._exception
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    |     retval = await retval_or_awaitable
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    |     raise app_exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    |     return await future
+    |            ^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    |     result = context.run(func, *args)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    |     validate("LoginRequest", body)
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    |     schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    |     def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+    |                                                                          ^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    |     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    |     return io.open(self, mode, buffering, encoding, errors, newline)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py", line 1301, in test_older_reference_without_identity_context_remains_readable_but_cannot_replay_new_use
+    signed = client.post(
+             ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 538, in post
+    return super().post(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1144, in post
+    return self.request(
+           ^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 437, in request
+    return super().request(
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 340, in handle_request
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py", line 337, in handle_request
+    portal.call(self.app, scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 340, in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py", line 265, in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 109, in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 156, in call_next
+    raise app_exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/workspace/tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-workbench/apps/api/main.py", line 219, in login
+    validate("LoginRequest", body)
+  File "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py", line 79, in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py", line 36, in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+During handling of the above exception, another exception occurred:
+
+environment = {'active': {'applicability': {'bid_ids': [], 'bidder_ids': ['1b5399ab-31a8-4036-94ce-ffc4b4c511c1'], 'conditions': [],...a8-4036-94ce-ffc4b4c511c1'), 'blob_key': 'blobs/808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5', ...}
+
+    def test_older_reference_without_identity_context_remains_readable_but_cannot_replay_new_use(
+        environment,
+    ):
+        from fastapi.testclient import TestClient
+    
+        from apps.api.auth import password_hash
+        from apps.api.main import app
+        from packages.domain.runtime import audit, required
+        from packages.knowledge.contracts import validate_actual
+    
+        env = environment
+        env["active"] = publish(env)
+        body = reference_body(env)
+        login, password, key = "knowledge-old-" + uuid4().hex, uuid4().hex, uuid4().hex
+        with connection() as c:
+            c.execute(
+                "INSERT INTO credentials(member_id,login_name,password_hash) VALUES(%s,%s,%s)",
+                (env["actor"], login, password_hash(password)),
+            )
+            selected = bridge.cite(
+                c,
+                env["target"],
+                env["item"],
+                UUID(env["active"]["version_id"]),
+                env["actor"],
+                body,
+                None,
+            )
+            historical = copy.deepcopy(selected)
+            historical.pop("project_context")
+            old_id = uuid4()
+            historical["citation_ids"] = [str(old_id)]
+            ref = env["body"]["source_refs"][0]
+            c.execute(
+                "INSERT INTO retrieval.citations(id,bid_id,source_id,source_revision,purpose,evidence_id,target_object_id) VALUES(%s,%s,%s,%s,'authoring',%s,%s)",
+                (
+                    old_id,
+                    env["target"],
+                    UUID(selected["source_manifest"][0]["source_id"]),
+                    env["active"]["source_revision"],
+                    UUID(ref["evidence_id"]),
+                    env["target"],
+                ),
+            )
+            audit(c, env["actor"], env["target"], "knowledge.cited", historical, None)
+            restored = bridge.reference_history(c, old_id)
+            validate_actual("KnowledgeReferenceHistory", restored)
+            assert (
+                restored["reference"] == historical and "project_context" not in restored["reference"]
+            )
+            assert restored["version_content"] == env["active"]["content"]
+            # Explicit legacy ACK fixture; no historical identity is invented.
+            command = Command(c, env["actor"], "knowledge-reference", env["item"], key, body)
+            command.finish(historical, 201)
+        with TestClient(app) as client:
+            origin = required("APP_ORIGIN")
+&gt;           signed = client.post(
+                "/api/v1/auth/login",
+                json={"login_name": login, "password": password},
+                headers={"Origin": origin},
+            )
+
+tender-docs/04-验证与测试/knowledge-architect-review/candidate03-frozen-plus-original-regression.py:1301: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:538: in post
+    return super().post(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post
+    return self.request(
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:437: in request
+    return super().request(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:340: in handle_request
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:337: in handle_request
+    portal.call(self.app, scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:187: in __call__
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:165: in __call__
+    await self.app(scope, receive, _send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:176: in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/contextlib.py:158: in __exit__
+    self.gen.throw(value)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_utils.py:82: in collapse_excgroups
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:178: in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:109: in request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:156: in call_next
+    raise app_exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/base.py:141: in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:62: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:734: in app
+    await route.handle(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:288: in handle
+    await self.app(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:76: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:73: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:301: in app
+    raw_response = await run_endpoint_function(
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:214: in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py:37: in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py:65: in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2706: in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:1100: in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/apps/api/main.py:219: in login
+    validate("LoginRequest", body)
+tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/domain/runtime.py:79: in validate
+    schema = json.loads((ROOT / "packages/contracts/schemas/protocol.schema.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-docs/04-验证与测试/knowledge-architect-review/probe_candidate03.py:36: in private_off
+    def private_off(p,*a,**kw):return '' if p.resolve()==APP/'.env' else orig(p,*a,**kw)
+                                                                         ^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate03-dependencies/packages/contracts/schemas/protocol.schema.json'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError</failure></testcase><testcase classname="tender-docs.04-验证与测试.knowledge-architect-review.candidate03-frozen-plus-original-regression" name="test_architect_pending_fact_satisfies_knowledge_condition" time="0.218" /></testsuite></testsuites>

@@ -1,0 +1,53 @@
+{
+  "scope": "实际非owner Worker/Kafka/S3的领取、控制旧计算与真实恢复；时间过期仅QA夹具注入",
+  "passed": true,
+  "checks": [
+    "真实旧计算过期→reconcile废fence→旧renew/finish拒绝→新代实际完成",
+    "真实瞬时失败生成未来重试，对账不抢跑，原代次到期实际成功",
+    "真实HTTP条件取消428/412、心跳稳定ETag、原键原响应重放与一次审计",
+    "真实运行取消、旧发布拒绝、原字节保留及显式新操作恢复",
+    "三次实际失联共享预算，耗尽失败且无第四次远程计算/原件"
+  ],
+  "started_at": "2026-10-16T14:24:45.922097+00:00",
+  "bid_id": "55f661d9-7dd5-4710-87ab-f9b4e01fa62d",
+  "old_fence": {
+    "operation_id": "ad936dec-f918-4d07-b952-12343046606d",
+    "old_fence": 1,
+    "new_fence": 3,
+    "old_renew": false,
+    "old_finish": false,
+    "effects": 1
+  },
+  "future_retry": {
+    "operation_id": "30700b00-b6f5-40c8-b7be-339afd56f361",
+    "generation_before": 2,
+    "generation_after": 2,
+    "outbox_before": 2,
+    "outbox_after": 2,
+    "due": "2026-10-16 14:24:57.267806+00:00"
+  },
+  "lost_execution_budget": {
+    "operation_id": "81c5753a-2de1-4933-a7e7-c5e1a2294013",
+    "attempts": [
+      {
+        "generation": 1,
+        "attempt_count": 1,
+        "fence": 1
+      },
+      {
+        "generation": 2,
+        "attempt_count": 2,
+        "fence": 3
+      },
+      {
+        "generation": 3,
+        "attempt_count": 3,
+        "fence": 5
+      }
+    ],
+    "final_state": "failed",
+    "upload_state": "quarantined"
+  },
+  "finished_at": "2026-10-16T14:25:08.295551+00:00",
+  "probe_sha256": "e8ee8c6c477038e04619d6bbc2c9abaefc764f8bc22b42b18726bf47f56449f3"
+}

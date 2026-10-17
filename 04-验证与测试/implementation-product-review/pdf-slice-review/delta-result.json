@@ -1,0 +1,86 @@
+{
+  "scope": "只复验三项P2；其他稳定基础路径不重跑",
+  "project_id": "ab02f97e-3f0b-47e6-889c-09f9f292da11",
+  "checks": [
+    {
+      "name": "historical_document_read_projection",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "same_logical_file_distinct_version_and_head",
+      "passed": true,
+      "v1_id": "7f86513a-1f98-483e-b681-2ea866d73709",
+      "v2_id": "973b7f28-56e7-44a6-b329-3dad354dcc10"
+    },
+    {
+      "name": "mobile_original_actions_visible_without_horizontal_scroll",
+      "passed": true,
+      "boxes": [
+        {
+          "x": 35,
+          "y": 1010.03125,
+          "width": 320,
+          "height": 36
+        },
+        {
+          "x": 35,
+          "y": 1208.71875,
+          "width": 320,
+          "height": 36
+        }
+      ],
+      "sizes": {
+        "viewport": 390,
+        "page": 390
+      }
+    },
+    {
+      "name": "v2_direct_download_original_filename_and_bytes",
+      "passed": true,
+      "filename": "product-body-v2.pdf",
+      "sha256": "828723b5f453ec46f28db267843075ba92fd36025e8b845dbd4b31dc28d4e62e"
+    },
+    {
+      "name": "v1_discoverable_from_current_file",
+      "passed": true
+    },
+    {
+      "name": "v1_original_page_identity_is_historical",
+      "passed": true,
+      "document_id": "7f86513a-1f98-483e-b681-2ea866d73709",
+      "filename": "product-body.pdf"
+    },
+    {
+      "name": "v1_download_keeps_v1_bytes_and_original_name",
+      "passed": true,
+      "filename": "product-body.pdf",
+      "sha256": "dff6b6eb6a2385088f2b71251162614a4f173ce69139399035329a7f40d1adda"
+    },
+    {
+      "name": "reviewed_sources_stable_during_delta",
+      "passed": true
+    }
+  ],
+  "source_hashes_before": {
+    "/workspace/tender-workbench/apps/web/src/App.tsx": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f",
+    "/workspace/tender-workbench/apps/web/src/Project.tsx": "fcf7b653547e46823ab559e581e4bb6dfea9c29e4f675bad9567c3e688fb36c2",
+    "/workspace/tender-workbench/apps/web/src/Evidence.tsx": "362634fc3777f83edfbac15dd85c9a8733b92dae983bd87661b595dbdce00f0d",
+    "/workspace/tender-workbench/apps/web/src/PdfPreview.tsx": "c8e32ab938fbc9906d8e91610fb10d56267dc15b315e6f50761a1f27a93b8b9e",
+    "/workspace/tender-workbench/apps/web/src/styles.css": "a7565f6f716a1c0cc29ad1b451698d162e07ca679ef3078b4a9154f2cfcdb7b2",
+    "/workspace/tender-workbench/apps/web/src/api.ts": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6",
+    "/workspace/tender-workbench/apps/api/main.py": "6de91f9bc1872dd61bdf8864f7a8434ae6c7466056d539711f6ec57d4546baf6",
+    "/workspace/tender-workbench/apps/api/views.py": "2e88b08836d00b9618d04cb75ed7749ceabc952a706a5041ed1ea7c8991278fa"
+  },
+  "status": "completed",
+  "source_hashes_after": {
+    "/workspace/tender-workbench/apps/web/src/App.tsx": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f",
+    "/workspace/tender-workbench/apps/web/src/Project.tsx": "fcf7b653547e46823ab559e581e4bb6dfea9c29e4f675bad9567c3e688fb36c2",
+    "/workspace/tender-workbench/apps/web/src/Evidence.tsx": "362634fc3777f83edfbac15dd85c9a8733b92dae983bd87661b595dbdce00f0d",
+    "/workspace/tender-workbench/apps/web/src/PdfPreview.tsx": "c8e32ab938fbc9906d8e91610fb10d56267dc15b315e6f50761a1f27a93b8b9e",
+    "/workspace/tender-workbench/apps/web/src/styles.css": "a7565f6f716a1c0cc29ad1b451698d162e07ca679ef3078b4a9154f2cfcdb7b2",
+    "/workspace/tender-workbench/apps/web/src/api.ts": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6",
+    "/workspace/tender-workbench/apps/api/main.py": "6de91f9bc1872dd61bdf8864f7a8434ae6c7466056d539711f6ec57d4546baf6",
+    "/workspace/tender-workbench/apps/api/views.py": "2e88b08836d00b9618d04cb75ed7749ceabc952a706a5041ed1ea7c8991278fa"
+  }
+}

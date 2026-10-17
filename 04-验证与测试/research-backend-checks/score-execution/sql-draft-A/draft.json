@@ -1,0 +1,20 @@
+{
+  "draft": "A",
+  "sha256": "aea80880ed78108a29fce669e4b2a015fb4cb5e8c62b1f87c12aa8545a1206fa",
+  "status": "static_review_requested_not_executed",
+  "source": "/workspace/tender-workbench/deploy/sql/score-execution.sql",
+  "requires": [
+    "research03 0b04ba8d",
+    "historical-input C a5d3823c",
+    "model release B 80d5c942"
+  ],
+  "purpose": "score independent owned jobs/ledger; no research run or ordinary model_calls",
+  "constraints": [
+    "No raw tables or bucket/label/proof credentials for score role",
+    "RC/group/sorted scope before graph; HTTP outside transactions",
+    "No formal numeric qualification; missing independent prebid technical maximum yields explicit unavailable",
+    "No certification issuer or nonnull business route",
+    "No actual consumers or paid calls"
+  ],
+  "pure_native_mock_tests": 10
+}

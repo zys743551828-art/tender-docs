@@ -1,0 +1,224 @@
+{
+  "candidate": "a1-foundation-02",
+  "scope": "A1 client foundation, on-demand retrieval drawer gated by actual registered APIs, origin-safe byte transports; preserve accepted PDF functionality",
+  "source_tree_hash_method": "sha256 of canonical sorted source_files JSON (sort_keys=True, separators comma/colon); excludes generated public/pdfjs, dist, node_modules and qa-previews",
+  "source_tree_sha256": "a252b2ed302aa2ddeb3fba3aae3b3b66a900e8e4f4022d490cc790eae465b5c8",
+  "source_files": [
+    {
+      "path": ".env.external.local",
+      "sha256": "1855f4a2a4156f994ef1bd72c15f2301b02baf1e274aa4b60dbeb39076163438"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "51ea6c8f625fcce48e9c5dbc189fb366776f59a3f0f9cd2adf877b71bb78af8d"
+    },
+    {
+      "path": ".prettierignore",
+      "sha256": "88e07985518d91b546947cd24b49d5eee25a069d3d9124e1b433790e0f57d79d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "37cb6b42599f310f4e357e8c4c4b7ac26da272573e50e357ab4b48b5150de75f"
+    },
+    {
+      "path": "eslint.config.js",
+      "sha256": "5fd89f1680971e4aaf57fa548e7e6f83b0c2f85bd0aab72bcefc4e201d82b8b8"
+    },
+    {
+      "path": "index.html",
+      "sha256": "c2ce35ae892ba7cd4a919d045a4dd5af147c4772ec593a8c7ee3adddfb5800b8"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "27eb1ca77a6b2949e8e9729cf8dafe58c1f8de391703158fe325cf5b53568eeb"
+    },
+    {
+      "path": "package.json",
+      "sha256": "59fc9f5368faf8a470207111586327c5ee0ae9a3da1e2a309acc7510d2e4c5d2"
+    },
+    {
+      "path": "scripts/copy-pdf-resources.mjs",
+      "sha256": "a867bd93b4eb76f4b3c56d937159f1d1484c81d41ebe79f2a04af69d5bbfcbb0"
+    },
+    {
+      "path": "scripts/generate-contracts.py",
+      "sha256": "f2b0d5fa444ec8547665416d97d784e54d1e7026a2cc2dba32f0ebf8a9f7594c"
+    },
+    {
+      "path": "src/A1Workspace.test.tsx",
+      "sha256": "6b3c9ccfdd0ca650ec8eb806547785b9c324b2f11ba0985a4f11915147c43a88"
+    },
+    {
+      "path": "src/App.test.tsx",
+      "sha256": "2a2f89df9affd76c69da8b662592ce88901d2acbf7527d9a0acdf3f2657ab6e6"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "abf033ccc620b2630b3c4b20564e05cf5bf461daf035dd5a20c6d87a6ab61ab1"
+    },
+    {
+      "path": "src/CoverageSummary.tsx",
+      "sha256": "2989ebb8910cc2be6ef4b87cd914bd2a81b1701515b53dbc90aa9176faeb3821"
+    },
+    {
+      "path": "src/DecisionForm.tsx",
+      "sha256": "963b154cbe3d0665b786e41d37e761b3b5e15823e300d2d67778d20a451de158"
+    },
+    {
+      "path": "src/Evidence.tsx",
+      "sha256": "544adb0c528304c81935feb9155c8d12d29b56f7a2f55d15f958c0cec3dcb7ef"
+    },
+    {
+      "path": "src/EvidenceLinks.tsx",
+      "sha256": "8a9936688836dcfee14e2b8c307d2a13facae78d4902a888c8c5cf83d4b858db"
+    },
+    {
+      "path": "src/FactsPanel.tsx",
+      "sha256": "374451e23e837caf0ef5a1ee66e51a15872d0825920d65265c20c595dfb3b400"
+    },
+    {
+      "path": "src/HistoryPanel.test.tsx",
+      "sha256": "2aa330d950143974fb420c9a5243fa8ccc4fee88e18ba52b2ee1e8584bc9d7db"
+    },
+    {
+      "path": "src/HistoryPanel.tsx",
+      "sha256": "42bae1fe6658fb34661034fdb652a17dad2b263474a276f705a9e1eac0e700d9"
+    },
+    {
+      "path": "src/ManualRuleForm.tsx",
+      "sha256": "a5840d1bf8ee4b9706ff592b3f4014e3090d512b70190b4ddcf3d6f0b6a595c5"
+    },
+    {
+      "path": "src/MatrixPanel.tsx",
+      "sha256": "6806b87010dcefbb91448e335b778ddbb75c9ce7bba71ebfb9bcbe860d73b4fd"
+    },
+    {
+      "path": "src/NextActionControl.tsx",
+      "sha256": "6f06efa209300433e55bb6a77f58f45bff5884d3e4363e05adbf5971d931f41b"
+    },
+    {
+      "path": "src/OperationCenter.tsx",
+      "sha256": "2f484ac8e603e5c441879cc9df5c1ade2ae19dcbfc0967478cc22ae88aea2c82"
+    },
+    {
+      "path": "src/PdfPreview.tsx",
+      "sha256": "7e7648e1775b86c2eab23d4ae06c0a75583aed539b637ca9113907a78a8b7da5"
+    },
+    {
+      "path": "src/Project.test.tsx",
+      "sha256": "f8e7c83bf90f4b0671b7fedefe68d5bceade6f4e9805d673aa2aaaaa5c31f0f6"
+    },
+    {
+      "path": "src/Project.tsx",
+      "sha256": "abcfd4ba6785f26b36c09e8c4368d1a995ab27cd265cb10563419a048e7aed3c"
+    },
+    {
+      "path": "src/ProjectWorkspace.tsx",
+      "sha256": "91d594858d1e7109119a6dc14e338cd8f0a7b7e5018ebe959f78e679134b2fb6"
+    },
+    {
+      "path": "src/ResourceState.tsx",
+      "sha256": "af3c31c1fc371e8f59ebd1ec3837a3580476d3621002fc0fab88c778b5156420"
+    },
+    {
+      "path": "src/RetrievalDrawer.test.tsx",
+      "sha256": "936b362d5bbed432d0fd88dc2d68780dbac7e0c86dd0e2c69ad1a647fa7069e7"
+    },
+    {
+      "path": "src/RetrievalDrawer.tsx",
+      "sha256": "3fbff05cc402c588b1392fa55a7831e0e5075feee192083b0471b73cd7f63cc4"
+    },
+    {
+      "path": "src/ReviewIdentity.tsx",
+      "sha256": "15f5dbd91b46da4161586f253cccb6a7e5a670c7e906493e2d732e5a88b81618"
+    },
+    {
+      "path": "src/ReviewPanel.tsx",
+      "sha256": "6bc32118ae95d23511c2a10fd939257c2d7c1cff6be58e6cac017508d6a0b808"
+    },
+    {
+      "path": "src/RulesPanel.tsx",
+      "sha256": "8c68a4e0e05482783a80d74577fe20b9f826a4d1aaedbcbd87312046652b955d"
+    },
+    {
+      "path": "src/SettingsPanel.tsx",
+      "sha256": "f8e80bfbf2aec047c05fcfaff2016edef868c93bfabb616e1d905fcde102ea8a"
+    },
+    {
+      "path": "src/SourceSelection.tsx",
+      "sha256": "656010602199776d24db98d106c483a3f812d9111b77c1f18c15cb6be3d034fc"
+    },
+    {
+      "path": "src/WorkspaceNavigation.tsx",
+      "sha256": "2cf2e8ea767b2303279815e12f5f27d3d9f63aa054d9dac957d104a44031f6c9"
+    },
+    {
+      "path": "src/api.test.ts",
+      "sha256": "d8a8f1db98cc1657ad066054c4530957716fa15215c7fc4bcddf79ab376615eb"
+    },
+    {
+      "path": "src/api.ts",
+      "sha256": "66d6d18c792730512aa3c3762bfca9846a0eae15cf95e3ce9c055e4e0c380224"
+    },
+    {
+      "path": "src/components.tsx",
+      "sha256": "19fe3596ce269d8466ba6510f4cd3de8876608bd44e0aabcd57871d7460afc3b"
+    },
+    {
+      "path": "src/contracts.ts",
+      "sha256": "2ff7d43359e180b9ae008319934f2b12b40eff2c76b777ed98c944a5188672fb"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0"
+    },
+    {
+      "path": "src/operationStorage.ts",
+      "sha256": "c847beeae243d2369eb854e570ffc5501516648506ab0df17f352958ac153031"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "bb248a4c1d9aedbcd1253a32ce03c9ca4781762413cc954978988794efb30087"
+    },
+    {
+      "path": "src/test-setup.ts",
+      "sha256": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d"
+    },
+    {
+      "path": "src/useCommand.ts",
+      "sha256": "b3d0fa8ae65026eaf2ba39c7927938f4833d1dfcd44f61cbe8d8e753f463b19b"
+    },
+    {
+      "path": "src/useResource.ts",
+      "sha256": "7fae684d463c17b5a60596facd31ee2282d589fa20919f405b19daa63703ee60"
+    },
+    {
+      "path": "src/workspaceTypes.ts",
+      "sha256": "588171abcc655be1a720d3ba826605685fd68e2e1b0ab2d7fe80bab6e386a846"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "431bcb0468321df71279a172a5c5cb3be5c28af8465dd1c2334436fb1ca498e5"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "a1fcd65899dc956c74ef61acbabeec75e0479118f4f2b5dedf760d1b615082d6"
+    }
+  ],
+  "actual_openapi": {
+    "path": "packages/contracts/implemented.openapi.json",
+    "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+    "paths": 25,
+    "operations": 26,
+    "retrieval_registered": false,
+    "review_state_registered": false
+  },
+  "quality_evidence": "quality-result.json",
+  "browser_evidence": "readonly-browser-result.json",
+  "limitations": [
+    "No A1 business E2E or model accuracy claim; backend endpoints not registered remain explicitly unavailable",
+    "No OSS proxy browser E2E claim; delegated independent QA pending",
+    "Durable one-click review preparation restore and history pagination require upcoming actual server schemas",
+    "Authoring, complete submission/report, formal scoring not claimed implemented by this candidate"
+  ]
+}

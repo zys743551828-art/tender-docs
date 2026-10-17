@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "scope": "真实开发Compose基础设施、初始化及内外listener；不包含业务服务镜像或生产认证／容灾",
+  "executed_at": "2026-10-16T11:31:07.009801+00:00",
+  "checks": [
+    "Compose配置合法",
+    "PG与Kafka按开发编排真实启动并healthy",
+    "文档指定顺序以tender_owner完成87表初始化",
+    "宿主通过EXTERNAL listener初始化6类topic",
+    "容器内通过INTERNAL listener可查询topic"
+  ],
+  "table_count": 87,
+  "inputs": {
+    "05-技术与设计/detailed-design/deploy/compose.yaml": "38805155d0654162a05e2aab5ab0c7f5588a1dd9add406934c2f30f74f2decb9",
+    "05-技术与设计/detailed-design/deploy/init_topics.py": "bd47e25bb49b508d4d1a74091e4a87a6a46d5768323661990a2f5f8428af8cc6",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/domain.sql": "63e83db524d4ad97f0e11910379817f4a17473ab695c0fea5deec92592dbd920",
+    "05-技术与设计/detailed-design/retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "05-技术与设计/detailed-design/worker-functions.sql": "0097f57f4ba891368a9e8465f03aa65757421f2e552b3c1b13c2de9535a10d21",
+    "05-技术与设计/detailed-design/roles.sql": "0d993bd972be18c244d3007ec4b937f832997b14908666593dee1957a69f092a",
+    "04-验证与测试/implementation-design-checks/probe_compose.py": "d95ef8334b5b529fb2583cf14d18ec442be8da46dfec84adea5d054d210f61b3"
+  },
+  "business_services_started": false
+}

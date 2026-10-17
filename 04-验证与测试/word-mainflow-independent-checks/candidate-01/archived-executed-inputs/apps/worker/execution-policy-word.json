@@ -1,0 +1,195 @@
+{
+  "scope": "Word主流程固定执行协议；document lane包括word-render/1，默认接收关闭。机制/实际对象与隔离转换的范围以本片证据为准，生产恢复/容量/Kafka整链未验证，付费消费者未启动。",
+  "operation_transitions": {
+    "queued": [
+      "running",
+      "cancel_requested",
+      "failed"
+    ],
+    "running": [
+      "succeeded",
+      "failed",
+      "cancel_requested"
+    ],
+    "cancel_requested": [
+      "cancelled"
+    ],
+    "succeeded": [],
+    "failed": [],
+    "cancelled": []
+  },
+  "step_identity": [
+    "operation_id",
+    "step_key",
+    "input_digest"
+  ],
+  "external_attempt_budget": 3,
+  "heartbeat_seconds": 30,
+  "stale_seconds": 120,
+  "publish_requires": [
+    "current_fence",
+    "operation_not_cancel_requested",
+    "matching_input_digest",
+    "sources_still_valid"
+  ],
+  "message_infrastructure": "kafka",
+  "worker_runtime": "python",
+  "python_client": "confluent-kafka",
+  "domain_event_topic": "tender.domain.events.v1",
+  "dead_letter_topic": "tender.task.dead-letter.v1",
+  "producer": {
+    "enable.idempotence": true,
+    "acks": "all"
+  },
+  "consumer": {
+    "enable.auto.commit": false,
+    "enable.auto.offset.store": false,
+    "max_inflight_per_partition": 1,
+    "offset_commit_after": [
+      "domain_commit",
+      "durable_retry_handoff",
+      "durable_failure_handoff"
+    ]
+  },
+  "retry_store": "postgresql_outbox.available_at",
+  "production_recovery_validated": false,
+  "consumer_lanes": {
+    "document": {
+      "topic": "tender.task.document.v1",
+      "group": "tender-document-worker-v1",
+      "handlers": [
+        "document/1",
+        "document/2",
+        "rag-index/1",
+        "knowledge-index/1",
+        "word-render/1"
+      ],
+      "cli": "python -m apps.worker consume"
+    },
+    "review": {
+      "topic": "tender.task.review.v1",
+      "group": "tender-review-worker-v1",
+      "handlers": [
+        "prepare/1",
+        "review/1"
+      ],
+      "cli": "python -m apps.worker consume-review"
+    },
+    "export": {
+      "topic": "tender.task.export.v1",
+      "group": "tender-export-worker-v1",
+      "handlers": [
+        "export/1",
+        "report/1"
+      ],
+      "cli": "python -m apps.worker consume-export"
+    },
+    "comparison": {
+      "topic": "tender.task.comparison.v1",
+      "group": "tender-comparison-worker-v1",
+      "handlers": [
+        "comparison/1"
+      ],
+      "cli": "python -m apps.worker consume-comparison"
+    },
+    "assistant": {
+      "topic": "tender.task.assistant.v1",
+      "group": "tender-assistant-worker-v1",
+      "handlers": [
+        "assistant/1",
+        "authoring-generate/1"
+      ],
+      "cli": "python -m apps.worker consume-assistant"
+    }
+  },
+  "assistant_global": {
+    "topic": "tender.task.assistant-global.v1",
+    "group_configuration": "ASSISTANT_GLOBAL_CONSUMER_GROUP",
+    "relay_cli": "python -m packages.assistant.transport relay",
+    "consumer_cli": "python -m packages.assistant.transport worker",
+    "core_engine": false,
+    "requires_new_bounded_paid_authorization": true
+  },
+  "automatic_controllers": {
+    "tasks": "python -m packages.tasks.runner --once",
+    "assistant_materialization": "python -m packages.assistant.coordinator --once",
+    "can_enqueue_paid_intents": true,
+    "never_start_automatically_in_development": true
+  },
+  "consumer_lane_check": "Validate fixed handler allowlist before acquire or compute; reject misrouted payload without offset commit, including no-fee comparison lane.",
+  "paid_consumers_started": false,
+  "ordinary_handler_bindings": {
+    "document/1": "tender.task.document.v1",
+    "document/2": "tender.task.document.v1",
+    "rag-index/1": "tender.task.document.v1",
+    "knowledge-index/1": "tender.task.document.v1",
+    "prepare/1": "tender.task.review.v1",
+    "review/1": "tender.task.review.v1",
+    "export/1": "tender.task.export.v1",
+    "report/1": "tender.task.export.v1",
+    "comparison/1": "tender.task.comparison.v1",
+    "assistant/1": "tender.task.assistant.v1",
+    "authoring-generate/1": "tender.task.assistant.v1",
+    "word-render/1": "tender.task.document.v1"
+  },
+  "topic_bindings": {
+    "document": {
+      "topic": "tender.task.document.v1",
+      "consumer_group": "tender-document-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "review": {
+      "topic": "tender.task.review.v1",
+      "consumer_group": "tender-review-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "export": {
+      "topic": "tender.task.export.v1",
+      "consumer_group": "tender-export-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "research": {
+      "topic": "tender.task.research.v1",
+      "consumer_group": "tender-research-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "assistant": {
+      "topic": "tender.task.assistant.v1",
+      "consumer_group": "tender-assistant-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "comparison": {
+      "topic": "tender.task.comparison.v1",
+      "consumer_group": "tender-comparison-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "assistant_global": {
+      "topic": "tender.task.assistant-global.v1",
+      "consumer_group_configuration": "ASSISTANT_GLOBAL_CONSUMER_GROUP",
+      "partition_key": "global_run_id"
+    }
+  },
+  "all_topics": [
+    "tender.domain.events.v1",
+    "tender.task.assistant-global.v1",
+    "tender.task.assistant.v1",
+    "tender.task.comparison.v1",
+    "tender.task.dead-letter.v1",
+    "tender.task.document.v1",
+    "tender.task.export.v1",
+    "tender.task.research.v1",
+    "tender.task.review.v1"
+  ],
+  "word_adoption_controller": {
+    "role": "api",
+    "cli": "python -m apps.api.word_coordinator",
+    "requires": [
+      "unchanged material and source file head",
+      "latest complete controlled conversion",
+      "actual byte SHA",
+      "current render profile",
+      "valid original ancestry"
+    ],
+    "charges_models": false
+  }
+}

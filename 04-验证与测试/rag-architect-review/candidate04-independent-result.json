@@ -1,0 +1,33 @@
+{
+  "candidate_sha256": "d6057de89b507423f1849478d2e19e0c4f9bc1200ab1e8789b741a36ad73398c",
+  "sources_verified": 32,
+  "passed_cases": 3,
+  "actual_postgresql_nonowner": true,
+  "actual_loopback_HTTP": true,
+  "runtime": "explicit synthetic unit vectors/character tokenizer/zero rerank; not actual BGE",
+  "paid_calls": 0,
+  "private_configuration_read": false,
+  "consumers_started": false,
+  "cloud_requests": 0,
+  "loaded_frozen_sources": {
+    "apps.api.rag_routes": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/apps/api/rag_routes.py",
+    "packages.rag.search": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/search.py",
+    "packages.rag.indexing": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/indexing.py",
+    "packages.rag.repository": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/repository.py",
+    "packages.domain.source_effectivity": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/source_effectivity.py"
+  },
+  "observed_main_sha256": "dfb3efcfbe0d8d9e53dc7ce983ab94fe51209f5ab1f33be14775231d8fdc8890",
+  "RPC_paths": [
+    "/embed",
+    "/identity",
+    "/lexical",
+    "/rerank",
+    "/tokenize"
+  ],
+  "RPC_count": 68,
+  "evidence_sha256": {
+    "probe_candidate04.py": "19e4ee5a5e422077eed7cf03019fd3c7c7e8dd2b4b52f74b7e70af5d5f399cec",
+    "candidate04-body-head-delta.py": "0d1fb11bb99a5df29b9bcf7c82204d2acc4092a579c938bd172278ebd25de08c",
+    "candidate04-independent-junit.xml": "ad18e394d1ec9a80c0b70e9f90615106a81d23ff343f1f49a4dc2111ccc057dd"
+  }
+}

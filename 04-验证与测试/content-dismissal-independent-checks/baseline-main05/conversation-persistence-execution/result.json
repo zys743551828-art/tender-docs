@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "two_members_share_one_actual_main_conversation_and_creation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "lost_ack_replays_message_without_incrementing_revision",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "message_identity_cannot_change_content_or_actor_and_stale_write_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "persisted_user_message_never_claims_AI_completion_or_score_input",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "client_cannot_impersonate_generated_assistant_role",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "conversation_path_cannot_cross_project",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "opening_main_does_not_unhide_or_resume_closed_conversation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restore_keeps_original_history_and_sessions_without_model_or_fact_side_effect",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "another_member_discovers_persisted_paged_history_without_duplicate",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "scope": "Actual work-conversation01 ASGI and restrictedPG. Persistence only: no generated response, action/tool execution or formal scoring.",
+  "paid_calls": 0,
+  "model_calls": 0,
+  "consumers_started": 0,
+  "bid_id": "6d1bac75-3761-4e67-b848-5fdba1843c88",
+  "conversation_id": "1816caca-5132-5270-a15e-b04dbccdfd11",
+  "probe_sha256": "a80301e2b668bbced2e10066db6b25e21e4618a9cb6dfa164d49a27874bc68a5",
+  "runtime_manifest_sha256": "063b6abed2220947da341cf196510d7e6845c91e2709c6847bea7aff9670fc6c"
+}

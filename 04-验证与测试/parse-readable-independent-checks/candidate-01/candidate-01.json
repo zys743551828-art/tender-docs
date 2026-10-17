@@ -1,0 +1,58 @@
+{
+  "status": "frozen_for_independent_review",
+  "scope": "document/2 fenced parse publication makes readable source authority available without vector index; does not attest parser effect or embedding quality",
+  "sources": [
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "1f2cf6a16a99aa9494ef60d0df9817bd2abbb062c594ac2b24552978ead27b47"
+    },
+    {
+      "path": "tests/test_parse_readable_integration.py",
+      "sha256": "bc0764dc8f1cd1cf47fe8cd59bec90b48efd2d7aba3ffa7af0685e544123d46f"
+    },
+    {
+      "path": "tests/test_review_integration.py",
+      "sha256": "e8b6ea8951f0e4b3a93aa9dccf1e876d6f19e0db882d009edfc7ceeec0dcb97e"
+    }
+  ],
+  "developer_validation": {
+    "passed": 4,
+    "result": {
+      "path": "docs/parse-readable-development-checks/developer-result.xml",
+      "sha256": "73d200ae956ee2dc49d4b802434f60dfc3fa1967a7640004cf3a322c19aa80b8"
+    },
+    "cases": [
+      "real parser03 + S3/ASGI pipeline: knowledge source positions readable immediately, no retrieval chunks",
+      "nonowner engine/fence synthetic parse outcome and knowledge positions, stable repeat publication",
+      "withdrawn original cannot be republished or leave partial new parse rows",
+      "partial readable text published honestly; failed/empty parse has no new published authority"
+    ],
+    "paid_calls": 0,
+    "kafka_claim": false
+  },
+  "observed_dependencies": [
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad"
+    },
+    {
+      "path": "packages/knowledge/repository.py",
+      "sha256": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c"
+    },
+    {
+      "path": "packages/knowledge/sources.py",
+      "sha256": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "288405a99611de3ec8e0962d6f3492f108b3499c455d974d45149648d8f02e45"
+    }
+  ],
+  "predecessor_04": "eb5266493f8106fb2da16bbc5508a64dff8aae09264b134e2fe22696217431f7",
+  "notes": [
+    "Readable source is not vector-ready; actual coverage/gaps remain unchanged",
+    "Only document/2 automatically publishes; document/1 legacy behavior retained",
+    "New parse never revives withdrawn original or parse parent",
+    "Ordinary Worker uses existing nonowner permissions and bid→graph lock order"
+  ]
+}

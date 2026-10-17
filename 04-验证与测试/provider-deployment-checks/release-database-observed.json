@@ -1,0 +1,5922 @@
+{
+  "scope": "实际release PG只读身份及已应用catalog，不导出业务原文/密钥",
+  "identity": {
+    "database": "tender_release",
+    "login": "twb_release_api",
+    "rolsuper": false,
+    "rolcreatedb": false,
+    "rolcreaterole": false,
+    "api_capability": true
+  },
+  "owns_application_relations": false,
+  "columns": [
+    {
+      "schema_name": "design",
+      "table_name": "action_consumptions",
+      "column_name": "action_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "action_consumptions",
+      "column_name": "command_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "action_consumptions",
+      "column_name": "consumed_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "action_consumptions",
+      "column_name": "result",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "action_consumptions",
+      "column_name": "consumed_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "artifact_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "format",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "presentation_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "source_impact_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "artifact_presentations",
+      "column_name": "blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "command_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "event_type",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "audit_entries",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "round_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "bidder_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "phase",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "archived_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "deadline",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "current_body_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "current_material_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "current_review_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "current_draft_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_profiles",
+      "column_name": "current_rule_set_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_rounds",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_rounds",
+      "column_name": "engineering_project_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_rounds",
+      "column_name": "lot",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bid_rounds",
+      "column_name": "round_no",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bidders",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bidders",
+      "column_name": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bidders",
+      "column_name": "company_facts",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "material_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "settings_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "presentation_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "settings",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "bids",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "object_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "byte_size",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "media_type",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "blobs",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "draft_snapshot_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "template_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "render_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_inputs",
+      "column_name": "manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "build_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "format",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "document_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "build_outputs",
+      "column_name": "gaps",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "builds",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "builds",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "builds",
+      "column_name": "input_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "builds",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "rule_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "parse_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "required_ranges",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "read_ranges",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "unread_ranges",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "manifest_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "chapter_packages",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "command_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "target_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "idempotency_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "request_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "response",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "commands",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "conversations",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "conversations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "conversations",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "conversations",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "conversations",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "credentials",
+      "column_name": "member_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "credentials",
+      "column_name": "login_name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "credentials",
+      "column_name": "password_hash",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "credentials",
+      "column_name": "disabled_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decision_heads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decision_heads",
+      "column_name": "object_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decision_heads",
+      "column_name": "object_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decision_heads",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decision_heads",
+      "column_name": "decision_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "object_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "object_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "object_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "decision",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "decisions",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_file_versions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_file_versions",
+      "column_name": "file_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_file_versions",
+      "column_name": "version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_file_versions",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_file_versions",
+      "column_name": "previous_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_files",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_files",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_files",
+      "column_name": "role",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_files",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_files",
+      "column_name": "head_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "document_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "source_document_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "verification",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_relations",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "original_name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "obtained_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "artifact_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "document_versions",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshot_sections",
+      "column_name": "snapshot_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshot_sections",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshot_sections",
+      "column_name": "draft_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshot_sections",
+      "column_name": "section_revision_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshot_sections",
+      "column_name": "ordinal",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "draft_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "draft_snapshots",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "drafts",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "drafts",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "drafts",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "effect_receipts",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "effect_receipts",
+      "column_name": "effect_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "effect_receipts",
+      "column_name": "result",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "effect_receipts",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "engineering_projects",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "engineering_projects",
+      "column_name": "title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "engineering_projects",
+      "column_name": "region",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "engineering_projects",
+      "column_name": "engineering_type",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "parse_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "physical_page",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "ordinal",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "text_content",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "bbox",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "structure",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "evidence_blocks",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "experiment_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "manifest_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "request",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "price_config_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "estimated_calls",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "estimated_tokens",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "estimated_fee",
+      "type": "nonnegative_amount",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "fee_limit",
+      "type": "nonnegative_amount",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "currency",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "expires_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiment_previews",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "protocol_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "dataset_manifest_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "split_manifest_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "method_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "seed",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "experiments",
+      "column_name": "report_blob_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_heads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_heads",
+      "column_name": "fact_set_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_heads",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "fact_set_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "subject",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "scope",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "value",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "unit",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_items",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "new_set_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "previous_set_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "changed_fact_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_set_changes",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_sets",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_sets",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "fact_sets",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "rule_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "category",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "severity",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "verdict",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "statement",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "searched_ranges",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "findings",
+      "column_name": "carried_from_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_batches",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_batches",
+      "column_name": "manifest_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_batches",
+      "column_name": "mode",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_batches",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_batches",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "batch_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "external_record_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "source_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "import_records",
+      "column_name": "errors",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "chapter_package_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "replicate",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "status",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "item_judgments",
+      "column_name": "model_call_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_assignments",
+      "column_name": "snapshot_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_assignments",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_assignments",
+      "column_name": "document_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_assignments",
+      "column_name": "role",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_assignments",
+      "column_name": "ordinal",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "material_snapshots",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "rule_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "verdict",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "error_code",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "matrix_checks",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "members",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "members",
+      "column_name": "display_name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "members",
+      "column_name": "active",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "conversation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "client_message_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "role",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "parts",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "messages",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "model_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "protocol_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "dataset_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "report_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "decision",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_acceptances",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "artifact_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "method_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "scope",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "training_manifest_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_artifacts",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "logical_call_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "attempt_no",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "request_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "profile_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "provider_request_id",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "usage",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "response_ref",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "research_run_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_calls",
+      "column_name": "reserved_amount",
+      "type": "nonnegative_amount",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "route_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "model_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "acceptance_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "rollback_model_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "model_routes",
+      "column_name": "acceptance_decision",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "step_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "input_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "handler_version",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "required",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "depends_on",
+      "type": "text[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operation_steps",
+      "column_name": "dispatch_generation",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "command_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "input_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "handler_version",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "cancel_requested_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "finished_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "operations",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "topic",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "deduplication_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "available_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "published_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "publish_attempts",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "claim_token",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outbox",
+      "column_name": "lease_until",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcome_heads",
+      "column_name": "submission_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcome_heads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcome_heads",
+      "column_name": "outcome_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcome_heads",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "submission_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "score_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "value",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "maximum",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "source_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "known_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "supersedes_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "outcomes",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "parse_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "physical_page",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "printed_label",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "width",
+      "type": "numeric",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "height",
+      "type": "numeric",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "rotation",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "quality",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pages",
+      "column_name": "gaps",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "document_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "parser_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "config_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "page_count",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "coverage",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "gaps",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "parse_runs",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "model_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "method_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "mode",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "value",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "maximum",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "lower_bound",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "upper_bound",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "reasons",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "predictions",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "formula_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "input_manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "result",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_plans",
+      "column_name": "simulation_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "formula_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "input_manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "result",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "pricing_simulations",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "base_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "request_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "expires_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "proposed_actions",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "run_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "sample_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "repeat_index",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "attempt_no",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_attempts",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "run_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "sample_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "repeat_index",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "error_code",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_run_items",
+      "column_name": "result_blob_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "experiment_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "preview_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "manifest_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "fee_limit",
+      "type": "nonnegative_amount",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "spent_fee",
+      "type": "nonnegative_amount",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "reserved_fee",
+      "type": "nonnegative_amount",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "currency",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "research_runs",
+      "column_name": "cancel_requested_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "material_snapshot_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "body_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "input_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "method_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "frozen_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "evidence_manifest_blob_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "manifest_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "as_of",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_inputs",
+      "column_name": "evaluation_context_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "core_coverage",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_results",
+      "column_name": "coverage_layers",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_runs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_runs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_runs",
+      "column_name": "input_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_runs",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_runs",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "active_review_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "pending_intent",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "context_fingerprint",
+      "type": "sha256",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "context_as_of",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "review_slots",
+      "column_name": "context_valid_until",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "new_rule_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "from_rule_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "from_decision_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "equivalence_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_carryovers",
+      "column_name": "adopted_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "rule_set_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "statement",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "conditions",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "exceptions",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "max_points",
+      "type": "numeric",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "bands",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "applicability_scope",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "origin_kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "manual_origin_rule_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_items",
+      "column_name": "provenance_status",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "from_rule_set_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "to_rule_set_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "command_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "actor_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "additions",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_set_corrections",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "material_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "rule_sets",
+      "column_name": "coverage",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "submission_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "outcome_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "source_group_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "known_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "admission",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "samples",
+      "column_name": "reasons",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedule_receipts",
+      "column_name": "schedule_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedule_receipts",
+      "column_name": "scheduled_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedule_receipts",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "definition_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "definition_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "cron",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "timezone",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "next_fire_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "schedules",
+      "column_name": "paused",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "draft_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "section_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "schema_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "content",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "section_revisions",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sections",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sections",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sections",
+      "column_name": "draft_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sections",
+      "column_name": "head_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "member_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "token_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "csrf_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "expires_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "sessions",
+      "column_name": "revoked_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "business_prediction_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "candidate_model_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "input_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "method_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "comparison_protocol_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "result_blob_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "shadow_comparisons",
+      "column_name": "error_code",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "step_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "input_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "fence",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "attempt_count",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "heartbeat_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "output",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "owner_token",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "lease_until",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "retry_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "step_receipts",
+      "column_name": "failure_code",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "stream_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "seq",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "event_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "event_type",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "payload",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_events",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_heads",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_heads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "stream_heads",
+      "column_name": "last_seq",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_heads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_heads",
+      "column_name": "submission_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_heads",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "body_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "gate_snapshot",
+      "type": "jsonb",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "evidence",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "submitted_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "supersedes_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "submission_records",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "definition_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "instructions",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "config",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definition_versions",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "purpose",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "instructions",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_definitions",
+      "column_name": "paused",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_runs",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_runs",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_runs",
+      "column_name": "definition_version_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_runs",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "task_runs",
+      "column_name": "frozen_manifest",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "schema_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "config",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "template_versions",
+      "column_name": "fontset_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_batches",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_batches",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_batches",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_batches",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_batches",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "upload_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "file_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "expected_file_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "previous_binding_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "command_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_bindings",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_parts",
+      "column_name": "upload_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_parts",
+      "column_name": "part_number",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_parts",
+      "column_name": "byte_size",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_parts",
+      "column_name": "etag",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_parts",
+      "column_name": "observed_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "upload_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "file_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "expected_file_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "mode",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "provider_upload_id",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "part_size",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "part_count",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "aborted_at",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "current_binding_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "upload_transfers",
+      "column_name": "committed_binding_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "batch_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "filename",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "role",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "declared_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "declared_size",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "staging_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "state",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "expires_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "verified_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "error_code",
+      "type": "text",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "uploads",
+      "column_name": "verified_retain_until",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "operation_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "step_key",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "code",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "field_path",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "action",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "message",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "validation_diagnostics",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "section_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "base_section_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "rule_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "fact_set_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "source_version_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "design",
+      "table_name": "writing_plans",
+      "column_name": "plan",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "parse_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "physical_page",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "ordinal",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "chapter_path",
+      "type": "text[]",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "evidence_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "text_content",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "lexemes",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "lex_tsv",
+      "type": "tsvector",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "token_count",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "chunks",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "source_revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "purpose",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "chunk_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "evidence_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "target_object_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "citations",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "model_name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "model_revision",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "weights_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "dimensions",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "distance",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "normalized",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embedding_profiles",
+      "column_name": "preprocessing_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embeddings",
+      "column_name": "chunk_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embeddings",
+      "column_name": "profile_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "embeddings",
+      "column_name": "embedding",
+      "type": "vector(1024)",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_items",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_items",
+      "column_name": "title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_items",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_items",
+      "column_name": "published_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "item_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "version_no",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "content",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "categories",
+      "type": "text[]",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "applicability",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "knowledge_versions",
+      "column_name": "created_by",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "lineage_edges",
+      "column_name": "child_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "lineage_edges",
+      "column_name": "parent_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "bid_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "purpose",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "query_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "allowed_manifest_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "profile_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "policy_digest",
+      "type": "sha256",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "selected_chunk_ids",
+      "type": "uuid[]",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "excluded_reasons",
+      "type": "jsonb",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "retrieval_traces",
+      "column_name": "created_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "score_input_sources",
+      "column_name": "review_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "score_input_sources",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_group_memberships",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_group_memberships",
+      "column_name": "group_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_groups",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_groups",
+      "column_name": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_heads",
+      "column_name": "source_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_heads",
+      "column_name": "revision",
+      "type": "bigint",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_heads",
+      "column_name": "status",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_heads",
+      "column_name": "valid_from",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_heads",
+      "column_name": "valid_until",
+      "type": "timestamp with time zone",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "document_version_id",
+      "type": "uuid",
+      "required": false
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "kind",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "policy_class",
+      "type": "text",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "known_at",
+      "type": "timestamp with time zone",
+      "required": true
+    },
+    {
+      "schema_name": "retrieval",
+      "table_name": "source_nodes",
+      "column_name": "digest",
+      "type": "sha256",
+      "required": true
+    }
+  ],
+  "functions": [
+    {
+      "schema_name": "design",
+      "proname": "ack_outbox",
+      "arguments": "event_id uuid, token uuid",
+      "definition": "CREATE OR REPLACE FUNCTION design.ack_outbox(event_id uuid, token uuid)\n RETURNS boolean\n LANGUAGE sql\nAS $function$\n WITH changed AS (UPDATE design.outbox SET published_at=clock_timestamp(),lease_until=NULL\n WHERE id=event_id AND claim_token=token AND published_at IS NULL RETURNING 1)\n SELECT EXISTS(SELECT 1 FROM changed);\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "append_only",
+      "arguments": "",
+      "definition": "CREATE OR REPLACE FUNCTION design.append_only()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\nBEGIN RAISE EXCEPTION 'immutable_record' USING ERRCODE='55000'; END;\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_halfvec",
+      "arguments": "double precision[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_halfvec(double precision[], integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_halfvec",
+      "arguments": "integer[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_halfvec(integer[], integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_halfvec",
+      "arguments": "numeric[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_halfvec(numeric[], integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_halfvec",
+      "arguments": "real[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_halfvec(real[], integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_sparsevec",
+      "arguments": "double precision[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_sparsevec(double precision[], integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_sparsevec",
+      "arguments": "integer[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_sparsevec(integer[], integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_sparsevec",
+      "arguments": "numeric[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_sparsevec(numeric[], integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_sparsevec",
+      "arguments": "real[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_sparsevec(real[], integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_vector",
+      "arguments": "double precision[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_vector(double precision[], integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_vector",
+      "arguments": "integer[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_vector(integer[], integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_vector",
+      "arguments": "numeric[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_vector(numeric[], integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "array_to_vector",
+      "arguments": "real[], integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.array_to_vector(real[], integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$array_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "binary_quantize",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.binary_quantize(halfvec)\n RETURNS bit\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_binary_quantize$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "binary_quantize",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.binary_quantize(vector)\n RETURNS bit\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$binary_quantize$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "claim_outbox",
+      "arguments": "batch_limit integer, token uuid",
+      "definition": "CREATE OR REPLACE FUNCTION design.claim_outbox(batch_limit integer, token uuid)\n RETURNS SETOF outbox\n LANGUAGE sql\nAS $function$\n WITH due AS (\n  SELECT id FROM design.outbox WHERE published_at IS NULL AND available_at<=clock_timestamp()\n  AND (lease_until IS NULL OR lease_until<clock_timestamp()) ORDER BY available_at,id\n  FOR UPDATE SKIP LOCKED LIMIT greatest(1,least(batch_limit,100))\n ) UPDATE design.outbox o SET claim_token=token,lease_until=clock_timestamp()+interval '30 seconds',publish_attempts=publish_attempts+1\n FROM due WHERE o.id=due.id RETURNING o.*;\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "cosine_distance",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.cosine_distance(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_cosine_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "cosine_distance",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.cosine_distance(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_cosine_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "cosine_distance",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.cosine_distance(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$cosine_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec",
+      "arguments": "halfvec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec(halfvec, integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_accum",
+      "arguments": "double precision[], halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_accum(double precision[], halfvec)\n RETURNS double precision[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_accum$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_add",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_add(halfvec, halfvec)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_add$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_avg",
+      "arguments": "double precision[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_avg(double precision[])\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_avg$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_cmp",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_cmp(halfvec, halfvec)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_cmp$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_combine",
+      "arguments": "double precision[], double precision[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_combine(double precision[], double precision[])\n RETURNS double precision[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_combine$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_concat",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_concat(halfvec, halfvec)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_concat$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_eq",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_eq(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_eq$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_ge",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_ge(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_ge$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_gt",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_gt(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_gt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_in",
+      "arguments": "cstring, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_in(cstring, oid, integer)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_in$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_l2_squared_distance",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_l2_squared_distance(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_l2_squared_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_le",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_le(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_le$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_lt",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_lt(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_lt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_mul",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_mul(halfvec, halfvec)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_mul$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_ne",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_ne(halfvec, halfvec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_ne$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_negative_inner_product",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_negative_inner_product(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_negative_inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_out",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_out(halfvec)\n RETURNS cstring\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_out$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_recv",
+      "arguments": "internal, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_recv(internal, oid, integer)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_recv$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_send",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_send(halfvec)\n RETURNS bytea\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_send$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_spherical_distance",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_spherical_distance(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_spherical_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_sub",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_sub(halfvec, halfvec)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_sub$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_to_float4",
+      "arguments": "halfvec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_to_float4(halfvec, integer, boolean)\n RETURNS real[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_to_float4$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_to_sparsevec",
+      "arguments": "halfvec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_to_sparsevec(halfvec, integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_to_vector",
+      "arguments": "halfvec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_to_vector(halfvec, integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "halfvec_typmod_in",
+      "arguments": "cstring[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.halfvec_typmod_in(cstring[])\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_typmod_in$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "hamming_distance",
+      "arguments": "bit, bit",
+      "definition": "CREATE OR REPLACE FUNCTION design.hamming_distance(bit, bit)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$hamming_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "hnsw_bit_support",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.hnsw_bit_support(internal)\n RETURNS internal\n LANGUAGE c\nAS '$libdir/vector', $function$hnsw_bit_support$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "hnsw_halfvec_support",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.hnsw_halfvec_support(internal)\n RETURNS internal\n LANGUAGE c\nAS '$libdir/vector', $function$hnsw_halfvec_support$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "hnsw_sparsevec_support",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.hnsw_sparsevec_support(internal)\n RETURNS internal\n LANGUAGE c\nAS '$libdir/vector', $function$hnsw_sparsevec_support$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "hnswhandler",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.hnswhandler(internal)\n RETURNS index_am_handler\n LANGUAGE c\nAS '$libdir/vector', $function$hnswhandler$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "inner_product",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.inner_product(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "inner_product",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.inner_product(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "inner_product",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.inner_product(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "ivfflat_bit_support",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.ivfflat_bit_support(internal)\n RETURNS internal\n LANGUAGE c\nAS '$libdir/vector', $function$ivfflat_bit_support$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "ivfflat_halfvec_support",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.ivfflat_halfvec_support(internal)\n RETURNS internal\n LANGUAGE c\nAS '$libdir/vector', $function$ivfflat_halfvec_support$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "ivfflathandler",
+      "arguments": "internal",
+      "definition": "CREATE OR REPLACE FUNCTION design.ivfflathandler(internal)\n RETURNS index_am_handler\n LANGUAGE c\nAS '$libdir/vector', $function$ivfflathandler$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "jaccard_distance",
+      "arguments": "bit, bit",
+      "definition": "CREATE OR REPLACE FUNCTION design.jaccard_distance(bit, bit)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$jaccard_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l1_distance",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l1_distance(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_l1_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l1_distance",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l1_distance(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_l1_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l1_distance",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.l1_distance(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$l1_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_distance",
+      "arguments": "halfvec, halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_distance(halfvec, halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_l2_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_distance",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_distance(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_l2_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_distance",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_distance(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$l2_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_norm",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_norm(halfvec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_l2_norm$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_norm",
+      "arguments": "sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_norm(sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_l2_norm$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_normalize",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_normalize(halfvec)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_l2_normalize$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_normalize",
+      "arguments": "sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_normalize(sparsevec)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_l2_normalize$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "l2_normalize",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.l2_normalize(vector)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$l2_normalize$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "lock_worker_bid",
+      "arguments": "target_bid uuid",
+      "definition": "CREATE OR REPLACE FUNCTION design.lock_worker_bid(target_bid uuid)\n RETURNS void\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'design', 'pg_temp'\nAS $function$\nBEGIN\n PERFORM 1 FROM design.bids WHERE id=target_bid FOR UPDATE;\n IF NOT FOUND THEN RAISE EXCEPTION 'bid_not_found' USING ERRCODE='P0002'; END IF;\nEND $function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "renew_outbox",
+      "arguments": "event_id uuid, token uuid",
+      "definition": "CREATE OR REPLACE FUNCTION design.renew_outbox(event_id uuid, token uuid)\n RETURNS boolean\n LANGUAGE sql\nAS $function$\n WITH changed AS (UPDATE design.outbox SET lease_until=clock_timestamp()+interval '30 seconds'\n WHERE id=event_id AND claim_token=token AND published_at IS NULL RETURNING 1)\n SELECT EXISTS(SELECT 1 FROM changed);\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "renew_step",
+      "arguments": "op uuid, key text, input sha256, expected_fence bigint, owner uuid",
+      "definition": "CREATE OR REPLACE FUNCTION design.renew_step(op uuid, key text, input sha256, expected_fence bigint, owner uuid)\n RETURNS boolean\n LANGUAGE sql\nAS $function$\n WITH changed AS (UPDATE design.step_receipts s SET heartbeat_at=clock_timestamp(),lease_until=clock_timestamp()+interval '120 seconds'\n WHERE operation_id=op AND step_key=key AND input_digest=input AND fence=expected_fence AND owner_token=owner AND state='running'\n AND EXISTS(SELECT 1 FROM design.operations o WHERE o.id=op AND o.state='running') RETURNING 1)\n SELECT EXISTS(SELECT 1 FROM changed);\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "reserve_research_call",
+      "arguments": "target_run uuid, op uuid, key text, input sha256, expected_generation bigint, expected_fence bigint, owner uuid, call_id uuid, call_key text, call_attempt integer, request_hash sha256, profile_hash sha256, amount nonnegative_amount",
+      "definition": "CREATE OR REPLACE FUNCTION design.reserve_research_call(target_run uuid, op uuid, key text, input sha256, expected_generation bigint, expected_fence bigint, owner uuid, call_id uuid, call_key text, call_attempt integer, request_hash sha256, profile_hash sha256, amount nonnegative_amount)\n RETURNS jsonb\n LANGUAGE plpgsql\n SET search_path TO 'pg_catalog', 'design', 'pg_temp'\nAS $function$\nDECLARE bid uuid; existing design.model_calls; r design.research_runs;\nBEGIN\n SELECT bid_id INTO bid FROM design.operations WHERE id=op;\n PERFORM design.lock_worker_bid(bid);\n PERFORM 1 FROM design.operations WHERE id=op AND state='running' AND cancel_requested_at IS NULL FOR UPDATE;\n IF NOT FOUND THEN RAISE EXCEPTION 'operation_not_running' USING ERRCODE='55000'; END IF;\n PERFORM 1 FROM design.operation_steps WHERE operation_id=op AND step_key=key AND input_digest=input AND dispatch_generation=expected_generation FOR UPDATE;\n IF NOT FOUND THEN RAISE EXCEPTION 'generation_stale' USING ERRCODE='55000'; END IF;\n PERFORM 1 FROM design.step_receipts WHERE operation_id=op AND step_key=key AND input_digest=input\n AND state='running' AND fence=expected_fence AND owner_token=owner AND lease_until>clock_timestamp() FOR UPDATE;\n IF NOT FOUND THEN RAISE EXCEPTION 'execution_fence_stale' USING ERRCODE='55000'; END IF;\n IF NOT EXISTS(SELECT 1 FROM design.research_run_attempts a WHERE a.run_id=target_run AND a.operation_id=op AND a.bid_id=bid) THEN\n RAISE EXCEPTION 'run_operation_mismatch' USING ERRCODE='23514'; END IF;\n SELECT * INTO r FROM design.research_runs WHERE id=target_run FOR UPDATE;\n IF r.state<>'running' OR r.cancel_requested_at IS NOT NULL THEN RAISE EXCEPTION 'research_not_running' USING ERRCODE='55000'; END IF;\n SELECT * INTO existing FROM design.model_calls WHERE operation_id=op AND logical_call_key=call_key AND attempt_no=call_attempt;\n IF FOUND THEN\n  IF existing.request_digest IS DISTINCT FROM request_hash OR existing.profile_digest IS DISTINCT FROM profile_hash OR existing.research_run_id IS DISTINCT FROM target_run OR existing.reserved_amount IS DISTINCT FROM amount THEN\n   RAISE EXCEPTION 'call_identity_conflict' USING ERRCODE='23514';\n  END IF;\n  RETURN jsonb_build_object('call_id',existing.id,'new_reservation',false,'state',existing.state);\n END IF;\n IF NOT design.reserve_research_fee(target_run,amount) THEN RAISE EXCEPTION 'research_budget_or_state_blocked' USING ERRCODE='55000'; END IF;\n INSERT INTO design.model_calls(id,operation_id,logical_call_key,attempt_no,request_digest,profile_digest,state,research_run_id,reserved_amount)\n VALUES(call_id,op,call_key,call_attempt,request_hash,profile_hash,'reserved',target_run,amount);\n RETURN jsonb_build_object('call_id',call_id,'new_reservation',true,'state','reserved');\nEND $function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "reserve_research_fee",
+      "arguments": "target_run uuid, amount nonnegative_amount",
+      "definition": "CREATE OR REPLACE FUNCTION design.reserve_research_fee(target_run uuid, amount nonnegative_amount)\n RETURNS boolean\n LANGUAGE plpgsql\nAS $function$\nBEGIN\n IF amount IS NULL THEN RAISE EXCEPTION 'amount required' USING ERRCODE='22004'; END IF;\n UPDATE design.research_runs SET reserved_fee=reserved_fee+amount,revision=revision+1 WHERE id=target_run AND state='running' AND cancel_requested_at IS NULL AND spent_fee+reserved_fee+amount<=fee_limit;\n RETURN FOUND;\nEND $function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec",
+      "arguments": "sparsevec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec(sparsevec, integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_cmp",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_cmp(sparsevec, sparsevec)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_cmp$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_eq",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_eq(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_eq$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_ge",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_ge(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_ge$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_gt",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_gt(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_gt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_in",
+      "arguments": "cstring, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_in(cstring, oid, integer)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_in$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_l2_squared_distance",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_l2_squared_distance(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_l2_squared_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_le",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_le(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_le$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_lt",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_lt(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_lt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_ne",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_ne(sparsevec, sparsevec)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_ne$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_negative_inner_product",
+      "arguments": "sparsevec, sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_negative_inner_product(sparsevec, sparsevec)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_negative_inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_out",
+      "arguments": "sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_out(sparsevec)\n RETURNS cstring\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_out$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_recv",
+      "arguments": "internal, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_recv(internal, oid, integer)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_recv$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_send",
+      "arguments": "sparsevec",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_send(sparsevec)\n RETURNS bytea\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_send$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_to_halfvec",
+      "arguments": "sparsevec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_to_halfvec(sparsevec, integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_to_vector",
+      "arguments": "sparsevec, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_to_vector(sparsevec, integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_to_vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "sparsevec_typmod_in",
+      "arguments": "cstring[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.sparsevec_typmod_in(cstring[])\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$sparsevec_typmod_in$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "subvector",
+      "arguments": "halfvec, integer, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.subvector(halfvec, integer, integer)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_subvector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "subvector",
+      "arguments": "vector, integer, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.subvector(vector, integer, integer)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$subvector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "validate_standard_submission",
+      "arguments": "",
+      "definition": "CREATE OR REPLACE FUNCTION design.validate_standard_submission()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\nDECLARE reviewed_body uuid; selected_kind text;\nBEGIN\n  IF NEW.kind = 'standard' THEN\n    SELECT i.body_version_id INTO reviewed_body\n      FROM design.review_runs r JOIN design.review_inputs i ON i.bid_id=r.bid_id AND i.id=r.input_id\n      WHERE r.bid_id=NEW.bid_id AND r.id=NEW.review_id;\n    SELECT artifact_kind INTO selected_kind FROM design.document_versions WHERE bid_id=NEW.bid_id AND id=NEW.body_version_id;\n    IF reviewed_body IS DISTINCT FROM NEW.body_version_id OR selected_kind IS DISTINCT FROM 'bid_body' THEN\n      RAISE EXCEPTION 'submission_body_mismatch' USING ERRCODE='23514';\n    END IF;\n  END IF;\n  RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector",
+      "arguments": "vector, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector(vector, integer, boolean)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_accum",
+      "arguments": "double precision[], vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_accum(double precision[], vector)\n RETURNS double precision[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_accum$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_add",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_add(vector, vector)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_add$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_avg",
+      "arguments": "double precision[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_avg(double precision[])\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_avg$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_cmp",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_cmp(vector, vector)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_cmp$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_combine",
+      "arguments": "double precision[], double precision[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_combine(double precision[], double precision[])\n RETURNS double precision[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_combine$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_concat",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_concat(vector, vector)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_concat$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_dims",
+      "arguments": "halfvec",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_dims(halfvec)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$halfvec_vector_dims$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_dims",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_dims(vector)\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_dims$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_eq",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_eq(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_eq$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_ge",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_ge(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_ge$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_gt",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_gt(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_gt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_in",
+      "arguments": "cstring, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_in(cstring, oid, integer)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_in$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_l2_squared_distance",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_l2_squared_distance(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_l2_squared_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_le",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_le(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_le$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_lt",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_lt(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_lt$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_mul",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_mul(vector, vector)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_mul$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_ne",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_ne(vector, vector)\n RETURNS boolean\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_ne$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_negative_inner_product",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_negative_inner_product(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_negative_inner_product$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_norm",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_norm(vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_norm$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_out",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_out(vector)\n RETURNS cstring\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_out$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_recv",
+      "arguments": "internal, oid, integer",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_recv(internal, oid, integer)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_recv$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_send",
+      "arguments": "vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_send(vector)\n RETURNS bytea\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_send$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_spherical_distance",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_spherical_distance(vector, vector)\n RETURNS double precision\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_spherical_distance$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_sub",
+      "arguments": "vector, vector",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_sub(vector, vector)\n RETURNS vector\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_sub$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_to_float4",
+      "arguments": "vector, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_to_float4(vector, integer, boolean)\n RETURNS real[]\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_to_float4$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_to_halfvec",
+      "arguments": "vector, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_to_halfvec(vector, integer, boolean)\n RETURNS halfvec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_to_halfvec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_to_sparsevec",
+      "arguments": "vector, integer, boolean",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_to_sparsevec(vector, integer, boolean)\n RETURNS sparsevec\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_to_sparsevec$function$\n"
+    },
+    {
+      "schema_name": "design",
+      "proname": "vector_typmod_in",
+      "arguments": "cstring[]",
+      "definition": "CREATE OR REPLACE FUNCTION design.vector_typmod_in(cstring[])\n RETURNS integer\n LANGUAGE c\n IMMUTABLE PARALLEL SAFE STRICT\nAS '$libdir/vector', $function$vector_typmod_in$function$\n"
+    },
+    {
+      "schema_name": "retrieval",
+      "proname": "eligible_chunks",
+      "arguments": "allowed_sources uuid[], as_of timestamp with time zone, excluded_groups uuid[], formal_score boolean",
+      "definition": "CREATE OR REPLACE FUNCTION retrieval.eligible_chunks(allowed_sources uuid[], as_of timestamp with time zone, excluded_groups uuid[], formal_score boolean)\n RETURNS SETOF retrieval.chunks\n LANGUAGE sql\n STABLE\n SET search_path TO 'retrieval', 'design', 'public', 'pg_temp'\nAS $function$\n SELECT c.* FROM chunks c\n WHERE c.source_id=ANY(allowed_sources)\n AND NOT EXISTS(\n  SELECT 1 FROM source_ancestors a JOIN source_nodes n ON n.id=a.ancestor_id\n  LEFT JOIN source_heads h ON h.source_id=n.id\n  WHERE a.source_id=c.source_id AND (\n   n.known_at>as_of OR h.status IS DISTINCT FROM 'published' OR h.valid_from>as_of OR (h.valid_until IS NOT NULL AND h.valid_until<=as_of)\n   OR (formal_score AND n.policy_class<>'prebid_content')\n   OR EXISTS(SELECT 1 FROM source_group_memberships g WHERE g.source_id=n.id AND g.group_id=ANY(excluded_groups))\n  )\n );\n$function$\n"
+    },
+    {
+      "schema_name": "retrieval",
+      "proname": "formal_score_context",
+      "arguments": "target_review uuid",
+      "definition": "CREATE OR REPLACE FUNCTION retrieval.formal_score_context(target_review uuid)\n RETURNS SETOF retrieval.chunks\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO 'retrieval', 'design', 'pg_temp'\nAS $function$\n SELECT c.id,c.source_id,c.parse_id,c.physical_page,c.ordinal,c.chapter_path,c.evidence_ids,c.text_content,c.lexemes,c.lex_tsv,c.token_count,c.digest\n FROM retrieval.score_context_chunks c WHERE c.review_id=target_review;\n$function$\n"
+    },
+    {
+      "schema_name": "retrieval",
+      "proname": "no_lineage_cycle",
+      "arguments": "",
+      "definition": "CREATE OR REPLACE FUNCTION retrieval.no_lineage_cycle()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO 'retrieval', 'pg_temp'\nAS $function$\nBEGIN\n PERFORM pg_advisory_xact_lock(90127,1);\n IF EXISTS(WITH RECURSIVE ancestors(id) AS (SELECT NEW.parent_id UNION SELECT e.parent_id FROM lineage_edges e JOIN ancestors a ON e.child_id=a.id) SELECT 1 FROM ancestors WHERE id=NEW.child_id) THEN\n RAISE EXCEPTION 'lineage_cycle' USING ERRCODE='23514'; END IF;\n RETURN NEW;\nEND $function$\n"
+    }
+  ],
+  "connected_logins": [
+    {
+      "usename": "twb_release_api"
+    }
+  ]
+}

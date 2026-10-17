@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-17T04:01:16.842688+00:00",
+  "stage": "completed",
+  "project_id": "ed37a263-1675-4fbe-b1fe-ff7e5317bc41",
+  "job_id": "8bb30eda-c4f2-4e5a-83b0-7a3dfeaa177b",
+  "checks": [
+    {
+      "case": "both-members-all-project-conversations-no-queued-running-cancel-unknown-auto-review-off",
+      "passed": true
+    },
+    {
+      "case": "one-UI-Chinese-project-question-one-published-Mock-answer-refresh-same-conversation",
+      "passed": true,
+      "message_count_delta": 2,
+      "user_question_count": 1,
+      "published_state": "published",
+      "mobile_input_rect": {
+        "x": 35,
+        "y": 454.140625,
+        "width": 320,
+        "height": 115.5625
+      }
+    }
+  ],
+  "preflight_project_count": 8,
+  "preflight_project_jobs": [
+    {
+      "id": "bf35c202-a6d0-447a-afb1-b9cd7b1b032b",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "8171d331-92a6-4cf2-8c46-3fc5fe5e9c59",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "a1c2feff-2e8d-460a-9dbf-2167f960ec93",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "18e3d59c-562f-4584-a1ce-5d1ef7272b72",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "bf35c202-a6d0-447a-afb1-b9cd7b1b032b",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "8171d331-92a6-4cf2-8c46-3fc5fe5e9c59",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "a1c2feff-2e8d-460a-9dbf-2167f960ec93",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    },
+    {
+      "id": "18e3d59c-562f-4584-a1ce-5d1ef7272b72",
+      "bid_id": "c0de9e01-8d96-42e2-b1d2-1016e5a2d589",
+      "state": "succeeded",
+      "requires_billing_reconciliation": false
+    }
+  ],
+  "unresolved_project_jobs": [],
+  "turn_posts": [
+    {
+      "path": "/api/v1/bids/ed37a263-1675-4fbe-b1fe-ff7e5317bc41/conversations/d74e6175-6eef-562c-9cd4-396d4fb6c6bc/turns",
+      "method": "POST"
+    }
+  ],
+  "writes": [
+    {
+      "path": "/api/v1/bids/ed37a263-1675-4fbe-b1fe-ff7e5317bc41/conversations/main",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/ed37a263-1675-4fbe-b1fe-ff7e5317bc41/conversations/d74e6175-6eef-562c-9cd4-396d4fb6c6bc/turns",
+      "method": "POST",
+      "status": 202
+    }
+  ],
+  "worker_events_delta": [
+    {
+      "event": "mock_request",
+      "mode": "answer",
+      "real_provider_attempts": 0,
+      "job_id": "8bb30eda-c4f2-4e5a-83b0-7a3dfeaa177b"
+    },
+    {
+      "event": "handled",
+      "job_id": "8bb30eda-c4f2-4e5a-83b0-7a3dfeaa177b",
+      "scope": "project",
+      "transport": "explicit-direct-handler-not-kafka"
+    }
+  ],
+  "new_mock_requests": 1,
+  "control_final_mode": "hold",
+  "control_final_equal_original": true,
+  "blocked_external_browser": [],
+  "page_errors": [],
+  "real_provider_calls": 0,
+  "cloud_calls": 0,
+  "kafka_delivery": "not executed; direct original handler fixture",
+  "provider_quality": "explicit static synthetic answer only; no real model evaluation",
+  "control_writes": 2
+}

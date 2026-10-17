@@ -1,0 +1,25 @@
+{
+  "candidate_path": "/workspace/tender-workbench/docs/multipart-development-checks/candidate.json",
+  "candidate_sha256": "8fa3b069cf40b56f82b2bf09d13734eb400a9214b921baa50fa3c6d8781bec0a",
+  "conclusion": "passed scoped multipart mechanisms; centralized main/browser acceptance remains separate",
+  "blocking_findings": 0,
+  "sources": {
+    "apps/api/multipart_routes.py": "38a245935634f70c4285389f9531685e3155d608b0e233364470f89f55854d43",
+    "packages/uploads/journal.py": "c912761b703d185b9d3d1a9752d554f1b78e1a2dc2ca2ca64de8a03de065ae41",
+    "packages/uploads/native.py": "f836967db006a249abf79e87e4e53ec4a63ddc4eb6d5ddf4143f9f96df0fb5e5",
+    "packages/uploads/protocol.py": "68a5ee4c07655aa4ae01d1ef8d3e04743cee00dabcdefbffc46326324103e4d2",
+    "packages/uploads/service.py": "f19f0544d7b3d2a7cf7304c0bdf760f5149ea62dae778561e52b8e07b0c28489",
+    "tests/test_multipart.py": "c724996c71b1801ac082d1f0df9a32f24cbcb14904d17d6f80d88c29517854cf",
+    "tests/test_multipart_integration.py": "f1e2d2991b6e5c5f1a72508bbdd267e7456e1bcf5dde4d4824bff1cbd2840391",
+    "docs/multipart-development-checks/phase-protocol.md": "182f2e1da7ab2ccd2f18451026c9ef94f0a43285c208c92031a29806c13f2239"
+  },
+  "evidence": {
+    "probe_candidate01.py": "2386f704ed2585acbe594f77bd7c35de626cfda1d1d59feeaadb48a310b5ad9c",
+    "candidate01-independent-result.json": "13b436acb61538091129c63b6ab958d6769f30fa8becd16976f29c0a43332d1f",
+    "candidate01-independent-junit.xml": "2e46afaed882929fd0f2c9ab6f39afcfc691614f3dd1daaba076ce2da8b65c31",
+    "fixture-exception-construction-junit.xml": "6481d73e4253f7852be090ba3975da7ba32353e5a61d05ce162c19025377e73e",
+    "模块审查.md": "920638229ce0dff1aab953201d23b634abea3cee172ffcdf00032e1eaed06dea"
+  },
+  "paid_calls": 0,
+  "real_object_requests": 0
+}

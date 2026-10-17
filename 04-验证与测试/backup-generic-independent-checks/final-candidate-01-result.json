@@ -1,0 +1,32 @@
+{
+  "candidate_sha256": "ebcd8b4d674ce067419b5878b5c751186394587a1932cb5308eba6c13c07d5f3",
+  "input_manifest_sha256": "6cff853bd35421403be657f453e8db33a481b327a30ef666affd24d32931b5dd",
+  "frozen_source_files": 9,
+  "input_bytes_reverified_after_execution": true,
+  "executed_probe_sha256": "1cdfb3200277ddfddf36a5d050e6ae4ee500597ad67bf481ac9209cf444469a2",
+  "execution_result_sha256": "2c859e76e05e40ba6c323b979ea750e6e09212d40921bec3c23d5fef14b3e8c3",
+  "evidence": "candidate-01/execution/result.json",
+  "model_requests": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "status": "passed_database_component_only",
+  "independent_checks_passed": 18,
+  "execution": "Real restricted PostgreSQL LOGIN, pg_export_snapshot, pg_dump and new-database restore; separate static unsupported-catalog negative cases.",
+  "source_probe_database": "tender_qa_generic_source_93e1f5a9b2594e98816fee655043b8c9",
+  "restore_database": "tender_catalog_restore_b8b3f6b875664e64a4b28b2285c4688d",
+  "owner_scope": "CREATE and initialize this new random probe and generic's new restore only",
+  "existing_database_mutations": 0,
+  "actual_relations_verified": 108,
+  "archive_manifest_sha256": "889d262b4f4957345cac9ca1a395a5934a418e0cc9382492c31a1af9db5b35bf",
+  "scope": [
+    "Dynamic future schema and odd identifiers, enum, vector extension identity, partition and materialized relations",
+    "Concurrent source updates excluded by exported consistent snapshot; exact pre-snapshot JSON/vector/enum/partition data restored",
+    "Restricted restore SELECT succeeds; six write/DDL/function attempts denied even after read-only default override",
+    "Archive tamper and symlink rejected; foreign table/RLS fixtures rejected before data access"
+  ],
+  "limits": [
+    "Database component only; no object bytes/OSS requests, full application restoration, Kafka recovery, RPO/RTO qualification or real production data.",
+    "Foreign-table/RLS checks are static catalog fixtures, not a remote foreign server execution.",
+    "New probe and new read-only restore are retained for inspection; existing databases were not modified."
+  ]
+}

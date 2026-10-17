@@ -1,0 +1,49 @@
+{
+  "status": "passed_tested_native_and_HTTP_mechanisms_not_full_multipart_delivery",
+  "backend_runtime_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/planned-execution-runtime-backend03/runtime-candidate.json",
+    "sha256": "ce01d25d5adb45bf5991b8802d3394d84b2567dce782dd5a193327204db92f91"
+  },
+  "native_subset_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/multipart-independent-checks/native-frozen-subset/input-manifest.json",
+    "sha256": "1bff7c07a0fbcaf652cd2b169938e8b870229c69a6411eeda3746cb7fd2eb6e9"
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/multipart-independent-checks/native-frozen-subset/execution/result.json",
+      "sha256": "5f3506f8a726a633d08ed2181814a3492c8d53d9c8d3e953b5e31e04c9450243"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/multipart-independent-checks/backend03-http/result.json",
+      "sha256": "0fa364976aa41ad6c55641b617390e81e8ce3c3de42750b5303eb5e4a57c0336"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/multipart-independent-checks/backend03-http-raw/result.json",
+      "sha256": "ee698fb6459b41807604bde1a098a7be6859f0750e29c0412f995f8f139813b5"
+    }
+  ],
+  "verified": [
+    "Native SDK real9 checks: out-of-order multipart, exactListParts/ETags/sizes, fullSHA, incorrectsize/SHA, samekey overwrite prevention, exactabort idempotence",
+    "Frozen03 actual TCP8803 / own isolated restrictedPG / nativeOSS18: validgrant actualSchema, exactcreate replay, CSRF/Origin/same-member other-session binding, media/PDFmagic/declaredlength refusal, real100Continue stream+concurrent refresh revokes oldticket and blocks publication, CAS, nativeListParts repairs intentionally wrongDBcache, wrongcomplete receipt safely recoverable and exactreplay, fullSHAcomplete one verifyintent, direct ordinarydocumenthandler succeeds and persists matchingoriginal",
+    "Actual rawHTTP: chunked withoutContentLength411, stream overdeclaredsize422, earlyEOF socketclose with no HTTP response; all leave nativeparts empty, exactown sessionaborted"
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "test_api_stopped": true,
+  "side_effects": [
+    "Own native-only completed object was removed after checking zero exact staging/blob references; native incomplete sessions were exactly aborted",
+    "Registered large PDF staging and contentaddressed originals retained under own UUIDprefix in isolatedrag-checks fixture; references exist so no delete",
+    "No bucketlist or globalconfiguration change; no native UploadId/Cookie/ticketurl written to report"
+  ],
+  "unverified": [
+    "Actualmain shareddeployment/Kafka consumption/browser multipart resume/390px final combination",
+    "Actual SDK initialize response unknown and database commit uncertain fault cases",
+    "Two competing multipart versions with explicitrebinding end-to-end",
+    "EarlyEOF has no structured HTTP408 response; only no nativepart publication was proved"
+  ],
+  "retained_preflight": {
+    "path": "/workspace/tender-docs/04-验证与测试/multipart-independent-checks/native-frozen-01/preflight-result.json",
+    "sha256": "d7b0b868856d29f7863bf9a5be4cf0747421b4a88b3163675b493b1863b78efa"
+  },
+  "preflight_scope_note": "Old broader candidate dependencyviews changed; stopped before execution. Native subset then frozen independently; full HTTP later used frozen backend03 actual closure."
+}

@@ -1,0 +1,144 @@
+{
+  "scope": "取消条件头最小整改；开发自测，不替代独立验收",
+  "predecessor": {
+    "path": "apps/api/backend-candidate-02.json",
+    "sha256": "b5307a48ca9b0531e2f482e28646b2d4adbcd9bdf5596b35af1dc23f5afb8bd7"
+  },
+  "changes": [
+    "GETOperation body与强ETag来自同一PG REPEATABLE READ快照",
+    "ETag精确投影为Operation对外对象＋有序step_key/input_digest/generation/fence；排除心跳/lease/owner",
+    "cancel按锁序校验If-Match；缺失428、过期412；Command身份包含条件头",
+    "同键原样重放原body/ETag，不重新CAS或追加取消审计"
+  ],
+  "architect_decision": "架构师确认最小稳定投影；原SQL与目标Schema未修改",
+  "quality": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "pytest_runs": [
+    {
+      "scope": "独立PG＋ASGI HTTP取消处理器条件/重放/代次测试",
+      "passed": 2,
+      "failed": 0,
+      "duration_seconds": 1.46
+    },
+    {
+      "scope": "4纯单元＋1受影响Operation轮询/返回Schema/两版本真实PG S3 Kafka纵向",
+      "passed": 5,
+      "failed": 0,
+      "duration_seconds": 4.22
+    }
+  ],
+  "assertions": [
+    "缺头不取消428",
+    "旧状态/代次不取消412",
+    "合法取消200且返回新ETag",
+    "取消终态后同键旧条件重放原结果且无第二份审计",
+    "同键更换条件头409",
+    "正常续租ETag不变，generation变化即使body相同ETag也改变",
+    "匿名与共享成员文档权限、历史版本证据及模型未配置行为回归"
+  ],
+  "reused_evidence": {
+    "worker_engine_sha256": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb",
+    "scope": "恢复R01/R02/R03源码未变，复用02已过机制检查，不无故重跑全部故障"
+  },
+  "actual_openapi": {
+    "path": "apps/api/implemented.openapi-03.json",
+    "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+    "byte_identical_to": "apps/api/implemented.openapi-02.json",
+    "paths": 25,
+    "operations": 26
+  },
+  "not_claimed": [
+    "独立真实HTTP故障/取消验收",
+    "生产环境、完整核心评审、RAG及评分效果"
+  ],
+  "sources": [
+    {
+      "path": "apps/api/README.md",
+      "sha256": "cd5d092ca1b3e1eab24622050e8a65cfa9bf6b00061caaebe7e5cacf44bc2971"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "53edc0b60ad9c45ec156257e05e8c1bf5028f55ae1553a3d95d079fa388c2490"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "8eb2ea5f2254d5a7809763e86ca56094d9a4ee1d72b9ae8af1dee179296d41be"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "5ee6e4f615f1aaeb83710e8057fbe72a4c2e3e0ccc31d5adbf73dad047392025"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "522c52ca4f19ea4fab612833c3a01ac3cd24f90b1f3f5b2153757c12c4ba0322"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "30e3d70f5f87e5a8f7d47a9258d62cc3c9c69962bd0d8e9d1d0999bd3635bbeb"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "30ab9a451b5e8ec2ebf3c8961675715398d5d3a34e30981766ef2e3b825c3bd0"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "03819df24d185ac4d446fcfa254047720a2d9063129a62ed4b11272b3b1859ed"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+    },
+    {
+      "path": "tests/test_cancel_integration.py",
+      "sha256": "431619df6c2147ee35993b66f3b3e4bf11c9442dce5eb05ea1695d5d93ab5916"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "81ea4155ed0463359809353d0ce3f20d6f1f556ccf9c3ef6f7ab3239e6bcd448"
+    },
+    {
+      "path": "tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187"
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "sha256": "6827ff28f692b48a06f20aabbbbb9cd6c7e57dc661d7931aa2b43addd1f984ac"
+    }
+  ]
+}

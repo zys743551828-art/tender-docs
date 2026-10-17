@@ -1,0 +1,40 @@
+{
+  "candidate_sha256": "9b609a89975c31ab945aacbbe8f63639edd37d51b622ee92c788146270cd7168",
+  "runtime_manifest_sha256": "d176e49a1e6a75ccb0ee5bac06d033689b1adf53e5a79ec7769ab4fabe8f6132",
+  "sources_verified_before_after": 335,
+  "own_sources": 21,
+  "static_read_scope": "21 own sources diff against F05 plus called frozen Word repository/handler and lifecycle guards",
+  "own_offline_checks": [
+    {
+      "name": "exact",
+      "error": null
+    },
+    {
+      "name": "same_size_changed",
+      "error": "WORD_RENDERED_PDF_CORRUPTED"
+    },
+    {
+      "name": "different_size",
+      "error": "WORD_RENDERED_PDF_CORRUPTED"
+    },
+    {
+      "name": "wrong_magic",
+      "error": "WORD_RENDERED_PDF_CORRUPTED"
+    },
+    {
+      "name": "default_admission_disabled",
+      "http": 503
+    }
+  ],
+  "QA_evidence": {
+    "path": "/workspace/tender-docs/04-验证与测试/word-mainflow-independent-checks/candidate-01/final-result.json",
+    "sha256": "b5ea12903f381722d1da765063a84427cef131f91d6bbfc75cbcc9a7c1087529",
+    "read_and_hash_bound": true,
+    "own_executions": false,
+    "unique_cases": 11
+  },
+  "no_DDL_DB_cloud_Docker_model_Kafka": true,
+  "report_sha256": "2120e19a1dd0f113b2daf4b6a4b6cc3df2fb182f7ced98523ba4f51c8e653250",
+  "probe_sha256": "c2997081d3fb59dcd02d8c490222e65cdd0f9ed6c897456724886bd42dd75f39",
+  "conclusion": "Passed scoped structural review; no new blocker; not formal scoring/Word delivery/production acceptance"
+}

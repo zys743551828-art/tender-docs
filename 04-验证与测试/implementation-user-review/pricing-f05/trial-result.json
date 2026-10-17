@@ -1,0 +1,150 @@
+{
+  "exception": "Locator.fill: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_label(\"本方候选报价\", exact=True)\n",
+  "at": "2026-10-17T02:45:44.293545+00:00",
+  "events": [
+    {
+      "at": "2026-10-17T02:45:24.396333+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:24.582493+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:24.596308+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:24.678461+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:24.688322+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:24.945277+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.029791+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.064407+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.065215+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.073293+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.082105+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:25.421876+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:27.511106+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:29.511176+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:29.933982+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:30.511958+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:33.504523+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:34.515982+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:34.945447+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:36.507563+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:39.518218+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:39.518822+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:39.939260+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:45:42.520749+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "scope": "文档静态检查与抽象业务规则验证；不连接应用，不代表软件、真实评分精度或生产验收",
+  "passed": true,
+  "functional_requirements": 40,
+  "nonfunctional_requirements": 14,
+  "requirements_with_scenarios": 54,
+  "acceptance_scenarios_defined": 128,
+  "software_scenarios_executed": 0,
+  "local_file_links_checked": 75,
+  "design_model": {
+    "explicit_fixture_cases": 76,
+    "submission_combinations": 128,
+    "score_display_combinations": 128,
+    "knowledge_combinations": 40,
+    "task_completion_schedules": 8,
+    "intentional_rule_errors": 13,
+    "intentional_rule_errors_detected": 13,
+    "lifecycle_graphs": 4,
+    "lifecycle_state_pairs": 84
+  },
+  "failures": [],
+  "inputs": {
+    "02-业务与产品/AI投标工作台PRD.md": "16f776ef3115f9bace2ff7cf63bfff6652770199c4432e72965bb1369a693297",
+    "04-验证与测试/PRD逻辑检查与场景验证.md": "77ad8104165280c147c26c5787455b2aabd12e741bed406743c7b96750ba21d9",
+    "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6",
+    "04-验证与测试/prd-checks/design-fixtures.json": "0b1cec770ffde8a9313d8fd853c916f851a503ea633958d8fda28b7f37f08435",
+    "04-验证与测试/prd-checks/check_prd.py": "8a06de6f457dfcb6650d6d0a386d2a938b1329fddd3e79b2f544a1962112f225",
+    "04-验证与测试/prd-checks/fusion-review-rounds.json": "e99ca42b048c79c2b6d5c640c8ae8e8d7d86d33a4f13065587269075e08f3d63",
+    "04-验证与测试/prd-checks/fusion-round-1-result.json": "480bf45d3722ab115d73d8158ec418093ff0d868a343c42e37645eaf37595776",
+    "04-验证与测试/prd-checks/fusion-round-2-result.json": "648cfd90dbf5dcf4ba8a44cc231a9eb21ec752fdbc48b21fe6363b547fb0d207",
+    "04-验证与测试/prd-checks/fusion-round-3-result.json": "546f78d7af4b574dc4abee5ef0ee573739ae5b6c0ca24f9f5106492fc4acc04e",
+    "04-验证与测试/prd-checks/spec-followups.json": "4362992aab3168be1b881d779f4458b00390b313f35f8eb052719729d4fb9a7b"
+  },
+  "review_rounds_check": {
+    "scope": "核对历史三轮及显式用户后续变更链；不将历史三轮冒充当前规格重新三轮审查，也不证明软件正确",
+    "rounds_checked": 3,
+    "findings_linked": 17,
+    "user_followups_checked": 5,
+    "historical_snapshot_current": false,
+    "software_scenarios_executed": 0
+  }
+}

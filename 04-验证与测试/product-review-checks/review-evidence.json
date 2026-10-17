@@ -1,0 +1,285 @@
+{
+  "review_role": "独立产品负责人",
+  "decision": "有条件通过，可继续开发；两项P1在相应试点验收前澄清",
+  "sources": [
+    {
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "897b39ee97e9678f0582b7b7ed2313921703b892c568bc213389b6c56200ed78",
+      "line_count": 918,
+      "citation_ranges": [
+        {
+          "start": 25,
+          "end": 34
+        },
+        {
+          "start": 134,
+          "end": 174
+        },
+        {
+          "start": 318,
+          "end": 358
+        },
+        {
+          "start": 427,
+          "end": 475
+        },
+        {
+          "start": 479,
+          "end": 549
+        },
+        {
+          "start": 618,
+          "end": 697
+        },
+        {
+          "start": 699,
+          "end": 731
+        },
+        {
+          "start": 890,
+          "end": 918
+        }
+      ]
+    },
+    {
+      "path": "02-业务与产品/AI投标工作台产品化方案.md",
+      "sha256": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+      "line_count": 148,
+      "citation_ranges": [
+        {
+          "start": 5,
+          "end": 54
+        },
+        {
+          "start": 105,
+          "end": 148
+        }
+      ]
+    },
+    {
+      "path": "02-业务与产品/业务需求说明书.md",
+      "sha256": "c70ab34890905671f5286f620821f61528c48e0e1a0440740a83c8ca3e4a3c9f",
+      "line_count": 145,
+      "citation_ranges": [
+        {
+          "start": 8,
+          "end": 20
+        },
+        {
+          "start": 37,
+          "end": 57
+        },
+        {
+          "start": 59,
+          "end": 101
+        },
+        {
+          "start": 115,
+          "end": 145
+        }
+      ]
+    },
+    {
+      "path": "05-技术与设计/交互与视觉设计.md",
+      "sha256": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+      "line_count": 161,
+      "citation_ranges": [
+        {
+          "start": 6,
+          "end": 23
+        },
+        {
+          "start": 43,
+          "end": 70
+        },
+        {
+          "start": 94,
+          "end": 118
+        },
+        {
+          "start": 120,
+          "end": 161
+        }
+      ]
+    },
+    {
+      "path": "02-业务与产品/GitHub实现功能保留对照.md",
+      "sha256": "a3ba5207818c6c942251d245ddc2181491d4a2521beb939008d0f6ee34d93be4",
+      "line_count": 146,
+      "citation_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ]
+    },
+    {
+      "path": "04-验证与测试/PRD逻辑检查与场景验证.md",
+      "sha256": "77ad8104165280c147c26c5787455b2aabd12e741bed406743c7b96750ba21d9",
+      "line_count": 1487,
+      "citation_ranges": [
+        {
+          "start": 1,
+          "end": 98
+        },
+        {
+          "start": 1357,
+          "end": 1375
+        },
+        {
+          "start": 1427,
+          "end": 1485
+        }
+      ]
+    },
+    {
+      "path": "04-验证与测试/prd-checks/scenarios.json",
+      "sha256": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6",
+      "line_count": 2266,
+      "citation_ranges": [
+        {
+          "start": 371,
+          "end": 390
+        },
+        {
+          "start": 1880,
+          "end": 1903
+        }
+      ]
+    },
+    {
+      "path": "05-技术与设计/detailed-design/保留功能实现规约.md",
+      "sha256": "5caf65913cfd37ed165fadab4397e6820b779be2fd19e33c84c069b2e40f8c84",
+      "line_count": 116,
+      "citation_ranges": [
+        {
+          "start": 1,
+          "end": 116
+        }
+      ]
+    },
+    {
+      "path": "04-验证与测试/development-readiness-checks/README.md",
+      "sha256": "481dc932c4c3cca24b62807618229d006836344f0914b321a00dae9898c15e7e",
+      "line_count": 81,
+      "citation_ranges": [
+        {
+          "start": 1,
+          "end": 81
+        }
+      ]
+    },
+    {
+      "path": "02-业务与产品/一期方案与验证计划.md",
+      "sha256": "3d61c70f4121fc0be3cd70d1313d07bf84002ed26e8921428931a7b97a41c7eb",
+      "line_count": 521,
+      "citation_ranges": [
+        {
+          "start": 120,
+          "end": 145
+        }
+      ]
+    },
+    {
+      "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+      "sha256": "74779a1f26c93c204c23cf5f6b1f25ef0f7c05be1b7f48a2c4760ba854cc7c0d",
+      "line_count": 462,
+      "citation_ranges": [
+        {
+          "start": 268,
+          "end": 272
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "PPR-01",
+      "priority": "P1",
+      "kind": "product_semantics_gap",
+      "blocks": "相应A1试点验收，不阻塞底座开发",
+      "summary": "关闭检测不能隐藏或消除已发现且未处理的关键风险",
+      "acceptance_scenarios": [
+        "PPR-AC-01",
+        "PPR-AC-02"
+      ]
+    },
+    {
+      "id": "PPR-02",
+      "priority": "P1",
+      "kind": "coverage_claim_scope_gap",
+      "blocks": "规则完整与提交资格的首轮试点验收，不阻塞上传和证据开发",
+      "summary": "区分来源处理范围、已识别规则核对、人工确认、评分覆盖及真实检测质量",
+      "acceptance_scenarios": [
+        "PPR-AC-03",
+        "PPR-AC-04"
+      ]
+    },
+    {
+      "id": "PPR-03",
+      "priority": "P2",
+      "kind": "combined_delivery_acceptance_suggestion",
+      "blocks": "不阻塞A1独立交付或当前开发",
+      "summary": "为A1、评分研究可运行、模型业务验收分别命名并提供组合演示单",
+      "acceptance_scenarios": [
+        "PPR-AC-05",
+        "PPR-AC-06"
+      ]
+    },
+    {
+      "id": "PPR-04",
+      "priority": "P2",
+      "kind": "entry_document_consistency",
+      "blocks": "不阻塞当前开发",
+      "summary": "入口中执行底座未冻结、模板范围外和真实验收范围外的陈旧措辞",
+      "acceptance_scenarios": [
+        "PPR-AC-07"
+      ]
+    }
+  ],
+  "new_scenarios": [
+    {
+      "id": "PPR-AC-01",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-02",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-03",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-04",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-05",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-06",
+      "software_execution": "未执行"
+    },
+    {
+      "id": "PPR-AC-07",
+      "software_execution": "未执行"
+    }
+  ],
+  "verification": {
+    "performed": "文档阅读、具体反例推演、本报告本地链接及引用行范围检查",
+    "checked_local_links": 18,
+    "software_tests_executed": 0,
+    "new_real_samples": 0,
+    "user_interviews": 0,
+    "govdash_logged_in_evaluation": false,
+    "historical_scenario_definitions_are_user_validation": false
+  },
+  "limits": [
+    "未修改主PRD或应用",
+    "未读取并行评审结论",
+    "未重新执行历史检查",
+    "未证明真实模型、解析、检测质量、生产性能或用户满意度"
+  ]
+}

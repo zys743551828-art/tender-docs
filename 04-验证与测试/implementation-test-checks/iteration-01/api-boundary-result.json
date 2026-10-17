@@ -1,0 +1,27 @@
+{
+  "scope": "实际HTTP认证、CSRF、会话撤销和项目幂等边界；不是完整投标闭环",
+  "executed_at": "2026-10-16T13:49:00.331413+00:00",
+  "status": "failed",
+  "tests_run": 6,
+  "tests_executed": 6,
+  "skipped": 0,
+  "failed": 4,
+  "errors": 0,
+  "base_url": "http://127.0.0.1:8801/api/v1",
+  "origin": "http://127.0.0.1:5174",
+  "application_identity": "a1f3395a74e16f1bb60686037e727ed87a5dcb1bdeef217b8e2f3732b63a25b3",
+  "contract_sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535",
+  "configuration_sha256": "0fb89a609895cc0349b8ef7fe1d2b1236fa00e08483147e92658a3cb694fee2f",
+  "adapter_mode": "real_pg_kafka_s3_model_unconfigured",
+  "sources": {
+    "test_api_boundary.py": "d6e3172f0d1b4a9e496915e3c5cc1db52f620de4b2743ed5c3b82b54f7f72aa3",
+    "run_api_boundary.py": "fed93a268eeccccc3fc04c007845bda68807a3ce7aa6880f681b358862cc1453"
+  },
+  "not_covered": [
+    "PG/Kafka进程恢复",
+    "上传/原件/版本",
+    "浏览器和真实用户",
+    "真实模型与检索效果",
+    "生产运行"
+  ]
+}

@@ -1,0 +1,11 @@
+import json
+from playwright.sync_api import sync_playwright
+from web07_user_helpers import *
+f=json.load(open('/tmp/web07-user-fixture.json'));events=[];result={}
+with sync_playwright()as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox']);c=b.new_context(viewport={'width':390,'height':844},storage_state='/tmp/web07-user-auth.json');guarded(c,events);page=c.new_page();page.set_default_timeout(16000)
+ try:
+  page.goto(f['own_url'].rsplit('/',1)[0]+'/outcomes',wait_until='domcontentloaded');page.get_by_text('查看实际提交时风险快照',exact=True).click();capture(page,'23-submission-risk-snapshot-unknown');result['snapshot_body']=page.locator('body').inner_text();page.get_by_role('button',name='登记／查看此实交的实际结果',exact=True).click();page.get_by_role('button',name='追加更正实际结果',exact=True).click();page.get_by_label('真实阶段',exact=True).select_option('not_awarded');page.get_by_label('实际获知时间',exact=True).fill('2026-10-17T01:30');page.get_by_label('事实说明与来源理由',exact=False).fill('独立合成未核实更新：已获知最终未中标，不从技术成绩推断；暂无官方结果原件。');page.get_by_label('本次更正原因',exact=True).fill('候选状态之后收到合成最终结果，追加更正，保留原候选报送与未知公布时间。');page.get_by_role('button',name='保存更正',exact=True).click();page.wait_for_timeout(700);page.locator('summary').filter(has_text='查看结果历史').click();capture(page,'25-final-user-result-and-old-candidate');result['after_correction_body']=page.locator('body').inner_text();page.get_by_role('button',name='核实／标注此结果',exact=True).click();capture(page,'26-unverified-result-verification-controls');print(page.locator('body').inner_text());print('FIELDS',page.locator('input,textarea,select').evaluate_all('(es)=>es.map(x=>({type:x.type,label:x.labels?.[0]?.innerText,aria:x.getAttribute("aria-label"),value:x.value,html:x.tagName=="SELECT"?x.outerHTML:null}))'));print('BUTTONS',page.get_by_role('button').evaluate_all('(es)=>es.map(x=>({text:x.innerText,disabled:x.disabled}))'));result['verification_body']=page.locator('body').inner_text();
+ except Exception as e:result['exception']=type(e).__name__;capture(page,'stage-correction-probe-current');print(type(e).__name__,page.locator('body').inner_text())
+ finally:
+  result.update({'at':stamp(),'events':events});(ROOT/'stage-correction-final-history-result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));b.close()

@@ -1,0 +1,27 @@
+{
+  "scope": "same-origin-object-transfer-absolute-grant-uri",
+  "status": "developer_checks_passed_pending_independent_review",
+  "previous_candidate": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/developer-candidate.json",
+  "delta": "Trusted canonical APP_ORIGIN absolute URI grants, no request Host/Forwarded input",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/object_transfer.py",
+      "snapshot": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-02/apps/api/object_transfer.py",
+      "sha256": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_object_transfer.py",
+      "snapshot": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-02/tests/test_object_transfer.py",
+      "sha256": "d35691740b9088de65fb957008a3f1ee62d261d4f8133127115b2f0ab7ae64c4"
+    }
+  ],
+  "verification": {
+    "pytest_passed": 73,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "real_oss_requests_by_this_agent": 0,
+  "real_model_requests_by_this_agent": 0
+}

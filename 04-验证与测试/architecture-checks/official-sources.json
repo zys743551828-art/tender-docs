@@ -1,0 +1,868 @@
+{
+  "checked_at": "2026-10-16T14:02:46.795840+08:00",
+  "scope": "官方GitHub仓库资料；不是全部产品的运行实测；HEAD只用于快照，非稳定版本承诺",
+  "sources": [
+    {
+      "id": "SRC-01",
+      "name": "Dify",
+      "repository": "langgenius/dify",
+      "commit": "1e311fa39d74ff572d9a359f2c9c26c2dcb4126c",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/langgenius/dify/1e311fa39d74ff572d9a359f2c9c26c2dcb4126c/README.md",
+          "status": 200,
+          "bytes": 12132,
+          "sha256": "3c7fe487f1e89e6faec52f5421c71e749c1cecc3486725be3e03fb3fbb62e484"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/langgenius/dify/1e311fa39d74ff572d9a359f2c9c26c2dcb4126c/LICENSE",
+          "status": 200,
+          "bytes": 1801,
+          "sha256": "232cf91474932d5110ed304e53b6b742a58463857c571fae803fdf2ac36d7bb3"
+        },
+        {
+          "path": "api/core/workflow/graph_engine/graph_engine.py",
+          "url": "https://raw.githubusercontent.com/langgenius/dify/1e311fa39d74ff572d9a359f2c9c26c2dcb4126c/api/core/workflow/graph_engine/graph_engine.py",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "api/core/rag/retrieval/retrieval_methods.py",
+          "url": "https://raw.githubusercontent.com/langgenius/dify/1e311fa39d74ff572d9a359f2c9c26c2dcb4126c/api/core/rag/retrieval/retrieval_methods.py",
+          "status": 200,
+          "bytes": 588,
+          "sha256": "7977d00c4e670f36d713a0af6c5dbb9f26ad1b85cd8c61fbd5e8346ad49f4d13"
+        },
+        {
+          "path": "api/models/dataset.py",
+          "url": "https://raw.githubusercontent.com/langgenius/dify/1e311fa39d74ff572d9a359f2c9c26c2dcb4126c/api/models/dataset.py",
+          "status": 200,
+          "bytes": 52648,
+          "sha256": "9e6b1fd1e5d91ecab398d128c8bce89782e07fcbfadc5b9755ed0f97e57defaf"
+        }
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "name": "RAGFlow",
+      "repository": "infiniflow/ragflow",
+      "commit": "fede451994fa43dc64a4c9ec375071ea1d91e65d",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/infiniflow/ragflow/fede451994fa43dc64a4c9ec375071ea1d91e65d/README.md",
+          "status": 200,
+          "bytes": 17281,
+          "sha256": "fac60858d157e4dd64dbd1ec75355b5815c54bd4d9c6e628b75ee3717d36e196"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/infiniflow/ragflow/fede451994fa43dc64a4c9ec375071ea1d91e65d/LICENSE",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "api/db/db_models.py",
+          "url": "https://raw.githubusercontent.com/infiniflow/ragflow/fede451994fa43dc64a4c9ec375071ea1d91e65d/api/db/db_models.py",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "rag/nlp/search.py",
+          "url": "https://raw.githubusercontent.com/infiniflow/ragflow/fede451994fa43dc64a4c9ec375071ea1d91e65d/rag/nlp/search.py",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "name": "FastGPT",
+      "repository": "labring/FastGPT",
+      "commit": "b996c0c0db7f9bfeffa6259ccd465342f92413a8",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/labring/FastGPT/b996c0c0db7f9bfeffa6259ccd465342f92413a8/README.md",
+          "status": 200,
+          "bytes": 9204,
+          "sha256": "c67933b9dfeaa6e2c8b5689e429331c65db425be00170f7e451bf4586c1cc900"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/labring/FastGPT/b996c0c0db7f9bfeffa6259ccd465342f92413a8/LICENSE",
+          "status": 200,
+          "bytes": 1901,
+          "sha256": "84569a7a2a79f9f97093019ae12d914b975db773ed17443fb726a0b6f585bc24"
+        }
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "name": "LangGraph",
+      "repository": "langchain-ai/langgraph",
+      "commit": "e77a5cb08c1f3ff306d997dd76fc7169afdab5ea",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/README.md",
+          "status": 200,
+          "bytes": 6395,
+          "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/LICENSE",
+          "status": 200,
+          "bytes": 1072,
+          "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7"
+        },
+        {
+          "path": "libs/checkpoint-postgres/README.md",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/libs/checkpoint-postgres/README.md",
+          "status": 200,
+          "bytes": 6090,
+          "sha256": "5d078003f953bad67bf1fe24883b205ae048cb0cbdaf51afcdfe82258726f887"
+        },
+        {
+          "path": "libs/langgraph/langgraph/types.py",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/libs/langgraph/langgraph/types.py",
+          "status": 200,
+          "bytes": 37830,
+          "sha256": "062583a1c0af9833477935a9a78d336408cc9a33c425722a1191e000d032107a"
+        },
+        {
+          "path": "libs/checkpoint/README.md",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/libs/checkpoint/README.md",
+          "status": 200,
+          "bytes": 6100,
+          "sha256": "efedc0a489d4ab9147d69c8575a9cfd2344d01040322ec6330302887c65aa80e"
+        },
+        {
+          "path": "libs/checkpoint-postgres/langgraph/checkpoint/postgres/__init__.py",
+          "url": "https://raw.githubusercontent.com/langchain-ai/langgraph/e77a5cb08c1f3ff306d997dd76fc7169afdab5ea/libs/checkpoint-postgres/langgraph/checkpoint/postgres/__init__.py",
+          "status": 200,
+          "bytes": 27543,
+          "sha256": "f7329429ea278c02a3dc5848a08e15f11c2ebf954b142d9b5ef1fc414c22a2b0"
+        }
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "name": "Temporal Python SDK",
+      "repository": "temporalio/sdk-python",
+      "commit": "346d4dcd0863657c3a33283c952a296762059339",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/temporalio/sdk-python/346d4dcd0863657c3a33283c952a296762059339/README.md",
+          "status": 200,
+          "bytes": 106294,
+          "sha256": "2d9087cc087244cff74daab0ec656306f50bd34cd998b76a627009bd088ce760"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/temporalio/sdk-python/346d4dcd0863657c3a33283c952a296762059339/LICENSE",
+          "status": 200,
+          "bytes": 1108,
+          "sha256": "d7706f28d144dabf07e4946553a4d117d1dab5cda6bf34a602959b4a2fa86b38"
+        }
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "name": "Haystack",
+      "repository": "deepset-ai/haystack",
+      "commit": "aca9fc25d9d20816facdb9bd347d7eae7636d4b2",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/deepset-ai/haystack/aca9fc25d9d20816facdb9bd347d7eae7636d4b2/README.md",
+          "status": 200,
+          "bytes": 13812,
+          "sha256": "e016e944fa840265e85e73520522c6152798330720d53d3d64fdffcc448554e6"
+        },
+        {
+          "path": "LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/deepset-ai/haystack/aca9fc25d9d20816facdb9bd347d7eae7636d4b2/LICENSE.txt",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/deepset-ai/haystack/aca9fc25d9d20816facdb9bd347d7eae7636d4b2/LICENSE",
+          "status": 200,
+          "bytes": 11343,
+          "sha256": "3f0a3af7e9b0f3b6358aaa3c7501ab522a67dc5483b870e9a8b3db41ea42e249"
+        },
+        {
+          "path": "haystack/components/retrievers/in_memory/bm25_retriever.py",
+          "url": "https://raw.githubusercontent.com/deepset-ai/haystack/aca9fc25d9d20816facdb9bd347d7eae7636d4b2/haystack/components/retrievers/in_memory/bm25_retriever.py",
+          "status": 200,
+          "bytes": 7498,
+          "sha256": "79c830b6405863e863bcf9786b7611af5984d19188f8653048ddd1bedbd7e465"
+        },
+        {
+          "path": "haystack/core/pipeline/base.py",
+          "url": "https://raw.githubusercontent.com/deepset-ai/haystack/aca9fc25d9d20816facdb9bd347d7eae7636d4b2/haystack/core/pipeline/base.py",
+          "status": 200,
+          "bytes": 95976,
+          "sha256": "2963ce1e6737b35acffaf9cdce0c0b5e4ebbf0418f5a399478d1506721b8f625"
+        }
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "name": "LlamaIndex",
+      "repository": "run-llama/llama_index",
+      "commit": "619d74664e8404612038bc15a1a40c686037277c",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/run-llama/llama_index/619d74664e8404612038bc15a1a40c686037277c/README.md",
+          "status": 200,
+          "bytes": 11598,
+          "sha256": "625c49e7dedf84826b350be28d118e7823e669504689105611e91ff709406d1f"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/run-llama/llama_index/619d74664e8404612038bc15a1a40c686037277c/LICENSE",
+          "status": 200,
+          "bytes": 1065,
+          "sha256": "24f40b5190fdacabc24ddbb5f76364d15e4f030925220ea300d8a2dd4993c8cb"
+        },
+        {
+          "path": "llama-index-core/llama_index/core/ingestion/pipeline.py",
+          "url": "https://raw.githubusercontent.com/run-llama/llama_index/619d74664e8404612038bc15a1a40c686037277c/llama-index-core/llama_index/core/ingestion/pipeline.py",
+          "status": 200,
+          "bytes": 34249,
+          "sha256": "00a1de638af05f7cf8bfa068f24f8f6b4037fa5849896ebfab0e2edbe165695d"
+        }
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "name": "assistant-ui",
+      "repository": "assistant-ui/assistant-ui",
+      "commit": "d420f4248753f44352f102f498ce2d542945af55",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/assistant-ui/assistant-ui/d420f4248753f44352f102f498ce2d542945af55/README.md",
+          "status": 200,
+          "bytes": 9438,
+          "sha256": "91f519bdf12a72584e13dcca4bb42bb1d6aff47e3ea0692dcccd6ab1213a9b3c"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/assistant-ui/assistant-ui/d420f4248753f44352f102f498ce2d542945af55/LICENSE",
+          "status": 200,
+          "bytes": 1073,
+          "sha256": "eafb05991a572efa34097474b31fef45b14a8879ed1d1a8fd77de62e6fa7d275"
+        },
+        {
+          "path": "packages/react/src/runtimes/external-store/ExternalStoreRuntime.ts",
+          "url": "https://raw.githubusercontent.com/assistant-ui/assistant-ui/d420f4248753f44352f102f498ce2d542945af55/packages/react/src/runtimes/external-store/ExternalStoreRuntime.ts",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "packages/react/src/runtimes/external-store/useExternalStoreRuntime.ts",
+          "url": "https://raw.githubusercontent.com/assistant-ui/assistant-ui/d420f4248753f44352f102f498ce2d542945af55/packages/react/src/runtimes/external-store/useExternalStoreRuntime.ts",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "name": "Vercel AI SDK",
+      "repository": "vercel/ai",
+      "commit": "8a5233b15b1e69573d63faee6cd0014559252ee4",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/README.md",
+          "status": 200,
+          "bytes": 22,
+          "sha256": "0f1402baf0226cc4912e33b421162bf30a38a80cc438c24bba601f495e73a64f"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/LICENSE",
+          "status": 200,
+          "bytes": 552,
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        },
+        {
+          "path": "content/docs/04-ai-sdk-ui/03-chatbot.mdx",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/content/docs/04-ai-sdk-ui/03-chatbot.mdx",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+          "status": 200,
+          "bytes": 56646,
+          "sha256": "d959b32866bedbeba811fc46cc4328bcb87424a39bbdc9738d6cbd550bae5898"
+        },
+        {
+          "path": "content/docs/04-ai-sdk-ui/02-chatbot.mdx",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/content/docs/04-ai-sdk-ui/02-chatbot.mdx",
+          "status": 200,
+          "bytes": 39611,
+          "sha256": "4431e10b7285a9614c7cff4a6acafda2c4b2305edf93d517aaf55f08d915c9ff"
+        },
+        {
+          "path": "content/docs/04-ai-sdk-ui/04-chatbot-tool-usage.mdx",
+          "url": "https://raw.githubusercontent.com/vercel/ai/8a5233b15b1e69573d63faee6cd0014559252ee4/content/docs/04-ai-sdk-ui/04-chatbot-tool-usage.mdx",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "name": "Docling",
+      "repository": "docling-project/docling",
+      "commit": "5f4509767647721a8ec011ce6a3a6a39b19bb1f0",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/docling-project/docling/5f4509767647721a8ec011ce6a3a6a39b19bb1f0/README.md",
+          "status": 200,
+          "bytes": 8589,
+          "sha256": "ce605634509dc87d79182131ad001e5fddf6053963b9045b971c6e87e6b9bfa1"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/docling-project/docling/5f4509767647721a8ec011ce6a3a6a39b19bb1f0/LICENSE",
+          "status": 200,
+          "bytes": 1072,
+          "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+        },
+        {
+          "path": "docs/usage/advanced_options.md",
+          "url": "https://raw.githubusercontent.com/docling-project/docling/5f4509767647721a8ec011ce6a3a6a39b19bb1f0/docs/usage/advanced_options.md",
+          "status": 200,
+          "bytes": 28032,
+          "sha256": "5a3f2b3597fdfa3eaaaa32f29a8fdff270292d81c0935a8748b1df01ef22f34b"
+        },
+        {
+          "path": "docs/concepts/docling_document.md",
+          "url": "https://raw.githubusercontent.com/docling-project/docling/5f4509767647721a8ec011ce6a3a6a39b19bb1f0/docs/concepts/docling_document.md",
+          "status": 200,
+          "bytes": 3098,
+          "sha256": "9225bdfee28b8ddc40049e0975d83825ba08b284d8e32737aadeb4a9b96a5ddf"
+        }
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "name": "MinerU",
+      "repository": "opendatalab/MinerU",
+      "commit": "b7f3dd0c5f6e6d66a298239ffd02b328b873918e",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/opendatalab/MinerU/b7f3dd0c5f6e6d66a298239ffd02b328b873918e/README.md",
+          "status": 200,
+          "bytes": 55856,
+          "sha256": "69c967e98536be101b5dc3420703d28cc1e0250eeca3b5bf156b060ac4ccfacb"
+        },
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/opendatalab/MinerU/b7f3dd0c5f6e6d66a298239ffd02b328b873918e/LICENSE.md",
+          "status": 200,
+          "bytes": 3301,
+          "sha256": "2d9aeb5d15159329a20dd804f251c64860ba954fbd26ec02f802220e6d71cf5c"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/opendatalab/MinerU/b7f3dd0c5f6e6d66a298239ffd02b328b873918e/LICENSE",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "name": "PaddleOCR",
+      "repository": "PaddlePaddle/PaddleOCR",
+      "commit": "dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/README.md",
+          "status": 200,
+          "bytes": 25918,
+          "sha256": "63d76041f1dcb84e1dd141d45dc8dec5d86a3e357fe98bf8432ad2721c0ced90"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/LICENSE",
+          "status": 200,
+          "bytes": 11376,
+          "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"
+        },
+        {
+          "path": "README_en.md",
+          "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleOCR/dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf/README_en.md",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "name": "Milvus",
+      "repository": "milvus-io/milvus",
+      "commit": "0ebf9f2d1d24275b36de3b81afb55e374b656f92",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/milvus-io/milvus/0ebf9f2d1d24275b36de3b81afb55e374b656f92/README.md",
+          "status": 200,
+          "bytes": 70771,
+          "sha256": "8fedcdc9023fcd061a54405bf0d83afb4516c7ec053b2efd22476473ce10153f"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/milvus-io/milvus/0ebf9f2d1d24275b36de3b81afb55e374b656f92/LICENSE",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "name": "MLflow",
+      "repository": "mlflow/mlflow",
+      "commit": "2e0e0457887bd4560105ca9ad226a2da73c4f6c9",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/mlflow/mlflow/2e0e0457887bd4560105ca9ad226a2da73c4f6c9/README.md",
+          "status": 200,
+          "bytes": 33107,
+          "sha256": "e9b30b8aee35e78fb87bdbbfcf837e8739f596aef5f6def89e735680d7d8b00e"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/mlflow/mlflow/2e0e0457887bd4560105ca9ad226a2da73c4f6c9/LICENSE",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/mlflow/mlflow/2e0e0457887bd4560105ca9ad226a2da73c4f6c9/LICENSE.txt",
+          "status": 200,
+          "bytes": 11382,
+          "sha256": "6395355de6f391afff35996a30fb41b189b4991a4cb54993ace35ab69a0bfa28"
+        },
+        {
+          "path": "mlflow/tracking/client.py",
+          "url": "https://raw.githubusercontent.com/mlflow/mlflow/2e0e0457887bd4560105ca9ad226a2da73c4f6c9/mlflow/tracking/client.py",
+          "status": 200,
+          "bytes": 290112,
+          "sha256": "6c4de92996c170fb499dfcf28835d7ad22af5d530776be88ae4b30ce8d757f1e"
+        }
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "name": "Langfuse",
+      "repository": "langfuse/langfuse",
+      "commit": "857186a4cc6fba661c8d26eee1222ab2d667b8ba",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/langfuse/langfuse/857186a4cc6fba661c8d26eee1222ab2d667b8ba/README.md",
+          "status": 200,
+          "bytes": 53476,
+          "sha256": "d5a07630afeeaa4c11eda7c0d133941950805cb29ce84b13fa272eeb9a3794f5"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/langfuse/langfuse/857186a4cc6fba661c8d26eee1222ab2d667b8ba/LICENSE",
+          "status": 200,
+          "bytes": 1612,
+          "sha256": "fd09d42b5b16606ad2042cc1edf3a82da1c47743709f170c959c74758af229d6"
+        }
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "name": "scikit-learn",
+      "repository": "scikit-learn/scikit-learn",
+      "commit": "d0e22aee7bbef7b310a2f08227c214ff6df9a526",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "doc/common_pitfalls.rst",
+          "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/d0e22aee7bbef7b310a2f08227c214ff6df9a526/doc/common_pitfalls.rst",
+          "status": 200,
+          "bytes": 25066,
+          "sha256": "6e2b42374fbb521c35f29eeab05bcbfa9744eed344b5f92e41013338ff60a2f5"
+        },
+        {
+          "path": "doc/modules/cross_validation.rst",
+          "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/d0e22aee7bbef7b310a2f08227c214ff6df9a526/doc/modules/cross_validation.rst",
+          "status": 200,
+          "bytes": 42081,
+          "sha256": "06f22c6b86b0aa6dc18195b89b9c51295f6f2e5a78007af55b8c649c6dc091f5"
+        },
+        {
+          "path": "COPYING",
+          "url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/d0e22aee7bbef7b310a2f08227c214ff6df9a526/COPYING",
+          "status": 200,
+          "bytes": 1532,
+          "sha256": "50d6a9d340f19ab355609917993114daf5f47e3161067bcf34955bbd05cd9cb0"
+        }
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "name": "MAPIE",
+      "repository": "scikit-learn-contrib/MAPIE",
+      "commit": "2c678f523f3857a2d4290995b25f476cb94c0cb2",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.rst",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/README.rst",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/LICENSE",
+          "status": 200,
+          "bytes": 1575,
+          "sha256": "92372faa472615c49bd4255fb56d998644e60b255b1093c7dad969ac70c1a60c"
+        },
+        {
+          "path": "doc/theoretical_description_regression.rst",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/doc/theoretical_description_regression.rst",
+          "error": "HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/README.md",
+          "status": 200,
+          "bytes": 9970,
+          "sha256": "708f49d0de9f81aea2341f0fd692650e9e94738cf0b824731c82623601c07f17"
+        },
+        {
+          "path": "mapie/regression/regression.py",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/mapie/regression/regression.py",
+          "status": 200,
+          "bytes": 61031,
+          "sha256": "15cbb17af8d31b1509d4ecd1df21bd80662ee7de1bf695dcdaaff2430b1ab1d1"
+        },
+        {
+          "path": "mapie/regression/quantile_regression.py",
+          "url": "https://raw.githubusercontent.com/scikit-learn-contrib/MAPIE/2c678f523f3857a2d4290995b25f476cb94c0cb2/mapie/regression/quantile_regression.py",
+          "status": 200,
+          "bytes": 88283,
+          "sha256": "6cf8d4ba3e22001b2c3e0b3f84688827624f06e7cf4adab334eaefd33b7d8c95"
+        }
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "name": "PostgreSQL",
+      "repository": "postgres/postgres",
+      "commit": "86848d19bdbbf0daac6ca1b92a8885179cae8db5",
+      "branch": "refs/heads/REL_17_STABLE",
+      "files": [
+        {
+          "path": "doc/src/sgml/mvcc.sgml",
+          "url": "https://raw.githubusercontent.com/postgres/postgres/86848d19bdbbf0daac6ca1b92a8885179cae8db5/doc/src/sgml/mvcc.sgml",
+          "status": 200,
+          "bytes": 82106,
+          "sha256": "b0dafb2a3fd2d9204deb075ed2cb2d74b6496523bb5d4867a2f4a3d9758a6314"
+        },
+        {
+          "path": "doc/src/sgml/explicit-locking.sgml",
+          "url": "https://raw.githubusercontent.com/postgres/postgres/86848d19bdbbf0daac6ca1b92a8885179cae8db5/doc/src/sgml/explicit-locking.sgml",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "path": "COPYRIGHT",
+          "url": "https://raw.githubusercontent.com/postgres/postgres/86848d19bdbbf0daac6ca1b92a8885179cae8db5/COPYRIGHT",
+          "status": 200,
+          "bytes": 1198,
+          "sha256": "3d6af92ff8a4c2cdf69afb1cf44edea727922f5cd0cf8b5f72b11cdecac8fdfd"
+        }
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "name": "Kafka",
+      "repository": "apache/kafka",
+      "commit": "f7a6dfe076929c3b761bfb9fbb97f786ff9503e8",
+      "branch": "refs/heads/trunk",
+      "files": [
+        {
+          "path": "clients/src/main/java/org/apache/kafka/clients/consumer/KafkaConsumer.java",
+          "url": "https://raw.githubusercontent.com/apache/kafka/f7a6dfe076929c3b761bfb9fbb97f786ff9503e8/clients/src/main/java/org/apache/kafka/clients/consumer/KafkaConsumer.java",
+          "status": 200,
+          "bytes": 127457,
+          "sha256": "a04b3c07a1581e8d5d0b1ebc90290a5c9f1568469a8f7cba52c18a7c6dab7960"
+        },
+        {
+          "path": "clients/src/main/java/org/apache/kafka/clients/producer/KafkaProducer.java",
+          "url": "https://raw.githubusercontent.com/apache/kafka/f7a6dfe076929c3b761bfb9fbb97f786ff9503e8/clients/src/main/java/org/apache/kafka/clients/producer/KafkaProducer.java",
+          "status": 200,
+          "bytes": 105772,
+          "sha256": "cde4a466760271846b02ba853064ecdb20b285e1f2fe4374a89308e81c73d05f"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/apache/kafka/f7a6dfe076929c3b761bfb9fbb97f786ff9503e8/LICENSE",
+          "status": 200,
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "name": "OpenTelemetry GenAI",
+      "repository": "open-telemetry/semantic-conventions",
+      "commit": "331541c4057c53d133c32efadaa7b656636eda77",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "docs/gen-ai/README.md",
+          "url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/331541c4057c53d133c32efadaa7b656636eda77/docs/gen-ai/README.md",
+          "status": 200,
+          "bytes": 404,
+          "sha256": "76770ac8a5dda2398290bb8fa7d1c7eb3f03f1b725cb5bc9e3f5669ffde3a7cd"
+        },
+        {
+          "path": "docs/gen-ai/gen-ai-spans.md",
+          "url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/331541c4057c53d133c32efadaa7b656636eda77/docs/gen-ai/gen-ai-spans.md",
+          "status": 200,
+          "bytes": 396,
+          "sha256": "a9898757b05a1c3e0aaa18d54140171d575717c8f7a59a07780e825e17847e99"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/331541c4057c53d133c32efadaa7b656636eda77/LICENSE",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "name": "Unstructured",
+      "repository": "Unstructured-IO/unstructured",
+      "commit": "d4008b99a12f2f417f3270711bd37d89d0d7f1be",
+      "branch": "refs/heads/main",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/Unstructured-IO/unstructured/d4008b99a12f2f417f3270711bd37d89d0d7f1be/README.md",
+          "status": 200,
+          "bytes": 20063,
+          "sha256": "1bfbe83efecca7e534636346d6f91792df6db63bb4e4f9949e6866d02b6d5db0"
+        },
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/Unstructured-IO/unstructured/d4008b99a12f2f417f3270711bd37d89d0d7f1be/LICENSE.md",
+          "status": 200,
+          "bytes": 11360,
+          "sha256": "4b190a3ffeb6b8800a6fd99bd5e1fb147e0a9f66984f4f5f8232a926de4fc939"
+        }
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "name": "FlagEmbedding",
+      "repository": "FlagOpen/FlagEmbedding",
+      "commit": "fd1a2bdf69488ffebe0327999d4400d8c8058a0b",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md",
+          "status": 200,
+          "bytes": 22952,
+          "sha256": "46500109787496a729e233c6a74ac5be2148a48108ad26e39e7de964dc0f5ca3"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/LICENSE",
+          "status": 200,
+          "bytes": 1065,
+          "sha256": "587a673933425dbc36ec61268d3b954051b2d3ef3c9b322ede357976055ffdd5"
+        }
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "name": "pgvector",
+      "repository": "pgvector/pgvector",
+      "commit": "f37c13f68b57d2c3472b2214fbcff699d6d34876",
+      "branch": "refs/heads/master",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/pgvector/pgvector/f37c13f68b57d2c3472b2214fbcff699d6d34876/README.md",
+          "status": 200,
+          "bytes": 42305,
+          "sha256": "19cebadeeb8d3181d01ef00399674ec41bd2f0363850cdccc7685d4260c5a1c6"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/pgvector/pgvector/f37c13f68b57d2c3472b2214fbcff699d6d34876/LICENSE",
+          "status": 200,
+          "bytes": 1104,
+          "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+        },
+        {
+          "path": "src/hnswscan.c",
+          "url": "https://raw.githubusercontent.com/pgvector/pgvector/f37c13f68b57d2c3472b2214fbcff699d6d34876/src/hnswscan.c",
+          "status": 200,
+          "bytes": 8306,
+          "sha256": "fd1dd993f51b05eed167c7ce12eb11ad3ad9a951af70ad7d99b321e18bc6180d"
+        }
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "name": "Qdrant",
+      "repository": "qdrant/qdrant",
+      "commit": "016542aa5deb6c66380bb137badf73d54f742bde",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/qdrant/qdrant/016542aa5deb6c66380bb137badf73d54f742bde/README.md",
+          "status": 200,
+          "bytes": 11560,
+          "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/qdrant/qdrant/016542aa5deb6c66380bb137badf73d54f742bde/LICENSE",
+          "status": 200,
+          "bytes": 11351,
+          "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+        }
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "name": "OpenSearch",
+      "repository": "opensearch-project/OpenSearch",
+      "commit": "feaa13b2f4bdb2e6c680e2446eb1f2896186ec9a",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/opensearch-project/OpenSearch/feaa13b2f4bdb2e6c680e2446eb1f2896186ec9a/README.md",
+          "status": 200,
+          "bytes": 3044,
+          "sha256": "8bac2d530323f045148b14d9d5f6616bf7c20038ce1b956ade75fd0aaa30c517"
+        },
+        {
+          "path": "LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/opensearch-project/OpenSearch/feaa13b2f4bdb2e6c680e2446eb1f2896186ec9a/LICENSE.txt",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "name": "Temporal CLI",
+      "repository": "temporalio/cli",
+      "commit": "4d3598e313812b21fdecf9b3053c720e6326c046",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/temporalio/cli/4d3598e313812b21fdecf9b3053c720e6326c046/README.md",
+          "status": 200,
+          "bytes": 1761,
+          "sha256": "b88333fd45f8f6171ebfb117c32a7a3fc5b8f93d2388916f87d7ea63dfdc2284"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/temporalio/cli/4d3598e313812b21fdecf9b3053c720e6326c046/LICENSE",
+          "status": 200,
+          "bytes": 1108,
+          "sha256": "692992f9a78f825b332d03f9b98aeb6cd5823ae884572af02e79f17327aa0612"
+        }
+      ]
+    },
+    {
+      "id": "SRC-27",
+      "name": "vLLM",
+      "repository": "vllm-project/vllm",
+      "commit": "074c83a09a0b872cec92e244d91adf2b3c55e41b",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/074c83a09a0b872cec92e244d91adf2b3c55e41b/README.md",
+          "status": 200,
+          "bytes": 5772,
+          "sha256": "4dc7399323b9660117f8cc1226afb7a81cdbb912dbb4ae74b66d89052417d11c"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/vllm-project/vllm/074c83a09a0b872cec92e244d91adf2b3c55e41b/LICENSE",
+          "status": 200,
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "SRC-28",
+      "name": "DeepSeek V3",
+      "repository": "deepseek-ai/DeepSeek-V3",
+      "commit": "9b4e9788e4a3a731f7567338ed15d3ec549ce03b",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3/9b4e9788e4a3a731f7567338ed15d3ec549ce03b/README.md",
+          "status": 200,
+          "bytes": 20851,
+          "sha256": "1f766f151bb4d501b18c9d1e229ac25682c68c75893d6d3bc9734e2a60125c0e"
+        },
+        {
+          "path": "LICENSE-CODE",
+          "url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3/9b4e9788e4a3a731f7567338ed15d3ec549ce03b/LICENSE-CODE",
+          "status": 200,
+          "bytes": 1064,
+          "sha256": "1c8f573e830ca9b3ebfeb7ace1823146e22b66f99ee223840e7637c9e745e1c7"
+        },
+        {
+          "path": "LICENSE-MODEL",
+          "url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3/9b4e9788e4a3a731f7567338ed15d3ec549ce03b/LICENSE-MODEL",
+          "status": 200,
+          "bytes": 13759,
+          "sha256": "ccfee4895df06bcab524151c278e8dde88bbe76165a24ecbcbcf9fafd71fd2b3"
+        }
+      ]
+    }
+  ],
+  "blocked_official_doc_examples": [
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/durable-execution",
+      "error": "proxy tunnel 403 Forbidden"
+    }
+  ]
+}

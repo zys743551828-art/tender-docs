@@ -1,0 +1,104 @@
+{
+  "database": "tender_checks_technical_scale01",
+  "profiles": {
+    "init": ".local/technical_scale01-init.env",
+    "business": ".local/technical_scale01-checks.env",
+    "model_train": ".local/technical_scale01-model_train.env",
+    "model_evaluate": ".local/technical_scale01-model_evaluate.env",
+    "model_score": ".local/technical_scale01-model_score.env"
+  },
+  "ordered_sql": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "path": "packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003"
+    },
+    {
+      "path": "deploy/sql/model-governance.sql",
+      "sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a"
+    },
+    {
+      "path": "deploy/sql/model-governance-release.sql",
+      "sha256": "80d5c94246bbfe4c47f320c9ad749eea2328a0c66b30a5614556168e0398d936"
+    },
+    {
+      "path": "deploy/sql/historical-backtest.sql",
+      "sha256": "e811920d92478fd6e20a9b0d200c2769396eae92deee142a0cc2fbafd0086c44"
+    },
+    {
+      "path": "packages/lifecycle/batch_closures.sql",
+      "sha256": "0979d5dadedecfd9aab194684bbcbd1eddbae6c60ff74355a5b5ea23a6a2db73"
+    },
+    {
+      "path": "packages/assistant/sql/assistant.sql",
+      "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9"
+    },
+    {
+      "path": "packages/word_intake/schema.sql",
+      "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe"
+    },
+    {
+      "path": "deploy/sql/historical-input-qualification.sql",
+      "sha256": "a5d3823cfa1f9cd360649114da8026a07bf5b93b13ec900c22226117137c1052"
+    },
+    {
+      "path": "deploy/sql/score-execution.sql",
+      "sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be"
+    },
+    {
+      "path": "deploy/sql/technical-scale-authority.sql",
+      "sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad"
+    }
+  ],
+  "logins": {
+    "api": "twb_checks_technical_scale01_8e556483_api",
+    "worker": "twb_checks_technical_scale01_8e556483_worker",
+    "research_worker": "twb_checks_technical_scale01_8e556483_research_worker",
+    "score_read": "twb_checks_technical_scale01_8e556483_score_read",
+    "model_train": "twb_checks_technical_scale01_8e556483_model_train",
+    "model_evaluate": "twb_checks_technical_scale01_8e556483_model_evaluate",
+    "model_score": "twb_checks_technical_scale01_8e556483_model_score"
+  },
+  "object_store_prefix": "workbench-research-checks/7bf77c42e31e8c0b9b666280/check-environments/c395104b39385597f740b69706a07abd/check-environments/c3a2d3f7f978e7cd49dfa456268cf89c/",
+  "kafka_bootstrap": "",
+  "compose_project": null,
+  "app_origin": "http://127.0.0.1:5178",
+  "all_created_login_connections_verified_before_business_profiles": true,
+  "no_business_process_started": true,
+  "helper_candidate_sha256": "632f7419d561b00e1d060e87cd9ccca1a99f86185e6ba20653ac12ffb68b54ab",
+  "sql_c_sha256": "ba5bd56c4ae03628cfac01d085cf8eb10fa95b094d3d554f2e866db10bb5dfad",
+  "sql_f_sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be",
+  "runtime_profile": ".local/technical_scale01-runtime.env",
+  "provider_key_in_runtime": false,
+  "model_purpose_dsns_in_business_runtime": false,
+  "kafka_disabled": true,
+  "consumers_started": false,
+  "scope": "Initialization only; technical scale authority and real PG/ASGI still require execution"
+}

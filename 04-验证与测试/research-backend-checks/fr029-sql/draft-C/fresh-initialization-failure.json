@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-16T19:58:19.192439+00:00",
+  "sql_sha256": "95cd518b35f88cc7208d6add50dc0b19bc1297715169a549a9252c023da85ef0",
+  "database": "tender_checks_model_governance",
+  "result": "extension_syntax_failed",
+  "base_initialization": "completed; new isolated database and four restricted LOGINs",
+  "extension_transaction": "rolled back",
+  "error_class": "psycopg.errors.SyntaxError",
+  "error_summary": "syntax error at end of input, finish_job line349 CASE expression within PLpgSQL IF",
+  "business_configuration_published": false,
+  "business_records_created": 0,
+  "existing_business_databases_modified": false,
+  "paid_calls": 0,
+  "next_action": "Owner preserves C, submits exact D syntax delta for architecture review; use another new database after review"
+}

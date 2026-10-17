@@ -1,0 +1,19 @@
+{
+  "candidate_sha256": "b869f52da0ce31d56b48fe2ae51acd4a5aecbc63dbb94a8e08e45e4eadd7caae",
+  "conclusion": "blocked_new_project_retrieval_API_by_RAG03_RR01",
+  "blocking_findings": 1,
+  "normal_RC_cases_passed": 3,
+  "independent_RR_counterexample_reproduced": true,
+  "static_source_count": 32,
+  "paid_calls": 0,
+  "consumers_started": false,
+  "private_config_read": false,
+  "runtime": "explicit synthetic loopback HTTP; actual BGE not rerun",
+  "evidence_sha256": {
+    "candidate03-independent-result.json": "b53a48f145920df8b0f1d8ed71b1711027166b6b0b9bf9620247f61e4d756010",
+    "candidate03-RR-result.json": "889cb974929c0cb4e13fe50d66ab473e18bdf53311e5b2275731237076ba57ee",
+    "candidate03-independent-junit.xml": "a4fb862cbf3999f63728d65a231d9c119170e5334538d8c48fb3b68453914215",
+    "candidate03-RR-junit.xml": "3f8f46a7b5eccd15f1a51701cc89923be3be37e3ecfcf6290074ecb71c439522",
+    "candidate03-RR-counterexample.json": "fe57df2ae0c7a044718f3e4ed7a908af50dba00634f2e6cfa4f51fef816ecd16"
+  }
+}

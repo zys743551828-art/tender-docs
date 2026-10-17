@@ -1,0 +1,23 @@
+{
+  "source_url": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "observed_at": "2026-10-16T17:17:02.708034+00:00",
+  "source_sha256": "540aaf6e09f617eeb45112fb7a317acf69975de20f7c25205a28014cefcb0f55",
+  "currency": "USD",
+  "unit_tokens": 1000000,
+  "model": "deepseek-flash",
+  "observed_model_version": "DeepSeek-V4.1-Flash",
+  "peak": {
+    "input_cache_miss": "0.30",
+    "input_cache_hit": "0.006",
+    "output": "1.20"
+  },
+  "off_peak": {
+    "input_cache_miss": "0.15",
+    "input_cache_hit": "0.003",
+    "output": "0.60"
+  },
+  "budget_policy": "Conservative peak and cache-miss upper bound. Estimated amounts are not the actual supplier bill.",
+  "served_weights_immutable_verified": false,
+  "research_profile_digest": "276a2c953aa86d935d46aabba432f7503ab6ce8081a9375b490ecb2172fd4d48",
+  "formal_model_eligible": false
+}

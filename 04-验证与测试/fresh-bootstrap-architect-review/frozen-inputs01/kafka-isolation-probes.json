@@ -1,0 +1,28 @@
+{
+  "status": "passed_dedicated_broker_metadata",
+  "bootstrap": "127.0.0.1:19096",
+  "cluster_id": "B9Vgtast1zru9lvefhjzIg",
+  "old_broker_cluster_id": "externalWorkBench2026QA",
+  "cluster_ids_distinct": true,
+  "old_broker_19095_available": true,
+  "new_broker_19096_available": true,
+  "new_project": "tender-workbench-combined01",
+  "new_volume": "tender-workbench-combined01_kafka_data",
+  "new_container": "tender-workbench-combined01-kafka-1",
+  "image": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+  "consumer_groups": 0,
+  "application_messages_produced": 0,
+  "topics": [
+    "tender.domain.events.v1",
+    "tender.task.dead-letter.v1",
+    "tender.task.document.v1",
+    "tender.task.export.v1",
+    "tender.task.research.v1",
+    "tender.task.review.v1"
+  ],
+  "topic_topology_and_config_verified_by_initializer": {
+    "topics_verified": 6,
+    "scope": "development single broker metadata"
+  },
+  "only_kafka_started_by_this_candidate": true
+}

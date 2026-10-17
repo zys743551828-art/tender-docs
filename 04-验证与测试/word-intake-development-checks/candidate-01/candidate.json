@@ -1,0 +1,200 @@
+{
+  "candidate": "word-intake-development-01",
+  "created_at": "2026-10-17T02:28:43.560862+00:00",
+  "scope": "local isolated synthetic Word intake/render slice; awaiting independent review and main integration",
+  "sql": {
+    "path": "packages/word_intake/schema.sql",
+    "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe"
+  },
+  "renderer": {
+    "private_profile_path": "/workspace/tender-workbench/.local/word-render-profile-dev04.json",
+    "profile_digest": "d2dc895ab6c4002832f25cd6e00c8d98de8b5ff8d64cc873eae1fe043bc6ee11",
+    "public_identity_path": "renderer-profile.json"
+  },
+  "sources": [
+    {
+      "path": "apps/api/word_intake_routes.py",
+      "sha256": "0f28b34ce6491c9062d38c3c467337fc1ab35d9093799194221123738cd9e7c4",
+      "frozen_path": "frozen-inputs/apps/api/word_intake_routes.py"
+    },
+    {
+      "path": "apps/worker/word_intake_handlers.py",
+      "sha256": "832bd59675b2d6fd494eb52eab32aad8948003931b1aeffe81d7bb12db229e1e",
+      "frozen_path": "frozen-inputs/apps/worker/word_intake_handlers.py"
+    },
+    {
+      "path": "packages/word_intake/IMPLEMENTATION.md",
+      "sha256": "71c9f28094c3baacb22fa2a7cc1dacb62d40b1b18623b9602fccb1397b4c6ef2",
+      "frozen_path": "frozen-inputs/packages/word_intake/IMPLEMENTATION.md"
+    },
+    {
+      "path": "packages/word_intake/__init__.py",
+      "sha256": "49576cdcfd69173cb3906483103c3e4e9c05f9f9879a0fc4c7748dd9bfdc8b8c",
+      "frozen_path": "frozen-inputs/packages/word_intake/__init__.py"
+    },
+    {
+      "path": "packages/word_intake/contracts.py",
+      "sha256": "58ec38a8078d9d5dc75ec0c6ada2d3c2930fc8b9cc1a799c708659a2ef593af4",
+      "frozen_path": "frozen-inputs/packages/word_intake/contracts.py"
+    },
+    {
+      "path": "packages/word_intake/inspection.py",
+      "sha256": "9f2b092d16acab5a11cc27ba70f9970f83c8c959319552658ec7c0ebfd16fa47",
+      "frozen_path": "frozen-inputs/packages/word_intake/inspection.py"
+    },
+    {
+      "path": "packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+      "frozen_path": "frozen-inputs/packages/word_intake/renderer.py"
+    },
+    {
+      "path": "packages/word_intake/repository.py",
+      "sha256": "cf9d670f172bc6ca0a5ca2d2b932550f9559e8c361a3a29168bbd077bcf13cc8",
+      "frozen_path": "frozen-inputs/packages/word_intake/repository.py"
+    },
+    {
+      "path": "packages/word_intake/sandbox_runner.py",
+      "sha256": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289",
+      "frozen_path": "frozen-inputs/packages/word_intake/sandbox_runner.py"
+    },
+    {
+      "path": "packages/word_intake/schema.sql",
+      "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe",
+      "frozen_path": "frozen-inputs/packages/word_intake/schema.sql"
+    },
+    {
+      "path": "tests/test_word_intake.py",
+      "sha256": "abaed2d1d8dd6a2050f2b1fb6fe66d8a4816cce34fda56c026ffcf0387106af5",
+      "frozen_path": "frozen-inputs/tests/test_word_intake.py"
+    },
+    {
+      "path": "tests/test_word_intake_integration.py",
+      "sha256": "089168cb46c0d6cedfec988f335b7518cb6283f0420fb134b641390c25b1a319",
+      "frozen_path": "frozen-inputs/tests/test_word_intake_integration.py"
+    }
+  ],
+  "checks": {
+    "pytest": {
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "unit": 18,
+      "restricted_pg_http_and_optional_real_docker": 5
+    },
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed; 8 source files",
+    "bandit_findings": 0,
+    "real_docker_failure_delta": {
+      "profile_digest": "d2dc895ab6c4002832f25cd6e00c8d98de8b5ff8d64cc873eae1fe043bc6ee11",
+      "provider_requests": 0,
+      "business_documents": 0,
+      "checks": [
+        {
+          "name": "missing_font",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_SUBSTITUTED"
+          ]
+        },
+        {
+          "name": "missing_glyph",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_GLYPH_UNAVAILABLE"
+          ]
+        },
+        {
+          "name": "timeout-fault-injection",
+          "state": "failed",
+          "error_code": "WORD_CONVERSION_TIMEOUT",
+          "cleanup": true
+        }
+      ]
+    },
+    "provider_requests": 0,
+    "business_documents": 0,
+    "storage_transport": "explicit in-memory test transport; not OSS qualification",
+    "kafka_consumer_started": false
+  },
+  "evidence": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "078288a2cf579fed9a4d2f14ea514b9e7234130ed95983c593988784aa37c7aa"
+    },
+    {
+      "path": "bandit-stderr.txt",
+      "sha256": "5c7e045d18c9e65d2a34d0d50e6c52346b2ca7a444617b99e999918e72643329"
+    },
+    {
+      "path": "bandit.json",
+      "sha256": "3d2395d590f87e9c9857bcc44623b6e33063c3e8c61c37fe9539bdf513c5ebc2"
+    },
+    {
+      "path": "failure-checks/missing_font.docx",
+      "sha256": "105bc7b62e6b3e5c0d0be67f4b2adb3a01b2a3e0e253790c941834e099626360"
+    },
+    {
+      "path": "failure-checks/missing_font.json",
+      "sha256": "7704a8fb3b507b55f82be0ea30e0f27a1574bc29d1deef024001fc61039fe759"
+    },
+    {
+      "path": "failure-checks/missing_font.pdf",
+      "sha256": "fd1a9e3e45254276b10236f7d05934074b79ea23a2f7bfebd965278b14f07d89"
+    },
+    {
+      "path": "failure-checks/missing_glyph.docx",
+      "sha256": "f381f91db2c1d88533ee69ba2b3a54ef82d78cd9a1cb76cf3a2f3c1d5831627e"
+    },
+    {
+      "path": "failure-checks/missing_glyph.json",
+      "sha256": "94cc0f4c2c67e5ea50449d0096c972bf58c30f130d04bf52c2eeee6e2524f2df"
+    },
+    {
+      "path": "failure-checks/missing_glyph.pdf",
+      "sha256": "47ba41ab4f91478cd995e53f6300ea3c000d9fbece33f0c1d29bc2ca380378cc"
+    },
+    {
+      "path": "failure-checks/summary.json",
+      "sha256": "9d1e42d49a0af8168decc791850455a06ccdb90fdcb590860a1fb46104ee2c11"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.docx",
+      "sha256": "4c5feb7a20cef99fdf1fb46ff860fab94418ecfa8d17ab3f4937f2558d865b5b"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.json",
+      "sha256": "cd4f6893bc8185d14369f7ef05a5504f172f2700771627b3ed11c3e17249e02e"
+    },
+    {
+      "path": "real-word-chain.json",
+      "sha256": "78c5a3a1c317614a766870bdf6f559a4fe4c62dfc9ce65904f265aa52f832b56"
+    },
+    {
+      "path": "real-word-output.pdf",
+      "sha256": "cbd6d13c99277e6da07532d69133924ef9c14396f2a199d01011e7c0f05f1627"
+    },
+    {
+      "path": "real-word-source.docx",
+      "sha256": "74150659c38b110fdcc9f6d4094d3959c610511fe7178da7c8468a20cacf6326"
+    },
+    {
+      "path": "renderer-profile.json",
+      "sha256": "bdbb3500ddc30bafd0a1263a0e2e6bb148ec0d61ae5b2464797aa4d3c7f7d4f5"
+    },
+    {
+      "path": "result.xml",
+      "sha256": "a609949c0895c069488798fbf91defacf75445d6e8ad50c43a1dcc1e376497fb"
+    }
+  ],
+  "pending": [
+    "main upload/API/Worker registration and actual object storage integration",
+    "Kafka lease/fence/cancel integration",
+    "canonical converted PDF adoption and stale-source filtering",
+    "independent architecture/QA/product/user acceptance",
+    "complex Word layout and structured preview/import",
+    "business accuracy and production sandbox/capacity qualification"
+  ]
+}

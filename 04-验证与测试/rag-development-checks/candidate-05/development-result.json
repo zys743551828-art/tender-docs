@@ -1,0 +1,54 @@
+{
+  "observed_at": "2026-10-16T19:39:00.549462+00:00",
+  "result": "passed",
+  "real_local_model_pg_tests": 9,
+  "command": "deploy/run.py --env-file .local/rag-checks.env -- env RUN_RAG_REAL=1 pytest tests/test_rag_staged_indexing.py tests/test_rag_staged_api.py tests/test_rag_replay_guard.py tests/test_rag_real_integration.py -q",
+  "scope": "Two new task-compute index boundary paths plus seven affected real RAG regressions; synthetic parse-table inputs, not original document parsing or production quality",
+  "checks": [
+    "actual /identity /tokenize /lexical /embed have zero task-owned PG connections and no live prior read PID",
+    "publication invokes no model RPC",
+    "withdraw original during embedding rejects publication and leaves zero chunks",
+    "task profile mismatch opens no input-read connection"
+  ],
+  "paid_calls": 0,
+  "kafka_consumers_started": 0,
+  "shared_live_runtime_modified": false,
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed (2 changed runtime files and new test)",
+    "bandit": "passed (2 changed runtime files)"
+  },
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/packages/rag/indexing.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/tasks.py",
+      "sha256": "154b52e2aa1e6f0b4d5a8cfa333de88767e3a6ef36205938ac7d8e4a766fda7f",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/packages/rag/tasks.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_staged_indexing.py",
+      "sha256": "73dbbbe66e75ef52fc41bba61c1acb48c5e0611af8af89a54d62932d227659c8",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_staged_indexing.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_real_integration.py",
+      "sha256": "b41fab929f2f2e12f129cba3d563e3b83cdae3d6b9b1c3f20a56689556d5cf26",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_real_integration.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_staged_api.py",
+      "sha256": "f69f2cc69ac5dcb32e99ac0e7295b026db59b7dfd8f703d928c380ff1b66a812",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_staged_api.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_replay_guard.py",
+      "sha256": "224db47bccbab04e01387f182b9cb7c6e2dd89d237fbc3e080b62750d2e7f192",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_replay_guard.py"
+    }
+  ]
+}

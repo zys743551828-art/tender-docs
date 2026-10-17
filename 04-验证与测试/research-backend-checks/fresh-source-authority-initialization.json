@@ -1,0 +1,63 @@
+{
+  "database": "tender_research_checks",
+  "initialization_only_owner": true,
+  "kafka_consumers_started": 0,
+  "business_roles": [
+    {
+      "role": "api",
+      "current_user": "twb_research_checks_api",
+      "rolsuper": false,
+      "capability": true,
+      "authority_read": true,
+      "authority_write": true,
+      "qualify": false,
+      "capture": true
+    },
+    {
+      "role": "worker",
+      "current_user": "twb_research_checks_worker",
+      "rolsuper": false,
+      "capability": true,
+      "authority_read": false,
+      "authority_write": false,
+      "qualify": false,
+      "capture": false
+    },
+    {
+      "role": "research_worker",
+      "current_user": "twb_research_checks_research_worker",
+      "rolsuper": false,
+      "capability": true,
+      "authority_read": false,
+      "authority_write": false,
+      "qualify": true,
+      "capture": false
+    },
+    {
+      "role": "score_read",
+      "current_user": "twb_research_checks_score_read",
+      "rolsuper": false,
+      "capability": true,
+      "authority_read": false,
+      "authority_write": false,
+      "qualify": false,
+      "capture": false
+    }
+  ],
+  "tables": 106,
+  "unknown_scope_denied": true,
+  "sql_inputs": [
+    {
+      "path": "/workspace/tender-workbench/deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/sql/research-source-qualification.sql",
+      "sha256": "0a587746a1f211dd39e48c8d9da42433ea5ac65d71334015e8521d3ad107a3dd"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    }
+  ]
+}

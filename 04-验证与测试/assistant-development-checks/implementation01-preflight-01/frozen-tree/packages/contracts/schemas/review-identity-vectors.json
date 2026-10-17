@@ -1,0 +1,292 @@
+{
+  "protocol": "review-content/1",
+  "vectors": [
+    {
+      "name": "initial",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "b3dd4199d2805c5ccf6870d526e4af161c6a7c8f4920f240b6d5334f87430a51",
+        "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+        "execution_digest": "85ef327cf53d16b4b69e2f44b3999b12f2caab2684e74a591dfb5d1e36461280"
+      }
+    },
+    {
+      "name": "later_request",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:01Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "6be0b4657b802974c18400fa4e7ad840956fc5e55f71a3fc5abeafdb22ef89c2",
+        "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+        "execution_digest": "85ef327cf53d16b4b69e2f44b3999b12f2caab2684e74a591dfb5d1e36461280"
+      }
+    },
+    {
+      "name": "explicit_rerun",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": "00000000-0000-4000-8000-000000000009",
+      "expected": {
+        "manifest_digest": "b3dd4199d2805c5ccf6870d526e4af161c6a7c8f4920f240b6d5334f87430a51",
+        "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+        "execution_digest": "96982b32025ee0571cd9d624bdc4c543c68235e9e9f27314c756bb1348d0c2d0"
+      }
+    },
+    {
+      "name": "effective_time_changed",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T02:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "656dc662cb5e446124d59f974d5cdd8c7bda635fb7b39b08dd76b1ea1c014ecf",
+        "input_digest": "e63de73139693e0a32e8ebc5ab1707c2b5664b403e8afa0595838c8617bd74c0",
+        "execution_digest": "c4d19963d24351c132af7d1aa4ee462efeb0d6ba0dcf24fbac0c1b24198ca617"
+      }
+    },
+    {
+      "name": "source_effect_changed",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "6197f53835a6b71faa30a3120d27839cfbd073cdde566d5c69d93db693641f6d",
+        "input_digest": "856ef0f54fdb5da7b15daff2aaabd6b840bc88bacf1d8d4590844fa48319e480",
+        "execution_digest": "ed045280713752f341b76cf4e246817b9fface247dc1b4b76ddb90a3b46bdd62"
+      }
+    },
+    {
+      "name": "method_changed",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000004",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "1111111111111111111111111111111111111111111111111111111111111111",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "db043134b1994ea11df180b78479c95ec250ae16dd05265f8cebb98d0d5f483f",
+        "input_digest": "b25eb98d44e7a2ea006e48be56c600c19f795c65805ee05cba8590ac6d7690e5",
+        "execution_digest": "4ead2487006677081ff0c152c91a5a6120c726daaf4e0a7a23749f50378f21b3"
+      }
+    },
+    {
+      "name": "rules_changed",
+      "manifest": {
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "body_version_id": "00000000-0000-4000-8000-000000000002",
+        "material_snapshot_id": "00000000-0000-4000-8000-000000000003",
+        "material_revision": 2,
+        "rule_set_id": "00000000-0000-4000-8000-000000000011",
+        "fact_set_id": null,
+        "parse_run_ids": [
+          "00000000-0000-4000-8000-000000000006",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "policy_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "purpose": "compliance_and_scoring",
+        "source_refs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000007",
+            "digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "kind": "body",
+            "known_at": "2026-10-01T00:00:00Z",
+            "lineage_manifest_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+          }
+        ],
+        "content_checks": {
+          "consistency": true,
+          "scope_residue": true
+        },
+        "as_of": "2026-10-16T01:00:00Z",
+        "evaluation_context_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "evidence_manifest_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "frozen_at": "2026-10-16T01:00:00Z"
+      },
+      "rerun_nonce": null,
+      "expected": {
+        "manifest_digest": "297d7bd023513b0101c542c640314af5988c789a5eb18e57643b511e598ee6d5",
+        "input_digest": "6a9ff4a7ace908211421a0debc59319c30d88ca39979c5e65c6672fcaa151e89",
+        "execution_digest": "357dd1cc6d429b6c09a0ec54acf4cf346133f0d29bd8f4a1f70a22e5b18db6fc"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "actual same-connection initializer and nonowner pgvector capability mechanism; synthetic vector only",
+  "extension_schema": "design",
+  "before_minimal_grant": {
+    "sqlstate": "42501",
+    "function_denied": true
+  },
+  "minimal_grant_sql": "GRANT EXECUTE ON FUNCTION design.vector(design.vector,integer,boolean),design.vector_norm(design.vector),design.cosine_distance(design.vector,design.vector) TO tender_worker;",
+  "after": {
+    "norm": 1.0,
+    "distance": 0.0
+  },
+  "invalid_vectors": [
+    {
+      "case": "wrong_dimensions",
+      "rejected_sqlstate": "22000"
+    },
+    {
+      "case": "zero_norm",
+      "rejected_sqlstate": "23514"
+    }
+  ],
+  "score_and_research_no_vector_grant": true,
+  "worker_labels_and_model_publication_still_denied": true,
+  "model_inference": false,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "inputs": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "not_claimed": [
+    "real BGE insertion",
+    "API retrieval",
+    "formal scoring"
+  ]
+}

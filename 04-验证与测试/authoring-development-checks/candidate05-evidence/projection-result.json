@@ -1,0 +1,27 @@
+{
+  "source_delta": [
+    "apps/api/authoring.py",
+    "packages/authoring/README.md",
+    "packages/authoring/contracts.py",
+    "tests/test_authoring.py",
+    "tests/test_authoring_integration.py"
+  ],
+  "actual_contract": "BuildView.follow_up required strict BuildFollowUpView, shared with BuildPage",
+  "tests": {
+    "unit": 15,
+    "integration": 18
+  },
+  "real_nonowner_PG_S3_LO_HTTP_engine": true,
+  "state_paths": [
+    "not_requested",
+    "pending",
+    "adopted",
+    "needs_selection",
+    "failed"
+  ],
+  "paid_calls": 0,
+  "review_completion_claimed": false,
+  "historical04_sources_and_evidence_unchanged": true,
+  "projection_database_isolation": "repeatable read read only, no adoption effect during GET",
+  "dependent_helper_sha256": "7b64d50e4b52392283a0fa6202a1e2b378e3e582211655632da78b33f4a183f5"
+}

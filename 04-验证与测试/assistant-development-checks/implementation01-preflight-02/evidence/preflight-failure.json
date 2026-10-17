@@ -1,0 +1,8 @@
+{
+  "type": "moving-shared-dependency-preflight",
+  "observed": "Unfrozen backend07 engine.work_error blocked assistant/1 read-only query on archived project; 202 accepted, acquire None",
+  "source": "backend07 WIP; not a frozen release or assistant implementation acceptance baseline",
+  "result": "19 passed + 1 failed, remaining selected tests not run",
+  "resolution": "Backend owner will exempt assistant/1 while guarding authoring-generate/1 in 07; assistant01 binds backend05 exact engine bytes via explicit adapter, shared07 integration separately required",
+  "no_database_or_permission_change": true
+}

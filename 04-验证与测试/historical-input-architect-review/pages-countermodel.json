@@ -1,0 +1,34 @@
+{
+  "candidate_sha256": "2268c35a4822bf2adef4663485a439317ca6776e65d2ed307066dfe7d0831510",
+  "mode": "actual nonowner PostgreSQL read-only scalar countermodel, not full seal_input execution",
+  "results": [
+    {
+      "physical_pages": [
+        1,
+        2
+      ],
+      "candidate_guard": true,
+      "exact_guard": true
+    },
+    {
+      "physical_pages": [
+        2,
+        3
+      ],
+      "candidate_guard": true,
+      "exact_guard": false
+    },
+    {
+      "physical_pages": [
+        1,
+        3
+      ],
+      "candidate_guard": true,
+      "exact_guard": false
+    }
+  ],
+  "DDL": 0,
+  "paid_calls": 0,
+  "object_requests": 0,
+  "consumers": 0
+}

@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -1,4 +1,4 @@
+--- Score denominator DRAFT B. Static review, then NEW fresh DB only.
++-- Score denominator DRAFT C. Static review, then NEW fresh DB only.
+ -- Requires the exact Score F, Scale C and StageA D baselines; changes none of them.
+ BEGIN;
+ CREATE SCHEMA score_basis;
+@@ -48,6 +48,7 @@
+   IF NOT FOUND OR review IS NULL THEN RAISE EXCEPTION 'basis_strict_member_missing' USING ERRCODE='55000'; END IF;
+   SELECT i.material_snapshot_id,(i.manifest->>'rule_set_id')::uuid,i.method_digest,i.as_of INTO material,ruleset,method,boundary
+    FROM design.review_runs r JOIN design.review_inputs i ON i.id=r.input_id WHERE r.id=review AND r.bid_id=bid;
++  SELECT experiment.method_digest INTO method FROM model_governance.cohorts c JOIN design.research_runs run ON run.id=c.research_run_id JOIN design.experiments experiment ON experiment.id=run.experiment_id WHERE c.id=cohort;
+   purpose:='strict_prebid';
+  ELSIF score_input IS NOT NULL THEN
+   IF NOT score_execution.current_input(score_input) THEN RAISE EXCEPTION 'basis_score_input_stale' USING ERRCODE='55000'; END IF;

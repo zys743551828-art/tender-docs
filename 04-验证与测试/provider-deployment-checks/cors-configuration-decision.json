@@ -1,0 +1,13 @@
+{
+  "scope": "部署接入决策记录，未执行bucket设置写入",
+  "source": "PM在本子会话转述自动审批结果",
+  "attempted_action": "为真实OSS bucket写CORS规则",
+  "approval_outcome": "rejected",
+  "stated_reason": "用户未明确授权全局安全设置且存在服务端替代",
+  "bucket_cors_applied": false,
+  "dry_run_is_applied_configuration": false,
+  "read_only_actual_state": "404 NoSuchCORSConfiguration；见oss-cors-readonly.json",
+  "selected_implementation": "同源服务端对象传输，等待实际router冻结与联调",
+  "repeat_or_bypass_attempted_by_qa": false,
+  "new_chat_requests": 0
+}

@@ -1,0 +1,113 @@
+{
+  "scope": "public synthetic DOCX only; real nonowner PG frozen snapshot; explicit memory objects; no renderer/model/Kafka",
+  "bid_id": "304c4172-630e-411e-af44-5c22900fe402",
+  "draft_id": "f32a1704-d1ff-4881-95bd-9a92b9a98d96",
+  "input_id": "57383bb8-9567-470f-a79a-b09cb429ee7f",
+  "snapshot_id": "e1f131dd-7d9e-4ca1-ac7d-47ae8e6c315d",
+  "docx_digest": "2a55fbf83f243169fd36b00e5cf85c548df0e40f895bf7677a3a23a650b42b0a",
+  "byte_size": 3161,
+  "parts": [
+    "[Content_Types].xml",
+    "_rels/.rels",
+    "word/_rels/document.xml.rels",
+    "word/document.xml",
+    "word/footer.xml",
+    "word/header.xml",
+    "word/numbering.xml",
+    "word/styles.xml"
+  ],
+  "template_versions": {
+    "directory": "10b50ba4-1aaf-408a-93f9-5d2f2505ece7",
+    "style": "051ef9a2-d405-44e0-b0d6-4881cc03e44f"
+  },
+  "manifest": {
+    "snapshot_digest": "bdb401e01170f03f5279aecbcd63cdafc91c16237e8c17f4894cff52444cdff7",
+    "writer_digest": "75c209bad05371fe18e874f00525e972e0094e5e7647adc52a49aad5f38e4d9f",
+    "writer_kind": "structured_text/1",
+    "render_protocol": "word-docker-render/1",
+    "authoring_structure_digest": "7a7638e9cda7f28bf6be0d8a39e64a4b536f74667de4356581d120bcc0033b78",
+    "authoring_authority": {
+      "sources": [],
+      "format": {
+        "coverage": "manual_field_bindings_only",
+        "binding_manifest": [],
+        "conflicts": [],
+        "effective_config": {
+          "font": "Noto Sans CJK SC",
+          "page": "A4",
+          "cover_title": "公开合成投标正文",
+          "footer_text": "仅用于工程机制验证",
+          "header_text": "合成项目 · 施工组织",
+          "page_number": true,
+          "toc_enabled": true,
+          "cover_enabled": true,
+          "schema_version": 1,
+          "margin_top_twips": 1440,
+          "chapter_numbering": "decimal",
+          "margin_left_twips": 1080,
+          "margin_right_twips": 1440,
+          "margin_bottom_twips": 1440,
+          "font_size_halfpoints": 24,
+          "paragraph_after_twips": 0
+        },
+        "unjudged_rule_ids": [],
+        "rule_context_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "requires_ack": false,
+        "notice": "仅按人工有据绑定的字段优先应用；其他格式与暗标语义未自动核完，不代表要求或版面已通过",
+        "review_digest": "992ed4a6d3d2c84b2c3f8a68c0bbeac3efd3bec6f79cdee6e0c48e21733400d7"
+      }
+    },
+    "directory_template_version_id": "10b50ba4-1aaf-408a-93f9-5d2f2505ece7",
+    "style_template_version_id": "051ef9a2-d405-44e0-b0d6-4881cc03e44f",
+    "actual_page_ranges": null,
+    "formats": [
+      "docx"
+    ],
+    "follow_up": "none",
+    "template_version_id": "051ef9a2-d405-44e0-b0d6-4881cc03e44f",
+    "renderer_identity": null,
+    "created_by": "7d137dfb-a04f-4c2f-a6f8-6ca4bfd1fd8e",
+    "render_options": {
+      "page": "A4",
+      "margin_twips": 1440,
+      "font": "Noto Sans CJK SC",
+      "font_size_halfpoints": 22,
+      "renderer_filter": "writer_pdf_Export",
+      "content_subset": 1
+    },
+    "artifact_kind": "bid_body",
+    "follow_up_context": {
+      "bid_revision": 1,
+      "material_revision": 1,
+      "settings_revision": 1,
+      "current_material_id": null,
+      "current_body_id": null,
+      "current_draft_id": "f32a1704-d1ff-4881-95bd-9a92b9a98d96",
+      "current_rule_set_id": null,
+      "fact_set_id": null,
+      "fact_revision": 0,
+      "enabled": false,
+      "draft_id": "f32a1704-d1ff-4881-95bd-9a92b9a98d96",
+      "draft_revision": 3,
+      "draft_snapshot_id": "e1f131dd-7d9e-4ca1-ac7d-47ae8e6c315d",
+      "draft_snapshot_digest": "bdb401e01170f03f5279aecbcd63cdafc91c16237e8c17f4894cff52444cdff7"
+    }
+  },
+  "outputs": [
+    {
+      "format": "docx",
+      "state": "succeeded",
+      "gaps": [
+        "PAGE_NUMBER_FIELD_UNSUPPORTED",
+        "ACTUAL_SECTION_PAGE_RANGES_UNKNOWN"
+      ],
+      "object_key": "blobs/2a55fbf83f243169fd36b00e5cf85c548df0e40f895bf7677a3a23a650b42b0a",
+      "digest": "2a55fbf83f243169fd36b00e5cf85c548df0e40f895bf7677a3a23a650b42b0a",
+      "byte_size": 3161,
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    }
+  ],
+  "pdf": "not_requested_in_public_artifact; failed format independence tested separately",
+  "dynamic_page_numbers": "unsupported_in_candidate01",
+  "actual_section_page_ranges": null
+}

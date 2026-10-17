@@ -1,0 +1,69 @@
+{
+  "draft": "B",
+  "sql_sha256": "3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674",
+  "prior": "A ad692d9f41d03b9c6e58d504a61e43c94d3c9c235edfbc0f076bc622a1173be4",
+  "status": "static_review_requested_not_executed",
+  "sources": [
+    {
+      "path": "deploy/sql/technical-scale-authority.sql",
+      "sha256": "3fdce8d604ad1f17bf324330b7d15078b8cc063fa883eaa201852e67d48e9674",
+      "bytes": 24558
+    },
+    {
+      "path": "apps/api/technical_scale_routes.py",
+      "sha256": "08af9ab341737eee455f9dd9a241aed53402dea98f2659696e084608ebe6bc32",
+      "bytes": 7226
+    },
+    {
+      "path": "packages/model_governance/scale_requests.py",
+      "sha256": "73c0e4bae831597744481cb6ed712e77ce48ea3930d6ca08378a26b7395edfeb",
+      "bytes": 5213
+    },
+    {
+      "path": "packages/model_governance/scale_evidence.py",
+      "sha256": "a880c5aebd69315ca85c2d76186aa65452a682a2be48104ddf45d2766b556ebc",
+      "bytes": 2604
+    },
+    {
+      "path": "packages/model_governance/scale_repository.py",
+      "sha256": "d2e4fa0a80941eeedba9765b1561ff4b3ad6cd47800771393d4b31546f1a1e75",
+      "bytes": 19911
+    },
+    {
+      "path": "packages/model_governance/scale_contracts.py",
+      "sha256": "f04ee6a3ce1cfc904f79bffdc4faa588897e4283111c85bbf869c89684f8c721",
+      "bytes": 8187
+    },
+    {
+      "path": "packages/model_governance/TECHNICAL-SCALE-DEVELOPMENT.md",
+      "sha256": "bf2fc15f99afa553c7ca8807ddd5b575e5d16c6dad15c93b4df7def730f96814",
+      "bytes": 3119
+    },
+    {
+      "path": "tests/test_scale_authority.py",
+      "sha256": "72cd995243f903deb18e2db0d54f05f0b09a0a53add7ffca35cbe1b141b539a3",
+      "bytes": 6738
+    }
+  ],
+  "pure_checks": 31,
+  "actual_operations_code": 7,
+  "actual_database_checks": 0,
+  "changes": [
+    "positive whole-statement scale description tokens only; prevents contradictory trailing text consumed by free description",
+    "DB full physical 1..N range/complete parse aligned with API",
+    "current known_at<=now for all sources including historical branch; all source ancestors document/samebid",
+    "every historical ancestor version must have selected confirmed existed/known/effective claim, not only selected quote original",
+    "7 actual API code +closed OpenAPI shapes prepared; no shared main include or PG execution",
+    "explicit material selection for historical use; current material derived server-side",
+    "strong context capture→outside transaction original byte verification→recapture/CAS version/decision, frozen source revisions and head-based current decision read"
+  ],
+  "not_delivered": [
+    "new DB/role/API positive and adversarial integration",
+    "HistoricalInput/scoring frozen scale reference and coverage denominator projection",
+    "executable official aggregation/model/certification/real data qualifications"
+  ],
+  "trust_boundary": "API shared UUID5 canonical helper for exact parse-source; DB typed all evidence/original/parent/closure mappings; not general arbitrary API-role-SQL resistance",
+  "paid_calls": 0,
+  "native_objects": 0,
+  "consumers": 0
+}

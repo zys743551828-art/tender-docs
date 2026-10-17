@@ -1,0 +1,65 @@
+{
+  "status": "passed_independent_trace_integrity_delta",
+  "candidate_sha256": "2a79e75949479819d3b27e689eb24b2847a32184ee2340a73857267f5859fa4a",
+  "predecessor_sha256": "4671b3d9cd24afa3429f388c76bd02d4ee88c53c0ac6869bb06976c7aff24a15",
+  "candidate_bound_source_and_dependency_entries": 54,
+  "runtime_manifest_sha256": "8f6d08a6373aa8c9018ae7bbe139cb7b2d63ea7d9a1c6539e4135b6013bcf42c",
+  "runtime_files": 249,
+  "all_frozen_bytes_reverified_after_execution": true,
+  "execution_result_sha256": "959166c348c020dc3c948cf1646aa4c22551b1835e492efa7a4a9fe9f0a8baed",
+  "executed_probe_sha256": "0c427d3583ec1bc5d6ee053837de54b15824dd2432614ac93f9b3d9c25e27bd2",
+  "post_execution_schema_and_roles_sha256": "37cc768cf0c2ed819d7c025303d80749597d738153a381c6929c668e244d4283",
+  "evidence": "candidate-02/correct-immutable-assertion-execution/result.json",
+  "checks_passed": 26,
+  "negative_paths": 20,
+  "negative_variants": [
+    "Selected text changed with internally consistent new text_digest, but immutable approved scope unchanged",
+    "Frozen unit raw UTF8 text changed with old text_digest retained and matching selected text",
+    "Unexpected field supplied on selected unit",
+    "Duplicate selected unit"
+  ],
+  "passed": [
+    "All four persisted malformed variants rejected with409 KNOWLEDGE_TRACE_INVALID on first citation, trace history, reference history, citation response replay and retrieval response replay",
+    "No new citation or current-project fact appended by rejected use",
+    "Untampered trace still supports first citation, trace/reference history and both replay paths",
+    "Actual API-role UPDATE denied with42501; Worker cannot read or insert trace; no trigger or permission bypass"
+  ],
+  "baseline_reproduction": {
+    "path": "candidate-01-baseline/execution/result.json",
+    "sha256": "e471d2b1073b41a662d9efbfcc53ca05619f4051df99d57e3c31f03bde00c946",
+    "runtime_manifest_sha256": "a361be69933fec5f288bc4c24e047207bde50223c7e4ce2079db95fa39a46f0c",
+    "observation": "Same independent malformed selected-text fixture on original01 returned201 on first citation,200 on trace/reference history and201 on citation replay, adding a citation. Retrieval replay already rejected in01; no claim that all01 paths were vulnerable.",
+    "expected_failed_assertions": [
+      "forged_text_self_consistent_digest_first_cite_rejects_persisted_invalid_supply",
+      "forged_text_self_consistent_digest_trace_history_rejects_persisted_invalid_supply",
+      "forged_text_self_consistent_digest_reference_history_rejects_persisted_invalid_supply",
+      "forged_text_self_consistent_digest_citation_replay_rejects_persisted_invalid_supply",
+      "forged_text_self_consistent_digest_failed_use_appends_no_citation_or_fact"
+    ]
+  },
+  "scope": "Own synthetic nonowner PG setup and actual standalone knowledge router ASGI; explicit malformed immutable trace INSERT fixture by API-role, not a public HTTP injection claim. Explicit synthetic vectors/index and memory original objects.",
+  "fixture_security_boundary": "Deliberate raw trace/reference/Command INSERT fixtures through restricted API permitted columns simulate malformed persisted API-owned immutable data. This does not claim a public HTTP writer or Worker trace capability.",
+  "role_boundary": "API has selected-column INSERT but no table-wide INSERT, UPDATE or DELETE privilege. Worker has no trace SELECT/INSERT/UPDATE/DELETE. Actual role/schema evidence preserved.",
+  "private_profile": "combined_delivery01-checks.env filename only; no private configuration values captured",
+  "own_data": {
+    "target_bid_id": "44dcfed1-41f4-4236-a528-3056fe8f1519",
+    "origin_bid_id": "5c73f54d-fdf6-4668-8f27-c31811170a29",
+    "knowledge_id": "21aa7227-80ec-4e1f-b15c-7291db1ea363",
+    "auto_review": false
+  },
+  "paid_calls": 0,
+  "external_model_calls": 0,
+  "object_network_requests": 0,
+  "kafka_consumers_started": 0,
+  "retained_probe_issue": {
+    "path": "candidate-02/execution/result.json",
+    "sha256": "fea0f6fc92f0406c768f01095c579d596b984b4ecd48b2e2e581a4a3fadf70da",
+    "scope": "25 guard/normal/side-effect checks already passed; last immutable assertion originally expected only55000 but database denied UPDATE earlier with42501. Probe corrected to accept either real protection; actual source unchanged."
+  },
+  "limits": [
+    "Standalone actual ASGI router and real restricted PostgreSQL, not authenticated live8806/browser execution.",
+    "Synthetic parse/source/evidence identities, explicit fixed1024-unit vectors/index and memory original objects; no actual embedding/rerank model or OSS request.",
+    "Only trace-integrity delta; full knowledge applicability/indexing/RAG quality, formal scoring, production and Kafka integration remain separate gates.",
+    "No review/research consumer or real-model invocation; no modification of bucket configuration, source files or original failure evidence."
+  ]
+}

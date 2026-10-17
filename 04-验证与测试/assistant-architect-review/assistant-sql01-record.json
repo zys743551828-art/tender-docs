@@ -1,0 +1,26 @@
+{
+  "input_path": "/workspace/tender-workbench/packages/assistant/sql/assistant.sql",
+  "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9",
+  "observed_copy": "/workspace/tender-docs/04-验证与测试/assistant-architect-review/observed-assistant-sql01.sql",
+  "review": "static only; no SQL executed, no database used",
+  "DDL_executed": false,
+  "paid_calls": 0,
+  "consumers_started": false,
+  "private_configuration_read": false,
+  "new_tables": [
+    "assistant_global_conversations",
+    "assistant_global_messages",
+    "assistant_jobs",
+    "assistant_global_runs",
+    "assistant_global_calls",
+    "assistant_global_outbox",
+    "assistant_global_events",
+    "assistant_outputs",
+    "assistant_publications",
+    "assistant_action_links"
+  ],
+  "conclusion": "static_ready_for_PM_fresh_initialization_only",
+  "DDL_level_blockers": 0,
+  "application_reviewed": false,
+  "implementation_gate": "logical intent/profile advisory-lock reserve plus fence/current-source/action-once enforcement require frozen application review and independent nonowner concurrency tests"
+}

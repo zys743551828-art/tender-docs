@@ -1,0 +1,46 @@
+{
+  "scope": "OSS原生与DeepSeek生成适配；不接业务评审、RAG或正式评分",
+  "offline_provider_and_domain": {
+    "passed": true,
+    "tests": 30,
+    "command": ".venv/bin/pytest -q tests/test_providers.py tests/test_domain.py"
+  },
+  "existing_s3_pdf_slice": {
+    "passed": true,
+    "tests": 1,
+    "command": "RUN_SLICE_INTEGRATION=1 .venv/bin/pytest -q tests/test_slice_integration.py",
+    "services": "真实PG/Kafka/S3开发环境；两版本PDF上传核验入库和历史证据"
+  },
+  "quality": {
+    "ruff_check": true,
+    "ruff_format_backend_only": true,
+    "mypy": true,
+    "bandit": true
+  },
+  "developer_paid_requests": 0,
+  "independent_evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/provider-integration-checks/deepseek-chat-result.json",
+      "sha256": "ecff8282017dadca84537f63b8d5d3aef26d453c61bbd1e511aa1e7c31a61a38"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/provider-integration-checks/oss-object-result.json",
+      "sha256": "e38d0dd98acceea395f9166e355a2795aeca7079fc8a1455acb0f188dbfe797e"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/provider-integration-checks/oss-adapter-result.json",
+      "sha256": "dacc753283178267bfc3359f92191e17991ef653d772cb78406cd6d5c8a97ddc"
+    }
+  ],
+  "limitations": [
+    "未把模型端口接入业务Worker，尚无本批业务模型调用账本/预算实现",
+    "真实chat执行后仅增加Schema悬空本地引用/anchor的付费前拒绝，已离线验证，不追加付费请求",
+    "未切换现有开发S3数据库/配置；混存profile未实现",
+    "第三方SDK有datetime.utcnow弃用告警，无验收失败"
+  ],
+  "delta": "嵌套$id在付费前拒绝；运行时Unresolvable收口为usage_reported不可重试安全错误。没有新增真实模型调用；复用未变OSS/S3链路证据。",
+  "previous_result": {
+    "path": "/workspace/tender-workbench/apps/api/provider-self-test-result-01.json",
+    "sha256": "84e60bfea132f05439211ab21666520c405816274a22541157597b9d648a4f45"
+  }
+}

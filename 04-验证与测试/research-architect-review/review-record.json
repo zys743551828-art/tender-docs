@@ -1,0 +1,101 @@
+{
+  "candidate_sha256": "20e92d95e30325f3a44d98bb160fa680dcfe777c05ce60c64faa33326e1279d5",
+  "conclusion": "blocked for new research requests pending RS01 and RS02",
+  "blocking_findings": [
+    "RS01",
+    "RS02"
+  ],
+  "sources": [
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "e9c04ed90f082ea3e85107b619d1f32dc5f7917a1990c6ee4a6d7b19fc731bac",
+      "bytes": 17944
+    },
+    {
+      "path": "packages/research/README.md",
+      "sha256": "c3941c73c4111d895ad2af1cb9cbbc83cce79fb9749ba541eafe62addc98a2bf",
+      "bytes": 5501
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "bytes": 85
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "134d41c7c84014fa96517fcd9fd49deaccbedb9ad94a2f9bf68baa0a02a113bf",
+      "bytes": 20031
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "ba4cd6f3d49d7c225893cc68c62e70ea1ca8339809ab87fee12732285f5fc649",
+      "bytes": 6636
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "03e230d403d0ea283c87750b0b7b71a0c970fd7b2a729e6e31741d8dbed313e3",
+      "bytes": 15746
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "bytes": 10555
+    },
+    {
+      "path": "packages/research/execution.py",
+      "sha256": "140879beef63c65deb62ee83cd1e0ebeba15894994520c590ac99bf0c8168434",
+      "bytes": 12183
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "d55de8b93129530e7d7d1bc719f5b9777c33fff2aae86f0b025a72c181556f23",
+      "bytes": 12948
+    },
+    {
+      "path": "packages/research/ledger.py",
+      "sha256": "c5fea1725b7e608510619b283e20a150c43c17a5b7cacb8957aaf3d746db0bb8",
+      "bytes": 8815
+    },
+    {
+      "path": "packages/research/model_port.py",
+      "sha256": "c58224a9d688bfc0f550f6b409ff9680f19f5c4ff0caea1d951a829405bf8570",
+      "bytes": 7698
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "8dd73999232e7d71d58a1c9f2fe1d2f75a36d4ddeb9974e3d227b5285684f4f4",
+      "bytes": 21173
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "bytes": 2097
+    },
+    {
+      "path": "packages/research/worker.py",
+      "sha256": "4676001a0b63ea83e196b42c5e4ba2f7e11b58394c468cd1cfa9d508514559b3",
+      "bytes": 11839
+    },
+    {
+      "path": "tests/test_research_core.py",
+      "sha256": "78f187f6d580a0f4668f11fa65ca84e207aeb2578883a3c1e3aff48c3f730354",
+      "bytes": 8716
+    },
+    {
+      "path": "tests/test_research_integration.py",
+      "sha256": "27bdbf39466ea31f20fa6ff3b443c53e5a6e8f4606559a1b5018c0bd1674d9ad",
+      "bytes": 36296
+    }
+  ],
+  "evidence": {
+    "probe_candidate01.py": "1d254c34f345903ba7e45ba95daa9cb35f5f67be6d95c0009e409b1482c71f41",
+    "frozen-plus-independent-tests.py": "6068a31eed1521d33763107b106ace7b75f0d1a9b936fbb7fb9818c38be517a5",
+    "candidate01-independent-junit.xml": "8d1f384eaf3f9e58a82d83e84a10d9d33a9a742785f2effc61759500a1d996c2",
+    "candidate01-independent-result.json": "a1de1d24e4713e9d1e67092583b49959e08bfab4e28b5c66614494366e073cd6",
+    "budget-counterexample.json": "180f78f60dbf53ce2cc0ba0e92decbef6d6b0949a18c8252237fd32145eaa247",
+    "withdrawal-counterexample.json": "46281efbe91a654b5f2a78e7a08c29b96b5f516fb871c8c2c2fa3edb9bd90059",
+    "早期审查.md": "f8dcde6562fa399d434224c0c24dc454b69e2a6ae710be593c28dd9f9ce7358d"
+  },
+  "paid_calls": 0,
+  "credentials_read": false
+}

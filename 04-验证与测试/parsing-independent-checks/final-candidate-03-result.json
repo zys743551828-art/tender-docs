@@ -1,0 +1,50 @@
+{
+  "status": "passed_scoped_fallback_parser_delta",
+  "blocking_findings": 0,
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/parsing-development-checks/candidate-03/candidate.json",
+    "sha256": "2c94690cabd1a29fdf461d2879b8000d527fa404d3b1249d4082d5ba66e9309f"
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-03/result.json",
+      "sha256": "9d73eb6a1213663d364ad6f9c657221134303d19466496f825cf4b016d93a9ac"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/composition-candidate-03/result.json",
+      "sha256": "6a5f7ea0960a3b79a21df23705c1b2313722723e7fd61e628e55bf85294c8d1d"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/affected-regression-candidate-03/result.json",
+      "sha256": "149edb77ec450634adadaf5f751030f67968aee10f3bcd5b9ddeac3e20b5fc91"
+    }
+  ],
+  "retained_baseline": {
+    "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-01/result.json",
+    "sha256": "602ccafe711273f3b433cf93ed24c8a62ae49fdacb6192ed88f6b23c9d695648"
+  },
+  "retained_counterexamples": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-01/minimal-mixed-hidden-result.json",
+      "sha256": "f0e5a794144a96fc324c4df057e68dccaf44201d84974040c7ec35f51c00afd9"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/parsing-independent-checks/candidate-02/result.json",
+      "sha256": "18aa34e5dba2290f034229d80940ee5538bfd8eb93475aa9298dc5e97a08b221"
+    }
+  ],
+  "actual_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "paid_model_requests": 0,
+  "verified": [
+    "Actual TCP8812 current candidate identity; invisible render mode, zero alpha, white-on-white, occluded and clipped markers excluded with explicit partial gaps",
+    "Visible white-on-black and ordinary black text retained",
+    "Same independent original PDF Chinese raster OCR, blank, ruled grid90/120 and rotated physical point bbox/page/SHA affected regression"
+  ],
+  "not_verified": [
+    "Docling/Paddle target qualification",
+    "Real business-document recognition accuracy or formal review quality",
+    "Production parser sandbox and resource isolation",
+    "End-to-end Kafka parser03 integration is separately owned; this QA is actual parser TCP port"
+  ],
+  "retained_baseline_scope": "Original candidate01 real auth/disabled docs/SHA/damaged/encrypted/page limit/concurrency checks retained as historical unaffected evidence; not relabeled as rerun against03"
+}

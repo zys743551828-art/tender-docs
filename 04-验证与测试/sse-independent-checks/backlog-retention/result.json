@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "251_event_backlog_drains_across_200_row_batches_in_order",
+      "passed": true,
+      "observation": {
+        "seconds": 0.15438785999867832
+      }
+    },
+    {
+      "name": "backlog_private_prose_absent_boolean_not_revision",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "resume_inside_backlog_has_exact_new_suffix",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_origin5175_proxy_flushes_real_sse_frame",
+      "passed": true,
+      "observation": {
+        "seconds": 0.07289439599844627
+      }
+    },
+    {
+      "name": "eight_day_cursor410_requires_snapshot_reset",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "snapshot_refresh_then_new_connection_only_retained_event",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "anonymous_stream401",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "scope": "Actual live HTTP/PG and5175 proxy SSE, own append-only temporal fixture; source SSE unchanged across main release",
+  "bid_id": "1fdd1d83-71f0-4080-8f36-a73cd5c48da8",
+  "temporal_fixture_bid_id": "9194877c-ed73-4025-85ac-f84bc8a7f40a",
+  "source_candidate_sha256": "6d475901b14d5fb54151b86bb736a4b5c048693c2d8505a6f658618ad4abe3ed",
+  "live_openapi_sha256": "808e8a489e4d76a84dedf01a15836bc5f09534627997eba5b8013d8371a58f4e",
+  "live_path_count": 81,
+  "probe_sha256": "1c859c150a8995a48316ac5d3b09785036d26df558e8903dab15e7e8953ebb84"
+}

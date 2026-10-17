@@ -1,0 +1,129 @@
+{
+  "scope": "A2 candidate03 delta review, no complete application pass",
+  "candidate_path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate-03.json",
+  "candidate_sha256": "c63ad6c5974c99f99714fc1b706509d8d39f4554b7632da338b8f85769f0f6ee",
+  "sources": [
+    {
+      "path": "apps/api/authoring.py",
+      "sha256": "d78748caa8a9d839d26a3d21afd8cb5e9e1711a6b9edf8f394a49f220508d6cd",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/README.md",
+      "sha256": "b3d1f6f24418e485a7b17a9ace061c2da5ba865f9dee83b230785139349720a6",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/__init__.py",
+      "sha256": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/build.py",
+      "sha256": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/build_repository.py",
+      "sha256": "b75811b4039307231377b9496e76aef007dd2308ea8da12cc515781f106bb6c1",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/content.py",
+      "sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/contracts.py",
+      "sha256": "a4cae325908c616f4d95ec26e42560fa31d45b50ed688d997e666b5a3ed6b937",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/generation.py",
+      "sha256": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/patches.py",
+      "sha256": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/repository.py",
+      "sha256": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+      "matches": true
+    },
+    {
+      "path": "tests/test_authoring.py",
+      "sha256": "91d36a0950d6d3eebad4c209dd89fbaed569ae0d59c391d5f7e4c99d0ff3ab32",
+      "matches": true
+    },
+    {
+      "path": "tests/test_authoring_integration.py",
+      "sha256": "f8b17929fcb459e97b6b049ade05af5385efbe3a81091da196847a96cb922d65",
+      "matches": true
+    }
+  ],
+  "shared_dependencies": [
+    {
+      "path": "packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7",
+      "scope": "observed shared helper dependency outside A2 manifest"
+    },
+    {
+      "path": "packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3",
+      "scope": "observed shared helper dependency outside A2 manifest"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22",
+      "scope": "observed shared helper dependency outside A2 manifest"
+    },
+    {
+      "path": "packages/rag/repository.py",
+      "sha256": "47dbd2b4292623c3fa4e6681ea526bc0ddc4728624f1c85b206fbf5cc15fb9c9",
+      "scope": "observed shared helper dependency outside A2 manifest"
+    }
+  ],
+  "developer_evidence": [
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/environment.json",
+      "sha256": "f02eb31d794b7f6287047e8937399486713db297dce50b5155e8906019d5ed41",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/integration-result.xml",
+      "sha256": "6250628b4daffe0afb4b238f163a13ddc6bf6129eaf3a0a33aedacdf14c2ece6",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/quality-result.json",
+      "sha256": "56076be39ef947951d0ab5ac3f923883851ebeb79716be377537b6195dbf6a5c",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/render-proof.json",
+      "sha256": "a60a79aec577fb80c9af5ed0ee4ea1d6611dbcdb2a3936243437d67d62de2ca5",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/synthetic-body.docx",
+      "sha256": "3aad0f7fd51defa3ff32394f5c72dcad76679c6a5a5a789b1849b987b6a6103a",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/synthetic-body.pdf",
+      "sha256": "808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/authoring-development-checks/candidate03-evidence/unit-result.xml",
+      "sha256": "51a27147424ed8f50604a755d2ab807c6bc47a3465d6f29bae9841c8aa6de5b1",
+      "matches": true
+    }
+  ],
+  "archived_02_entries_verified": 18,
+  "paid_calls": 0,
+  "credentials_read": false
+}

@@ -1,0 +1,71 @@
+{
+  "scope": "新增回溯提交时间留出模式待执行任务，非软件或模型验收",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "TIME-01",
+      "title": "真实时点不倒造",
+      "setup": "2019提交/2026取得标签并冻结回溯研究",
+      "expected": "submission_split_at和historical_as_of可2019，known/label_available/训练冻结仍真实2026；结果只历史误差",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-02",
+      "title": "严格模式原约束不变",
+      "setup": "用仅有2026标签的样本尝试strict，再显式选回溯",
+      "expected": "strict仍拒不满足未来边界；新模式不是绕过/改名原StageA，不能client切real解锁旧分支",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-03",
+      "title": "组与切分边界",
+      "setup": "训练提交<cutoff、测试≥cutoff；同相关组跨两侧",
+      "expected": "边界一致，整组不得拆；跨界默认排除并列原因，不为好误差挪样本",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-04",
+      "title": "历史身份冻结",
+      "setup": "冻结HistoricalSubject后更改当前profile名称/主体",
+      "expected": "组仍基于历史权威；历史subject有效头变更则输入stale，不能静默重新归组",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-05",
+      "title": "标签截至与冻结",
+      "setup": "标签known晚于label_available，或客户端倒填training_frozen_at",
+      "expected": "不合格拒绝/排除；冻结时刻服务端真实；更晚标签不能补进旧训练清单",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-06",
+      "title": "最终曝光不可洗",
+      "setup": "最终评估先读标签再记曝光、改参复用同最终集、失败恢复",
+      "expected": "先持久曝光再只给评估角色；训练参数/划分不变，恢复同冻结评估，不挑最佳结果",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-07",
+      "title": "界面与结论边界",
+      "setup": "查看创建/预览/运行/结果与导出",
+      "expected": "四时点/模式/组数/排除/来源清楚；回溯研究/非未来精度/研究用途持续，无模型已通过绿标或在线配对",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-08",
+      "title": "缺proof及real入口",
+      "setup": "仅有公开日期无本方当年取得证明；当前StageA只synthetic",
+      "expected": "必要proof缺证pending；可存草案不调用模型；不因新增模式自动授real执行或正式资格",
+      "status": "pending_application"
+    },
+    {
+      "id": "TIME-09",
+      "title": "原冻结证据",
+      "setup": "核旧StageA/研究03/原产品输入及原测试记录",
+      "expected": "旧字节/状态不改；新模式独立authority/schema/SQL静审后才实现",
+      "status": "pending_application"
+    }
+  ]
+}

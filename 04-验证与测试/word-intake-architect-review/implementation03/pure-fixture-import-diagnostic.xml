@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.093" timestamp="2026-10-17T02:57:22.217932+00:00" hostname="597cea30c71f"><testcase classname="" name="" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_word_intake' has this __file__ attribute:
+  /workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/frozen-inputs/tests/test_word_intake.py
+which is not the same as the test file we want to collect:
+  /workspace/tender-docs/04-验证与测试/word-intake-architect-review/implementation03/unit-runtime/tests/test_word_intake.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase></testsuite></testsuites>

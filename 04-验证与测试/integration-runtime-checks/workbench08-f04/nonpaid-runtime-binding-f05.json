@@ -1,0 +1,32 @@
+{
+  "backend_candidate_sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee",
+  "frontend_candidate_sha256": "31c298b5c905744e58be5345ef4077794e4941c350aed0811e8cd8750fc0c623",
+  "api_port": 8808,
+  "frontend_port": 5178,
+  "database": "tender_checks_workbench08",
+  "broker": "127.0.0.1:19097",
+  "http_ready": true,
+  "actual_contract_equal": true,
+  "frontend_asset_matches": true,
+  "source_files_verified": 310,
+  "ordinary_worker_and_index_coordinator_pids": [
+    2267657,
+    2267747,
+    2267702,
+    2267727,
+    2267670,
+    2321704,
+    2321178
+  ],
+  "startup_provider_keys_absent": true,
+  "processes": "    PID   UID STAT COMMAND\n2267657  1000 Sl   /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_worker.py consume-comparison\n2267670  1000 Sl   /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_worker.py relay\n2267702  1000 Sl   /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_worker.py consume\n2267727  1000 S    /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_worker.py reconcile\n2267747  1000 Sl   /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_worker.py consume-export\n2321178  1000 S    /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_index_coordinator.py project-rag\n2321704  1000 S    /workspace/tender-workbench/.venv/bin/python -P /workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/integration-runtime-checks/workbench08-f04/nonpaid_index_coordinator.py knowledge-rag\n",
+  "consumer_groups": [
+    "tender-comparison-worker-v1",
+    "tender-document-worker-v1",
+    "tender-export-worker-v1"
+  ],
+  "paid_consumers_present": false,
+  "paid_calls_by_this_probe": 0,
+  "old_environments_changed": false,
+  "scope": "Fixed frontend08 + compatible F05 API; existing frozen frontend manifest remains unchanged"
+}

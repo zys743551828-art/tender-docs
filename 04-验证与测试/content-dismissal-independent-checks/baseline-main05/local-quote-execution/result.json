@@ -1,0 +1,248 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "other_project_in_same_quote",
+      "passed": false,
+      "expected_acceptance": false,
+      "input_quote": "工程A标段一工期95天；工程B标段一工期125天",
+      "actual": {
+        "kind": "consistency",
+        "issues": [
+          {
+            "rule_id": "rule-local-duration",
+            "severity": "critical",
+            "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+            "left": {
+              "evidence_id": "left",
+              "quote": "工程A标段一工期95天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "95",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "95"
+            },
+            "right": {
+              "evidence_id": "right",
+              "quote": "工程A标段一工期95天；工程B标段一工期125天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "125",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "125"
+            },
+            "model_statement_digest": "3d3e51a547fdad89a8d848f90f972bd1bd36464fe6f9bbe6911da348cd400b7e"
+          }
+        ],
+        "diagnostics": [],
+        "core_affected_rule_ids": [],
+        "gaps": [],
+        "check_state": "complete",
+        "planned_evidence_count": 2,
+        "read_evidence_count": 2
+      }
+    },
+    {
+      "name": "other_lot_in_same_quote",
+      "passed": false,
+      "expected_acceptance": false,
+      "input_quote": "工程A标段一工期95天；工程A标段二工期125天",
+      "actual": {
+        "kind": "consistency",
+        "issues": [
+          {
+            "rule_id": "rule-local-duration",
+            "severity": "critical",
+            "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+            "left": {
+              "evidence_id": "left",
+              "quote": "工程A标段一工期95天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "95",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "95"
+            },
+            "right": {
+              "evidence_id": "right",
+              "quote": "工程A标段一工期95天；工程A标段二工期125天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "125",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "125"
+            },
+            "model_statement_digest": "3d3e51a547fdad89a8d848f90f972bd1bd36464fe6f9bbe6911da348cd400b7e"
+          }
+        ],
+        "diagnostics": [],
+        "core_affected_rule_ids": [],
+        "gaps": [],
+        "check_state": "complete",
+        "planned_evidence_count": 2,
+        "read_evidence_count": 2
+      }
+    },
+    {
+      "name": "nested_other_project_and_lot",
+      "passed": false,
+      "expected_acceptance": false,
+      "input_quote": "工程A标段一工期95天（工程B标段二工期125天）",
+      "actual": {
+        "kind": "consistency",
+        "issues": [
+          {
+            "rule_id": "rule-local-duration",
+            "severity": "critical",
+            "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+            "left": {
+              "evidence_id": "left",
+              "quote": "工程A标段一工期95天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "95",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "95"
+            },
+            "right": {
+              "evidence_id": "right",
+              "quote": "工程A标段一工期95天（工程B标段二工期125天）",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "125",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "125"
+            },
+            "model_statement_digest": "3d3e51a547fdad89a8d848f90f972bd1bd36464fe6f9bbe6911da348cd400b7e"
+          }
+        ],
+        "diagnostics": [],
+        "core_affected_rule_ids": [],
+        "gaps": [],
+        "check_state": "complete",
+        "planned_evidence_count": 2,
+        "read_evidence_count": 2
+      }
+    },
+    {
+      "name": "same_project_same_lot",
+      "passed": true,
+      "expected_acceptance": true,
+      "input_quote": "工程A标段一工期125天",
+      "actual": {
+        "kind": "consistency",
+        "issues": [
+          {
+            "rule_id": "rule-local-duration",
+            "severity": "critical",
+            "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+            "left": {
+              "evidence_id": "left",
+              "quote": "工程A标段一工期95天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "95",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "95"
+            },
+            "right": {
+              "evidence_id": "right",
+              "quote": "工程A标段一工期125天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "125",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "125"
+            },
+            "model_statement_digest": "3d3e51a547fdad89a8d848f90f972bd1bd36464fe6f9bbe6911da348cd400b7e"
+          }
+        ],
+        "diagnostics": [],
+        "core_affected_rule_ids": [],
+        "gaps": [],
+        "check_state": "complete",
+        "planned_evidence_count": 2,
+        "read_evidence_count": 2
+      }
+    },
+    {
+      "name": "explicit_local_connector",
+      "passed": true,
+      "expected_acceptance": true,
+      "input_quote": "工程A的标段一的施工工期125天",
+      "actual": {
+        "kind": "consistency",
+        "issues": [
+          {
+            "rule_id": "rule-local-duration",
+            "severity": "critical",
+            "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+            "left": {
+              "evidence_id": "left",
+              "quote": "工程A标段一工期95天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "95",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "95"
+            },
+            "right": {
+              "evidence_id": "right",
+              "quote": "工程A的标段一的施工工期125天",
+              "subject": "工程A",
+              "attribute": "工期",
+              "scope": "标段一",
+              "value": "125",
+              "unit": "天",
+              "relation": "equal",
+              "dimension": "unspecified_days",
+              "normalized": "125"
+            },
+            "model_statement_digest": "3d3e51a547fdad89a8d848f90f972bd1bd36464fe6f9bbe6911da348cd400b7e"
+          }
+        ],
+        "diagnostics": [],
+        "core_affected_rule_ids": [],
+        "gaps": [],
+        "check_state": "complete",
+        "planned_evidence_count": 2,
+        "read_evidence_count": 2
+      }
+    }
+  ],
+  "scope": "Frozen production prepare/validate_output with independently constructed exact full-range dictionaries; no model/PG/parser/HTTP/Kafka or quality claim.",
+  "paid_calls": 0,
+  "provider_calls": 0,
+  "database_connections": 0,
+  "consumers_started": 0,
+  "engineering_source_path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/baseline-main05/execution-inputs/packages/domain/engineering.py",
+  "engineering_source_sha256": "a813334a9d68764d9a5b928e3d79ae88cc1e3a3ec65e1a7e9cccdfe4266e03fc",
+  "executed_probe_sha256": "8200d99b5dddc933bb25a90cddd176e648b682c8aacc78b4157c89c52b8e5278"
+}

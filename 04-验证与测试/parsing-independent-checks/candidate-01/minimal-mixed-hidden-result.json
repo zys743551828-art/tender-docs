@@ -1,0 +1,64 @@
+{
+  "protocol_version": 1,
+  "source_digest": "c1bd2c1de22e835ae9ecd41d4132860d47b60939d3a3a4050c4e8e7aa801249f",
+  "parser_digest": "ac85a3990a55f24cd09811098e1cd35dceab04475c26974e73dbabbc95516b34",
+  "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+  "profile": "pdfium-pdfplumber-tesseract-cpu-v1",
+  "page_count": 1,
+  "pages": [
+    {
+      "physical_page": 1,
+      "width": 595.0,
+      "height": 842.0,
+      "rotation": 0,
+      "text": "VISIBLE BODY: duration 90 days.\nINVISIBLE_RULE: duration 999 days.",
+      "blocks": [
+        {
+          "kind": "text",
+          "text_content": "VISIBLE BODY: duration 90 days.",
+          "bbox": [
+            60.0,
+            84.55399999999997,
+            392.6180000000001,
+            106.55399999999997
+          ],
+          "confidence": null,
+          "ordinal": 0,
+          "physical_page": 1,
+          "digest": "0290617d456bc868aa78ba948928fa90f5771ebe698b9b31fd7bf06bad122762",
+          "method": "pdf_text",
+          "id": "f942da7e9417ff58cfce592b718ff28f8b84b34b1c545ac786ea51f383230f13",
+          "chapter_path": []
+        },
+        {
+          "kind": "text",
+          "text_content": "INVISIBLE_RULE: duration 999 days.",
+          "bbox": [
+            60.0,
+            147.726,
+            362.148,
+            165.726
+          ],
+          "confidence": null,
+          "ordinal": 1,
+          "physical_page": 1,
+          "digest": "009421bf5262dc789530d00bd473d7c646b7929020f65ef3809b7bfe6e7d9a3a",
+          "method": "pdf_text",
+          "id": "f4a3506c48849a2ce38d7f412d8aa3462f1d10fbccde390330f508a05e1a3f9e",
+          "chapter_path": []
+        }
+      ],
+      "tables": [],
+      "method": "pdf_text",
+      "quality": "usable",
+      "gaps": [],
+      "ink_fraction": 0.0036173493100887734,
+      "render_digest": "59febf4d1ca7f918eb158c0cd0f1c05198e4e2078d9b17c08f144e592309af8c"
+    }
+  ],
+  "chapters": [],
+  "coverage": "usable",
+  "gaps": [],
+  "coordinate_system": "rotated_page_top_left_points",
+  "quality_benchmark": "not_business_validated"
+}

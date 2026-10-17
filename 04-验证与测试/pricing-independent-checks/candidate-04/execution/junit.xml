@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.427" timestamp="2026-10-17T02:32:33.023012+00:00" hostname="597cea30c71f"><testcase classname="" name="test_actual_ratio_original_without_coefficients_and_mean_requirements" time="0.353"><failure message="AssertionError: http_ratio_register_with_twelve_real_fields_no_coefficient_mapping&#10;assert False">/workspace/tender-workbench/qa/test_pricing04_independent.py:49: in test_actual_ratio_original_without_coefficients_and_mean_requirements
+    good=body();first=register(good);check('http_ratio_register_with_twelve_real_fields_no_coefficient_mapping',first.status_code==201,status=first.status_code,body=first.json())
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_pricing04_independent.py:24: in check
+    CHECKS.append(dict(name=name,passed=bool(condition),**detail));assert condition,name
+                                                                   ^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: http_ratio_register_with_twelve_real_fields_no_coefficient_mapping
+E   assert False</failure></testcase></testsuite></testsuites>

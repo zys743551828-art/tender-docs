@@ -1,0 +1,966 @@
+{
+  "scope": "手工指定期望的产品规则反例；仅验证抽象规则，不连接软件",
+  "fixtures": [
+    {
+      "name": "标准提交全部前提满足",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": true
+    },
+    {
+      "name": "只剩普通建议不额外阻断",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false,
+        "ordinary_suggestions": true
+      },
+      "expected": true
+    },
+    {
+      "name": "标准提交前提缺失_authenticated",
+      "kind": "submission",
+      "input": {
+        "authenticated": false,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "标准提交前提缺失_current",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": false,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "标准提交前提缺失_body_matches",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": false,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "标准提交前提缺失_complete",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": false,
+        "unconfirmed": false,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "规则未确认且默认不接受",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": true,
+        "accept_as_written": false,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "按原文接受仅放宽确认",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": true,
+        "accept_as_written": true,
+        "blockers": false
+      },
+      "expected": true
+    },
+    {
+      "name": "按原文接受不放宽失败",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": false,
+        "unconfirmed": true,
+        "accept_as_written": true,
+        "blockers": false
+      },
+      "expected": false
+    },
+    {
+      "name": "按原文接受不放宽关键问题",
+      "kind": "submission",
+      "input": {
+        "authenticated": true,
+        "current": true,
+        "body_matches": true,
+        "complete": true,
+        "unconfirmed": false,
+        "accept_as_written": true,
+        "blockers": true
+      },
+      "expected": false
+    },
+    {
+      "name": "线下实际提交可以有据补录",
+      "kind": "submission_fact",
+      "input": {
+        "authenticated": true,
+        "body_known": true,
+        "submission_evidence": true,
+        "check_passed": false
+      },
+      "expected": true
+    },
+    {
+      "name": "没有真实稿件不能猜补录",
+      "kind": "submission_fact",
+      "input": {
+        "authenticated": true,
+        "body_known": false,
+        "submission_evidence": true,
+        "check_passed": false
+      },
+      "expected": false
+    },
+    {
+      "name": "没有依据不能伪造实际提交",
+      "kind": "submission_fact",
+      "input": {
+        "authenticated": true,
+        "body_known": true,
+        "submission_evidence": false,
+        "check_passed": false
+      },
+      "expected": false
+    },
+    {
+      "name": "已发布适用有效知识",
+      "kind": "knowledge",
+      "input": {
+        "status": "published",
+        "superseded": false,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": true
+    },
+    {
+      "name": "知识状态不适合正式引用_candidate",
+      "kind": "knowledge",
+      "input": {
+        "status": "candidate",
+        "superseded": false,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识状态不适合正式引用_pending",
+      "kind": "knowledge",
+      "input": {
+        "status": "pending",
+        "superseded": false,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识状态不适合正式引用_disabled",
+      "kind": "knowledge",
+      "input": {
+        "status": "disabled",
+        "superseded": false,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识状态不适合正式引用_expired",
+      "kind": "knowledge",
+      "input": {
+        "status": "expired",
+        "superseded": false,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识还需版本适用时效_superseded",
+      "kind": "knowledge",
+      "input": {
+        "status": "published",
+        "superseded": true,
+        "applicable": true,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识还需版本适用时效_applicable",
+      "kind": "knowledge",
+      "input": {
+        "status": "published",
+        "superseded": false,
+        "applicable": false,
+        "effective": true
+      },
+      "expected": false
+    },
+    {
+      "name": "知识还需版本适用时效_effective",
+      "kind": "knowledge",
+      "input": {
+        "status": "published",
+        "superseded": false,
+        "applicable": true,
+        "effective": false
+      },
+      "expected": false
+    },
+    {
+      "name": "总分及区间均有资格",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "total_with_interval"
+    },
+    {
+      "name": "区间未验收则只给总分",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": false
+      },
+      "expected": "total_without_interval"
+    },
+    {
+      "name": "4/8覆盖8/60不能推总分",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": false,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "partial"
+    },
+    {
+      "name": "满分不符不推总分",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": false,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "partial"
+    },
+    {
+      "name": "模型未验收只能原始估计",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": false,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "raw_uncalibrated"
+    },
+    {
+      "name": "25组统计不授予模型验收",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": false,
+        "scope_matches": true,
+        "interval_validated": true,
+        "online_pairs": 25
+      },
+      "expected": "raw_uncalibrated"
+    },
+    {
+      "name": "模型范围外不冒充已验收",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": false,
+        "interval_validated": true
+      },
+      "expected": "raw_uncalibrated"
+    },
+    {
+      "name": "失败不是零分",
+      "kind": "score_mode",
+      "input": {
+        "show_score": true,
+        "run_ok": false,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "failed"
+    },
+    {
+      "name": "关闭展示优先隐藏数值",
+      "kind": "score_mode",
+      "input": {
+        "show_score": false,
+        "run_ok": true,
+        "coverage_complete": true,
+        "scale_valid": true,
+        "model_accepted": true,
+        "scope_matches": true,
+        "interval_validated": true
+      },
+      "expected": "hidden"
+    },
+    {
+      "name": "官方主评测候选准入",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": true
+    },
+    {
+      "name": "综合分不准入技术标签",
+      "kind": "main_sample",
+      "input": {
+        "target": "composite_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "台账与官方主评测分开",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "company_ledger",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_verified",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": false,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_body_matches",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": false,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_inputs_complete",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": false,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_scale_valid",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": false,
+        "conflict": false,
+        "group_known": true,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_group_known",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": false,
+        "time_known": true
+      },
+      "expected": false
+    },
+    {
+      "name": "主评测候选缺少_time_known",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": false,
+        "group_known": true,
+        "time_known": false
+      },
+      "expected": false
+    },
+    {
+      "name": "新冲突阻断不能回退旧成绩",
+      "kind": "main_sample",
+      "input": {
+        "target": "technical_total",
+        "source": "official_original",
+        "verified": true,
+        "body_matches": true,
+        "inputs_complete": true,
+        "scale_valid": true,
+        "conflict": true,
+        "group_known": true,
+        "time_known": true,
+        "previous_verified": true
+      },
+      "expected": false
+    },
+    {
+      "name": "合格事前预测可进在线统计",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": true,
+        "blind_prediction": true,
+        "prediction_before_known_result": true,
+        "prediction_body_matches": true,
+        "prediction_before_submission": true
+      },
+      "expected": true
+    },
+    {
+      "name": "在线统计前提缺失_sample_admitted",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": false,
+        "blind_prediction": true,
+        "prediction_before_known_result": true,
+        "prediction_body_matches": true,
+        "prediction_before_submission": true
+      },
+      "expected": false
+    },
+    {
+      "name": "在线统计前提缺失_blind_prediction",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": true,
+        "blind_prediction": false,
+        "prediction_before_known_result": true,
+        "prediction_body_matches": true,
+        "prediction_before_submission": true
+      },
+      "expected": false
+    },
+    {
+      "name": "在线统计前提缺失_prediction_before_known_result",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": true,
+        "blind_prediction": true,
+        "prediction_before_known_result": false,
+        "prediction_body_matches": true,
+        "prediction_before_submission": true
+      },
+      "expected": false
+    },
+    {
+      "name": "在线统计前提缺失_prediction_body_matches",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": true,
+        "blind_prediction": true,
+        "prediction_before_known_result": true,
+        "prediction_body_matches": false,
+        "prediction_before_submission": true
+      },
+      "expected": false
+    },
+    {
+      "name": "业务发布前提齐备",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": true
+    },
+    {
+      "name": "发布前提缺失_protocol_frozen",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": false,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_isolation_proven",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": false,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_metrics_pass",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": false,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_scope_validated",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": false,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_deployable",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": false,
+        "observation_complete": true,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_observation_complete",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": false,
+        "rollback_ready": true
+      },
+      "expected": false
+    },
+    {
+      "name": "发布前提缺失_rollback_ready",
+      "kind": "model_publish",
+      "input": {
+        "protocol_frozen": true,
+        "isolation_proven": true,
+        "metrics_pass": true,
+        "scope_validated": true,
+        "deployable": true,
+        "observation_complete": true,
+        "rollback_ready": false
+      },
+      "expected": false
+    },
+    {
+      "name": "相同方法下两轮可比较",
+      "kind": "comparison",
+      "input": {
+        "method_same": true,
+        "rubric_same": true,
+        "rounds_exist": true,
+        "valid_comparable_results": true
+      },
+      "expected": "comparable"
+    },
+    {
+      "name": "方法变化不能归因改稿",
+      "kind": "comparison",
+      "input": {
+        "method_same": false,
+        "rubric_same": true,
+        "rounds_exist": true,
+        "valid_comparable_results": true
+      },
+      "expected": "not_attributable"
+    },
+    {
+      "name": "规则变化不能归因改稿",
+      "kind": "comparison",
+      "input": {
+        "method_same": true,
+        "rubric_same": false,
+        "rounds_exist": true,
+        "valid_comparable_results": true
+      },
+      "expected": "not_attributable"
+    },
+    {
+      "name": "没有真实复评不可比较",
+      "kind": "comparison",
+      "input": {
+        "method_same": true,
+        "rubric_same": true,
+        "rounds_exist": false,
+        "valid_comparable_results": true
+      },
+      "expected": "unavailable"
+    },
+    {
+      "name": "新稿未复检不能解决旧问题",
+      "kind": "comparison",
+      "input": {
+        "method_same": true,
+        "rubric_same": true,
+        "rounds_exist": true,
+        "valid_comparable_results": false
+      },
+      "expected": "unavailable"
+    },
+    {
+      "name": "评分输入白名单_tender,body,confirmed_facts",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "tender",
+          "body",
+          "confirmed_facts"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "name": "评分输入白名单_tender,body,target_score",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "tender",
+          "body",
+          "target_score"
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "评分输入白名单_body,chat_with_score",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "body",
+          "chat_with_score"
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "评分输入白名单_body,evaluator_comments",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "body",
+          "evaluator_comments"
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "评分输入白名单_body,postbid_revision",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "body",
+          "postbid_revision"
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "评分输入白名单_body,test_derived_knowledge",
+      "kind": "score_input",
+      "input": {
+        "fields": [
+          "body",
+          "test_derived_knowledge"
+        ]
+      },
+      "expected": false
+    },
+    {
+      "name": "量尺_52.1/60",
+      "kind": "scale",
+      "input": {
+        "value": "52.1",
+        "maximum": "60"
+      },
+      "expected": true
+    },
+    {
+      "name": "量尺_0/60",
+      "kind": "scale",
+      "input": {
+        "value": "0",
+        "maximum": "60"
+      },
+      "expected": true
+    },
+    {
+      "name": "量尺_-1/60",
+      "kind": "scale",
+      "input": {
+        "value": "-1",
+        "maximum": "60"
+      },
+      "expected": false
+    },
+    {
+      "name": "量尺_61/60",
+      "kind": "scale",
+      "input": {
+        "value": "61",
+        "maximum": "60"
+      },
+      "expected": false
+    },
+    {
+      "name": "量尺_0/0",
+      "kind": "scale",
+      "input": {
+        "value": "0",
+        "maximum": "0"
+      },
+      "expected": false
+    },
+    {
+      "name": "量尺_1/NaN",
+      "kind": "scale",
+      "input": {
+        "value": "1",
+        "maximum": "NaN"
+      },
+      "expected": false
+    },
+    {
+      "name": "提交后才生成的预测属于回测",
+      "kind": "online_pair",
+      "input": {
+        "sample_admitted": true,
+        "blind_prediction": true,
+        "prediction_before_known_result": true,
+        "prediction_body_matches": true,
+        "prediction_before_submission": false
+      },
+      "expected": false
+    },
+    {
+      "name": "归档_closed_任务终态True_成绩完整False",
+      "kind": "archive",
+      "input": {
+        "phase": "closed",
+        "all_tasks_terminal": true,
+        "score_complete": false
+      },
+      "expected": true
+    },
+    {
+      "name": "归档_closed_任务终态True_成绩完整True",
+      "kind": "archive",
+      "input": {
+        "phase": "closed",
+        "all_tasks_terminal": true,
+        "score_complete": true
+      },
+      "expected": true
+    },
+    {
+      "name": "归档_submitted_任务终态True_成绩完整False",
+      "kind": "archive",
+      "input": {
+        "phase": "submitted",
+        "all_tasks_terminal": true,
+        "score_complete": false
+      },
+      "expected": false
+    },
+    {
+      "name": "归档_closed_任务终态False_成绩完整False",
+      "kind": "archive",
+      "input": {
+        "phase": "closed",
+        "all_tasks_terminal": false,
+        "score_complete": false
+      },
+      "expected": false
+    },
+    {
+      "name": "归档_terminated_任务终态True_成绩完整False",
+      "kind": "archive",
+      "input": {
+        "phase": "terminated",
+        "all_tasks_terminal": true,
+        "score_complete": false
+      },
+      "expected": true
+    }
+  ]
+}

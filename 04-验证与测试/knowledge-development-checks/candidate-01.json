@@ -1,0 +1,59 @@
+{
+  "candidate": "knowledge-backend-01",
+  "status": "developer_checks_passed_pending_independent_review",
+  "scope": "enterprise_knowledge_lifecycle_and_trusted_API_scope_bridge",
+  "sources": {
+    "apps/api/knowledge_routes.py": "fc03d6ebe5b5e61d45559c393fe6f58d4b1e6041a1ca04a9906aac9571b11fcf",
+    "packages/knowledge/README.md": "6cf55addab57e78dd716a12fb8f1b5703f52f6bb35b93410c96611e90f82cfa5",
+    "packages/knowledge/__init__.py": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+    "packages/knowledge/bridge.py": "337e206d09ce1c85488e36bfd0250410c42f233c0be9427454b949b93f2223ef",
+    "packages/knowledge/content.py": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+    "packages/knowledge/contracts.py": "501c4f5009a35b19baf5ae5d56d5c2f6c0f2b6f3590883ef104d7fab507a742a",
+    "packages/knowledge/repository.py": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+    "packages/knowledge/sources.py": "6fc06fff336f2e18f543d45d58e6ac7820388ff28b35e5f80aa46d9d55b78c10",
+    "tests/test_knowledge.py": "bbe7472d1ec2a8d561d5cb9b9525db39f6dff266272f8b60095da0aab3fae199",
+    "tests/test_knowledge_integration.py": "b59b72c75db9e5ba268e1cfe40815f4e5fdf27169a0f2f4b724bfe13d597f496"
+  },
+  "frozen_source_root": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-inputs",
+  "evidence": {
+    "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-evidence/environment.json": "3acb5d3fe4050db1c18af8fc757c02ecef9efd30aa8f59f9507788fceaf51868",
+    "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-evidence/integration-result.xml": "c960c2c12586045044a19a3eb8d32abdd674e26b24f7e283f72064632cc5d543",
+    "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-evidence/quality-result.json": "469538b38acb2fb29983218666cf7ce57f192f9d3c16e0ce8e36b89843bf4f91",
+    "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-evidence/synthetic-source-original.pdf": "808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5",
+    "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/candidate01-evidence/unit-result.xml": "61ca3b9b37aa2cf698296e6f5ad228adc430d6ae7b1c155c307101851ee68c41"
+  },
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "closed_protocol_unit": 8,
+    "real_nonowner_PG_S3_authenticated_HTTP": 13
+  },
+  "implemented": [
+    "candidate_and_immutable_versions",
+    "explicit_subject_project_region_engineering_fact_conditions_validity",
+    "manual_confirmation_publication_and_stop",
+    "concurrent_CAS_and_exact_idempotency",
+    "exact_parse_page_evidence_quote_original_provenance",
+    "no_source_republication_resurrection",
+    "historical_quote_and_original_byte_restore",
+    "reference_scope_replay_revalidation",
+    "working_submitted_archived_closed_impacts",
+    "keyword_search_and_trusted_original_evidence_allowlist_bridge",
+    "formal_score_denied_and_project_fact_not_auto_created"
+  ],
+  "not_claimed": [
+    "independent_QA",
+    "architecture_acceptance",
+    "frontend_business_journey",
+    "knowledge_summary_embedding",
+    "cross_project_RAG_end_to_end",
+    "automatic_follow_up_tasks",
+    "unregistered_experiment_model_complete_impact",
+    "production_capacity",
+    "real_company_knowledge_quality"
+  ],
+  "paid_model_calls": 0,
+  "new_owner_or_worker_table_grants": false
+}

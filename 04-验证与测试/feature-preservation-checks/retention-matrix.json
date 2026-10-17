@@ -1,0 +1,1061 @@
+{
+  "scope": "固定GitHub提交的源码与测试定义比较；未运行应用测试或验证真实效果",
+  "repositories": {
+    "app": {
+      "name": "tender-app",
+      "commit": "88d35bb6a7e5e65a3870fe2f3cc103529a0f649d"
+    },
+    "research": {
+      "name": "tender-research",
+      "commit": "007107df49b2dba60846b4d3855c1808b67c9cc6"
+    }
+  },
+  "features": [
+    {
+      "id": "R01",
+      "name": "上传即评审及失败恢复",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.2"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/pipeline.py",
+          "anchor": "def advance(",
+          "line": 241,
+          "sha256": "d783a7cf4c382b38a9a59e188dcdbd1a159cece92419a14ffb48c7a4663a415b",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/pipeline.py#L241"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_auto_pipeline.py",
+          "anchor": "def test_upload_runs_the_whole_review",
+          "line": 202,
+          "sha256": "6b898b965fe3ccf7e5e68611e0b00ca03b134b91c33176bec0cfb40ce4798887",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_auto_pipeline.py#L202"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R02",
+      "name": "风险优先与主要下一步",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 3.7"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/report.py",
+          "anchor": "def _next_actions(",
+          "line": 58,
+          "sha256": "d19aa5ed6bbefcaec82b2c37bba8301d35ddc1e1e0b791563d89ce5e4f4a2e34",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/report.py#L58"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_report_actions.py",
+          "anchor": "def test_qualification_risks_come_first",
+          "line": 58,
+          "sha256": "e2fec8338d45d3d1d32fc8c457fd1def65c279caa5ecd2cdd6eb958bbd8cf169",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_report_actions.py#L58"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R03",
+      "name": "逐条响应矩阵",
+      "design_coverage": "detail_gap",
+      "followup": "D05",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.3"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/report/ComplianceTable.tsx",
+          "anchor": "const ORDER:",
+          "line": 20,
+          "sha256": "45a47216bb986ce02b72bbd0793f33d672f3d1a1907350959af66bf428fe8be8",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/report/ComplianceTable.tsx#L20"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/report/ReportPage.test.tsx",
+          "anchor": "it('逐条响应：",
+          "line": 210,
+          "sha256": "d1e10c50aa64e67f511248446693a21dda00ac66ba3e87e5fd16f8c1e69db0f7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/report/ReportPage.test.tsx#L210"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R04",
+      "name": "原PDF证据核验",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+        "section_prefix": "## 7."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/evidence/PdfViewer.tsx",
+          "anchor": "export function PdfViewer",
+          "line": 35,
+          "sha256": "be789b1fd704c69288b5cdead31a1a8f78a903dd786155a22a6b148b4f55273b",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/evidence/PdfViewer.tsx#L35"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/evidence/PdfViewer.test.tsx",
+          "anchor": "it('bbox 为 null",
+          "line": 41,
+          "sha256": "3a693c6cbd8d83229c1106f7e7a42b8582daac847628a35ef09149c31ad54d75",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/evidence/PdfViewer.test.tsx#L41"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R05",
+      "name": "分片补传和签名刷新",
+      "design_coverage": "detail_gap",
+      "followup": "D01",
+      "target": {
+        "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+        "section_prefix": "### 5.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/upload/uploader.ts",
+          "anchor": "export class Uploader",
+          "line": 107,
+          "sha256": "ac5127b023f90fa195c95c53564ecb3f6110f0fce4b612eb1b27f3ed050b49f5",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/upload/uploader.ts#L107"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/upload/uploader.test.ts",
+          "anchor": "it('重试耗尽后",
+          "line": 173,
+          "sha256": "19cd13d7ddcc4be2d4aa4011393e3960a83a50cf4043560202f57587c5a63e28",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/upload/uploader.test.ts#L173"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R06",
+      "name": "逻辑文件新版本",
+      "design_coverage": "detail_gap",
+      "followup": "D02",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/files.py",
+          "anchor": "def init_upload(",
+          "line": 78,
+          "sha256": "3fbad9d790f310904891007dda4e1f2148a9731ebd15625c5c649fe6d69cf02a",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/files.py#L78"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/upload/uploader.test.ts",
+          "anchor": "it('指定 versionOfFileId",
+          "line": 107,
+          "sha256": "19cd13d7ddcc4be2d4aa4011393e3960a83a50cf4043560202f57587c5a63e28",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/upload/uploader.test.ts#L107"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R07",
+      "name": "规则沿用和批量确认",
+      "design_coverage": "detail_gap",
+      "followup": "D03",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.2"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/ai/handlers.py",
+          "anchor": "def _previous_decisions(",
+          "line": 54,
+          "sha256": "17c4a730ec9a7937d4524f46552c8bc71e396f3c3f27cfd536e9e096529a5ca7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/handlers.py#L54"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_rule_carry_over.py",
+          "anchor": "def test_reextraction_carries_decisions",
+          "line": 56,
+          "sha256": "ebca72e21fe68b0417b44ff8df419057f9df2b6033440d6c581504a66cfacd47",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_rule_carry_over.py#L56"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/rules.py",
+          "anchor": "def confirm_pending(",
+          "line": 306,
+          "sha256": "20611ac16ec4a38b5d8ef9037cf3e428f7650082a1318f4406bfbfdaf1c06405",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/rules.py#L306"
+        },
+        {
+          "repo": "app",
+          "path": "backend/tests/test_auto_pipeline.py",
+          "anchor": "def test_new_addendum_reextracts_rules_and_carries_decisions",
+          "line": 476,
+          "sha256": "6b898b965fe3ccf7e5e68611e0b00ca03b134b91c33176bec0cfb40ce4798887",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_auto_pipeline.py#L476"
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "name": "事实撤回和不可变事实集",
+      "design_coverage": "detail_gap",
+      "followup": "D04",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.2"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/rules.py",
+          "anchor": "def withdraw_fact(",
+          "line": 457,
+          "sha256": "20611ac16ec4a38b5d8ef9037cf3e428f7650082a1318f4406bfbfdaf1c06405",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/rules.py#L457"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_facts_and_confirmations.py",
+          "anchor": "def test_withdraw_fact(",
+          "line": 54,
+          "sha256": "8f45470ce5fe5ee219a030de0716cbee7dd2a065f586e0776f0dc7d2c5673cea",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_facts_and_confirmations.py#L54"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R09",
+      "name": "AI引文及数值核验",
+      "design_coverage": "detail_gap",
+      "followup": "D06",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 10.5"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/ai/grounding.py",
+          "anchor": "def invented_numbers(",
+          "line": 42,
+          "sha256": "cedc7e72aa609c3ef3af7e8e19cb5f0e921e1683ab9e48c6026aa63c97d12b26",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/grounding.py#L42"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_ai_pipeline.py",
+          "anchor": "def test_rules_to_findings_flow(",
+          "line": 76,
+          "sha256": "ace4ca565610716f35a22356a113c7a5cba2f034e187dac4a56dee2417055d64",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_ai_pipeline.py#L76"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/ai/handlers.py",
+          "anchor": "def _ground_terms(",
+          "line": 76,
+          "sha256": "17c4a730ec9a7937d4524f46552c8bc71e396f3c3f27cfd536e9e096529a5ca7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/handlers.py#L76"
+        },
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/ai/handlers.py",
+          "anchor": "invented_numbers(",
+          "line": 687,
+          "sha256": "17c4a730ec9a7937d4524f46552c8bc71e396f3c3f27cfd536e9e096529a5ca7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/handlers.py#L687"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "name": "确定性冲突重复及残留检查",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "## 7."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/checks/consistency.py",
+          "anchor": "def numeric_conflicts(",
+          "line": 69,
+          "sha256": "f741ca821f806d84ef317e201ed470aeb934054b50e2b7aa06a2aa415788557c",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/checks/consistency.py#L69"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_checks.py",
+          "anchor": "def test_same_value_and_different_models",
+          "line": 27,
+          "sha256": "ac6188df269cb7a892355ecdf1d72b3cd1bd54897c8a2e1820344a1335f53390",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_checks.py#L27"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/checks/scope.py",
+          "anchor": "def residual_scope(",
+          "line": 59,
+          "sha256": "2b08b690ef264dd3be061563f3b9c1f7490f038337e8016bd0de58d25e0f1c8d",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/checks/scope.py#L59"
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "name": "问题驳回暂缓及重开",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 10.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/findings.py",
+          "anchor": "def review_finding(",
+          "line": 133,
+          "sha256": "fc3036ea5c5421719c1d511d2b7140b7e06338f81470946377ae4deb7659af46",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/findings.py#L133"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_review_fixes.py",
+          "anchor": "def test_finding_reopen_and_manual_resolve",
+          "line": 202,
+          "sha256": "c38ec069094c9a7872d990a86a5fdfe3903beebe5e426610158a0cc94ad7c26f",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_review_fixes.py#L202"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R12",
+      "name": "冻结输入及轮次留存",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 4.2"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/snapshots.py",
+          "anchor": "def freeze_inputs(",
+          "line": 153,
+          "sha256": "3739452f1494c5b5854c4d890ab3f5a9633df849f9ee0bc442fbd480de825d11",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/snapshots.py#L153"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_review_fixes.py",
+          "anchor": "def test_snapshot_must_cover_current_tender_files",
+          "line": 47,
+          "sha256": "c38ec069094c9a7872d990a86a5fdfe3903beebe5e426610158a0cc94ad7c26f",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_review_fixes.py#L47"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R13",
+      "name": "实际提交及闸门",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 10.3"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/outcomes.py",
+          "anchor": "def freeze_submission(",
+          "line": 127,
+          "sha256": "765ff0ab71cc72a0006b8b535a9e121f675d34e3603e176d2d1d2db62f990b21",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/outcomes.py#L127"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_review_fixes.py",
+          "anchor": "def test_submission_gate(",
+          "line": 97,
+          "sha256": "c38ec069094c9a7872d990a86a5fdfe3903beebe5e426610158a0cc94ad7c26f",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_review_fixes.py#L97"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R14",
+      "name": "项目功能开关",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.4"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/schemas.py",
+          "anchor": "class ProjectSettings(",
+          "line": 93,
+          "sha256": "5d2cb15f75a39b9a44978f764f47306275fce4e7f22857d9fc6c1a0c80f978c9",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/schemas.py#L93"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_auto_pipeline.py",
+          "anchor": "def test_switches_trim_checks_report_and_submission_gate",
+          "line": 550,
+          "sha256": "6b898b965fe3ccf7e5e68611e0b00ca03b134b91c33176bec0cfb40ce4798887",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_auto_pipeline.py#L550"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R15",
+      "name": "Word报告及批注PDF",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 15.2"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/export.py",
+          "anchor": "def report_docx(",
+          "line": 176,
+          "sha256": "f44e7a017ff21a691d6c5a81083f3cea30952c63d880f8f5e560abf0157c0ac7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/export.py#L176"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_auto_pipeline.py",
+          "anchor": "# 导出：Word 报告与 PDF 批注版",
+          "line": 302,
+          "sha256": "6b898b965fe3ccf7e5e68611e0b00ca03b134b91c33176bec0cfb40ce4798887",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_auto_pipeline.py#L302"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/export.py",
+          "anchor": "def annotated_pdf(",
+          "line": 209,
+          "sha256": "f44e7a017ff21a691d6c5a81083f3cea30952c63d880f8f5e560abf0157c0ac7",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/export.py#L209"
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "name": "报价曲线和历史版本",
+      "design_coverage": "detail_gap",
+      "followup": "D07",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 15.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/price/PricePage.tsx",
+          "anchor": "function PriceWorkspace(",
+          "line": 97,
+          "sha256": "a4c1fa9f29410c7e21455f814f680fcb92547d8897adef7ee31de972c35b56a5",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/price/PricePage.tsx#L97"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/price/PricePage.test.tsx",
+          "anchor": "it('保存过的方案：",
+          "line": 191,
+          "sha256": "d17869b6810388554be83893060800c4c3f6f2a04e57f2f317a3cb118b197cb1",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/price/PricePage.test.tsx#L191"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/pricing.py",
+          "anchor": "def simulate(",
+          "line": 71,
+          "sha256": "36adf8f167f111471e45db3f3ae486b506fcdadbced2b7d18d846992c889ce41",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/pricing.py#L71"
+        },
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/price.py",
+          "anchor": "def list_plans(",
+          "line": 46,
+          "sha256": "6f5bd5c3ca1798d86f753f9f56bc6a962ad544c229d8d3f1eb9b1eab8f1b43e1",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/price.py#L46"
+        },
+        {
+          "repo": "app",
+          "path": "frontend/src/features/price/queries.ts",
+          "anchor": "export function useSimulation(",
+          "line": 57,
+          "sha256": "f280dfe0b302fbc40d2324cc72925034bbea84c994e602594c7e18edb0f17c5c",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/price/queries.ts#L57"
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "name": "风险闭环和轮次走势",
+      "design_coverage": "detail_gap",
+      "followup": "D08",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 15.3"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/metrics.py",
+          "anchor": "def _trends(",
+          "line": 94,
+          "sha256": "97fd596dcf94fc0474fd72bf91e93fd415b0434f34e4901e28f93183fc36c417",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/metrics.py#L94"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_auto_pipeline.py",
+          "anchor": "def test_submission_and_outcome_feed_metrics_and_calibration",
+          "line": 390,
+          "sha256": "6b898b965fe3ccf7e5e68611e0b00ca03b134b91c33176bec0cfb40ce4798887",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_auto_pipeline.py#L390"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/metrics.py",
+          "anchor": "def _qualification(",
+          "line": 65,
+          "sha256": "97fd596dcf94fc0474fd72bf91e93fd415b0434f34e4901e28f93183fc36c417",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/metrics.py#L65"
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "name": "业务与影子模型对照",
+      "design_coverage": "detail_gap",
+      "followup": "D09",
+      "target": {
+        "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+        "section_prefix": "### 10."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/ai/predict.py",
+          "anchor": "environments: tuple[",
+          "line": 292,
+          "sha256": "4dcbc4b8e5252bb99fab0f5bcc318b1bcd6312fe89b6a75f144697b05f74732c",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/predict.py#L292"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_predict.py",
+          "anchor": "def test_business_model_calibrates_and_shadow_is_recorded",
+          "line": 145,
+          "sha256": "aad7a347b42e0fc7d70811593918831c785802dd8802c0888e8c4b41f0810613",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_predict.py#L145"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R19",
+      "name": "批量实验预估及续跑",
+      "design_coverage": "detail_gap",
+      "followup": "D10",
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 14.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/tools/batch/predict_dataset.py",
+          "anchor": "--estimate-only",
+          "line": 1066,
+          "sha256": "7824e0ff30aa210402c48018d92d87e0ec3a5cc035bed74b7da9ad426afb62f9",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tools/batch/predict_dataset.py#L1066"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_batch_predict.py",
+          "anchor": "def test_batch_predicts_caches_resumes_and_isolates_failures",
+          "line": 104,
+          "sha256": "e629c08703ef3aba753678b84993248e7a2ddcc360d9abe08abdb561a2790047",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_batch_predict.py#L104"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_batch_predict.py",
+          "anchor": "def test_estimate_only_does_not_call_the_model",
+          "line": 185,
+          "sha256": "e629c08703ef3aba753678b84993248e7a2ddcc360d9abe08abdb561a2790047",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_batch_predict.py#L185"
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "name": "历史资料入库预览及去重分组",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 11.3"
+      },
+      "code": [
+        {
+          "repo": "research",
+          "path": "src/tender_research/intake.py",
+          "anchor": "def run(",
+          "line": 868,
+          "sha256": "2d94a7d2fe77fdfd5cdb22a72723e5807a80adee0d3dfda745b6f988e615670d",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/src/tender_research/intake.py#L868"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "research",
+          "path": "tests/test_intake.py",
+          "anchor": "def test_duplicate_body_and_template_groups",
+          "line": 261,
+          "sha256": "03950cae2a1d2f1cf7f32ac166b446097600147f216e5c9882d9b7a6124c1533",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/tests/test_intake.py#L261"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "research",
+          "path": "tests/test_intake.py",
+          "anchor": "def test_dry_run_writes_nothing(",
+          "line": 202,
+          "sha256": "03950cae2a1d2f1cf7f32ac166b446097600147f216e5c9882d9b7a6124c1533",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/tests/test_intake.py#L202"
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "name": "严格评测与基线对照",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 14.2"
+      },
+      "code": [
+        {
+          "repo": "research",
+          "path": "src/tender_research/score_eval.py",
+          "anchor": "def evaluate(",
+          "line": 470,
+          "sha256": "5b80b35da15016f1f47e04fd970159f60232bed6916f82d424f9effeb658e8d3",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/src/tender_research/score_eval.py#L470"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "research",
+          "path": "tests/test_score_eval.py",
+          "anchor": "def test_test_labels_never_influence_predictions",
+          "line": 245,
+          "sha256": "e5d0c55f4ee9f09eba6e7ef64914cfdf3e8172c9d7881a8707f282f43a16e5d7",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/tests/test_score_eval.py#L245"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "research",
+          "path": "tests/test_score_eval.py",
+          "anchor": "def test_verified_official_subset_reported(",
+          "line": 437,
+          "sha256": "e5d0c55f4ee9f09eba6e7ef64914cfdf3e8172c9d7881a8707f282f43a16e5d7",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/tests/test_score_eval.py#L437"
+        },
+        {
+          "repo": "research",
+          "path": "tests/test_score_eval.py",
+          "anchor": "def test_holdout_runs_once_per_protocol(",
+          "line": 537,
+          "sha256": "e5d0c55f4ee9f09eba6e7ef64914cfdf3e8172c9d7881a8707f282f43a16e5d7",
+          "url": "https://github.com/zys743551828-art/tender-research/blob/007107df49b2dba60846b4d3855c1808b67c9cc6/tests/test_score_eval.py#L537"
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "name": "模型登记及发布路由",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+        "section_prefix": "### 10."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/model_registry.py",
+          "anchor": "def register(",
+          "line": 102,
+          "sha256": "fb08babf9a3494513fb493eccadf55a16e67e0ae6cb02c0a3ee630fdcb2b4f56",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/model_registry.py#L102"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_model_registry.py",
+          "anchor": "def test_register_route_replace_and_unroute",
+          "line": 35,
+          "sha256": "87535b3af120274d868d93706c60a615251ae87d40cb670af10a7f2dbe5d842f",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_model_registry.py#L35"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R23",
+      "name": "幂等重试与冲突恢复",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+        "section_prefix": "## 4."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/lib/useIdempotentAction.ts",
+          "anchor": "export function useIdempotentAction",
+          "line": 11,
+          "sha256": "10af07913ed607aa7df2acdcfdc16dfd270f1291e20091fd5d8cfea6db6c0f1b",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/lib/useIdempotentAction.ts#L11"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/lib/useIdempotentAction.test.tsx",
+          "anchor": "it('失败后原样重试",
+          "line": 16,
+          "sha256": "43aea124fdfc8005161d0537e5c5d0de3541817e33d60f7c05ed7b74b4a36c1b",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/lib/useIdempotentAction.test.tsx#L16"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R24",
+      "name": "主题偏好",
+      "design_coverage": "optional",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "## 16."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/lib/theme.ts",
+          "anchor": "export function useTheme",
+          "line": 30,
+          "sha256": "88bdbdd6297e62174a1f91a54a11ddbff30875f6c655693b26a2cfb6e1b85135",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/lib/theme.ts#L30"
+        }
+      ],
+      "test_definitions": [],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R25",
+      "name": "键盘和窄屏可访问性",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "## 16."
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "frontend/src/features/report/ComplianceTable.tsx",
+          "anchor": "stack-mobile",
+          "line": 122,
+          "sha256": "45a47216bb986ce02b72bbd0793f33d672f3d1a1907350959af66bf428fe8be8",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/features/report/ComplianceTable.tsx#L122"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "frontend/src/routes/App.test.tsx",
+          "anchor": "it('依据页的标签可用键盘",
+          "line": 42,
+          "sha256": "764b3a14164a7ba16fdea41876f4745ffb43706cc1e683e7a97d246e56e77199",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/frontend/src/routes/App.test.tsx#L42"
+        }
+      ],
+      "tests_executed_in_this_review": false
+    },
+    {
+      "id": "R26",
+      "name": "内容去重和原文证据顺序",
+      "design_coverage": "covered",
+      "followup": null,
+      "target": {
+        "path": "02-业务与产品/AI投标工作台PRD.md",
+        "section_prefix": "### 7.1"
+      },
+      "code": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/evidence.py",
+          "anchor": "def _ref(",
+          "line": 20,
+          "sha256": "1341a636a044b3f1065efa9e4611eb75145e51443de2ee80becdad4898708d8f",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/evidence.py#L20"
+        }
+      ],
+      "test_definitions": [
+        {
+          "repo": "app",
+          "path": "backend/tests/test_evidence_order_and_uploads.py",
+          "anchor": "def test_evidence_reads_back_in_document_order",
+          "line": 22,
+          "sha256": "f716bb073edb544c642882ae096af83bddbe8c3cb97e7616d645c5ac4ce932bd",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_evidence_order_and_uploads.py#L22"
+        }
+      ],
+      "tests_executed_in_this_review": false,
+      "supporting_sources": [
+        {
+          "repo": "app",
+          "path": "backend/src/bidwb/services/files.py",
+          "anchor": "def _identical_latest(",
+          "line": 326,
+          "sha256": "3fbad9d790f310904891007dda4e1f2148a9731ebd15625c5c649fe6d69cf02a",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/files.py#L326"
+        },
+        {
+          "repo": "app",
+          "path": "backend/tests/test_evidence_order_and_uploads.py",
+          "anchor": "def test_same_content_registered_concurrently_yields_one_artifact(",
+          "line": 51,
+          "sha256": "f716bb073edb544c642882ae096af83bddbe8c3cb97e7616d645c5ac4ce932bd",
+          "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_evidence_order_and_uploads.py#L51"
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    {
+      "finding": "固定字数截断相关章节",
+      "source": {
+        "repo": "app",
+        "path": "backend/src/bidwb/ai/predict.py",
+        "anchor": "CONTEXT_CHARS = 14000",
+        "line": 46,
+        "sha256": "4dcbc4b8e5252bb99fab0f5bcc318b1bcd6312fe89b6a75f144697b05f74732c",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/predict.py#L46"
+      }
+    },
+    {
+      "finding": "全失败仍返回满分一半",
+      "source": {
+        "repo": "app",
+        "path": "backend/tests/test_predict.py",
+        "anchor": "def test_all_judgements_failing_falls_back_to_half_points",
+        "line": 124,
+        "sha256": "aad7a347b42e0fc7d70811593918831c785802dd8802c0888e8c4b41f0810613",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_predict.py#L124"
+      }
+    },
+    {
+      "finding": "原始区间只是档位范围并集",
+      "source": {
+        "repo": "app",
+        "path": "backend/tests/test_predict.py",
+        "anchor": "def test_grounding_downgrades_points_without_offered_evidence_and_aggregate_unions_grade_intervals",
+        "line": 51,
+        "sha256": "aad7a347b42e0fc7d70811593918831c785802dd8802c0888e8c4b41f0810613",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tests/test_predict.py#L51"
+      }
+    },
+    {
+      "finding": "应用统计会纳入待核验成绩",
+      "source": {
+        "repo": "app",
+        "path": "backend/src/bidwb/services/metrics.py",
+        "anchor": "o.verification_status <> 'conflict'",
+        "line": 27,
+        "sha256": "97fd596dcf94fc0474fd72bf91e93fd415b0434f34e4901e28f93183fc36c417",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/services/metrics.py#L27"
+      }
+    },
+    {
+      "finding": "数字守卫仅阿拉伯数字集合",
+      "source": {
+        "repo": "app",
+        "path": "backend/src/bidwb/ai/grounding.py",
+        "anchor": "_NUM = ",
+        "line": 13,
+        "sha256": "cedc7e72aa609c3ef3af7e8e19cb5f0e921e1683ab9e48c6026aa63c97d12b26",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/grounding.py#L13"
+      }
+    },
+    {
+      "finding": "规则沿用仅性质和文本",
+      "source": {
+        "repo": "app",
+        "path": "backend/src/bidwb/ai/handlers.py",
+        "anchor": "out.setdefault((row[\"kind\"], grounding.squash",
+        "line": 68,
+        "sha256": "17c4a730ec9a7937d4524f46552c8bc71e396f3c3f27cfd536e9e096529a5ca7",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/handlers.py#L68"
+      }
+    },
+    {
+      "finding": "缓存身份需按新用途强化",
+      "source": {
+        "repo": "app",
+        "path": "backend/tools/batch/predict_dataset.py",
+        "anchor": "class CachedLlm",
+        "line": 223,
+        "sha256": "7824e0ff30aa210402c48018d92d87e0ec3a5cc035bed74b7da9ad426afb62f9",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/tools/batch/predict_dataset.py#L223"
+      }
+    },
+    {
+      "finding": "应用锚点候选仅排除相同正文",
+      "source": {
+        "repo": "app",
+        "path": "backend/src/bidwb/ai/anchors.py",
+        "anchor": "candidates = sorted((a for a in anchors if a.body_sha256 != body_sha256)",
+        "line": 140,
+        "sha256": "fedae9fd7a73e3412b277d18ffb215da8cce82e1b02734850003500f7e2a5d70",
+        "url": "https://github.com/zys743551828-art/tender-app/blob/88d35bb6a7e5e65a3870fe2f3cc103529a0f649d/backend/src/bidwb/ai/anchors.py#L140"
+      }
+    }
+  ],
+  "excluded_worktree_changes": [
+    "frontend/src/features/materials/MaterialsPage.test.tsx",
+    "frontend/src/features/materials/MaterialsPage.tsx",
+    "frontend/src/features/report/ReportPage.test.tsx",
+    "frontend/src/features/report/ReportPage.tsx",
+    "frontend/src/features/submit/SubmitPage.test.tsx",
+    "frontend/src/routes/App.test.tsx",
+    "frontend/src/routes/ProjectNav.tsx"
+  ],
+  "target_contract_status": "recommendations_pending_contract_design",
+  "application_tests_run": false
+}

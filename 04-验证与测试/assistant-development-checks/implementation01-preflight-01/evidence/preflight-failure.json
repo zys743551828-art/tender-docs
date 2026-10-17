@@ -1,0 +1,16 @@
+{
+  "type": "incorrect-negative-test-expectation",
+  "expectation": "Worker cannot SELECT bid_profiles",
+  "actual": "Base roles already grant SELECT bid_profiles for current-head work; new assistant SQL did not add this grant",
+  "observed_restricted": [
+    "commands",
+    "bidders",
+    "engineering_projects",
+    "messages",
+    "assistant_global_messages",
+    "assistant_publications",
+    "assistant_action_links"
+  ],
+  "change": "Remove only this false assertion, no DB/schema/grant modification",
+  "result": "25 passed + 1 failed; remaining selected tests not run; never treated as pass"
+}

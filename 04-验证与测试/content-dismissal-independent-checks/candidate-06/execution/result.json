@@ -1,0 +1,247 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "old_real_grounded_90_120_starts_open_with_two_evidence_sides",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "reasoned_old_decision_is_actual_and_limited_to_old_evidence",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "identical_frozen_body_and_values_may_keep_old_decision",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_body_changed_sha_and_two_disjoint_grounded_evidence_sides",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_issue_group_does_not_authorize_old_human_decision_for_new_values",
+      "passed": true,
+      "observation": {
+        "finding": {
+          "id": "23820542-4136-46ec-9c7a-ee937446117b",
+          "bid_id": "8e5ffc4f-5667-45d0-93d0-ccc5e96d7292",
+          "review_id": "f49a0bd5-175c-485c-b0e6-2c42dbef6605",
+          "rule_id": "db771c14-930d-4cb9-a51f-b66ae270d705",
+          "category": "consistency",
+          "severity": "critical",
+          "verdict": "violated",
+          "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+          "searched_ranges": [
+            "7d08cacb-d0f1-4b4a-83d3-e0a50e58226a:物理页1—2；已读块/缺口见独立检测覆盖"
+          ],
+          "evidence_ids": [
+            "c2c887c4-1ace-492c-aa32-e540c6ba2e28",
+            "ef4c905b-93fc-42a6-b6cf-307c7fd67713"
+          ],
+          "carried_from_id": null
+        },
+        "lifecycle": "open",
+        "root_id": "23820542-4136-46ec-9c7a-ee937446117b",
+        "decision_id": null,
+        "issue_key": "3e1178f7751f8e9de1f8c1c1899da3e21a79d2adabc6092ecb07411b5298bd53",
+        "assertions": {
+          "left": {
+            "unit": "天",
+            "quote": "工程A标段一工期95天",
+            "scope": "标段一",
+            "value": "95",
+            "subject": "工程A",
+            "relation": "equal",
+            "attribute": "工期",
+            "dimension": "unspecified_days",
+            "normalized": "95",
+            "evidence_id": "c2c887c4-1ace-492c-aa32-e540c6ba2e28"
+          },
+          "right": {
+            "unit": "天",
+            "quote": "工程A标段一工期125天",
+            "scope": "标段一",
+            "value": "125",
+            "subject": "工程A",
+            "relation": "equal",
+            "attribute": "工期",
+            "dimension": "unspecified_days",
+            "normalized": "125",
+            "evidence_id": "ef4c905b-93fc-42a6-b6cf-307c7fd67713"
+          }
+        }
+      }
+    },
+    {
+      "name": "new_issue_does_not_rewrite_old_dismissed_history",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "scope": "Own synthetic real-PDF SHA and explicit parsed-page/model-output SQL fixtures; actual engineering validate_output and restricted Worker fenced content publish. A document/1 test envelope routes only publication through explicit patch to actual content publisher; not real model parsing/Kafka/API acceptance.",
+  "paid_calls": 0,
+  "model_calls": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "last_publish_phase": "finish",
+  "bid_id": "8e5ffc4f-5667-45d0-93d0-ccc5e96d7292",
+  "first": {
+    "finding": {
+      "id": "dccd10cf-d4d3-4133-a85f-4ba8df9907dd",
+      "bid_id": "8e5ffc4f-5667-45d0-93d0-ccc5e96d7292",
+      "review_id": "9db17370-439e-4010-ae65-382874b0e7b3",
+      "rule_id": "3292f1a1-ea3b-423d-bd53-2bf1a01ddfe1",
+      "category": "consistency",
+      "severity": "critical",
+      "verdict": "violated",
+      "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 90天；equal 120天。请核对原页条件，不自动修改正文。",
+      "searched_ranges": [
+        "dd3a4e8d-01b0-42a2-9865-b0d6b4800522:物理页1—2；已读块/缺口见独立检测覆盖"
+      ],
+      "evidence_ids": [
+        "5d3a5b48-b319-4fda-8ced-0685916f2a54",
+        "98f03242-d2b9-45e1-8bc7-fee8c019e2cb"
+      ],
+      "carried_from_id": null
+    },
+    "lifecycle": "open",
+    "root_id": "dccd10cf-d4d3-4133-a85f-4ba8df9907dd",
+    "decision_id": null,
+    "issue_key": "3e1178f7751f8e9de1f8c1c1899da3e21a79d2adabc6092ecb07411b5298bd53",
+    "assertions": {
+      "left": {
+        "unit": "天",
+        "quote": "工程A标段一工期90天",
+        "scope": "标段一",
+        "value": "90",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "90",
+        "evidence_id": "5d3a5b48-b319-4fda-8ced-0685916f2a54"
+      },
+      "right": {
+        "unit": "天",
+        "quote": "工程A标段一工期120天",
+        "scope": "标段一",
+        "value": "120",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "120",
+        "evidence_id": "98f03242-d2b9-45e1-8bc7-fee8c019e2cb"
+      }
+    }
+  },
+  "same_body": {
+    "finding": {
+      "id": "d329be2d-3ef2-46da-9911-1ce60b236702",
+      "bid_id": "8e5ffc4f-5667-45d0-93d0-ccc5e96d7292",
+      "review_id": "3193b539-4835-4ff5-9f40-171171d86481",
+      "rule_id": "b1ff13a5-6609-422a-b672-f93387b97ad2",
+      "category": "consistency",
+      "severity": "critical",
+      "verdict": "violated",
+      "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 90天；equal 120天。请核对原页条件，不自动修改正文。",
+      "searched_ranges": [
+        "dd3a4e8d-01b0-42a2-9865-b0d6b4800522:物理页1—2；已读块/缺口见独立检测覆盖"
+      ],
+      "evidence_ids": [
+        "5d3a5b48-b319-4fda-8ced-0685916f2a54",
+        "98f03242-d2b9-45e1-8bc7-fee8c019e2cb"
+      ],
+      "carried_from_id": "dccd10cf-d4d3-4133-a85f-4ba8df9907dd"
+    },
+    "lifecycle": "dismissed",
+    "root_id": "dccd10cf-d4d3-4133-a85f-4ba8df9907dd",
+    "decision_id": "3720ee80-bf36-42f6-a371-8cd996ae481e",
+    "issue_key": "3e1178f7751f8e9de1f8c1c1899da3e21a79d2adabc6092ecb07411b5298bd53",
+    "assertions": {
+      "left": {
+        "unit": "天",
+        "quote": "工程A标段一工期90天",
+        "scope": "标段一",
+        "value": "90",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "90",
+        "evidence_id": "5d3a5b48-b319-4fda-8ced-0685916f2a54"
+      },
+      "right": {
+        "unit": "天",
+        "quote": "工程A标段一工期120天",
+        "scope": "标段一",
+        "value": "120",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "120",
+        "evidence_id": "98f03242-d2b9-45e1-8bc7-fee8c019e2cb"
+      }
+    }
+  },
+  "changed_body": {
+    "finding": {
+      "id": "23820542-4136-46ec-9c7a-ee937446117b",
+      "bid_id": "8e5ffc4f-5667-45d0-93d0-ccc5e96d7292",
+      "review_id": "f49a0bd5-175c-485c-b0e6-2c42dbef6605",
+      "rule_id": "db771c14-930d-4cb9-a51f-b66ae270d705",
+      "category": "consistency",
+      "severity": "critical",
+      "verdict": "violated",
+      "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+      "searched_ranges": [
+        "7d08cacb-d0f1-4b4a-83d3-e0a50e58226a:物理页1—2；已读块/缺口见独立检测覆盖"
+      ],
+      "evidence_ids": [
+        "c2c887c4-1ace-492c-aa32-e540c6ba2e28",
+        "ef4c905b-93fc-42a6-b6cf-307c7fd67713"
+      ],
+      "carried_from_id": null
+    },
+    "lifecycle": "open",
+    "root_id": "23820542-4136-46ec-9c7a-ee937446117b",
+    "decision_id": null,
+    "issue_key": "3e1178f7751f8e9de1f8c1c1899da3e21a79d2adabc6092ecb07411b5298bd53",
+    "assertions": {
+      "left": {
+        "unit": "天",
+        "quote": "工程A标段一工期95天",
+        "scope": "标段一",
+        "value": "95",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "95",
+        "evidence_id": "c2c887c4-1ace-492c-aa32-e540c6ba2e28"
+      },
+      "right": {
+        "unit": "天",
+        "quote": "工程A标段一工期125天",
+        "scope": "标段一",
+        "value": "125",
+        "subject": "工程A",
+        "relation": "equal",
+        "attribute": "工期",
+        "dimension": "unspecified_days",
+        "normalized": "125",
+        "evidence_id": "ef4c905b-93fc-42a6-b6cf-307c7fd67713"
+      }
+    }
+  },
+  "old_body_digest": "fd7b6c46b6c8ac8390e509c41c293ce6162d47cbb3fe059add9e1464564e6dac",
+  "new_body_digest": "00d0bd1cb7c7f1bb845e976acb962729e9d97d4a242f464538da6348f024b185",
+  "old_human_decision_id": "3720ee80-bf36-42f6-a371-8cd996ae481e",
+  "probe_sha256": "f3c41b013d341f18a6c6e7675bbe2f7cc9ac23d034d4e65ffd057f3879fa1377",
+  "runtime_manifest_sha256": "6ed8d9b578e2c098e8f806bf3649e3394d3f8afe93cb5833448008a8302440b8",
+  "fixture_manifest_sha256": "47874626fefa43ef520b84c8cbd25e80b3f4e43b7045338a0393f090944b3f4d"
+}

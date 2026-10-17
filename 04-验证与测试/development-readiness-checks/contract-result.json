@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "目标契约规范、合法／反例夹具、需求落点与本地文件链接；不调用产品",
+  "executed_at": "2026-10-16T12:54:15.281328+00:00",
+  "schema_definitions": 127,
+  "api_paths": 84,
+  "api_operations": 91,
+  "positive_examples": 9,
+  "rejected_counterexamples": 21,
+  "requirements_traced": 54,
+  "local_links_checked": 91,
+  "checks": 359,
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "openapi-spec-validator": "0.7.2"
+  },
+  "inputs": {
+    "05-技术与设计/AI投标工作台详细技术设计.md": "74779a1f26c93c204c23cf5f6b1f25ef0f7c05be1b7f48a2c4760ba854cc7c0d",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/domain.sql": "495afc7150ddab97baddeff4d35f55dabaa66e8381b3fa6b063f2cdc6aaeb254",
+    "05-技术与设计/detailed-design/retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "05-技术与设计/detailed-design/worker-functions.sql": "0097f57f4ba891368a9e8465f03aa65757421f2e552b3c1b13c2de9535a10d21",
+    "05-技术与设计/detailed-design/roles.sql": "5ea6d9ab6bd90e180732364fea2e95cc3a5e75a9fbc8b61da8cc67cea5fb1ffd",
+    "05-技术与设计/detailed-design/protocol.schema.json": "351bec989d34d622f01d0302eb20fd73c1e51791942f535dc037c5ea061f4c93",
+    "05-技术与设计/detailed-design/http-examples.json": "ef1a7f01225fbde0f7eafec8be7b420fd98358bb665f68b456202d857fff7dc2",
+    "05-技术与设计/detailed-design/openapi.json": "a430765630606efaa6f078b44a5d024c618475321f97a1073b508780e67fd157",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/retrieval-policy.json": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+    "05-技术与设计/detailed-design/README.md": "95d350a3c0814f0ebf905e94b4029002bc7203c85536dc96387ea0c56a238dce",
+    "04-验证与测试/detailed-design-checks/requirements-trace.json": "6a52e025770dd664b363c6ea9c094f2cf693e2b3ae2d72c1c1744d5a11747f13",
+    "04-验证与测试/detailed-design-checks/README.md": "283b0cb2f6927b1cd56a77369a1e80c1863909b796df2eec329c8b1d360565c6",
+    "04-验证与测试/detailed-design-checks/requirements.lock.txt": "b6694358b23abb4512fb238325091f75cde5ba11ce6faa4aa13d3f55ec200dab",
+    "05-技术与设计/detailed-design/数据与事务实现规约.md": "a4918a449a7fe190d1e26b33b622e4f096c2eeb5c0776db9332ee4fdaa118283",
+    "05-技术与设计/detailed-design/接口与任务实现规约.md": "5f7e759f9d628105f4cd88ec04a24d12ead8f1dd07b08f8a801502744f37376b",
+    "05-技术与设计/detailed-design/RAG与评分实现规约.md": "f249403ac9498dfb136eae6c7fe37719982eac58ff1f6147e4e2dcd5718c5faf",
+    "05-技术与设计/detailed-design/部署与交付手册.md": "7b97fcd3e72d6908ee3833c0ebeac95188c7a9e1127ba3957cc072e9ca2b91cd",
+    "05-技术与设计/detailed-design/deploy/compose.yaml": "38805155d0654162a05e2aab5ab0c7f5588a1dd9add406934c2f30f74f2decb9",
+    "05-技术与设计/detailed-design/deploy/init_topics.py": "bd47e25bb49b508d4d1a74091e4a87a6a46d5768323661990a2f5f8428af8cc6",
+    "04-验证与测试/implementation-design-checks/README.md": "23ec23eada1a4171a88517209842b38022b8f78c3691ad58da57ec8fefea7248",
+    "04-验证与测试/detailed-design-checks/check_contracts.py": "20c79ee91c28de78ae86d3136a549539a6566d2eec645f21731c0ae2e3ed1f06"
+  },
+  "software_end_to_end_executed": false
+}

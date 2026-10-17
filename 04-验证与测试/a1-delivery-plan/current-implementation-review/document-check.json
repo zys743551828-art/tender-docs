@@ -1,0 +1,93 @@
+{
+  "type": "product_document_consistency_only",
+  "checks": [
+    {
+      "name": "exactly_40_original_FR_in_order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_full_FR_or_product_acceptance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "old_remaining_snapshot_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "main_PRD_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all_frozen_read_snapshots_match",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every_FR_has_owner_packet_action_and_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate_binding_BACK07",
+      "passed": true,
+      "detail": "1804eca4c4325bf8666d4c4c2cdbe60e59110b407a1cc03e0f1ee72c0f99e1bd"
+    },
+    {
+      "name": "candidate_binding_WORDCAND",
+      "passed": true,
+      "detail": "9b609a89975c31ab945aacbbe8f63639edd37d51b622ee92c788146270cd7168"
+    },
+    {
+      "name": "candidate_binding_HISTCAND",
+      "passed": true,
+      "detail": "3d917c3190eca381e43d647bbf7a29422faebb1653605a45784a0a76e10fba45"
+    },
+    {
+      "name": "candidate_binding_SCORECAND",
+      "passed": true,
+      "detail": "32893b6df6fe1d6f0b5485bb3191aa8b4987fee8d690d4062b842d206ba3f9e7"
+    },
+    {
+      "name": "candidate_binding_A2CAND",
+      "passed": true,
+      "detail": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9"
+    },
+    {
+      "name": "candidate_binding_TASKCAND",
+      "passed": true,
+      "detail": "4f91d6aafcc397e89c19acbf626631853663a5c53e8ed95db300bc802856d650"
+    },
+    {
+      "name": "candidate_binding_FE10",
+      "passed": true,
+      "detail": "d1be8aa67adfa75adaf7f904efcc626b720e5931b694adec8fca115126af3aee"
+    },
+    {
+      "name": "new_local_markdown_links_exist",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "known_implemented_FR_not_marked_unimplemented",
+      "passed": true,
+      "detail": "核结构化实施状态与证据；首轮把中文“有101开发”与“已有”做词面匹配导致假阴性，原输出保留document-check-first.json；被核产品文档未改。"
+    },
+    {
+      "name": "new_protocol_does_not_claim_current_support",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "passed": true,
+  "count": 16,
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "whole_requirement_accepted": false,
+  "prior_check": "document-check-first.json"
+}

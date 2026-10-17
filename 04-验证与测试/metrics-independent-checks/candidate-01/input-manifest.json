@@ -1,0 +1,112 @@
+[
+  {
+    "path": "packages/metrics/__init__.py",
+    "sha256": "8928f40c9a970d97210328a29cd54e333ee2ded36db8caa965f3e7494e44d6aa",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/contracts.py",
+    "sha256": "f6549612c78ad7ef6a35e7aed2af758e1337d8f9ef0e0a7c39a94e7dc57e3563",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/core.py",
+    "sha256": "9ddf4e93ba72c7b3f4e38a89eb63efc06ea3562282776770681a745c9d07b609",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/predictions.py",
+    "sha256": "cdfb50668597ddfacb85cdf6c6df24c4a68201a5fc040d77800d6ec00f1d84aa",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/records.py",
+    "sha256": "0ef3b58db374ce898df4e0eb27dec7d83bc6e9541c00f354b56b9b2dc0ac63ca",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/results.py",
+    "sha256": "46274b2a7c30d7ecedc8bf7be31a8dd57ffe2e8f46a9fc0265fc61331c26ff86",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/snapshots.py",
+    "sha256": "a17a6d186090571991528f3bc8264c6a3a485a69b179630a14219df359cd0ca2",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/metrics/views.py",
+    "sha256": "1001518973944179e843edbc8dcc0335167f2109fdc9de61fd234ba462d3d3da",
+    "kind": "sources"
+  },
+  {
+    "path": "apps/api/metrics_routes.py",
+    "sha256": "e5b7ab7f8774df18573098951b1538fa869da7e88c21f584ad3e1a22c8eedad7",
+    "kind": "sources"
+  },
+  {
+    "path": "tests/test_metrics.py",
+    "sha256": "e72cc3e448c29b1b265b50d7efab51858ffcc6facb69116ca876dd6bf87ba1b9",
+    "kind": "sources"
+  },
+  {
+    "path": "tests/test_metrics_integration.py",
+    "sha256": "0ed536cae5d0545be737d2c3b3036546ef829a0cdb077e0472cf92e98ac8db48",
+    "kind": "sources"
+  },
+  {
+    "path": "docs/metrics-development-checks/implementation-protocol.md",
+    "sha256": "638cc92b7c734d81f670507ab9763be0d27ca67d31b7727733d5b500c703ad67",
+    "kind": "sources"
+  },
+  {
+    "path": "packages/identity/repository.py",
+    "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/research/identities.py",
+    "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/research/outcomes.py",
+    "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/domain/runtime.py",
+    "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/domain/finding_lifecycle.py",
+    "sha256": "8d856f2de574a7c142f85e4ad8e2cf3875fc9672f630bb40364ae6d3a78c3d66",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/domain/reviews.py",
+    "sha256": "b577dc5ff5f51cd44119faf5ef0f55092381d0a9ef16c0c696de77eaf7039015",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/domain/review_data.py",
+    "sha256": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "apps/api/auth.py",
+    "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/contracts/sql/roles.sql",
+    "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "kind": "observed_dependencies"
+  },
+  {
+    "path": "packages/contracts/sql/worker-functions.sql",
+    "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "kind": "observed_dependencies"
+  }
+]

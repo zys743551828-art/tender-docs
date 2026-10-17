@@ -1,0 +1,8 @@
+{
+  "baseline_assistant01_and_delta02_actual_contract_sha256": "b0f831d1977b5c4af83071955cfb0cb132a974ed6676904512cf13b7d908fb25",
+  "paths": 28,
+  "operations": 33,
+  "actual_contract_unchanged": true,
+  "scope": "standalone authoring+knowledge routers only, not main07 full contract",
+  "harness_correction": "Direct authoring extender expects baseline BuildView schemas; initial raw FastAPI schema omitted them, KeyError before contract comparison. Re-run through actual implemented_openapi exporter provided baseline definitions."
+}

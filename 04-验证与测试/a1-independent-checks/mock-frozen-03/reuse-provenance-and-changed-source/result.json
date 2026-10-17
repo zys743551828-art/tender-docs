@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 6,
+          "completed": 6,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unchanged_input_after_cloning_reuses_current_review_without_reextract",
+      "passed": true,
+      "observation": {
+        "initial_source_fingerprint": "d334403090b163da176abef7e09ac6ac12b3129d6e63aa587e592263fd2a2510",
+        "current_source_fingerprint": "d334403090b163da176abef7e09ac6ac12b3129d6e63aa587e592263fd2a2510",
+        "heads_identical": true,
+        "prior_review_id": "61b0032c-4121-4b21-ade1-d7cd29443a2b",
+        "request_state": {
+          "request_id": "a0f38d4d-cf71-4b72-9c5f-878e040826ae",
+          "trigger": "manual",
+          "body_version_id": "d4566bcd-fbc3-456b-b84d-e31800220b54",
+          "material_snapshot_id": "51c9c737-d3eb-43ff-b1ee-4ad03896134a",
+          "material_revision": 2,
+          "state": "queued",
+          "prepare_operation_id": "42000422-a61c-4f29-8e6c-09a1ecfc05ab",
+          "review_id": "61b0032c-4121-4b21-ade1-d7cd29443a2b",
+          "error_code": null,
+          "gaps": [],
+          "updated_at": "2026-10-16T19:04:18.988440+00:00"
+        },
+        "new_operation": {
+          "id": "42000422-a61c-4f29-8e6c-09a1ecfc05ab",
+          "handler_version": "document/1",
+          "kind": "parse-materials",
+          "state": "succeeded"
+        },
+        "offline_model_calls": 3,
+        "prepare_count_before": 1,
+        "prepare_count_after": 1
+      }
+    },
+    {
+      "name": "cloned_rules_keep_actual_extraction_effect_and_exact_source_method_provenance",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "changed_nonbody_source_after_clone_queues_fresh_extraction_without_sending",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "d3c59450-5828-4cf8-8779-75b850ea9175",
+  "scenario": "Unchanged input after rule-set cloning must reuse current review without fresh extraction",
+  "offline_transport_requests": 3,
+  "probe_sha256": "80e92326bb4172c32e71afc05d25440fcdac9fae0a946b170347f8c07cf0aa46"
+}

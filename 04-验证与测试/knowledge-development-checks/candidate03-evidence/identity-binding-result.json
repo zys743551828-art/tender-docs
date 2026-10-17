@@ -1,0 +1,47 @@
+{
+  "change": "D03_current_explicit_identity_authority_required_for_project_knowledge_new_use",
+  "source_delta": [
+    "apps/api/knowledge_routes.py",
+    "packages/knowledge/README.md",
+    "packages/knowledge/bridge.py",
+    "packages/knowledge/contracts.py",
+    "tests/test_knowledge_integration.py"
+  ],
+  "original_D02_candidate_unchanged": true,
+  "D02_sources_verified": 10,
+  "D02_evidence_verified": 7,
+  "identity_dependency_sha256": "e3644f59a564b4a2757a3a9fbee34b3b3be8800ffea05cb1fb42854ce46442b3",
+  "positive_paths": [
+    "registered_company_and_explicit_confirmed_project_binding",
+    "fresh_selection_after_reconfirmation"
+  ],
+  "negative_paths": [
+    "matching_UUID_without_binding_proof",
+    "pending_binding",
+    "profile_round_changed_with_same_bidder_region_and_type",
+    "old_reference_ACK_when_current_identity_pending",
+    "old_frozen_context_after_same_UUID_reconfirmed",
+    "old_ACK_missing_historical_context_is_not_new_use_authority"
+  ],
+  "history": [
+    "older_reference_without_context_remains_readable_and_not_backfilled",
+    "older_reference_after_correction_preserves_exact_original_payload",
+    "original_PDF_bytes_unchanged"
+  ],
+  "context_frozen": [
+    "identity_authority_digest_and_full_snapshot",
+    "bid_material_settings_fact_heads",
+    "current_fact_decision_identity_and_basis_digest"
+  ],
+  "actual_extension": "optional KnowledgeReference.project_context; new references always supply, old history may omit",
+  "tests": {
+    "unit": 8,
+    "integration": 41
+  },
+  "local_S3": true,
+  "real_restricted_PG": true,
+  "actual_login_and_identity_correction_HTTP": true,
+  "paid_calls": 0,
+  "worker_grants_added": false,
+  "RAG_six_tables_included": false
+}

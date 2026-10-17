@@ -1,0 +1,43 @@
+{
+  "candidate_sha256": "e3644f59a564b4a2757a3a9fbee34b3b3be8800ffea05cb1fb42854ce46442b3",
+  "conclusion": "passed scoped ID01 remediation; full FR034 integration not accepted",
+  "blocking_findings": 0,
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/repository.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/contracts.py",
+      "sha256": "df93792d9681837cc5757883f6b9e0b051339759a8feb7661a5929789331e16d",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/packages/identity/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/identity_routes.py",
+      "sha256": "e1b9dea87ab12a6b41acff20eeffa769a0785f30cd0d7965dd3b2312c08de989",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/apps/api/identity_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_identity.py",
+      "sha256": "a311ddeb70f73c39b4237189e0fc155c0229d319c591e2483e787e5bee3f2598",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/frozen-inputs/tests/test_identity.py"
+    }
+  ],
+  "evidence": {
+    "probe_candidate02.py": "112f79b002ffe36465c4f845131ef4062dc4ba4e98672a8ec730781148ef2f7a",
+    "candidate02-frozen-plus-original-regressions.py": "a6e91dbeaf14f21bfdd2f55d46faa111e7a4295e350cc6d544eb13fdc175d282",
+    "candidate02-independent-result.json": "afbffab68a213c2e0d8321eb1d846f94bc6a821b86f531df957ff2a428f613c7",
+    "candidate02-independent-junit.xml": "c05de322c400fc4f38a291341efd2f1e94f2b3fcca17d5db5845842b692266be",
+    "candidate02-default-regression.json": "22222ccff1130ec5fb95ddf779832723782b4a3688a72f5f8418db316fb4b39e",
+    "candidate02-history-regression.json": "1823f2d17773a4f8ec0ec5ac9a0005ee00c431c310039ed61fb5d7c9da2427ad",
+    "整改复核.md": "d61cd8f66e2e357719ce59c384dcc2ba78747f0648afa2764a12eeedc19d92ed"
+  },
+  "paid_calls": 0,
+  "credentials_read": false
+}

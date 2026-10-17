@@ -1,0 +1,138 @@
+{
+  "scope": "Actual stdlib-built PDF bytes read/rendered with PDFium; opaque DOCX inputs are hashes only, not OOXML/render evidence",
+  "proof": {
+    "protocol": "authoring-page-navigation/1",
+    "context_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "mode": "chapter_start_new_page",
+    "coverage": "complete",
+    "fixed_point": true,
+    "gaps": [],
+    "iterations": [
+      {
+        "pdf_digest": "67974b2ee96b22ce15928dcd73b5048db54eb9e956bfbe286a6c5bc922161cc2",
+        "docx_digest": "cb79f7877f00580d7aa9de5b13daf5cd260456f1e82645c28442462c914bfbe9",
+        "toc_input": {
+          "00000000-0000-0000-0000-000000000001": null,
+          "00000000-0000-0000-0000-000000000002": null,
+          "00000000-0000-0000-0000-000000000003": null
+        },
+        "measured_starts": {
+          "00000000-0000-0000-0000-000000000001": 2,
+          "00000000-0000-0000-0000-000000000002": 3,
+          "00000000-0000-0000-0000-000000000003": 5
+        },
+        "page_count": 6,
+        "gaps": [
+          "NAV_TOC_NUMBERS_NOT_AT_FIXED_POINT"
+        ]
+      },
+      {
+        "pdf_digest": "7f68390a5d45c7ea7bc21a6bb2d06ea3f58225b01d97e6c4dc91419a07f9c295",
+        "docx_digest": "56d3b10e18cc140cc0b3be836aafe4c7e12d3d787ef260323706907029d6eda2",
+        "toc_input": {
+          "00000000-0000-0000-0000-000000000001": 2,
+          "00000000-0000-0000-0000-000000000002": 3,
+          "00000000-0000-0000-0000-000000000003": 5
+        },
+        "measured_starts": {
+          "00000000-0000-0000-0000-000000000001": 3,
+          "00000000-0000-0000-0000-000000000002": 4,
+          "00000000-0000-0000-0000-000000000003": 6
+        },
+        "page_count": 7,
+        "gaps": [
+          "NAV_TOC_NUMBERS_NOT_AT_FIXED_POINT"
+        ]
+      },
+      {
+        "pdf_digest": "3dbfe0f8705e6e42166fbc444b9fed569954d046f77f8e9d20e8236e3f3780e1",
+        "docx_digest": "091a91d67648c407046e338b23362582039269173050c40863885d122943cebf",
+        "toc_input": {
+          "00000000-0000-0000-0000-000000000001": 3,
+          "00000000-0000-0000-0000-000000000002": 4,
+          "00000000-0000-0000-0000-000000000003": 6
+        },
+        "measured_starts": {
+          "00000000-0000-0000-0000-000000000001": 3,
+          "00000000-0000-0000-0000-000000000002": 4,
+          "00000000-0000-0000-0000-000000000003": 6
+        },
+        "page_count": 7,
+        "gaps": []
+      }
+    ],
+    "final_navigation": {
+      "protocol": "authoring-page-navigation/1",
+      "pdf_digest": "3dbfe0f8705e6e42166fbc444b9fed569954d046f77f8e9d20e8236e3f3780e1",
+      "mode": "chapter_start_new_page",
+      "page_count": 7,
+      "observed_toc_pages": [
+        1
+      ],
+      "entries": [
+        {
+          "node_id": "00000000-0000-0000-0000-000000000001",
+          "parent_id": null,
+          "anchor": "sec_00000000000000000000000000000001",
+          "title": "1 Alpha",
+          "expected_start_page": 3,
+          "start_page": 3,
+          "end_page": 5,
+          "mapping_method": "named_destination_and_toc_link",
+          "title_bbox": [
+            37.82,
+            746.29,
+            96.57,
+            762.92
+          ],
+          "toc_origin_page": 1,
+          "printed_toc_page": 3,
+          "gaps": []
+        },
+        {
+          "node_id": "00000000-0000-0000-0000-000000000002",
+          "parent_id": "00000000-0000-0000-0000-000000000001",
+          "anchor": "sec_00000000000000000000000000000002",
+          "title": "1.1 Child",
+          "expected_start_page": 4,
+          "start_page": 4,
+          "end_page": 5,
+          "mapping_method": "named_destination_and_toc_link",
+          "title_bbox": [
+            37.82,
+            749.68,
+            106.0,
+            763.27
+          ],
+          "toc_origin_page": 1,
+          "printed_toc_page": 4,
+          "gaps": []
+        },
+        {
+          "node_id": "00000000-0000-0000-0000-000000000003",
+          "parent_id": null,
+          "anchor": "sec_00000000000000000000000000000003",
+          "title": "2 Omega",
+          "expected_start_page": 6,
+          "start_page": 6,
+          "end_page": 7,
+          "mapping_method": "named_destination_and_toc_link",
+          "title_bbox": [
+            36.47,
+            746.06,
+            109.57,
+            763.27
+          ],
+          "toc_origin_page": 1,
+          "printed_toc_page": 6,
+          "gaps": []
+        }
+      ],
+      "navigation_coverage": "complete",
+      "toc_values_verified": true,
+      "coverage": "complete",
+      "gaps": []
+    },
+    "proof_digest": "623dbe83d35b813b365c3ea95bec88d5d0ab06688413f6ab56cd03c1af85fc3a"
+  }
+}

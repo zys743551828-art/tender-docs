@@ -1,0 +1,51 @@
+{
+  "scope": "本次后续产品交接静态完整性，非软件验收",
+  "passed": true,
+  "checks": [
+    {
+      "name": "13后续任务保持pending",
+      "passed": true
+    },
+    {
+      "name": "已读提交报告输入摘要匹配",
+      "passed": true
+    },
+    {
+      "name": "产品语义不冒充软件通过",
+      "passed": true
+    },
+    {
+      "name": "保留旧字节:a1-acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "保留旧字节:product-progress/remaining-fr.json",
+      "passed": true
+    },
+    {
+      "name": "保留旧字节:plan-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "交接文件链接存在",
+      "passed": true
+    }
+  ],
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/remaining-work-protocols/助手生命周期任务与Word实施交接.md",
+      "sha256": "e91e89cb0224d89668a34cf2b8b26d6e6e4d8db3fcda93f0adc09078a15115ea"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/remaining-work-protocols/acceptance.json",
+      "sha256": "e23918954b3db676a8ee9f26e100cba76ce9681d0f30d79d2f00fd0661f51308"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/remaining-work-protocols/submission-owner-decision.json",
+      "sha256": "8b6bdf3b2df11017017b1546ce29621ebe711f431616e7b190890ad0058427b2"
+    }
+  ]
+}

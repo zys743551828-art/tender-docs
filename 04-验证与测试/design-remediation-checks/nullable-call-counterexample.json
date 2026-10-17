@@ -1,0 +1,14 @@
+{
+  "reproduced": true,
+  "scope": "实际PG研究调用身份NULL比较反例，不是应用执行",
+  "expected": "23514 call_identity_conflict",
+  "observation": "{'actor': 'qa_research', 'sql': \"SELECT design.reserve_research_call('00000000-0000-0000-0000-000000000034','00000000-0000-0000-0000-000000000046','infer','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',1,1,'00000000-0000-0000-0000-000000000048','00000000-0000-0000-0000-000000000057','ordinary-existing',1,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',1);\", 'stdout': '{\"state\": \"reserved\", \"call_id\": \"00000000-0000-0000-0000-000000000056\", \"new_reservation\": false}', 'stderr': '', 'exit_code': 0}",
+  "inputs": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "abdb08c5270b82eefcc84b1be8a491c399cb3a95797d27469f485c2cb01938a0",
+    "retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "worker-functions.sql": "db0460442763cdea8f2ce8b9b58259c5989f857810db1b036e329512be73e057",
+    "roles.sql": "347cb1e06b5e82443caf9d8140b455b2c5fe46db229567a8799e8ceb5241f21d"
+  },
+  "probe_sha256": "aa44f40d0e36e60a2834d46d4449b730f1ac4e080de16af6634eff2bef422433"
+}

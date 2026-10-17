@@ -1,0 +1,59 @@
+--- /workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-B/technical-scale-authority.sql
++++ /workspace/tender-docs/04-验证与测试/research-backend-checks/technical-scale/sql-draft-C/technical-scale-authority.sql
+@@ -1,4 +1,4 @@
+--- Technical scale DRAFT B: static review then NEW isolated DB only.
++-- Technical scale DRAFT C: static review then NEW isolated DB only.
+ -- First slice: sourced total denominator and scale; no executable aggregation/cert.
+ BEGIN;
+ CREATE SCHEMA technical_scale;
+@@ -126,7 +126,7 @@
+  IF v.purpose='current_prebid' AND EXISTS(SELECT FROM technical_scale.claims WHERE version_id=target) THEN RETURN false; END IF;
+  IF v.purpose='historical_backtest' AND (
+   EXISTS(SELECT FROM technical_scale.claims map JOIN historical_backtest.claims claim ON claim.id=map.claim_id WHERE map.version_id=target AND map.document_version_id IS DISTINCT FROM claim.document_version_id)
+-  OR (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM technical_scale.claims WHERE version_id=target) IS DISTINCT FROM (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM (SELECT DISTINCT document_version_id FROM technical_scale.evidence WHERE version_id=target) documents)
++  OR (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM technical_scale.claims WHERE version_id=target) IS DISTINCT FROM (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM (SELECT DISTINCT n.document_version_id FROM technical_scale.evidence e JOIN retrieval.source_ancestors a ON a.source_id=e.source_id JOIN retrieval.source_nodes n ON n.id=a.ancestor_id WHERE e.version_id=target) documents)
+  ) THEN RETURN false; END IF;
+  IF v.purpose='current_prebid' THEN as_of:=v.created_at;
+  ELSE SELECT submitted_at INTO as_of FROM design.submission_records WHERE id=v.submission_id; END IF;
+@@ -160,21 +160,32 @@
+   SELECT array_agg(ancestor_id ORDER BY ancestor_id) INTO actual FROM technical_scale.source_heads WHERE evidence_id=ref.id;
+   IF actual IS DISTINCT FROM expected THEN RETURN false; END IF;
+   IF EXISTS(SELECT FROM technical_scale.source_heads frozen JOIN retrieval.source_nodes n ON n.id=frozen.ancestor_id JOIN retrieval.source_heads h ON h.source_id=n.id
+-   WHERE frozen.evidence_id=ref.id AND (n.kind<>'document' OR NOT EXISTS(SELECT FROM design.document_versions owned WHERE owned.id=n.document_version_id AND owned.bid_id=v.bid_id)
++   WHERE frozen.evidence_id=ref.id AND (n.kind<>'document' OR NOT EXISTS(SELECT FROM design.document_versions owned JOIN design.blobs original ON original.id=owned.blob_id WHERE owned.id=n.document_version_id AND owned.bid_id=v.bid_id AND original.digest=n.digest)
+     OR n.policy_class<>'prebid_content' OR n.known_at>clock_timestamp() OR h.status<>'published' OR h.revision<>frozen.revision OR n.digest<>frozen.digest OR n.known_at<>frozen.known_at
+     OR h.valid_from<>frozen.valid_from OR h.valid_until IS DISTINCT FROM frozen.valid_until OR h.valid_from>clock_timestamp() OR (h.valid_until IS NOT NULL AND h.valid_until<=clock_timestamp())
+     OR (v.purpose='current_prebid' AND (n.known_at>as_of OR h.valid_from>as_of OR (h.valid_until IS NOT NULL AND h.valid_until<=as_of))))) THEN RETURN false; END IF;
+-  IF v.purpose='historical_backtest' THEN
+-   IF EXISTS(SELECT FROM retrieval.source_ancestors a JOIN retrieval.source_nodes ancestor ON ancestor.id=a.ancestor_id WHERE a.source_id=ref.source_id AND NOT EXISTS(SELECT FROM technical_scale.claims map WHERE map.version_id=target AND map.document_version_id=ancestor.document_version_id)) THEN RETURN false; END IF;
+-   SELECT c.*,bind.decision_id INTO binding FROM technical_scale.claims bind JOIN historical_backtest.claims c ON c.id=bind.claim_id WHERE bind.version_id=target AND c.document_version_id=ref.document_version_id;
+-   IF NOT FOUND OR binding.bid_id IS DISTINCT FROM v.bid_id OR binding.submission_id IS DISTINCT FROM v.submission_id OR binding.subject_id IS DISTINCT FROM v.subject_id OR binding.document_digest IS DISTINCT FROM ref.blob_digest
+-    OR NOT EXISTS(SELECT FROM historical_backtest.claim_heads h JOIN historical_backtest.decisions d ON d.id=h.decision_id WHERE h.submission_id=v.submission_id AND h.document_version_id=ref.document_version_id AND h.claim_id=binding.id AND h.decision_id=binding.decision_id AND d.object_kind='claim' AND d.object_id=binding.id AND d.decision='confirmed')
++ END LOOP;
++ -- Historical visibility covers every server-derived ancestor ORIGINAL version,
++ -- including a Word parent that correctly has no parsed evidence block of its own.
++ -- Claims are exact closure membership, never a client-supplied qualification list.
++ IF v.purpose='historical_backtest' THEN
++  FOR binding IN SELECT c.*,map.decision_id,map.document_version_id AS mapped_document_id,b.digest AS actual_document_digest
++   FROM technical_scale.claims map JOIN historical_backtest.claims c ON c.id=map.claim_id
++   JOIN design.document_versions d ON d.id=map.document_version_id AND d.bid_id=v.bid_id JOIN design.blobs b ON b.id=d.blob_id
++   WHERE map.version_id=target LOOP
++   IF binding.document_version_id IS DISTINCT FROM binding.mapped_document_id
++    OR binding.bid_id IS DISTINCT FROM v.bid_id OR binding.submission_id IS DISTINCT FROM v.submission_id OR binding.subject_id IS DISTINCT FROM v.subject_id
++    OR binding.document_digest IS DISTINCT FROM binding.actual_document_digest
++    OR NOT EXISTS(SELECT FROM historical_backtest.claim_heads h JOIN historical_backtest.decisions d ON d.id=h.decision_id WHERE h.submission_id=v.submission_id AND h.document_version_id=binding.mapped_document_id
++     AND h.claim_id=binding.id AND h.decision_id=binding.decision_id AND d.object_kind='claim' AND d.object_id=binding.id AND d.decision='confirmed')
+     OR NOT historical_backtest.current_proofs(NULL,binding.id) THEN RETURN false; END IF;
+    IF EXISTS(SELECT required FROM unnest(ARRAY['content_existed','known_to_bidder','effective']) required WHERE NOT EXISTS(
+     SELECT FROM historical_backtest.facts f WHERE f.claim_id=binding.id AND f.fact_kind=required AND f.claimed_at IS NOT NULL AND f.claimed_at<=as_of
+-     AND (f.valid_until IS NULL OR f.valid_until>as_of) AND EXISTS(SELECT FROM historical_backtest.proofs proof WHERE proof.claim_id=binding.id AND proof.fact_kind=required))) THEN RETURN false; END IF;
+-  END IF;
+- END LOOP;
++     AND (f.valid_until IS NULL OR f.valid_until>as_of) AND EXISTS(SELECT FROM historical_backtest.proofs proof WHERE proof.claim_id=binding.id AND proof.fact_kind=required)))
++    OR EXISTS(SELECT FROM historical_backtest.facts existed JOIN historical_backtest.facts fact ON fact.claim_id=existed.claim_id
++     WHERE existed.claim_id=binding.id AND existed.fact_kind='content_existed' AND fact.claimed_at<existed.claimed_at) THEN RETURN false; END IF;
++  END LOOP;
++ END IF;
+  SELECT array_agg(DISTINCT field) INTO supported FROM technical_scale.evidence e CROSS JOIN LATERAL unnest(e.supported_fields) field WHERE e.version_id=target;
+  RETURN coalesce(total BETWEEN 1 AND 50 AND supported @> ARRAY['technical_maximum','scale_description'],false);
+ END $$;

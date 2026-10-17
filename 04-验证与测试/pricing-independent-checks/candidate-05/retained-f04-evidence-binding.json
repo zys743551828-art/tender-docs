@@ -1,0 +1,31 @@
+{
+  "unchanged_sources": [
+    {
+      "path": "packages/pricing/models.py",
+      "sha256": "a52fc95704411f5401a2449c90c24d3673d508445bea2cefd24e775f8a4f7fff",
+      "unchanged": true
+    },
+    {
+      "path": "packages/pricing/calculator.py",
+      "sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667",
+      "unchanged": true
+    },
+    {
+      "path": "packages/pricing/sources.py",
+      "sha256": "cfc3edd58867c9c2e9ab8826c10d0a65d4ecda1cddffff63325357593de1ce4c",
+      "unchanged": true
+    },
+    {
+      "path": "apps/api/pricing_routes.py",
+      "sha256": "b2089d0aa3e32e433d19e7d3355bca0b2f7d654893cac0f76978f53b32da0014",
+      "unchanged": true
+    }
+  ],
+  "repository_change": "Exactly one source-line delta text -> terms.rounding_policy_text(text) in unsupported baseline-rounding refusal; string reverse byte-identical verified.",
+  "terms_change": "Only added rounding_policy_text function; existing AST excluding new function exactly identical.",
+  "retained_result_path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution/result.json",
+  "retained_result_sha256": "c578e2006653996ab737ddbf36df679bca937f847e0b48489303c413327ee140",
+  "retained_checks": 26,
+  "not_rerun_against05": true,
+  "limits": "Conditional exact-code reuse for coefficient/scalar/shape/source mechanisms. New normalizer affects clause handling and was independently exercised by original and six actual-page variants; no blanket whole-file equivalence."
+}

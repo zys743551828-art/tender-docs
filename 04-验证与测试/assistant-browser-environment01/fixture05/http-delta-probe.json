@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "case": "old_jobs_and_executed_action_read_only",
+      "source": "fixture01",
+      "jobs": 5,
+      "state": "passed"
+    },
+    {
+      "case": "old_jobs_and_executed_action_read_only",
+      "source": "fixture04-final",
+      "jobs": 5,
+      "state": "passed"
+    },
+    {
+      "case": "one_new_global_job_real_persisted_publication",
+      "job_id": "69cd6044-c4ee-494b-871e-3395bfcbff7c",
+      "state": "passed"
+    },
+    {
+      "case": "ambiguous_daily_after_time_remains_pending_no_save",
+      "draft_id": "f384bd82-2bb1-4416-8e3e-b102384138c4",
+      "state": "passed"
+    },
+    {
+      "case": "save_appends_revision_new_etag_412_409_and_original_ack201",
+      "draft_id": "f384bd82-2bb1-4416-8e3e-b102384138c4",
+      "template_id": "0ca9b692-2582-4d15-aeb8-5dbc637e97be",
+      "old_revision": 2,
+      "new_revision": 3,
+      "template_count_increment": 1,
+      "new_task_runs": 0,
+      "state": "passed"
+    }
+  ],
+  "one_new_mock_job_only": true,
+  "real_provider_attempts": 0,
+  "kafka_delivery_accepted": false,
+  "control_restored": "hold"
+}

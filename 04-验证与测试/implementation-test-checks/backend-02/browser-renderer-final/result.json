@@ -1,0 +1,68 @@
+{
+  "scope": "实际Chromium与QA API/S3/Kafka的单PDF资料UI；无模型评审/真人使用结论",
+  "passed": false,
+  "started_at": "2026-10-16T14:21:06.308611+00:00",
+  "checks": [
+    "真实浏览器Cookie登录",
+    "不经模板/目录即可建项目",
+    "浏览器真实S3 CORS上传、Worker核验和资料入库",
+    "独立三页夹具的文字/空白/栅格页均导航并实际绘制像素",
+    "真正触发浏览器取件，原文件名/字节SHA/用途一致",
+    "原页/缺口/用途可见，Escape焦点返回，刷新恢复已保存资料",
+    "390px与键盘可打开/关闭原页且保持单层阅读"
+  ],
+  "requests_failed": [
+    {
+      "path": "/api/v1/bids/materials/materials",
+      "status": 422
+    }
+  ],
+  "model_executed": false,
+  "project_path": "/bids/cf24a58e-537c-4fd9-a2f7-9a7004514206/materials",
+  "rendered_pages": [
+    {
+      "physical_page": 1,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 2214
+    },
+    {
+      "physical_page": 2,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 0
+    },
+    {
+      "physical_page": 3,
+      "width": 741,
+      "height": 1048,
+      "opaque": 776568,
+      "dark": 25200
+    }
+  ],
+  "failure": {
+    "stage": "历史版本",
+    "type": "Error",
+    "message": "真实浏览器任务未通过；定位与截屏见该次证据，不输出口令或签名URL"
+  },
+  "probe_sha256": "3acf6706367466c2260a9e5e817dff4b5f900d044523054e09efc53c76435a94",
+  "frontend_sources": {
+    "apps/web/src/HistoryPanel.test.tsx": "2aa330d950143974fb420c9a5243fa8ccc4fee88e18ba52b2ee1e8584bc9d7db",
+    "apps/web/src/contracts.ts": "4967e07d61f8f34191f93d69cd5dada3cd50c0c2480a76163c82bb38d618a993",
+    "apps/web/src/styles.css": "a7565f6f716a1c0cc29ad1b451698d162e07ca679ef3078b4a9154f2cfcdb7b2",
+    "apps/web/src/PdfPreview.tsx": "c8e32ab938fbc9906d8e91610fb10d56267dc15b315e6f50761a1f27a93b8b9e",
+    "apps/web/src/main.tsx": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0",
+    "apps/web/src/test-setup.ts": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d",
+    "apps/web/src/App.tsx": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f",
+    "apps/web/src/api.ts": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6",
+    "apps/web/src/components.tsx": "f24c647d1b3b0ad7a0b6bfe1d16ebd83eddd77c68ceab39fd6e8a05f848f72af",
+    "apps/web/src/Evidence.tsx": "362634fc3777f83edfbac15dd85c9a8733b92dae983bd87661b595dbdce00f0d",
+    "apps/web/src/HistoryPanel.tsx": "42bae1fe6658fb34661034fdb652a17dad2b263474a276f705a9e1eac0e700d9",
+    "apps/web/src/App.test.tsx": "2a2f89df9affd76c69da8b662592ce88901d2acbf7527d9a0acdf3f2657ab6e6",
+    "apps/web/src/Project.tsx": "fcf7b653547e46823ab559e581e4bb6dfea9c29e4f675bad9567c3e688fb36c2",
+    "apps/web/src/Project.test.tsx": "f8e7c83bf90f4b0671b7fedefe68d5bceade6f4e9805d673aa2aaaaa5c31f0f6"
+  },
+  "finished_at": "2026-10-16T14:21:21.503608+00:00"
+}

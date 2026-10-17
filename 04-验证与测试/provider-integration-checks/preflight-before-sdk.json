@@ -1,0 +1,23 @@
+{
+  "scope": "DeepSeek模型列表及指定杭州OSS bucket信息/ACL只读预检；无对象扫描/付费chat",
+  "started_at": "2026-10-16T16:23:45.493904+00:00",
+  "checks": [],
+  "passed": false,
+  "chat_requests": 0,
+  "object_list_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "models": {
+    "status": 200,
+    "host": "api.deepseek.com",
+    "available": [
+      "deepseek-flash",
+      "deepseek-v4-pro"
+    ]
+  },
+  "failure": {
+    "type": "RuntimeError",
+    "message": "外部只读请求未完成；不输出密钥/请求头/签名URL"
+  },
+  "finished_at": "2026-10-16T16:23:46.328828+00:00",
+  "probe_sha256": "6f512a4e43b57dd99a7b964950227f98833056f981b0d91e76512044bda4df7c"
+}

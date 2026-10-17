@@ -1,0 +1,100 @@
+{
+  "scope": "历史后录合法可达性待执行API/Worker/浏览器任务；非已通过软件证据",
+  "software_executed": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "HIST-01",
+      "title": "正常现在上传不倒时",
+      "setup": "普通API在现在上传2019招标/正文，读取document/source及导入实交",
+      "expected": "created/obtained/source known保持现在；无历史证明先pending，不改DB或伪造2019review",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-02",
+      "title": "五类时间各自证明",
+      "setup": "只提供2019公布页，再分别补本方邮件/签收与精确附件版本证明",
+      "expected": "公开/存在可以核，本方知晓/取得仍未知直到其证据；原文件名/日期/客户端bool不自动核验",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-03",
+      "title": "一次有据确认/缺口恢复",
+      "setup": "就地补历史依据，完整时一次确认；另造quote错误/跨项目/缺页/矛盾/并发",
+      "expected": "原子追加人工依据/决定，失败保留表单无部分confirmed，CSRF/幂等/CAS真实，缺口可保存pending",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-04",
+      "title": "后补历史身份不覆盖原实交",
+      "setup": "批导入offline_fact无identity和review=NULL，后有据确认历史主体/工程标段轮次",
+      "expected": "新增HistoricalSubjectAuthority与当前确认时刻；原evidence/review=NULL不改，不从当前profile补过去；历史分组用历史快照",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-05",
+      "title": "NULL review合法历史正向",
+      "setup": "现在普通上传、补证确认原实交字节和历史身份、当时生效资料，再冻结回测输入及完整包",
+      "expected": "不要求当年review_id；authority现在创建、historical_as_of=真实提交；可到研究preview但不自动收费/标准登记",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-06",
+      "title": "反事实换稿与后来补遗",
+      "setup": "试图选择今天改稿、后来才出现的补遗、同名不同字节旧版或缺当年生效证据",
+      "expected": "拒绝合格历史输入或保持pending；不拿当前material全包替代当时版本",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-07",
+      "title": "历史有效与当前不可信不同",
+      "setup": "已证当年有效但后来正常替代的版本；另造当前错误撤回/权限禁用/证明冲突",
+      "expected": "前者只在有据历史作用域允许；后者不能忽略当前信任/head，旧admitted/缓存不洗掉失效",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-08",
+      "title": "证明与标签不进模型",
+      "setup": "证明文件含官方技术分/评委意见、历史身份附件或聊天摘要；尝试附入评分来源",
+      "expected": "资格清单和model content分离，模型只准历史评分要求/真实正文完整章节/必要事前事实；proof/标签衍生物不泄漏",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-09",
+      "title": "标签现在取得不洗历史时间",
+      "setup": "2019公布的官方成绩现在首次取得；构建要求2019前已知训练标签的切分",
+      "expected": "label actual known仍现在，公布单独记；不能借公开证明跨既有实际取得边界，普通时间留出条件不放宽",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-10",
+      "title": "回测不冒充在线/正式预测",
+      "setup": "历史研究成功后尝试回填当年标准review/预测或计入在线20配对",
+      "expected": "预测始终retrospective/research_only，原绑定不改，在线排除，20门槛不授资格",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-11",
+      "title": "真实数据未来用途独立",
+      "setup": "真实核验历史案例、合成夹具、不确定数据各进研究候选",
+      "expected": "data_origin保持分别；real可按未来独立协议作监督候选，retrospective不永久禁止真实模型训练；synthetic不冒充real/真实精度",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-12",
+      "title": "authority变化与撤回并发",
+      "setup": "freeze后证明/身份/实交/parse/分组head更改，执行/发布/重放竞争",
+      "expected": "旧输入stale或暂停，历史结果保留，无旧head/幂等/缓存绕过，重新冻结明确新输入",
+      "status": "pending_application"
+    },
+    {
+      "id": "HIST-13",
+      "title": "一般用途不继承历史豁免",
+      "setup": "普通RAG/当前正式评分尝试只传历史claim或authority IDs，在2019边界读取2026source",
+      "expected": "原来源known/用途守卫照常拒绝；只有明确历史执行资格函数分支可解释历史证明，不能靠客户端purpose任意切换",
+      "status": "pending_application"
+    }
+  ]
+}

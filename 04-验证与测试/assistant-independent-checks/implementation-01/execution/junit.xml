@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="3" skipped="0" tests="10" time="13.457" timestamp="2026-10-17T02:07:58.133029+00:00" hostname="597cea30c71f"><testcase classname="qa.test_assistant_independent01" name="test_global_member_private_null_scope_and_no_text_execution" time="0.969" /><testcase classname="qa.test_assistant_independent01" name="test_cross_member_actions_one_real_effect[confirm_confirm]" time="1.633" /><testcase classname="qa.test_assistant_independent01" name="test_cross_member_actions_one_real_effect[confirm_reject]" time="1.230"><failure message="TypeError: 'NoneType' object is not subscriptable">/workspace/tender-workbench/qa/test_assistant_independent01.py:157: in test_cross_member_actions_one_real_effect
+    doc,aid,card,v=answer_card(s)
+                   ^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_assistant_independent01.py:128: in answer_card
+    assert global_runtime.handle(message(v));published=coordinator.publish(UUID(v['id']));assert published['publication']['state']=='published'
+                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: 'NoneType' object is not subscriptable</failure></testcase><testcase classname="qa.test_assistant_independent01" name="test_source_selection_staleness_before_call_after_call_and_action" time="4.154"><failure message="TypeError: 'NoneType' object is not subscriptable">/workspace/tender-workbench/qa/test_assistant_independent01.py:188: in test_source_selection_staleness_before_call_after_call_and_action
+    doc,aid,card,_=answer_card(s);withdraw(doc)
+                   ^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_assistant_independent01.py:128: in answer_card
+    assert global_runtime.handle(message(v));published=coordinator.publish(UUID(v['id']));assert published['publication']['state']=='published'
+                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: 'NoneType' object is not subscriptable</failure></testcase><testcase classname="qa.test_assistant_independent01" name="test_unknown_billing_private_history_and_cancel" time="1.584" /><testcase classname="qa.test_assistant_independent01" name="test_late_fence_and_cancel_after_response_preserve_billing" time="1.043" /><testcase classname="qa.test_assistant_independent01" name="test_authoring_selection_requires_original_action_and_native_reject_guard" time="0.784"><failure message="psycopg.errors.UndefinedColumn: column &quot;billing_profile&quot; does not exist&#10;LINE 1: SELECT billing_profile FROM model_calls WHERE operation_id=$...&#10;               ^">/workspace/tender-workbench/qa/test_assistant_independent01.py:250: in test_authoring_selection_requires_original_action_and_native_reject_guard
+    purpose=c.execute('SELECT billing_profile FROM model_calls WHERE operation_id=%s',(UUID(v['operation']['id']),)).fetchone()['billing_profile'];assert purpose['purpose']=='authoring'
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "billing_profile" does not exist
+E   LINE 1: SELECT billing_profile FROM model_calls WHERE operation_id=$...
+E                  ^</failure></testcase><testcase classname="qa.test_assistant_independent01" name="test_authoring_identity_change_blocks_native_and_card" time="0.634" /><testcase classname="qa.test_assistant_independent01" name="test_authoring_actual_confirm_once_then_native_cross_entry_block" time="0.781"><error message="failed on teardown with &quot;AssertionError: apps.api&#10;assert False&#10; +  where False = is_relative_to((PosixPath('/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01') / 'execution-inputs'))&#10; +    where is_relative_to = PosixPath('/workspace/tender-workbench/apps/api/__init__.py').is_relative_to&quot;">/workspace/tender-workbench/qa/test_assistant_independent01.py:300: in evidence_session
+    p=Path(p).resolve();assert p.is_relative_to(ROOT/'execution-inputs'),name
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: apps.api
+E   assert False
+E    +  where False = is_relative_to((PosixPath('/workspace/tender-docs/04-验证与测试/assistant-independent-checks/implementation-01') / 'execution-inputs'))
+E    +    where is_relative_to = PosixPath('/workspace/tender-workbench/apps/api/__init__.py').is_relative_to</error></testcase></testsuite></testsuites>

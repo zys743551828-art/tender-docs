@@ -1,0 +1,135 @@
+{
+  "scope": "后端最小恢复整改及批准只读历史元数据；开发自测不代替独立验收",
+  "predecessor": {
+    "path": "apps/api/backend-candidate-01.json",
+    "sha256": "3c628c7f733cc9e197fdfa75301f03a3905701dbb7b51d04727f6ca3401e53e0"
+  },
+  "fixes": {
+    "IMPL-R01": "同事务废旧fence/owner/lease后提升generation；续租验当前代次和未过期lease，失败停止发布权",
+    "IMPL-R02": "当前generation未来/未发布Outbox保留，已发布未领取保留120秒宽限，不绕退避",
+    "IMPL-R03": "网络与连续失联共用3次阶段尝试上限，reconcile/acquire均拒绝第4次并原子失败/死信",
+    "readonly_history": "GET documents/{id}返回DocumentView真实head/previous，保留旧证据及共享成员读取"
+  },
+  "quality": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "pytest_runs": [
+    {
+      "scope": "独立机制数据库：真实非owner PG，合成派发状态，不启动Kafka",
+      "passed": 4,
+      "failed": 0,
+      "duration_seconds": 1.66
+    },
+    {
+      "scope": "4无外部依赖单元＋1实际PG/S3/Kafka两版本纵向",
+      "passed": 5,
+      "failed": 0,
+      "duration_seconds": 3.42
+    }
+  ],
+  "integration_assertions": [
+    "过期旧renew/finish拒绝，新代能完成且单effect",
+    "未来/未发布及刚发布未领取代次不被对账复制",
+    "3次失联封顶且acquire不授第4次",
+    "真实S3/Kafka两版上传/核验/commit/解析",
+    "旧DocumentView头修订与版本序号、previous链及原证据不变",
+    "其他共享成员/其他项目可正常读取，匿名401",
+    "实际响应JSON Schema及模型未配置503"
+  ],
+  "not_claimed": [
+    "多人生产容量/完整故障独立验收",
+    "multipart/SSE/OCR/表图识别",
+    "完整核心评审/RAG/评分/正式提交/成绩"
+  ],
+  "actual_openapi": {
+    "path": "apps/api/implemented.openapi-02.json",
+    "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+    "paths": 25,
+    "operations": 26
+  },
+  "sources": [
+    {
+      "path": "apps/api/README.md",
+      "sha256": "ead2ca9e3df3253cca1fc487a0ffdd546dad434eb46fe13b0bcd5a51bafd9516"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "53edc0b60ad9c45ec156257e05e8c1bf5028f55ae1553a3d95d079fa388c2490"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "8eb2ea5f2254d5a7809763e86ca56094d9a4ee1d72b9ae8af1dee179296d41be"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "6de91f9bc1872dd61bdf8864f7a8434ae6c7466056d539711f6ec57d4546baf6"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "2e88b08836d00b9618d04cb75ed7749ceabc952a706a5041ed1ea7c8991278fa"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "30e3d70f5f87e5a8f7d47a9258d62cc3c9c69962bd0d8e9d1d0999bd3635bbeb"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "30ab9a451b5e8ec2ebf3c8961675715398d5d3a34e30981766ef2e3b825c3bd0"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "03819df24d185ac4d446fcfa254047720a2d9063129a62ed4b11272b3b1859ed"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "81ea4155ed0463359809353d0ce3f20d6f1f556ccf9c3ef6f7ab3239e6bcd448"
+    },
+    {
+      "path": "tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187"
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "sha256": "6827ff28f692b48a06f20aabbbbb9cd6c7e57dc661d7931aa2b43addd1f984ac"
+    }
+  ]
+}

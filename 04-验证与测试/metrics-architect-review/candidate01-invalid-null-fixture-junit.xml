@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="22" time="2.788" timestamp="2026-10-16T19:38:26.688221+00:00" hostname="597cea30c71f"><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_met03_exact_shortlist_and_final_win_denominators" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_met04_zero_denominator_differs_from_true_zero" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_verification_rejected_is_not_tender_rejected" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_verified_only_excludes_unverified_without_misnaming_them_official" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_met12_twenty_pairs_retraction_and_signed_bias_never_grant_qualification" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_met08_unknown_snapshots_are_not_zero_or_full_coverage" time="0.000" /><testcase classname="docs.metrics-development-checks.frozen-inputs.tests.test_metrics" name="test_business_stage_request_cannot_write_technical_score_or_verification" time="0.001" /><testcase classname="" name="test_api_stage_independent_from_score_correction_conflict_no_fallback" time="0.360" /><testcase classname="" name="test_api_concurrent_correction_cas_epoch_and_official_evidence_boundaries" time="0.209" /><testcase classname="" name="test_source_withdrawal_and_submission_replacement_do_not_inherit_old_result" time="0.178" /><testcase classname="" name="test_same_unit_heads_conflict_and_submitted_time_scope" time="0.146" /><testcase classname="" name="test_unknown_risk_freeze_is_immutable_and_historical_prediction_not_qualified" time="0.084" /><testcase classname="" name="test_server_observation_risk_freeze_survives_later_dismiss_and_uses_root_identity" time="0.296" /><testcase classname="" name="test_prepared_risk_snapshot_and_result_records_roll_back_atomically" time="0.068" /><testcase classname="" name="test_round_trend_breaks_stable_paging_and_hidden_prediction_has_no_values" time="0.159" /><testcase classname="" name="test_worker_observation_uses_restricted_lock_function_and_cannot_update_bid" time="0.183" /><testcase classname="" name="test_actual_action_epoch_not_older_transaction_start_selects_head" time="0.130" /><testcase classname="" name="test_prediction_needs_dedicated_producer_authority_not_scalar_or_client_claim" time="0.128" /><testcase classname="" name="test_actual_read_schemas_and_openapi_do_not_reuse_old_metrics_shape" time="0.234" /><testcase classname="" name="test_architect_not_published_official_source_is_verified_and_counted[candidate]" time="0.198" /><testcase classname="" name="test_architect_not_published_official_source_is_verified_and_counted[missing_valid_from]" time="0.092"><failure message="psycopg.errors.NotNullViolation: null value in column &quot;valid_from&quot; of relation &quot;source_heads&quot; violates not-null constraint&#10;DETAIL:  Failing row contains (ff11d5b3-af05-5ee2-a26f-16bf26291ec0, 1, published, null, null).">context = &lt;SyntheticFR011Context credentials=redacted&gt;
+state = 'missing_valid_from'
+
+    @pytest.mark.parametrize('state',['candidate','missing_valid_from','future_known'])
+    def test_architect_not_published_official_source_is_verified_and_counted(context,state):
+        from pathlib import Path
+        import json
+        client,actor,headers=context
+        with connection() as c:
+            p=make_project(c,actor)
+            from packages.rag.indexing import original_source_id
+            root=original_source_id(p['official'])
+            c.execute("INSERT INTO retrieval.source_nodes(id,document_version_id,kind,policy_class,known_at,digest) SELECT %s,v.id,'document','official_label',CASE WHEN %s='future_known' THEN clock_timestamp()+interval '1 day' ELSE clock_timestamp() END,b.digest FROM document_versions v JOIN blobs b ON b.id=v.blob_id WHERE v.id=%s",(root,state,p['official']))
+&gt;           c.execute("INSERT INTO retrieval.source_heads(source_id,revision,status,valid_from) VALUES(%s,1,%s,CASE WHEN %s='missing_valid_from' THEN NULL ELSE clock_timestamp() END)",(root,'candidate' if state=='candidate' else 'published',state))
+
+tender-docs/04-验证与测试/metrics-architect-review/candidate01-frozen-plus-source-counterexamples.py:830: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7f3113291730&gt;
+query = "INSERT INTO retrieval.source_heads(source_id,revision,status,valid_from) VALUES(%s,1,%s,CASE WHEN %s='missing_valid_from' THEN NULL ELSE clock_timestamp() END)"
+params = (UUID('ff11d5b3-af05-5ee2-a26f-16bf26291ec0'), 'published', 'missing_valid_from')
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.NotNullViolation: null value in column "valid_from" of relation "source_heads" violates not-null constraint
+E           DETAIL:  Failing row contains (ff11d5b3-af05-5ee2-a26f-16bf26291ec0, 1, published, null, null).
+
+tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: NotNullViolation</failure></testcase><testcase classname="" name="test_architect_not_published_official_source_is_verified_and_counted[future_known]" time="0.215" /></testsuite></testsuites>

@@ -1,0 +1,208 @@
+{
+  "candidate": "project-retrieval-04",
+  "created_at": "2026-10-16T19:17:29.567940+00:00",
+  "scope": "Project retrieval API no-DB-connection model stages, effectivity exclusion before hybrid ranking, and final source/control authority; not enterprise knowledge or full product acceptance",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/rag_routes.py",
+      "sha256": "d5d41f9abab829f498aba0ade5784b83b9602021336d2349f7f30b03b19f5d68",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/apps/api/rag_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/fetch_rag_assets.py",
+      "sha256": "7e25b7fc67165f931af26630e70d820f3c7090cfcd9aeae76be9a94000a4509b",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/deploy/fetch_rag_assets.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/deploy/initialize_database.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/deploy/sql/vector-runtime-grants.sql"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/fact_sets.py",
+      "sha256": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/fact_sets.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/human_decisions.py",
+      "sha256": "fbb9d2a794ac2888089e90797711a3b422dcec91e0c828a68ab5415f4d2def35",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/human_decisions.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/input_changes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/rule_corrections.py",
+      "sha256": "635d76d36d5bb8163c7d37dcfcb79c883072daf1e75e6c7fc537e56a50b20e8f",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/rule_corrections.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/rule_sets.py",
+      "sha256": "fb4800911262cca213cc699a79b577c94bbfeeaec2bcbea2c9aec7c175127d67",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/rule_sets.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/runtime.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/source_effectivity.py",
+      "sha256": "acdab0c772bea603152f7ec35036d3ace294f8e8cc000807497a3adfab282aa7",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/domain/source_effectivity.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/README.md",
+      "sha256": "fab00b08a1caf4b2ef14f4a5a8cd6659223f2dc98cc580627903c3dbff84cfb6",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/README.md"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/coordinator.py",
+      "sha256": "0fc60f87ef494bf058a99981c45f346fd379cc5ec244613a16086d6126366d3a",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/coordinator.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/core.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/http_port.py",
+      "sha256": "149cf1bef79c19d5857acd7b028f84d273ee2eb7e4d34b1a295babe2d8a3fad6",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/http_port.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/indexing.py",
+      "sha256": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/indexing.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/lexical.py",
+      "sha256": "6198d8ec3e80039fcab28375bd0cfcc91e9488b284a25cdb1ce503198417272e",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/lexical.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/local_models.py",
+      "sha256": "ce7fba2a39b08443964dfff8a1030b0074ca1d9eea9675cc56d589fc7a0fc194",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/local_models.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/repository.py",
+      "sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/repository.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/search.py",
+      "sha256": "26e6dd37d6ba2d0049bd910d4f94576ae528d354cc85f8a2734bb9496908ea84",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/search.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/server.py",
+      "sha256": "d1fa3ccb0fcd2797232f6567dc2ae925fa70a0de306547c35f3c47766ed34e9d",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/server.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/tasks.py",
+      "sha256": "77438847fd30aec3be490311bd8eaa841c3232d08dafd6db961960cfab692898",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/packages/rag/tasks.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/requirements-rag.in",
+      "sha256": "9a52dd8c517e2f6efa60a44ede2ccd53e4c44da78296e8110e83705ef2b94b13",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/requirements-rag.in"
+    },
+    {
+      "path": "/workspace/tender-workbench/requirements-rag.lock.txt",
+      "sha256": "2d7e749d61d11b1294a75b30df0ea0c55891a5a54138abcb232fa2a3c5830776",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/requirements-rag.lock.txt"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/probe_rag_pipeline.py",
+      "sha256": "87571d55b21408cf84cc3a67a04e713e1d9f7b8e187dfa2ad4b9c90ee2ed7600",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/probe_rag_pipeline.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_external_profile.py",
+      "sha256": "fa3045c6c91fd4bf65bc12ffed79f4b02fd25f402c84b72828502879431a43a0",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_external_profile.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_core.py",
+      "sha256": "6dc305619c5f444c5c4148e8c4590ad1b604b0e426037e3f5e23e97d45d8a655",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_rag_core.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_http_port.py",
+      "sha256": "cf3e8fd8a089ef19b0f49a952497cc775709e66fa092c4d081b034b76e2b3cad",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_rag_http_port.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_real_integration.py",
+      "sha256": "f6295c0ba69743480fd5de063d19cad99d9ea4fec163c7f3afbe9097a54c9b25",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_rag_real_integration.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_replay_guard.py",
+      "sha256": "d662f954e86bef5379a1e0087392d118ccb71af298dffebcd9208f68c2a65b27",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_rag_replay_guard.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_rag_staged_api.py",
+      "sha256": "2a4bc9d6c9d91b6ba404ca365f793adbf4db705a0c35efab6aa0b03cd5ad26b3",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-04/frozen-inputs/tests/test_rag_staged_api.py"
+    }
+  ],
+  "source_count": 32,
+  "delta": [
+    "No Command inserted before remote work; close request DB connections before identity/embed/lexical/rerank HTTP",
+    "Read scope/heads/ancestor manifest consistently; read-only candidate SQL; final bid NO KEY UPDATE then graph guard",
+    "Exclude evidence of ended/pending obligations in materialized eligible set before vector/lexical ranking and rerank; historical context can inspect original with notice",
+    "Freeze current body/material/rule heads and effectivity decision IDs into trace scope; intermediate or same-key current scope changes reject",
+    "Final Command uniqueness handles two concurrent same-key requests with one trace/citation response, losing computation revalidates before replay",
+    "Replay succeeds without model RPC, checking complete original scope and current time eligibility",
+    "Source expiry/withdraw and canonical chunk/evidence source policies reuse existing restrictions",
+    "Close independent03 RR counterexample: first command read, replay helper and final publication all require non-autocommit READ COMMITTED before reading authoritative rows",
+    "After initial read transaction commits, explicitly restore LOCAL search_path before consistent read-only scope snapshot"
+  ],
+  "self_checks": {
+    "pytest_passed": 2,
+    "scope": "Existing changed-but-still-eligible ancestor replay plus new staged actual BGE/PG/ASGI vertical. Includes actual model RPC closed-PID verification, same-key concurrent callers, material revision during embed, effectivity during rerank, fresh ended evidence excluded, historical original preserved, failed scopes leave no command/trace, blank query rejects before RPC",
+    "ruff": "passed",
+    "format": "passed",
+    "mypy_runtime": "passed",
+    "bandit_runtime": "passed",
+    "RR_delta": "Actual PG forced RR at initial connection rejects first/replay/direct helper before model RPC; forced final-only RR rejects without trace/Command. Existing realBGE staged/concurrent/head/effectivity/ancestor tests both rerun passed."
+  },
+  "self_check_limitation": "Source rows are explicitly synthetic SQL parse fixtures; actual local BGE/dense/lexical/rerank HTTP and PG are real. Does not establish real PDF quality, business recall, paid generation, or production capacity. Prior RAG02 OSS/PDF evidence is historical, not rerun03 acceptance.",
+  "paid_generation_calls": 0,
+  "live_deployed": false,
+  "independent_acceptance": "pending04_RR_delta",
+  "previous_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-03/candidate.json",
+    "sha256": "b869f52da0ce31d56b48fe2ae51acd4a5aecbc63dbb94a8e08e45e4eadd7caae"
+  },
+  "initialization_dependency_note": "initialize_database.py now initializes separately reviewed research authority SQL only on new empty databases. These RAG API self-tests used original isolated rag-checks schema; they are not fresh research03 tests. Prior project-retrieval-gate is left unchanged.",
+  "new_database_ddl_required_for_rag03": false,
+  "developer_failure_corrected": "During new candidate CTE development, unqualified JSON value column was ambiguous and returned generic503; SQL aliases qualified and both affected tests rerun passed before freeze.",
+  "independent03_blocker": {
+    "report": "/workspace/tender-docs/04-验证与测试/rag-architect-review/candidate03-RR-counterexample.json",
+    "scope": "Default RR old snapshot could publish withdrawn source after waiting graph lock; preserved original proof, fixed04 not declared independently accepted yet"
+  },
+  "limitations": [
+    "Endpoint model HTTP has no request DB connection. Historical low-level index prepare still tokenizes/lexicalizes in its read connection; separate future change needed, no whole-index-chain 0connection claim.",
+    "No business quality or production acceptance inferred.",
+    "Current shared8802 is unchanged; 8804 is dedicated oldRAG02+frozen main03 for bounded review only, not this04 deployment."
+  ]
+}

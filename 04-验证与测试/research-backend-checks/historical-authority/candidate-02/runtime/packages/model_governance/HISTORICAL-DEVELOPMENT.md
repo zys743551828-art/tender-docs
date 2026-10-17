@@ -1,0 +1,19 @@
+# 历史来源证明与主体authority：第一阶段软件
+
+Owner协议c951503cb9c357b095fec96f13d5f624d46ad7b2c1440ac3597a39e4756de9c7是本阶段依据。研究03、StageA01和release01冻结输入均不改。本阶段不是完整历史回测交付，13项HIST业务验收保持pending。
+
+已新增`apps.api.historical_routes.router`，独立actual扩展`packages.model_governance.historical_contracts.extend_openapi`，8个操作：capabilities；指定submission的context GET；subjects POST/GET/confirm POST；source-claims POST/GET/confirm POST。尚未include共享main或live。`HistoricalInputRequest`仅协议草案，无inputs/backtest/score执行路径，不计operation。
+
+指定真实submission后，API派生原正文版本/摘要/提交时点，不能提交客户端review/body/as_of来改实交。可将历史主体整体未知保存pending、补齐完整有据历史主体后追加新版本并一次确认。请求不接confirmed/verified/origin资格布尔。当前identity proposal仍为整体未知或完整typed投影；部分身份字段独立草稿保存与最终UI表单仍需补充，不声称该行为验收完成。来源事实各有typed时间与精确proof；unknown=null，拒0/Unix或不带时区的时间；可保存已找到的附件而日期仍未知。存在晚于所称公布/生效/知晓/取得等明显自相矛盾请求拒绝，不从公开日期推出本方知晓或取得。
+
+历史名称/地区依据独立快照，不以当前profile默认补旧身份；confirmed仍机器核对真实round归属project及typed round_no/lot。公司known/received事实必须绑定当前confirmed历史subject及其当前证据；新pending/冲突替代使旧known claim禁确认或重放。公开等已知事实可以人工确认，其余未知仍null；`manual_decision=confirmed`仅表示所列有据历史事实的人工声明，不表示完整历史输入或模型资格。
+
+API只用RAG共享canonical helper计算精确parse child/root；逐字quote、实际document/blob digest、parse/latest、physical page/evidence digest与完整祖先head逐一核对。SQL E再次核typed关系/全部祖先当前published、known<=now、窗口等；SQL不重算UUID5，canonical绑定属于API可信构造边界。证据是审计数据，不写模型content，不新增材料或RAG评分来源授权。API给出proofs_current、subject关系/依赖状态；只读旧版本、旧实交及原人工决定保留，禁止其重放成为当前合格依据。
+
+`deploy/sql/historical-backtest.sql`精确E e811920d92478fd6e20a9b0d200c2769396eae92deee142a0cc2fbafd0086c44经架构静审，PM在独立delivery_protocols01 fresh初始化。A/B/C/D保留自读/静审历史；E修正D的跨工程round和typed lot/round_no关系。首个人工决定（包括pending）封闭facts/proofs/heads子集合，之后编辑追加supersedes版本；trigger先91143→submission bid→graph锁后查decision，真实并发反例证明不能先开始追加、等决定提交后偷偷扩充旧confirmed。API没有直接写决定/有效头权限，其他Worker/CPU角色对新schema零权限。不对旧库热补。
+
+来源/实交/上下文锁在短事务内；此阶段没有对象、模型或KafkaI/O，0收费。31项范围自测：20请求边界、1实际8路径闭包、10综合非owner PG/登录ASGI。覆盖无旧review/identity、pending→更正→确认、历史名称、公布与未知known分开、跨工程round/错lot/字符串round、错quote原子拒、latestparse、未来known祖先、旧实交只读、主体新pending阻旧claim确认及重放、首决定与子行追加真实锁等待、5用途角色读proof42501、RR失败关闭，并对实际响应做闭包JSON Schema核验。原第一次失败为共享库全局model_calls数量断言误含其他团队4个调用，已改本bid计数；另一次测试缺import，JUnit保留，不将失败测试当通过。
+
+另在旧D实际缺schema上只读探针证明503在业务写前返回；该单例auth为显式stub，不能算真实认证证据（真实session/CSRF在fresh套件）。未新增old D或release01数据。所有私有用途配置仅选对应单DSN，不写日志或manifest。
+
+必须继续完成：普通现在上传→就地补证与浏览器表单/恢复；部分身份草稿；HistoricalInputAuthority完整冻结与受控current_input qualifier；每个完整祖先的精确历史存在/生效/本方known证明和必要规则/完整页/图表/章节；owned operation/fence/预算/最小读取；基于历史subject的组与时间协议及合法历史sample分支；模型content与proof/raw label隔离的实际长路径。原upload/obtained/source.known、submission.review/evidence/created和标签实际known均不回填。当前只有declared_origin人工申报，不能自动开启StageA real或任何正式资格，synthetic不能凭更名当real。

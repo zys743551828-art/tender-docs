@@ -1,0 +1,45 @@
+{
+  "candidate_sha256": "ff7156ad56f19eab2a1b8041e318efa0e93f0081e4c06befaf723a86305c3b7e",
+  "conclusion": "blocked by ID01 audit event time ordering",
+  "blocking_findings": [
+    "ID01"
+  ],
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-01/frozen-inputs/packages/identity/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/repository.py",
+      "sha256": "e3c951a0b275126ff5e23141ea44a1fddd9bd2c63622acf7acd4ac54d3e73200",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-01/frozen-inputs/packages/identity/repository.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/contracts.py",
+      "sha256": "6fa05469306a41622b73a5e8a4667c2dd9b92f99b6427c89029105d1e6f63457",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-01/frozen-inputs/packages/identity/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/identity_routes.py",
+      "sha256": "e1b9dea87ab12a6b41acff20eeffa769a0785f30cd0d7965dd3b2312c08de989",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-01/frozen-inputs/apps/api/identity_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_identity.py",
+      "sha256": "b26cec04928b0765ab446a1cf8b2aae9034b0e08497b344545cead0db9ae561a",
+      "frozen_copy": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-01/frozen-inputs/tests/test_identity.py"
+    }
+  ],
+  "evidence": {
+    "probe_candidate01.py": "7275e0e8b6e2437e61fa901f7f5b2146950c8e5e879e7eba73be0c0c67a53e0e",
+    "frozen-plus-independent-tests.py": "6d61d9ce984564b0703a428929cb6dfcc1b10a2b66823e9bdfdffced29c5fe35",
+    "candidate01-independent-result.json": "426369f86eef70a02d43085cf6f704125b952184ad7435d5acf98110281c8c2f",
+    "candidate01-independent-junit.xml": "fd87db5fbddbe7bcd81cb17ccea176d270b73db760643778c0f112b306b494ca",
+    "default-order-counterexample.json": "87e1e6b3389fa068b0dbdea4f0e4e91f5057ea1257d2e2e58921e9081f5f23a4",
+    "historical-time-counterexample.json": "96988abe18075cc008b3d30cd045dec222b27069181f75bde1f2e32d04f722d8",
+    "早期审查.md": "5e3b428c9bb5b5a87589cea720155a0cce6063c4442da1a56c080b9ec7dfaef7"
+  },
+  "paid_calls": 0,
+  "credentials_read": false
+}

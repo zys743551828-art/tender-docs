@@ -1,0 +1,41 @@
+{
+  "scope": "isolated Kafka transport of exact own committed Outbox protocol + actual BGE Worker engine; not formal global relay deployment",
+  "topic": "tender.checks.knowledge-rag.23b9e843288c402484b9fda40385b43c",
+  "group_id": "knowledge-rag-checks-23b9e843288c402484b9fda40385b43c",
+  "logical_topic": "tender.task.document.v1",
+  "source_outbox_id": "8b342ec3-8b2e-45c8-8d34-848d51d79e30",
+  "event_id": "8b342ec3-8b2e-45c8-8d34-848d51d79e30",
+  "operation_id": "8b6d6750-2502-4756-b3e5-ca675c4ab748",
+  "payload_digest": "8899f9c22f22ac868078c6a7dce27280937fe16e7ec320a4184a103eda75bded",
+  "paid_model_calls": 0,
+  "delivery_offsets": [
+    {
+      "partition": 0,
+      "offset": 0
+    },
+    {
+      "partition": 0,
+      "offset": 1
+    }
+  ],
+  "consumed_offsets": [
+    {
+      "partition": 0,
+      "offset": 0
+    },
+    {
+      "partition": 0,
+      "offset": 1
+    }
+  ],
+  "executions": 1,
+  "duplicate_deliveries": 1,
+  "effect_receipts": 1,
+  "dense_identity": {
+    "model_name": "BAAI/bge-m3",
+    "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "weights_digest": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+    "preprocessing_digest": "3df98f34cdc8f2a82279c50f6c6ae7e8ec2313861f12de6281fecad0b14a7b3e"
+  },
+  "only_own_topic_deleted": true
+}

@@ -1,0 +1,76 @@
+{
+  "status": "in_progress_observation_not_acceptance",
+  "observed_at": "2026-10-16T18:22:17.779683+00:00",
+  "prior_candidate_sha256": "20e92d95e30325f3a44d98bb160fa680dcfe777c05ce60c64faa33326e1279d5",
+  "sources": [
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "1b06d8fbe304a9b1b938796c4c604f08f6ea016f76e9b65ab3637eccea3fb3d0"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0a587746a1f211dd39e48c8d9da42433ea5ac65d71334015e8521d3ad107a3dd"
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1"
+    },
+    {
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264"
+    },
+    {
+      "path": "packages/research/authority.py",
+      "sha256": "b11ea786df39a3c15ea812ba065bda89572f2b25747b5f5c2c2c2494d90817fa"
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "bce5201135e7c69e87b1fc4e6d1b62f177b7f7af561599654305b16a58d36995"
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a"
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "90d88eccc7c08610eaeef9149dc53a8f8426f4cbb2c5c7e180a3e47c2ac581be"
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa"
+    },
+    {
+      "path": "packages/research/execution.py",
+      "sha256": "614d132848d6b42bfe7ec71be8c4534b1b344bca5030ddee6488c94818253e20"
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "d55de8b93129530e7d7d1bc719f5b9777c33fff2aae86f0b025a72c181556f23"
+    },
+    {
+      "path": "packages/research/ledger.py",
+      "sha256": "5e5aec04ffc44396443f117a57292c8ca9c8d3fb85f0116b4c94cc3c7022d7ca"
+    },
+    {
+      "path": "packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728"
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "8dd73999232e7d71d58a1c9f2fe1d2f75a36d4ddeb9974e3d227b5285684f4f4"
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc"
+    },
+    {
+      "path": "packages/research/worker.py",
+      "sha256": "ea155a997f1644b13490d7c257696d534bb9f3240f353ac310f9828d25cf6bf1"
+    }
+  ],
+  "budget_understatement_fix": "pure_checks_passed",
+  "source_qualification_fix": "awaiting_static_review_and_fresh_database_validation",
+  "existing_release_database_behavior": "source_authority_configured_false_and_RESEARCH_AUTHORITY_NOT_CONFIGURED_503",
+  "actual_paid_calls": 0,
+  "ordinary_A1_review_qualification": "not_evaluated_by_this_research_observation"
+}

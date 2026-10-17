@@ -1,0 +1,65 @@
+{
+  "status": "passed_tested_rag04_delta_not_full_product_quality",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/candidate.json",
+    "sha256": "d6057de89b507423f1849478d2e19e0c4f9bc1200ab1e8789b741a36ad73398c"
+  },
+  "input_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/input-manifest.json",
+    "sha256": "eb1a981813b08c3b408dfc3471c4c19e38a7324501f28ebcc6f9a6d01810f3e5"
+  },
+  "frozen_source_count": 32,
+  "observed_runtime_source_count": 170,
+  "all_source_hashes_stable_after_execution": true,
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/noninvasive-connection-probe/result.json",
+      "sha256": "a794ff1a957d10c53e9d665f9c0e5e4b83b9fd63b564b1bf8ee5051149cbeb07"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/transaction-prerequisites/result.json",
+      "sha256": "489beb3fd4c72ba81a10c242accf6d3c96d03aebd09af70af1e956106d10db9e"
+    }
+  ],
+  "actual_database_schema": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/database-identity/actual-database-schema.json",
+    "sha256": "020fc8ea388c159e4f7ba0be8ebb60d7839e47ed4583f4cde0b54ae4b92e67a6"
+  },
+  "frozen_schema_source_manifest": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/database-identity/source-sql-manifest.json",
+    "sha256": "002a04b89e357f9b130417c2dbfb7d3d69a59355e56cee41f0577f1b45fc5c28"
+  },
+  "retained_architect03_counterexample": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-architect-review/candidate03-RR-counterexample.json",
+    "sha256": "fe57df2ae0c7a044718f3e4ed7a908af50dba00634f2e6cfa4f51fef816ecd16"
+  },
+  "retained_own_probe_instrumentation_failures": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/execution/result.json",
+      "sha256": "3192e6043625f0150c89f352688f0958455b7a4914f84738c7b7b510b2c1eb84"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/diagnostic-execution/result.json",
+      "sha256": "ca68fa2d02b8f3505e654233785cbcf11e30e32bd944127ab66f3581a1b16bc7"
+    }
+  ],
+  "instrumentation_correction": "Own initial instrumentation SELECT pg_backend_pid started a read snapshot before the application candidate-phase SET TRANSACTION. It caused generic503 in the correctly staged API. Replaced only test instrumentation with driver c.info.backend_pid; no application or frozen source modified. Both failures retained.",
+  "verified": [
+    "Default/RR initial authority read and exact replay reject before model RPC; final-onlyRR rejects after local work without Command/trace; directhelper accepts only nonautocommitRC and rejectsRR/Serializable/autocommit",
+    "ActualRC final connection waited for graph lock while another restrictedPG connection withdrew original ancestor; after waiting source is withdrawn and API409 with no newCommand/trace",
+    "Actual localBGE/lexical/rerank endpoint RPC31 observations all show request-owned DB PIDs closed and depth0; unchanged replay makes0RPC",
+    "Two-page exactquote/physicalpage/parse references returned; syntheticpending obligation excluded before rerank while otherpage retained; ended+pending absent current candidates; historical originals visible with explicitnotice",
+    "Samekey concurrent actualmodel requests return identicalresponse and create1trace/command; oldkey cannot bypass newly changed effectivitycontrol"
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "live_deployed_by_this_probe": false,
+  "scope": "Frozen main03 with RAG04, actual nonownerPG and loopback modelHTTP throughASGI. Parse/effectivity rows are explicitSQL fixtures. Not actualPDF business quality or paid generation.",
+  "limitations": [
+    "Shared8802/web5175 not exercised in this delta; final integrated browser/API deployment needs separate acceptance",
+    "Effectivity exclusion tests use explicitSQL policyfixtures; source effectivity business decision commands and legal interpretation not thereby accepted",
+    "Low-level index prepare still tokenizes/lexicalizes with its own readconnection; zeroDBconnection claim applies only staged retrieval endpoint modelHTTP",
+    "No business retrieval labels, formal scoring, production load or capacity qualification"
+  ],
+  "separate_bounded_8804": "Dedicated frozen157 main03/RAG02 acceptance runtime is unchanged; this170source RAG04 test root must not replace its approvedmanifest silently"
+}

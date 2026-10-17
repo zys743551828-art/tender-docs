@@ -1,0 +1,63 @@
+{
+  "scope": "真实DeepSeek/杭州OSS连通与适配器验收；不代表业务评审、RAG、评分、浏览器OSS或生产验收",
+  "conclusion": "passed_provider_adapter_scope",
+  "blocking_failures": 0,
+  "provider_candidate_sha256": "084ec7937bd2a048342e962c31c5547e3426e9f1a33c82938cacf46ba0f7b133",
+  "frozen_manifest_sha256": "b433c6f1b06bcce2b011c2c22caa485e8b17a37a502fd284297c933603acab56",
+  "source_files_verified": 7,
+  "results": [
+    {
+      "path": "readonly-configured-result.json",
+      "sha256": "47aec7427216ceef04801c3539d6eb33ea55033070afaeac2caad442f491db11",
+      "scope": "DeepSeek模型列表及指定杭州OSS bucket信息/ACL只读预检；无对象扫描/付费chat"
+    },
+    {
+      "path": "oss-object-result.json",
+      "sha256": "e38d0dd98acceea395f9166e355a2795aeca7079fc8a1455acb0f188dbfe797e",
+      "scope": "指定真实杭州OSS bucket的本次合成UUID前缀PUT/GET/私有签名/匿名拒绝/中文名/条件写/清理"
+    },
+    {
+      "path": "oss-adapter-result.json",
+      "sha256": "dacc753283178267bfc3359f92191e17991ef653d772cb78406cd6d5c8a97ddc",
+      "scope": "原生OSS adapter真实条件写/幂等/冲突/私有下载/签名上传；无AI业务结论"
+    },
+    {
+      "path": "deepseek-chat-result.json",
+      "sha256": "ecff8282017dadca84537f63b8d5d3aef26d453c61bbd1e511aa1e7c31a61a38",
+      "scope": "实际DeepSeek adapter的唯一极短结构化chat连通验证；非业务评审/评分/RAG效果"
+    },
+    {
+      "path": "negative-final-result.json",
+      "sha256": "cd4a1efe5809ba31576df053cac9cd469328752bc50846578480728c567a4b86",
+      "scope": "独立显式MockTransport/无网络负例，不代表真实模型效果"
+    }
+  ],
+  "paid_chat_requests": 1,
+  "paid_chat_model": "deepseek-flash",
+  "paid_chat_usage": {
+    "prompt_tokens": 75,
+    "completion_tokens": 5,
+    "total_tokens": 80,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 75
+  },
+  "implicit_retries": 0,
+  "object_list_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "created_test_objects": 3,
+  "cleanup_acknowledged_objects": 3,
+  "test_prefix": "workbench-checks/unique UUID only",
+  "deepseek_source_binding": {
+    "actual_paid_sha256": "81f03971e4ad491990054ab59cc946e9ad12eab1d8a1e2f0bfff68665f769c50",
+    "final_sha256": "fd4e701d5e8c57d80b5f6134bbbfbb910ae9efb6237bf356305411349f73e1f0",
+    "delta": "仅付费前Schema本地悬空引用/anchor校验；实际diff独立核对，合法请求传输/解析未变化，最终源14项离线回归，无第二付费请求"
+  },
+  "formal_scoring_eligible": false,
+  "unverified": [
+    "实际A1评审业务端到端与模型检测质量",
+    "RAG/真实Embedding与重排（另批待测试）",
+    "OSS浏览器CORS及项目完整上传流程",
+    "正式评分/三判断/预算调用账本接线",
+    "真实投标资料/真人/生产运行"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "Exact local origin for project browser integration; no object or ACL mutations",
+  "checked_at": "2026-10-16T16:48:25.526816+00:00",
+  "apply": false,
+  "changed": false,
+  "previous_rule_count": 0,
+  "rule": {
+    "allowed_origins": [
+      "http://127.0.0.1:5175"
+    ],
+    "allowed_methods": [
+      "GET",
+      "HEAD",
+      "PUT"
+    ],
+    "allowed_headers": [
+      "Content-Type",
+      "Range",
+      "x-oss-forbid-overwrite"
+    ],
+    "expose_headers": [
+      "Accept-Ranges",
+      "Content-Range",
+      "ETag",
+      "x-oss-request-id"
+    ],
+    "max_age_seconds": 300
+  },
+  "private_acl_verified": true,
+  "object_list_requests": 0,
+  "object_mutations": 0
+}

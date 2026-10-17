@@ -1,0 +1,12 @@
+{
+  "scope": "read-only exact grant/init integration inspection, independently exercised equivalent GRANT in isolated real PG",
+  "sources": {
+    "/workspace/tender-workbench/deploy/sql/vector-runtime-grants.sql": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+    "/workspace/tender-workbench/deploy/initialize_database.py": "ce22a2ff6c99e0cdd5a8be115c66a450d89aa5992e6f136370cbc39d767ce004"
+  },
+  "exact_three_functions_worker_only": true,
+  "initializer_runs_grant_after_roles_before_login_creation": true,
+  "mechanism_evidence": "extension-minimal-grant-result.json",
+  "real_bge_insertion_verified_by_architect": false,
+  "final_rag_pass": false
+}

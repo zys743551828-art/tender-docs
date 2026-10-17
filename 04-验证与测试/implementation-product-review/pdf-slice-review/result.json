@@ -1,0 +1,118 @@
+{
+  "scope": "T0+PDF资料入库切片，非完整A1或业务P0验收",
+  "project_title": "产品实走-资料切片-f72e07a3",
+  "checks": [
+    {
+      "name": "real_login",
+      "passed": true
+    },
+    {
+      "name": "batch_committed_and_real_parse_observed",
+      "passed": true,
+      "documents": [
+        {
+          "id": "7f86513a-1f98-483e-b681-2ea866d73709",
+          "file_id": "63a64b60-8cc1-4854-9fed-db22191dbc12",
+          "filename": "product-body.pdf",
+          "role": "body",
+          "file_revision": 1,
+          "parse_coverage": "partial"
+        },
+        {
+          "id": "048a6dde-b117-49d9-8ced-5e31f0c626ee",
+          "file_id": "f406a9ce-6ae5-4f0c-8f76-725e90685b1d",
+          "filename": "product-tender.pdf",
+          "role": "tender",
+          "file_revision": 1,
+          "parse_coverage": "partial"
+        }
+      ]
+    },
+    {
+      "name": "refresh_recovery_and_no_false_review",
+      "passed": true
+    },
+    {
+      "name": "pdf_original_canvas_rendered",
+      "passed": true
+    },
+    {
+      "name": "all_physical_pages_selectable",
+      "passed": true,
+      "options": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "blank_physical_page_kept",
+      "passed": true
+    },
+    {
+      "name": "original_link_returns_original_bytes",
+      "passed": true,
+      "content_type": "application/pdf",
+      "content_disposition": "inline; filename=\"v_18df075775190ea1ae64fbe4cf90911b\""
+    },
+    {
+      "name": "original_link_opens_new_tab",
+      "passed": true,
+      "download_event_on_origin_page": false,
+      "meaning": "原件字节可取；点击目标为新标签，非本页附件下载事件"
+    },
+    {
+      "name": "mobile_no_page_overflow",
+      "passed": true,
+      "sizes": {
+        "w": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "mobile_evidence_accessible",
+      "passed": true
+    },
+    {
+      "name": "escape_returns_from_evidence",
+      "passed": true
+    }
+  ],
+  "software_execution": "实际浏览器＋真实API；未调用模型评分",
+  "secrets_exported": false,
+  "project_id": "ab02f97e-3f0b-47e6-889c-09f9f292da11",
+  "continuation_of": "result-initial-interruption.json",
+  "fixtures": [
+    {
+      "filename": "product-tender.pdf",
+      "sha256": "ee6455ad039141ac557aa017e262b1657636826130a489b5fdf05ae0007fbcbe"
+    },
+    {
+      "filename": "product-body.pdf",
+      "sha256": "dff6b6eb6a2385088f2b71251162614a4f173ce69139399035329a7f40d1adda"
+    },
+    {
+      "filename": "unsupported.docx",
+      "sha256": "7f175b6944ea239bf471d201c63654ee86004f2eb6402c54c78ae6f5fbdbafe1"
+    }
+  ],
+  "documents": [
+    {
+      "id": "7f86513a-1f98-483e-b681-2ea866d73709",
+      "file_id": "63a64b60-8cc1-4854-9fed-db22191dbc12",
+      "filename": "product-body.pdf",
+      "role": "body",
+      "file_revision": 1,
+      "parse_coverage": "partial"
+    },
+    {
+      "id": "048a6dde-b117-49d9-8ced-5e31f0c626ee",
+      "file_id": "f406a9ce-6ae5-4f0c-8f76-725e90685b1d",
+      "filename": "product-tender.pdf",
+      "role": "tender",
+      "file_revision": 1,
+      "parse_coverage": "partial"
+    }
+  ],
+  "status": "completed_for_slice"
+}

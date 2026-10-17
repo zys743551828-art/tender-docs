@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="9" time="5.756" timestamp="2026-10-17T02:08:52.574313+00:00" hostname="597cea30c71f"><testcase classname="" name="test_global_member_private_null_scope_and_no_text_execution" time="0.620" /><testcase classname="" name="test_cross_member_actions_one_real_effect[confirm_confirm]" time="0.549"><failure message="AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}&#10;assert (None is not None)">/workspace/tender-workbench/qa/test_assistant_independent01.py:157: in test_cross_member_actions_one_real_effect
+    doc,aid,card,v=answer_card(s)
+                   ^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_assistant_independent01.py:128: in answer_card
+    assert global_runtime.handle(message(v));published=coordinator.publish(UUID(v['id']));assert published['publication'] is not None and published['publication']['state']=='published',published
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}
+E   assert (None is not None)</failure></testcase><testcase classname="" name="test_cross_member_actions_one_real_effect[confirm_reject]" time="0.437"><failure message="AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}&#10;assert (None is not None)">/workspace/tender-workbench/qa/test_assistant_independent01.py:157: in test_cross_member_actions_one_real_effect
+    doc,aid,card,v=answer_card(s)
+                   ^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_assistant_independent01.py:128: in answer_card
+    assert global_runtime.handle(message(v));published=coordinator.publish(UUID(v['id']));assert published['publication'] is not None and published['publication']['state']=='published',published
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}
+E   assert (None is not None)</failure></testcase><testcase classname="" name="test_source_selection_staleness_before_call_after_call_and_action" time="0.976"><failure message="AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}&#10;assert (None is not None)">/workspace/tender-workbench/qa/test_assistant_independent01.py:188: in test_source_selection_staleness_before_call_after_call_and_action
+    doc,aid,card,_=answer_card(s);withdraw(doc)
+                   ^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_assistant_independent01.py:128: in answer_card
+    assert global_runtime.handle(message(v));published=coordinator.publish(UUID(v['id']));assert published['publication'] is not None and published['publication']['state']=='published',published
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: {'automatic_retry_authorized': False, 'bid_id': None, 'cancel_requested': False, 'cancellation_terminal': False, ...}
+E   assert (None is not None)</failure></testcase><testcase classname="" name="test_unknown_billing_private_history_and_cancel" time="0.639" /><testcase classname="" name="test_late_fence_and_cancel_after_response_preserve_billing" time="0.746" /><testcase classname="" name="test_authoring_selection_requires_original_action_and_native_reject_guard" time="0.485" /><testcase classname="" name="test_authoring_identity_change_blocks_native_and_card" time="0.381" /><testcase classname="" name="test_authoring_actual_confirm_once_then_native_cross_entry_block" time="0.354" /></testsuite></testsuites>

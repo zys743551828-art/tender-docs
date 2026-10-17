@@ -1,0 +1,49 @@
+name: ${COMPOSE_PROJECT_NAME:-tender-workbench-external}
+services:
+  postgres:
+    image: pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d
+    environment:
+      POSTGRES_USER: tender_owner
+      POSTGRES_DB: tender
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a private external profile password}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55441}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tender_owner -d tender"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 1g
+  kafka:
+    image: apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e
+    environment:
+      CLUSTER_ID: externalWorkBench2026QA
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: INTERNAL://:9092,EXTERNAL://:${KAFKA_EXTERNAL_PORT:-19095},CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,EXTERNAL://127.0.0.1:${KAFKA_EXTERNAL_PORT:-19095}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_HEAP_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "127.0.0.1:${KAFKA_EXTERNAL_PORT:-19095}:${KAFKA_EXTERNAL_PORT:-19095}"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 8s
+      retries: 20
+    mem_limit: 1536m
+volumes:
+  postgres_data:
+  kafka_data:

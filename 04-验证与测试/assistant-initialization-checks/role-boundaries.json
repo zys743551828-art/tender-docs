@@ -1,0 +1,53 @@
+{
+  "probes": {
+    "api_cancel_only": {
+      "status": "passed",
+      "denied_42501": false
+    },
+    "api_cannot_forge_fence": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "api_cannot_insert_outputs": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "worker_cannot_change_input": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "worker_cannot_read_global_chat": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "worker_cannot_publish": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "worker_cannot_write_actions": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "worker_can_record_call_result": {
+      "status": "passed",
+      "denied_42501": false
+    },
+    "worker_cannot_change_budget": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "research_cannot_read_input": {
+      "status": "passed",
+      "denied_42501": true
+    },
+    "score_cannot_read_chat": {
+      "status": "passed",
+      "denied_42501": true
+    }
+  },
+  "rollback_or_no_rows": true,
+  "owner_used_for_business": false,
+  "provider_calls": 0,
+  "native_oss_requests": 0,
+  "kafka_configured": false
+}

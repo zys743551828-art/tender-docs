@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 6,
+          "completed": 6,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unchanged_input_after_cloning_reuses_current_review_without_reextract",
+      "passed": true,
+      "observation": {
+        "initial_source_fingerprint": "e2f5ba74706f66bb9b1493a2d06425c3bc8fe841424a12be61c065fad91f4c04",
+        "current_source_fingerprint": "e2f5ba74706f66bb9b1493a2d06425c3bc8fe841424a12be61c065fad91f4c04",
+        "heads_identical": true,
+        "prior_review_id": "8cb3aada-7304-45a4-b530-8c9413203bb7",
+        "request_state": {
+          "request_id": "25fd5cdf-0532-4a23-a8a6-103638e65120",
+          "trigger": "manual",
+          "body_version_id": "44b890b3-10f4-417e-835f-ffe21869061d",
+          "material_snapshot_id": "d23315fd-43be-43c4-b697-cfe6071619db",
+          "material_revision": 2,
+          "state": "queued",
+          "prepare_operation_id": "522bf774-bbd1-4745-a73c-011ee924984d",
+          "review_id": "8cb3aada-7304-45a4-b530-8c9413203bb7",
+          "error_code": null,
+          "gaps": [],
+          "updated_at": "2026-10-16T19:02:57.613660+00:00"
+        },
+        "new_operation": {
+          "id": "522bf774-bbd1-4745-a73c-011ee924984d",
+          "handler_version": "document/1",
+          "kind": "parse-materials",
+          "state": "succeeded"
+        },
+        "offline_model_calls": 3,
+        "prepare_count_before": 1,
+        "prepare_count_after": 1
+      }
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "b23243d7-7dab-4214-979c-25fe8b0005a9",
+  "finding": "Cloned rule set loses extraction provenance; same subsequent input queues a fresh extract before reusing content",
+  "offline_transport_requests": 3,
+  "probe_sha256": "407e94a45180f1d39c0ac8d9c3b3d4c646a12a457711f3881899a28ba915f912"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.015" timestamp="2026-10-16T18:41:54.614579+00:00" hostname="597cea30c71f"><testcase classname="tender-docs.04-验证与测试.research-architect-review.candidate02-group-delta-tests" name="test_architect_new_admission_group_change_does_not_pause" time="0.915"><failure message="psycopg.errors.UniqueViolation: duplicate key value violates unique constraint &quot;bid_rounds_engineering_project_id_lot_round_no_key&quot;&#10;DETAIL:  Key (engineering_project_id, lot, round_no)=(acdfcd47-1f07-47ff-85bc-3e0f80ebad85, 合成标段, 1) already exists.">client = (&lt;starlette.testclient.TestClient object at 0x7fa184890f20&gt;, UUID('12bbcbf6-ba8b-49be-a310-aca0c6677477'), &lt;function c...9\x80\x9a\xe7\xbb\x84\xe7\xbb\x87\xe6\x8a\x80\xe6\x9c\xaf\xe6\xad\xa3\xe6\x96\x87"}],"id":"full-body","pages":[1]}]}'})
+
+    def test_architect_new_admission_group_change_does_not_pause(client):
+        import json
+        from packages.research.worker import process
+        web,actor,headers,_=client
+        run=create_run(client)
+        message=execution.schedule_one(run['id'])
+        with connection() as c:
+            original=c.execute('SELECT s.id,s.source_group_id,br.engineering_project_id FROM research_run_attempts a JOIN samples s ON s.id=a.sample_id JOIN bid_profiles bp ON bp.bid_id=s.bid_id JOIN bid_rounds br ON br.id=bp.round_id WHERE a.operation_id=%s',(message['operation_id'],)).fetchone()
+        added=seed(actor,year=2025)
+&gt;       with connection() as c:c.execute('UPDATE bid_rounds SET engineering_project_id=%s WHERE id=%s',(original['engineering_project_id'],added['identity']['round_id']))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-docs/04-验证与测试/research-architect-review/candidate02-group-delta-tests.py:1202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7fa1848e7bc0&gt;
+query = 'UPDATE bid_rounds SET engineering_project_id=%s WHERE id=%s'
+params = (UUID('acdfcd47-1f07-47ff-85bc-3e0f80ebad85'), 'bb43c3c1-05a5-42a9-b807-bb6b5ded27b3')
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "bid_rounds_engineering_project_id_lot_round_no_key"
+E           DETAIL:  Key (engineering_project_id, lot, round_no)=(acdfcd47-1f07-47ff-85bc-3e0f80ebad85, 合成标段, 1) already exists.
+
+tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: UniqueViolation</failure></testcase></testsuite></testsuites>

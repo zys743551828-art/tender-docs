@@ -1,0 +1,99 @@
+{
+  "status": "ready_for_independent_review",
+  "change": "Mixed hidden text is excluded by rendering OCR after PDFium render-mode/alpha detection; source failure retained",
+  "source_count": 12,
+  "sources": [
+    {
+      "path": "packages/parsing/README.md",
+      "sha256": "611a53b2ce2c3c91db010408f9926f41640ff6076ff9c48719eb53a7977dce9a"
+    },
+    {
+      "path": "packages/parsing/__init__.py",
+      "sha256": "39e97b51a4ad28b8e206a3ef2d11ca5df6530d0ec3a9b318e8eb73356efc413b"
+    },
+    {
+      "path": "packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5"
+    },
+    {
+      "path": "packages/parsing/core.py",
+      "sha256": "ff346f529d508901b48f7c98462909d044b3a03a01961e6d97ec317fc17e0d1e"
+    },
+    {
+      "path": "packages/parsing/fetch_assets.py",
+      "sha256": "3a4956df5d38b95bed8885e302935ccbb91212203b80fa02bcded86096f82947"
+    },
+    {
+      "path": "packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c"
+    },
+    {
+      "path": "packages/parsing/qa/run_local_check.py",
+      "sha256": "d9562f18b3ed79acc5a1df4713302b767733aba241ede4f5f7e1f803280e9021"
+    },
+    {
+      "path": "packages/parsing/server.py",
+      "sha256": "12eaf57412c6af22f56816259d2b0c55011492da109d6a251ae28724329da97d"
+    },
+    {
+      "path": "requirements-parsing.in",
+      "sha256": "ff60348d9cab5198127fdc9fdd0047ed26322d6246f4b3eb4ce3fe755c3114ff"
+    },
+    {
+      "path": "requirements-parsing.lock.txt",
+      "sha256": "fc8886726ba4ccf2a0e62291adc9da624f8c28cb08305b6327d1b739de7115a8"
+    },
+    {
+      "path": "tests/test_parsing_http.py",
+      "sha256": "1e42ecf4be704a6e3a097af8d2269430a21a818836fbc4902125599102547551"
+    },
+    {
+      "path": "tests/test_parsing_local.py",
+      "sha256": "1dbb37627c9b5000581d6f4040dfe0ac0573ab9ae69304fcb33abfb3e0802979"
+    }
+  ],
+  "parser_digest": "a7678861fc3b487a4096eaf88f3bbf24e74d49ac03bf5b3dacadb87f2d4b915d",
+  "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+  "runtime_core_source_sha256": "ff346f529d508901b48f7c98462909d044b3a03a01961e6d97ec317fc17e0d1e",
+  "service": {
+    "url": "http://127.0.0.1:8812",
+    "pid_at_validation": 1464808,
+    "private_environment_file": ".local/parsing.env",
+    "restart_command": ".venv/bin/python deploy/run.py --env-file .local/parsing.env -- .venv-parsing/bin/python -m packages.parsing.server --port 8812"
+  },
+  "tests": {
+    "passed": 14,
+    "real_http_minimal_mixed_hidden": "passed",
+    "previous_six_page_fixture": "passed",
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit_runtime": "passed"
+  },
+  "business_documents": 0,
+  "business_accuracy_accepted": false,
+  "target_baseline_qualified": false,
+  "limitations": [
+    "Docling/PaddleOCR baseline not qualified",
+    "Other optical/PDF ambiguities and image understanding not business validated",
+    "No production sandbox or capacity qualification"
+  ],
+  "evidence": [
+    {
+      "path": "minimal_mixed_hidden-result.json",
+      "sha256": "2667e4cc5ce9a0e880b9219755073edab7729872b7e4ba52c18d7948e3b238c9"
+    },
+    {
+      "path": "previous_six_page_fixture-result.json",
+      "sha256": "8d9957a0ac6e26a13f54bed0f666eccfbc0e6b069028a5e6d3b980a63d8dffb4"
+    },
+    {
+      "path": "real-http-result.json",
+      "sha256": "f3d1fe1f5e09b257538383bc6004971e8d5bf75ec1f77ea0e6fa81497f5750d6"
+    },
+    {
+      "path": "unit-result.xml",
+      "sha256": "60a96d897e57615fa590a1e7df4a0cd0bfda5cad2bdeeedcee311b4cf96619c0"
+    }
+  ]
+}

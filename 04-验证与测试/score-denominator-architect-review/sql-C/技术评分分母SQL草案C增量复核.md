@@ -1,0 +1,9 @@
+# 评分分母方法身份增量复核
+
+结论：C在本轮最小静审无新增阻塞，可由PM另建全新独立检查库验证，不在B库热补。SHA256 `e771ab52c25cbd19ac0e48f5732de051c2f8f5ecc7b6599a0f7064826b169195`。
+
+[B→C差异](B-C.diff) 除注释，仅在strict cohort成员分支重绑method：从真实cohort.research_run_id关联research_runs.experiment_id，再取experiments.method_digest。普通评审输入方法继续仅用于其current分支，不能将ordinary review方法混作研究三判断方法。完整关系受current_cohort资格与锁范围约束；缺关系的method为NULL，后续完整scope检查拒绝。
+
+B已修的当前confirmed decision真实提交前时点守卫、source/identity/current head重核、权限、旧三判结果和unknown费用边界不变。A/B原件和各自观察保留。Owner提供ordinary与judgment方法不同的真实PG观察，本轮未重做PG查询，也不将B的开发5PG/28pure算成C实际通过。
+
+未执行DDL、数据库连接、资源或外部调用。实际新库须验证strict返回研究method、current/history未变及所有既有时点负例；本轮不授正式模型/分值聚合资格。

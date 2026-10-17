@@ -1,0 +1,66 @@
+{
+  "candidate": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate05/candidate.json",
+  "candidate_sha256": "4f91d6aafcc397e89c19acbf626631853663a5c53e8ed95db300bc802856d650",
+  "source_count_verified_before_after": 317,
+  "changed_vs04": [
+    "apps/api/task_draft_routes.py",
+    "packages/tasks/draft_interpreter.py",
+    "packages/tasks/drafts.py",
+    "tests/test_task_draft_interpreter.py",
+    "tests/test_task_drafts_integration.py"
+  ],
+  "openapi_sha256": "4af4b5d611539485be74aeed8b98f07d95fb4bc4e9c16572a781f219e5877ae2",
+  "conclusion": "TD01 and TD02 closed; scoped task-draft implementation review passes",
+  "independent_execution": {
+    "passed": 56,
+    "failed": 0,
+    "skipped": 0,
+    "first_suite": 55,
+    "additional_original_time_save_group": 1,
+    "additional_selection_deselected": 10,
+    "mode": "real isolated nonowner API PG and authenticated ASGI; bounded interpreter pure tests"
+  },
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/probe.py",
+      "sha256": "55f09b1c3cc7c97b43413f628a6d446d2615554dcedb80aed4ba0aeb6cb90c54"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/input-record.json",
+      "sha256": "c67aba60fd01ce4b314c8069e42c501f8caae7d3d1b13313c60ff5f081d2ddc6"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/auxiliary.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/temporal-counterexamples.json",
+      "sha256": "8ef0d9784163414681ba8b38e8feb034b2bc8d4ad4dc5ab1f9629afe6aeaea50"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/etag-counterexample.json",
+      "sha256": "483c3cc3cfd0223f1527c9b50b224785319281c8cb84dc5e314879d6c4ec2440"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/independent-junit.xml",
+      "sha256": "780597e8d176d6f33c503be6f2e4f83d615100b48ad500a0bc4378ce7244dc39"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/time-save-junit.xml",
+      "sha256": "d029a70fc4dfde75a75d7fe6d38c323da2b1e5ae8a8278705fa57f64258f4e7c"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/task-drafts-architect-review/candidate05/runtime/tests/test_task_drafts_integration.py",
+      "sha256": "9d3f41a0e2d9397ee71c52edb4299db74fb63f86e87ce12766bd6895f5aa4412"
+    }
+  ],
+  "not_executed": [
+    "DDL",
+    "owner writes",
+    "external model/object calls",
+    "Kafka",
+    "live deployment",
+    "browser integration",
+    "full scheduling execution"
+  ]
+}

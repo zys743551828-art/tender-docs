@@ -1,0 +1,42 @@
+{
+  "status": "failed_preserved_no_retry",
+  "scenario": "immutable_archive_to_one_fresh_target",
+  "protocol_sha256": "d4ad0221362a05746c6d892ae06149b56a9f804e3c6127f1b2bc48069d9c94a3",
+  "prepared_sha256": "6c42fdc8ff830d3fb3a3c5b616d484698c8b579c84ae2723caafaab6b19c7ca4",
+  "provider_calls": 0,
+  "consumers": 0,
+  "objects_listed": 0,
+  "objects_deleted": 0,
+  "stages": [
+    {
+      "name": "before_create",
+      "free_bytes": 1670701056,
+      "at": "2026-10-17T04:24:50.508320+00:00"
+    },
+    {
+      "name": "after_create",
+      "free_bytes": 711200768,
+      "at": "2026-10-17T04:24:53.700696+00:00"
+    },
+    {
+      "name": "before_restore",
+      "free_bytes": 711004160,
+      "at": "2026-10-17T04:24:53.785141+00:00"
+    }
+  ],
+  "error_type": "RecoveryError",
+  "error_code": "DATABASE_RECOVERY_IDENTITY_MISMATCH",
+  "cleanup": {
+    "own_container_id": "a4c4e77945d11b53c75e3267ee556c2eb4bd23afb26aeca7b7d0d50bbf26fb4f",
+    "own_container_removed": true,
+    "volume_retained": "twb-ar-data-8424a94ed45745299d4abbcc58aded3c",
+    "source_resources_touched": false
+  },
+  "finished_at": "2026-10-17T04:24:55.168321+00:00",
+  "free_bytes_after": 1596825600,
+  "limits": [
+    "Not a rerun of original full source-target-source scenario",
+    "No production RPO/RTO, power loss, inflight resume, newest A2/Score/Scale or real business materials qualification",
+    "API uses real ASGI with dedicated API LOGIN; no public server, Kafka, parser/Word/RAG execution or model"
+  ]
+}

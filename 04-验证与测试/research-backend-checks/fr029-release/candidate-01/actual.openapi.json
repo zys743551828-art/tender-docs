@@ -1,0 +1,608 @@
+{
+  "components": {
+    "schemas": {
+      "ControlledModelRoute": {
+        "additionalProperties": false,
+        "properties": {
+          "current": {
+            "type": "boolean"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "lane": {
+            "enum": [
+              "shadow",
+              "business"
+            ]
+          },
+          "model_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "revision": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "rollback_model_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "route_key": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "route_key",
+          "lane",
+          "revision",
+          "model_id",
+          "rollback_model_id",
+          "current",
+          "formal_eligibility"
+        ],
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "RegisterModelRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "training_job_id": {
+            "format": "uuid",
+            "title": "Training Job Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "training_job_id",
+          "reason"
+        ],
+        "title": "RegisterModelRequest",
+        "type": "object"
+      },
+      "RegisteredScoreModel": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "current": {
+            "type": "boolean"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "model_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "origin": {
+            "enum": [
+              "synthetic",
+              "real"
+            ]
+          },
+          "registered_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "research_only": {
+            "type": "boolean"
+          },
+          "route_key": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "scope": {
+            "additionalProperties": false,
+            "properties": {
+              "engineering_types": {
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "type": "array"
+              },
+              "feature_schema": {
+                "const": "complete-three-band-features/1"
+              },
+              "judgment_method_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "maximums": {
+                "items": {
+                  "exclusiveMinimum": 0,
+                  "type": "number"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "judgment_method_digest",
+              "feature_schema",
+              "engineering_types",
+              "maximums"
+            ],
+            "type": "object"
+          },
+          "training_job_id": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "model_id",
+          "training_job_id",
+          "artifact_digest",
+          "registered_at",
+          "origin",
+          "research_only",
+          "current",
+          "scope",
+          "route_key",
+          "formal_eligibility"
+        ],
+        "type": "object"
+      },
+      "RegistryCapabilities": {
+        "additionalProperties": false,
+        "properties": {
+          "current_review_shadow_producer": {
+            "const": false
+          },
+          "formal_model_eligibility": {
+            "const": "unavailable"
+          },
+          "immutable_registration": {
+            "type": "boolean"
+          },
+          "paid_execution_enabled": {
+            "const": false
+          },
+          "schema_configured": {
+            "type": "boolean"
+          },
+          "shadow_route_control": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "schema_configured",
+          "immutable_registration",
+          "shadow_route_control",
+          "current_review_shadow_producer",
+          "formal_model_eligibility",
+          "paid_execution_enabled"
+        ],
+        "type": "object"
+      },
+      "RegistryPreview": {
+        "additionalProperties": false,
+        "properties": {
+          "document": {
+            "type": "object"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "model_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "training_job_id": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "model_id",
+          "training_job_id",
+          "document",
+          "formal_eligibility"
+        ],
+        "type": "object"
+      },
+      "RouteChange": {
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "enum": [
+              "publish",
+              "rollback",
+              "suspend"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "certification_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Certification Id"
+          },
+          "model_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Model Id"
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "reason"
+        ],
+        "title": "RouteChange",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/v1/model-registry/capabilities": {
+      "get": {
+        "operationId": "capabilities_api_v1_model_registry_capabilities_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryCapabilities"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          }
+        },
+        "summary": "Capabilities",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    },
+    "/api/v1/model-registry/models": {
+      "post": {
+        "operationId": "register_model_api_v1_model_registry_models_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterModelRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisteredScoreModel"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Register Model",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    },
+    "/api/v1/model-registry/models/{model_id}": {
+      "get": {
+        "operationId": "get_model_api_v1_model_registry_models__model_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "model_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Model Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisteredScoreModel"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Model",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    },
+    "/api/v1/model-registry/routes/{lane}/{route_key}": {
+      "get": {
+        "operationId": "get_route_api_v1_model_registry_routes__lane___route_key__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "lane",
+            "required": true,
+            "schema": {
+              "enum": [
+                "shadow",
+                "business"
+              ],
+              "title": "Lane",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "route_key",
+            "required": true,
+            "schema": {
+              "title": "Route Key",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ControlledModelRoute"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Route",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    },
+    "/api/v1/model-registry/routes/{lane}/{route_key}/changes": {
+      "post": {
+        "operationId": "change_route_api_v1_model_registry_routes__lane___route_key__changes_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "lane",
+            "required": true,
+            "schema": {
+              "enum": [
+                "shadow",
+                "business"
+              ],
+              "title": "Lane",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "route_key",
+            "required": true,
+            "schema": {
+              "title": "Route Key",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RouteChange"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ControlledModelRoute"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Change Route",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    },
+    "/api/v1/model-registry/training-jobs/{training_job_id}/model-preview": {
+      "get": {
+        "operationId": "model_preview_api_v1_model_registry_training_jobs__training_job_id__model_preview_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "training_job_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Training Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryPreview"
+                }
+              }
+            },
+            "description": "Actual registry software; formal eligibility unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Model Preview",
+        "tags": [
+          "model-registry"
+        ]
+      }
+    }
+  }
+}

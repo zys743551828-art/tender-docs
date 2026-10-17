@@ -1,0 +1,32 @@
+{
+  "cluster_id": "7hr1JPpnTGmoNhtDuBhWPg",
+  "matches_created_cluster": true,
+  "topics": [
+    {
+      "topic": "tender.task.document.v1",
+      "partitions": 6
+    },
+    {
+      "topic": "tender.task.review.v1",
+      "partitions": 6
+    },
+    {
+      "topic": "tender.task.export.v1",
+      "partitions": 6
+    },
+    {
+      "topic": "tender.task.research.v1",
+      "partitions": 6
+    },
+    {
+      "topic": "tender.domain.events.v1",
+      "partitions": 6
+    },
+    {
+      "topic": "tender.task.dead-letter.v1",
+      "partitions": 6
+    }
+  ],
+  "paid_consumers_started": false,
+  "isolation": "Dedicated broker/volume, no workers started"
+}

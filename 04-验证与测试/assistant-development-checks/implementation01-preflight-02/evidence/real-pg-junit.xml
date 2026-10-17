@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="20" time="12.862" timestamp="2026-10-17T02:01:23.972022+00:00" hostname="597cea30c71f"><testcase classname="tests.test_assistant_integration" name="test_global_real_null_scope_complete_close_restore_and_owner_isolation" time="0.696" /><testcase classname="tests.test_assistant_integration" name="test_global_unknown_never_reissues_for_replay_or_new_nonce_same_question" time="0.451" /><testcase classname="tests.test_assistant_integration" name="test_global_cancellation_before_execution_reports_request_then_real_terminal" time="0.405" /><testcase classname="tests.test_assistant_integration" name="test_global_expired_fence_cannot_reserve_or_publish" time="0.328" /><testcase classname="tests.test_assistant_integration" name="test_global_actual_schema_and_cursor_contracts" time="0.643" /><testcase classname="tests.test_assistant_integration" name="test_sourced_global_action_cross_member_exactly_once_actual_candidate_or_rejection[confirm]" time="1.054" /><testcase classname="tests.test_assistant_integration" name="test_sourced_global_action_cross_member_exactly_once_actual_candidate_or_rejection[reject]" time="1.000" /><testcase classname="tests.test_assistant_integration" name="test_source_withdrawn_before_dispatch_no_call_and_during_model_no_publication" time="1.259" /><testcase classname="tests.test_assistant_integration" name="test_action_context_change_stale_and_plain_yes_cannot_consume" time="0.619" /><testcase classname="tests.test_assistant_integration" name="test_global_call_reservation_serializes_different_runs_same_intent" time="0.250" /><testcase classname="tests.test_assistant_integration" name="test_remote_window_has_no_worker_transaction_and_cancel_suppresses_billed_answer" time="0.298" /><testcase classname="tests.test_assistant_integration" name="test_expired_card_rejects_effect_and_unsupported_model_tool_is_billed_failure" time="0.792" /><testcase classname="tests.test_assistant_integration" name="test_dedicated_global_outbox_relay_ack_and_consumer_duplicate_protocol" time="0.359" /><testcase classname="tests.test_assistant_integration" name="test_project_answer_real_core_ledger_receipt_and_original_conversation_recovery" time="0.535" /><testcase classname="tests.test_assistant_integration" name="test_selected_authoring_ledger_proposal_one_original_action_across_native_entry[confirm]" time="0.534" /><testcase classname="tests.test_assistant_integration" name="test_selected_authoring_ledger_proposal_one_original_action_across_native_entry[reject]" time="0.406" /><testcase classname="tests.test_assistant_integration" name="test_authoring_different_selection_is_distinct_intent_and_edit_during_generation_stale" time="0.390" /><testcase classname="tests.test_assistant_integration" name="test_source_chooser_strict_version_cross_project_guard_csrf_and_action_actual_schema" time="0.823" /><testcase classname="tests.test_assistant_integration" name="test_confirmed_current_facts_in_prompt_and_identity_change_native_apply_guard" time="0.961" /><testcase classname="tests.test_assistant_integration" name="test_archived_project_keeps_readonly_answer_but_rejects_action_and_generation" time="0.217"><failure message="assert None">assistant = {'actors': [UUID('d8a03bc9-f060-44aa-979e-0ba0cd58011e'), UUID('d27c2a3b-feaa-42d6-aa33-790233249c7d')], 'api': &lt;starl...['method', 'chapter_reference'], 'content': '以原件技术措施作为参考，具体工期和数量需按当前项目另行核实。', 'scope': '浙江市政道路条件下的参考', ...}, ...}, ...}
+project_engine = &lt;module 'apps.worker.engine' from '/workspace/tender-docs/04-验证与测试/assistant-development-checks/implementation-01/frozen-tree/apps/worker/engine.py'&gt;
+
+    def test_archived_project_keeps_readonly_answer_but_rejects_action_and_generation(
+        assistant, project_engine
+    ):
+        s = assistant
+        bid = s["env"]["origin"]
+        from packages.authoring.repository import create_draft
+        from packages.domain.runtime import etag
+    
+        with connection() as c:
+            draft, _ = create_draft(c, bid, s["actors"][0], "归档前合成正文")
+            section = c.execute("SELECT id FROM sections WHERE draft_id=%s", (draft,)).fetchone()["id"]
+            c.execute(
+                "UPDATE bid_profiles SET phase='closed',archived_at=clock_timestamp() WHERE bid_id=%s",
+                (bid,),
+            )
+        generation = s["api"].post(
+            f"/api/v1/bids/{bid}/authoring/generations",
+            json={
+                "section_id": str(section),
+                "base_section_revision": 1,
+                "instruction": "关闭工程不得新生成",
+                "source_version_ids": [],
+            },
+            headers=s["headers"](tag=etag("draft", draft, 1)),
+        )
+        assert generation.status_code == 409 and generation.json()["code"] == "PROJECT_WORK_CLOSED"
+        s["response"]["tool_proposals"] = [
+            {"tool": "review.request", "target_bid_id": str(bid), "arguments": {}}
+        ]
+        _, accepted = project_turn(s, bid)
+&gt;       result = execute_project(s, project_engine, accepted)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_assistant_integration.py:1130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = {'actors': [UUID('d8a03bc9-f060-44aa-979e-0ba0cd58011e'), UUID('d27c2a3b-feaa-42d6-aa33-790233249c7d')], 'api': &lt;starl...['method', 'chapter_reference'], 'content': '以原件技术措施作为参考，具体工期和数量需按当前项目另行核实。', 'scope': '浙江市政道路条件下的参考', ...}, ...}, ...}
+engine = &lt;module 'apps.worker.engine' from '/workspace/tender-docs/04-验证与测试/assistant-development-checks/implementation-01/frozen-tree/apps/worker/engine.py'&gt;
+accepted = &lt;Response [202 Accepted]&gt;
+
+    def execute_project(s, engine, accepted):
+        with connection() as c:
+            message = c.execute(
+                "SELECT payload FROM outbox WHERE operation_id=%s",
+                (UUID(accepted.json()["operation"]["id"]),),
+            ).fetchone()["payload"]
+        lease = engine.acquire(message)
+&gt;       assert lease
+E       assert None
+
+tests/test_assistant_integration.py:771: AssertionError</failure></testcase></testsuite></testsuites>

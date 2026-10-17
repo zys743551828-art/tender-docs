@@ -1,0 +1,69 @@
+{
+  "candidate": "project-work-conversation-persistence-01",
+  "created_at": "2026-10-16T19:55:33.431267+00:00",
+  "scope": "Project main work conversation persistence only; standalone router not yet included in main runtime",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/assistant/__init__.py",
+      "sha256": "829cf0726d0d30b97cb61fb2949b210d70572baad678aebd77683bb2e1e3ee5e",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/frozen-inputs/packages/assistant/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/assistant/conversations.py",
+      "sha256": "63918ba1e44b8765d6f449285a668dfd3756172511d4aaf2bad44f16d64d1280",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/frozen-inputs/packages/assistant/conversations.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/assistant/contracts.py",
+      "sha256": "4627eb1627639d7ac862d297d5aa6c248e37139d282da57f3670e72f5594ca12",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/frozen-inputs/packages/assistant/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/assistant_routes.py",
+      "sha256": "59adf76ecf0a5bb927c0d24e058d9ef4525608eb10c50dca41df720acfa653f4",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/frozen-inputs/apps/api/assistant_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_work_conversations.py",
+      "sha256": "e20193a353f514f63c7c241fce5d532f7c5c0ae7ab659fae7b01015285c4d1cb",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/frozen-inputs/tests/test_work_conversations.py"
+    }
+  ],
+  "actual_openapi": {
+    "path": "/workspace/tender-docs/04-验证与测试/work-conversations-development-checks/candidate-01/actual.openapi.json",
+    "sha256": "a97a5369bfd42ed8b3f95f07b5c2a12937d192ef73f96771ed355e2debd291ee",
+    "operations": 6
+  },
+  "validation": {
+    "real_nonowner_pg_asgi_tests": 5,
+    "command": "deploy/run.py --env-file .local/rag-checks.env -- env RUN_WORK_CONVERSATIONS=1 pytest tests/test_work_conversations.py -q",
+    "checks": [
+      "two members concurrently share one main conversation and one creation audit",
+      "idempotent lost-ACK reply and same message identity conflict, stale ETag and cross-project path isolation",
+      "signed-in member can resume server history and read pages without duplication",
+      "archive restore transitions preserve messages, sessions and pre-existing queued operation",
+      "explicit cross-project original identity is a reference only; missing reference rolls back whole message",
+      "actual response schemas match real replies"
+    ],
+    "quality": [
+      "ruff",
+      "format",
+      "mypy",
+      "bandit"
+    ],
+    "paid_calls": 0,
+    "oss_requests": 0,
+    "kafka_consumers_started": 0
+  },
+  "limitations": [
+    "Global scope not implemented by this slice; never a fake bid",
+    "No generated answer, AI action proposal or tool execution; recording reports assistant_operation_id=null",
+    "No formal scoring eligibility or project facts inferred from user text",
+    "No whole requirement/product or browser acceptance; independent review pending"
+  ],
+  "integration": [
+    "include apps.api.assistant_routes.router",
+    "call packages.assistant.contracts.extend_openapi in actual exporter",
+    "No SQL or role changes needed for project persistence"
+  ]
+}

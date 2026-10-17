@@ -1,0 +1,60 @@
+{
+  "database": "tender_checks_assistant01",
+  "profiles": {
+    "init": ".local/assistant01-init.env",
+    "business": ".local/assistant01-checks.env"
+  },
+  "ordered_sql": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "path": "packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003"
+    },
+    {
+      "path": "packages/assistant/sql/assistant.sql",
+      "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9"
+    }
+  ],
+  "logins": {
+    "api": "twb_checks_assistant01_b50ddad4_api",
+    "worker": "twb_checks_assistant01_b50ddad4_worker",
+    "research_worker": "twb_checks_assistant01_b50ddad4_research_worker",
+    "score_read": "twb_checks_assistant01_b50ddad4_score_read"
+  },
+  "kafka_bootstrap": "",
+  "compose_project": null,
+  "app_origin": "http://127.0.0.1:5175",
+  "no_business_process_started": true,
+  "observed_at": "2026-10-17T01:11:30.161804+00:00",
+  "review": "architect assistant SQL01 static pass in current thread; implementation acceptance pending",
+  "provider_calls": 0,
+  "native_oss_requests": 0,
+  "consumers_started": false
+}

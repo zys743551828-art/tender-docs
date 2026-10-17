@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "scope": "真实PG的新增DDL约束、预算预留和角色隔离；不是业务工作流验收",
+  "executed_at": "2026-10-16T13:21:33.289322+00:00",
+  "postgres_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "tables": 103,
+  "checks": 22,
+  "check_names": [
+    "文件head可指向自身版本",
+    "同bid也不能借用其他文件head",
+    "文件版本不能跨bid关联",
+    "版本记录不可改写",
+    "single模式必须只有一片",
+    "上传分片编号不得为0",
+    "事实head不得跨bid",
+    "事实撤回链不可原地修改",
+    "全部撤回仍保留非零修订的空集",
+    "失败行不能判满足",
+    "成功执行但无法判断可独立表示",
+    "失败行必须带错误原因",
+    "预算可预留且超限预留拒绝",
+    "预算不接受NaN",
+    "取消请求后不得新增调用预算",
+    "真实超额账单如实记录并暂停",
+    "并发预留只能一个成功且不超预算",
+    "预览manifest不可改写",
+    "研究调度角色不能读官方标签",
+    "研究调度角色不能发布业务模型",
+    "评分角色不能读取影子研究结果",
+    "规则抽取worker不能伪造人工决定"
+  ],
+  "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "sql_sha256": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "abdb08c5270b82eefcc84b1be8a491c399cb3a95797d27469f485c2cb01938a0",
+    "retrieval.sql": "88bdc25eee1aefd60d9b8532ae1e36d6860109839b5a2c26518f30fb5ab484ec",
+    "worker-functions.sql": "db0460442763cdea8f2ce8b9b58259c5989f857810db1b036e329512be73e057",
+    "roles.sql": "347cb1e06b5e82443caf9d8140b455b2c5fe46db229567a8799e8ceb5241f21d"
+  },
+  "software_end_to_end_executed": false
+}

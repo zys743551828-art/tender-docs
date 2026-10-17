@@ -1,0 +1,280 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/bids/{bid_id}/lifecycle": {
+      "get": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Get Project Lifecycle",
+        "operationId": "getProjectLifecycle",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "业务阶段与归档维度；不代替实际提交事实",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectLifecycleView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "project lifecycle"
+        ],
+        "summary": "Change Project Lifecycle",
+        "operationId": "changeProjectLifecycle",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectLifecycleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "业务阶段与归档维度；不代替实际提交事实",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectLifecycleView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "ProjectLifecycleRequest": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "enum": [
+              "start",
+              "end",
+              "terminate",
+              "archive",
+              "reopen"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "action",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "ProjectLifecycleView": {
+        "type": "object",
+        "properties": {
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "phase": {
+            "enum": [
+              "preparation",
+              "working",
+              "submitted",
+              "closed",
+              "terminated"
+            ]
+          },
+          "archived_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "allowed_actions": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "start",
+                "end",
+                "terminate",
+                "archive",
+                "reopen"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "archive_blockers": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "OPERATIONS_IN_FLIGHT"
+              ]
+            }
+          },
+          "active_operations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "state": {
+                  "enum": [
+                    "queued",
+                    "running",
+                    "cancel_requested"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "kind",
+                "state"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "bid_id",
+          "phase",
+          "archived_at",
+          "revision",
+          "allowed_actions",
+          "archive_blockers",
+          "active_operations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

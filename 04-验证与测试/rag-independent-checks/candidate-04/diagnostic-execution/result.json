@@ -1,0 +1,51 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "initial_RR_rejected_before_any_model_rpc_and_no_command_trace",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "scope": "Frozen RAG04 + frozen main03 ASGI, actual restricted PG and actual local BGE/lexical/rerank HTTP; synthetic SQL parse/source-effectivity fixtures, not real PDF or business quality",
+  "fixture_bid_id": "dfd8883b-9de9-4b08-9f00-bd0d744cc1a6",
+  "request_observations": [
+    {
+      "stage": "reject_initial_rr",
+      "status": 409,
+      "code": "RAG_FRESH_AUTHORITY_REQUIRED"
+    },
+    {
+      "stage": "normal_staged_and_replay",
+      "status": 503,
+      "code": "DATABASE_TRANSACTION_FAILED"
+    }
+  ],
+  "fatal": {
+    "stage": "normal_staged_and_replay",
+    "type": "AssertionError",
+    "message": "Independent RAG04 delta incomplete; no private token or provider request logged"
+  },
+  "model_rpc_observations": [
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    }
+  ],
+  "candidate_sha256": "d6057de89b507423f1849478d2e19e0c4f9bc1200ab1e8789b741a36ad73398c",
+  "input_manifest_sha256": "eb1a981813b08c3b408dfc3471c4c19e38a7324501f28ebcc6f9a6d01810f3e5",
+  "probe_sha256": "61c5a2c25f44d596cf90654b51cfc51dd5af0f9b4ab4b0d9d39e28cced1476ec"
+}

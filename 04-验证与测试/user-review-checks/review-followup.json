@@ -1,0 +1,355 @@
+{
+  "role": "independent_user_view_reviewer",
+  "scope": "design_delivery_only",
+  "decision": "approved",
+  "user_path_design_blockers": 0,
+  "sources": [
+    {
+      "id": "P",
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "8645da16533498772955e7aa3fecfc0af9eddb92ad845621378ed371f74cebc1"
+    },
+    {
+      "id": "V",
+      "path": "05-技术与设计/交互与视觉设计.md",
+      "sha256": "e18b371961e136891478a855f2b435d8d5b5994a166bcea0ca9bb8ca442b1237"
+    },
+    {
+      "id": "O",
+      "path": "02-业务与产品/AI投标工作台产品化方案.md",
+      "sha256": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2"
+    },
+    {
+      "id": "B",
+      "path": "02-业务与产品/业务需求说明书.md",
+      "sha256": "69213453dacfdc4fa7f7ae4a93f0567add7b8e2530956b0f17a8a33866f17fc4"
+    }
+  ],
+  "citations": [
+    {
+      "id": "C01",
+      "source": "P",
+      "line": 728,
+      "excerpt": "下载评审报告（Word）"
+    },
+    {
+      "id": "C02",
+      "source": "V",
+      "line": 134,
+      "excerpt": "下载评审报告（Word）"
+    },
+    {
+      "id": "C03",
+      "source": "V",
+      "line": 135,
+      "excerpt": "下载批注审阅稿（PDF）"
+    },
+    {
+      "id": "C04",
+      "source": "V",
+      "line": 136,
+      "excerpt": "下载投标正文（Word）"
+    },
+    {
+      "id": "C05",
+      "source": "V",
+      "line": 137,
+      "excerpt": "下载投标正文（PDF）"
+    },
+    {
+      "id": "C06",
+      "source": "P",
+      "line": 564,
+      "excerpt": "上传此修改稿的PDF"
+    },
+    {
+      "id": "C07",
+      "source": "P",
+      "line": 564,
+      "excerpt": "不同格式不能强行写成同一逻辑文件的新版本"
+    },
+    {
+      "id": "C08",
+      "source": "P",
+      "line": 564,
+      "excerpt": "Word交付未获对应检查资格"
+    },
+    {
+      "id": "C09",
+      "source": "V",
+      "line": 166,
+      "excerpt": "本次对应检查未完成"
+    },
+    {
+      "id": "C10",
+      "source": "V",
+      "line": 167,
+      "excerpt": "具体受检PDF名称／版本"
+    },
+    {
+      "id": "C11",
+      "source": "P",
+      "line": 887,
+      "excerpt": "真实用户试用另外观察三个任务"
+    },
+    {
+      "id": "C12",
+      "source": "P",
+      "line": 369,
+      "excerpt": "尚未通过有效复核解决且尚未被有理由人工驳回"
+    },
+    {
+      "id": "C13",
+      "source": "P",
+      "line": 522,
+      "excerpt": "不再以该问题阻断提交"
+    },
+    {
+      "id": "C14",
+      "source": "P",
+      "line": 136,
+      "excerpt": "无需先选目录模板"
+    },
+    {
+      "id": "C15",
+      "source": "P",
+      "line": 157,
+      "excerpt": "不填公司事实、不先建满知识库也可开始"
+    },
+    {
+      "id": "C16",
+      "source": "P",
+      "line": 340,
+      "excerpt": "默认在标准提交登记前人工确认"
+    },
+    {
+      "id": "C17",
+      "source": "P",
+      "line": 524,
+      "excerpt": "评分总分无法可靠预测本身不必阻止提交"
+    },
+    {
+      "id": "C18",
+      "source": "P",
+      "line": 918,
+      "excerpt": "评分研究链路可运行"
+    },
+    {
+      "id": "C19",
+      "source": "V",
+      "line": 72,
+      "excerpt": "仅作布局参考"
+    },
+    {
+      "id": "C20",
+      "source": "V",
+      "line": 94,
+      "excerpt": "仅作布局参考"
+    },
+    {
+      "id": "C21",
+      "source": "V",
+      "line": 114,
+      "excerpt": "仅作布局参考"
+    },
+    {
+      "id": "C22",
+      "source": "V",
+      "line": 176,
+      "excerpt": "PNG／SVG不代表按钮文案已同步"
+    },
+    {
+      "id": "C23",
+      "source": "P",
+      "line": 375,
+      "excerpt": "收到补遗后先展示变更条款"
+    },
+    {
+      "id": "C24",
+      "source": "P",
+      "line": 637,
+      "excerpt": "先选具体提交，再录入结果"
+    },
+    {
+      "id": "C25",
+      "source": "P",
+      "line": 548,
+      "excerpt": "AI修改应用前除检查正文基准修订外"
+    },
+    {
+      "id": "C26",
+      "source": "P",
+      "line": 502,
+      "excerpt": "复检不再发现原冲突且依据有效"
+    },
+    {
+      "id": "C27",
+      "source": "P",
+      "line": 530,
+      "excerpt": "补录已发生的提交"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S01",
+      "task": "首次上传PDF拿结论",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C14",
+        "C15"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S02",
+      "task": "处理风险看原页",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C12",
+        "C13",
+        "C26"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S03",
+      "task": "外部Word改稿回传复检",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S04",
+      "task": "补遗变化后的处理",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C23",
+        "C11"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S05",
+      "task": "提交前确认与实际提交登记",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C16",
+        "C17",
+        "C27"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S06",
+      "task": "登记成绩复盘",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C24",
+        "C18",
+        "C11"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S07",
+      "task": "章节编制和历史引用",
+      "method": "document_recheck",
+      "result": "path_preserved_without_added_default_steps",
+      "citations": [
+        "C25",
+        "C15"
+      ],
+      "software_executed": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "U01",
+      "status": "design_closed_ui_acceptance_pending",
+      "citations": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C19",
+        "C20",
+        "C21",
+        "C22"
+      ]
+    },
+    {
+      "id": "U02",
+      "status": "design_closed_ui_acceptance_pending",
+      "citations": [
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10"
+      ]
+    },
+    {
+      "id": "U03",
+      "status": "real_user_observation_pending",
+      "citations": [
+        "C11"
+      ]
+    },
+    {
+      "id": "U04",
+      "status": "real_user_observation_pending",
+      "citations": [
+        "C11"
+      ]
+    },
+    {
+      "id": "U05",
+      "status": "real_user_observation_pending",
+      "citations": [
+        "C11"
+      ]
+    },
+    {
+      "id": "followup_negative_scope_ambiguity",
+      "status": "design_closed",
+      "citations": [
+        "C12",
+        "C13"
+      ]
+    }
+  ],
+  "target_image_text_updated": false,
+  "target_image_use": "layout_only_current_button_text_from_explicit_table",
+  "checks": {
+    "source_count": 4,
+    "citation_lines_and_excerpts": 27,
+    "core_paths": 7,
+    "report_local_links": 4,
+    "original_review_evidence_unchanged": true
+  },
+  "report": "04-验证与测试/用户视角整改复审.md",
+  "report_sha256": "e78cd6e765814709c322c6ce130b38df86d791582a36e44874425e66e5b9e5d4",
+  "real_participants": 0,
+  "browser_runs": 0,
+  "business_software_tests": 0,
+  "not_authorized_by_this_decision": [
+    "overall_architecture_approval",
+    "business_implementation_acceptance",
+    "real_usability_validation",
+    "model_quality_or_release",
+    "production_release"
+  ]
+}

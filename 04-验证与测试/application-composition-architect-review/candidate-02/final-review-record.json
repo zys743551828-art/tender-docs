@@ -1,0 +1,45 @@
+{
+  "candidate_sha256": "18b173dd1496994c180ef6c4bd16e8a1a05679e2020255c5a9b7e08d36479061",
+  "verified_source_count": 432,
+  "recipe_sha256": "fed95aadb107fb0765a4f76353cbfb42c58c877e0c14503fd62bab38354e7a2a",
+  "actual": {
+    "path": "/workspace/tender-workbench/docs/application-composition-development-checks/actual-02.openapi.json",
+    "sha256": "b65141d0db4afd51317e51a919c1582337bd260d858c27bfbeadc0b5c3cf9ab2",
+    "paths": 227,
+    "operations": 258,
+    "schemas": 406
+  },
+  "changed_prior_schema_names": [
+    "BuildRequest",
+    "AuthoringSnapshot"
+  ],
+  "unchanged_prior_schemas": 373,
+  "test_root": "/workspace/tender-docs/04-验证与测试/application-composition-architect-review/candidate-02/runtime",
+  "result": "本轮组合与AC01增量复核通过；既有模块范围外资格不扩展",
+  "source_postcheck": "432_all_match",
+  "independent_tests_passed": 11,
+  "deselected_old17sql_only": 1,
+  "junit": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "11",
+      "time": "8.721",
+      "timestamp": "2026-10-17T04:06:45.668883+00:00",
+      "hostname": "597cea30c71f"
+    }
+  ],
+  "evidence_sha256": {
+    "delta-junit.xml": "04cf85132a89063de6efa7334dba7dc854e4232156a3ddbeda026b10e3fd4d16",
+    "original-counterexample-delta.json": "038f90153a6b91936558db78bd7ebd5a52824bd132b20c8188d9b192422fdf8c",
+    "runtime/tests/test_architect_lifecycle_delta.py": "33d1c5c44579a5cbfe31c0a8b32e487f43c0f772553c7f932c640471971de5da",
+    "runtime/tests/conftest.py": "bc626de2092d98b65a120edda63523935db40a66778e093af64ebb3ab3cd36ce"
+  },
+  "DDL": false,
+  "paid_calls": 0,
+  "Docker_runs": 0,
+  "consumers": 0,
+  "cloud_calls": 0
+}

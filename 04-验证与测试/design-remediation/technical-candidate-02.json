@@ -1,0 +1,136 @@
+{
+  "scope": "第二技术候选，修复冻结候选复审发现；不是应用运行证明",
+  "predecessor_manifest": "technical-candidate.json",
+  "predecessor_sha256": "88d7704efe4e950dcb4407427e5dd5039e5a554636ec8a401c6091ebde09519e",
+  "counts": {
+    "schemas": 137,
+    "paths": 86,
+    "operations": 93,
+    "tables": 104,
+    "http_examples": 16,
+    "identity_vectors": 7
+  },
+  "sources": [
+    {
+      "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+      "sha256": "b7990c7c655d02e0bf2229b6197fbac6bc7d79893fb7981146891f5f6ce6dc32"
+    },
+    {
+      "path": "05-技术与设计/AI投标工作台全新系统技术方案.md",
+      "sha256": "7d088ff1912692ac3a79de13541bdcdb2b1006f83741fa4aaeadd899dc7f397b"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/RAG与评分实现规约.md",
+      "sha256": "486380f19212bdfa1d9b17861c53c31f830b117daa9a40ee8f7e369c7e6816e5"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/README.md",
+      "sha256": "20f1f9cd64777379ef92ea00b562a0595485a0cdd03921cf79096d8301a9d67b"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/deploy/.env.example",
+      "sha256": "a7f9fbb224e6a902c816249513cef67f0fcadb0a3c2dd11c2c628624029922dd"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/deploy/.gitignore",
+      "sha256": "bbbf80609cf1d2384200c0eb228eba79b68facd469dc639a3a1aae1722baab31"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/deploy/compose.yaml",
+      "sha256": "38805155d0654162a05e2aab5ab0c7f5588a1dd9add406934c2f30f74f2decb9"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/deploy/init_topics.py",
+      "sha256": "bd47e25bb49b508d4d1a74091e4a87a6a46d5768323661990a2f5f8428af8cc6"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/execution-policy.json",
+      "sha256": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/http-examples.json",
+      "sha256": "665404f8f5887bc0ff177a9aeda2880a1d9511644a29c3551bcb90ce8d3f92ef"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/identity_reference.py",
+      "sha256": "b5408b4653816222b1291d34bcd0782b16644250e757d0573e404a1e9543eacf"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/retrieval-policy.json",
+      "sha256": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/review-identity-vectors.json",
+      "sha256": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/sync_openapi.py",
+      "sha256": "a32aacd76b5f5bbf5bf58f2dea7f0cda87a51683929c5e8f900e48849c957233"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/保留功能实现规约.md",
+      "sha256": "7d5bdc74aa675ac44e6162f50e6623a65260780e9b601179ee484913a1c71e60"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/接口与任务实现规约.md",
+      "sha256": "4b1443ee754ecd6b47a1c9b0aec4cf15a1126ece5591931cc42752520c61b171"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/数据与事务实现规约.md",
+      "sha256": "2849c081675930a0859e14265167e2d2a3af98ab1642bee6a706ab488ac51617"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/部署与交付手册.md",
+      "sha256": "d57a8dd0f2562cc390793f16d53b85541e45d890edd9ad2fd073debd4dd35870"
+    }
+  ],
+  "changes": [
+    "score_context_chunks uses review_inputs.as_of; frozen_at remains audit",
+    "reserve_research_call nullable identity fields compared with IS DISTINCT FROM",
+    "correctRuleSet atomic new package + manual confirmed additions + equivalent decision carryover + stale old review; explicit user rerun",
+    "manual rule provenance survives re-extraction; merge equivalent items and retain unknown applicability as explicit gap"
+  ],
+  "self_checks": [
+    "OpenAPI components sync --check",
+    "JSON Schema self validation",
+    "16 synthetic HTTP examples",
+    "7 fixed identity vector recomputations",
+    "4 invalid rule correction shapes rejected"
+  ],
+  "not_executed_here": [
+    "business correctRuleSet API",
+    "actual Kafka Worker",
+    "browser",
+    "paid model",
+    "real source verification"
+  ],
+  "independent_checks": "测试及架构师分别绑定本候选运行受影响机制与反例，不改历史证据"
+}

@@ -1,0 +1,213 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "untampered_first_cite_history_and_two_replays_remain_usable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "forged_text_self_consistent_digest_first_cite_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_text_self_consistent_digest_trace_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_text_self_consistent_digest_reference_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_text_self_consistent_digest_citation_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_text_self_consistent_digest_retrieval_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_text_self_consistent_digest_failed_use_appends_no_citation_or_fact",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_first_cite_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_trace_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_reference_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_citation_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_retrieval_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "forged_frozen_text_stale_digest_failed_use_appends_no_citation_or_fact",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unexpected_selected_field_first_cite_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "unexpected_selected_field_trace_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "unexpected_selected_field_reference_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "unexpected_selected_field_citation_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "unexpected_selected_field_retrieval_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "unexpected_selected_field_failed_use_appends_no_citation_or_fact",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "duplicate_selected_unit_first_cite_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "duplicate_selected_unit_trace_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "duplicate_selected_unit_reference_history_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "duplicate_selected_unit_citation_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "duplicate_selected_unit_retrieval_replay_rejects_persisted_invalid_supply",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "code": "KNOWLEDGE_TRACE_INVALID"
+      }
+    },
+    {
+      "name": "duplicate_selected_unit_failed_use_appends_no_citation_or_fact",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "malformed_trace_fixture_is_still_immutable_without_trigger_bypass",
+      "passed": false,
+      "observation": null
+    }
+  ],
+  "scope": "Own synthetic nonowner PG setup and actual standalone knowledge router ASGI; explicit malformed immutable trace INSERT fixture by API-role, not a public HTTP injection claim. Explicit synthetic vectors/index and memory original objects.",
+  "paid_calls": 0,
+  "external_model_calls": 0,
+  "object_network_requests": 0,
+  "kafka_consumers_started": 0,
+  "target_bid_id": "d5c369d7-074c-4e55-9e86-3ddc41ad8632",
+  "origin_bid_id": "7e200804-4348-4c85-a475-478d8955bd4f",
+  "knowledge_id": "ad4e2b44-50eb-4468-b31e-62cced5a75f9",
+  "good_trace_id": "04ae4bb5-0028-47dc-a876-2db7ae3e4d9f",
+  "bad_trace_ids": [
+    "a6c4d295-15f4-4ee1-bc22-2ad1c2bb7abb",
+    "ff33f7d4-6813-4748-ab9f-b3bcd8d0eae4",
+    "ce8685cc-a659-4b82-8b41-92daa21b8689",
+    "cb55c9b0-d5f8-4bdd-9da2-c8d9c1c82286"
+  ],
+  "api_login": "twb_checks_combined_delivery01_54ae4928_api",
+  "probe_sha256": "560f28f6e4ca39c12150707220c8d4bba6ffaec22f919686eca8fe93c8429338",
+  "runtime_manifest_sha256": "8f6d08a6373aa8c9018ae7bbe139cb7b2d63ea7d9a1c6539e4135b6013bcf42c"
+}

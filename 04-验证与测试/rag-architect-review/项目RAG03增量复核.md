@@ -1,0 +1,29 @@
+# 项目RAG03增量架构复核
+
+结论：项目检索新API仍有1项来源资格阻塞，须修正后复核；不能把普通READ COMMITTED下机制通过推广为最终通过。知识RAG、既有索引发布、RAG02历史证据分别保留。
+
+输入为rag-development-checks/candidate-03/candidate.json，SHA256 `b869f52da0ce31d56b48fe2ae51acd4a5aecbc63dbb94a8e08e45e4eadd7caae`。逐一核验32冻结源并从副本加载rag_routes/search/repository/indexing/source_effectivity；源效力helper摘要acdab0c7…，事实与规则helper亦是该候选冻结依赖。主应用路由集成仅观察并记录main摘要，不以当前主应用代替全部冻结实现。
+
+## RAG03-RR01：最终提交在REPEATABLE READ旧快照下可发布已撤回来源
+
+优先级P1，阻塞本次新项目检索API最终放行。位置：冻结apps/api/rag_routes.py:76（重放入口，78行图锁）及163（最终事务）；对照packages/rag/repository.py:330的assert_current_sources已明确要求READ COMMITTED，新的分阶段API未复用该事务限制。
+
+触发场景：API LOGIN默认事务隔离为REPEATABLE READ。读取阶段明确用RR只读本来合理，但最终写事务也继承了默认RR；最终首先锁bid取得快照，随后等待90127图锁。若另一个合法RC事务此时持图锁撤回原件root并提交，最终API拿到图锁后仍按撤回前快照读取source_heads及eligible_chunks，随后提交Command、trace和citation。事务图锁只能排序，不能刷新RR快照。
+
+独立最小反例在全新隔离PG中给专用API测试角色设置default_transaction_isolation=repeatable read；业务均非owner。查询rerank结束后，另一RC API事务取90127、将稳定原件root置withdrawn；监控pg_locks确认最终请求确实等待该锁后才提交撤回。实际结果：root当前withdrawn，HTTP200仍返回1命中，新增1trace。证据candidate03-RR-counterexample.json、candidate03-RR-junit.xml；该用例通过表示反例复现，绝非产品通过。未改生产配置或现有环境。
+
+建议：对所有最终新结果发布及重放入口显式设定／验证READ COMMITTED。重放入口之前已查询Command，不能在事务已开始读取后晚改隔离；可在连接首次语句前设定，或在既有RC检查helper中拒绝不满足的连接。初始只读快照仍可RR。验收应保留RC正常流程，同时本反例要拒绝或在RC新快照看到撤回并返回409、无新增Command/trace/citation；同键重放也不能读取旧快照绕过资格。
+
+## 已有实证有效范围
+
+默认RC下独立临时PG＋真实同源ASGI＋显式合成loopback HTTP共3项通过：原完整祖先head变化仍eligible时旧键409；模型HTTP阶段所有已观察请求PG PID已关闭；同键两并发唯一trace/citation；material revision在embed期变化拒绝、effectivity在rerank期变化拒绝、结束证据排除后无命中、history原文可查带提示；另追加current_body_id在embed期变空的独立delta，409且不留额外Command/trace。原候选中的“实际BGE”测试在本次明确换为合成HTTP服务，不冒称真实BGE推理。
+
+静态确认：DenseHttp构造、embedding、lexical、rerank均在新endpoint的connection块外；晚Command避免远端持唯一键锁。control绑定current_body/current_material/current_rule_set/material_revision及完整效力审计ID；stored原范围和完整ancestor manifest在最终／重放重新核验。allowed MATERIALIZED CTE先剔除ended/pending证据后再向量／词法／重排，正式评分上下文不开放。
+
+边界：沿用indexing.prepare_index:54与tasks.compute在读取连接内执行tokenizer.offsets／lexical.lexemes，没有图锁／fenced发布锁，但仍保持数据库连接。新endpoint零连接跨模型结论不覆盖索引整链；低级repository.retrieve亦不是本次新API入口，不能从该函数存在推定新API仍持连接。
+
+## 验证诚实范围
+
+所有自有场景使用隔离PG17+pgvector、非owner LOGIN、合成SQL parse/evidence和合成1024单位向量／字符tokenizer／零分重排的真实loopback HTTP；不是实际PDF解析、BGE质量、收费生成或外部OSS。本轮未启任何消费者、未读私有配置、未发外部调用。真实BGE03开发证据和RAG02历史真实OSS/PDF各自保留，不能由本轮替代；业务召回质量、真实材料、前端、生产容量及正式评分资格未验证。
+
+复核索引和脚本摘要在candidate03-review-record.json；原候选、历史02报告和失败证据未覆盖。

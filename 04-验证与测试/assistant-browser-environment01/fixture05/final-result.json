@@ -1,0 +1,60 @@
+{
+  "completed_at": "2026-10-17T03:30:28.037615+00:00",
+  "facility_candidate_sha256": "c3e9fb43c4b82513e20e5826d3a0105a598a281bccedeb684d4950602bd118e7",
+  "product_candidate_sha256": "4f91d6aafcc397e89c19acbf626631853663a5c53e8ed95db300bc802856d650",
+  "fixture_files_verified": 12,
+  "product_sources_verified": 317,
+  "roles": {
+    "api": {
+      "pid": 2888579,
+      "uid": 1000,
+      "single_dsn": true,
+      "provider_key_present": false,
+      "cloud_credentials_present": false,
+      "loaded_modules": 135,
+      "runtime_root": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate05/runtime",
+      "fixture_root": "/workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime"
+    },
+    "worker": {
+      "pid": 2888544,
+      "uid": 1000,
+      "single_dsn": true,
+      "provider_key_present": false,
+      "cloud_credentials_present": false,
+      "loaded_modules": 40,
+      "runtime_root": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate05/runtime",
+      "fixture_root": "/workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime"
+    },
+    "publisher": {
+      "pid": 2888527,
+      "uid": 1000,
+      "single_dsn": true,
+      "provider_key_present": false,
+      "cloud_credentials_present": false,
+      "loaded_modules": 38,
+      "runtime_root": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate05/runtime",
+      "fixture_root": "/workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime"
+    }
+  },
+  "cold_readback": "passed",
+  "old_terminal_jobs_preserved": 10,
+  "old_executed_actions_preserved": 2,
+  "new_mock_jobs": 1,
+  "new_task_template_saved": 1,
+  "new_task_runs": 0,
+  "task05_delta_groups_passed": 2,
+  "http_actual_json_equal": true,
+  "actual_file_sha256": "4af4b5d611539485be74aeed8b98f07d95fb4bc4e9c16572a781f219e5877ae2",
+  "real_provider_attempts": 0,
+  "kafka_delivery_accepted": false,
+  "native_oss_accepted": false,
+  "control": "hold",
+  "probe_source_sha256": "9a1496e59b7c2bda27ba745eb843ced7da75d89f664a1266991d614241d386aa",
+  "probe_quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed; test asserts B101 excluded"
+  },
+  "browser_must_start_only_after_handoff": true
+}

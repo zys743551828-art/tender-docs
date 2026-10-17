@@ -1,0 +1,78 @@
+{
+  "status": "pure_wrapper_boundary_passed_not_actual_api_restore",
+  "cases": [
+    "old_project_mutation_blocked_before_downstream",
+    "uploads_blocked_before_downstream",
+    "old_operation_read_not_a_resume_entry",
+    "create_without_key_refused",
+    "extra_field_cannot_enable_auto_review",
+    "ambiguous_duplicate_key_refused",
+    "oversized_body_refused_before_downstream",
+    "first_success_binds_one_uuid",
+    "new_command_cannot_create_second_project",
+    "bound_project_settings_still_exact_allowlist",
+    "downstream_500_remains_uncertain",
+    "unknown_outcome_cannot_be_retried_with_new_key",
+    "api_environment_no_inherited_provider_or_owner",
+    "foreign_credentials_rejected_by_child_allowlist",
+    "no_external_database_or_subprocess_attempts"
+  ],
+  "loaded_inputs": [
+    {
+      "module": "deploy.application_recovery",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/__init__.py",
+      "sha256": "e4d465414abbe571ccc96c65d27f7ab0e4352ad53dbfd876cdd4e2c3eefa92d5"
+    },
+    {
+      "module": "deploy.application_recovery.application",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/application.py",
+      "sha256": "fad526efb5819653cd210d7b00924210dc5a2193948cd5fafbbfd4edea6901ec"
+    },
+    {
+      "module": "deploy.application_recovery.archive",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/archive.py",
+      "sha256": "47b1810034a6e4f205df7379dc699a9a92b7fe131e38842dde5a300e820f3ea6"
+    },
+    {
+      "module": "deploy.application_recovery.binding",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/binding.py",
+      "sha256": "7bef1c064ca49b9fa1d7230757dcf23bce6a015a093edff3805f3c4226a43a7d"
+    },
+    {
+      "module": "deploy.application_recovery.cluster",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/cluster.py",
+      "sha256": "23d9d55c03c4e1ad2f1488407a9a139949d6e4a9f43195ff1c6cb509e9462713"
+    },
+    {
+      "module": "deploy.application_recovery.definition_equivalence",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/definition_equivalence.py",
+      "sha256": "1581e1b04c75bf1c5225c893a153aabae7320e5002ddcbc640fd6127d916dcca"
+    },
+    {
+      "module": "deploy.application_recovery.security",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/frozen-inputs/deploy/application_recovery/security.py",
+      "sha256": "dd29109059060f463fbe9a69264bc9b0472bc2d0659baa3cdc536816d8d7fb8f"
+    },
+    {
+      "module": "deploy.backups.generic",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/generic.py",
+      "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f"
+    },
+    {
+      "module": "deploy.backups.run",
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-05/observed-inputs/deploy/backups/run.py",
+      "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604"
+    }
+  ],
+  "synthetic_downstream": true,
+  "real_pg": false,
+  "real_api": false,
+  "real_docker": false,
+  "cloud_calls": 0,
+  "provider_calls": 0,
+  "script_sha256": "1e28d4eb3fee6839483eb8d34eaefbd00483a8b725e18b2b565688c6f6adf5fc",
+  "limits": [
+    "Authentication/CSRF delegated to actual frozen API remains pending real target",
+    "No live restore, table readback, native object PUT/GET or recovery timing executed"
+  ]
+}

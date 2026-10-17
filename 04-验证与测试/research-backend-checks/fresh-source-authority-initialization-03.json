@@ -1,0 +1,62 @@
+{
+  "observed_at": "2026-10-16T18:59:08.353353+00:00",
+  "database": "tender_checks_research03",
+  "scope": "Fresh isolated schema initialization and four nonowner LOGIN capability checks only; not application or research-effect acceptance",
+  "business_configuration_owner_removed": true,
+  "business_file_mode": "0o600",
+  "roles": {
+    "api": {
+      "nonowner": true,
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "preview_sample_select": true,
+      "preview_sample_insert": true,
+      "scope_lock_execute": false
+    },
+    "worker": {
+      "nonowner": true,
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "preview_sample_select": false,
+      "preview_sample_insert": false,
+      "scope_lock_execute": false
+    },
+    "research_worker": {
+      "nonowner": true,
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "preview_sample_select": false,
+      "preview_sample_insert": false,
+      "scope_lock_execute": true
+    },
+    "score_read": {
+      "nonowner": true,
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "preview_sample_select": false,
+      "preview_sample_insert": false,
+      "scope_lock_execute": false
+    }
+  },
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/deploy/create_check_environment.py",
+      "sha256": "9eb1d7ee1c1d6b1900b172e6b9f5e21144966b868087c11a13ca45519ba380d5"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    }
+  ],
+  "old_release_modified": false,
+  "kafka_processes_started": 0,
+  "paid_calls": 0
+}

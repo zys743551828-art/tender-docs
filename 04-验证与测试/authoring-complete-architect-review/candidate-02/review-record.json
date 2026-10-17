@@ -1,0 +1,59 @@
+{
+  "candidate": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/candidate.json",
+  "candidate_sha256": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9",
+  "scope": "PAGE generated_text/2 build freeze/compute/publish integration structural delta, not full TREE/PLAN or complete A2 implementation review",
+  "own_sources": 31,
+  "dependencies": 304,
+  "sources_verified_before_after": 335,
+  "same_PAGE_sources": [
+    {
+      "path": "packages/authoring/generated_docx.py",
+      "sha256": "c3aaa4e73f7a63567bd2ee515c4494b6df280b3c2c6b618786b0308b964bff30"
+    },
+    {
+      "path": "packages/authoring/generated_verification.py",
+      "sha256": "ba1251007aa7ecc4d609d33881c502666fc738ae6f71de820c73310afc6bdfcd"
+    },
+    {
+      "path": "packages/authoring/generated_renderer.py",
+      "sha256": "98018f64bdf848d31059562a2cf63f6a1af8a4539bd12301bde284580459ef24"
+    },
+    {
+      "path": "packages/authoring/structured_docx.py",
+      "sha256": "7e3406c2dadefa265695bee5906489354309b4b5c3d6a4ae7595221352a7b4fd"
+    },
+    {
+      "path": "tests/test_authoring_generated.py",
+      "sha256": "1a28c2b96db7c6d4ea7d80f95ca6310e97262c8efaea6794a45099d9ce4ab77a"
+    }
+  ],
+  "actual_contract": {
+    "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/actual.openapi.json",
+    "sha256": "d9f95834559640aed7f95a632cb00d998306f40e3084fab29ffb3c1c3271d240"
+  },
+  "handoff": {
+    "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/HANDOFF.md",
+    "sha256": "013cd707f25bb866bd4d8cce10967d681170bf70a0c8e67e7f3bb5263d399748"
+  },
+  "independent_evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-architect-review/candidate-02/probe.py",
+      "sha256": "1daf8a46e50ce0ad7b5d661973b25e338f7246f77282a1e5228dcbe9a1e1ef6d"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-architect-review/candidate-02/result.json",
+      "sha256": "b3f8136434fbf920b68dc9ff4dfcf4abee863ec556fd1e7e0d860c349083a159"
+    }
+  ],
+  "conclusion": "No new blocker in reviewed structural delta and retained artifact readback; new PG/engine/Docker execution belongs to separate QA",
+  "not_run": [
+    "80 developer tests",
+    "new PG",
+    "new Docker",
+    "storage/provider",
+    "model",
+    "Kafka",
+    "DDL",
+    "live app changes"
+  ]
+}

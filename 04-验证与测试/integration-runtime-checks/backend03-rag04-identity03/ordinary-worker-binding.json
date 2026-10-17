@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-16T19:36:20.935537+00:00",
+  "candidate_sha256": "90ef280de20c17877715cc4522ce36ecd53dd26c0da0acbe2d8ec791fbcda232",
+  "workers": [
+    {
+      "pid": 2372403,
+      "uid": 1000,
+      "mode": "reconcile",
+      "runtime_ancestry_verified": true
+    },
+    {
+      "pid": 2372481,
+      "uid": 1000,
+      "mode": "consume",
+      "runtime_ancestry_verified": true
+    },
+    {
+      "pid": 2372543,
+      "uid": 1000,
+      "mode": "consume-export",
+      "runtime_ancestry_verified": true
+    },
+    {
+      "pid": 2372551,
+      "uid": 1000,
+      "mode": "relay",
+      "runtime_ancestry_verified": true
+    }
+  ],
+  "paid_modes_started": 0,
+  "scope": "Same immutable 172-source runtime as API8802; startup/process binding only, not task end-to-end acceptance"
+}

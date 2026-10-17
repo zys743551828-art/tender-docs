@@ -1,0 +1,31 @@
+{
+  "status": "confirmed_scoped_user_obstruction",
+  "priority": "P2",
+  "candidate_sha256": "4de90e779708d21d2e335845f9fdf174a643cfbeaa0f61a5e71b53a88b28a79f",
+  "original_page": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/fixture-inputs/ratio.pdf",
+    "sha256": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7"
+  },
+  "verbatim": "计算过程与基准价不取整；价格分限制0至40分。",
+  "expected": "A complete no-intermediate-rounding lowest_valid_ratio original remains registerable with twelve method-specific real evidence fields and zero representational coefficient slots.",
+  "actual": {
+    "http_status": 422,
+    "code": "PRICING_FORMULA_UNSUPPORTED"
+  },
+  "cause": "validate_terms unsupported baseline-rounding regex also matches explicit negative 不取整",
+  "execution": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/execution/result.json",
+    "sha256": "ccdf7b5863cb5f1ca83a1139c8b505fb843ae74645c656ef0830c4480fd6eab2",
+    "script_sha256": "a4a41abf105e886290ab156095d16afcb2983e68f94c414ce67cc66127b02a77"
+  },
+  "unchanged_formula_delta_validation": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution/result.json",
+    "sha256": "c578e2006653996ab737ddbf36df679bca937f847e0b48489303c413327ee140",
+    "passed_checks": 26,
+    "fixture_manifest_sha256": "a3acf74f7948c2c7e24f4d39e2125bd8c0d5324aa07a8609ac966e3e43519bd3"
+  },
+  "paid_calls": 0,
+  "oss_requests": 0,
+  "consumers_started": 0,
+  "source_modified": false
+}

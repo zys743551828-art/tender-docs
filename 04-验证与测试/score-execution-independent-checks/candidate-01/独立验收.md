@@ -1,0 +1,18 @@
+# 评分软件01独立验收
+
+结论：本次定向软件机制验收通过，未发现新增阻塞；没有开放真实付费执行或正式模型资格。候选 `32893b6df6fe1d6f0b5485bb3191aa8b4987fee8d690d4062b842d206ba3f9e7`，12份源码/98观察依赖精确覆盖到388份独立执行闭包，清单 `274ef817c125dec734f1ff48a5661ed58cc199b4c5c5780ef0009a9e93e90347` 执行前后不变。实际独立11操作导出与冻结契约一致，SHA `7560f642b89a1231ddd2eb9ea137a3003662b9908e5f9ddab9faaeba8aa64810`。历史证明、输入、评分及影子前置路由只在本地测试组合中显式注册，没有把未挂载main或共享live写成已部署。
+
+使用新的score_execution02机制库：实际普通API/Worker及用途LOGIN，真实会话ASGI，明确Memory对象端口。两页正文和完整招标由独立夹具实际上传、Worker解析；两个评分项是明确人工SQL夹具，有原页30分依据。prepared_rule_set_id为显式测试前置，再由真实freeze_intent持久化实际review根，不把手工夹具声称模型抽取完整或真实业务判断。SQL F为 `28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be`，实际21函数/8表目录另存，未DDL/修权/补旧E库。
+
+12项定向检查支持以下结论：
+
+- 当前review和已封口HistoricalInput均可形成完整输入。每项3次独立判断，两项共6次硬Mock；每个请求都包含第二物理页和完整正文，同项三次messages一致、无前次答案或官方结果字段。实际结果每项valid_replicates=3。相同完整内容的新input/job通过6条受控成功binding复用，0新发送/0新calls；历史等价分支也可复用已核成功，不另造费用。
+- unknown只发1次、保留预留并暂停；resume、等价新input及包含新必要项的扩大范围都不能绕过未知费用。没有隐含nonce补发。
+- partial/conflict实际服务器root被拒且不stage评分输入。已冻结后晚加规则、仍published但权威head修订变化、自造root内容及自重算摘要元数据，均不能登记为原review的有效范围。
+- 关闭/归档项目的current分支拒绝；已确认历史输入可形成独立研究产物，原正文、current_review、phase和archived_at逐项不变。取消或来源撤回发生在硬Mock请求期间，原call真实usage与估价仍结算succeeded，但旧结果不发布，均只发1次。
+- 独立评分子进程实际六类原表/标签/证明/根/账本越权42501，RR claim拒绝；没有显式transport时在claim前拒绝，job保持queued。子进程只加载单用途profile，未承接API/桶/真实provider凭据。
+- 影子同结果快照准确绑定同job、score_result_digest和model，保存/幂等重放不增加评分调用，只存1份。shadow路由停用后重放409，历史GET保持原快照不变，数值预测仍null。影子前置使用冻结开发生成器仅作五个新合成样本夹具、15次硬Mock研究判断和真实单用途CPU训练；没有沿用开发通过结论或转成真实模型资格。
+
+保留的非通过回合：影子生成器默认Cookie与我逐请求Cookie不同造成前置401无ETag，仅修测试Cookie jar；其后默认TPM的真实本地节流等待于134.96秒由我精确中断自有pytest，栈、XML和脚本保留。后续仅该硬Mock前置进程显式配置合法100RPM/100MTPM，13.91秒完成；不改持久设置，不把默认吞吐写成通过，也没有供应商重试。
+
+0真实模型/云对象、0Kafka/消费者/relay、0DDL/修权/共享服务变更。技术总满分、正式资格及数值预测仍不可用；真实数据真实性、模型精度、正式三次评分效果、训练留出资格、浏览器及生产另验。完整执行脚本、用途子进程、原始观测、源码摘要和目录快照见final-result.json。

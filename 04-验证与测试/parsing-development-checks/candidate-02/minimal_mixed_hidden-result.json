@@ -1,0 +1,59 @@
+{
+  "protocol_version": 1,
+  "source_digest": "c1bd2c1de22e835ae9ecd41d4132860d47b60939d3a3a4050c4e8e7aa801249f",
+  "parser_digest": "a7678861fc3b487a4096eaf88f3bbf24e74d49ac03bf5b3dacadb87f2d4b915d",
+  "config_digest": "a30fb554073b6b296440951a846285896f0a7016ec6e90c47b3dadcd62e06fa5",
+  "profile": "pdfium-pdfplumber-tesseract-cpu-v1",
+  "page_count": 1,
+  "pages": [
+    {
+      "physical_page": 1,
+      "width": 595.0,
+      "height": 842.0,
+      "rotation": 0,
+      "text": "VISIBLE BODY: duration 90 days.",
+      "blocks": [
+        {
+          "kind": "text",
+          "text_content": "VISIBLE BODY: duration 90 days.",
+          "bbox": [
+            60.471869328493646,
+            85.67592988456606,
+            390.90744101633396,
+            106.5549380076956
+          ],
+          "confidence": 0.9623948519999999,
+          "ordinal": 0,
+          "physical_page": 1,
+          "digest": "0290617d456bc868aa78ba948928fa90f5771ebe698b9b31fd7bf06bad122762",
+          "method": "tesseract_ocr",
+          "id": "9323a135801b2f57458ca5ef052c4c79f62c9b36dd8c9e7a2c32d5e2b5af38a2",
+          "chapter_path": []
+        }
+      ],
+      "tables": [],
+      "method": "tesseract_ocr",
+      "quality": "partial",
+      "gaps": [
+        "NONVISIBLE_TEXT_LAYER_EXCLUDED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ],
+      "ink_fraction": 0.0036173493100887734,
+      "render_digest": "59febf4d1ca7f918eb158c0cd0f1c05198e4e2078d9b17c08f144e592309af8c"
+    }
+  ],
+  "chapters": [],
+  "coverage": "partial",
+  "gaps": [
+    {
+      "physical_page": 1,
+      "code": "NONVISIBLE_TEXT_LAYER_EXCLUDED"
+    },
+    {
+      "physical_page": 1,
+      "code": "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+    }
+  ],
+  "coordinate_system": "rotated_page_top_left_points",
+  "quality_benchmark": "not_business_validated"
+}

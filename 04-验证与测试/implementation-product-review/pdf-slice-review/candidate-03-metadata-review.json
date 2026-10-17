@@ -1,0 +1,57 @@
+{
+  "scope": "后端02→03仅metadata与影响范围产品增量复核",
+  "decision": "产品通过范围不变；T0+PDF资料切片产品阻塞0",
+  "backend_candidate_03": {
+    "path": "/workspace/tender-workbench/apps/api/backend-candidate-03.json",
+    "sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+    "source_files_checked": 21
+  },
+  "predecessor_02": {
+    "path": "/workspace/tender-workbench/apps/api/backend-candidate-02.json",
+    "sha256": "b5307a48ca9b0531e2f482e28646b2d4adbcd9bdf5596b35af1dc23f5afb8bd7"
+  },
+  "preserved_actual_evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/implementation-product-review/pdf-slice-review/candidate-binding.json",
+      "sha256": "69062dd5427c50cee022f3ec60e17a82a48c8d001beb0c3610f9be7d8576c75c"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/implementation-product-review/pdf-slice-review/delta-result.json",
+      "sha256": "0ab5400b6b75ec1dc60a6ab92f0c6f46a6a7f1f0cec3ad0d8dfef4e11b834cff"
+    }
+  ],
+  "frontend_unchanged": {
+    "manifest": "/workspace/tender-workbench/apps/web/qa-previews/frontend-candidate.json",
+    "sha256": "7bef8d1038ed4da77776f2301a6694842df0efcc6bcf36efd6462df7919872b9",
+    "source_tree_sha256": "38814551decdbe081c0d2a9e022809feeff81207a46216b8b3f1ee54f9e1710e",
+    "source_files_checked": 25
+  },
+  "actual_api_identical": {
+    "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+    "checked_paths": [
+      "/workspace/tender-workbench/apps/api/implemented.openapi-02.json",
+      "/workspace/tender-workbench/apps/api/implemented.openapi-03.json",
+      "/workspace/tender-workbench/packages/contracts/implemented.openapi.json"
+    ]
+  },
+  "backend_source_delta": {
+    "changed": [
+      "apps/api/README.md",
+      "apps/api/main.py",
+      "apps/api/views.py"
+    ],
+    "added": [
+      "tests/test_cancel_integration.py"
+    ],
+    "removed": []
+  },
+  "product_impact": "GETOperation/取消既有条件头的技术闭合；资料入库、历史、原页、下载及页面交互无新增产品规则，本片尚未交付取消UI或完整A1",
+  "software_runs_in_this_delta": 0,
+  "old_runtime_hashes_rewritten": false,
+  "limits": [
+    "本次未重跑UI或后端测试",
+    "02真实浏览器运行仍绑定02来源，不重标03运行",
+    "取消事务与条件头技术正确性由独立测试和架构师验收",
+    "不扩为完整A1、RAG、评分预测、真人或生产通过"
+  ]
+}

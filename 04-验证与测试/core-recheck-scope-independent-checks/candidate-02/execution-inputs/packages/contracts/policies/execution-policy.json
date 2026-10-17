@@ -1,0 +1,78 @@
+{
+  "scope": "固定任务执行目标协议，尚未接入产品",
+  "operation_transitions": {
+    "queued": [
+      "running",
+      "cancel_requested",
+      "failed"
+    ],
+    "running": [
+      "succeeded",
+      "failed",
+      "cancel_requested"
+    ],
+    "cancel_requested": [
+      "cancelled"
+    ],
+    "succeeded": [],
+    "failed": [],
+    "cancelled": []
+  },
+  "step_identity": [
+    "operation_id",
+    "step_key",
+    "input_digest"
+  ],
+  "external_attempt_budget": 3,
+  "heartbeat_seconds": 30,
+  "stale_seconds": 120,
+  "publish_requires": [
+    "current_fence",
+    "operation_not_cancel_requested",
+    "matching_input_digest",
+    "sources_still_valid"
+  ],
+  "message_infrastructure": "kafka",
+  "worker_runtime": "python",
+  "python_client": "confluent-kafka",
+  "topic_bindings": {
+    "document": {
+      "topic": "tender.task.document.v1",
+      "consumer_group": "tender-document-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "review": {
+      "topic": "tender.task.review.v1",
+      "consumer_group": "tender-review-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "export": {
+      "topic": "tender.task.export.v1",
+      "consumer_group": "tender-export-worker-v1",
+      "partition_key": "operation_id:step_key"
+    },
+    "research": {
+      "topic": "tender.task.research.v1",
+      "consumer_group": "tender-research-worker-v1",
+      "partition_key": "operation_id:step_key"
+    }
+  },
+  "domain_event_topic": "tender.domain.events.v1",
+  "dead_letter_topic": "tender.task.dead-letter.v1",
+  "producer": {
+    "enable.idempotence": true,
+    "acks": "all"
+  },
+  "consumer": {
+    "enable.auto.commit": false,
+    "enable.auto.offset.store": false,
+    "max_inflight_per_partition": 1,
+    "offset_commit_after": [
+      "domain_commit",
+      "durable_retry_handoff",
+      "durable_failure_handoff"
+    ]
+  },
+  "retry_store": "postgresql_outbox.available_at",
+  "production_recovery_validated": false
+}

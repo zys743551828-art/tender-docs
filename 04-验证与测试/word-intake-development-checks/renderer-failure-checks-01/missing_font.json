@@ -1,0 +1,43 @@
+{
+  "state": "succeeded",
+  "coverage": "partial",
+  "conversion_attempted": true,
+  "error_code": null,
+  "retryable": false,
+  "gaps": [
+    "WORD_FONT_SUBSTITUTED"
+  ],
+  "chain": {
+    "source_docx_digest": "7ba74bd87831b65915c4547114aae1e61146f57e0993b0dc8824f9b6e6a8620f",
+    "pdf_digest": "7880f80540c86c6a813e42d182aef6b4035291c43c7223f19405480d3f2f34cb",
+    "profile_digest": "9b2a5009b78c3dffc077ba2b00292724521641e71e2d385c6fafadff0f7c6126",
+    "renderer_digest": "b37fc2930a1628eadd2830f77317929ed5660f842099d3754827248472faecc5",
+    "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+    "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+    "page_count": 1
+  },
+  "isolation": {
+    "local_image_pinned": true,
+    "network_none": true,
+    "ipc_none": true,
+    "pid_private": true,
+    "uts_private": true,
+    "nonroot": true,
+    "read_only": true,
+    "not_privileged": true,
+    "capabilities_dropped": true,
+    "no_new_privileges": true,
+    "memory_limited": true,
+    "cpu_limited": true,
+    "pids_limited": true,
+    "no_daemon_document_logs": true,
+    "clean_environment": true,
+    "all_bind_mounts_readonly": true,
+    "exact_allowlisted_bind_mounts": true,
+    "no_anonymous_persistent_volumes": true,
+    "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+    "no_docker_socket_mount": true,
+    "bounded_tmpfs_output": true,
+    "own_job_cleanup_confirmed": true
+  }
+}

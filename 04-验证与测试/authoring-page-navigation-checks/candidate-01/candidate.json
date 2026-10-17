@@ -1,0 +1,71 @@
+{
+  "candidate": "authoring-page-navigation-01",
+  "created_at": "2026-10-17T04:06:34.901632+00:00",
+  "scope": "Independent navigation/TOC fixed-point mechanism on actual small PDF fixtures; no new rich DOCX render chain",
+  "sources": [
+    {
+      "path": "packages/authoring/page_navigation.py",
+      "sha256": "1413dcbd1de59db949c602da9f913fe9b31ece0f2976fc47c678baecc3765054",
+      "frozen_path": "frozen-inputs/packages/authoring/page_navigation.py"
+    },
+    {
+      "path": "packages/authoring/PAGE_NAVIGATION.md",
+      "sha256": "a4ed7e8263b9f812b5b32ddc0e36c4be1c8706696a99932b1c4e9d53d377ef24",
+      "frozen_path": "frozen-inputs/packages/authoring/PAGE_NAVIGATION.md"
+    },
+    {
+      "path": "tests/test_authoring_page_navigation.py",
+      "sha256": "e9b49260f148ec40e279106a5196ccb327ced21cf417bb5b28071b41be35c22e",
+      "frozen_path": "frozen-inputs/tests/test_authoring_page_navigation.py"
+    }
+  ],
+  "checks": {
+    "pytest_passed": 16,
+    "failed": 0,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed; 1 source",
+    "bandit_findings": 0,
+    "docker_started": false,
+    "model_requests": 0,
+    "cloud_or_sql_requests": 0
+  },
+  "evidence": [
+    {
+      "path": "actual-small-pdf-round-1.pdf",
+      "sha256": "67974b2ee96b22ce15928dcd73b5048db54eb9e956bfbe286a6c5bc922161cc2"
+    },
+    {
+      "path": "actual-small-pdf-round-2.pdf",
+      "sha256": "7f68390a5d45c7ea7bc21a6bb2d06ea3f58225b01d97e6c4dc91419a07f9c295"
+    },
+    {
+      "path": "actual-small-pdf-round-3.pdf",
+      "sha256": "3dbfe0f8705e6e42166fbc444b9fed569954d046f77f8e9d20e8236e3f3780e1"
+    },
+    {
+      "path": "bandit.json",
+      "sha256": "e32d4fca4aa438c03a78c9ef59026ebc2615e5aae677480390189aa8115788fa"
+    },
+    {
+      "path": "result.xml",
+      "sha256": "a692309f04f3c6fe859f22c6d64517c12ed2c983beb14b0c70c77522e00b72cf"
+    },
+    {
+      "path": "three-round-proof.json",
+      "sha256": "291dc5feb5d52a757062886716a2c193ddcebe2d9a9111ea277a3b7a615bdfdf"
+    },
+    {
+      "path": "word03-unchanged.json",
+      "sha256": "eeaf568832aada1ce1e85bb8968308c40f2357374395bbb5fa4a56529143737c"
+    }
+  ],
+  "pending": [
+    "architecture/independent QA review",
+    "real rich DOCX generation/renderer receipt binding and approved resource window",
+    "actual LO directDest/namedDest/multi-rectangle behavior; GoTo action remains unsupported",
+    "full rich composition/browser/M1 acceptance",
+    "continuous-layout exact chapter end pages",
+    "general PDF security/visual/OCR qualification (not the module scope)"
+  ]
+}

@@ -1,0 +1,11 @@
+# Word实现阻塞审查
+
+结论：候选01有W01阻塞，先修正预检覆盖后再复审；没有授予真实转换组件通过。候选SHA256 `199d31e0bde9a9cccb8f9893127e7962ead4b035c3bd8e045327474bd8bbf98a`，12份冻结源逐字节已核对。已审SQL380a58…的收据权限结论仍仅属于数据库层，不被此问题改判为无效。
+
+**W01：按文件后缀决定XML检查，漏掉真实XML类型的OPC部分。** inspection.py 的is_xml分支只识别区分大小写的.xml、.rels及固定Content_Types名，而OOXML部分通过Content_Types Override声明类型、通过关系指向，不能靠后缀确定是否承载XML。独立构造三个合成DOCX：正文以headerReference关联header部分，Content_Types明确声明header+xml，同一段DDEAUTO字段仅将part改名为header1.xml、header1.XML、header1.dat。小写正常名称被识别为EXTERNAL_OR_DYNAMIC_FIELD并禁止转换；后两种却conversion_eligible=true、active_content_gaps为空，连复杂header范围也未标出。
+
+这绕过“活动／动态内容不进入转换器”的本片明确策略，并漏掉XML字节／节点总预算及复杂布局发现。它不是已经证明的命令执行或容器逃逸；本轮没有执行字段、LibreOffice或Docker。现有network-none、非root和只读绑定降低转换风险，但不能替代预检策略本身。
+
+最小修复应由受限Content_Types与relationship解析识别所有实际XML／XML关系部分，再对这些部分统一执行编码、DTD／实体、字节／节点／深度、活动字段及布局检查；对未支持的XML类型／命名可保守拒绝。只把后缀casefold不够，header1.dat反例仍存在。验收必须覆盖原三变体、ContentType Default／Override、任意命名的XML关系／页眉页脚、非法或冲突声明，以及合法常规DOCX正向；不支持部分不得默默跳过后标记完整。
+
+反例脚本probe_hidden_xml.py、三个合成原件及hidden-xml-counterexample.json保留原字节；仅执行纯本地检查，零模型、对象、数据库、Docker或远端请求。开发23项及真实Docker证据未在本轮独立重跑，也不因收到记录就计为独立通过。后续复审仍需验证冻结renderer/font/options/image、真实隔离与失败清理、受限Worker发布和收据状态；主上传桥接、Kafka fencing／取消、采用／解析／RAG、浏览器和生产容量继续独立验收。

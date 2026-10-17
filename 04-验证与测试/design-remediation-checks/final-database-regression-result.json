@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "scope": "真实PG与pgvector上的建库、合成向量过滤、权限和租约；不代表真实RAG或评分效果",
+  "executed_at": "2026-10-16T13:28:30.939770+00:00",
+  "postgres_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "pgvector_version": "0.8.7",
+  "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "table_count": 104,
+  "checks": [
+    {
+      "name": "初始化 core.sql",
+      "passed": true
+    },
+    {
+      "name": "初始化 domain.sql",
+      "passed": true
+    },
+    {
+      "name": "初始化 retrieval.sql",
+      "passed": true
+    },
+    {
+      "name": "初始化 worker-functions.sql",
+      "passed": true
+    },
+    {
+      "name": "初始化 roles.sql",
+      "passed": true
+    },
+    {
+      "name": "标签、派生标签、未来、停用、禁止组及派生组均排除",
+      "passed": true
+    },
+    {
+      "name": "最相似的禁止来源不能挤入允许结果",
+      "passed": true
+    },
+    {
+      "name": "中文预分词FTS与允许集共同生效",
+      "passed": true
+    },
+    {
+      "name": "来源图循环被拒绝",
+      "passed": true
+    },
+    {
+      "name": "错误向量维度被拒绝",
+      "passed": true
+    },
+    {
+      "name": "非单位向量被拒绝",
+      "passed": true
+    },
+    {
+      "name": "评分角色只能取得冻结白名单中的合格正文",
+      "passed": true
+    },
+    {
+      "name": "评分角色不能直接读取官方结果",
+      "passed": true
+    },
+    {
+      "name": "评分角色不能直接读取聊天",
+      "passed": true
+    },
+    {
+      "name": "评分角色不能自行调用宽用途检索",
+      "passed": true
+    },
+    {
+      "name": "Outbox第一次领取一条",
+      "passed": true
+    },
+    {
+      "name": "有效租约下第二领取者不能取走",
+      "passed": true
+    },
+    {
+      "name": "Outbox错误token不能确认",
+      "passed": true
+    },
+    {
+      "name": "Outbox正确token可以续租并确认",
+      "passed": true
+    },
+    {
+      "name": "过期fence不能续租",
+      "passed": true
+    },
+    {
+      "name": "当前fence及owner可以续租",
+      "passed": true
+    },
+    {
+      "name": "成绩缺满分被拒绝",
+      "passed": true
+    },
+    {
+      "name": "真实零分与未知可分别保存",
+      "passed": true
+    },
+    {
+      "name": "停用head后既有向量不能新增可用引用",
+      "passed": true
+    },
+    {
+      "name": "不能借用其他模型的验收发布",
+      "passed": true
+    },
+    {
+      "name": "被拒绝验收不能成为业务路由",
+      "passed": true
+    },
+    {
+      "name": "回退至不可用保留路由修订",
+      "passed": true
+    }
+  ],
+  "inputs": {
+    "04-验证与测试/design-remediation-checks/final-02-worker-inputs/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "04-验证与测试/design-remediation-checks/final-02-worker-inputs/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "04-验证与测试/design-remediation-checks/final-02-worker-inputs/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "04-验证与测试/design-remediation-checks/final-02-worker-inputs/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "04-验证与测试/design-remediation-checks/final-02-worker-inputs/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "probe_sha256": "2c58dc0cd94397bb17de417779067e2076331cae1f0810b2c8fc6d0f714e1d21",
+  "real_embedding_executed": false,
+  "product_end_to_end_executed": false
+}

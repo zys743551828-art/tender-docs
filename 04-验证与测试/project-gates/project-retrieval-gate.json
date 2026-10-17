@@ -1,0 +1,40 @@
+{
+  "status": "passed_scoped_project_retrieval",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-02/candidate.json",
+    "sha256": "03cbcf424b021d91c08d398e4a482b38b957c7fa0def1c6f2be7a86bd095e101"
+  },
+  "source_count": 23,
+  "source_current_and_archive_hashes_verified": true,
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/final-candidate-02-result.json",
+      "sha256": "2cbf7c33de4da4ab99a587bd6b9100982e531c49d19d3829ef66548c2e2ce6aa"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-architect-review/candidate02-review-inputs.json",
+      "sha256": "1f5bcf951e5dd8ff378a7f8e9be27740db78214fa0f6787aefc9a044905452c9"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-architect-review/模块架构复核.md",
+      "sha256": "588e48573468e558f2c28a72c7732d6524efa2931351bddc767f5cf1a4f4ab19"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/races-candidate-02/result.json",
+      "sha256": "dac18f538c0819deefffd5fe84d259ddf2b0f502e2f3291aa78f548400961443"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/live-candidate-02-verified/result.json",
+      "sha256": "4f63a8926a66387fd3b1d2d66f4c46cdad785935c99f39687f69301cc096edc2"
+    }
+  ],
+  "scope": "本项目原件文本的实际本地BGE/词法/PG精确融合重排、权限与来源失效、引用及实际OSS PDF HTTP查证；API8802已部署相同路由",
+  "allowed": "继续A1及企业知识领域接线；当前范围可进入界面独立验收",
+  "not_granted": [
+    "企业知识跨项目检索尚未接入",
+    "业务召回/排序精度无独立标注",
+    "正式评分资格",
+    "完整评审/A2/整体项目完成或生产发布"
+  ],
+  "paid_generation_calls": 0
+}

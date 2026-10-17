@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-16T16:38:34.717415+00:00",
+  "scope": "isolated local PG/Kafka and private external profile; no business acceptance",
+  "postgres_port": 55441,
+  "kafka_port": 19095,
+  "roles": [
+    {
+      "capability": "api",
+      "nonowner_login": true
+    },
+    {
+      "capability": "worker",
+      "nonowner_login": true
+    },
+    {
+      "capability": "research_worker",
+      "nonowner_login": true
+    },
+    {
+      "capability": "score_read",
+      "nonowner_login": true
+    }
+  ],
+  "topics": [
+    {
+      "name": "tender.task.document.v1",
+      "partitions": 6
+    },
+    {
+      "name": "tender.task.review.v1",
+      "partitions": 6
+    },
+    {
+      "name": "tender.task.export.v1",
+      "partitions": 6
+    },
+    {
+      "name": "tender.task.research.v1",
+      "partitions": 6
+    },
+    {
+      "name": "tender.domain.events.v1",
+      "partitions": 6
+    },
+    {
+      "name": "tender.task.dead-letter.v1",
+      "partitions": 6
+    }
+  ],
+  "object_store_backend": "oss",
+  "object_namespace_isolated": true,
+  "bucket_configuration_mutations": 0,
+  "existing_environment_configuration_modified": false,
+  "script_sha256": "cec9779b3777f7e9e014959603e37d57a800d165e90c32358fe119e4e9c9d5a2"
+}

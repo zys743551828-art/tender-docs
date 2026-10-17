@@ -1,0 +1,1646 @@
+{
+  "candidate": "combined04-scope02-knowledge02-metrics03",
+  "created_at": "2026-10-16T20:24:02.294441+00:00",
+  "runtime_root": "/workspace/tender-docs/04-验证与测试/integration-runtime-checks/combined04-scope02-knowledge02-metrics03/runtime",
+  "lineage": [
+    {
+      "name": "main04-QA-exact",
+      "manifest": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/runtime-manifest.json",
+      "sha256": "8ac063343d784e82bdd1d6a4066a1bcc8ef03b5dcfafb23bcb1692ae86f772ec",
+      "source_count": 226
+    },
+    {
+      "name": "pricing03",
+      "manifest": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/pricing-candidate-03.json",
+      "sha256": "5679b97595cf181c2250ddc03d1abd167212975c62583ff2853793e5f2f75d84",
+      "source_count": 13
+    },
+    {
+      "name": "knowledge-rag01",
+      "manifest": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag-candidate-01.json",
+      "sha256": "4671b3d9cd24afa3429f388c76bd02d4ee88c53c0ac6869bb06976c7aff24a15",
+      "source_count": 22
+    },
+    {
+      "name": "knowledge-rag02-integrity",
+      "manifest": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag-candidate-02.json",
+      "sha256": "2a79e75949479819d3b27e689eb24b2847a32184ee2340a73857267f5859fa4a",
+      "source_count": 3
+    },
+    {
+      "name": "metrics03",
+      "manifest": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/candidate.json",
+      "sha256": "92cc733d0fb295d325c827879b81b705c8aef6ab691d298a5d4cf72a81489c46",
+      "source_count": 13
+    },
+    {
+      "name": "project-index05",
+      "manifest": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/candidate.json",
+      "sha256": "8dbb86c0203cdecc51b29c24d5d5ee91b4d2d5e066cc67ccc18b05a5396b21fb",
+      "source_count": 6
+    },
+    {
+      "name": "parse-readable01",
+      "manifest": "/workspace/tender-docs/04-验证与测试/parse-readable-development-checks/candidate-01.json",
+      "sha256": "5cb588e86ca4a5bf5827d8ba6c315c3539ec4c79c9e32d1cc468ef52fca08da2",
+      "source_count": 3
+    },
+    {
+      "name": "core-scope01",
+      "manifest": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/candidate-01.json",
+      "sha256": "71ad1d8ec7211fe49ee8d85d31a9b15c5aadf434cf34972c3569bd5b79316dbd",
+      "source_count": 6
+    },
+    {
+      "name": "core-scope02",
+      "manifest": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/candidate-02.json",
+      "sha256": "38d69b2f90f72eef4dc7345149a5c0e433cf962a0bf3a6a494433256685157d5",
+      "source_count": 3
+    }
+  ],
+  "sources": [
+    {
+      "path": "apps/api/README.md",
+      "sha256": "e98c671ccc34709f006ae08e96cc2b0a2ef405f8cb3ba803cee9032698322721",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/README.md"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/__init__.py"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "1f2f36250f2cff00c4ff891293cc2046455e8cb3049c22410c6aa7a2a694cf88",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/__main__.py"
+    },
+    {
+      "path": "apps/api/a1-candidate-01.json",
+      "sha256": "bd86798df5a661532b18d48214087c329ff572bcf680dcbba99ef25011597c94",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/a1-candidate-01.json"
+    },
+    {
+      "path": "apps/api/a1-candidate-02.json",
+      "sha256": "cf7b21da833975d49faf060fb8b4795e3872c118ecfd9b3bad32a3d82a5c63cd",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/a1-candidate-02.json"
+    },
+    {
+      "path": "apps/api/a1-ledger-candidate-01.json",
+      "sha256": "78441a80539fa76f128e6dcc56f42476edb7e5daffc3c334d328358f369a7c5f",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/a1-ledger-candidate-01.json"
+    },
+    {
+      "path": "apps/api/assistant_routes.py",
+      "sha256": "59adf76ecf0a5bb927c0d24e058d9ef4525608eb10c50dca41df720acfa653f4",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/assistant_routes.py"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/auth.py"
+    },
+    {
+      "path": "apps/api/authoring.py",
+      "sha256": "869e21439ccea3e024eccea35d5c4057181c81e59f5f1a2abdfef226b4f7d314",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/authoring.py"
+    },
+    {
+      "path": "apps/api/backend-candidate-01.json",
+      "sha256": "3c628c7f733cc9e197fdfa75301f03a3905701dbb7b51d04727f6ca3401e53e0",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/backend-candidate-01.json"
+    },
+    {
+      "path": "apps/api/backend-candidate-02.json",
+      "sha256": "b5307a48ca9b0531e2f482e28646b2d4adbcd9bdf5596b35af1dc23f5afb8bd7",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/backend-candidate-02.json"
+    },
+    {
+      "path": "apps/api/backend-candidate-03.json",
+      "sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/backend-candidate-03.json"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/bootstrap.py"
+    },
+    {
+      "path": "apps/api/build_coordinator.py",
+      "sha256": "fabcb0a5eda3a2f996a9a9c5ce4ed4ad1d77af7de6db189d0ffb0fd18f4a3ead",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/build_coordinator.py"
+    },
+    {
+      "path": "apps/api/event_routes.py",
+      "sha256": "e734f6f05ec2a5628a59e6bc53d9aace561d2b6399d567626ac9fcff37b25780",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/event_routes.py"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "e7f6dc067725b2c431d157a6eccef21c977005b516d32a9eadf617f24e110897",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/export_openapi.py"
+    },
+    {
+      "path": "apps/api/history_routes.py",
+      "sha256": "12eed771933f96000d8ec5542b1da0dce3167f93c4d2ab12419fdf3d0d9b6322",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/history_routes.py"
+    },
+    {
+      "path": "apps/api/human_contracts.py",
+      "sha256": "9d6198d47b86aa7425676eadc2aaf8cb6876d28c5e1609517517c3c227dc7283",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/human_contracts.py"
+    },
+    {
+      "path": "apps/api/human_routes.py",
+      "sha256": "c8af58e4aac9f309b886eadf982ae2ab50484613448691d2d636d78d51441630",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/human_routes.py"
+    },
+    {
+      "path": "apps/api/identity_routes.py",
+      "sha256": "f7da0b453474b069341d5b32117191783e890829adfe574589aaab4ccb078c2c",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/identity_routes.py"
+    },
+    {
+      "path": "apps/api/implemented.openapi-02.json",
+      "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/implemented.openapi-02.json"
+    },
+    {
+      "path": "apps/api/implemented.openapi-03.json",
+      "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/implemented.openapi-03.json"
+    },
+    {
+      "path": "apps/api/implemented.openapi.json",
+      "sha256": "75c280f0422630ab8a8173bcaa03fc74e86a4d9b7c589af3ba1b223a5140a09e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/implemented.openapi.json"
+    },
+    {
+      "path": "apps/api/knowledge_routes.py",
+      "sha256": "00abbeb1a72c165da099ea139c0599af4273b82ad0173918c877ab22d54f480c",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/apps/api/knowledge_routes.py"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "66d10bca336f563eb338de476eac6da802385ce6220589516e82690a970bb655",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/main.py"
+    },
+    {
+      "path": "apps/api/metrics_routes.py",
+      "sha256": "d5dfc777f7d7bcb3d8c6141054c5f8ea1d4746693d50ab61e521d12a69d4be9e",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/apps/api/metrics_routes.py"
+    },
+    {
+      "path": "apps/api/model_governance_routes.py",
+      "sha256": "2d2e25f0b94892422363b9194bfe97b19eb9a0cc3fb5bc1a5ebeae59315a7088",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/model_governance_routes.py"
+    },
+    {
+      "path": "apps/api/multipart_routes.py",
+      "sha256": "38a245935634f70c4285389f9531685e3155d608b0e233364470f89f55854d43",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/multipart_routes.py"
+    },
+    {
+      "path": "apps/api/object_transfer.py",
+      "sha256": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/object_transfer.py"
+    },
+    {
+      "path": "apps/api/pricing_routes.py",
+      "sha256": "354dbd12a3af873f4fae1371199978efbb579af9b86a95ec5664d027ee3701f4",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/apps/api/pricing_routes.py"
+    },
+    {
+      "path": "apps/api/provider-candidate-01.json",
+      "sha256": "084ec7937bd2a048342e962c31c5547e3426e9f1a33c82938cacf46ba0f7b133",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/provider-candidate-01.json"
+    },
+    {
+      "path": "apps/api/provider-candidate-02.json",
+      "sha256": "b8e575a08a935bbabbbaa413269e4a86046817fe53482a67ad63ed964b385f9e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/provider-candidate-02.json"
+    },
+    {
+      "path": "apps/api/provider-self-test-result-01.json",
+      "sha256": "84e60bfea132f05439211ab21666520c405816274a22541157597b9d648a4f45",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/provider-self-test-result-01.json"
+    },
+    {
+      "path": "apps/api/provider-self-test-result-02.json",
+      "sha256": "656f856c1a5d01787a1d52b8d4b1685a6975a94e7b6648b67b4c93e01271e8f2",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/provider-self-test-result-02.json"
+    },
+    {
+      "path": "apps/api/rag_routes.py",
+      "sha256": "d5d41f9abab829f498aba0ade5784b83b9602021336d2349f7f30b03b19f5d68",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/rag_routes.py"
+    },
+    {
+      "path": "apps/api/report_contracts.py",
+      "sha256": "db87c5a97dd424eb9af746f7c2a1bf437ff16b993441ba96454e0c5bdcb9b4c1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/report_contracts.py"
+    },
+    {
+      "path": "apps/api/report_routes.py",
+      "sha256": "78f7176d598949f24821f2786ed8c4a2f3554b43b6c1a2de291c729e30dfff99",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/report_routes.py"
+    },
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "008c5909a8fba2e97190d3a1bb23690e8ed7fc10b329251f613ea4190fe79eb0",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/research_routes.py"
+    },
+    {
+      "path": "apps/api/review_contracts.py",
+      "sha256": "0179258011dfe9a79a92a45e6ff09a38f78f68e147ddcf25a6f3fb159b8c7e8d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/review_contracts.py"
+    },
+    {
+      "path": "apps/api/review_coordinator.py",
+      "sha256": "af7b3ca26283d75095720a74d3deb41291f4538bb0296d0a7f233af689cf806d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/review_coordinator.py"
+    },
+    {
+      "path": "apps/api/review_routes.py",
+      "sha256": "ef5e0dd1e92424413ccaf991aa90ab9cac21ea0f1bef4210aa55fe9e8efd6d6f",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/review_routes.py"
+    },
+    {
+      "path": "apps/api/review_views.py",
+      "sha256": "ca242ea615303ea209f47173611e3b1ba77c02cb2a5b93b94763c7a73eda1b39",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/review_views.py"
+    },
+    {
+      "path": "apps/api/settings_routes.py",
+      "sha256": "b1a0f2eb9977cd62beee4f92fd2f5092b17e388835ec61dcc95a3ca5809c8fa2",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/settings_routes.py"
+    },
+    {
+      "path": "apps/api/source_effectivity_contracts.py",
+      "sha256": "6d36caa8d6e3b632b5e7e63b12da231431d8676407a9fc10a2fd6bb6807fb51d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/source_effectivity_contracts.py"
+    },
+    {
+      "path": "apps/api/source_effectivity_routes.py",
+      "sha256": "f1eb03ea63edc244143b314923cd5b126c1e3e1d3d3c5b2e49ed0d86176f5554",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/source_effectivity_routes.py"
+    },
+    {
+      "path": "apps/api/submission_contracts.py",
+      "sha256": "c79aef5382a5babb3a996d28bb1626f8327232b0e905bfef163a24fef77a290d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/submission_contracts.py"
+    },
+    {
+      "path": "apps/api/submission_routes.py",
+      "sha256": "5e01db94404596358ad3b8fe676a33de7eaeee47c07d2c97827908a03b205183",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/submission_routes.py"
+    },
+    {
+      "path": "apps/api/upload_contracts.py",
+      "sha256": "9670fcf3c099fcccb80ed84795a38cdcafec418392d12cb893dfa35c8b641799",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/upload_contracts.py"
+    },
+    {
+      "path": "apps/api/upload_layout_routes.py",
+      "sha256": "f2d7f6c3183ab135def96267eec345ea76eda47a995d657186f0a177dc2c0ff8",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/upload_layout_routes.py"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "206794028670b986865c2aede747ed8d877271f4b3532395f3d48b7a899b0cda",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/api/views.py"
+    },
+    {
+      "path": "apps/web/node_modules/flatted/python/flatted.py",
+      "sha256": "f784c254de76a25435ebaa61c72942072733ae4b42619b943bf37b09fa45e644",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/web/node_modules/flatted/python/flatted.py"
+    },
+    {
+      "path": "apps/web/scripts/generate-contracts.py",
+      "sha256": "23416ec4adefe6a38490405062b6dbb15b2f879c5cc9cf3ee30b498b3efd7ab5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/web/scripts/generate-contracts.py"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/__init__.py"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "77e763bcf7b31fad3a4a7df85d74c181750d1c26dbbcd343f2cfb572c8fdbc9e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/__main__.py"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "288405a99611de3ec8e0962d6f3492f108b3499c455d974d45149648d8f02e45",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/engine.py"
+    },
+    {
+      "path": "apps/worker/export_handlers.py",
+      "sha256": "bebf701d5fbcb800c04048016df3a8ac20475769eed0a0f7faaf0161f21ad609",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/export_handlers.py"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "1f2cf6a16a99aa9494ef60d0df9817bd2abbb062c594ac2b24552978ead27b47",
+      "layer": "parse-readable01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/parse-readable-development-checks/frozen-inputs-01/apps/worker/handlers.py"
+    },
+    {
+      "path": "apps/worker/report_handlers.py",
+      "sha256": "e8faf83aedf3dd51277220ff77abfa76d1bb54cdea5a0d89ad32e3a91009b112",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/report_handlers.py"
+    },
+    {
+      "path": "apps/worker/review_handlers.py",
+      "sha256": "df60de84654ef685b6a5cc2655df8dcc49bddf114c08be00cbf5a2653e42c310",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/apps/worker/review_handlers.py"
+    },
+    {
+      "path": "deploy/fetch_rag_assets.py",
+      "sha256": "7e25b7fc67165f931af26630e70d820f3c7090cfcd9aeae76be9a94000a4509b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/deploy/fetch_rag_assets.py"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/deploy/initialize_database.py"
+    },
+    {
+      "path": "deploy/review_acceptance.py",
+      "sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/deploy/review_acceptance.py"
+    },
+    {
+      "path": "deploy/run.py",
+      "sha256": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/deploy/run.py"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/deploy/sql/vector-runtime-grants.sql"
+    },
+    {
+      "path": "docs/a1-submission-report-product-review.md",
+      "sha256": "1c65cf6c6034a305715badd4616e41d8bb56bc953a2d5030876e3a726ce8f045",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/docs/a1-submission-report-product-review.md"
+    },
+    {
+      "path": "docs/metrics-development-checks/implementation-protocol.md",
+      "sha256": "638cc92b7c734d81f670507ab9763be0d27ca67d31b7727733d5b500c703ad67",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/docs/metrics-development-checks/implementation-protocol.md"
+    },
+    {
+      "path": "packages/assistant/__init__.py",
+      "sha256": "829cf0726d0d30b97cb61fb2949b210d70572baad678aebd77683bb2e1e3ee5e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/assistant/__init__.py"
+    },
+    {
+      "path": "packages/assistant/contracts.py",
+      "sha256": "4627eb1627639d7ac862d297d5aa6c248e37139d282da57f3670e72f5594ca12",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/assistant/contracts.py"
+    },
+    {
+      "path": "packages/assistant/conversations.py",
+      "sha256": "63918ba1e44b8765d6f449285a668dfd3756172511d4aaf2bad44f16d64d1280",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/assistant/conversations.py"
+    },
+    {
+      "path": "packages/authoring/__init__.py",
+      "sha256": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/__init__.py"
+    },
+    {
+      "path": "packages/authoring/build.py",
+      "sha256": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/build.py"
+    },
+    {
+      "path": "packages/authoring/build_repository.py",
+      "sha256": "a9bdda02b788fe9d209c9adef5063f75d09e3c9a9109145aa79ad0142738a91b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/build_repository.py"
+    },
+    {
+      "path": "packages/authoring/content.py",
+      "sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/content.py"
+    },
+    {
+      "path": "packages/authoring/contracts.py",
+      "sha256": "5fd46773776351115ab85efea43735118d5b3b1e69c1f968300e2b4d445779ab",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/contracts.py"
+    },
+    {
+      "path": "packages/authoring/generation.py",
+      "sha256": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/generation.py"
+    },
+    {
+      "path": "packages/authoring/patches.py",
+      "sha256": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/patches.py"
+    },
+    {
+      "path": "packages/authoring/repository.py",
+      "sha256": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/authoring/repository.py"
+    },
+    {
+      "path": "packages/contracts/design-source.json",
+      "sha256": "de56347ab7a90bb9825740e2d6b743aa496f96aadf0df7f198a6e7eeea51df57",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/design-source.json"
+    },
+    {
+      "path": "packages/contracts/implemented.openapi.json",
+      "sha256": "04dcfcc0aa6d25198658c1a2f3b39b370e69e7d21d67396285d74dbfc0d1b98d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/implemented.openapi.json"
+    },
+    {
+      "path": "packages/contracts/openapi/http-examples.json",
+      "sha256": "665404f8f5887bc0ff177a9aeda2880a1d9511644a29c3551bcb90ce8d3f92ef",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/openapi/http-examples.json"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/openapi/openapi.json"
+    },
+    {
+      "path": "packages/contracts/policies/execution-policy.json",
+      "sha256": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/policies/execution-policy.json"
+    },
+    {
+      "path": "packages/contracts/policies/retrieval-policy.json",
+      "sha256": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/policies/retrieval-policy.json"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/schemas/protocol.schema.json"
+    },
+    {
+      "path": "packages/contracts/schemas/review-identity-vectors.json",
+      "sha256": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/schemas/review-identity-vectors.json"
+    },
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/sql/core.sql"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/sql/domain.sql"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/sql/retrieval.sql"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/sql/roles.sql"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/contracts/sql/worker-functions.sql"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/__init__.py"
+    },
+    {
+      "path": "packages/domain/build_followups.py",
+      "sha256": "7b64d50e4b52392283a0fa6202a1e2b378e3e582211655632da78b33f4a183f5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/build_followups.py"
+    },
+    {
+      "path": "packages/domain/content_checks.py",
+      "sha256": "2bc4dab0653486ad2bfed8cb05bc148739c875d3072439a6116ee17f69e4bd79",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/content_checks.py"
+    },
+    {
+      "path": "packages/domain/engineering.py",
+      "sha256": "a813334a9d68764d9a5b928e3d79ae88cc1e3a3ec65e1a7e9cccdfe4266e03fc",
+      "layer": "core-scope01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-01/packages/domain/engineering.py"
+    },
+    {
+      "path": "packages/domain/fact_sets.py",
+      "sha256": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/fact_sets.py"
+    },
+    {
+      "path": "packages/domain/finding_lifecycle.py",
+      "sha256": "938d10838a8fa7f69a6d6dd48013712f9fadec5176c37275d181c160140369d3",
+      "layer": "core-scope01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-01/packages/domain/finding_lifecycle.py"
+    },
+    {
+      "path": "packages/domain/human_decisions.py",
+      "sha256": "fbb9d2a794ac2888089e90797711a3b422dcec91e0c828a68ab5415f4d2def35",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/human_decisions.py"
+    },
+    {
+      "path": "packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/input_changes.py"
+    },
+    {
+      "path": "packages/domain/model_calls.py",
+      "sha256": "7e545b6fc071fd16f6acf95a5ed8d4fad8913e93246ce1985c6fec5f3afe31e2",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/model_calls.py"
+    },
+    {
+      "path": "packages/domain/model_recovery.py",
+      "sha256": "6872d377d1fb5b9d36abd9f1bf5a4c7f0ba519e23ca6f19facb960107f6d59ef",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/model_recovery.py"
+    },
+    {
+      "path": "packages/domain/parsing_profile.py",
+      "sha256": "f61a997b4af11a635660f431086f6d0c73fac8f96262674698ba7a6a9bd8e1db",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/parsing_profile.py"
+    },
+    {
+      "path": "packages/domain/providers/__init__.py",
+      "sha256": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/providers/__init__.py"
+    },
+    {
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/providers/deepseek.py"
+    },
+    {
+      "path": "packages/domain/providers/oss.py",
+      "sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/providers/oss.py"
+    },
+    {
+      "path": "packages/domain/reports.py",
+      "sha256": "8e43e0f0710d448d9f4f0950365a9062bb38939bab0ff94c0deb06723cd16070",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/reports.py"
+    },
+    {
+      "path": "packages/domain/review_data.py",
+      "sha256": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/review_data.py"
+    },
+    {
+      "path": "packages/domain/review_identity.py",
+      "sha256": "d6f03e98fd5fee7a7699dfe7c9092d88b871b4b980cff0fb00e025aad90d1358",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/review_identity.py"
+    },
+    {
+      "path": "packages/domain/reviews.py",
+      "sha256": "b577dc5ff5f51cd44119faf5ef0f55092381d0a9ef16c0c696de77eaf7039015",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/reviews.py"
+    },
+    {
+      "path": "packages/domain/rule_corrections.py",
+      "sha256": "635d76d36d5bb8163c7d37dcfcb79c883072daf1e75e6c7fc537e56a50b20e8f",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/rule_corrections.py"
+    },
+    {
+      "path": "packages/domain/rule_sets.py",
+      "sha256": "fb4800911262cca213cc699a79b577c94bbfeeaec2bcbea2c9aec7c175127d67",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/rule_sets.py"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/runtime.py"
+    },
+    {
+      "path": "packages/domain/source_effectivity.py",
+      "sha256": "acdab0c772bea603152f7ec35036d3ace294f8e8cc000807497a3adfab282aa7",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/source_effectivity.py"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/storage.py"
+    },
+    {
+      "path": "packages/domain/submission_gate.py",
+      "sha256": "33ac41614487a34f7526a9636dc48a224cb268c5a5e7bb8492ef45d1bf570b62",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/submission_gate.py"
+    },
+    {
+      "path": "packages/domain/submissions.py",
+      "sha256": "501f8b5fc0dac678d6f04d82a50ee06189e05b8088cc8bfb71d0ca4197addcb1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/domain/submissions.py"
+    },
+    {
+      "path": "packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/identity/__init__.py"
+    },
+    {
+      "path": "packages/identity/contracts.py",
+      "sha256": "87002f8b2637233295a70a2ecf86dbb8b30dc34439c0889e586dea4bc7e94cbe",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/identity/contracts.py"
+    },
+    {
+      "path": "packages/identity/pagination.py",
+      "sha256": "ecbbe5c08a8bcd4d9c4adb16cfc7ade5f8f226d0dca13f7b47f075338d8eed89",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/identity/pagination.py"
+    },
+    {
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/identity/repository.py"
+    },
+    {
+      "path": "packages/knowledge/__init__.py",
+      "sha256": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/__init__.py"
+    },
+    {
+      "path": "packages/knowledge/bridge.py",
+      "sha256": "084ba465b63c5cd124b0b135edcf60095e44099695fc055424fc16f392093986",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/bridge.py"
+    },
+    {
+      "path": "packages/knowledge/content.py",
+      "sha256": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/content.py"
+    },
+    {
+      "path": "packages/knowledge/contracts.py",
+      "sha256": "fe5959b68d1e6e4c44f1d52133f9f2f333007e501b870e28075b3217e8833d5b",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/contracts.py"
+    },
+    {
+      "path": "packages/knowledge/rag_api.py",
+      "sha256": "8f203c5e4732f57eb81a91e6663de54be7cd095187a35c4b668fc5652e578eaf",
+      "layer": "knowledge-rag02-integrity",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag02-inputs/packages/knowledge/rag_api.py"
+    },
+    {
+      "path": "packages/knowledge/rag_contracts.py",
+      "sha256": "d8d84e838ece2b18f59bcf87b5a31d3d5b9918a6ac820c8c470d81e73ed3cc1f",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_contracts.py"
+    },
+    {
+      "path": "packages/knowledge/rag_index.py",
+      "sha256": "c86f605d4b12d80bc5ad72adebafa6b1faf7f6f6aafc1e19906f0ad5aaca212b",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_index.py"
+    },
+    {
+      "path": "packages/knowledge/rag_repository.py",
+      "sha256": "2abb83dbe679ccbd2f5fe150ce840b2ef9cd361e2b9055b40be8ea1e086781f1",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_repository.py"
+    },
+    {
+      "path": "packages/knowledge/rag_search.py",
+      "sha256": "7b150f102907588d892c4ab41acef13e6a63ec28f9bb5ee00281352a7acc3ee5",
+      "layer": "knowledge-rag02-integrity",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag02-inputs/packages/knowledge/rag_search.py"
+    },
+    {
+      "path": "packages/knowledge/rag_tasks.py",
+      "sha256": "e8a4f3bfc2a0b782ef3efec8ce54843391dbf8e80b41621805d65120ddae9682",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_tasks.py"
+    },
+    {
+      "path": "packages/knowledge/rag_types.py",
+      "sha256": "317741f0eb1a38c9388cc4470c31986dd9ac44ca02eabc3d209f43e4c047df29",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_types.py"
+    },
+    {
+      "path": "packages/knowledge/repository.py",
+      "sha256": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/repository.py"
+    },
+    {
+      "path": "packages/knowledge/sources.py",
+      "sha256": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/sources.py"
+    },
+    {
+      "path": "packages/metrics/__init__.py",
+      "sha256": "8928f40c9a970d97210328a29cd54e333ee2ded36db8caa965f3e7494e44d6aa",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/__init__.py"
+    },
+    {
+      "path": "packages/metrics/contracts.py",
+      "sha256": "f6549612c78ad7ef6a35e7aed2af758e1337d8f9ef0e0a7c39a94e7dc57e3563",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/contracts.py"
+    },
+    {
+      "path": "packages/metrics/core.py",
+      "sha256": "9ddf4e93ba72c7b3f4e38a89eb63efc06ea3562282776770681a745c9d07b609",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/core.py"
+    },
+    {
+      "path": "packages/metrics/predictions.py",
+      "sha256": "b64c75572fecc536bc851251fed2419132ed175ee4a71f860af49018de733b02",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/predictions.py"
+    },
+    {
+      "path": "packages/metrics/records.py",
+      "sha256": "0ef3b58db374ce898df4e0eb27dec7d83bc6e9541c00f354b56b9b2dc0ac63ca",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/records.py"
+    },
+    {
+      "path": "packages/metrics/results.py",
+      "sha256": "6e7e2f5ccddc1e6bdde503d78936c63bc3b07a52019e266f312b2959db5de126",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/results.py"
+    },
+    {
+      "path": "packages/metrics/snapshots.py",
+      "sha256": "a17a6d186090571991528f3bc8264c6a3a485a69b179630a14219df359cd0ca2",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/snapshots.py"
+    },
+    {
+      "path": "packages/metrics/views.py",
+      "sha256": "cb4466734f401213a59d7e2537578a417f87cd0fe6bcb51b1f3058217b8f0d79",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/views.py"
+    },
+    {
+      "path": "packages/model_governance/__init__.py",
+      "sha256": "293b5f097894aabc72fce0119f1ddd5b77c13a05f7aa7f8a9d356f398a3216f0",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/__init__.py"
+    },
+    {
+      "path": "packages/model_governance/common.py",
+      "sha256": "a6f237d4cfc4d6790d643b2a5109dca6385da01705af8251ebdd81f0020d21f4",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/common.py"
+    },
+    {
+      "path": "packages/model_governance/contracts.py",
+      "sha256": "a76fbc0c08ac74977b569bc70b9c809ae3120f7595327eaca673c3df71a3cfc4",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/contracts.py"
+    },
+    {
+      "path": "packages/model_governance/evaluation.py",
+      "sha256": "4c1fbeea5d30fd9d1b7be01fb88505f2ec6fc45220b61d8036ccb7093997cd07",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/evaluation.py"
+    },
+    {
+      "path": "packages/model_governance/features.py",
+      "sha256": "5a0ccef1edfbe15d245052fced684e681fd35a9f41b2e7a926697a1b2abbec9b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/features.py"
+    },
+    {
+      "path": "packages/model_governance/intake.py",
+      "sha256": "8d287ed5fe2b6aed6255b1b1f6389b8a7837d6c90b271a4c7ef0acc9be484475",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/intake.py"
+    },
+    {
+      "path": "packages/model_governance/leakage.py",
+      "sha256": "d322192254d6a68d51aebf7160a6861e9b426aed42c2fe7e645842c875f4c351",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/leakage.py"
+    },
+    {
+      "path": "packages/model_governance/purpose_runtime.py",
+      "sha256": "c91f58afe218119f463e0418f6b80d939a8a468a6fe0ba1fb660d2a7caad2c5c",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/purpose_runtime.py"
+    },
+    {
+      "path": "packages/model_governance/repository.py",
+      "sha256": "206edbf7029eb926ec1f1cd2a6124d587b297e77781c4b0bdd6ba9b293da9e9d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/repository.py"
+    },
+    {
+      "path": "packages/model_governance/statistics.py",
+      "sha256": "f4d87fd50eae53fc9ea1bc46df157f361a7c3765a65fd5cf8360063420f54d55",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/statistics.py"
+    },
+    {
+      "path": "packages/model_governance/training.py",
+      "sha256": "9833ecd4a6173459f35a55bd1bd4cbe305a50db59d32b8c66514ae367d9b6af3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/model_governance/training.py"
+    },
+    {
+      "path": "packages/parsing/__init__.py",
+      "sha256": "39e97b51a4ad28b8e206a3ef2d11ca5df6530d0ec3a9b318e8eb73356efc413b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/__init__.py"
+    },
+    {
+      "path": "packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/assets.json"
+    },
+    {
+      "path": "packages/parsing/core.py",
+      "sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/core.py"
+    },
+    {
+      "path": "packages/parsing/fetch_assets.py",
+      "sha256": "3a4956df5d38b95bed8885e302935ccbb91212203b80fa02bcded86096f82947",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/fetch_assets.py"
+    },
+    {
+      "path": "packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/http_port.py"
+    },
+    {
+      "path": "packages/parsing/server.py",
+      "sha256": "12eaf57412c6af22f56816259d2b0c55011492da109d6a251ae28724329da97d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/parsing/server.py"
+    },
+    {
+      "path": "packages/pricing/__init__.py",
+      "sha256": "79a9c217fd20ac96f5dd2b7745b8cec5ffa116361f86681867e50cf4c9ed9f8d",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/__init__.py"
+    },
+    {
+      "path": "packages/pricing/calculator.py",
+      "sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/calculator.py"
+    },
+    {
+      "path": "packages/pricing/contracts.py",
+      "sha256": "6eaad06a69de35bf0a485d62598e1b161b275e9d4bb4870270997a047579b806",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/contracts.py"
+    },
+    {
+      "path": "packages/pricing/models.py",
+      "sha256": "a0d26b94c947681d360717774578a71e5700c0242a3e7e2a3db22d99b8251cd7",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/models.py"
+    },
+    {
+      "path": "packages/pricing/repository.py",
+      "sha256": "8c26202da6a0e234a3fcff64663143886f2710bdb6e9a2abfd27682c4d6d76a5",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/repository.py"
+    },
+    {
+      "path": "packages/pricing/sources.py",
+      "sha256": "cfc3edd58867c9c2e9ab8826c10d0a65d4ecda1cddffff63325357593de1ce4c",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/sources.py"
+    },
+    {
+      "path": "packages/pricing/terms.py",
+      "sha256": "6621bbbe786f1c508a3db52a2f1a8fb4a695a41e4184603e83189d2a19547259",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/terms.py"
+    },
+    {
+      "path": "packages/rag/README.md",
+      "sha256": "fab00b08a1caf4b2ef14f4a5a8cd6659223f2dc98cc580627903c3dbff84cfb6",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/README.md"
+    },
+    {
+      "path": "packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/__init__.py"
+    },
+    {
+      "path": "packages/rag/coordinator.py",
+      "sha256": "0fc60f87ef494bf058a99981c45f346fd379cc5ec244613a16086d6126366d3a",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/coordinator.py"
+    },
+    {
+      "path": "packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/core.py"
+    },
+    {
+      "path": "packages/rag/http_port.py",
+      "sha256": "149cf1bef79c19d5857acd7b028f84d273ee2eb7e4d34b1a295babe2d8a3fad6",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/http_port.py"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/packages/rag/indexing.py"
+    },
+    {
+      "path": "packages/rag/lexical.py",
+      "sha256": "6198d8ec3e80039fcab28375bd0cfcc91e9488b284a25cdb1ce503198417272e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/lexical.py"
+    },
+    {
+      "path": "packages/rag/local_models.py",
+      "sha256": "ce7fba2a39b08443964dfff8a1030b0074ca1d9eea9675cc56d589fc7a0fc194",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/local_models.py"
+    },
+    {
+      "path": "packages/rag/repository.py",
+      "sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/repository.py"
+    },
+    {
+      "path": "packages/rag/search.py",
+      "sha256": "26e6dd37d6ba2d0049bd910d4f94576ae528d354cc85f8a2734bb9496908ea84",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/search.py"
+    },
+    {
+      "path": "packages/rag/server.py",
+      "sha256": "d1fa3ccb0fcd2797232f6567dc2ae925fa70a0de306547c35f3c47766ed34e9d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/rag/server.py"
+    },
+    {
+      "path": "packages/rag/tasks.py",
+      "sha256": "154b52e2aa1e6f0b4d5a8cfa333de88767e3a6ef36205938ac7d8e4a766fda7f",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/packages/rag/tasks.py"
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/__init__.py"
+    },
+    {
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/artifacts.py"
+    },
+    {
+      "path": "packages/research/authority.py",
+      "sha256": "855404c135231ea783031a6bf244cde1e90ab45a5bb5f8d67223121e7ca6e9f1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/authority.py"
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "cf0299442661730043f17d5c45b29027ed16547ca39ee813e465d460e5bc9565",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/batches.py"
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/chapters.py"
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "3b35d403d2124bc62a7573468677ccc1259d825403039860d70fa9646c423841",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/contracts.py"
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/core.py"
+    },
+    {
+      "path": "packages/research/execution.py",
+      "sha256": "0b973858ade5aa81292a720473c59f42feb7b1c81c03a34a8d580a8b7c9868ad",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/execution.py"
+    },
+    {
+      "path": "packages/research/identities.py",
+      "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/identities.py"
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "2833a43407134b8b64a86fd928e3fa58d3464dfdc5e4c780cb63aba73e5b4a93",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/importing.py"
+    },
+    {
+      "path": "packages/research/ledger.py",
+      "sha256": "3b53f263360a766d0d5c2360de3189945ca1e71c0f6bef8d940285f784b41d50",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/ledger.py"
+    },
+    {
+      "path": "packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/model_port.py"
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/outcomes.py"
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/profile.py"
+    },
+    {
+      "path": "packages/research/research-candidate-01.json",
+      "sha256": "20e92d95e30325f3a44d98bb160fa680dcfe777c05ce60c64faa33326e1279d5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/research-candidate-01.json"
+    },
+    {
+      "path": "packages/research/worker.py",
+      "sha256": "39673ab943b301169141ae7746102857c37cf209719277a42561deabdc46f685",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/research/worker.py"
+    },
+    {
+      "path": "packages/uploads/journal.py",
+      "sha256": "c912761b703d185b9d3d1a9752d554f1b78e1a2dc2ca2ca64de8a03de065ae41",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/uploads/journal.py"
+    },
+    {
+      "path": "packages/uploads/native.py",
+      "sha256": "f836967db006a249abf79e87e4e53ec4a63ddc4eb6d5ddf4143f9f96df0fb5e5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/uploads/native.py"
+    },
+    {
+      "path": "packages/uploads/protocol.py",
+      "sha256": "68a5ee4c07655aa4ae01d1ef8d3e04743cee00dabcdefbffc46326324103e4d2",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/uploads/protocol.py"
+    },
+    {
+      "path": "packages/uploads/read_model.py",
+      "sha256": "97318581c6b6105e2261d3dfa25628884328a9271014c12679821404cfd6a33d",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/uploads/read_model.py"
+    },
+    {
+      "path": "packages/uploads/service.py",
+      "sha256": "f19f0544d7b3d2a7cf7304c0bdf760f5149ea62dae778561e52b8e07b0c28489",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/packages/uploads/service.py"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/pyproject.toml"
+    },
+    {
+      "path": "requirements-rag.in",
+      "sha256": "9a52dd8c517e2f6efa60a44ede2ccd53e4c44da78296e8110e83705ef2b94b13",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/requirements-rag.in"
+    },
+    {
+      "path": "requirements-rag.lock.txt",
+      "sha256": "2d7e749d61d11b1294a75b30df0ea0c55891a5a54138abcb232fa2a3c5830776",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/requirements-rag.lock.txt"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/requirements.lock.txt"
+    },
+    {
+      "path": "tests/probe_rag_pipeline.py",
+      "sha256": "87571d55b21408cf84cc3a67a04e713e1d9f7b8e187dfa2ad4b9c90ee2ed7600",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/probe_rag_pipeline.py"
+    },
+    {
+      "path": "tests/test_actual_contract.py",
+      "sha256": "1c52569eb9c4def00e4a43d6b840efc04df52cf8638c5a0c07172198c45f36c7",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_actual_contract.py"
+    },
+    {
+      "path": "tests/test_bid_list_integration.py",
+      "sha256": "6e73148fe01bfda237b22b2ca5ee424af5bf8ea9ce7b627f945b99c588eeadad",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_bid_list_integration.py"
+    },
+    {
+      "path": "tests/test_build_followups_integration.py",
+      "sha256": "3c2e238629ec8667f0118c28ba6aadf132fdf1f090a7bc1cb284cafa5c61d001",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_build_followups_integration.py"
+    },
+    {
+      "path": "tests/test_build_history_integration.py",
+      "sha256": "284d229bb895b31970e4a8eb3162225814ec910027818ba39b02d51c074b36ed",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_build_history_integration.py"
+    },
+    {
+      "path": "tests/test_cancel_integration.py",
+      "sha256": "431619df6c2147ee35993b66f3b3e4bf11c9442dce5eb05ea1695d5d93ab5916",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_cancel_integration.py"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "00fd78fb3ac840a2895eb37cf857c27f723cf29a3adf1a400e829b4b70a3df99",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_domain.py"
+    },
+    {
+      "path": "tests/test_external_profile.py",
+      "sha256": "fa3045c6c91fd4bf65bc12ffed79f4b02fd25f402c84b72828502879431a43a0",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_external_profile.py"
+    },
+    {
+      "path": "tests/test_fact_sets_integration.py",
+      "sha256": "16403d9c868c9fe3b619877e9c92cf82450a7b33b893a69bf9da383ca514aa79",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_fact_sets_integration.py"
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "sha256": "e72cc3e448c29b1b265b50d7efab51858ffcc6facb69116ca876dd6bf87ba1b9",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/tests/test_metrics.py"
+    },
+    {
+      "path": "tests/test_metrics_integration.py",
+      "sha256": "174231098d5aeeda0049f41646cbb52c061787f7a2e8a8be8b7c7954e5c8dd7f",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/tests/test_metrics_integration.py"
+    },
+    {
+      "path": "tests/test_model_ledger_integration.py",
+      "sha256": "de79b42b4a3bfa1520a8658fbc0a70f2eb22714b6a212e170aa744f35da2f300",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_model_ledger_integration.py"
+    },
+    {
+      "path": "tests/test_providers.py",
+      "sha256": "30ab844ac97afa34108ff2736fff8cd8f154c4294b4575c6c8e3916d6f91a71b",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_providers.py"
+    },
+    {
+      "path": "tests/test_rag_core.py",
+      "sha256": "6dc305619c5f444c5c4148e8c4590ad1b604b0e426037e3f5e23e97d45d8a655",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_rag_core.py"
+    },
+    {
+      "path": "tests/test_rag_http_port.py",
+      "sha256": "cf3e8fd8a089ef19b0f49a952497cc775709e66fa092c4d081b034b76e2b3cad",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_rag_http_port.py"
+    },
+    {
+      "path": "tests/test_rag_real_integration.py",
+      "sha256": "b41fab929f2f2e12f129cba3d563e3b83cdae3d6b9b1c3f20a56689556d5cf26",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_real_integration.py"
+    },
+    {
+      "path": "tests/test_rag_replay_guard.py",
+      "sha256": "224db47bccbab04e01387f182b9cb7c6e2dd89d237fbc3e080b62750d2e7f192",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_replay_guard.py"
+    },
+    {
+      "path": "tests/test_rag_staged_api.py",
+      "sha256": "f69f2cc69ac5dcb32e99ac0e7295b026db59b7dfd8f703d928c380ff1b66a812",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_staged_api.py"
+    },
+    {
+      "path": "tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_recovery_integration.py"
+    },
+    {
+      "path": "tests/test_review_identity.py",
+      "sha256": "e0b5595f06232cc0f83520aa175fcc2cc3b3af925e26bb347194108529488e13",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_review_identity.py"
+    },
+    {
+      "path": "tests/test_review_input_limits.py",
+      "sha256": "55d5743aab4d6f2ee79f4d206c3ade94e911c6b2e77423803edb3a7151ad82b5",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_review_input_limits.py"
+    },
+    {
+      "path": "tests/test_review_integration.py",
+      "sha256": "e8b6ea8951f0e4b3a93aa9dccf1e876d6f19e0db882d009edfc7ceeec0dcb97e",
+      "layer": "parse-readable01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/parse-readable-development-checks/frozen-inputs-01/tests/test_review_integration.py"
+    },
+    {
+      "path": "tests/test_source_effectivity_integration.py",
+      "sha256": "58d83ca36fdc71737dbb3ae0264f760c1d986c3ee3b6a610b571f4bd66fb7450",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_source_effectivity_integration.py"
+    },
+    {
+      "path": "tests/test_submission_gate_integration.py",
+      "sha256": "5292582cd0849fa7d004571c8ac9e23f0e7c1664ccfdc4d534f7a8e5e105aca3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_submission_gate_integration.py"
+    },
+    {
+      "path": "tests/test_upload_layout_integration.py",
+      "sha256": "5d2308d7712f442975040414501020bcb22b6bf965f76b3b6a98e9f494fa85d3",
+      "layer": "main04-QA-exact",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/main04-exact-dependencies/execution-inputs/tests/test_upload_layout_integration.py"
+    },
+    {
+      "path": "packages/pricing/README.md",
+      "sha256": "d6a0050e672657988289b79ce60d7c457f781b1bfddf0c3f52c40ae7151dc4f3",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/README.md"
+    },
+    {
+      "path": "tests/test_pricing_calculator.py",
+      "sha256": "0d9eba8f726290b5e54f841ba8019495326cbf3bb2c1642cbc8260d0d41df5c2",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/tests/test_pricing_calculator.py"
+    },
+    {
+      "path": "tests/test_pricing_contracts.py",
+      "sha256": "c48b19960eabe5ea3efd40c3ceddf72cc721dc9cb149b8c4d86406c0476cc251",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/tests/test_pricing_contracts.py"
+    },
+    {
+      "path": "tests/test_pricing_integration.py",
+      "sha256": "e1501d49aa9e372d93c10f0f9da50c2245bfa975b42ba7853ff88a7008076ee5",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/tests/test_pricing_integration.py"
+    },
+    {
+      "path": "tests/test_pricing_native_oss.py",
+      "sha256": "dc8afb8a93807563778520a572b55258b160b23de1eb796a98cbcd60ceb009b2",
+      "layer": "pricing03",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/tests/test_pricing_native_oss.py"
+    },
+    {
+      "path": "packages/knowledge/README.md",
+      "sha256": "01339c14171572b7f35a6c9fd5c233e153b79e7ab7e8e610877b9153703fea60",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/README.md"
+    },
+    {
+      "path": "packages/knowledge/rag_coordinator.py",
+      "sha256": "9d9c67a29d134f104bfaee790b4ba662e0cc07393cbbb2ab0670701dd309e906",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/rag_coordinator.py"
+    },
+    {
+      "path": "packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/packages/knowledge/sql/rag.sql"
+    },
+    {
+      "path": "tests/test_knowledge.py",
+      "sha256": "bbe7472d1ec2a8d561d5cb9b9525db39f6dff266272f8b60095da0aab3fae199",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/tests/test_knowledge.py"
+    },
+    {
+      "path": "tests/test_knowledge_integration.py",
+      "sha256": "1acc5af0ca09a283f6b8b5204ea91fc7e1b23c3faddd1bcb4661ea467bce42d8",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/tests/test_knowledge_integration.py"
+    },
+    {
+      "path": "tests/test_knowledge_rag.py",
+      "sha256": "eb1b0ec611c6dc21a4437dbaad4bbdc8b27dcdce36117c30ad9987b92cab719a",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/tests/test_knowledge_rag.py"
+    },
+    {
+      "path": "tests/test_knowledge_rag_integration.py",
+      "sha256": "102c152002663b2cf4368e3e3ca9cc08c0be2214a919819958c3dd2f6968f737",
+      "layer": "knowledge-rag02-integrity",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag02-inputs/tests/test_knowledge_rag_integration.py"
+    },
+    {
+      "path": "tests/test_knowledge_rag_schema_unavailable.py",
+      "sha256": "fcc227248b20b6c4c7d9c92820d8df798aa40eb095e3a35d87db31c654140aa9",
+      "layer": "knowledge-rag01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/knowledge-development-checks/rag01-inputs/tests/test_knowledge_rag_schema_unavailable.py"
+    },
+    {
+      "path": "packages/metrics/sources.py",
+      "sha256": "3aa07ae2bf9edac94032d7e97edf81064baf47123883075ce388c31ae9a9d962",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/packages/metrics/sources.py"
+    },
+    {
+      "path": "docs/metrics-development-checks/candidate03/implementation-protocol.md",
+      "sha256": "e79a749d8efd86d7defafdaa0a830380aa3a2c337bae32604a0e62ab3a377a97",
+      "layer": "metrics03",
+      "frozen_input": "/workspace/tender-workbench/docs/metrics-development-checks/candidate03/frozen-inputs/docs/metrics-development-checks/candidate03/implementation-protocol.md"
+    },
+    {
+      "path": "tests/test_rag_staged_indexing.py",
+      "sha256": "73dbbbe66e75ef52fc41bba61c1acb48c5e0611af8af89a54d62932d227659c8",
+      "layer": "project-index05",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-05/frozen-inputs/tests/test_rag_staged_indexing.py"
+    },
+    {
+      "path": "tests/test_parse_readable_integration.py",
+      "sha256": "bc0764dc8f1cd1cf47fe8cd59bec90b48efd2d7aba3ffa7af0685e544123d46f",
+      "layer": "parse-readable01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/parse-readable-development-checks/frozen-inputs-01/tests/test_parse_readable_integration.py"
+    },
+    {
+      "path": "packages/domain/core_recheck_scope.py",
+      "sha256": "422bd66cb2367b5a31d2de63226fa5813c1c500ee93d362f6edf64c8fa4786ed",
+      "layer": "core-scope02",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-02/packages/domain/core_recheck_scope.py"
+    },
+    {
+      "path": "tests/test_core_recheck_scope_integration.py",
+      "sha256": "be8a5f38cee28e0669bc7d8b17badbba89e4140e355354ff6fcbd2e243d892a1",
+      "layer": "core-scope02",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-02/tests/test_core_recheck_scope_integration.py"
+    },
+    {
+      "path": "tests/test_engineering.py",
+      "sha256": "2af7004b52e8d1bfba4fb4db987a11c0b452b926ca53891e7b2c75a1327b0bd1",
+      "layer": "core-scope01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-01/tests/test_engineering.py"
+    },
+    {
+      "path": "docs/core-recheck-scope-development-checks/README.md",
+      "sha256": "bbaaf265c67b2a5905340f4e88ab5ed35e31ebda639476e6541884fe0af954bf",
+      "layer": "core-scope01",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-01/docs/core-recheck-scope-development-checks/README.md"
+    },
+    {
+      "path": "docs/core-recheck-scope-development-checks/note-02.md",
+      "sha256": "ad2f88db7b66b070a823cf2a6bae94217b270357398b0d2b3fa51fbda399042e",
+      "layer": "core-scope02",
+      "frozen_input": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-development-checks/frozen-inputs-02/docs/core-recheck-scope-development-checks/note-02.md"
+    }
+  ],
+  "overwrites": [
+    {
+      "path": "packages/knowledge/rag_search.py",
+      "previous_layer": "knowledge-rag01",
+      "new_layer": "knowledge-rag02-integrity"
+    },
+    {
+      "path": "packages/knowledge/rag_api.py",
+      "previous_layer": "knowledge-rag01",
+      "new_layer": "knowledge-rag02-integrity"
+    },
+    {
+      "path": "tests/test_knowledge_rag_integration.py",
+      "previous_layer": "knowledge-rag01",
+      "new_layer": "knowledge-rag02-integrity"
+    },
+    {
+      "path": "packages/metrics/predictions.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "metrics03"
+    },
+    {
+      "path": "packages/metrics/results.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "metrics03"
+    },
+    {
+      "path": "packages/metrics/views.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "metrics03"
+    },
+    {
+      "path": "apps/api/metrics_routes.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "metrics03"
+    },
+    {
+      "path": "tests/test_metrics_integration.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "metrics03"
+    },
+    {
+      "path": "tests/test_rag_real_integration.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "project-index05"
+    },
+    {
+      "path": "tests/test_rag_staged_api.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "project-index05"
+    },
+    {
+      "path": "tests/test_rag_replay_guard.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "project-index05"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "parse-readable01"
+    },
+    {
+      "path": "tests/test_review_integration.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "parse-readable01"
+    },
+    {
+      "path": "packages/domain/finding_lifecycle.py",
+      "previous_layer": "main04-QA-exact",
+      "new_layer": "core-scope01"
+    },
+    {
+      "path": "packages/domain/core_recheck_scope.py",
+      "previous_layer": "core-scope01",
+      "new_layer": "core-scope02"
+    },
+    {
+      "path": "tests/test_core_recheck_scope_integration.py",
+      "previous_layer": "core-scope01",
+      "new_layer": "core-scope02"
+    }
+  ],
+  "scope": "Development integration assembly, API not started, not final product acceptance",
+  "excluded": [
+    "main05 moving independent detectors/comparison",
+    "model governance API and historical proof authority",
+    "assistant generated/global runtime and project conversation routes",
+    "project lifecycle archive routes until all-producer guard integration"
+  ],
+  "paid_calls": 0,
+  "started_services": [],
+  "independent_pending": [
+    "knowledgeRAG02 integrity delta",
+    "whole assembled runtime cross-module validation"
+  ]
+}

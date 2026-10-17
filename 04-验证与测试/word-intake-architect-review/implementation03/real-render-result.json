@@ -1,0 +1,66 @@
+{
+  "candidate_sha256": "b12e2e456ead217296510ae6fde3f7747198d75adffe42706bb3692c28406fa6",
+  "profile_digest": "b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18",
+  "installed_mount_sources_verified_before_after": [
+    {
+      "path": "/workspace/tender-workbench/packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/word_intake/inspection.py",
+      "sha256": "76032305050a35450cf96272708ac0db3ad3d1eafddf78ff80e74b7f84339792"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/word_intake/sandbox_runner.py",
+      "sha256": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289"
+    }
+  ],
+  "public_schema_auxiliary_sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af",
+  "outcome": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "conversion_attempted": true,
+    "error_code": null,
+    "retryable": false,
+    "gaps": [],
+    "chain": {
+      "source_docx_digest": "f64690da4b0e658355e2de5ed4ec1788dbe582a3be2b6dfc270eeb8fa5290bc7",
+      "pdf_digest": "076d504174b098efe9a10a52abe2646f1ff23875b6e31ef9451de9b3842152d9",
+      "profile_digest": "b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18",
+      "renderer_digest": "b37fc2930a1628eadd2830f77317929ed5660f842099d3754827248472faecc5",
+      "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+      "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+      "page_count": 1
+    },
+    "isolation": {
+      "local_image_pinned": true,
+      "network_none": true,
+      "ipc_none": true,
+      "pid_private": true,
+      "uts_private": true,
+      "nonroot": true,
+      "read_only": true,
+      "not_privileged": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_limited": true,
+      "cpu_limited": true,
+      "pids_limited": true,
+      "no_daemon_document_logs": true,
+      "clean_environment": true,
+      "all_bind_mounts_readonly": true,
+      "exact_allowlisted_bind_mounts": true,
+      "no_anonymous_persistent_volumes": true,
+      "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+      "no_docker_socket_mount": true,
+      "bounded_tmpfs_output": true,
+      "own_job_cleanup_confirmed": true
+    }
+  },
+  "pdf_bytes": 16142,
+  "actual_Docker_jobs": 1,
+  "PG_queries": 0,
+  "paid_calls": 0,
+  "object_requests": 0,
+  "consumers": 0
+}

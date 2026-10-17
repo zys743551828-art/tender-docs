@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "bounded_tool_stops_at_expected_state",
+      "passed": true,
+      "observation": {
+        "status": "stopped_business_validation_or_cancel",
+        "guarded_invocations": 1
+      }
+    },
+    {
+      "name": "foreign_messages_skipped_and_no_offset_commit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "schema_valid_response_but_business_quote_rejection_stops_immediately",
+      "passed": true,
+      "observation": {
+        "ledger": [
+          {
+            "state": "succeeded",
+            "usage": {
+              "actual": {
+                "total_tokens": 50,
+                "prompt_tokens": 20,
+                "completion_tokens": 30
+              },
+              "reservation": {
+                "fence": 1,
+                "owner": "3a662979-2fbc-44d0-9def-9eec653efe78",
+                "step_key": "extract-rules",
+                "generation": 1,
+                "max_tokens": 8192,
+                "input_digest": "0177bfc4ad22a10e9d68debd766705adc265cd401f52a95f07370f04e00b2bcf"
+              },
+              "billing_state": "usage_reported"
+            }
+          }
+        ],
+        "operations": [
+          {
+            "handler_version": "prepare/1",
+            "state": "failed"
+          },
+          {
+            "handler_version": "prepare/1",
+            "state": "succeeded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "any_prior_call_blocks_restart_before_consumer_init",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "fc83a015-0fd9-4a5e-8336-858d3ac7157f",
+  "parser_setup_observations": [
+    {
+      "role": "tender",
+      "document_version_id": "ecfeaeab-9ef7-4802-890f-5fcd0114a4ba",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    },
+    {
+      "role": "body",
+      "document_version_id": "034a8a4b-ea49-4b24-9470-1e6f63c718ad",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    }
+  ],
+  "bounded_tool_result": {
+    "status": "stopped_business_validation_or_cancel",
+    "guarded_invocations": 1
+  },
+  "offline_consumer_observations": {
+    "foreign_skipped": false,
+    "closed": true,
+    "consumer_initializations": 1,
+    "handled": [
+      "prepare/1"
+    ],
+    "commits": 0,
+    "config": {
+      "bootstrap.servers": "127.0.0.1:19095",
+      "group.id": "tender-acceptance-5157ae00269e48fb903ad83268b52cd6",
+      "enable.auto.commit": false,
+      "enable.auto.offset.store": false,
+      "auto.offset.reset": "earliest",
+      "max.poll.interval.ms": 300000
+    },
+    "topics": [
+      "tender.task.review.v1"
+    ]
+  },
+  "ledger": [
+    {
+      "state": "succeeded",
+      "usage": {
+        "actual": {
+          "total_tokens": 50,
+          "prompt_tokens": 20,
+          "completion_tokens": 30
+        },
+        "reservation": {
+          "fence": 1,
+          "owner": "3a662979-2fbc-44d0-9def-9eec653efe78",
+          "step_key": "extract-rules",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "0177bfc4ad22a10e9d68debd766705adc265cd401f52a95f07370f04e00b2bcf"
+        },
+        "billing_state": "usage_reported"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "handler_version": "prepare/1",
+      "state": "failed"
+    },
+    {
+      "handler_version": "prepare/1",
+      "state": "succeeded"
+    }
+  ],
+  "offline_transport_requests": 1,
+  "tool_sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+  "probe_sha256": "1e2953e0dbbb3c3bdd403c5e1167359de5f3a8d087a99950b5f20679e4dedd47"
+}

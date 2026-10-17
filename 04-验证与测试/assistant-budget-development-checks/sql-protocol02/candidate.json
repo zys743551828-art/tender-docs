@@ -1,0 +1,13 @@
+{
+  "source": "/workspace/tender-workbench/packages/assistant/sql/intent-budget.sql",
+  "sha256": "ea53f1fe28afefea9fc81c0ad0b71f6c3ef8c9e804994521d71f2aef64b34403",
+  "base_sha256": "29a78914ef825bb519b2ea4a072559d2fc30bb243015bfc6ec267f058a2271a1",
+  "delta": [
+    "explicit observed-usage RPC retains actual late usage even after terminal native result/reconciliation",
+    "sticky manual conflict flag retains original full hold; no automatic cheap release",
+    "admission serialization replaces partial unique so late unknown can reopen without discarding usage",
+    "failed native reservation with no dispatch authority can release only verified not_sent",
+    "currency changes do not sum incomparable money; full NFKC expansion kept; stronger native target/profile relation checks"
+  ],
+  "runtime_ddl_executed": false
+}

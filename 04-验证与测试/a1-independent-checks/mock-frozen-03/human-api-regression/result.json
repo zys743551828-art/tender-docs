@@ -1,0 +1,119 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 7,
+          "completed": 7,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "rule_confirmation_cas_kind_and_exact_replay",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "confirmed_deferred_change_only_human_layer_without_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "batch_rejects_already_confirmed_without_partial_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "invalid_second_addition_rolls_back_entire_manual_pack",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "manual_add_and_confirm_atomic_new_pack_no_auto_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_manual_pack_cannot_overwrite_current_pack",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "f3dc5b30-d8e3-442a-ad40-7306757ec42d",
+  "fatal": {
+    "stage": "complete_freeze_and_review",
+    "type": "AssertionError",
+    "message": "Independent frozen A1 probe incomplete; no private configuration or request credentials logged"
+  },
+  "probe_sha256": "80e92326bb4172c32e71afc05d25440fcdac9fae0a946b170347f8c07cf0aa46"
+}

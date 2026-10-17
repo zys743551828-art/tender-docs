@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "actual_nonowner_and_exact_three_physical_pages_and_prepared_rules_accepted",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "replace_full_body_text_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "omit_blank_physical_page_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "omit_last_page_block_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "add_unapproved_fact_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "add_extra_payload_field_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "replace_prepared_rule_statement_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "drop_prepared_rule_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "change_evidence_id_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "change_known_gap_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "omit_tender_page_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "two_user_payloads_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unrelated_review_run_ref_cannot_supply_rules_chain",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_operation_input_digest_rechecked",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_handler_rechecked",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_bid_other_approved_command_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "foreign_operation_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "fixture_bytes_rechecked_at_each_send",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "scope_rejection_does_not_enter_upstream_or_consume_window",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "parallel_exact_payloads_each_logical_key_at_most_once",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "foreign_bid_rejected_before_upstream",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_bid_current_body_head_drift_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "same_bid_material_revision_drift_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "real_fact_head_even_empty_fact_set_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "core_without_same_command_prepare_effect_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "original_scope_rejects_real_other_command_missing",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_prepare_effect_ruleset_must_match_frozen_manifest",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "original_scope_rejects_real_other_command_wrong-reference",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "matching_actual_human_rule_cannot_enter_core_window",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "original_scope_rejects_real_other_command_human",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "two_same_command_prepare_effects_cannot_choose_arbitrarily",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "original_scope_rejects_real_other_command_ambiguous",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "original_immutable_rules_and_effect_validate_again",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_actual_parse_same_text_rejected_by_identity",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "default_preview_does_not_start_executor",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "no_model_ledger_or_external_calls_created",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "fixture_bid_id": "31e41441-d92b-4dfa-ad24-57532ab73811",
+  "scope": "Actual restricted PG, own prior offline fixture; direct guard and fake upstream, no engine execution or external model",
+  "runtime_candidate_sha256": "000aa789b2c0f31e530323022795529823b2fddffbaf1280a532a2fe7c1806ff",
+  "tool_sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+  "probe_sha256": "fe30f1194a590f4c2ae57b2f026076c6c282eaa1efc053b209cea0644d15500b"
+}

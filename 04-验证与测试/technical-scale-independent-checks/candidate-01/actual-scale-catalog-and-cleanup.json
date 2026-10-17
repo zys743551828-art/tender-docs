@@ -1,0 +1,332 @@
+{
+  "technical_scale_functions": [
+    {
+      "proname": "apply_version",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, design, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.apply_version(target uuid, expected_revision bigint, requested_state text, actor uuid, command uuid)\n RETURNS bigint\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'design', 'pg_temp'\nAS $function$\nDECLARE v technical_scale.versions; old technical_scale.heads; decision uuid:=gen_random_uuid(); next_revision bigint;\nBEGIN\n v:=technical_scale.lock_version(target);\n IF expected_revision IS NULL OR expected_revision<0 OR requested_state IS NULL OR requested_state NOT IN ('pending','confirmed') OR actor IS NULL OR command IS NULL OR actor IS DISTINCT FROM v.actor_id\n  OR NOT EXISTS(SELECT FROM design.commands c WHERE c.id=command AND c.actor_id=actor AND (c.target_id=v.bid_id OR c.target_id=v.supersedes_id)) THEN RAISE EXCEPTION 'scale_command_invalid' USING ERRCODE='22023'; END IF;\n SELECT * INTO old FROM technical_scale.heads WHERE bid_id=v.bid_id AND purpose=v.purpose AND context_id=v.context_id FOR UPDATE;\n IF coalesce(old.revision,0) IS DISTINCT FROM expected_revision OR old.version_id IS DISTINCT FROM v.supersedes_id THEN RAISE EXCEPTION 'scale_head_changed' USING ERRCODE='40001'; END IF;\n IF EXISTS(SELECT FROM technical_scale.decisions WHERE version_id=target) THEN RAISE EXCEPTION 'scale_already_decided' USING ERRCODE='55000'; END IF;\n IF requested_state='confirmed' AND NOT coalesce(technical_scale.qualified_version(target),false) THEN RAISE EXCEPTION 'scale_unqualified' USING ERRCODE='55000'; END IF;\n IF v.purpose='current_prebid' AND EXISTS(SELECT FROM design.bid_profiles p WHERE p.bid_id=v.bid_id AND (p.archived_at IS NOT NULL OR p.phase IN ('closed','terminated'))) THEN RAISE EXCEPTION 'work_closed' USING ERRCODE='55000'; END IF;\n next_revision:=expected_revision+1;\n INSERT INTO technical_scale.decisions VALUES(decision,target,requested_state,actor,command,v.reason,clock_timestamp());\n INSERT INTO technical_scale.heads VALUES(v.bid_id,v.purpose,v.context_id,target,decision,next_revision)\n ON CONFLICT(bid_id,purpose,context_id) DO UPDATE SET version_id=EXCLUDED.version_id,decision_id=EXCLUDED.decision_id,revision=EXCLUDED.revision;\n RETURN next_revision;\nEND $function$\n"
+    },
+    {
+      "proname": "current_context",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, historical_backtest, design, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.current_context(target uuid)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'historical_backtest', 'design', 'pg_temp'\nAS $function$\nDECLARE v technical_scale.versions; identity record; subject historical_backtest.subjects; actual uuid[]; expected uuid[];\nBEGIN\n v:=technical_scale.lock_version(target);\n IF v.purpose='historical_backtest' THEN\n  PERFORM historical_backtest.lock_submission(v.submission_id);\n  SELECT * INTO subject FROM historical_backtest.subjects WHERE id=v.subject_id;\n  RETURN subject.bid_id IS NOT DISTINCT FROM v.bid_id AND subject.submission_id IS NOT DISTINCT FROM v.submission_id\n   AND subject.identity_snapshot IS NOT DISTINCT FROM v.identity_snapshot\n   AND EXISTS(SELECT FROM historical_backtest.subject_heads h JOIN historical_backtest.decisions d ON d.id=h.decision_id\n    WHERE h.submission_id=v.submission_id AND h.subject_id=v.subject_id AND h.decision_id=v.subject_decision_id AND d.object_kind='subject' AND d.object_id=v.subject_id AND d.decision='confirmed')\n   AND EXISTS(SELECT FROM design.submission_records s JOIN design.document_versions body ON body.id=s.body_version_id JOIN design.blobs b ON b.id=body.blob_id\n    WHERE s.id=v.submission_id AND s.bid_id=v.bid_id AND s.body_version_id=subject.body_version_id AND s.submitted_at=subject.submitted_at AND b.digest=subject.body_digest)\n   AND EXISTS(SELECT FROM design.bid_rounds r WHERE r.id=subject.round_id AND r.engineering_project_id=subject.engineering_project_id\n    AND subject.identity_snapshot->'round_no'=to_jsonb(r.round_no) AND subject.identity_snapshot->'lot' IS NOT DISTINCT FROM coalesce(to_jsonb(r.lot),'null'::jsonb))\n   AND historical_backtest.current_proofs(v.subject_id,NULL);\n END IF;\n SELECT profile.*,r.engineering_project_id,r.lot,r.round_no,b.name AS bidder_name,p.title AS engineering_title,p.region,p.engineering_type,\n  authority.id AS authority_id,authority.payload AS identity_record\n INTO identity FROM design.bid_profiles profile JOIN design.bid_rounds r ON r.id=profile.round_id JOIN design.bidders b ON b.id=profile.bidder_id JOIN design.engineering_projects p ON p.id=r.engineering_project_id\n JOIN LATERAL(SELECT id,payload FROM design.audit_entries WHERE bid_id=profile.bid_id AND event_type='identity.bound' ORDER BY coalesce((payload->>'identity_epoch')::bigint,0) DESC,created_at DESC,id DESC LIMIT 1) authority ON true\n WHERE profile.bid_id=v.bid_id;\n IF NOT FOUND OR identity.archived_at IS NOT NULL OR identity.phase IN ('closed','terminated')\n  OR v.identity_snapshot->>'binding_status' IS DISTINCT FROM 'confirmed' OR v.identity_snapshot->>'authority_id' IS DISTINCT FROM identity.authority_id::text\n  OR identity.identity_record->'confirmed' IS DISTINCT FROM 'true'::jsonb\n  OR identity.identity_record->'after' IS DISTINCT FROM jsonb_build_object('bidder_id',identity.bidder_id,'bidder_name',identity.bidder_name,'round_id',identity.round_id,'engineering_project_id',identity.engineering_project_id,'engineering_title',identity.engineering_title,'region',identity.region,'engineering_type',identity.engineering_type,'lot',identity.lot,'round_no',identity.round_no)\n  OR EXISTS(SELECT FROM jsonb_each(identity.identity_record->'after') field WHERE v.identity_snapshot->field.key IS DISTINCT FROM field.value) THEN RETURN false; END IF;\n -- A new unrelated body snapshot need not require another maximum confirmation.\n SELECT array_agg(document_version_id ORDER BY document_version_id) INTO actual FROM design.material_assignments WHERE bid_id=v.bid_id AND snapshot_id=identity.current_material_id AND role IN ('tender','supplement');\n SELECT array_agg(document_version_id ORDER BY document_version_id) INTO expected FROM design.material_assignments WHERE bid_id=v.bid_id AND snapshot_id=v.material_snapshot_id AND role IN ('tender','supplement');\n RETURN expected IS NOT NULL AND actual IS NOT DISTINCT FROM expected;\nEND $function$\n"
+    },
+    {
+      "proname": "current_version",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.current_version(target uuid)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'pg_temp'\nAS $function$\nDECLARE v technical_scale.versions;\nBEGIN\n v:=technical_scale.lock_version(target);\n RETURN EXISTS(SELECT FROM technical_scale.heads h JOIN technical_scale.decisions d ON d.id=h.decision_id WHERE h.bid_id=v.bid_id AND h.purpose=v.purpose AND h.context_id=v.context_id AND h.version_id=v.id AND d.version_id=v.id AND d.state='confirmed') AND technical_scale.qualified_version(target);\nEND $function$\n"
+    },
+    {
+      "proname": "declaration",
+      "prosecdef": false,
+      "proconfig": [
+        "search_path=pg_catalog, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.declaration(content text)\n RETURNS jsonb\n LANGUAGE plpgsql\n IMMUTABLE\n SET search_path TO 'pg_catalog', 'pg_temp'\nAS $function$\nDECLARE matched text[];\nBEGIN\n -- Whole physical evidence block: a quote fragment cannot launder contrary context.\n matched:=regexp_match(content,'\\A\\s*(?:技术总分满分|技术总满分|技术部分满分|技术评分满分|技术标满分|技术总分)\\s*(?:为|是|[:：])?\\s*([0-9]+(?:\\.[0-9]+)?)\\s*分(?:\\s*[，,；;]\\s*(?:量尺|计分口径)\\s*(?:为|是|[:：])\\s*((?:未加权原始分|已加权技术总分)))?\\s*[。.]?\\s*\\Z');\n IF matched IS NULL OR matched[2] IS NULL THEN RETURN NULL; END IF;\n RETURN jsonb_build_object('maximum',matched[1]::numeric,'scale_description',btrim(matched[2]));\nEND $function$\n"
+    },
+    {
+      "proname": "lock_version",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, design, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.lock_version(target uuid)\n RETURNS technical_scale.versions\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'design', 'pg_temp'\nAS $function$\nDECLARE result technical_scale.versions;\nBEGIN\n IF current_setting('transaction_isolation')<>'read committed' THEN RAISE EXCEPTION 'read_committed_required' USING ERRCODE='55000'; END IF;\n SELECT * INTO result FROM technical_scale.versions WHERE id=target;\n IF NOT FOUND THEN RAISE EXCEPTION 'scale_version_missing' USING ERRCODE='P0002'; END IF;\n PERFORM pg_advisory_xact_lock(91143,1);\n PERFORM design.lock_worker_bid(result.bid_id);\n PERFORM pg_advisory_xact_lock(90127,1);\n RETURN result;\nEND $function$\n"
+    },
+    {
+      "proname": "prevent_decided_append",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.prevent_decided_append()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'pg_temp'\nAS $function$\nDECLARE target uuid;\nBEGIN\n IF TG_TABLE_NAME='source_heads' THEN SELECT version_id INTO target FROM technical_scale.evidence WHERE id=NEW.evidence_id; ELSE target:=NEW.version_id; END IF;\n PERFORM technical_scale.lock_version(target);\n IF EXISTS(SELECT FROM technical_scale.decisions WHERE version_id=target) THEN RAISE EXCEPTION 'scale_version_decided' USING ERRCODE='55000'; END IF;\n RETURN NEW;\nEND $function$\n"
+    },
+    {
+      "proname": "qualified_version",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, historical_backtest, design, retrieval, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.qualified_version(target uuid)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'historical_backtest', 'design', 'retrieval', 'pg_temp'\nAS $function$\nDECLARE v technical_scale.versions; ref technical_scale.evidence; block record; binding record; as_of timestamptz; expected uuid[]; actual uuid[]; supported text[]; parsed jsonb; total integer:=0;\nBEGIN\n v:=technical_scale.lock_version(target);\n IF NOT coalesce(technical_scale.current_context(target),false) OR v.technical_maximum IS NULL OR length(btrim(v.scale_description))=0\n  OR (SELECT count(*) FROM jsonb_object_keys(v.aggregation))<>2 THEN RETURN false; END IF;\n IF v.purpose='current_prebid' AND EXISTS(SELECT FROM technical_scale.claims WHERE version_id=target) THEN RETURN false; END IF;\n IF v.purpose='historical_backtest' AND (\n  EXISTS(SELECT FROM technical_scale.claims map JOIN historical_backtest.claims claim ON claim.id=map.claim_id WHERE map.version_id=target AND map.document_version_id IS DISTINCT FROM claim.document_version_id)\n  OR (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM technical_scale.claims WHERE version_id=target) IS DISTINCT FROM (SELECT array_agg(document_version_id ORDER BY document_version_id) FROM (SELECT DISTINCT n.document_version_id FROM technical_scale.evidence e JOIN retrieval.source_ancestors a ON a.source_id=e.source_id JOIN retrieval.source_nodes n ON n.id=a.ancestor_id WHERE e.version_id=target) documents)\n ) THEN RETURN false; END IF;\n IF v.purpose='current_prebid' THEN as_of:=v.created_at;\n ELSE SELECT submitted_at INTO as_of FROM design.submission_records WHERE id=v.submission_id; END IF;\n IF NOT EXISTS(SELECT FROM design.material_assignments a WHERE a.bid_id=v.bid_id AND a.snapshot_id=v.material_snapshot_id AND a.role='tender') THEN RETURN false; END IF;\n FOR ref IN SELECT * FROM technical_scale.evidence WHERE version_id=target LOOP\n  total:=total+1;\n  SELECT e.*,p.document_version_id,p.page_count,p.coverage,p.gaps,b.digest AS blob_digest,page.quality,page.gaps AS page_gaps\n  INTO block FROM design.evidence_blocks e JOIN design.parse_runs p ON p.id=e.parse_id AND p.bid_id=e.bid_id\n  JOIN design.document_versions d ON d.id=p.document_version_id AND d.bid_id=e.bid_id AND d.artifact_kind='source_original'\n  JOIN design.blobs b ON b.id=d.blob_id JOIN design.pages page ON page.parse_id=e.parse_id AND page.physical_page=e.physical_page\n  WHERE e.id=ref.evidence_id AND e.bid_id=v.bid_id;\n  IF NOT FOUND OR ref.bid_id IS DISTINCT FROM v.bid_id OR ref.document_version_id IS DISTINCT FROM block.document_version_id\n   OR ref.blob_digest IS DISTINCT FROM block.blob_digest OR ref.parse_id IS DISTINCT FROM block.parse_id\n   OR ref.evidence_digest IS DISTINCT FROM block.digest OR ref.physical_page IS DISTINCT FROM block.physical_page\n   OR ref.physical_page NOT BETWEEN 1 AND block.page_count OR block.quality<>'usable' OR block.page_gaps<>'[]'::jsonb\n   OR block.coverage<>'complete' OR block.gaps<>'[]'::jsonb\n   OR (SELECT count(*) FROM design.pages page WHERE page.parse_id=ref.parse_id)<>block.page_count\n   OR EXISTS(SELECT FROM design.pages page WHERE page.parse_id=ref.parse_id AND (page.physical_page NOT BETWEEN 1 AND block.page_count OR page.quality<>'usable' OR page.gaps<>'[]'::jsonb))\n   OR block.kind NOT IN ('text','table') OR ref.quote<>block.text_content OR encode(sha256(convert_to(block.text_content,'UTF8')),'hex')<>block.digest::text\n   OR NOT EXISTS(SELECT FROM design.parse_runs p WHERE p.id=ref.parse_id AND p.id=(SELECT p2.id FROM design.parse_runs p2 WHERE p2.bid_id=v.bid_id AND p2.document_version_id=ref.document_version_id ORDER BY p2.created_at DESC,p2.id DESC LIMIT 1))\n   OR NOT EXISTS(SELECT FROM design.material_assignments a WHERE a.bid_id=v.bid_id AND a.snapshot_id=v.material_snapshot_id AND a.document_version_id=ref.document_version_id AND a.role IN ('tender','supplement'))\n   OR NOT EXISTS(SELECT FROM retrieval.source_nodes n JOIN retrieval.source_nodes root ON root.id=ref.root_source_id JOIN retrieval.lineage_edges edge ON edge.child_id=n.id AND edge.parent_id=root.id\n    WHERE n.id=ref.source_id AND n.kind='document' AND n.policy_class='prebid_content' AND n.document_version_id=ref.document_version_id AND n.digest=ref.blob_digest\n     AND root.kind='document' AND root.policy_class='prebid_content' AND root.document_version_id=ref.document_version_id AND root.digest=ref.blob_digest)\n  THEN RETURN false; END IF;\n  IF ref.supported_fields && ARRAY['technical_maximum','scale_description'] THEN\n   parsed:=technical_scale.declaration(block.text_content);\n   IF parsed IS NULL OR (parsed->>'maximum')::numeric IS DISTINCT FROM v.technical_maximum OR parsed->>'scale_description' IS DISTINCT FROM v.scale_description THEN RETURN false; END IF;\n  END IF;\n  SELECT array_agg(ancestor_id ORDER BY ancestor_id) INTO expected FROM retrieval.source_ancestors WHERE source_id=ref.source_id;\n  SELECT array_agg(ancestor_id ORDER BY ancestor_id) INTO actual FROM technical_scale.source_heads WHERE evidence_id=ref.id;\n  IF actual IS DISTINCT FROM expected THEN RETURN false; END IF;\n  IF EXISTS(SELECT FROM technical_scale.source_heads frozen JOIN retrieval.source_nodes n ON n.id=frozen.ancestor_id JOIN retrieval.source_heads h ON h.source_id=n.id\n   WHERE frozen.evidence_id=ref.id AND (n.kind<>'document' OR NOT EXISTS(SELECT FROM design.document_versions owned JOIN design.blobs original ON original.id=owned.blob_id WHERE owned.id=n.document_version_id AND owned.bid_id=v.bid_id AND original.digest=n.digest)\n    OR n.policy_class<>'prebid_content' OR n.known_at>clock_timestamp() OR h.status<>'published' OR h.revision<>frozen.revision OR n.digest<>frozen.digest OR n.known_at<>frozen.known_at\n    OR h.valid_from<>frozen.valid_from OR h.valid_until IS DISTINCT FROM frozen.valid_until OR h.valid_from>clock_timestamp() OR (h.valid_until IS NOT NULL AND h.valid_until<=clock_timestamp())\n    OR (v.purpose='current_prebid' AND (n.known_at>as_of OR h.valid_from>as_of OR (h.valid_until IS NOT NULL AND h.valid_until<=as_of))))) THEN RETURN false; END IF;\n END LOOP;\n -- Historical visibility covers every server-derived ancestor ORIGINAL version,\n -- including a Word parent that correctly has no parsed evidence block of its own.\n -- Claims are exact closure membership, never a client-supplied qualification list.\n IF v.purpose='historical_backtest' THEN\n  FOR binding IN SELECT c.*,map.decision_id,map.document_version_id AS mapped_document_id,b.digest AS actual_document_digest\n   FROM technical_scale.claims map JOIN historical_backtest.claims c ON c.id=map.claim_id\n   JOIN design.document_versions d ON d.id=map.document_version_id AND d.bid_id=v.bid_id JOIN design.blobs b ON b.id=d.blob_id\n   WHERE map.version_id=target LOOP\n   IF binding.document_version_id IS DISTINCT FROM binding.mapped_document_id\n    OR binding.bid_id IS DISTINCT FROM v.bid_id OR binding.submission_id IS DISTINCT FROM v.submission_id OR binding.subject_id IS DISTINCT FROM v.subject_id\n    OR binding.document_digest IS DISTINCT FROM binding.actual_document_digest\n    OR NOT EXISTS(SELECT FROM historical_backtest.claim_heads h JOIN historical_backtest.decisions d ON d.id=h.decision_id WHERE h.submission_id=v.submission_id AND h.document_version_id=binding.mapped_document_id\n     AND h.claim_id=binding.id AND h.decision_id=binding.decision_id AND d.object_kind='claim' AND d.object_id=binding.id AND d.decision='confirmed')\n    OR NOT historical_backtest.current_proofs(NULL,binding.id) THEN RETURN false; END IF;\n   IF EXISTS(SELECT required FROM unnest(ARRAY['content_existed','known_to_bidder','effective']) required WHERE NOT EXISTS(\n    SELECT FROM historical_backtest.facts f WHERE f.claim_id=binding.id AND f.fact_kind=required AND f.claimed_at IS NOT NULL AND f.claimed_at<=as_of\n     AND (f.valid_until IS NULL OR f.valid_until>as_of) AND EXISTS(SELECT FROM historical_backtest.proofs proof WHERE proof.claim_id=binding.id AND proof.fact_kind=required)))\n    OR EXISTS(SELECT FROM historical_backtest.facts existed JOIN historical_backtest.facts fact ON fact.claim_id=existed.claim_id\n     WHERE existed.claim_id=binding.id AND existed.fact_kind='content_existed' AND fact.claimed_at<existed.claimed_at) THEN RETURN false; END IF;\n  END LOOP;\n END IF;\n SELECT array_agg(DISTINCT field) INTO supported FROM technical_scale.evidence e CROSS JOIN LATERAL unnest(e.supported_fields) field WHERE e.version_id=target;\n RETURN coalesce(total BETWEEN 1 AND 50 AND supported @> ARRAY['technical_maximum','scale_description'],false);\nEND $function$\n"
+    },
+    {
+      "proname": "withdraw",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=pg_catalog, technical_scale, design, pg_temp"
+      ],
+      "definition": "CREATE OR REPLACE FUNCTION technical_scale.withdraw(target uuid, expected_revision bigint, reason_text text, actor uuid, command uuid)\n RETURNS bigint\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'pg_catalog', 'technical_scale', 'design', 'pg_temp'\nAS $function$\nDECLARE v technical_scale.versions; old technical_scale.heads; decision uuid:=gen_random_uuid();\nBEGIN\n v:=technical_scale.lock_version(target);\n IF expected_revision IS NULL OR reason_text IS NULL OR length(btrim(reason_text)) NOT BETWEEN 1 AND 4000 OR actor IS NULL OR command IS NULL\n  OR NOT EXISTS(SELECT FROM design.commands c WHERE c.id=command AND c.actor_id=actor AND c.target_id=target) THEN RAISE EXCEPTION 'scale_command_invalid' USING ERRCODE='22023'; END IF;\n SELECT * INTO old FROM technical_scale.heads WHERE bid_id=v.bid_id AND purpose=v.purpose AND context_id=v.context_id FOR UPDATE;\n IF old.version_id IS DISTINCT FROM target OR old.revision IS DISTINCT FROM expected_revision THEN RAISE EXCEPTION 'scale_head_changed' USING ERRCODE='40001'; END IF;\n IF v.purpose='current_prebid' AND EXISTS(SELECT FROM design.bid_profiles p WHERE p.bid_id=v.bid_id AND (p.archived_at IS NOT NULL OR p.phase IN ('closed','terminated'))) THEN RAISE EXCEPTION 'work_closed' USING ERRCODE='55000'; END IF;\n INSERT INTO technical_scale.decisions VALUES(decision,target,'withdrawn',actor,command,reason_text,clock_timestamp());\n UPDATE technical_scale.heads SET decision_id=decision,revision=revision+1 WHERE bid_id=v.bid_id AND purpose=v.purpose AND context_id=v.context_id;\n RETURN expected_revision+1;\nEND $function$\n"
+    }
+  ],
+  "unchanged_score_input_checks": [
+    {
+      "conname": "inputs_actor_id_fkey",
+      "definition": "FOREIGN KEY (actor_id) REFERENCES members(id)"
+    },
+    {
+      "conname": "inputs_bid_id_fkey",
+      "definition": "FOREIGN KEY (bid_id) REFERENCES bids(id)"
+    },
+    {
+      "conname": "inputs_bid_id_review_id_fkey",
+      "definition": "FOREIGN KEY (bid_id, review_id) REFERENCES review_runs(bid_id, id)"
+    },
+    {
+      "conname": "inputs_check",
+      "definition": "CHECK (((review_id IS NULL) <> (historical_input_id IS NULL)))"
+    },
+    {
+      "conname": "inputs_check1",
+      "definition": "CHECK ((((review_id IS NOT NULL) AND (jsonb_typeof(identity_snapshot) = 'object'::text)) OR ((historical_input_id IS NOT NULL) AND (identity_snapshot IS NULL))))"
+    },
+    {
+      "conname": "inputs_check2",
+      "definition": "CHECK ((((review_id IS NOT NULL) AND (review_root_content IS NOT NULL) AND (review_root_digest IS NOT NULL) AND ((octet_length(review_root_content) >= 1) AND (octet_length(review_root_content) <= 8388608)) AND (jsonb_typeof((review_root_content)::jsonb) = 'object'::text) AND (encode(sha256(convert_to(review_root_content, 'UTF8'::name)), 'hex'::text) = (review_root_digest)::text)) OR ((historical_input_id IS NOT NULL) AND (review_root_content IS NULL) AND (review_root_digest IS NULL))))"
+    },
+    {
+      "conname": "inputs_check3",
+      "definition": "CHECK (COALESCE(((jsonb_typeof(price_config) = 'object'::text) AND (price_config ?& ARRAY['profile_digest'::text, 'currency'::text, 'context_tokens'::text, 'max_output_tokens'::text, 'input_per_million'::text, 'output_per_million'::text]) AND ((price_config ->> 'profile_digest'::text) = (method_digest)::text) AND ((price_config ->> 'currency'::text) = 'USD'::text) AND ((price_config -> 'context_tokens'::text) = '1000000'::jsonb) AND ((price_config -> 'max_output_tokens'::text) = '4096'::jsonb)), false))"
+    },
+    {
+      "conname": "inputs_historical_input_id_fkey",
+      "definition": "FOREIGN KEY (historical_input_id) REFERENCES historical_backtest.inputs(id)"
+    },
+    {
+      "conname": "inputs_maximum_verified_check",
+      "definition": "CHECK ((NOT maximum_verified))"
+    },
+    {
+      "conname": "inputs_method_digest_check",
+      "definition": "CHECK (((method_digest)::text = '276a2c953aa86d935d46aabba432f7503ab6ce8081a9375b490ecb2172fd4d48'::text))"
+    },
+    {
+      "conname": "inputs_origin_check",
+      "definition": "CHECK ((origin = ANY (ARRAY['synthetic'::text, 'uncertain'::text])))"
+    },
+    {
+      "conname": "inputs_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "conname": "inputs_technical_maximum_check",
+      "definition": "CHECK ((technical_maximum IS NULL))"
+    }
+  ],
+  "own_four_Word_results_cleanup": [
+    {
+      "operation_id": "d8a4f7f1-509d-4717-8a83-bd789504f878",
+      "outcome": {
+        "gaps": [
+          "WORD_CONVERSION_FAILED"
+        ],
+        "chain": {
+          "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+          "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+          "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+          "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+          "source_docx_digest": "afd38328e18aaada0e4f802a2f1e6a66bfd142c901ff2de1e04640d1405f5971"
+        },
+        "state": "failed",
+        "coverage": "failed",
+        "isolation": {
+          "nonroot": true,
+          "ipc_none": true,
+          "read_only": true,
+          "cpu_limited": true,
+          "pid_private": true,
+          "uts_private": true,
+          "network_none": true,
+          "pids_limited": true,
+          "memory_limited": true,
+          "not_privileged": true,
+          "clean_environment": true,
+          "no_new_privileges": true,
+          "local_image_pinned": true,
+          "bounded_tmpfs_output": true,
+          "capabilities_dropped": true,
+          "no_docker_socket_mount": true,
+          "no_daemon_document_logs": true,
+          "all_bind_mounts_readonly": true,
+          "own_job_cleanup_confirmed": true,
+          "exact_allowlisted_bind_mounts": true,
+          "no_anonymous_persistent_volumes": true,
+          "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true
+        },
+        "retryable": true,
+        "error_code": "WORD_CONVERSION_FAILED",
+        "conversion_attempted": true
+      }
+    },
+    {
+      "operation_id": "50eb0bf1-c8f5-4a13-ba9f-416e51fb74a7",
+      "outcome": {
+        "gaps": [],
+        "chain": {
+          "page_count": 1,
+          "pdf_digest": "1991369bb78637c03d8817a93ea6b7d0deec26b506a9590c02de8f81e8cd5647",
+          "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+          "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+          "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+          "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+          "source_docx_digest": "6308432ed19ffc96fdbbc123191f981ede443faeebbb2aaf433ee68ee03bde84"
+        },
+        "state": "succeeded",
+        "coverage": "complete",
+        "isolation": {
+          "nonroot": true,
+          "ipc_none": true,
+          "read_only": true,
+          "cpu_limited": true,
+          "pid_private": true,
+          "uts_private": true,
+          "network_none": true,
+          "pids_limited": true,
+          "memory_limited": true,
+          "not_privileged": true,
+          "clean_environment": true,
+          "no_new_privileges": true,
+          "local_image_pinned": true,
+          "bounded_tmpfs_output": true,
+          "capabilities_dropped": true,
+          "no_docker_socket_mount": true,
+          "no_daemon_document_logs": true,
+          "all_bind_mounts_readonly": true,
+          "own_job_cleanup_confirmed": true,
+          "exact_allowlisted_bind_mounts": true,
+          "no_anonymous_persistent_volumes": true,
+          "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true
+        },
+        "retryable": false,
+        "error_code": null,
+        "conversion_attempted": true
+      }
+    },
+    {
+      "operation_id": "e5214908-1a92-45bc-be51-7262b8a8981b",
+      "outcome": {
+        "gaps": [],
+        "chain": {
+          "page_count": 1,
+          "pdf_digest": "b503271aad2ad34773e695dffd807d9e662f88d6647d2d352d12420d4422f76d",
+          "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+          "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+          "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+          "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+          "source_docx_digest": "5d8c3745f3f629065e07e524f5eaa4e10af1772aa5909dc0151fdecd4e0fb4c8"
+        },
+        "state": "succeeded",
+        "coverage": "complete",
+        "isolation": {
+          "nonroot": true,
+          "ipc_none": true,
+          "read_only": true,
+          "cpu_limited": true,
+          "pid_private": true,
+          "uts_private": true,
+          "network_none": true,
+          "pids_limited": true,
+          "memory_limited": true,
+          "not_privileged": true,
+          "clean_environment": true,
+          "no_new_privileges": true,
+          "local_image_pinned": true,
+          "bounded_tmpfs_output": true,
+          "capabilities_dropped": true,
+          "no_docker_socket_mount": true,
+          "no_daemon_document_logs": true,
+          "all_bind_mounts_readonly": true,
+          "own_job_cleanup_confirmed": true,
+          "exact_allowlisted_bind_mounts": true,
+          "no_anonymous_persistent_volumes": true,
+          "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true
+        },
+        "retryable": false,
+        "error_code": null,
+        "conversion_attempted": true
+      }
+    },
+    {
+      "operation_id": "14289f36-9b93-4d52-a7d0-3f776435dafc",
+      "outcome": {
+        "gaps": [],
+        "chain": {
+          "page_count": 1,
+          "pdf_digest": "ed7b322a535a4ab05717a7dcc3dc6a23054050f7d6d978786d302b9dfcac2287",
+          "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+          "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+          "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+          "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+          "source_docx_digest": "1429de4a94be99ad0cb2fceb443c558ee3f749e4af6f15068d4ee7af12c6b6b9"
+        },
+        "state": "succeeded",
+        "coverage": "complete",
+        "isolation": {
+          "nonroot": true,
+          "ipc_none": true,
+          "read_only": true,
+          "cpu_limited": true,
+          "pid_private": true,
+          "uts_private": true,
+          "network_none": true,
+          "pids_limited": true,
+          "memory_limited": true,
+          "not_privileged": true,
+          "clean_environment": true,
+          "no_new_privileges": true,
+          "local_image_pinned": true,
+          "bounded_tmpfs_output": true,
+          "capabilities_dropped": true,
+          "no_docker_socket_mount": true,
+          "no_daemon_document_logs": true,
+          "all_bind_mounts_readonly": true,
+          "own_job_cleanup_confirmed": true,
+          "exact_allowlisted_bind_mounts": true,
+          "no_anonymous_persistent_volumes": true,
+          "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true
+        },
+        "retryable": false,
+        "error_code": null,
+        "conversion_attempted": true
+      }
+    }
+  ],
+  "own_scale_versions": [
+    {
+      "id": "f90c0f76-f928-4bca-a27b-1cf328ddb0a1",
+      "purpose": "current_prebid",
+      "technical_maximum": null,
+      "created_at": "2026-10-17T03:51:07.050660+00:00"
+    },
+    {
+      "id": "1f581d45-b5b3-4536-83b5-e5c48ef3fe70",
+      "purpose": "current_prebid",
+      "technical_maximum": "70",
+      "created_at": "2026-10-17T03:51:07.168284+00:00"
+    },
+    {
+      "id": "820c7ef4-5258-4156-b80b-843854e13e9b",
+      "purpose": "current_prebid",
+      "technical_maximum": "70",
+      "created_at": "2026-10-17T03:51:07.473823+00:00"
+    },
+    {
+      "id": "f75a2adb-18c7-460a-8f88-6d61ea98c28b",
+      "purpose": "historical_backtest",
+      "technical_maximum": "70",
+      "created_at": "2026-10-17T03:51:20.622943+00:00"
+    },
+    {
+      "id": "83f33471-9090-4787-a3b9-cb940c9852a6",
+      "purpose": "historical_backtest",
+      "technical_maximum": "70",
+      "created_at": "2026-10-17T03:53:35.220139+00:00"
+    }
+  ]
+}

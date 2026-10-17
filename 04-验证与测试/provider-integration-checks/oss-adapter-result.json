@@ -1,0 +1,34 @@
+{
+  "scope": "原生OSS adapter真实条件写/幂等/冲突/私有下载/签名上传；无AI业务结论",
+  "passed": true,
+  "checks": [
+    "实际adapter首写、同字节复用、异字节409且原SHA保持",
+    "真实adapter签名GET/中文key SHA与匿名403",
+    "实际HTTP使用adapter签名PUT并以原生GET核SHA"
+  ],
+  "started_at": "2026-10-16T16:30:30.208835+00:00",
+  "object_list_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "prefix": "workbench-checks/8cc4dd93-ab76-4e9c-927e-574f0e52fd8e/",
+  "request_ids": {
+    "get": "6AD2512B80B08E3339303905",
+    "anonymous": "6AD2512B80B08E3339093A05",
+    "put": "6AD2512C80B08E3339AF3A05"
+  },
+  "sha256": "a9c4b57db77941cc29928d9909e911bdf9f077402cc12293cc3b8c6ac01f8994",
+  "cleanup": [
+    {
+      "key": "workbench-checks/8cc4dd93-ab76-4e9c-927e-574f0e52fd8e/blobs/适配器合成正文.pdf",
+      "status": 204,
+      "request_id": "6AD2512CE3CCAC3131250EA2"
+    },
+    {
+      "key": "workbench-checks/8cc4dd93-ab76-4e9c-927e-574f0e52fd8e/staging/浏览器上传合成.pdf",
+      "status": 204,
+      "request_id": "6AD2512C80B08E3339EC3C05"
+    }
+  ],
+  "adapter_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+  "probe_sha256": "6a91d83f93c4f7863d526622970a63682abe6ca806784049496e7881d41f32aa",
+  "finished_at": "2026-10-16T16:30:37.117453+00:00"
+}

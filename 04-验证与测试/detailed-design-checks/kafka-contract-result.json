@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "目标契约规范、合法／反例夹具、需求落点与本地文件链接；不调用产品",
+  "executed_at": "2026-10-16T10:49:16.762235+00:00",
+  "schema_definitions": 46,
+  "api_paths": 47,
+  "api_operations": 50,
+  "positive_examples": 9,
+  "rejected_counterexamples": 21,
+  "requirements_traced": 54,
+  "local_links_checked": 34,
+  "checks": 170,
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "openapi-spec-validator": "0.7.2"
+  },
+  "inputs": {
+    "05-技术与设计/AI投标工作台详细技术设计.md": "88fa9369aabde3ea5c8e93d62f62cc7967ce6d363863bbf267c8d6d6b8e26e40",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/protocol.schema.json": "a2b9b1a24220402296d0ddcc0e097712799ac4ff41a60f441f6f041180c894e6",
+    "05-技术与设计/detailed-design/openapi.json": "131b829b7fd3db1e0bf666bc1758197f41e72ec4bf36e9e4add446c411557491",
+    "05-技术与设计/detailed-design/execution-policy.json": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+    "05-技术与设计/detailed-design/retrieval-policy.json": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+    "05-技术与设计/detailed-design/README.md": "014a1ef0eda2b086f62aa9999a035aa492345275540c509d6cc91a95dfe4af51",
+    "04-验证与测试/detailed-design-checks/requirements-trace.json": "6a52e025770dd664b363c6ea9c094f2cf693e2b3ae2d72c1c1744d5a11747f13",
+    "04-验证与测试/detailed-design-checks/README.md": "d090657631c09e31c3f2be1c88176a9fec57559469d0c1dc919a0b99f2e03153",
+    "04-验证与测试/detailed-design-checks/requirements.lock.txt": "b6694358b23abb4512fb238325091f75cde5ba11ce6faa4aa13d3f55ec200dab",
+    "04-验证与测试/detailed-design-checks/check_contracts.py": "a9ba2f4e08b8c3bb8c5a82cef05d196db37264248cc65df5b13be7c01a1bd95f"
+  },
+  "software_end_to_end_executed": false
+}

@@ -1,0 +1,1574 @@
+{
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "HistoricalConfirmationRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "HistoricalConfirmationRequest",
+        "type": "object"
+      },
+      "HistoricalFact": {
+        "additionalProperties": false,
+        "properties": {
+          "claimed_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Claimed At"
+          },
+          "explanation": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          },
+          "fact_kind": {
+            "enum": [
+              "content_existed",
+              "published",
+              "effective",
+              "known_to_bidder",
+              "received_by_bidder"
+            ],
+            "title": "Fact Kind",
+            "type": "string"
+          },
+          "proof_refs": {
+            "items": {
+              "$ref": "#/components/schemas/ProofReference"
+            },
+            "maxItems": 50,
+            "title": "Proof Refs",
+            "type": "array"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Valid Until"
+          }
+        },
+        "required": [
+          "fact_kind",
+          "claimed_at",
+          "proof_refs",
+          "explanation"
+        ],
+        "title": "HistoricalFact",
+        "type": "object"
+      },
+      "HistoricalIdentityProjection": {
+        "additionalProperties": false,
+        "properties": {
+          "bidder_id": {
+            "format": "uuid",
+            "title": "Bidder Id",
+            "type": "string"
+          },
+          "bidder_name": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Bidder Name",
+            "type": "string"
+          },
+          "engineering_project_id": {
+            "format": "uuid",
+            "title": "Engineering Project Id",
+            "type": "string"
+          },
+          "engineering_title": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Engineering Title",
+            "type": "string"
+          },
+          "engineering_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Engineering Type"
+          },
+          "lot": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lot"
+          },
+          "region": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region"
+          },
+          "round_id": {
+            "format": "uuid",
+            "title": "Round Id",
+            "type": "string"
+          },
+          "round_no": {
+            "minimum": 1,
+            "title": "Round No",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "bidder_id",
+          "bidder_name",
+          "round_id",
+          "engineering_project_id",
+          "engineering_title",
+          "region",
+          "engineering_type",
+          "lot",
+          "round_no"
+        ],
+        "title": "HistoricalIdentityProjection",
+        "type": "object"
+      },
+      "HistoricalProofCapabilities": {
+        "additionalProperties": false,
+        "properties": {
+          "formal_model_eligibility": {
+            "const": "unavailable"
+          },
+          "historical_input_execution": {
+            "const": false
+          },
+          "paid_execution_enabled": {
+            "const": false
+          },
+          "proof_and_subject_commands": {
+            "type": "boolean"
+          },
+          "schema_configured": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "schema_configured",
+          "proof_and_subject_commands",
+          "historical_input_execution",
+          "formal_model_eligibility",
+          "paid_execution_enabled"
+        ],
+        "type": "object"
+      },
+      "HistoricalProofContext": {
+        "additionalProperties": false,
+        "properties": {
+          "bid_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "body_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "body_version_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "claim_heads": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "decision": {
+                  "enum": [
+                    "pending",
+                    "confirmed",
+                    "rejected"
+                  ]
+                },
+                "decision_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "document_version_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "revision": {
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "document_version_id",
+                "claim_id",
+                "decision_id",
+                "revision",
+                "decision"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "original_review_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "prediction_timing": {
+            "const": "retrospective"
+          },
+          "subject_head": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  },
+                  "decision_id": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "revision": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "subject_id": {
+                    "format": "uuid",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "subject_id",
+                  "decision_id",
+                  "revision",
+                  "decision"
+                ],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "submission_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "submitted_at": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "submission_id",
+          "bid_id",
+          "body_version_id",
+          "body_digest",
+          "submitted_at",
+          "original_review_id",
+          "subject_head",
+          "claim_heads",
+          "historical_input_available",
+          "formal_eligibility",
+          "prediction_timing"
+        ],
+        "type": "object"
+      },
+      "HistoricalSubjectAuthorityView": {
+        "additionalProperties": false,
+        "properties": {
+          "actor_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "bid_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "bidder_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "body_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "body_version_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "declared_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "engineering_project_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "head_revision": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "identity_snapshot": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HistoricalIdentityProjection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_current_head": {
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "subject"
+          },
+          "last_own_decision": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "actor_id": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  },
+                  "id": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "decision",
+                  "actor_id",
+                  "reason",
+                  "created_at"
+                ],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "manual_decision": {
+            "enum": [
+              "pending",
+              "confirmed",
+              "rejected",
+              "superseded"
+            ]
+          },
+          "proof_refs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "bid_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "claim_id": {
+                  "anyOf": [
+                    {
+                      "format": "uuid",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "document_digest": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "document_version_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "evidence_digest": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "evidence_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "fact_kind": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "content_existed",
+                        "published",
+                        "effective",
+                        "known_to_bidder",
+                        "received_by_bidder"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "parse_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "physical_page": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "root_source_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "source_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "subject_id": {
+                  "anyOf": [
+                    {
+                      "format": "uuid",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "bid_id",
+                "subject_id",
+                "claim_id",
+                "fact_kind",
+                "document_version_id",
+                "document_digest",
+                "parse_id",
+                "evidence_id",
+                "physical_page",
+                "evidence_digest",
+                "source_id",
+                "root_source_id",
+                "quote",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "proofs_current": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "related_subject_current": {
+            "type": "null"
+          },
+          "round_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_relationship_current": {
+            "type": "boolean"
+          },
+          "submission_current": {
+            "type": "boolean"
+          },
+          "submission_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "submitted_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "submission_id",
+          "declared_origin",
+          "supersedes_id",
+          "reason",
+          "actor_id",
+          "created_at",
+          "last_own_decision",
+          "head_revision",
+          "is_current_head",
+          "submission_current",
+          "manual_decision",
+          "proofs_current",
+          "proof_refs",
+          "historical_input_available",
+          "formal_eligibility",
+          "kind",
+          "body_version_id",
+          "body_digest",
+          "submitted_at",
+          "bidder_id",
+          "round_id",
+          "engineering_project_id",
+          "identity_snapshot",
+          "subject_relationship_current",
+          "related_subject_current"
+        ],
+        "type": "object"
+      },
+      "HistoricalSubjectRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "declared_data_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ],
+            "title": "Declared Data Origin",
+            "type": "string"
+          },
+          "proof_refs": {
+            "items": {
+              "$ref": "#/components/schemas/ProofReference"
+            },
+            "maxItems": 50,
+            "title": "Proof Refs",
+            "type": "array"
+          },
+          "proposed_identity": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HistoricalIdentityProjection"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "submission_id": {
+            "format": "uuid",
+            "title": "Submission Id",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Supersedes Id"
+          }
+        },
+        "required": [
+          "submission_id",
+          "proof_refs",
+          "declared_data_origin",
+          "reason"
+        ],
+        "title": "HistoricalSubjectRequest",
+        "type": "object"
+      },
+      "HistorySourceClaimRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "declared_data_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ],
+            "title": "Declared Data Origin",
+            "type": "string"
+          },
+          "document_version_id": {
+            "format": "uuid",
+            "title": "Document Version Id",
+            "type": "string"
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/HistoricalFact"
+            },
+            "maxItems": 5,
+            "minItems": 1,
+            "title": "Facts",
+            "type": "array"
+          },
+          "historical_subject_authority_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Historical Subject Authority Id"
+          },
+          "reason": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          },
+          "submission_id": {
+            "format": "uuid",
+            "title": "Submission Id",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Supersedes Id"
+          }
+        },
+        "required": [
+          "submission_id",
+          "document_version_id",
+          "facts",
+          "declared_data_origin",
+          "reason"
+        ],
+        "title": "HistorySourceClaimRequest",
+        "type": "object"
+      },
+      "HistorySourceClaimView": {
+        "additionalProperties": false,
+        "properties": {
+          "actor_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "bid_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "declared_origin": {
+            "enum": [
+              "real",
+              "synthetic",
+              "uncertain"
+            ]
+          },
+          "document_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "document_version_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "facts": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "claim_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "claimed_at": {
+                  "anyOf": [
+                    {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "fact_kind": {
+                  "enum": [
+                    "content_existed",
+                    "published",
+                    "effective",
+                    "known_to_bidder",
+                    "received_by_bidder"
+                  ]
+                },
+                "valid_until": {
+                  "anyOf": [
+                    {
+                      "format": "date-time",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "claim_id",
+                "fact_kind",
+                "claimed_at",
+                "valid_until",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "formal_eligibility": {
+            "const": "unavailable"
+          },
+          "head_revision": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "historical_input_available": {
+            "const": false
+          },
+          "id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "is_current_head": {
+            "type": "boolean"
+          },
+          "kind": {
+            "const": "claim"
+          },
+          "last_own_decision": {
+            "anyOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "actor_id": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "decision": {
+                    "enum": [
+                      "pending",
+                      "confirmed",
+                      "rejected"
+                    ]
+                  },
+                  "id": {
+                    "format": "uuid",
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "decision",
+                  "actor_id",
+                  "reason",
+                  "created_at"
+                ],
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "manual_decision": {
+            "enum": [
+              "pending",
+              "confirmed",
+              "rejected",
+              "superseded"
+            ]
+          },
+          "proof_refs": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "bid_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "claim_id": {
+                  "anyOf": [
+                    {
+                      "format": "uuid",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "document_digest": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "document_version_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "evidence_digest": {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "evidence_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "fact_kind": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "content_existed",
+                        "published",
+                        "effective",
+                        "known_to_bidder",
+                        "received_by_bidder"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "parse_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "physical_page": {
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "root_source_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "source_id": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "subject_id": {
+                  "anyOf": [
+                    {
+                      "format": "uuid",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "bid_id",
+                "subject_id",
+                "claim_id",
+                "fact_kind",
+                "document_version_id",
+                "document_digest",
+                "parse_id",
+                "evidence_id",
+                "physical_page",
+                "evidence_digest",
+                "source_id",
+                "root_source_id",
+                "quote",
+                "explanation"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "proofs_current": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "related_subject_current": {
+            "type": "boolean"
+          },
+          "subject_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subject_relationship_current": {
+            "type": "null"
+          },
+          "submission_current": {
+            "type": "boolean"
+          },
+          "submission_id": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "supersedes_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "submission_id",
+          "declared_origin",
+          "supersedes_id",
+          "reason",
+          "actor_id",
+          "created_at",
+          "last_own_decision",
+          "head_revision",
+          "is_current_head",
+          "submission_current",
+          "manual_decision",
+          "proofs_current",
+          "proof_refs",
+          "historical_input_available",
+          "formal_eligibility",
+          "kind",
+          "document_version_id",
+          "document_digest",
+          "subject_id",
+          "subject_relationship_current",
+          "related_subject_current",
+          "facts"
+        ],
+        "type": "object"
+      },
+      "ProofReference": {
+        "additionalProperties": false,
+        "properties": {
+          "blob_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Blob Digest",
+            "type": "string"
+          },
+          "document_version_id": {
+            "format": "uuid",
+            "title": "Document Version Id",
+            "type": "string"
+          },
+          "evidence_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Evidence Digest",
+            "type": "string"
+          },
+          "evidence_id": {
+            "format": "uuid",
+            "title": "Evidence Id",
+            "type": "string"
+          },
+          "explanation": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Explanation",
+            "type": "string"
+          },
+          "parse_id": {
+            "format": "uuid",
+            "title": "Parse Id",
+            "type": "string"
+          },
+          "physical_page": {
+            "minimum": 1,
+            "title": "Physical Page",
+            "type": "integer"
+          },
+          "quote": {
+            "maxLength": 16000,
+            "minLength": 1,
+            "title": "Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "document_version_id",
+          "blob_digest",
+          "parse_id",
+          "evidence_id",
+          "physical_page",
+          "evidence_digest",
+          "quote",
+          "explanation"
+        ],
+        "title": "ProofReference",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/v1/historical-proof/capabilities": {
+      "get": {
+        "operationId": "capabilities_api_v1_historical_proof_capabilities_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalProofCapabilities"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          }
+        },
+        "summary": "Capabilities",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/source-claims": {
+      "post": {
+        "operationId": "save_claim_api_v1_historical_proof_source_claims_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistorySourceClaimRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorySourceClaimView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Save Claim",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/source-claims/{claim_id}": {
+      "get": {
+        "operationId": "get_claim_api_v1_historical_proof_source_claims__claim_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "claim_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Claim Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorySourceClaimView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Claim",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/source-claims/{claim_id}/confirm": {
+      "post": {
+        "operationId": "confirm_claim_api_v1_historical_proof_source_claims__claim_id__confirm_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "claim_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Claim Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoricalConfirmationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorySourceClaimView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Confirm Claim",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/subjects": {
+      "post": {
+        "operationId": "save_subject_api_v1_historical_proof_subjects_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoricalSubjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalSubjectAuthorityView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Save Subject",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/subjects/{subject_id}": {
+      "get": {
+        "operationId": "get_subject_api_v1_historical_proof_subjects__subject_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subject_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Subject Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalSubjectAuthorityView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Subject",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/subjects/{subject_id}/confirm": {
+      "post": {
+        "operationId": "confirm_subject_api_v1_historical_proof_subjects__subject_id__confirm_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subject_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Subject Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoricalConfirmationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalSubjectAuthorityView"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Confirm Subject",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    },
+    "/api/v1/historical-proof/submissions/{submission_id}/context": {
+      "get": {
+        "operationId": "get_context_api_v1_historical_proof_submissions__submission_id__context_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "submission_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Submission Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalProofContext"
+                }
+              }
+            },
+            "description": "Manual evidence authority only; input qualification unavailable"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Context",
+        "tags": [
+          "historical-proof"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed_native_OSS_full_development_read_only_restore",
+  "created_at": "2026-10-16T20:01:20.227296+00:00",
+  "integration_tests_passed": 1,
+  "local_boundary_regressions_passed": 8,
+  "explicit_environment_tests_skipped_in_unit_only_command": 3,
+  "source_database": "tender_native_probe_04843840b3f94e04ac96ab948bcb8374",
+  "restore_database": "tender_catalog_restore_2074be0689b643d3bf215963dc982505",
+  "private_proof_relative_path": ".local/backups/generic-native-04843840b3f94e04ac96ab948bcb8374/native-proof.json",
+  "private_archive_relative_path": ".local/backups/generic-native-04843840b3f94e04ac96ab948bcb8374",
+  "archive_manifest_sha256": "1e4f710ab8a3a721df3e7e3f4de92cfd0d017b17fdc5bb044e8adae0699f99ef",
+  "schemas_verified": [
+    "design",
+    "future.native",
+    "public",
+    "retrieval"
+  ],
+  "tables_verified": 108,
+  "objects_verified": 3,
+  "object_bytes_verified": 524610,
+  "source_objects_after_concurrent_commit": 4,
+  "exact_native_requests": {
+    "PUT": 7,
+    "GET": 9,
+    "LIST": 0,
+    "DELETE": 0
+  },
+  "concurrent_source_commit_excluded_from_dump_and_object_manifest": true,
+  "all_registered_source_and_restore_objects_retained": true,
+  "all_discovered_schema_write_privileges_revoked": true,
+  "real_insert_denied_with_read_only_disabled": true,
+  "source_probe_also_hardened_read_only": true,
+  "all_private_archive_files_700_or_600": true,
+  "private_archive_git_ignored": true,
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy_generic": "passed",
+    "bandit_generic": "passed"
+  },
+  "generic_database_candidate_sha256": "ebcd8b4d674ce067419b5878b5c751186394587a1932cb5308eba6c13c07d5f3",
+  "generic_database_source_unchanged": true,
+  "resolved_fixture_setup_failure": "missing synthetic bids.settings rejected before any OSS call; fixture corrected",
+  "model_calls": 0,
+  "consumer_started": false,
+  "full_application_restore_qualified": false,
+  "production_rpo_rto_qualified": false,
+  "independent_approved": false
+}

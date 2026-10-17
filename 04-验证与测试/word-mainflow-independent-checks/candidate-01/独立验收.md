@@ -1,0 +1,17 @@
+# Word 主桥接01独立验收
+
+结论：本次定向机制验收通过，未发现新增产品阻塞。候选 `9b609a89975c31ab945aacbbe8f63639edd37d51b622ee92c788146270cd7168`，335份执行输入清单 `d176e49a1e6a75ccb0ee5bac06d033689b1adf53e5a79ec7769ab4fabe8f6132` 前后核验一致，原字节另存本目录。实际执行使用原固定runtime-preview-02，因sandbox_runner绝对路径参与转换身份，未把复制路径冒称同一运行身份。固定profile为 `61284d08db2703f4d753a3d098e0e54d8d84926ec5fa65c7ee3d3cf1f14a406b`。
+
+实际冷导出与冻结契约完全相等：165路径、192操作、315模型，SHA `e1f7c5389386d7a9224ffc469bd878500a79e819780fee8c581781f73758e602`。使用专属fresh库的非owner API/ordinary Worker，通过真实ASGI与会话/CSRF/Origin、真实Outbox及engine acquire/compute/finish。对象端口明确为Memory，仍通过实际同源PUT和GET处理；没有原生OSS或Kafka消费者。
+
+11项独立场景支持以下结论：
+
+- 默认关闭先503且不写对象；错误bid原件/采用状态均404。动态PAGE域及外部关系Word保存精确原字节，但不执行Docker，不产生受控PDF资格。
+- 早完成和晚完成均实际通过固定无网Docker转换，再由API采用为当前PDF；真实本地CPU解析产生完整物理页及含90天的原页文字。Word→PDF→parse祖先链成立，Word根无chunks，原Word和转换PDF实际下载字节逐字一致。
+- 转换PDF对象损坏时拒绝采用，恢复精确字节才可采用。旧转换晚到仅留历史PDF，不覆盖后来Word。明确建立真实来源根并撤回1行后，采用为needs_selection，正文仍未采用。
+- 取消后的旧finish拒绝，关闭项目的Word Worker不发布outcome/PDF。人工补传PDF一直是user_declared_same_draft/unverified；后来的新Word清除旧PDF当前资格并保留历史。
+- 实际两事务反向开始/受理顺序验证clock_timestamp默认值；新pending或failed请求不回退旧成功，API不能更新请求时间/转换outcome。该条新请求通过真实API仓储机制显式建立，失败为明确本地disabled-render注入，不称成功状态允许HTTP重试或自然沙箱故障。
+
+原失败回合全部保留：Memory put缺ETag、误对空200解JSON、误用下载字段url，以及首次采用前尚不存在来源根而撤回UPDATE为0。只更正测试端口、字段和来源前置夹具，被测335源、SQL和权限未修改。失败后的最小增量分别通过；最终有效范围为5项基础、4项实际Docker与采用、2项撤回与请求顺序。原XML中失败不被覆写为绿。
+
+0真实模型/云对象、0消费者/relay、0新SQL/修权，8806/8808等共享服务未动。本结论不覆盖Kafka、原生OSS、浏览器、复杂真实Word保真、广泛解析精度、正式三次评审、评分或Word交付检查资格。完整脚本/每轮摘要/实际目录与自有run观测见final-result.json。

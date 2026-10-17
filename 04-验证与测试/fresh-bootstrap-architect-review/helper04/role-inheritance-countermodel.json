@@ -1,0 +1,30 @@
+{
+  "scope": "static role graph countermodel, not executed against PostgreSQL",
+  "candidate_sha256": "bc414d201b48c7a7ada62478c53c7d975c840ce4aee217b247b08f9ecd78e869",
+  "nodes": {
+    "existing_tender_assistant_budget_admin": {
+      "rolcanlogin": false,
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false,
+      "rolreplication": false
+    },
+    "new_purpose_login": {
+      "inherit": true,
+      "member_of": [
+        "tender_assistant_budget_admin"
+      ]
+    }
+  },
+  "preexisting_edge": {
+    "member": "tender_assistant_budget_admin",
+    "role": "tender_api"
+  },
+  "current_helper_group_flag_guard_accepts": true,
+  "current_verify_connection_rejects_this_membership": false,
+  "effective_business_access": "inherits tender_api privileges; no relation ownership necessary",
+  "expected": "reject group upstream membership and verify new LOGIN exact capability closure before profile publication",
+  "PG_executed": false,
+  "helper05_implemented": false
+}

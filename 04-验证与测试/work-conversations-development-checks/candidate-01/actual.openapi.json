@@ -1,0 +1,785 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/bids/{bid_id}/conversations/main": {
+      "post": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "Ensure Main Conversation",
+        "operationId": "ensureMainWorkConversation",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkConversationView"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "Get Main Conversation",
+        "operationId": "getMainWorkConversation",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkConversationView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/conversations/{conversation_id}": {
+      "get": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "Get Work Conversation",
+        "operationId": "getWorkConversation",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkConversationView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/conversations/{conversation_id}/state": {
+      "post": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "Change Work Conversation",
+        "operationId": "changeWorkConversationState",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkConversationStateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkConversationView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/conversations/{conversation_id}/messages": {
+      "post": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "Record Work Message",
+        "operationId": "recordWorkMessage",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkMessageView"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "work-conversations"
+        ],
+        "summary": "List Work Messages",
+        "operationId": "listWorkMessages",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Conversation Id"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Before"
+            }
+          }
+        ],
+        "responses": {
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "工作会话持久记录，不代表模型答复或正式操作已完成",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkMessagePage"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WorkMessageRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "client_message_id",
+          "text",
+          "source_version_ids"
+        ],
+        "properties": {
+          "client_message_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000,
+            "pattern": "\\S"
+          },
+          "source_version_ids": {
+            "type": "array",
+            "maxItems": 50,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "WorkConversationStateRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "enum": [
+              "active",
+              "closed",
+              "hidden"
+            ]
+          }
+        }
+      },
+      "WorkConversationView": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "state": {
+            "enum": [
+              "active",
+              "closed",
+              "hidden"
+            ]
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scope": {
+            "const": "project"
+          },
+          "is_main": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "stream_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "state",
+          "revision",
+          "created_at",
+          "scope",
+          "is_main",
+          "title",
+          "stream_id"
+        ],
+        "additionalProperties": false
+      },
+      "WorkMessageView": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "conversation_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "client_message_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "role": {
+            "enum": [
+              "user",
+              "assistant",
+              "tool"
+            ]
+          },
+          "parts": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "const": "text"
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "const": "source_reference"
+                    },
+                    "document_version_id": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "source_bid_id": {
+                      "type": "string",
+                      "format": "uuid"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "document_version_id",
+                    "source_bid_id"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "created_by": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded": {
+            "const": true
+          },
+          "assistant_operation_id": {
+            "type": "null"
+          },
+          "formal_scoring_input": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "bid_id",
+          "conversation_id",
+          "client_message_id",
+          "role",
+          "parts",
+          "created_by",
+          "created_at",
+          "recorded",
+          "assistant_operation_id",
+          "formal_scoring_input"
+        ],
+        "additionalProperties": false
+      },
+      "WorkMessagePage": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "bid_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "conversation_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "client_message_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "role": {
+                  "enum": [
+                    "user",
+                    "assistant",
+                    "tool"
+                  ]
+                },
+                "parts": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "const": "text"
+                          },
+                          "text": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "const": "source_reference"
+                          },
+                          "document_version_id": {
+                            "type": "string",
+                            "format": "uuid"
+                          },
+                          "source_bid_id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "document_version_id",
+                          "source_bid_id"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "created_by": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "recorded": {
+                  "const": true
+                },
+                "assistant_operation_id": {
+                  "type": "null"
+                },
+                "formal_scoring_input": {
+                  "const": false
+                }
+              },
+              "required": [
+                "id",
+                "bid_id",
+                "conversation_id",
+                "client_message_id",
+                "role",
+                "parts",
+                "created_by",
+                "created_at",
+                "recorded",
+                "assistant_operation_id",
+                "formal_scoring_input"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "has_more": {
+            "type": "boolean"
+          },
+          "before": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "items",
+          "has_more",
+          "before"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

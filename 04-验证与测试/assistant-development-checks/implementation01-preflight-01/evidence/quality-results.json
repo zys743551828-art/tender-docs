@@ -1,0 +1,99 @@
+[
+  {
+    "check": "ruff",
+    "argv": [
+      "/workspace/tender-workbench/.venv/bin/ruff",
+      "check",
+      "apps/api/assistant_routes.py",
+      "packages/assistant/__init__.py",
+      "packages/assistant/actions.py",
+      "packages/assistant/actual.py",
+      "packages/assistant/authority.py",
+      "packages/assistant/context.py",
+      "packages/assistant/contracts.py",
+      "packages/assistant/conversations.py",
+      "packages/assistant/coordinator.py",
+      "packages/assistant/generation.py",
+      "packages/assistant/global_runtime.py",
+      "packages/assistant/jobs.py",
+      "packages/assistant/protocol.py",
+      "packages/assistant/tasks.py",
+      "packages/assistant/transport.py",
+      "packages/authoring/patches.py",
+      "tests/test_assistant.py",
+      "tests/test_assistant_integration.py",
+      "tests/test_work_conversations.py"
+    ],
+    "exit_code": 0,
+    "log": "evidence/ruff.log",
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  {
+    "check": "format",
+    "argv": [
+      "/workspace/tender-workbench/.venv/bin/ruff",
+      "format",
+      "--check",
+      "apps/api/assistant_routes.py",
+      "packages/assistant/__init__.py",
+      "packages/assistant/actions.py",
+      "packages/assistant/actual.py",
+      "packages/assistant/authority.py",
+      "packages/assistant/context.py",
+      "packages/assistant/contracts.py",
+      "packages/assistant/conversations.py",
+      "packages/assistant/coordinator.py",
+      "packages/assistant/generation.py",
+      "packages/assistant/global_runtime.py",
+      "packages/assistant/jobs.py",
+      "packages/assistant/protocol.py",
+      "packages/assistant/tasks.py",
+      "packages/assistant/transport.py",
+      "packages/authoring/patches.py",
+      "tests/test_assistant.py",
+      "tests/test_assistant_integration.py",
+      "tests/test_work_conversations.py"
+    ],
+    "exit_code": 0,
+    "log": "evidence/format.log",
+    "sha256": "a0a0f191878d553ae2b88299d5ead34d7a6367937ff1bd9e304fb73059c83f8a"
+  },
+  {
+    "check": "mypy",
+    "argv": [
+      "/workspace/tender-workbench/.venv/bin/mypy",
+      "packages/assistant",
+      "apps/api/assistant_routes.py",
+      "packages/authoring/patches.py"
+    ],
+    "exit_code": 0,
+    "log": "evidence/mypy.log",
+    "sha256": "ca16d6d1a06c6903f5407ba5268cb8b5eb5d8c7811b7532282916ec31807c328"
+  },
+  {
+    "check": "bandit",
+    "argv": [
+      "/workspace/tender-workbench/.venv/bin/bandit",
+      "-q",
+      "-r",
+      "packages/assistant",
+      "apps/api/assistant_routes.py",
+      "packages/authoring/patches.py"
+    ],
+    "exit_code": 0,
+    "log": "evidence/bandit.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "check": "pure",
+    "argv": [
+      "/workspace/tender-workbench/.venv/bin/pytest",
+      "tests/test_assistant.py",
+      "-q",
+      "--junitxml=../evidence/pure-junit.xml"
+    ],
+    "exit_code": 0,
+    "log": "evidence/pure.log",
+    "sha256": "b98c441a26017240245baf9cf1ba6b60f626a1d50a099a260f0e2255bf80c03e"
+  }
+]

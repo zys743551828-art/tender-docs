@@ -1,0 +1,63 @@
+{
+  "candidate_sha256": "740266ccd1b9aff91adf96414806dbabf6c6f66f66289c0d9f3f96a47bd5e27a",
+  "sources_verified": 12,
+  "dependencies_observed": {
+    "packages/identity/repository.py": {
+      "expected": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "actual": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22"
+    },
+    "packages/research/identities.py": {
+      "expected": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+      "actual": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e"
+    },
+    "packages/research/outcomes.py": {
+      "expected": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+      "actual": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1"
+    },
+    "packages/domain/runtime.py": {
+      "expected": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "actual": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    "packages/domain/finding_lifecycle.py": {
+      "expected": "8d856f2de574a7c142f85e4ad8e2cf3875fc9672f630bb40364ae6d3a78c3d66",
+      "actual": "8d856f2de574a7c142f85e4ad8e2cf3875fc9672f630bb40364ae6d3a78c3d66"
+    },
+    "packages/domain/reviews.py": {
+      "expected": "b577dc5ff5f51cd44119faf5ef0f55092381d0a9ef16c0c696de77eaf7039015",
+      "actual": "b577dc5ff5f51cd44119faf5ef0f55092381d0a9ef16c0c696de77eaf7039015"
+    },
+    "packages/domain/review_data.py": {
+      "expected": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+      "actual": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822"
+    },
+    "apps/api/auth.py": {
+      "expected": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+      "actual": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    "packages/contracts/sql/roles.sql": {
+      "expected": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "actual": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    "packages/contracts/sql/worker-functions.sql": {
+      "expected": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "actual": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    }
+  },
+  "candidate_cases": 19,
+  "independent_counterexamples_reproduced": 2,
+  "actual_postgresql_nonowner": true,
+  "actual_login_asgi": true,
+  "paid_calls": 0,
+  "cloud_requests": 0,
+  "consumers_started": false,
+  "private_config_read": false,
+  "loaded_modules": {
+    "apps.api.metrics_routes": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/apps/api/metrics_routes.py",
+    "packages.metrics.results": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/results.py",
+    "packages.metrics.views": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/views.py",
+    "packages.metrics.predictions": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/predictions.py",
+    "packages.metrics.snapshots": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/snapshots.py",
+    "packages.metrics.core": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/core.py",
+    "packages.metrics.records": "/workspace/tender-workbench/docs/metrics-development-checks/frozen-inputs/packages/metrics/records.py"
+  }
+}

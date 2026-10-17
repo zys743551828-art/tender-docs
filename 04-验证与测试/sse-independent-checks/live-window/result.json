@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "private_payload_projected_to_metadata_only",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stream_cache_and_proxy_headers",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "real_55second_window_keeps_alive_and_requests_reconnect",
+      "passed": true,
+      "observation": {
+        "seconds": 56.01071122099529,
+        "keepalives": 3
+      }
+    },
+    {
+      "name": "reconnect_cursor_replays_only_new_event",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "future_cursor410_cross_project_cursor422_before_stream",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "logout_during_actual_stream_control_then_close",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "revoked_session_cannot_reconnect",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "scope": "Actual TCP8802 stream, real release PG own synthetic metadata; no review scheduling",
+  "bid_id": "d05aeb54-a867-4a1b-a113-5ae9dc564dad",
+  "stream_id": "d74d5e7e-4674-4bb8-9395-11878404f56f",
+  "probe_sha256": "e2d4e015463be2c0de86221d40ca7fcca5afaa1c4aacdb272f92efa48eeeb74a"
+}

@@ -1,0 +1,14 @@
+{
+  "input_path": "/workspace/tender-docs/04-验证与测试/assistant-development-checks/协议与SQL-01.md",
+  "sha256": "264e9f2cb52b6e54db9c1268043184c69a3b48a59f31fa6f9c17a0eb137dd5b9",
+  "observed_copy": "/workspace/tender-docs/04-验证与测试/assistant-architect-review/observed-assistant-protocol01.md",
+  "review": "static only; no SQL executed, no database used",
+  "DDL_executed": false,
+  "paid_calls": 0,
+  "consumers_started": false,
+  "private_configuration_read": false,
+  "conclusion": "static_ready_for_PM_fresh_initialization_only",
+  "DDL_level_blockers": 0,
+  "application_reviewed": false,
+  "implementation_gate": "logical intent/profile advisory-lock reserve plus fence/current-source/action-once enforcement require frozen application review and independent nonowner concurrency tests"
+}

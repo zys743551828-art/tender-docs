@@ -1,0 +1,119 @@
+{
+  "format": "independent-recovery-single-target/1",
+  "token": "40e8c1ed7230406293111e2c85006b98",
+  "root": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98",
+  "directory": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98",
+  "backend": {
+    "manifest": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/runtime-manifest.json",
+    "sha256": "71fe0fb2c9dbde7d85e62d20bef2da8e188e59ac00e9eb056cc021a1bd75274e",
+    "file_count": 308,
+    "source_root": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs"
+  },
+  "target_port": 55531,
+  "protocol_sha256": "d4ad0221362a05746c6d892ae06149b56a9f804e3c6127f1b2bc48069d9c94a3",
+  "inputs": [
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/__init__.py",
+      "sha256": "e4d465414abbe571ccc96c65d27f7ab0e4352ad53dbfd876cdd4e2c3eefa92d5"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/__main__.py",
+      "sha256": "d4f45c5f50475a56e319d96a0299f0975a67a7e65b64dbf28d6862b8baeda192"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/application.py",
+      "sha256": "fad526efb5819653cd210d7b00924210dc5a2193948cd5fafbbfd4edea6901ec"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/archive.py",
+      "sha256": "47b1810034a6e4f205df7379dc699a9a92b7fe131e38842dde5a300e820f3ea6"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/assets.py",
+      "sha256": "c2943d06b95101229a6a662ece9682ef003e56720f8ee381e2a7c16e2a549e5b"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/binding.py",
+      "sha256": "7bef1c064ca49b9fa1d7230757dcf23bce6a015a093edff3805f3c4226a43a7d"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/cluster.py",
+      "sha256": "23d9d55c03c4e1ad2f1488407a9a139949d6e4a9f43195ff1c6cb509e9462713"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/fixture.py",
+      "sha256": "9ed445eb82e84c9769bad68624f6bcfe33e062493832af91ef11f28ebb880bcf"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/probes.py",
+      "sha256": "502913ec58fab64549099712f632e8fe31f7d9c49778da3521004de0545a381e"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/runtime_child.py",
+      "sha256": "5f3b0837f266caf80aa0e890b40316f69c75a3f8e554f63c299a97a9bcd96eff"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/security.py",
+      "sha256": "dd29109059060f463fbe9a69264bc9b0472bc2d0659baa3cdc536816d8d7fb8f"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/seed_retry.py",
+      "sha256": "a94fff1dc29bc9908fba93b79daa25b2a4d93b8391bb928235cf3ad114a2a86c"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/definition_equivalence.py",
+      "sha256": "1581e1b04c75bf1c5225c893a153aabae7320e5002ddcbc640fd6127d916dcca"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/backups/generic.py",
+      "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/backups/run.py",
+      "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/manifest.json",
+      "sha256": "ccacb97792be19b157748580a71b0c8e4f891e249556aa3d8dcad1511598358b"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/manifest.sha256",
+      "sha256": "b583ab250f68c7d71465bfe56d2bc542238e8a1a60945886c1ea330d8c0936db"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/database.dump",
+      "sha256": "6d568c5730a85cbf1dbf25406fd9fb1070cfc28b48c5b70acde5d87cb7ee3146"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/0b290532-d4dc-4f39-adc4-3e8e369d17d7.bin",
+      "sha256": "4699b9216dcf63a3f04850f28237be3ad262db97060fc3c0261afbcda60071bc"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/1b2e45e3-353f-4f5c-a9cb-7f3f1f9b6506.bin",
+      "sha256": "38cdaf368344075a95b6ec10bd89e6a7abfd5278556305e5457562e9db01caee"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/3ab792a8-c6de-434e-acc0-b92a50ca2bb1.bin",
+      "sha256": "efa9c6d25c1caea32fd571d41337af057f305059e94decd2f14eefd39d54c306"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/55256cda-6634-4edc-a2b8-86bc6be1a591.bin",
+      "sha256": "82072b7bfc888d6bc5d7faac5fc50dfe2d4bd7edc32dbc183fb83ba6aa19163e"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/784e0aad-0df5-4f5f-a085-22c6f098a461.bin",
+      "sha256": "ea4e9101d0035f9e8b5285edc3997820f6f60c388b850afe987ee149624e255a"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/b9370b3c-d941-42a8-bc28-b77cedc85010.bin",
+      "sha256": "9803d3f74b11b0885a9672655b34cdcffb97d375b0d5a386316724f19682b43c"
+    },
+    {
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/.local/backups/application/single-target-40e8c1ed7230406293111e2c85006b98/archive/objects/d8056b89-9ceb-4b9c-9db0-fe25a62eee32.bin",
+      "sha256": "595a130a587e3d01284a00ee14782d80d9175fcf6b82f8c589c32812a261a5e4"
+    }
+  ],
+  "driver_sha256": "bd07a298be3992565c264911e3b70033a5b58e3f64e26276ea324fab7785404c",
+  "created_at": "2026-10-17T04:19:37.664802+00:00",
+  "state": "prepared_no_docker_or_cloud_calls"
+}

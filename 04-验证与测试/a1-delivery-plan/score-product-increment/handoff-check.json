@@ -1,0 +1,80 @@
+{
+  "scope": "产品主记录/交接静态完整性，非应用/模型/SQL验收",
+  "passed": true,
+  "checks": [
+    {
+      "name": "PRD原输入精确保存",
+      "passed": true
+    },
+    {
+      "name": "新PRD摘要匹配",
+      "passed": true
+    },
+    {
+      "name": "40FR完整且不自动绿",
+      "passed": true
+    },
+    {
+      "name": "13任务仍待执行",
+      "passed": true
+    },
+    {
+      "name": "旧40FR字节不改",
+      "passed": true
+    },
+    {
+      "name": "用户证据保持读取时摘要",
+      "passed": true
+    },
+    {
+      "name": "旧原13与passed不改",
+      "passed": true
+    },
+    {
+      "name": "本地链接:README.md",
+      "passed": true
+    },
+    {
+      "name": "本地链接:评分满分与档案研究协议.md",
+      "passed": true
+    },
+    {
+      "name": "本地链接:AI投标工作台PRD.md",
+      "passed": true
+    },
+    {
+      "name": "无软件验收或技术副作用",
+      "passed": true
+    }
+  ],
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/README.md",
+      "sha256": "630144e853374e26920afb438c389bc1c6d73d6d9435bb6f2ea6575cd40f5fc1"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/评分满分与档案研究协议.md",
+      "sha256": "2a2dec284f3013897abebf50318de749a32a82eff15a907608510b0b4cf1ad73"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/owner-decision.json",
+      "sha256": "51208f1d2b252c057cf1979055bb163ef7fcd707f3714dc01dc213b5c2feadf9"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/remaining-fr.json",
+      "sha256": "1d6539060566d0f50d7d5892950ff07673de47f88473bf02a258579a9b045638"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/acceptance.json",
+      "sha256": "d6586eaabf8be750b9e6e06ec8d3db3de99d17e6929e6f12e57228e4fe4f9234"
+    },
+    {
+      "path": "/workspace/tender-docs/02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "16f776ef3115f9bace2ff7cf63bfff6652770199c4432e72965bb1369a693297"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "scope": "独立关系模型及SQL事务机制；不连接产品API、不运行Celery或真实模型",
+  "executed_at": "2026-10-16T09:45:10.172662+00:00",
+  "postgres_version": "17.11 (Debian 17.11-1.pgdg13+2)",
+  "image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+  "table_count": 30,
+  "ddl_sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+  "probe_sha256": "950ce351a5047c0c0ebe661eba00503f8742c41ce670fc57f21c80dfa60fb714",
+  "checks": [
+    {
+      "name": "DDL在真实PostgreSQL建库成功",
+      "passed": true
+    },
+    {
+      "name": "跨项目正文外键拒绝",
+      "passed": true
+    },
+    {
+      "name": "相同命令幂等键不可重复",
+      "passed": true
+    },
+    {
+      "name": "同输入活跃操作不可重复",
+      "passed": true
+    },
+    {
+      "name": "已冻结输入不可覆盖",
+      "passed": true
+    },
+    {
+      "name": "原件不可删除",
+      "passed": true
+    },
+    {
+      "name": "非法摘要拒绝",
+      "passed": true
+    },
+    {
+      "name": "终态必须有结束时刻",
+      "passed": true
+    },
+    {
+      "name": "取消请求必须记时刻",
+      "passed": true
+    },
+    {
+      "name": "标准登记不得把报告当正文",
+      "passed": true
+    },
+    {
+      "name": "同正文标准提交可登记",
+      "passed": true
+    },
+    {
+      "name": "线下事实可以忠实补录错传报告",
+      "passed": true
+    },
+    {
+      "name": "一个项目只能有一个有效实交头",
+      "passed": true
+    },
+    {
+      "name": "旧fence不能提交阶段结果",
+      "passed": true
+    },
+    {
+      "name": "取消后正常完成回调无法发布",
+      "passed": true
+    },
+    {
+      "name": "24份重复效果请求只保留一份收据",
+      "passed": true
+    },
+    {
+      "name": "24个并发事件序号连续且无重复",
+      "passed": true
+    },
+    {
+      "name": "不同成员不能重复消费同一提案",
+      "passed": true
+    },
+    {
+      "name": "同项目不同草稿的章节也不能混入快照",
+      "passed": true
+    },
+    {
+      "name": "同一草稿的已保存章节可进入快照",
+      "passed": true
+    },
+    {
+      "name": "事务回滚不遗留outbox",
+      "passed": true
+    }
+  ],
+  "product_end_to_end_executed": false,
+  "broker_faults_executed": false
+}

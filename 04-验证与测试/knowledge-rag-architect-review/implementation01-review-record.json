@@ -1,0 +1,67 @@
+{
+  "candidate_sha256": "4671b3d9cd24afa3429f388c76bd02d4ee88c53c0ac6869bb06976c7aff24a15",
+  "source_count": 22,
+  "dependency_count": 32,
+  "sources_and_dependencies_reverified_after_execution": true,
+  "conclusion": "scoped_architecture_pass_with_P2_integrity_hardening_observation",
+  "normal_path_blockers": 0,
+  "product_test_groups": {
+    "frozen_mechanisms_and_architect_RC_delta": {
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    "architect_rerank_window_races": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "actual_local_BGE_and_reranker": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "passed_product_cases": 42,
+  "malformed_API_owned_trace_counterexample_reproduced": true,
+  "counterexample_assumption": "API-role direct INSERT of malformed selected_units; normal save_trace rejects; no user HTTP or Worker write path found",
+  "real_postgresql_nonowner": true,
+  "real_local_BGE_and_reranker_HTTP": true,
+  "business_fixture": "own fresh PostgreSQL17+pgvector; synthetic domain text and actual synthetic PDF bytes; objects explicit in-memory",
+  "private_profile_usage": "runtime URL/token only via authorized deploy/run.py; no output/persistence; profile DB not used",
+  "paid_calls": 0,
+  "consumers_started": false,
+  "cloud_requests": 0,
+  "not_verified": [
+    "Kafka transport rerun",
+    "native OSS rerun",
+    "company gold retrieval quality",
+    "frontend or central live deployment",
+    "upload immediate readability window",
+    "production sandbox or capacity",
+    "formal score qualification"
+  ],
+  "evidence_sha256": {
+    "probe_implementation01.py": "045e1a6350c555dea0c6e262623312af09595cf341a6946754cc396931694ff8",
+    "implementation01-frozen-plus-delta-tests.py": "e4f8ca43c08d60e4617e2a72b97d208f4d4945d992487895b37c09d6833978e5",
+    "implementation01-independent-junit.xml": "abb84591eba3dd7188318df8829f4bf81b6d9b34f9043eb29ede1d966da94c1e",
+    "implementation01-independent-result.json": "2cbfe8641752daafbf675ae1aafbebddf93142f361aec43df4a1d8c7bcd4fe02",
+    "probe_implementation01_rerank.py": "44a6f0a83d866096114ee0d5087a4a4ebe3a72d66a3d1874f4a6b129408583b8",
+    "implementation01-rerank-window-tests.py": "622ca9ca0aa0b725034ef71f20c05151ff92a99cc2eabe1000df3d9c82cbca38",
+    "implementation01-rerank-window-junit.xml": "f27921aad908b43b92dc521a517b9733fd8b29f9edb3ee6d1620c1da7a460f27",
+    "implementation01-rerank-window-result.json": "2cbfe8641752daafbf675ae1aafbebddf93142f361aec43df4a1d8c7bcd4fe02",
+    "probe_implementation01_actual_models.py": "1c4bb896a69b00119437c320c08b032f53af414940dc4388426eb85c2e6a825c",
+    "implementation01-actual-local-model-junit.xml": "6e3e9ce7f901c3c33358f255db64d688b3268fba74d4092e5bb3299b3aafeb79",
+    "implementation01-actual-local-model-result.json": "f6c0474ccb41a628affecc439b85bf910fb4f864fc1fe9d2f599871bff17a250",
+    "implementation01-actual-local-model/actual-local-model-result.json": "ce581be498438244902bf39a535cd0417b45f4883707a983e46b76f5d0af060e",
+    "probe_implementation01_selected_manifest.py": "3a509c34e583d040b4b59b732fe7b808a6a7f5a1bb40a3ea1939dfbe5f3141e3",
+    "implementation01-selected-manifest-tests.py": "66f817154feb321c293c6c5f8a72b77d911ddb2b9a913c8efd2d7677b85f26ac",
+    "implementation01-selected-manifest-junit.xml": "9be83bf9b00ec40415469932525618bfb0b2d8c0616f347227773ef0d4a2ff5c",
+    "implementation01-selected-manifest-result.json": "2cbfe8641752daafbf675ae1aafbebddf93142f361aec43df4a1d8c7bcd4fe02",
+    "implementation01-selected-manifest-observation.json": "8266d5cfb93f0d57aa1c3ce51fef5a394dba9a34b5dd52a4e084ac0e172d82a9",
+    "implementation01-probe-exception-expectation-junit.xml": "e4ddb9ff469654e4627025373e2b89d3d862376e7244d46cf931fa0d7e6ac405"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Explicit optional score LOGIN only during new database initialization; separate private single-DSN purpose profile",
+  "runtime_root": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/fresh-bootstrap-development-checks/candidate03/runtime",
+  "sources": [
+    {
+      "path": "deploy/bootstrap_fresh.py",
+      "sha256": "b219f80583594d480fc1838b5af2473715ac45ecc4b9bd978817fdb8ad54cf92",
+      "ownership": "pm-delta"
+    },
+    {
+      "path": "tests/test_bootstrap_fresh.py",
+      "sha256": "16d348e8df81535d4657b07121878163b87b208af1ce955895d2726af4abf383",
+      "ownership": "pm-delta"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "ownership": "unchanged-dependency"
+    }
+  ],
+  "development_tests": 35,
+  "quality": {
+    "ruff": true,
+    "format": true,
+    "mypy_production": true,
+    "bandit_findings": 0
+  },
+  "database_connections": 0,
+  "ddl_executed": false,
+  "new_profiles_created": false,
+  "score_execution_sql_a_not_approved": true,
+  "requires_reviewed_sql_b_before_actual_fresh": true,
+  "default_model_purposes_unchanged": true
+}

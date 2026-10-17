@@ -1,0 +1,14 @@
+{
+  "draft": "D",
+  "sha256": "cc81543052f53f5fbab28e0fc90dd393ae012f8ea83d4e37bf81d159ae569887",
+  "prior": "C 13b6598051a88d9990eda463ba1df9f1785c84a50b55f5e5e89f10ae0ad58b76",
+  "changes": [
+    "current frozen root rule_set must equal actual complete-coverage rule set; partial/conflict cannot shrink necessary scope",
+    "API read_root rejects non-complete rules before object PUT; 3 new pure negative checks"
+  ],
+  "status": "static_review_requested_not_executed",
+  "pure_tests": 43,
+  "fresh_tests": 0,
+  "paid_calls": 0,
+  "note": "Finite max guard is defensive; core rule_items CHECK already rejects legal nonpositive/nonfinite max. No claim it is a baseline DB-constraint bypass."
+}

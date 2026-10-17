@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "invalid_owner_cannot_publish_parse_or_readable_authority",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "rejected_publish_leaves_no_partial_parse",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_parser_publish_provides_both_readable_heads_before_vector",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "knowledge_positions_usable_immediately_with_exact_page_and_quote",
+      "passed": true,
+      "observation": {
+        "readiness": "readable_text_positions_only",
+        "items": [
+          {
+            "reference": {
+              "source_id": "0419735e-0773-5a4f-89ff-59ce2e7517ec",
+              "source_revision": 2,
+              "document_version_id": "98c5ef9c-2c3e-408a-a910-3b084f370ee0",
+              "parse_id": "27364411-ee30-4336-8751-6d1607621d45",
+              "physical_page": 1,
+              "evidence_id": "ec4a1c38-9e2f-4d4f-ba2d-4ed4ab1a9a75",
+              "excerpt": "Independent readable source before vector index 0be83bbb1c7e4ed191c7846af5eccf5f"
+            },
+            "excerpt_truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "existing_parse_repeat_does_not_add_head_revision",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "withdrawn_original_not_revived_and_new_parse_transaction_rolls_back",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "partial_coverage_remains_truthful_and_only_text_is_published",
+      "passed": true,
+      "observation": {
+        "coverage": "partial",
+        "gaps": [
+          "EXPLICIT_PARTIAL_FIXTURE"
+        ],
+        "head": "published"
+      }
+    },
+    {
+      "name": "failed_coverage_remains_truthful_and_only_text_is_published",
+      "passed": true,
+      "observation": {
+        "coverage": "failed",
+        "gaps": [
+          "EXPLICIT_PARTIAL_FIXTURE"
+        ],
+        "head": null
+      }
+    },
+    {
+      "name": "empty_coverage_remains_truthful_and_only_text_is_published",
+      "passed": true,
+      "observation": {
+        "coverage": "complete",
+        "gaps": [],
+        "head": null
+      }
+    }
+  ],
+  "model_requests": 0,
+  "object_network_requests": 0,
+  "consumers_started": 0,
+  "scope": "Real TCP Parser03 computation plus actual restrictedPG/ordinary engine publication and knowledge source_positions function. Memory original bytes and explicit partial/failed outcomes. No embedding/vector/LLM request, no Kafka dispatch.",
+  "bid_id": "1adba5b7-33a9-450b-8829-4b7d83343c44",
+  "parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "parse_id": "27364411-ee30-4336-8751-6d1607621d45",
+  "original_sha256": "8a086a044b8d23489e0ed753f078633e66ecc69e9c342238e2d56b2b3a60e20a",
+  "probe_sha256": "2f325a618aa3a5ac2f3d05e11d12ce0537e618f47ccf770d9e8e0292ff68abc1",
+  "runtime_manifest_sha256": "f541fb01ea865a40ef04e96310c2e9389271e6edfd9d1aacd49a2995a17f8dec",
+  "helper_scope": "Frozen scheduled() creates explicit task/outcome fixture only; no developer assertion/test function executed"
+}

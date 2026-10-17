@@ -1,0 +1,21 @@
+{
+  "status": "static_review_only_not_executed",
+  "inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/rich_assets.sql",
+      "sha256": "cba0da43fcf36566e02df46d7962e3c53f7b5daad671b51d1513cae7185f2edd"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/协议.md",
+      "sha256": "0e35fb5d83a210dc0504587192c036c2b2f19ff57977775a8199207b72322506"
+    }
+  ],
+  "base_candidate": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9",
+  "existing_ports_checked": [
+    "apps/api/main.py:create_upload",
+    "packages/uploads/service.py:create_upload",
+    "packages/word_intake/inspection.py:filename_type",
+    "packages/domain/storage.py"
+  ],
+  "permissions": "API SELECT/INSERT two asset tables and UPDATE only head columns; Worker SELECT only both tables for final head/withdraw check; no general identity grants"
+}

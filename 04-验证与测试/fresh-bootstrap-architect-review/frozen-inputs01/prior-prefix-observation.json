@@ -1,0 +1,33 @@
+{
+  "scope": "read_only_profile_key_comparison_no_provider_requests",
+  "profiles": [
+    {
+      "profile": ".local/knowledge_rag-checks.env",
+      "obsolete_OSS_KEY_PREFIX_present": true,
+      "effective_OBJECT_STORE_PREFIX_present": true,
+      "effective_provider_prefix_equals_release": false,
+      "effective_prefix_sha256": "c15b8a5a5cdf00b08cf3ac5ee7178e279e490dbadca9d4ee69ff5187aa008f06",
+      "database_dsn_distinct_from_release": true
+    },
+    {
+      "profile": ".local/model_governance02-checks.env",
+      "obsolete_OSS_KEY_PREFIX_present": true,
+      "effective_OBJECT_STORE_PREFIX_present": true,
+      "effective_provider_prefix_equals_release": false,
+      "effective_prefix_sha256": "c15b8a5a5cdf00b08cf3ac5ee7178e279e490dbadca9d4ee69ff5187aa008f06",
+      "database_dsn_distinct_from_release": true
+    },
+    {
+      "profile": ".local/research03-checks.env",
+      "obsolete_OSS_KEY_PREFIX_present": true,
+      "effective_OBJECT_STORE_PREFIX_present": true,
+      "effective_provider_prefix_equals_release": false,
+      "effective_prefix_sha256": "c15b8a5a5cdf00b08cf3ac5ee7178e279e490dbadca9d4ee69ff5187aa008f06",
+      "database_dsn_distinct_from_release": true
+    }
+  ],
+  "old_profiles_modified": false,
+  "old_source_original_key_safety_not_requalified": true,
+  "observed_three_prior_environments_share_effective_prefix": true,
+  "comparison_note": "Current external-release.env differs from these three inherited prefixes; do not infer historical running provider identity from current filenames."
+}

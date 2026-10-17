@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "2019_business_knowledge_and_new_system_published_head_qualify_now",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_system_head_does_not_fabricate_historical_system_qualification",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "candidate_cannot_gain_verified_authority_or_verified_rate",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "reasons": {
+          "reasons": [
+            "source_no_longer_effective"
+          ]
+        }
+      }
+    },
+    {
+      "name": "future_known_cannot_gain_verified_authority_or_verified_rate",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "reasons": {
+          "reasons": [
+            "source_no_longer_effective"
+          ]
+        }
+      }
+    },
+    {
+      "name": "after_business_known_cutoff_cannot_gain_verified_authority_or_verified_rate",
+      "passed": true,
+      "observation": {
+        "status": 409,
+        "reasons": {
+          "reasons": [
+            "source_no_longer_effective"
+          ]
+        }
+      }
+    },
+    {
+      "name": "same_key_verified_replay_preserves_identity_but_cannot_restore_old_authority",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "explicit_fresh_verification_restores_v2_authority_after_head_revision",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_graph_lock_wait_sees_committed_withdrawal_without_partial_verified_event",
+      "passed": true,
+      "observation": {
+        "wait_observed": true,
+        "status": 409
+      }
+    },
+    {
+      "name": "active_canonical_child_cannot_ignore_withdrawn_official_ancestor",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "old_v1_historical_verified_event_is_preserved_but_not_granted_v2_usability",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "explicit_v2_reverification_can_qualify_without_rewriting_old_event",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "model_requests": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "scope": "Actual restrictedPG and standalone metrics ASGI, own synthetic SQL fixtures; developer fixture functions only, no developer tests/assertions executed",
+  "probe_sha256": "33df2f9295139af3c1293c97aaa952ee207ad7de45ee02b08659428648849916",
+  "runtime_manifest_sha256": "3b0b71b891914cea9d66d50409d0d7b9a41ffa3d0b49e4eeb7607939fb52caa0",
+  "fixture_helper_scope": "Only frozen make_project/add_official_parent SQL factories; no developer test or assertion invoked"
+}

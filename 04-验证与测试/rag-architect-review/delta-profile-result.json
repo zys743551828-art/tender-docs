@@ -1,0 +1,18 @@
+{
+  "scope": "unfrozen delta profile mechanism; fake assets/loaders, no real inference",
+  "source_sha256": "43204ae12c0bfba11b9fd654080c6500bfca43c2a8f4da17c2247407c10168a7",
+  "each_asset_change_changes_profile": {
+    "config.json": true,
+    "tokenizer.json": true,
+    "tokenizer_config.json": true,
+    "sentencepiece.bpe.model": true,
+    "special_tokens_map.json": true
+  },
+  "unverified_extra_weight_rejected": true,
+  "dense_bin_weights_only_and_rerank_safetensors_forced": true,
+  "local_only_and_no_remote_code": true,
+  "paid_calls": 0,
+  "real_model_inference": false,
+  "credentials_read": false,
+  "final_pass": false
+}

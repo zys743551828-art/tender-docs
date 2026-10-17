@@ -1,0 +1,317 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "initial_RR_rejected_before_any_model_rpc_and_no_command_trace",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "RC_actual_staged_models_return_exact_two_page_evidence",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unchanged_replay_uses_no_local_model_rpc",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "initial_RR_exact_replay_rejected_before_rpc_or_publication",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "direct_replay_helper_rejects_RR_before_authoritative_reads",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "final_only_RR_rejected_after_model_work_without_command_or_trace",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "pending_obligation_excluded_before_rerank_other_evidence_remains",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "history_keeps_exact_original_two_pages_with_explicit_notice",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "ended_and_pending_evidence_both_absent_from_current_candidates",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "old_key_cannot_replay_before_new_effectivity_control",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "concurrent_same_key_staged_requests_share_one_trace_command",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "RC_final_rechecks_withdrawn_ancestor_after_real_graph_wait",
+      "passed": true,
+      "observation": {
+        "actual_graph_wait": true,
+        "status": "withdrawn",
+        "response_status": 409,
+        "error": "RETRIEVAL_SOURCE_CHANGED",
+        "counts_before": {
+          "traces": 0,
+          "commands": 0
+        },
+        "counts_after": {
+          "traces": 0,
+          "commands": 0
+        }
+      }
+    },
+    {
+      "name": "all_endpoint_model_HTTP_occurs_after_request_connections_close",
+      "passed": true,
+      "observation": {
+        "requests": 31,
+        "paths": [
+          "/embed",
+          "/identity",
+          "/lexical",
+          "/rerank"
+        ]
+      }
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "scope": "Frozen RAG04 + frozen main03 ASGI, actual restricted PG and actual local BGE/lexical/rerank HTTP; synthetic SQL parse/source-effectivity fixtures, not real PDF or business quality",
+  "fixture_bid_id": "1005709c-9051-4473-9c73-2f9c3010fa2e",
+  "request_observations": [
+    {
+      "stage": "reject_initial_rr",
+      "status": 409,
+      "code": "RAG_FRESH_AUTHORITY_REQUIRED"
+    },
+    {
+      "stage": "normal_staged_and_replay",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "normal_staged_and_replay",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "normal_staged_and_replay",
+      "status": 409,
+      "code": "RAG_FRESH_AUTHORITY_REQUIRED"
+    },
+    {
+      "stage": "reject_final_rr",
+      "status": 409,
+      "code": "RAG_FRESH_AUTHORITY_REQUIRED"
+    },
+    {
+      "stage": "effectivity_before_ranking",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "effectivity_before_ranking",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "effectivity_before_ranking",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "effectivity_before_ranking",
+      "status": 409,
+      "code": "RETRIEVAL_SOURCE_CHANGED"
+    },
+    {
+      "stage": "concurrent_same_key",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "concurrent_same_key",
+      "status": 200,
+      "code": null
+    },
+    {
+      "stage": "RC_wait_graph_then_withdraw",
+      "status": 409,
+      "code": "RETRIEVAL_SOURCE_CHANGED"
+    }
+  ],
+  "model_rpc_observations": [
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/identity",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/embed",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/lexical",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    },
+    {
+      "path": "/rerank",
+      "request_connection_depth": 0,
+      "request_pids_present": 0
+    }
+  ],
+  "candidate_sha256": "d6057de89b507423f1849478d2e19e0c4f9bc1200ab1e8789b741a36ad73398c",
+  "input_manifest_sha256": "eb1a981813b08c3b408dfc3471c4c19e38a7324501f28ebcc6f9a6d01810f3e5",
+  "probe_sha256": "6778a6e9a94d33573618a46b5205910d740b7979bf4513ff87d3cb37272297e8"
+}

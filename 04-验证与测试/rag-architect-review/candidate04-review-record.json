@@ -1,0 +1,27 @@
+{
+  "candidate_sha256": "d6057de89b507423f1849478d2e19e0c4f9bc1200ab1e8789b741a36ad73398c",
+  "sources_verified": 32,
+  "changed_sources": [
+    "apps/api/rag_routes.py",
+    "tests/test_rag_staged_api.py"
+  ],
+  "conclusion": "passed_scoped_project_retrieval04_RR_delta",
+  "blocking_findings": 0,
+  "RAG03_RR01_closed": true,
+  "architect_actual_cases": 7,
+  "architect_runtime": "explicit synthetic loopback HTTP; not BGE",
+  "actual_PG_nonowner": true,
+  "paid_calls": 0,
+  "consumers_started": false,
+  "private_config_read": false,
+  "evidence_sha256": {
+    "probe_candidate04.py": "19e4ee5a5e422077eed7cf03019fd3c7c7e8dd2b4b52f74b7e70af5d5f399cec",
+    "probe_candidate04_authority.py": "a7f2817fdf10118b27564d169ecf21d5e5a20158932763200e8cb879eaac211a",
+    "candidate04-independent-junit.xml": "ad18e394d1ec9a80c0b70e9f90615106a81d23ff343f1f49a4dc2111ccc057dd",
+    "candidate04-authority-delta-junit.xml": "9259e1901b3cdc1d64cbecbb7363aee149de79c1ff18058f46ef228be4a364d4",
+    "candidate04-independent-result.json": "c132c11a4feb1e94972fb4bbb11712211e0d8bec39fbdd78ca23e9dbc68513f2",
+    "candidate04-authority-delta-result.json": "fdac3d1f7504bf1b489e5a4021796c69cd9ab9adf5af20579f5b4446d17b3977"
+  },
+  "independent_QA_observed_path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/candidate-04/noninvasive-connection-probe/result.json",
+  "independent_QA_observed_sha256": "a794ff1a957d10c53e9d665f9c0e5e4b83b9fd63b564b1bf8ee5051149cbeb07"
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "实现材料验证中实际观察到的问题，不代表产品运行故障",
+  "observations": [
+    {
+      "id": "OBS-001",
+      "observed": "Kafka create_topics成功后立即describe_configs返回UNKNOWN_TOPIC_OR_PART",
+      "resolution": "仅针对该可恢复元数据状态做有截止时间的重试；认证及其他错误原样失败",
+      "status": "修正后单节点初始化与重跑通过"
+    },
+    {
+      "id": "OBS-002",
+      "observed": "Compose命名卷挂载到镜像中未预建的/tmp路径，Kafka非root用户无法写bootstrap.checkpoint.tmp",
+      "resolution": "日志与命名卷统一使用镜像已预建且归appuser所有的/var/lib/kafka/data，不用root运行broker",
+      "status": "修正后开发Compose完整启动、建库及双listener复测通过"
+    }
+  ]
+}

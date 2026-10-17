@@ -1,0 +1,25 @@
+{
+  "conclusion": "无新增行为变化或架构阻塞；绑定最终Worker证据",
+  "technical_candidate_sha256": "d9e53659504a3f5dcb527266582495294de738fc92c036c97987e669d12175e4",
+  "worker_evidence": {
+    "path": "final-worker-login-result.json",
+    "prior_sha256": "a93edfd959f502eb85355bb3af4a2af0a1b3aed80bd27c063fadf0ec63728908",
+    "current_sha256": "9680a64cfad1e911b846e2fc2c47243d9d3e1ab3cb498b11f345178dd268e7de"
+  },
+  "previous_probe_sha256": "1eed18570ab1f8df0512f615237831a518d27cb3dcb048052a07074bb322681f",
+  "current_probe_sha256": "31c6748bb3eeafbc46fffe89736ce25b51b5f4ecf359bf1ede87d85545b1cc6d",
+  "only_delta": "取消负向用例结束后，独立fence/成功finish用例前，由测试fixture owner清理research_runs.cancel_requested_at；其他断言和设计不变",
+  "not_product_resume_behavior": true,
+  "checks": 42,
+  "checks_names_unchanged": true,
+  "sql_input_hashes": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "final_test_manifest_sha256": "e43033e7a4a824accf51f0f5a56752befe1283449065b7a7c040a4eac66b9829",
+  "code_review_only": true,
+  "full_review_or_pg_not_rerun": true
+}

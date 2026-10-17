@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "decision": "设计层独立验证通过，可进入实现；应用与真实模型/生产验收尚未执行",
+  "technical_candidate_sha256": "d9e53659504a3f5dcb527266582495294de738fc92c036c97987e669d12175e4",
+  "technical_source_count": 25,
+  "counts": {
+    "schemas": 137,
+    "paths": 86,
+    "operations": 93,
+    "tables": 104,
+    "http_examples": 16,
+    "identity_vectors": 7
+  },
+  "results": [
+    {
+      "path": "final-worker-login-result.json",
+      "sha256": "9680a64cfad1e911b846e2fc2c47243d9d3e1ab3cb498b11f345178dd268e7de",
+      "scope": "真实PostgreSQL非owner LOGIN与合成acquire/finish事务、研究预算账本；没有执行应用Worker",
+      "checks": 42
+    },
+    {
+      "path": "final-identity-upload-result.json",
+      "sha256": "51d51c9a284065c1f511c8f5688d287dae57b4a09fd06657abd941d6b7283071",
+      "scope": "真实PG并发、外键与可实现事务协议。qa函数是测试侧合成驱动，未执行业务API/对象存储/浏览器。",
+      "checks": 21
+    },
+    {
+      "path": "score-asof-result.json",
+      "sha256": "4187a889167dc65caae699f5210bd788a0d080ef9fbba02122a25788ab36eb4c",
+      "scope": "真实PG/实际评分LOGIN下业务as_of、known_at、valid_until、祖先和当前停用边界；无业务API或真实RAG效果",
+      "checks": 5
+    },
+    {
+      "path": "final-identity-contract-result.json",
+      "sha256": "d579b3edf5943f4130aac1bfa47b270823637de547bfd0174b1aa49009e55dce",
+      "scope": "独立摘要固定向量及Schema/OpenAPI恢复契约；无真实业务API执行",
+      "checks": 36
+    },
+    {
+      "path": "final-contract-regression-result.json",
+      "sha256": "2f9b52d2055395e9e66428615ae9fc8675f3c2e98759ea6dbe629299d7089892",
+      "scope": "目标契约规范、合法／反例夹具、需求落点与本地文件链接；不调用产品",
+      "checks": 380
+    },
+    {
+      "path": "final-retained-contract-result.json",
+      "sha256": "37779e74e26a0506f41f1f76114e9abb94a4ed6e24bde445930687e34a2964a0",
+      "scope": "新增目标协议和设计落点静态检查；不执行软件业务",
+      "checks": 80
+    },
+    {
+      "path": "final-database-regression-result.json",
+      "sha256": "07b7cf4b1b1ee65cc5c87da766f62e38d2abd87a7ce75a00180e3b9fb7e6ce18",
+      "scope": "真实PG与pgvector上的建库、合成向量过滤、权限和租约；不代表真实RAG或评分效果",
+      "checks": 27
+    },
+    {
+      "path": "final-rule-origin-database-result.json",
+      "sha256": "f969a17be2efa661c6ce7659606907ade64aee658df3f04578a84bec124450b4",
+      "scope": "真实PG的新增DDL约束、预算预留和角色隔离；不是业务工作流验收",
+      "checks": 30
+    },
+    {
+      "path": "final-product-spec-result.json",
+      "sha256": "628fc6c5f30f5bf19035d430283ad31204e822c8c5f187b650faf5bdf40daef4",
+      "scope": "测试角色独立人工阅读产品整改规格，非应用行为验证",
+      "checks": 8
+    }
+  ],
+  "application_cases_pending": 13,
+  "software_end_to_end_executed": false,
+  "not_verified": [
+    "真实业务API与Kafka Worker",
+    "真实对象存储上传/补传/重绑定",
+    "规则补充命令与重提取合并实际应用",
+    "真实浏览器及真人试用",
+    "OCR/Embedding/RAG效果与正式评分精度",
+    "生产恢复与多节点故障"
+  ],
+  "verifier_sha256": "c2fa8fd42c6f578aab2b835f025d8fa4502fc947970b16363e700ff7e3a887d6"
+}

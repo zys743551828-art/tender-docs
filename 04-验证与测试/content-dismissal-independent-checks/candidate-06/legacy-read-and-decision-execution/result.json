@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "existing05_wrong_carry_projects_open_with_no_inapplicable_old_decision",
+      "passed": true,
+      "observation": {
+        "id": "58ea6431-5c40-43c9-91d2-29d40e67ceef",
+        "review_id": "37f7cb8b-bb29-4f4c-b3ae-f287afb72f7e",
+        "rule_id": "86220fcf-ea14-490b-bab6-0811d998569f",
+        "category": "consistency",
+        "severity": "critical",
+        "verdict": "violated",
+        "statement": "工程A（标段一）的工期存在两处不相容的逐字断言：equal 95天；equal 125天。请核对原页条件，不自动修改正文。",
+        "evidence_ids": [
+          "e40448e4-b3ce-4ce2-b0de-58fc361f24d9",
+          "0d67db0f-c609-4180-9a4e-fdc54ef41fd0"
+        ],
+        "searched_ranges": [
+          "fa19c897-daeb-479a-9c78-c3a2fa8d2e56:物理页1—2；已读块/缺口见独立检测覆盖"
+        ],
+        "decision": null,
+        "decision_revision": 1,
+        "origin_review_id": "55ce389d-66cf-4a30-896f-770ef3c1578a",
+        "retained_known_critical": true,
+        "detection_run_state": "ran",
+        "lifecycle": "open"
+      }
+    },
+    {
+      "name": "identical_old_body_carry_still_may_project_the_old_dismiss",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "late_ancestor_dismiss_cannot_silence_new95_125_conflict",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_manual_decision_writes_new_finding_not_physical_old_root",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "new_decision_response_loss_replays_same_decision_without_new_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "own_new_decision_takes_priority_over_later_ancestor_dismiss",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "read_repair_and_new_decisions_do_not_rewrite_immutable_finding_or_old_decision",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "scope": "Actual nonowner PG and actual GETfinding/POSTfindingdecision ASGI against the exact bad carried row created by frozen05. Own fixture profile added with no current review; metrics remains unknown, not a complete gate test.",
+  "paid_calls": 0,
+  "model_calls": 0,
+  "consumers_started": 0,
+  "old_bad_row_id": "58ea6431-5c40-43c9-91d2-29d40e67ceef",
+  "raw_carried_from_id": "5b40a6a5-f0e2-4fd9-9350-946c43325cf8",
+  "old_root_id": "5b40a6a5-f0e2-4fd9-9350-946c43325cf8",
+  "new_decision_id": "4a35df87-5fcf-47f0-b158-3659aa5c595f",
+  "probe_sha256": "84020debf22d6ae6fee66f39298654062b79a8d3a600614827b472163955f5e7",
+  "runtime_manifest_sha256": "6ed8d9b578e2c098e8f806bf3649e3394d3f8afe93cb5833448008a8302440b8",
+  "baseline_result_sha256": "2ac183ff4058dd89ea9dbb59c8cc4b5e6d607d00afd867fe7f573b51501847df"
+}

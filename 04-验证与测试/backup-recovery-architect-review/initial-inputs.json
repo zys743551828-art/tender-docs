@@ -1,0 +1,52 @@
+{
+  "scope": "backup-recovery early review",
+  "candidate_sha256": "7401040e20e035d7140f95a5809869a0ab67aab92355f665f8815f7b7dcd2d66",
+  "files": [
+    {
+      "path": "deploy/backups/run.py",
+      "scope": "sources",
+      "expected_sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "observed_sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "matches": true
+    },
+    {
+      "path": "deploy/backups/README.md",
+      "scope": "sources",
+      "expected_sha256": "3aa65ecc8f2eea13c37e740f88c1663301dc883ac3e3c87799b84d47d3b0a449",
+      "observed_sha256": "3aa65ecc8f2eea13c37e740f88c1663301dc883ac3e3c87799b84d47d3b0a449",
+      "matches": true
+    },
+    {
+      "path": "tests/test_backup.py",
+      "scope": "sources",
+      "expected_sha256": "c381bb865ac202a409f4f3c61eebbbafc23eb207a882e04041caa8c31a8d8413",
+      "observed_sha256": "c381bb865ac202a409f4f3c61eebbbafc23eb207a882e04041caa8c31a8d8413",
+      "matches": true
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "scope": "storage_dependencies",
+      "expected_sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "observed_sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "matches": true
+    },
+    {
+      "path": "packages/domain/providers/oss.py",
+      "scope": "storage_dependencies",
+      "expected_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "observed_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "matches": true
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "scope": "storage_dependencies",
+      "expected_sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "observed_sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "matches": true
+    }
+  ],
+  "development_result_sha256": "a99c824a716b0deac410ef7413fa28abb8b65c62a54db190a4aac4f20372967e",
+  "credentials_read": false,
+  "paid_calls": 0,
+  "final_pass": false
+}

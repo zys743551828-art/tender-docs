@@ -1,0 +1,29 @@
+{
+  "scope": "独立provider自动回归；不含任何chat或全局bucket写入",
+  "mode": "offline",
+  "passed": true,
+  "paid_chat_requests": 0,
+  "started_at": "2026-10-16T16:39:00.546206+00:00",
+  "modules": [
+    {
+      "module": "qa.provider_negative_probe",
+      "passed": true,
+      "result_path": "provider_negative_probe.json",
+      "sha256": "2987172c139b09180b58735a1cb1d5ceab350efb410c2551f4327902eb3b6d1c"
+    }
+  ],
+  "sources_before": {
+    "packages/domain/providers/deepseek.py": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+    "packages/domain/providers/oss.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "packages/domain/providers/__init__.py": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+    "qa/provider_preflight.py": "0faeea761e5ccac9b5d7abffc2aaa70ce6aa341580005a72692f7f383cd28866",
+    "qa/provider_regression.py": "f6083be168b7bf04592ca8d6f46b94bcaf54af002b1dbd1f3529e207965f2372",
+    "qa/provider_adapter_probe.py": "6a91d83f93c4f7863d526622970a63682abe6ca806784049496e7881d41f32aa",
+    "qa/provider_oss_probe.py": "a83568cf1bc4b070edcb75bec91b245a69bd552374735ba499c5ffe4f7c9c35e",
+    "qa/provider_chat_probe.py": "36130f179e981553a22b036ff61912115187487726ba684f47f681b5a3af89ab",
+    "qa/provider_negative_probe.py": "830f4edd55385852a5644b82a4636fe1b5c981d68ec059eb66eb4dfdebe1c9e4"
+  },
+  "sources_stable": true,
+  "finished_at": "2026-10-16T16:39:01.187859+00:00",
+  "runner_sha256": "f6083be168b7bf04592ca8d6f46b94bcaf54af002b1dbd1f3529e207965f2372"
+}

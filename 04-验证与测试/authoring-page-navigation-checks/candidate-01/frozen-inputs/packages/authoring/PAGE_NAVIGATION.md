@@ -1,0 +1,17 @@
+# 章节实页与静态目录定位端口
+
+此模块只分析受控生成链返回的实际PDF字节，不生成DOCX、不调用转换器，也不授通用PDF安全、内容完整性或RICH渲染资格。它不改变外来Word03与已冻结renderer。新RICH沙箱及真实DOCX→PDF→目录最终链仍须Owner闭合并独立静审后实际验收。
+
+`anchor_for(node_id)`只接受规范UUID，生成`sec_`加32位hex稳定锚点。`inspect_navigation(pdf_bytes, entries, *, mode, style)`的entries是全部活动节点的完整先序树，每项恰为`node_id,parent_id,anchor,title,expected_start_page`；title须是实际显示的完整编号标题。每轮目录输入页码为int或None，None只接受本轮实际PDF中空白或破折号占位。四边距按冻结版式的`margin_{top,bottom,left,right}_twips`必传，不能拿前轮目录页数组当本轮事实。mode首支持显式`chapter_start_new_page`；该build选择由Owner冻结，不暗改旧模板。`continuous`保持末页unknown及partial，未授连续排版精确范围。
+
+PDFium实际枚举直接内部Dest链接，按目标页及XYZ坐标组合多rect并去重。NamedDest存在时必须与稳定锚点和链接同指一处；缺NamedDest只能使用唯一精确TOC链接标题，重复标题不猜。所有目录origin页从当前PDF量出，须在最早章节之前，目标须严格递增且各章分处不同物理页。非链接annotation、文档JavaScript、所有链接action（包括尚未审批的GoTo action）、外链、缺坐标和异常资源都保留具体gap。模块只检查可枚举导航动作，不能凭PDFium这些端口证明任意PDF所有OpenAction／AA均无活动行为；生成器与渲染安全由既有闭合链负责。
+
+目标标题必须是版式正文区域首个完整文本行或连续完整行，剔除边距外页眉页脚；实际dest Y须位于该标题邻域。填充renderMode、alpha与每字符渲染局部对比的保守检查会拒绝不可见文本候选，但不代表通用OCR、重叠、遮挡或全部视觉精度已验。字体／表图守恒、分页质量等由独立RICH核验承担。
+
+每个TOC标题内部链接与右侧静态数字分开，右侧当前PDF实际数字必须与本轮expected_start_page逐项相符，不信调用者自己声明的页码。长标题可在同origin页跨多rect；跨目录物理页组合目前partial。应让静态页码出现在最后一个标题rect所在行右侧；空／破折号为首轮占位，后续数字只接受可解释十进制和点状引导符。
+
+实际start_page均是从1开始的PDF物理页。完整新页模式中，end_page是下一个非该章后代节点start_page减1，父章包含后代，最后根章延至实际总页数；缺目标、同页冲突或标题不可靠时不给完整章页范围。预算页数从不参与推算。
+
+`converge_navigation(iterations, *, context_digest, mode, style)`只验证调用方已经完成的最多三轮真实PDF字节，不执行渲染。每轮恰为`pdf_bytes,docx_bytes,entries`；实际DOCX bytes只在本模块做SHA，不负责验证该DOCX是否由生成器产生、或该PDF是否真的由它转换。调用方必须验证自身生成器与renderer收据的两个SHA及同snapshot／layout／profile身份，并以context_digest冻结这些上下文，不能把本模块证明当执行收据。相邻轮目录输入必须来自上轮真实量得的起页，结构身份／标题不变，最终输入、实际印出数字与本轮量得起页一致才授fixed_point。未收敛、数字不符、结构变更或超过三轮均partial，proof记录每轮DOCX／PDF SHA与量得值供Owner追加到最终构建证据。
+
+当前开发证据是16项标准库构造的实际小PDF（真实PDFium读取／渲染），含三轮分页变化、父子范围、NamedDest／唯一标题回退、重复rect、错目标／数字、外链及GoTo action拒绝、不可见标题、非法树和无收敛边界。测试中的DOCX输入是明确不验证OOXML的占位bytes，只测试其摘要绑定，不冒称新的RICH DOCX生成／转换通过。无Docker、模型、云或SQL调用。真实LO是否保留directDest、NamedDest和多rect形态必须在获许可的实际组合中验证；若只产生GoTo action则先报gap，不能为了通过静默放宽动作策略。

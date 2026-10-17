@@ -1,0 +1,9 @@
+# 转换请求排序DDL静审
+
+结论：可在独立新库按Word schema之后执行精确DDL，再实测原双事务反例。候选SHA256 `c4f9cb52278f891061ac75b38be7efa457090d2a33888d896fbd1e07c19777bd`；SQL SHA256 `8a379cb1b7d4c8bb807892937e03f77d3f75304ebd3abe256a1cf44e06319277`。
+
+实际SQL只有BEGIN／ALTER TABLE design.word_render_runs ALTER COLUMN created_at SET DEFAULT clock_timestamp()／COMMIT。其影响是新插入行按真实INSERT观察时点取值，解决早开始、后受理的事务被旧now()事务开始时间排到前面的已报告反例；不会修改旧行，不新增列，不扩大API原五列INSERT权，也不把时间当客户端声明。
+
+既有completed_pdf与word_view按created_at、operation_id选最新请求，必须在新库复验同一项目串行受理的两事务顺序、最新pending／failed／partial不能回退旧成功，以及API显式created_at仍42501。该DDL静审不代替这几个实际应用断言，也不声称时间戳是严格逻辑单调序号。
+
+本轮没有执行DDL或双事务业务测试。原Word380…及01／02／03字节和原反例保持不变，不对现有库热补。

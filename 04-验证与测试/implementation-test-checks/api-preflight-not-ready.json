@@ -1,0 +1,27 @@
+{
+  "scope": "实际HTTP认证、CSRF、会话撤销和项目幂等边界；不是完整投标闭环",
+  "executed_at": "2026-10-16T13:39:23.126792+00:00",
+  "status": "not_ready",
+  "tests_run": 0,
+  "tests_executed": 0,
+  "skipped": 1,
+  "failed": 0,
+  "errors": 0,
+  "base_url": null,
+  "origin": null,
+  "application_identity": null,
+  "contract_sha256": null,
+  "configuration_sha256": null,
+  "adapter_mode": null,
+  "sources": {
+    "test_api_boundary.py": "d6e3172f0d1b4a9e496915e3c5cc1db52f620de4b2743ed5c3b82b54f7f72aa3",
+    "run_api_boundary.py": "fed93a268eeccccc3fc04c007845bda68807a3ce7aa6880f681b358862cc1453"
+  },
+  "not_covered": [
+    "PG/Kafka进程恢复",
+    "上传/原件/版本",
+    "浏览器和真实用户",
+    "真实模型与检索效果",
+    "生产运行"
+  ]
+}

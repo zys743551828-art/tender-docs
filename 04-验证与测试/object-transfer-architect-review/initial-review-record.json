@@ -1,0 +1,40 @@
+{
+  "scope": "preliminary module architecture review; no final application pass",
+  "candidate_path": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/developer-candidate.json",
+  "candidate_sha256": "ef7766af46b7a645595e600f1c51994006536b33c4b0f4be9b4f369df18958fc",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/object_transfer.py",
+      "sha256": "5aa7646c297f2e5745ecc9a442b3fa36eed0270d774ce1e08f533a4378f989ce",
+      "validated_archive": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-01/apps/api/object_transfer.py",
+      "matches": true,
+      "current_source_now_changed": true
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_object_transfer.py",
+      "sha256": "7676fb7593d6ef1c3d50000440da780fdefa07504ae7917a951ba43d9b2b188c",
+      "validated_archive": "/workspace/tender-docs/04-验证与测试/object-transfer-implementation/frozen-inputs-01/tests/test_object_transfer.py",
+      "matches": true,
+      "current_source_now_changed": true
+    }
+  ],
+  "main_scope": "unfrozen observed callsites only; not bound as final source",
+  "offline_tests": {
+    "passed": 37,
+    "failed": 0,
+    "seconds": 0.58,
+    "explicit_fixture_storage": true,
+    "local_socket_permission_needed_for_testclient": true,
+    "initial_restricted_testclient_run_interrupted": true,
+    "private_dotenv_read_suppressed": true
+  },
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "blocking_findings_observed": 0,
+  "pending": [
+    "module02 absolute trusted-origin URL delta",
+    "main actual candidate freeze",
+    "QA real PG races and browser OSS chain",
+    "remove ticket from access logs or disable access logging"
+  ]
+}

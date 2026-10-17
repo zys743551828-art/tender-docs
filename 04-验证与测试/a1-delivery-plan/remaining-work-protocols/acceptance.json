@@ -1,0 +1,99 @@
+{
+  "scope": "既有PRD后续最小开发协议验收任务，非软件证据",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "RW-01",
+      "title": "全局到项目边界",
+      "setup": "全局检索后要求写项目；切换两个项目并保留各自草稿/来源",
+      "expected": "全局bid=null不造假ID；写入先明确目标，旧附件不跨项目，当前范围持续可见",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-02",
+      "title": "主会话恢复与展示删除",
+      "setup": "刷新/新浏览器/结束/收起/恢复及删除消息",
+      "expected": "主会话可发现，结束/隐藏不取消任务；业务对象/审计不删，重登不自动确认",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-03",
+      "title": "一次Action与陈旧卡",
+      "setup": "直接表单提交、聊天确认卡重复点，另一成员更新对象",
+      "expected": "明确操作只确认一次，幂等真结果；stale/expired保留输入与差异，模型话术不认成功",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-04",
+      "title": "评分输入隔离",
+      "setup": "先看官方成绩/历史案例再说重新评分，附件含越权指令",
+      "expected": "独立干净白名单/完整章节/三判断，聊天和RAG片段不作全输入，文件指令不改权限",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-05",
+      "title": "生命周期及有据补录",
+      "setup": "真实提交后结束/缺成绩归档/同轮重开/重招",
+      "expected": "阶段和归档/会话/任务独立；原实交冻结，归档可补成绩；重招新轮不延长旧截止",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-06",
+      "title": "归档运行竞争",
+      "setup": "归档时有运行任务，分别等完和明确请求取消",
+      "expected": "不暗中取消或藏后台写入；真实终态后归档，取消不回滚正式决定",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-07",
+      "title": "四类手动模板",
+      "setup": "保存并运行四个预置，修改版本时旧运行在途",
+      "expected": "手动默认、版本冻结；否决统一幂等、评分保资格、补遗不定效力、建议不自动应用",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-08",
+      "title": "事件与cron恢复",
+      "setup": "同事件重复投递/同修订重复事件/计划重复投递/长时间暂停",
+      "expected": "业务语义去重，计划持久/AsiaShanghai可读，下次时刻真实；过去不无界收费补跑",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-09",
+      "title": "自动化不能正式决定",
+      "setup": "模板指令要求自动确认事实、提交、核分、发布知识/模型",
+      "expected": "拒绝越界，仅产生候选/待用户明确动作；模板文本不增工具权限",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-10",
+      "title": "A2真实生成差异",
+      "setup": "模型经账本生成局部建议，人工并发修改/撤回来源再应用",
+      "expected": "基准/来源变化失败留候选，未选章节保留，ACK后快照，采纳不解决",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-11",
+      "title": "A2完整余项不丢",
+      "setup": "树目录/表图/外部导入/目录模板与版式模板/版面检查",
+      "expected": "按实际能力验收，不支持明确列出，不能静默丢对象；文本首片不冒充完整A2",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-12",
+      "title": "Word失败PDF接续",
+      "setup": "实际收Word后转换失败，用户补PDF，随后换Word",
+      "expected": "原Word保存但未检查；PDF独立身份/unverified声明，旧结论不授Word；不重传招标/不逼编辑器",
+      "status": "pending_application"
+    },
+    {
+      "id": "RW-13",
+      "title": "未知计费恢复",
+      "setup": "同输入model_calls reserved/unknown，点重试/新nonce",
+      "expected": "保留资料结果/记录，明确未再次发收费；普通重试不授权重付，无假分或无限spinner",
+      "status": "pending_application"
+    }
+  ]
+}

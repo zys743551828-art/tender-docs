@@ -1,0 +1,333 @@
+{
+  "scope": "三轮规格审查、反例走查与文档检查；不代表软件或真实用户测试",
+  "rounds": [
+    {
+      "round": 1,
+      "focus": "业务范围、默认落点、主要动作、自动触发与交付依赖",
+      "reviewed_at": "2026-10-16T17:14:41.138318+08:00",
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "2a633b45ecacc445ef805cd94e70802e9144ba54f5a1573e4bbe60f6870f039b",
+        "02-业务与产品/AI投标工作台PRD.md": "37fa936db4a60e1998ef4f18bb6f2b9d0e466d8021d59b83fd687a087ebe8485",
+        "05-技术与设计/交互与视觉设计.md": "a581914e163494eb4fe74792ce35fa47133ee719844a3e519f4d9d9a50fb0548",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "8607a6c0c0abcc186ed5c8b0dc02e1a64ca77f534a58fd1364ec446f9a99938c",
+        "04-验证与测试/prd-checks/scenarios.json": "8a4adb401decee5a268be8cbd3307783b0b42107380b3fce7bdee79b3825be51"
+      },
+      "status": "已完成规格核对",
+      "findings": [
+        {
+          "id": "R1-01",
+          "problem": "概览或最近位置与快速结果、显式历史链接的落点规则有冲突",
+          "resolution": "集中定义显式对象链接、项目列表、首次上传、归档、无效位置和后台通知的落点",
+          "prd_sections": [
+            "3.2",
+            "3.5"
+          ],
+          "scenario_ids": [
+            "AC-112"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R1-02",
+          "problem": "主要下一步缺少当前输入缺口与旧关键风险的排序规则",
+          "resolution": "规定资料冲突、核心失败、当前关键问题、提交核对、改稿和提交的优先级",
+          "prd_sections": [
+            "3.7"
+          ],
+          "scenario_ids": [
+            "AC-113"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R1-03",
+          "problem": "同批多文件与按钮、对话、生成事件可能重复触发评审",
+          "resolution": "按批次和资料修订归并，等价在途请求共用运行，只合并最新待评修订",
+          "prd_sections": [
+            "7.2"
+          ],
+          "scenario_ids": [
+            "AC-114"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R1-04",
+          "problem": "自动整稿范围外与确认章节汇编、Word格式支持边界不清",
+          "resolution": "区分逐章人工维护后汇编与无人核验交付，首批Word格式明确为DOCX",
+          "prd_sections": [
+            "2.3",
+            "7.1",
+            "10.6"
+          ],
+          "scenario_ids": [
+            "AC-115"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R1-05",
+          "problem": "A阶段打包编辑器和模板，与双P0独立推进及提交条件不一致",
+          "resolution": "拆分A1快速评审和A2按需编制，评分模型资格只控制分数身份，不额外阻止合格登记",
+          "prd_sections": [
+            "19.2",
+            "9.1"
+          ],
+          "scenario_ids": [
+            "AC-116"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        }
+      ],
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "104584e5584c9f50b4f75a20eca445386e6e726368f3e23b1ca66325815f72b9",
+        "02-业务与产品/AI投标工作台PRD.md": "fede17a694d650f03ca846fb03d30830affae8f6317904d454d78530aff08ee9",
+        "05-技术与设计/交互与视觉设计.md": "05f36b0e828487409aad1ed429788c49a1e81d119ffe50208fa400181c07b551",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "8607a6c0c0abcc186ed5c8b0dc02e1a64ca77f534a58fd1364ec446f9a99938c",
+        "04-验证与测试/prd-checks/scenarios.json": "6db7fa9e341c47edf3a0bf60b135ace6e205c980c808e175ccbbea41e2578333"
+      },
+      "check_result": "04-验证与测试/prd-checks/fusion-round-1-result.json",
+      "check_sha256": "480bf45d3722ab115d73d8158ec418093ff0d868a343c42e37645eaf37595776",
+      "scenarios_defined": 116,
+      "software_scenarios_executed": 0
+    },
+    {
+      "round": 2,
+      "focus": "跨页面对象与版本、保存／取消恢复、导出文件对应和工具契约",
+      "reviewed_at": "2026-10-16T17:16:21.898464+08:00",
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "104584e5584c9f50b4f75a20eca445386e6e726368f3e23b1ca66325815f72b9",
+        "02-业务与产品/AI投标工作台PRD.md": "fede17a694d650f03ca846fb03d30830affae8f6317904d454d78530aff08ee9",
+        "05-技术与设计/交互与视觉设计.md": "05f36b0e828487409aad1ed429788c49a1e81d119ffe50208fa400181c07b551",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "8607a6c0c0abcc186ed5c8b0dc02e1a64ca77f534a58fd1364ec446f9a99938c",
+        "04-验证与测试/prd-checks/scenarios.json": "6db7fa9e341c47edf3a0bf60b135ace6e205c980c808e175ccbbea41e2578333"
+      },
+      "status": "已完成规格核对",
+      "findings": [
+        {
+          "id": "R2-01",
+          "problem": "生成动作未说明尚未保存内容如何进入固定快照",
+          "resolution": "加入保存确认屏障；失败不静默生成旧稿，显式旧版操作单独标明",
+          "prd_sections": [
+            "10.5",
+            "10.6"
+          ],
+          "scenario_ids": [
+            "AC-117"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R2-02",
+          "problem": "草稿、已评审PDF与实交稿均称当前，可能误替换或无端阻断",
+          "resolution": "明确五层身份与指针；未生成编辑不改写PDF，登记说明未包含草稿修改，生效输入仍重新校验",
+          "prd_sections": [
+            "4.4",
+            "10.3"
+          ],
+          "scenario_ids": [
+            "AC-118"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R2-03",
+          "problem": "外部同名Word和PDF缺少可信对应关系",
+          "resolution": "保留独立PDF路径，受控构建记录源与产物，Word交付转换范围作为独立发布门槛",
+          "prd_sections": [
+            "10.7",
+            "20"
+          ],
+          "scenario_ids": [
+            "AC-119"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R2-04",
+          "problem": "取消请求、完成和迟到结果的有效性边界不够具体",
+          "resolution": "按服务端顺序确定终态，取消不回滚正式决定，迟到产物不更新当前指针",
+          "prd_sections": [
+            "8.6",
+            "16.3"
+          ],
+          "scenario_ids": [
+            "AC-120"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R2-05",
+          "problem": "AI应用只写了正文基准修订，未直接约束来源失效窗口",
+          "resolution": "应用前同时核对规则、事实和来源用途；拒绝失效新增引用并保留历史",
+          "prd_sections": [
+            "10.5",
+            "12.4"
+          ],
+          "scenario_ids": [
+            "AC-121"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R2-06",
+          "problem": "新增编辑、构建和任务能力缺少对应接口输入及写入条件",
+          "resolution": "补充章节保存、修改提案、固定构建和任务定义的契约提案及恢复反馈",
+          "prd_sections": [
+            "4",
+            "8",
+            "10",
+            "16"
+          ],
+          "scenario_ids": [
+            "AC-122"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        }
+      ],
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "104584e5584c9f50b4f75a20eca445386e6e726368f3e23b1ca66325815f72b9",
+        "02-业务与产品/AI投标工作台PRD.md": "967c4918a51ee881cb1bc01e7601ab688a28e6bdffff613f06183dfd60933937",
+        "05-技术与设计/交互与视觉设计.md": "2c2f3a1aec457bef48d30d6e281811413f9e1a5f18b7d27344c4ba1ab2c4f4bc",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "b03dd9fc9e93cdf66a8bb555cb6349f1c90a3a91ac0a6204f5b9e16e51719ba9",
+        "04-验证与测试/prd-checks/scenarios.json": "da68946d3b131e51ca568f0908f5929f113da39e08b10a62162a50523d3a8a1b"
+      },
+      "check_result": "04-验证与测试/prd-checks/fusion-round-2-result.json",
+      "check_sha256": "648cfd90dbf5dcf4ba8a44cc231a9eb21ec752fdbc48b21fe6363b547fb0d207",
+      "scenarios_defined": 122,
+      "software_scenarios_executed": 0
+    },
+    {
+      "round": 3,
+      "focus": "完整任务往返、融合优势回归、导出类型与呈现规则、待定上线门槛",
+      "reviewed_at": "2026-10-16T17:20:24.964658+08:00",
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "104584e5584c9f50b4f75a20eca445386e6e726368f3e23b1ca66325815f72b9",
+        "02-业务与产品/AI投标工作台PRD.md": "967c4918a51ee881cb1bc01e7601ab688a28e6bdffff613f06183dfd60933937",
+        "05-技术与设计/交互与视觉设计.md": "2c2f3a1aec457bef48d30d6e281811413f9e1a5f18b7d27344c4ba1ab2c4f4bc",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "b03dd9fc9e93cdf66a8bb555cb6349f1c90a3a91ac0a6204f5b9e16e51719ba9",
+        "04-验证与测试/prd-checks/scenarios.json": "da68946d3b131e51ca568f0908f5929f113da39e08b10a62162a50523d3a8a1b"
+      },
+      "status": "已完成规格核对",
+      "findings": [
+        {
+          "id": "R3-01",
+          "problem": "显示预测分数开关的文字可能误伤官方成绩字段",
+          "resolution": "限制为预测数值、区间与派生比较，保留正式成绩登记、风险、覆盖和缺口",
+          "prd_sections": [
+            "7.4",
+            "13.1",
+            "15.2"
+          ],
+          "scenario_ids": [
+            "AC-123"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R3-02",
+          "problem": "非必要附件失败与批次受理成功可能被误读为完整结论资格",
+          "resolution": "按任务和生效要求判断必要性，允许部分结果但关键未知范围不宣称整稿通过",
+          "prd_sections": [
+            "7.2",
+            "7.3"
+          ],
+          "scenario_ids": [
+            "AC-124"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R3-03",
+          "problem": "同文件哈希去重可能漏掉角色与项目归属更正",
+          "resolution": "语义输入包含角色、归属、资料修订、规则事实、解析和方法，复用字节不复用错误结论",
+          "prd_sections": [
+            "7.2",
+            "4"
+          ],
+          "scenario_ids": [
+            "AC-125"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R3-04",
+          "problem": "原始导出不可变与当前隐藏设置、失效提示存在呈现冲突",
+          "resolution": "生成带当前展示和影响修订的独立副本，失效旧缓存，保留原产物且不声称修改离线文件",
+          "prd_sections": [
+            "7.4",
+            "15.2"
+          ],
+          "scenario_ids": [
+            "AC-126"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R3-05",
+          "problem": "投标正文、评审报告和批注PDF下载用途混淆",
+          "resolution": "分开产物类型和按钮，正文不夹带系统批注，标准登记验证正文；真实错误提交仍可补录",
+          "prd_sections": [
+            "10.6",
+            "15.2"
+          ],
+          "scenario_ids": [
+            "AC-127"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        },
+        {
+          "id": "R3-06",
+          "problem": "生成并评审按钮在关闭自动开始时只生成，且可能误拒绝明确人工评审",
+          "resolution": "默认按钮随设置命名，自动衔接与显式人工请求分开；人工评审不要求重开自动开始",
+          "prd_sections": [
+            "3.5",
+            "7.4",
+            "8.1"
+          ],
+          "scenario_ids": [
+            "AC-105",
+            "AC-128"
+          ],
+          "status": "已在规格修正",
+          "software_verification": "未执行"
+        }
+      ],
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "9c8df6ab66c31a8f5c1d110343d2e7322b130c3e56c897cef2c3e4729956054b",
+        "02-业务与产品/AI投标工作台PRD.md": "353f85df7fe1829ea8e38a674e82954c12d51e39a161849bcf199ffaad07ff48",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "b812f9f286de3fa1ea26cd0f5d525c44393270b868cf263801d91f163b752a4f",
+        "04-验证与测试/prd-checks/scenarios.json": "b98cf68e3bd2a185120b79e7bce5f49660355ce2ba8281e2485e89b89f8b8625"
+      },
+      "check_result": "04-验证与测试/prd-checks/fusion-round-3-result.json",
+      "check_sha256": "546f78d7af4b574dc4abee5ef0ee573739ae5b6c0ca24f9f5106492fc4acc04e",
+      "scenarios_defined": 128,
+      "software_scenarios_executed": 0,
+      "intermediate_checks": [
+        {
+          "reason": "第三轮最终一致性核对补查生成按钮与自动开始开关语义",
+          "check_result": "04-验证与测试/prd-checks/fusion-round-3-intermediate-result.json",
+          "check_sha256": "afa2e13da44f64960c7973f8c28f74f251475a96120a67813e03af70a6f87bf2",
+          "scenarios_defined": 127
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "started_at": "2026-10-16T18:31:05.579898+00:00",
+  "scope": "late_local_build_download_and_return_delta",
+  "project_id": "557bfffa-b99d-4812-80f9-58be782124c8",
+  "return_auto_restored_editor": true,
+  "return_kept_text": true,
+  "refresh_auto_restored_editor": true,
+  "downloaded": [
+    {
+      "button": "下载投标正文（Word）",
+      "filename": "投标正文.docx",
+      "bytes": 2315,
+      "sha256": "8ddf9a3cfd3d6e352aa2152045d61a47056c92a26c55ce56bc97306af536654b"
+    },
+    {
+      "button": "下载投标正文（PDF）",
+      "filename": "投标正文.pdf",
+      "bytes": 27908,
+      "sha256": "9318fc9441bf2103ae33b161a70ef1b092e606514bb4a82a2b51df0bedb461ed"
+    }
+  ],
+  "current_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n市\n市政投标工作区\n内部协作空间\n\n投标工作\n\n投标项目\n项目档案\n评分研究\n资料在私有工作区保存\n外\n外部联调测试员1\n已登录成员\n退出\n投标工作 / 投标项目\n资料工作区\n返回项目列表\n项目工作区\n用户早期走查-独立人工章节-01\n准备资料\n资料修订 2\n上传新版资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n实交与成绩\n处理记录\n项目设置\n查证资料\n按需编制正文\n\n已有稿件可以继续走PDF资料评审；在这里人工编写章节，生成固定版本后再核对。无需先配置模板或企业事实库。\n\n可选工作面\n打开已有正文草稿\n选择正文草稿\n用户人工草稿-道路保通-01 · 草稿修订 6\n新正文草稿名称\n创建正文草稿\n\n本批支持文字、标题和列表，内置A4版式；图片、表格及外部Word无损导入尚未开放，未接收的对象不会被称为已保真。\n\n章节目录\n\n草稿修订 6\n\n1\n交通导改与保通\n章节修订 6 · 关联 0 条要求\n新增章节名称\n新增章节\n已保存 · 章节修订 6 · 草稿修订 6\n立即保存\n章节名称\n正文段落\n标题 1\n标题 2\n标题 3\n标题 4\n标题 5\n标题 6\n粗体\n斜体\n无序列表\n有序列表\n减少缩进\n增加缩进\n撤销文字修改\n重做文字修改\n\n本章为用户走查合成内容。\n\n施工期间保留沿街出入口通行，并设置临时提示。\n\n分阶段围挡与夜间照明由现场确认。\n\n用户走查：失响应保存后仍保留这段文字。\n\n用户走查远端A：另一窗口已保存内容。\n\n支持段落、标题、列表、粗体和斜体。粘贴按纯文字接收；图片和表格请保留在PDF原件中。编辑器内容需保存确认，再生成正式文件。\n\n本章要求与来源 · 0 条要求／1 处来源\n手动段落修改预览\n查看章节历史修订\n\n已定位当前段落，可在修改预览中提出替换。 关联 0 条要求、1 条来源；文字保存不代表满足要求。\n\n生成固定版本\n\n先等待所有章节保存确认，再冻结该草稿修订。后续编辑不会改变本次输出。\n\n内置A4版式\nWord\nPDF\n保存确认后生成文件\n\n本次仅生成文件，不自动切换受检正文或开始评审。Word与PDF独立显示结果，生成成功不表示内容通过。\n\n本项目生成版本\n\n从服务器恢复已受理任务与固定快照，Word和PDF分别保留实际结果。草稿修订只在已取得其确认身份时显示。\n\n固定快照生成版本\n生成任务已完成\n\n固定快照：6307d5bb-16c7-4e20-87e6-41218aedc35b\n\n查看本次快照正文\nWord\n此格式生成成功\n下载投标正文（Word）\nPDF\n此格式生成成功\n\n文件已生成，正式提交前请核对字体、分页与版面；当前转换环境尚未完成正式交付验收。\n\n下载投标正文（PDF）\n查看此版PDF原页",
+  "requests": [
+    {
+      "at": "2026-10-16T18:31:06.833052+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.835715+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.927267+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.936094+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.937142+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.941452+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.988305+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:06.990983+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.001421+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.008308+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/a9ead50a-4d10-4132-a618-74ec1734a728/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.012944+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.135850+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.142762+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.193675+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.194309+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.207209+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.207738+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.253179+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.253881+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.289727+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/9ead3db5-74f4-412a-aa79-d57ca77b6199",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.397918+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.400968+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.402316+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.403566+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.404836+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.409402+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.426286+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.437726+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.439395+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/9ead3db5-74f4-412a-aa79-d57ca77b6199",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.459852+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.467999+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.516282+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.517693+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.529843+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.532575+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.579401+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.583030+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.623986+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.637767+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.638471+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.639056+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.673439+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.674169+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:07.702306+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/9ead3db5-74f4-412a-aa79-d57ca77b6199",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.521187+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.523231+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.608733+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.611080+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.621297+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.623697+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.706499+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.726457+00:00",
+      "method": "GET",
+      "path": "/api/v1/authoring/capabilities",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.728805+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.739635+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.817235+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.819828+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/drafts/56c059f8-fa05-4272-98dd-aaade0936da5",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.886169+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.895882+00:00",
+      "method": "GET",
+      "path": "/api/v1/sections/78e4a2a9-1c50-45ea-98c2-f991e20e0eec",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.897705+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.903851+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/builds",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.955445+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.959865+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:08.995718+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/9ead3db5-74f4-412a-aa79-d57ca77b6199",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:09.523671+00:00",
+      "method": "GET",
+      "path": "/api/v1/documents/0f4a3773-a663-43ea-8113-75feca205842",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:09.557012+00:00",
+      "method": "GET",
+      "path": "/api/v1/artifacts/0f4a3773-a663-43ea-8113-75feca205842/download",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:10.853224+00:00",
+      "method": "GET",
+      "path": "/api/v1/object-transfers/versions/0f4a3773-a663-43ea-8113-75feca205842",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:10.952807+00:00",
+      "method": "GET",
+      "path": "/api/v1/documents/157f5376-213c-4483-98a1-401716eb0931",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:10.994134+00:00",
+      "method": "GET",
+      "path": "/api/v1/artifacts/157f5376-213c-4483-98a1-401716eb0931/download",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:11.434719+00:00",
+      "method": "GET",
+      "path": "/api/v1/builds/ef7b7777-efa8-4bd5-b7d7-a8532f182061",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:11.491451+00:00",
+      "method": "GET",
+      "path": "/api/v1/operations/9ead3db5-74f4-412a-aa79-d57ca77b6199",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:11.575145+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/557bfffa-b99d-4812-80f9-58be782124c8/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T18:31:12.024304+00:00",
+      "method": "GET",
+      "path": "/api/v1/object-transfers/versions/157f5376-213c-4483-98a1-401716eb0931",
+      "status": 200
+    }
+  ],
+  "ended_at": "2026-10-16T18:31:12.174407+00:00"
+}

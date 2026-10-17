@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "checks": [],
+  "scope": "Own synthetic real-PDF SHA and explicit parsed-page/model-output SQL fixtures; actual engineering validate_output and restricted Worker fenced content publish. A document/1 test envelope routes only publication through explicit patch to actual content publisher; not real model parsing/Kafka/API acceptance.",
+  "paid_calls": 0,
+  "model_calls": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "fatal": {
+    "stage": "first_valid_conflict",
+    "type": "DomainError",
+    "message": "Independent publication probe incomplete; no private configuration exposed"
+  },
+  "probe_sha256": "f782b125581344dd0a3593bfae248db5cb5b561cad6b0436bfe4cd639a7f0cfc",
+  "runtime_manifest_sha256": "063b6abed2220947da341cf196510d7e6845c91e2709c6847bea7aff9670fc6c",
+  "fixture_manifest_sha256": "47874626fefa43ef520b84c8cbd25e80b3f4e43b7045338a0393f090944b3f4d"
+}

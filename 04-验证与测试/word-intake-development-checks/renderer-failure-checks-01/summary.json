@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "missing_font",
+      "state": "succeeded",
+      "coverage": "partial",
+      "gaps": [
+        "WORD_FONT_SUBSTITUTED"
+      ],
+      "qualified": false
+    },
+    {
+      "name": "missing_glyph",
+      "state": "succeeded",
+      "coverage": "partial",
+      "gaps": [
+        "WORD_FONT_GLYPH_UNAVAILABLE"
+      ],
+      "qualified": false
+    },
+    {
+      "name": "injected_host_deadline",
+      "state": "failed",
+      "error_code": "WORD_CONVERSION_TIMEOUT",
+      "cleanup_confirmed": true
+    }
+  ],
+  "paid_model_requests": 0,
+  "business_documents": 0
+}

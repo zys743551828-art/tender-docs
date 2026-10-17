@@ -1,0 +1,47 @@
+{
+  "status": "passed_tested_tool02_delta_not_execution_approval",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/candidate-02/candidate.json",
+    "sha256": "da56f7453c6c22861c5034f8b50cc91ca3a89f4500942ba52108e9fdeac41557"
+  },
+  "runtime_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-02/runtime-candidate.json",
+    "sha256": "fe338be6eb4aa31c7af5cb949500ab3688c392c67e630694fc8f85327ccbee10"
+  },
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-02/guard-delta-execution/result.json",
+      "sha256": "d589648f7b1615836b918e9ceea11ac8eafa18bff4ec474622e773666d275997"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-02/post-validation-execution/result.json",
+      "sha256": "048d4010c65046f1b7624891b7095970171dd0b01f8877241f1df7b622b71b80"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-02/unknown-execution/result.json",
+      "sha256": "1c56c931723b6380742ec05623ec6e0f5267c7a1163ddc1789c0db04c8b0a722"
+    }
+  ],
+  "unchanged_behavior_ast": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/runtime-02/unchanged-behavior-observation.json",
+    "sha256": "0361d37c378efdca7a8cffddb18f430f6cf0f9b17e8647228848ac267ab4d60e"
+  },
+  "retained_candidate01": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/candidate-01-result.json",
+    "sha256": "8d6f854e4350f95dd778e6d985942059dcb49e544419c4a1e2272b23004e3924"
+  },
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "verified": [
+    "Explicit approved manifest SHA checked initially and each invocation",
+    "16 required dependencies cannot be omitted even with valid manifest SHA; duplicates rejected",
+    "Actual loaded required module at foreign path rejected; actual source or manifest bytes mutation rejected",
+    "127file frozen runtime with ordinary original01 source and tool02 executes real-PG offline post-provider business rejection and unknown stop cases; prior call prevents restart",
+    "Concurrent two logicalkeys one invocation each and foreign project rejection",
+    "Default CLI offline preview and mandatory candidate-sha argument;180s clarified as new-call start window"
+  ],
+  "scope_gap": "Exact approved90/120 original resource identities are not bound by tool02. PM accepted strict fixture-version authorization scope and is preparing tool03. Tool02 is not released for paid execution.",
+  "future_runtime": "Backend02 is now current release; future approved execution must use its independently tested47source+captured dependencies and tool03, not this original01 runtime manifest.",
+  "currency_boundary": "Call/input/output bounds are tested; PM conservative fee estimate is not provider-confirmed billing or an enforced dollar cap"
+}

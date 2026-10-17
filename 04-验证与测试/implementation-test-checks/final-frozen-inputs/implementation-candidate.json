@@ -1,0 +1,293 @@
+{
+  "scope": "T0底座首个PDF资料切片；不是T0全部、完整A1、RAG、模型或生产验收",
+  "backend_candidate": {
+    "path": "apps/api/backend-candidate-03.json",
+    "sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3"
+  },
+  "frontend_candidate": {
+    "path": "apps/web/qa-previews/frontend-candidate.json",
+    "sha256": "7bef8d1038ed4da77776f2301a6694842df0efcc6bcf36efd6462df7919872b9"
+  },
+  "actual_openapi_sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+  "source_count": 69,
+  "sources": [
+    {
+      "path": ".gitignore",
+      "sha256": "f90b86aabf0df1a567e9dd7fdf970f4aab801a14e9fbae7384f867b52bd74306"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "1ec5e2b609eafb2a9debb9e51229359fcbb8dc71ff6cafd13e29b1fd754656a5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ece17e76052d5d29256a2d60476943f8bb7a5d4c4ad1a09b083fb3b2c49e1e34"
+    },
+    {
+      "path": "apps/api/README.md",
+      "sha256": "cd5d092ca1b3e1eab24622050e8a65cfa9bf6b00061caaebe7e5cacf44bc2971"
+    },
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/__main__.py",
+      "sha256": "53edc0b60ad9c45ec156257e05e8c1bf5028f55ae1553a3d95d079fa388c2490"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/bootstrap.py",
+      "sha256": "4a05d71f3578b93f74304092040b235edfa825e86fd0ff36328a3837bf9d709b"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "8eb2ea5f2254d5a7809763e86ca56094d9a4ee1d72b9ae8af1dee179296d41be"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "5ee6e4f615f1aaeb83710e8057fbe72a4c2e3e0ccc31d5adbf73dad047392025"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "522c52ca4f19ea4fab612833c3a01ac3cd24f90b1f3f5b2153757c12c4ba0322"
+    },
+    {
+      "path": "apps/web/.gitignore",
+      "sha256": "51ea6c8f625fcce48e9c5dbc189fb366776f59a3f0f9cd2adf877b71bb78af8d"
+    },
+    {
+      "path": "apps/web/.prettierignore",
+      "sha256": "88e07985518d91b546947cd24b49d5eee25a069d3d9124e1b433790e0f57d79d"
+    },
+    {
+      "path": "apps/web/README.md",
+      "sha256": "ff4f83d1be00606783b5baa8aa57cfafd0d705e9903b0af2b4292570ae18ebab"
+    },
+    {
+      "path": "apps/web/eslint.config.js",
+      "sha256": "5fd89f1680971e4aaf57fa548e7e6f83b0c2f85bd0aab72bcefc4e201d82b8b8"
+    },
+    {
+      "path": "apps/web/index.html",
+      "sha256": "c2ce35ae892ba7cd4a919d045a4dd5af147c4772ec593a8c7ee3adddfb5800b8"
+    },
+    {
+      "path": "apps/web/package-lock.json",
+      "sha256": "27eb1ca77a6b2949e8e9729cf8dafe58c1f8de391703158fe325cf5b53568eeb"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "59fc9f5368faf8a470207111586327c5ee0ae9a3da1e2a309acc7510d2e4c5d2"
+    },
+    {
+      "path": "apps/web/scripts/copy-pdf-resources.mjs",
+      "sha256": "a867bd93b4eb76f4b3c56d937159f1d1484c81d41ebe79f2a04af69d5bbfcbb0"
+    },
+    {
+      "path": "apps/web/scripts/generate-contracts.py",
+      "sha256": "7396ae8556f547c27b2385e01a9abcc84fe732af6b3f458bc434a26158e458e1"
+    },
+    {
+      "path": "apps/web/src/App.test.tsx",
+      "sha256": "2a2f89df9affd76c69da8b662592ce88901d2acbf7527d9a0acdf3f2657ab6e6"
+    },
+    {
+      "path": "apps/web/src/App.tsx",
+      "sha256": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f"
+    },
+    {
+      "path": "apps/web/src/Evidence.tsx",
+      "sha256": "362634fc3777f83edfbac15dd85c9a8733b92dae983bd87661b595dbdce00f0d"
+    },
+    {
+      "path": "apps/web/src/HistoryPanel.test.tsx",
+      "sha256": "2aa330d950143974fb420c9a5243fa8ccc4fee88e18ba52b2ee1e8584bc9d7db"
+    },
+    {
+      "path": "apps/web/src/HistoryPanel.tsx",
+      "sha256": "42bae1fe6658fb34661034fdb652a17dad2b263474a276f705a9e1eac0e700d9"
+    },
+    {
+      "path": "apps/web/src/PdfPreview.tsx",
+      "sha256": "c8e32ab938fbc9906d8e91610fb10d56267dc15b315e6f50761a1f27a93b8b9e"
+    },
+    {
+      "path": "apps/web/src/Project.test.tsx",
+      "sha256": "f8e7c83bf90f4b0671b7fedefe68d5bceade6f4e9805d673aa2aaaaa5c31f0f6"
+    },
+    {
+      "path": "apps/web/src/Project.tsx",
+      "sha256": "fcf7b653547e46823ab559e581e4bb6dfea9c29e4f675bad9567c3e688fb36c2"
+    },
+    {
+      "path": "apps/web/src/api.ts",
+      "sha256": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6"
+    },
+    {
+      "path": "apps/web/src/components.tsx",
+      "sha256": "f24c647d1b3b0ad7a0b6bfe1d16ebd83eddd77c68ceab39fd6e8a05f848f72af"
+    },
+    {
+      "path": "apps/web/src/contracts.ts",
+      "sha256": "4967e07d61f8f34191f93d69cd5dada3cd50c0c2480a76163c82bb38d618a993"
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "sha256": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0"
+    },
+    {
+      "path": "apps/web/src/styles.css",
+      "sha256": "a7565f6f716a1c0cc29ad1b451698d162e07ca679ef3078b4a9154f2cfcdb7b2"
+    },
+    {
+      "path": "apps/web/src/test-setup.ts",
+      "sha256": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "sha256": "431bcb0468321df71279a172a5c5cb3be5c28af8465dd1c2334436fb1ca498e5"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "sha256": "a1fcd65899dc956c74ef61acbabeec75e0479118f4f2b5dedf760d1b615082d6"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/worker/__main__.py",
+      "sha256": "30e3d70f5f87e5a8f7d47a9258d62cc3c9c69962bd0d8e9d1d0999bd3635bbeb"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "30ab9a451b5e8ec2ebf3c8961675715398d5d3a34e30981766ef2e3b825c3bd0"
+    },
+    {
+      "path": "deploy/check_compose.py",
+      "sha256": "6e07962d384b3a3d82bb7626d586dec08585a64836b4310890c638b79a8e4717"
+    },
+    {
+      "path": "deploy/check_environment.py",
+      "sha256": "d35a01eb9df4b660758ceb4728ff3fc5e9a286a40fc886de7dc1f3e455506598"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "sha256": "94942ef84563479345382c88a147b553a49d6cd349f4e3f90a0c0e8727829ff9"
+    },
+    {
+      "path": "deploy/configure_local.py",
+      "sha256": "941b91036e6d1da8dd3ed77bb3fab58031c15d12304095b806f481c3a8e571e4"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "797b4bb6e3d70ee03655e029511eb2249a9a1775432f8f8961e045455b114d98"
+    },
+    {
+      "path": "deploy/initialize_object_store.py",
+      "sha256": "9b68bd3e1e6839791ebd7acb14e3b2deca795afe0d08de4bddb97464fa4ad121"
+    },
+    {
+      "path": "deploy/initialize_topics.py",
+      "sha256": "4af0947c05b51079ed79e7b1c09ca1896506a84668a94416826ebeeb7eb8e886"
+    },
+    {
+      "path": "deploy/run.py",
+      "sha256": "7e001fb63d4c29ecaa786f6723e1f03002fd15616c68f753c1fa1ad088984484"
+    },
+    {
+      "path": "packages/contracts/implemented.openapi.json",
+      "sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64"
+    },
+    {
+      "path": "packages/contracts/openapi/http-examples.json",
+      "sha256": "665404f8f5887bc0ff177a9aeda2880a1d9511644a29c3551bcb90ce8d3f92ef"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "packages/contracts/policies/execution-policy.json",
+      "sha256": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67"
+    },
+    {
+      "path": "packages/contracts/policies/retrieval-policy.json",
+      "sha256": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "packages/contracts/schemas/review-identity-vectors.json",
+      "sha256": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a"
+    },
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "03819df24d185ac4d446fcfa254047720a2d9063129a62ed4b11272b3b1859ed"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+    },
+    {
+      "path": "tests/test_cancel_integration.py",
+      "sha256": "431619df6c2147ee35993b66f3b3e4bf11c9442dce5eb05ea1695d5d93ab5916"
+    },
+    {
+      "path": "tests/test_domain.py",
+      "sha256": "81ea4155ed0463359809353d0ce3f20d6f1f556ccf9c3ef6f7ab3239e6bcd448"
+    },
+    {
+      "path": "tests/test_recovery_integration.py",
+      "sha256": "beaee59f02a49ead046f504b779a37e21a398a112d786a1ad458362802bec187"
+    },
+    {
+      "path": "tests/test_slice_integration.py",
+      "sha256": "6827ff28f692b48a06f20aabbbbb9cd6c7e57dc661d7931aa2b43addd1f984ac"
+    }
+  ],
+  "source_hashes_verified": true,
+  "frozen": true
+}

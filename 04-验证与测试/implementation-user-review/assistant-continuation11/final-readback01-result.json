@@ -1,0 +1,141 @@
+{
+  "at": "2026-10-17T04:02:19.611322+00:00",
+  "verified": [
+    {
+      "manifest": "/workspace/tender-docs/04-验证与测试/task-drafts-development-checks/candidate05/candidate.json",
+      "sha256": "4f91d6aafcc397e89c19acbf626631853663a5c53e8ed95db300bc802856d650",
+      "source_count": 317
+    },
+    {
+      "manifest": "/workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/candidate.json",
+      "sha256": "c3e9fb43c4b82513e20e5826d3a0105a598a281bccedeb684d4950602bd118e7",
+      "source_count": 12
+    },
+    {
+      "candidate": "assistant-continuation-11",
+      "manifest_sha256": "af1a992ec7539c465b873abd04bcc87e4bbc89901962f2f6c283e395ef8629e5",
+      "sources": 130,
+      "assets": 215
+    },
+    {
+      "candidate": "assistant-task-10",
+      "manifest_sha256": "d1be8aa67adfa75adaf7f904efcc626b720e5931b694adec8fca115126af3aee",
+      "sources": 128,
+      "assets": 215
+    }
+  ],
+  "global_unknown_preserved": [
+    {
+      "member_index": 0,
+      "global_conversation_id": "deee8afd-a71d-5a51-9d3b-24a6400d26b1",
+      "unresolved_jobs": [
+        {
+          "id": "d0fa1b79-5d2c-4a02-9861-24a0f73851de",
+          "operation_state": "failed",
+          "model_call": {
+            "id": "9a7ffa45-1c51-42e8-b040-78c868846786",
+            "state": "unknown",
+            "billing_state": "unknown"
+          },
+          "requires_billing_reconciliation": true,
+          "automatic_retry_authorized": false
+        },
+        {
+          "id": "8b1f0a1e-67cd-4c78-84a2-b3b7f15be4f0",
+          "operation_state": "failed",
+          "model_call": {
+            "id": "f3dbad79-92b6-40a3-8a2e-f64df6bafc72",
+            "state": "unknown",
+            "billing_state": "unknown"
+          },
+          "requires_billing_reconciliation": true,
+          "automatic_retry_authorized": false
+        },
+        {
+          "id": "0aabfffa-703d-44df-80aa-31d6e7b1f96f",
+          "operation_state": "failed",
+          "model_call": {
+            "id": "e26b383d-7742-4c5c-b275-aeedfadd3cab",
+            "state": "unknown",
+            "billing_state": "unknown"
+          },
+          "requires_billing_reconciliation": true,
+          "automatic_retry_authorized": false
+        },
+        {
+          "id": "98832f62-3393-4f56-aed5-32b024c250f7",
+          "operation_state": "failed",
+          "model_call": {
+            "id": "407cf375-3954-4034-b346-0b14a6bfb51b",
+            "state": "unknown",
+            "billing_state": "unknown"
+          },
+          "requires_billing_reconciliation": true,
+          "automatic_retry_authorized": false
+        }
+      ]
+    },
+    {
+      "member_index": 1,
+      "global_conversation_id": "555be9c4-ea98-53f8-be9d-db6348564e93",
+      "unresolved_jobs": [
+        {
+          "id": "1a520efb-7a14-4b2d-8849-216fe666ed6f",
+          "operation_state": "failed",
+          "model_call": {
+            "id": "734b8472-646a-4a85-8d98-a6a399ecab0a",
+            "state": "unknown",
+            "billing_state": "unknown"
+          },
+          "requires_billing_reconciliation": true,
+          "automatic_retry_authorized": false
+        }
+      ]
+    }
+  ],
+  "old_and_new_project_model_ledger_retained": [
+    {
+      "kind": "retained-old-project-Mock-call",
+      "job_id": "8171d331-92a6-4cf2-8c46-3fc5fe5e9c59",
+      "model_call": {
+        "id": "854f39da-bdb9-44b2-a622-2d173c042a54",
+        "state": "succeeded",
+        "billing_state": "usage_reported"
+      }
+    },
+    {
+      "kind": "new-single-project-Mock-call",
+      "job_id": "8bb30eda-c4f2-4e5a-83b0-7a3dfeaa177b",
+      "model_call": {
+        "id": "aed8c945-e425-478e-aa7e-5a2f26edefd5",
+        "state": "succeeded",
+        "billing_state": "usage_reported"
+      }
+    }
+  ],
+  "control_final_mode": "hold",
+  "processes": [
+    {
+      "pid": 2888527,
+      "uid": 1000,
+      "argv": "/workspace/tender-workbench/.venv/bin/python -I /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime/process.py /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/fixture05/publisher-private-input.json"
+    },
+    {
+      "pid": 2888544,
+      "uid": 1000,
+      "argv": "/workspace/tender-workbench/.venv/bin/python -I /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime/process.py /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/fixture05/worker-private-input.json"
+    },
+    {
+      "pid": 2888579,
+      "uid": 1000,
+      "argv": "/workspace/tender-workbench/.venv/bin/python -I /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/facility-candidate02/runtime/process.py /workspace/tender-docs/04-验证与测试/assistant-browser-environment01/fixture05/api-private-input.json"
+    },
+    {
+      "pid": 3220759,
+      "uid": 1000,
+      "argv": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 5184 --strictPort"
+    }
+  ],
+  "new_project_auto_review": false,
+  "scope": "Readonly normal authenticated API/browser and frozen-file hashes; no SQL mutation, no global turn, no ledger deletion"
+}

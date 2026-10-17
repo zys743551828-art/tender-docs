@@ -1,0 +1,56 @@
+{
+  "status": "passed_development_engineering_not_product_acceptance",
+  "engineering_suite": {
+    "tests": "33",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "8.270"
+  },
+  "native_object_suite": {
+    "status": "not_reexecuted_for_candidate_02",
+    "prior_candidate": "candidate-01",
+    "prior_result": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-01/native-oss-result.json",
+    "prior_result_sha256": "a3a0f8567cf8eaed06351dce877352f5a3c5bf483d909f9c7d20aa344b8a311b",
+    "scope": "Candidate01 native OSS roundtrip only. Object I/O code unchanged by unit-token fix; no claim that a new native probe ran for02."
+  },
+  "actual_nonowner_postgresql": true,
+  "database": "tender_checks_research03",
+  "actual_session_csrf": true,
+  "model_calls": 0,
+  "kafka_processes_started": 0,
+  "real_business_formula_clauses": 0,
+  "engineering_object_port": "explicit_in_memory",
+  "native_probe": null,
+  "quality": {
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "implemented_router_operations": 10,
+  "main_api_included_at_candidate_freeze": true,
+  "unverified": [
+    "independent_QA_and_architect_review",
+    "product_and_user_review",
+    "main_API_integration_and_actual_export",
+    "frontend_dirty_state_debounce_and_input_digest_response_order",
+    "browser_PRICE_01_to_11",
+    "whole_product_report_chat_reminder_display_setting_integration",
+    "representative_real_clause_applicability"
+  ],
+  "language_interpretation_boundary": "A single human attests complete sourced mapping to restricted semantics; known unsupported conditions are refused conservatively. No automatic proof for arbitrary natural-language clauses is claimed.",
+  "unit_regressions": [
+    "source_wanyuan_requested_yuan_rejected_before_put",
+    "source_yuan_requested_wanyuan_rejected_before_put",
+    "thousand_million_and_foreign_currency_not_stripped_to_supported_unit",
+    "valid_consistent_wanyuan_supported_without_conversion",
+    "mixed_units_rejected_before_put",
+    "earlier_wrong_formula_current_projection_invalid",
+    "earlier_wrong_formula_cannot_simulate_save_or_registration_replay",
+    "historical_wrong_simulation_keeps_original_value_with_current_invalidity"
+  ],
+  "new_native_oss_requests": 0,
+  "main_integration_accepted": false,
+  "live_deployment_tested": false
+}

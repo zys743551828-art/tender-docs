@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "missing_and_outside_never_qualifies_as_complete_body",
+      "passed": true,
+      "observation": {
+        "eligible": false,
+        "required_pages": [
+          1,
+          2
+        ],
+        "unread_pages": [
+          2
+        ],
+        "diagnostic_ids": [],
+        "reason": "BODY_PHYSICAL_PAGE_SET_INVALID"
+      }
+    },
+    {
+      "name": "extra_page_never_qualifies_as_complete_body",
+      "passed": true,
+      "observation": {
+        "eligible": false,
+        "required_pages": [
+          1,
+          2
+        ],
+        "unread_pages": [],
+        "diagnostic_ids": [],
+        "reason": "BODY_PHYSICAL_PAGE_SET_INVALID"
+      }
+    },
+    {
+      "name": "zero_declared_pages_never_qualifies_as_complete_body",
+      "passed": true,
+      "observation": {
+        "eligible": false,
+        "required_pages": [],
+        "unread_pages": [],
+        "diagnostic_ids": [],
+        "reason": "BODY_PHYSICAL_PAGE_SET_INVALID"
+      }
+    },
+    {
+      "name": "two_frozen_body_parses_are_not_guessed",
+      "passed": true,
+      "observation": {
+        "eligible": false,
+        "required_pages": [],
+        "unread_pages": [],
+        "diagnostic_ids": [],
+        "reason": "BODY_PARSE_SCOPE_UNPROVEN"
+      }
+    }
+  ],
+  "scope": "Actual nonowner PostgreSQL; explicit synthetic complete-labeled malformed parse sets; no parser/model/object/Kafka call",
+  "probe_sha256": "fec51581203ad065ac82391c2fc03ea306d65ab77ee154a39e03364d1dd36cd6"
+}

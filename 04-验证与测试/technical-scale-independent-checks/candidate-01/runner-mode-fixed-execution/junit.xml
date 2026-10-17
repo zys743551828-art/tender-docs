@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="19.602" timestamp="2026-10-17T03:50:02.094014+00:00" hostname="597cea30c71f"><testcase classname="" name="test_seven_api_pending_confirm_correct_withdraw_and_stale_replay" time="18.573"><error message="failed on setup with &quot;AssertionError: assert '技术总分满分为 70 分，量尺为未加权原始分。' == '技术总分满分为70分，量尺为未加权原始分。'&#10;  &#10;  - 技术总分满分为70分，量尺为未加权原始分。&#10;  + 技术总分满分为 70 分，量尺为未加权原始分。&#10;  ?        +  +&quot;">/workspace/tender-workbench/qa/test_technical_scale_independent01.py:47: in w
+    ref=clean(c.execute('SELECT v.id AS document_version_id,b.digest AS blob_digest,p.id AS parse_id,e.id AS evidence_id,e.physical_page,e.digest AS evidence_digest,e.text_content AS quote FROM document_versions v JOIN blobs b ON b.id=v.blob_id JOIN parse_runs p ON p.document_version_id=v.id JOIN evidence_blocks e ON e.parse_id=p.id WHERE v.id=%s ORDER BY p.created_at DESC,e.ordinal LIMIT 1',(pdf,)).fetchone());assert ref['quote'].strip()=='技术总分满分为70分，量尺为未加权原始分。'
+                                                                                                                                                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert '技术总分满分为 70 分，量尺为未加权原始分。' == '技术总分满分为70分，量尺为未加权原始分。'
+E     
+E     - 技术总分满分为70分，量尺为未加权原始分。
+E     + 技术总分满分为 70 分，量尺为未加权原始分。
+E     ?        +  +</error></testcase></testsuite></testsuites>

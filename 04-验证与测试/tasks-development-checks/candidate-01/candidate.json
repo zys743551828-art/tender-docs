@@ -1,0 +1,109 @@
+{
+  "candidate": "tasks-template-schedule-foundation-01",
+  "created_at": "2026-10-17T01:15:54.996889+00:00",
+  "sources": [
+    {
+      "path": "packages/tasks/__init__.py",
+      "sha256": "9ff031ab841b41e3c72cf5113c6d91631404b41ca084d81937f64ae878b98218"
+    },
+    {
+      "path": "packages/tasks/models.py",
+      "sha256": "723fd1a0e87cb5394bc30931096b66502a3736baee53df526b89a456f5d92b96"
+    },
+    {
+      "path": "packages/tasks/templates.py",
+      "sha256": "5c4b2f5b5e0a8fa0aa6828903d646cca52461daac6561508d6be6d71e07f39cf"
+    },
+    {
+      "path": "packages/tasks/scheduling.py",
+      "sha256": "6fd5270cb17079c2181e80d69c19064673ef1124d91c33d38e322a87f5ff70f2"
+    },
+    {
+      "path": "apps/api/task_routes.py",
+      "sha256": "aa85593e5aade4e7b449d49b2d6a7e086c735666fb435a0c06db817eacb451b5"
+    },
+    {
+      "path": "tests/test_task_templates_integration.py",
+      "sha256": "c69e2858be5dc6af68a4c71965d5641db2050d2fca397f22941f5fae45dbb5c2"
+    },
+    {
+      "path": "tests/test_task_scheduling.py",
+      "sha256": "2d60850fcd2f9a5c03ca0867bb7972f2dd79edb22f28d5c89fd0fb0c82696844"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "apps/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "206794028670b986865c2aede747ed8d877271f4b3532395f3d48b7a899b0cda"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "path": "packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e"
+    },
+    {
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22"
+    },
+    {
+      "path": "packages/lifecycle/__init__.py",
+      "sha256": "46bb6bd088221b65fe100d175ed74b95ad91d2055603cfa6943ae3173f89311d"
+    },
+    {
+      "path": "packages/lifecycle/service.py",
+      "sha256": "4a47aee310069d14f1cf386beca20a7279939caf01f561853a9473244c768678"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89"
+    },
+    {
+      "path": "deploy/run.py",
+      "sha256": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735"
+    }
+  ],
+  "actual_schema_sha256": "09485f2d89f2b267721f8c141b4ee64981974e6da0c20f8c2600bbf365029467",
+  "scope": [
+    "strict four-kind versioned template configuration",
+    "manual default, immutable revision and pause snapshots",
+    "CAS/idempotent receipt/cross-project guards/lifecycle guard",
+    "bounded five-field cron and timezone next-instant calculation"
+  ],
+  "not_implemented": [
+    "manual task dispatch",
+    "event trigger receipts",
+    "persistent schedule tick/recovery receipts and exact missed count",
+    "run projection and notifications",
+    "template natural-language generation",
+    "main/API/runtime/UI integration"
+  ],
+  "database_schema_changed": false,
+  "model_calls": 0,
+  "provider_calls": 0,
+  "native_oss_requests": 0,
+  "kafka_calls": 0,
+  "independent_review": "pending"
+}

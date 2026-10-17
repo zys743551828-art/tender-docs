@@ -1,0 +1,115 @@
+{
+  "scope": "authoring module candidate02 preliminary review",
+  "candidate_sha256": "3ca2048544e75c181d90441141bbd60c081468fd8913d9db11082274f5c1645a",
+  "sources": [
+    {
+      "path": "apps/api/authoring.py",
+      "expected_sha256": "d78748caa8a9d839d26a3d21afd8cb5e9e1711a6b9edf8f394a49f220508d6cd",
+      "observed_sha256": "d78748caa8a9d839d26a3d21afd8cb5e9e1711a6b9edf8f394a49f220508d6cd",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/README.md",
+      "expected_sha256": "5e06a39fd5cd66c7919e3ab01460a5fa122dfb40fedffe02e19119e47d391207",
+      "observed_sha256": "5e06a39fd5cd66c7919e3ab01460a5fa122dfb40fedffe02e19119e47d391207",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/__init__.py",
+      "expected_sha256": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+      "observed_sha256": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/build.py",
+      "expected_sha256": "9df0136d9001ce238038c5a3de012bd5876a62308eebb202fd22fac20a20e447",
+      "observed_sha256": "9df0136d9001ce238038c5a3de012bd5876a62308eebb202fd22fac20a20e447",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/build_repository.py",
+      "expected_sha256": "b75811b4039307231377b9496e76aef007dd2308ea8da12cc515781f106bb6c1",
+      "observed_sha256": "b75811b4039307231377b9496e76aef007dd2308ea8da12cc515781f106bb6c1",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/content.py",
+      "expected_sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "observed_sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/contracts.py",
+      "expected_sha256": "a4cae325908c616f4d95ec26e42560fa31d45b50ed688d997e666b5a3ed6b937",
+      "observed_sha256": "a4cae325908c616f4d95ec26e42560fa31d45b50ed688d997e666b5a3ed6b937",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/generation.py",
+      "expected_sha256": "b507f5abf7c73ced98eb517ca2a7172f189ab83c1edf5dac1ef7023d5f32b1f1",
+      "observed_sha256": "b507f5abf7c73ced98eb517ca2a7172f189ab83c1edf5dac1ef7023d5f32b1f1",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/patches.py",
+      "expected_sha256": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+      "observed_sha256": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+      "matches": true
+    },
+    {
+      "path": "packages/authoring/repository.py",
+      "expected_sha256": "0c63c761e1373cf8bd95d8f948ab3fc49bd8e960becb436e209f072c095cc70e",
+      "observed_sha256": "0c63c761e1373cf8bd95d8f948ab3fc49bd8e960becb436e209f072c095cc70e",
+      "matches": true
+    },
+    {
+      "path": "tests/test_authoring.py",
+      "expected_sha256": "860534a8394e4ade6c5a9314d27f5e4e3f6407a61be09b5b87298f456a7d78a8",
+      "observed_sha256": "860534a8394e4ade6c5a9314d27f5e4e3f6407a61be09b5b87298f456a7d78a8",
+      "matches": true
+    },
+    {
+      "path": "tests/test_authoring_integration.py",
+      "expected_sha256": "9de78d362437b987cc00989a996023e0955751500cd9cc0ad872a7e7f3c195d9",
+      "observed_sha256": "9de78d362437b987cc00989a996023e0955751500cd9cc0ad872a7e7f3c195d9",
+      "matches": true
+    }
+  ],
+  "all_sources_match": true,
+  "developer_evidence": [
+    {
+      "path": "packages/authoring/qa/synthetic-body.docx",
+      "matches": true,
+      "observed_sha256": "3aad0f7fd51defa3ff32394f5c72dcad76679c6a5a5a789b1849b987b6a6103a"
+    },
+    {
+      "path": "packages/authoring/qa/synthetic-body.pdf",
+      "matches": true,
+      "observed_sha256": "ea6c3e9f58ec5c618bb3090e0f319beb198a9843ee66ba4c6f4f423bfc7a80b4"
+    },
+    {
+      "path": "packages/authoring/qa/environment.json",
+      "matches": true,
+      "observed_sha256": "b224e30deca8c6c3b762efabddb1d1cb26c33641c9cee207780be3b9d04bcc4c"
+    },
+    {
+      "path": "packages/authoring/qa/render-proof.json",
+      "matches": true,
+      "observed_sha256": "d04f1867a28d49dae5dd4566610d75ecaeb51e5477465e5db54f50f7f3c3c4a9"
+    },
+    {
+      "path": "packages/authoring/qa/unit-result.xml",
+      "matches": true,
+      "observed_sha256": "70d8e5c3e5d4ffa5ba6e0c530e921b38f0bf5aa4ec1b8862cbe613fb5b3e4874"
+    },
+    {
+      "path": "packages/authoring/qa/integration-result.xml",
+      "matches": true,
+      "observed_sha256": "1c3cf6e5a4906169e45b2e1eb37c09cd3d8283001d1bff8d47fd98d38206d462"
+    }
+  ],
+  "all_evidence_match": true,
+  "credentials_read": false,
+  "paid_calls": 0,
+  "final_application_pass": false
+}

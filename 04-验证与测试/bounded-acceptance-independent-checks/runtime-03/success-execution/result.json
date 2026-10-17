@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "bounded_tool_stops_at_expected_state",
+      "passed": true,
+      "observation": {
+        "status": "succeeded",
+        "guarded_invocations": 2
+      }
+    },
+    {
+      "name": "foreign_messages_skipped_and_no_offset_commit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "ordinary_extract_core_finalize_chain_limited_to_two",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "any_prior_call_blocks_restart_before_consumer_init",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "d6fd4aed-904c-43e3-aa45-f17eb51cbd31",
+  "bounded_tool_result": {
+    "status": "succeeded",
+    "guarded_invocations": 2
+  },
+  "offline_consumer_observations": {
+    "foreign_skipped": false,
+    "closed": true,
+    "consumer_initializations": 1,
+    "handled": [
+      "prepare/1",
+      "review/1",
+      "review/1"
+    ],
+    "commits": 0,
+    "config": {
+      "bootstrap.servers": "127.0.0.1:19095",
+      "group.id": "tender-acceptance-33346e1870a04b98930197fe92734a0f",
+      "enable.auto.commit": false,
+      "enable.auto.offset.store": false,
+      "auto.offset.reset": "earliest",
+      "max.poll.interval.ms": 300000
+    },
+    "topics": [
+      "tender.task.review.v1"
+    ]
+  },
+  "ledger": [
+    {
+      "state": "succeeded",
+      "usage": {
+        "actual": {
+          "total_tokens": 50,
+          "prompt_tokens": 20,
+          "completion_tokens": 30
+        },
+        "reservation": {
+          "fence": 1,
+          "owner": "0e42fc02-b365-4067-9c33-c10159b26fc1",
+          "step_key": "extract-rules",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "0d87c29cd1aed15949794ea916c9b6bad5c9d577e6e1010dce5cf1edb2d383f3"
+        },
+        "billing_state": "usage_reported"
+      }
+    },
+    {
+      "state": "succeeded",
+      "usage": {
+        "actual": {
+          "total_tokens": 50,
+          "prompt_tokens": 20,
+          "completion_tokens": 30
+        },
+        "reservation": {
+          "fence": 1,
+          "owner": "7d24b5af-ad24-4200-a45c-4a4b47324368",
+          "step_key": "core-judgment",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "1155f874e0bd3abdd0bfa135cbbc91e44073e3dd7524d642349211735cb9a14e"
+        },
+        "billing_state": "usage_reported"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "handler_version": "prepare/1",
+      "state": "succeeded"
+    },
+    {
+      "handler_version": "prepare/1",
+      "state": "succeeded"
+    },
+    {
+      "handler_version": "review/1",
+      "state": "succeeded"
+    }
+  ],
+  "offline_transport_requests": 2,
+  "tool_sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+  "probe_sha256": "a8b05e0f771f3f287d7cf46248e94a3df7a2597ac557c4abc55722fde276cb0b"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.214" timestamp="2026-10-17T03:23:28.435262+00:00" hostname="597cea30c71f"><testcase classname="tests.test_scale_authority" name="test_scale_description_cannot_absorb_contradictory_trailing_technical_total" time="0.000"><failure message="Failed: DID NOT RAISE &lt;class 'packages.domain.runtime.DomainError'&gt;">def test_scale_description_cannot_absorb_contradictory_trailing_technical_total():
+        text = "技术总分满分60分，量尺为未加权原始分，但技术总分现为80分。"
+&gt;       with pytest.raises(DomainError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'packages.domain.runtime.DomainError'&gt;
+
+tests/test_scale_authority.py:173: Failed</failure></testcase></testsuite></testsuites>

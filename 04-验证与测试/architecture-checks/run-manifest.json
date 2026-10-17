@@ -1,0 +1,31 @@
+{
+  "scope": "五组隔离机制实验的实际执行身份；旧系统测试不计入",
+  "executed_at": "2026-10-16T14:31:36.539079+08:00",
+  "python": "3.12.14",
+  "postgresql": "17.11",
+  "pgvector": "0.8.7",
+  "postgresql_image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "temporal_cli": {
+    "tag": "v1.9.1",
+    "archive": "temporal_cli_1.9.1_linux_amd64.tar.gz",
+    "url": "https://github.com/temporalio/cli/releases/download/v1.9.1/temporal_cli_1.9.1_linux_amd64.tar.gz",
+    "checksums_url": "https://github.com/temporalio/cli/releases/download/v1.9.1/checksums.txt",
+    "sha256": "09a0326a51db84d02735e53542b9ebd8c4758daf47482a9ab0abce15844e60d5",
+    "verified": true
+  },
+  "artifact_hashes": {
+    "04-验证与测试/architecture-checks/langgraph-result.json": "3c8ffad8ce925737ba85f34685f99f049e4ca7565c06f63128a275bfd5dce6f4",
+    "04-验证与测试/architecture-checks/pgvector-result.json": "62a96ccab3cbf7e730757aded8a218d55d571b240e998d38cdfa8a68919b2de0",
+    "04-验证与测试/architecture-checks/postgres-result.json": "ffdf43839f0e791c24dbf2eda0b0231016672779a72ab05c2a03ed03ebb33a52",
+    "04-验证与测试/architecture-checks/probe_langgraph.py": "b93110de3b03f864594c46361027d40b6d1c4df98bbaabb6bb3df0d89b75c1f1",
+    "04-验证与测试/architecture-checks/probe_pgvector.py": "36b0a0c5e610a4ab01a66e3f26eea2d651de500e6943571978605d3629d0f8be",
+    "04-验证与测试/architecture-checks/probe_postgres.py": "7624ecd3086f960265cc420f48c8fedea425719a2489390e97e70c2e75df9136",
+    "04-验证与测试/architecture-checks/probe_scoring.py": "f61bc16d6c7bd514f9b2cba765625595c572015ffe3b89c10cbf8d78a80506f0",
+    "04-验证与测试/architecture-checks/probe_temporal.py": "e4b4c2e1c29c33d2a54af8ba2458f06f9ff1f997885ad0a6bc41b1df11b56aae",
+    "04-验证与测试/architecture-checks/scoring-result.json": "f979df2ce33027cd43c0a51cadd90b3696f11458394f0847b94f426cfee1a595",
+    "04-验证与测试/architecture-checks/temporal-result.json": "577b024ef75752b4c657452d24bb3b2de4e145e734a2595e36fcfc8457f2ba5f"
+  },
+  "dependency_lock_sha256": "302bbd7a996b6ad4a51c5a3f43b00df29bc95b72802dd7281d25f7a99ba3e44e",
+  "external_model_calls": 0,
+  "old_application_test_result": "22 passed; historical baseline only, excluded from new architecture evidence"
+}

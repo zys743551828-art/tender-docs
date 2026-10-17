@@ -1,0 +1,21 @@
+{
+  "classification": "memory fixture lifetime versus real global blob deduplication; no product state or external HTTP failure",
+  "first_pg": "7 passed",
+  "second_pg": "first test KeyError: canonical image digest reused a prior run blob whose earlier synthetic key was absent from the new per-test memory dictionary",
+  "external_requests": 0,
+  "correction": "Each PG fixture now has unique synthetic raster pixels, retaining actual normalization/digest and global DB dedup semantics. No product dedup bypass and no fake object transport fallback. Explicit HTTP/provider hard block remained enabled.",
+  "retained": [
+    {
+      "path": "first-pg-junit.xml",
+      "sha256": "6cd9efe965296bb10e39cf4620528557c12c3d3f073e46588dcb42e413351223"
+    },
+    {
+      "path": "second-pg-junit.xml",
+      "sha256": "f89109e413ea13a6c1a4f7fe0575bc8c7fd7b12d30df61ac012a1ee4186fad55"
+    },
+    {
+      "path": "final-pg-junit.xml",
+      "sha256": "6d0f3a971eb1da5e48fcaf5dfb03d7d2df788cab46cc80a8152fec1010516de7"
+    }
+  ]
+}

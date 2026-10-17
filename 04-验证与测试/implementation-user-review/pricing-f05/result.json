@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-17T02:50:56.119192+00:00",
+  "kind": "independent_actual_agent_browser_not_real_user_research",
+  "scope": "F05 lowest_valid_ratio user workflow only, native fixed08/5178 API8808 dedicatedworkbench08",
+  "binding": {
+    "frontend_manifest_sha256": "31c298b5c905744e58be5345ef4077794e4941c350aed0811e8cd8750fc0c623",
+    "backend_manifest_sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee",
+    "frontend_sources": 112,
+    "frontend_source_mismatches": [],
+    "frontend_assets": 215,
+    "frontend_asset_mismatches": [],
+    "backend_sources": 310,
+    "backend_source_mismatches": [],
+    "auto_review_off": true,
+    "pricing_enabled_at_end": true,
+    "native_served_entry_assets": [
+      {
+        "path": "/assets/index-BI74Pw4T.js",
+        "status": 200,
+        "sha256": "4e1b49974ffaf3219474608324a590f6f5a914ff1d4ec6964f174c519d9d8f9c",
+        "matches": true
+      }
+    ],
+    "at": "2026-10-17T02:49:07.955232+00:00",
+    "actual_context": "native5178 frontend08 -> currentAPI8808 F05 dedicated workbench08; no asset overlay for pricing",
+    "api_contract_sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7"
+  },
+  "fixtures": {
+    "uuid": "b24a351578",
+    "own_url": "http://127.0.0.1:5178/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/materials",
+    "own_bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+    "pricing_url": "http://127.0.0.1:5178/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing",
+    "formula_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+    "planA_id": "15ca7194-d2c7-4599-a89c-dfa86006ff89"
+  },
+  "real_participants": 0,
+  "paid_model_review_research_assistant_writes": [],
+  "original_pdf_sha256": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+  "source_unchanged_sha_matches": true,
+  "supported_fields": [
+    "amount_unit",
+    "baseline_set",
+    "clamping",
+    "currency",
+    "exclusions",
+    "intermediate_rounding",
+    "maximum",
+    "maximum_price",
+    "method",
+    "minimum_price",
+    "minimum_valid_bids",
+    "rounding_policy"
+  ],
+  "unused_coefficients_require_no_evidence": true,
+  "original_negated_baseline_rounding_accepted": true,
+  "formula_registration_actual_201": true,
+  "trial_plan_count": 0,
+  "saveA_status": 201,
+  "saveB_status": 201,
+  "refreshA_inputs": {
+    "本方候选报价": "100",
+    "对手报价假设（每行一个，最多200项）": "80\n120",
+    "补充本方候选（每行一个，最多50项）": "90\n110"
+  },
+  "dirty_save_disabled": true,
+  "dirty_plan_count": 1,
+  "dirty_restored_value": "-",
+  "saved_plan_count_after_refresh": 2,
+  "planA_frozen_sha256": "b22e5a291f0715e27c7de675da6c4b082e10405bb855f6a3b84467ba0c62cea9",
+  "planA_immutable_after_B": true,
+  "planA_immutable_after_reenable": true,
+  "feature_off_trial_present": false,
+  "after_reenable_quote": "120",
+  "saved_count_after_reenable": 2,
+  "new_posts_after_reenable": [],
+  "auto_review_remained_off": true,
+  "pricing_restored_enabled": true,
+  "mobile_width": 390,
+  "trial_button_box": {
+    "x": 19,
+    "y": 401.703125,
+    "width": 352,
+    "height": 40
+  },
+  "keyboard_next_label": "对手报价假设（每行一个，最多200项）",
+  "historical_original_match": true,
+  "history_focus_after_escape": "打开物理页 1 · 文件版本 1",
+  "new_blocking_findings": [],
+  "closed_scope": "W06-U01 original cause repaired in current08+F05 registration; original06report frozen; associated requested lowest-ratio save/refresh/history/feature/dirty/mobile workflow actually executed",
+  "not_claimed": [
+    "complete two-method correctness/boundaries",
+    "all module/project acceptance",
+    "real-user usability",
+    "formal scoring/model quality",
+    "winning probability/cost/profit",
+    "production readiness"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "independent real pg_dump/restore and nonowner privilege/snapshot mechanism; explicit in-memory object port, no actual OSS validation",
+  "candidate_sha256": "7401040e20e035d7140f95a5809869a0ab67aab92355f665f8815f7b7dcd2d66",
+  "source_snapshot_export_login_nonowner": true,
+  "snapshot_members": 1,
+  "post_snapshot_committed_marker_visible_at_source": true,
+  "post_snapshot_marker_absent_from_actual_restore": true,
+  "restored_tables_compared": 104,
+  "restored_objects_compared_with_db_references": 1,
+  "source_insert_privilege_before": true,
+  "source_insert_privilege_after": true,
+  "restore_transaction_read_only": "on",
+  "restore_insert_denied_when_default_read_only_disabled": true,
+  "objects_written_only_to_new_drill_prefix": true,
+  "source_object_fixture_unchanged": true,
+  "api_relay_consumer_started": false,
+  "real_object_requests": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "production_rpo_rto_qualified": false
+}

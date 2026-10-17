@@ -1,0 +1,70 @@
+{
+  "scope": "独立设计反例；未调用真实API",
+  "manifest_time": {
+    "both_schema_valid": true,
+    "only_changed_field": "frozen_at",
+    "first_sha256": "c9c0f1b0e4233040f5ffbe7155165f82b3d77a8bd7136877ad7144602ca14445",
+    "second_sha256": "c6d64f45ac765de5a9b44332e908ac9b961ca5617e1a03f4e80634563f8b0ff0",
+    "semantic_digest_changes": true
+  },
+  "conflict_recovery": {
+    "valid_commit": {
+      "accepted_upload_ids": [
+        "00000000-0000-0000-0000-000000000001"
+      ],
+      "explicit_partial_acceptance": false
+    },
+    "attempted_rebase": {
+      "accepted_upload_ids": [
+        "00000000-0000-0000-0000-000000000001"
+      ],
+      "explicit_partial_acceptance": false,
+      "upload_targets": [
+        {
+          "upload_id": "00000000-0000-0000-0000-000000000001",
+          "file_id": "00000000-0000-0000-0000-000000000001",
+          "expected_file_revision": 3
+        }
+      ]
+    },
+    "rejection_messages": [
+      "Additional properties are not allowed ('upload_targets' was unexpected)"
+    ],
+    "upload_paths": {
+      "/bids/{bid_id}/upload-batches": [
+        "post"
+      ],
+      "/bids/{bid_id}/uploads": [
+        "post"
+      ],
+      "/uploads/{upload_id}/complete": [
+        "post"
+      ],
+      "/bids/{bid_id}/upload-batches/{batch_id}/commit": [
+        "post"
+      ],
+      "/bids/{bid_id}/upload-batches/{batch_id}": [
+        "get"
+      ],
+      "/uploads/{upload_id}": [
+        "get"
+      ],
+      "/uploads/{upload_id}/parts": [
+        "get"
+      ],
+      "/uploads/{upload_id}/authorizations": [
+        "post"
+      ],
+      "/uploads/{upload_id}/abort": [
+        "post"
+      ]
+    },
+    "note": "现有complete/auth/abort均无逻辑文件目标或expected_file_revision修改字段；CreateUpload也不接收verified_upload_id。"
+  },
+  "inputs": {
+    "protocol.schema.json": "351bec989d34d622f01d0302eb20fd73c1e51791942f535dc037c5ea061f4c93",
+    "openapi.json": "a430765630606efaa6f078b44a5d024c618475321f97a1073b508780e67fd157",
+    "保留功能实现规约.md": "5caf65913cfd37ed165fadab4397e6820b779be2fd19e33c84c069b2e40f8c84",
+    "../AI投标工作台详细技术设计.md": "74779a1f26c93c204c23cf5f6b1f25ef0f7c05be1b7f48a2c4760ba854cc7c0d"
+  }
+}

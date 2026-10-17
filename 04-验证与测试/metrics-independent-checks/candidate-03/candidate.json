@@ -1,0 +1,43 @@
+{
+  "status": "frozen_for_independent_review",
+  "candidate": "03",
+  "created_at": "2026-10-16T19:57:50.940394+00:00",
+  "source_root": "/workspace/tender-workbench",
+  "previous_candidate_sha256": "654c85600842d21e12f3032be0c360eb74a8f3ad359d0af08de945874bfd83a9",
+  "sources": {
+    "packages/metrics/__init__.py": "8928f40c9a970d97210328a29cd54e333ee2ded36db8caa965f3e7494e44d6aa",
+    "packages/metrics/contracts.py": "f6549612c78ad7ef6a35e7aed2af758e1337d8f9ef0e0a7c39a94e7dc57e3563",
+    "packages/metrics/core.py": "9ddf4e93ba72c7b3f4e38a89eb63efc06ea3562282776770681a745c9d07b609",
+    "packages/metrics/predictions.py": "b64c75572fecc536bc851251fed2419132ed175ee4a71f860af49018de733b02",
+    "packages/metrics/records.py": "0ef3b58db374ce898df4e0eb27dec7d83bc6e9541c00f354b56b9b2dc0ac63ca",
+    "packages/metrics/results.py": "6e7e2f5ccddc1e6bdde503d78936c63bc3b07a52019e266f312b2959db5de126",
+    "packages/metrics/snapshots.py": "a17a6d186090571991528f3bc8264c6a3a485a69b179630a14219df359cd0ca2",
+    "packages/metrics/sources.py": "3aa07ae2bf9edac94032d7e97edf81064baf47123883075ce388c31ae9a9d962",
+    "packages/metrics/views.py": "cb4466734f401213a59d7e2537578a417f87cd0fe6bcb51b1f3058217b8f0d79",
+    "apps/api/metrics_routes.py": "d5dfc777f7d7bcb3d8c6141054c5f8ea1d4746693d50ab61e521d12a69d4be9e",
+    "tests/test_metrics.py": "e72cc3e448c29b1b265b50d7efab51858ffcc6facb69116ca876dd6bf87ba1b9",
+    "tests/test_metrics_integration.py": "174231098d5aeeda0049f41646cbb52c061787f7a2e8a8be8b7c7954e5c8dd7f",
+    "docs/metrics-development-checks/candidate03/implementation-protocol.md": "e79a749d8efd86d7defafdaa0a830380aa3a2c337bae32604a0e62ab3a377a97"
+  },
+  "observed_dependencies": {
+    "packages/identity/repository.py": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+    "packages/research/identities.py": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+    "packages/research/outcomes.py": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+    "packages/domain/runtime.py": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "packages/domain/finding_lifecycle.py": "8d856f2de574a7c142f85e4ad8e2cf3875fc9672f630bb40364ae6d3a78c3d66",
+    "packages/domain/reviews.py": "b577dc5ff5f51cd44119faf5ef0f55092381d0a9ef16c0c696de77eaf7039015",
+    "packages/domain/review_data.py": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+    "apps/api/auth.py": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/rag/indexing.py": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad",
+    "packages/rag/repository.py": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+  },
+  "evidence": {
+    "development-junit.xml": "421ee8acb8539c99f8dadad6e94dffa0c855f3f81b7860d9c482d3bf96c48c0d",
+    "development-result.json": "d36a239569cac1e380c6dc0e195d0de953ac510f78cdb3b5813cee492924cbad"
+  },
+  "main_wired": false,
+  "independent_approved": false
+}

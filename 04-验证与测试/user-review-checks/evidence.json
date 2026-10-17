@@ -1,0 +1,418 @@
+{
+  "scope": "independent_user_role_simulation",
+  "decision": "core_spec_path_clear_continue_development_ui_acceptance_and_real_tasks_pending",
+  "report": "04-验证与测试/用户视角模拟评审.md",
+  "sources": [
+    {
+      "id": "P",
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "897b39ee97e9678f0582b7b7ed2313921703b892c568bc213389b6c56200ed78"
+    },
+    {
+      "id": "O",
+      "path": "02-业务与产品/AI投标工作台产品化方案.md",
+      "sha256": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75"
+    },
+    {
+      "id": "V",
+      "path": "05-技术与设计/交互与视觉设计.md",
+      "sha256": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75"
+    },
+    {
+      "id": "G",
+      "path": "02-业务与产品/GitHub实现功能保留对照.md",
+      "sha256": "a3ba5207818c6c942251d245ddc2181491d4a2521beb939008d0f6ee34d93be4"
+    },
+    {
+      "id": "D",
+      "path": "04-验证与测试/development-readiness-checks/README.md",
+      "sha256": "481dc932c4c3cca24b62807618229d006836344f0914b321a00dae9898c15e7e"
+    },
+    {
+      "id": "R",
+      "path": "05-技术与设计/detailed-design/保留功能实现规约.md",
+      "sha256": "5caf65913cfd37ed165fadab4397e6820b779be2fd19e33c84c069b2e40f8c84"
+    },
+    {
+      "id": "I1",
+      "path": "05-技术与设计/assets/govdash-projects.png",
+      "sha256": "5a35155ad840ffe9efa4f71a7b4c99773b666ec14927fd304f82df9d1e9eb039"
+    },
+    {
+      "id": "I2",
+      "path": "05-技术与设计/assets/govdash-workspace.png",
+      "sha256": "dee3638e8111342312c3fbcf7ed8b19fa6faef61870d68314e2bd5ccf8353603"
+    },
+    {
+      "id": "I3",
+      "path": "05-技术与设计/assets/fused-review.png",
+      "sha256": "99d26a4cdc524ebcd87f6b293faddd4f34d71687f7f4773038cb731de8a2ab0f"
+    },
+    {
+      "id": "I4",
+      "path": "05-技术与设计/assets/fused-review.svg",
+      "sha256": "a3206ced4a1c750cd155925799c4637e27584fadcfe91d6e3a5b0252a187334b"
+    }
+  ],
+  "citations": [
+    {
+      "id": "E01",
+      "source": "P",
+      "line": 123,
+      "excerpt": "主动作是上传资料"
+    },
+    {
+      "id": "E02",
+      "source": "P",
+      "line": 136,
+      "excerpt": "无需先选目录模板"
+    },
+    {
+      "id": "E03",
+      "source": "P",
+      "line": 157,
+      "excerpt": "不填公司事实、不先建满知识库也可开始"
+    },
+    {
+      "id": "E04",
+      "source": "P",
+      "line": 340,
+      "excerpt": "默认在标准提交登记前人工确认"
+    },
+    {
+      "id": "E05",
+      "source": "P",
+      "line": 342,
+      "excerpt": "允许批量确认明确选中的待处理条款"
+    },
+    {
+      "id": "E06",
+      "source": "P",
+      "line": 322,
+      "excerpt": "可继续上传PDF评审"
+    },
+    {
+      "id": "E07",
+      "source": "P",
+      "line": 549,
+      "excerpt": "保留PDF路径"
+    },
+    {
+      "id": "E08",
+      "source": "P",
+      "line": 547,
+      "excerpt": "外部同时上传的Word与PDF不因同名"
+    },
+    {
+      "id": "E09",
+      "source": "P",
+      "line": 713,
+      "excerpt": "下载批注审阅稿"
+    },
+    {
+      "id": "E10",
+      "source": "V",
+      "line": 122,
+      "excerpt": "明确分组"
+    },
+    {
+      "id": "E11",
+      "source": "I4",
+      "line": 1,
+      "excerpt": "Word 报告"
+    },
+    {
+      "id": "E12",
+      "source": "I4",
+      "line": 1,
+      "excerpt": "批注 PDF"
+    },
+    {
+      "id": "E13",
+      "source": "P",
+      "line": 163,
+      "excerpt": "不能因仅展示一项而漏报"
+    },
+    {
+      "id": "E14",
+      "source": "I4",
+      "line": 1,
+      "excerpt": "有 2 项关键问题需要处理"
+    },
+    {
+      "id": "E15",
+      "source": "I4",
+      "line": 1,
+      "excerpt": "其余待办（6）"
+    },
+    {
+      "id": "E16",
+      "source": "P",
+      "line": 362,
+      "excerpt": "生效关系与不确定项"
+    },
+    {
+      "id": "E17",
+      "source": "V",
+      "line": 80,
+      "excerpt": "未知的补遗先后关系不按文件名或上传顺序推断"
+    },
+    {
+      "id": "E18",
+      "source": "P",
+      "line": 622,
+      "excerpt": "先选具体提交，再录入结果"
+    },
+    {
+      "id": "E19",
+      "source": "P",
+      "line": 624,
+      "excerpt": "未知保存未知，不填零"
+    },
+    {
+      "id": "E20",
+      "source": "P",
+      "line": 485,
+      "excerpt": "不代表已解决"
+    },
+    {
+      "id": "E21",
+      "source": "P",
+      "line": 489,
+      "excerpt": "新轮次标明已解决及证据"
+    },
+    {
+      "id": "E22",
+      "source": "P",
+      "line": 511,
+      "excerpt": "评分总分无法可靠预测本身不必阻止提交"
+    },
+    {
+      "id": "E23",
+      "source": "P",
+      "line": 517,
+      "excerpt": "补录已发生的提交"
+    },
+    {
+      "id": "E24",
+      "source": "V",
+      "line": 138,
+      "excerpt": "390px手机"
+    },
+    {
+      "id": "E25",
+      "source": "R",
+      "line": 57,
+      "excerpt": "CMap、标准字体与中文所需资源随站点发布"
+    },
+    {
+      "id": "E26",
+      "source": "D",
+      "line": 37,
+      "excerpt": "不依赖完整编辑器"
+    },
+    {
+      "id": "E27",
+      "source": "P",
+      "line": 768,
+      "excerpt": "有效已完成结果保留"
+    },
+    {
+      "id": "E28",
+      "source": "P",
+      "line": 533,
+      "excerpt": "保存失败则停在可恢复错误"
+    },
+    {
+      "id": "E29",
+      "source": "P",
+      "line": 535,
+      "excerpt": "来源当前有效性"
+    },
+    {
+      "id": "E30",
+      "source": "P",
+      "line": 662,
+      "excerpt": "保存可核验时间和方法"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S01",
+      "task": "首次上传PDF拿结论",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E01",
+        "E02",
+        "E03",
+        "E26"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S02",
+      "task": "处理风险并看原页",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E13",
+        "E14",
+        "E15",
+        "E20"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S03",
+      "task": "外部Word改稿回传复检",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E06",
+        "E07",
+        "E08",
+        "E21"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S04",
+      "task": "补遗变化后的处理",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E16",
+        "E17"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S05",
+      "task": "提交前确认与实际提交登记",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E04",
+        "E05",
+        "E09",
+        "E22",
+        "E23"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S06",
+      "task": "登记成绩与复盘",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E18",
+        "E19",
+        "E30"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "S07",
+      "task": "章节编制与历史知识引用",
+      "method": "document_walkthrough_only",
+      "citations": [
+        "E28",
+        "E29"
+      ],
+      "software_executed": false
+    }
+  ],
+  "cross_cutting": [
+    {
+      "id": "X01",
+      "task": "断线、并发与模型不可用",
+      "citations": [
+        "E27"
+      ],
+      "software_executed": false
+    },
+    {
+      "id": "X02",
+      "task": "内网、键盘与窄屏",
+      "citations": [
+        "E24",
+        "E25"
+      ],
+      "software_executed": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "U01",
+      "classification": "must_before_ui_acceptance",
+      "type": "spec_visual_consistency",
+      "citations": [
+        "E09",
+        "E10",
+        "E11",
+        "E12"
+      ],
+      "scenarios": [
+        "S03",
+        "S05"
+      ]
+    },
+    {
+      "id": "U02",
+      "classification": "must_before_ui_acceptance",
+      "type": "recovery_presentation",
+      "citations": [
+        "E06",
+        "E07",
+        "E08"
+      ],
+      "scenarios": [
+        "S03"
+      ]
+    },
+    {
+      "id": "U03",
+      "classification": "observe_in_real_tasks",
+      "type": "discoverability_hypothesis",
+      "citations": [
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "scenarios": [
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "id": "U04",
+      "classification": "observe_in_real_tasks",
+      "type": "comprehension_hypothesis",
+      "citations": [
+        "E16",
+        "E17"
+      ],
+      "scenarios": [
+        "S04"
+      ]
+    },
+    {
+      "id": "U05",
+      "classification": "observe_in_real_tasks",
+      "type": "repeated_entry_hypothesis",
+      "citations": [
+        "E18",
+        "E19"
+      ],
+      "scenarios": [
+        "S06"
+      ]
+    }
+  ],
+  "observations": {
+    "target_images_visually_inspected": 3,
+    "main_paths_simulated": 7,
+    "cross_cutting_groups": 2,
+    "real_participants": 0,
+    "browser_runs": 0,
+    "business_software_tests_executed": 0,
+    "click_measurements": 0,
+    "production_or_model_effect_validation": false
+  }
+}

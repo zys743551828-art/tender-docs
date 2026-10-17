@@ -1,0 +1,54 @@
+{
+  "status": "tested_boundaries_passed_candidate01_superseded_pending_candidate02_delta",
+  "results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/guard-mechanisms/result.json",
+      "sha256": "da92879c980a24922bc89038645ab60160d7f4866d7a442acbf0665b36501c79"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/boundary-post-validation-fixed/result.json",
+      "sha256": "a927a84f68c406fd91729d59b86eb14e80a5c1a8d95fcbb88109d450e285e4db"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/boundary-unknown/result.json",
+      "sha256": "94643c4416e7224b0c68e0e1176fb93768f656a35a73a2c645e977f6eb5ceb02"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/boundary-cancel/result.json",
+      "sha256": "a760e113bcb0e7ffba6edc97839b1015710bec767bb38b09048a8931ce464fcf"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/boundary-success/result.json",
+      "sha256": "cbaac2192c0d3c5575bbfe96473dfb5af36298dbfff50d275dea100cf5d71c2c"
+    }
+  ],
+  "tool_sha256": "b69a359f2099f844e3af164d3221eed607d5af4d99167fc8870eef5f83a53d85",
+  "runtime_observation": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/python-runtime-observation.json",
+    "sha256": "8d0ef45bfc1d8eb3a7873964e5fc0b7f86c5cbffad4278fa07e9af8db8dee0ff"
+  },
+  "retained_probe_failure": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/mock-frozen-01/boundary-post-validation/result.json",
+    "sha256": "f639de66a5789cd01a22e336e38ef96fba67ce0b30b68d3e09e4410093a12410"
+  },
+  "probe_failure_note": "Offline fake consumer initially queried nonexistent outbox.created_at; corrected to actual available_at in separate run. No product defect; original failure retained.",
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "verified": [
+    "20 concurrent contenders allow extract/core once each; foreign/malformed project, other logicalkey, bool/excess/zero tokens, UTF8 byte-overflow, deadline/source mutation rejected before upstream",
+    "Real restricted PG session advisory lock rejects another executor; connection idle without open business transaction; release on normal/exception exit",
+    "Default CLI preview never enters execute; >180s rejected",
+    "Actual frozen01 handler+PG with offline transport: schema-valid response but post-provider quote rejection leaves succeeded model ledger/failed prepare; tool immediately stops",
+    "Actual unknown ledger stops after1 offline request; prior call blocks reopening before consumer construction",
+    "Cancellation stops before transport; ordinary successful extract/core/finalize limited to2 offline invocations",
+    "Offline consumer skips foreign projects and never commits offsets; closes and restores wrapper"
+  ],
+  "known_followup": "PM/architect reopened tool candidate02 to bind manifest itself, required dependency set and loaded module origins. This record does not approve candidate01 for execution or claim those boundaries passed.",
+  "not_verified": [
+    "Real paid Kafka/provider execution requires explicit user authorization",
+    "Dollar hard cap: only invocation/input/output bounds; no dollar balance enforcement",
+    "180s is new-call start window; in-flight native45s model/storage cleanup may finish later",
+    "Formal scoring/model quality and production deployment"
+  ]
+}

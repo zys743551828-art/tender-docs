@@ -1,0 +1,11 @@
+# 树、计划、双模板SQL静审
+
+结论：可以进入独立新库初始化与应用机制验证；本次仅静审，不是完整A2实现通过。SQL精确SHA256 `ebb88fada5e4942d338fde54a13884e43741208829a736ff679d9c761e38c94d`，协议 `3890bcde38ff4d44d6fccb7dd232039c3a364f0ebbd505f658ce5dc3d168c401`，对应原字节分别保存在 observed-structure01.sql、observed-protocol01.md。
+
+五表复用原sections、section_revisions、draft_snapshots和template_versions。已对照原core实际键核查全部组合外键：节点同bid／draft／section，正文修订和计划归属同章节，parent同结构；结构header额外触发器把snapshot ID和draft revision锁定为同一行，避免两条独立FK各指不同快照。目录／版式各自明确outline／layout，模板族head、前版revision和版本ID组成真实链，非简单两个UUID。API对模板族只有两个head列的更新权且强制修订递增，其余版本与节点append-only；Worker及研究／评分不获五表新读写权。
+
+应用验收必须证明协议承诺的整体树不变量，不把FK成功当作业务证明：多节点环、活动子指向deleted父、连续同级序、深度／数量、整树Action及draft CAS、复制新ID且不继承ready或人工确认、deleted章节旧入口禁写；SQL只约束直接自环和同级序唯一。精确plan／目录／版式／项目格式绑定须冻结入不可变snapshot，Worker只读该快照，不回读最新模板head。新快照active章节清单与正文修订、计划和DFS次序必须交叉比对，来源与格式约束变化须拒新构建。
+
+还须实测双模板族CAS并发、精确FK错绑、非法kind、模板链fork、正文保存与结构采用并发、生命周期、失效来源恢复、真实DOCX样式和PDF内容。实际页范围未核实时保持unknown，ready只是人工编写状态，不授予合规／评分资格。应用层默认连接是事务型；新入口仍须READ COMMITTED、统一bid→draft→图锁，并以旧ACK例外保持原始结果，不能跨bid返回。
+
+本次没有DDL、数据库写入、资源创建、对象或模型请求、消费者。允许PM使用精确输入新建检查库；旧库及旧历史证据保持不变。

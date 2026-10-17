@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="9" time="2.445" timestamp="2026-10-16T18:07:57.597492+00:00" hostname="597cea30c71f"><testcase classname="tests.test_multipart" name="test_layout_and_complete_receipts_reject_missing_duplicate_or_wrong_size" time="0.000" /><testcase classname="tests.test_multipart" name="test_control_state_has_explicit_version_and_strict_shape" time="0.000" /><testcase classname="tests.test_multipart" name="test_grants_bind_session_method_part_size_revision_and_expiry" time="0.053" /><testcase classname="tests.test_multipart_integration" name="test_real_missing_part_recovery_lost_complete_response_and_replay" time="0.615" /><testcase classname="tests.test_multipart_integration" name="test_real_stale_remote_write_is_not_published_and_full_sha_quarantines" time="0.438" /><testcase classname="tests.test_multipart_integration" name="test_real_init_response_loss_never_reinitializes_and_abort_is_exact" time="0.113" /><testcase classname="tests.test_multipart_integration" name="test_real_abort_closes_old_tickets_and_replay" time="0.195" /><testcase classname="tests.test_multipart_integration" name="test_real_two_complete_requests_share_one_operation_and_block_refresh_abort" time="0.488"><failure message="TypeError: OssError.__init__() missing 1 required positional argument: 'details'">self = &lt;packages.uploads.native.NativeMultipart object at 0x7fd1e41a86b0&gt;
+_method = 'verify_complete'
+_original = &lt;function NativeMultipart.verify_complete at 0x7fd1e6f6b380&gt;
+args = ({'aborted_at': None, 'batch_id': UUID('0d02e2fd-25a0-46ea-9166-26ff01d197da'), 'bid_id': UUID('4e9057e7-352f-4057-bea7-304a514cfdf6'), 'committed_binding_id': None, ...},)
+kwargs = {}, c = &lt;psycopg.Connection [BAD] at 0x7fd1e41a9220&gt;, held = 0
+
+    def guard(self, *args, _method=method, _original=original, **kwargs):
+        with connection() as c:
+            held = c.execute(
+                "SELECT count(*) AS n FROM pg_stat_activity WHERE application_name=%s AND pid&lt;&gt;pg_backend_pid() AND state='idle in transaction'",
+                ("multipart-call-" + str(threading.get_ident()),),
+            ).fetchone()["n"]
+        assert held == 0, "remote operation held a source transaction"
+        calls.append(_method)
+&gt;       return _original(self, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tender-workbench/tests/test_multipart_integration.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;packages.uploads.native.NativeMultipart object at 0x7fd1e41a86b0&gt;
+row = {'aborted_at': None, 'batch_id': UUID('0d02e2fd-25a0-46ea-9166-26ff01d197da'), 'bid_id': UUID('4e9057e7-352f-4057-bea7-304a514cfdf6'), 'committed_binding_id': None, ...}
+
+    def verify_complete(self, row):
+        try:
+            head = self.port.head_object(Bucket=storage.bucket(), Key=row["staging_key"])
+            if head["ContentLength"] != row["declared_size"]:
+                raise DomainError("UPLOAD_SIZE_MISMATCH", "完整对象大小不匹配", 422)
+            result = self.port.get_object(Bucket=storage.bucket(), Key=row["staging_key"])
+        except ClientError:
+&gt;           raise DomainError(
+                "MULTIPART_COMPLETE_UNCONFIRMED",
+                "尚未查到完整对象，请使用同一完成请求重试",
+                503,
+                retryable=True,
+            ) from None
+E           packages.domain.runtime.DomainError: ('MULTIPART_COMPLETE_UNCONFIRMED', '尚未查到完整对象，请使用同一完成请求重试', 503)
+
+tender-workbench/packages/uploads/native.py:97: DomainError
+
+During handling of the above exception, another exception occurred:
+
+harness = (&lt;starlette.testclient.TestClient object at 0x7fd1e41b9be0&gt;, {'Origin': 'http://127.0.0.1:5175', 'X-CSRF-Token': '0143..., 'filename': '合成分片.pdf', ...}, ['initialize', 'upload', 'upload', 'parts', 'verify_complete', 'verify_complete', ...])
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7fd1e41c44a0&gt;
+
+    def test_real_two_complete_requests_share_one_operation_and_block_refresh_abort(
+        harness, monkeypatch
+    ):
+        client, headers, body, calls = harness
+        created = client.post("/create", json=body, headers=command_headers(headers))
+        assert created.status_code == 200, created.text
+        grant = created.json()
+        upload = grant["upload_id"]
+        for index in range(2):
+            assert send_part(client, headers, grant, index).status_code == 200
+        parts = client.get(f"/{upload}/parts").json()["completed_parts"]
+        complete_original = NativeMultipart.complete
+        barrier = threading.Barrier(2)
+        results = []
+    
+        def competing_complete(self, *args, **kwargs):
+            # completing is already committed while remote completion is in flight.
+            refreshed = client.post(
+                f"/{upload}/refresh",
+                json={"part_numbers": [1, 2]},
+                headers=command_headers(headers, revision=2, upload=upload),
+            )
+            aborted = client.post(
+                f"/{upload}/abort", headers=command_headers(headers, revision=2, upload=upload)
+            )
+            assert refreshed.status_code == 409, refreshed.text
+            assert aborted.status_code == 409, aborted.text
+            results.append((refreshed.status_code, aborted.status_code))
+            barrier.wait(timeout=10)
+            return complete_original(self, *args, **kwargs)
+    
+        monkeypatch.setattr(NativeMultipart, "complete", competing_complete)
+        payload = {"parts": parts, "declared_sha256": body["declared_sha256"]}
+        hdr = command_headers(headers, revision=1, upload=upload)
+        with ThreadPoolExecutor(max_workers=2) as pool:
+&gt;           responses = list(
+                pool.map(
+                    lambda _: client.post(f"/{upload}/complete", json=payload, headers=hdr), range(2)
+                )
+            )
+
+tender-workbench/tests/test_multipart_integration.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/tests/test_multipart_integration.py:384: in &lt;lambda&gt;
+    lambda _: client.post(f"/{upload}/complete", json=payload, headers=hdr), range(2)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:538: in post
+    return super().post(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post
+    return self.request(
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:437: in request
+    return super().request(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send
+    response = self._send_handling_auth(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth
+    response = self._send_handling_redirects(
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:340: in handle_request
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:337: in handle_request
+    portal.call(self.app, scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:187: in __call__
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:165: in __call__
+    await self.app(scope, receive, _send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:62: in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:734: in app
+    await route.handle(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:288: in handle
+    await self.app(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:76: in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app
+    raise exc
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app
+    await app(scope, receive, sender)
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/routing.py:73: in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:301: in app
+    raw_response = await run_endpoint_function(
+tender-workbench/.venv/lib/python3.12/site-packages/fastapi/routing.py:214: in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/starlette/concurrency.py:37: in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/to_thread.py:65: in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2706: in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+tender-workbench/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:1100: in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/tests/test_multipart_integration.py:116: in complete
+    return wrap(service.complete(upload_id, request, auth(request, True), body))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/packages/uploads/service.py:452: in complete
+    native.complete(row["staging_key"], state["provider_id"], observed)
+tender-workbench/tests/test_multipart_integration.py:376: in competing_complete
+    return complete_original(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/tests/test_multipart_integration.py:147: in guard
+    return _original(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tender-workbench/packages/uploads/native.py:69: in complete
+    self._call(
+tender-workbench/packages/uploads/native.py:24: in _call
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;__main__.MemoryObjects object at 0x7fd1ea7a59a0&gt;
+key = 'staging/4e9057e7-352f-4057-bea7-304a514cfdf6/1087ca3d-ee52-437c-9e46-567a3e1b014e'
+ident = 'c7aec41aecaa483ab5daf074e538aa86'
+parts = [&lt;oss2.models.PartInfo object at 0x7fd1e52cb740&gt;, &lt;oss2.models.PartInfo object at 0x7fd1e52cad50&gt;]
+headers = {'x-oss-forbid-overwrite': 'true'}
+
+    def complete_multipart_upload(self,key,ident,parts,headers):
+        from oss2.exceptions import NoSuchUpload
+        with self.lock:
+&gt;           if ident not in self.uploads:raise NoSuchUpload(404,{},b'')
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^
+E           TypeError: OssError.__init__() missing 1 required positional argument: 'details'
+
+tender-docs/04-验证与测试/multipart-architect-review/probe_candidate01.py:29: TypeError</failure></testcase><testcase classname="tests.test_multipart_integration" name="test_real_foreign_session_and_wrong_part_ticket_are_rejected_before_storage" time="0.136" /></testsuite></testsuites>

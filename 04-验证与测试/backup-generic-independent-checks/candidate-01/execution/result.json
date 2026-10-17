@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "source_export_login_is_actual_restricted_nonowner",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "future_schema_quote_partition_materialized_and_vector_catalog_discovered",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "snapshot_inventory_excludes_late_insert_and_update",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "database_component_never_claims_full_object_backup",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restore_creates_new_database_and_verifies_entire_dynamic_catalog",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_exact_pre_snapshot_json_enum_vector_and_partition_rows",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_default_is_readonly",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_insert_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_update_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_delete_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_truncate_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_schema_create_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "restored_user_function_denied_even_if_readonly_default_disabled",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "source_remains_updated_without_restore_mutation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_dump_tamper_rejected_before_new_restore",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "archive_symlink_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "catalog_f_False_rejects_before_data_read",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "catalog_r_True_rejects_before_data_read",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "source_probe_database": "tender_qa_generic_source_93e1f5a9b2594e98816fee655043b8c9",
+  "owner_scope": "CREATE and initialize this new random probe and generic's new restore only",
+  "model_requests": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "existing_database_mutations": 0,
+  "restore_receipt": {
+    "status": "passed_database_component_only",
+    "database": "tender_catalog_restore_b8b3f6b875664e64a4b28b2285c4688d",
+    "nonowner_login": "twb_backendcheck_api",
+    "schemas_verified": [
+      "design",
+      "future.metrics 中文",
+      "public",
+      "retrieval"
+    ],
+    "tables_verified": 108,
+    "catalog_extensions_verified": [
+      {
+        "name": "plpgsql",
+        "version": "1.0",
+        "schema": "pg_catalog"
+      },
+      {
+        "name": "vector",
+        "version": "0.8.7",
+        "schema": "design"
+      }
+    ],
+    "all_discovered_schema_write_privileges_revoked": true,
+    "all_discovered_schema_user_function_execution_revoked": true,
+    "objects_verified": 0,
+    "object_references_verified": 0,
+    "object_bytes_included": false,
+    "restored_object_prefix": null,
+    "full_application_restore_qualified": false,
+    "production_rpo_rto_qualified": false,
+    "no_consumer_started": true,
+    "archive_manifest_sha256": "889d262b4f4957345cac9ca1a395a5934a418e0cc9382492c31a1af9db5b35bf"
+  },
+  "actual_relation_count": 108,
+  "new_future_relation_count": 4,
+  "private_archive": "/tmp/tender-qa-generic-nmngpikq/.local/backups/independent-58e921c51dc243a3875f057e8232ac37",
+  "frozen_runtime": "/tmp/tender-qa-generic-nmngpikq",
+  "source_export_login": "twb_backendcheck_api",
+  "probe_sha256": "1cdfb3200277ddfddf36a5d050e6ae4ee500597ad67bf481ac9209cf444469a2",
+  "input_manifest_sha256": "6cff853bd35421403be657f453e8db33a481b327a30ef666affd24d32931b5dd"
+}

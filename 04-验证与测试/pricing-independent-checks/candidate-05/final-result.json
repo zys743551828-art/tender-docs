@@ -1,0 +1,64 @@
+{
+  "status": "passed_scoped_pricing_method_evidence_and_no_rounding_delta",
+  "blocking_findings": [],
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-05/candidate.json",
+    "sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee",
+    "runtime_inputs": 310,
+    "runtime_manifest_sha256": "d27d4a3e49e7e8059b19a6b6098b49e72d508b7fd70335e0a2e56f62faa01205",
+    "changed_production_from04": [
+      "packages/pricing/repository.py",
+      "packages/pricing/terms.py"
+    ]
+  },
+  "actual": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-05/execution/actual.openapi.json",
+    "sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+    "paths": 161,
+    "operations": 188,
+    "schemas": 310,
+    "scope": "Cold fixed main export, actual HTTP handlers through ASGI; no shared service upgrade by QA"
+  },
+  "independent_delta": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-05/execution/result.json",
+    "sha256": "bd801fe2aab29f448fa473987a74a241184a833ed0c7b1db0649ae8286a5ddbd",
+    "junit_sha256": "8ed427f4fe78bf548720983965434e0e1368fb1b680878bd1d67fa5981d46dc0",
+    "executed_probe_sha256": "1623eddbd1366201ad3fdac441431d3ca84774a49e9b2144d2392b3cb3f279c9",
+    "actual_page_cases": 7,
+    "legal_no_rounding_register_then_score": 3,
+    "affirmative_or_unclosed_rejections": 4
+  },
+  "resolved_counterexample": {
+    "id": "F04-QA-ROUNDING-NEGATION",
+    "original_pdf_sha256": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+    "before": "Frozen04 actualHTTP422",
+    "after": "Frozen05 actualHTTP201 registration→201 simulation32.00, exact original PDF unchanged",
+    "baseline_evidence_path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/baseline04-rounding-counterexample.json",
+    "baseline_evidence_sha256": "66a1973b80ac422c86c3094a5feafdbcee4d02d39271c024194bb57cd43f200c",
+    "historical_final_result_sha256": "cca7086b9bb00bca9162d5aade0f448add567627c032b4bc8f3b19c82a2a891d",
+    "old_records_unmodified": true
+  },
+  "retained_coefficient_checks": {
+    "count": 26,
+    "result_path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution/result.json",
+    "result_sha256": "c578e2006653996ab737ddbf36df679bca937f847e0b48489303c413327ee140",
+    "binding_path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-05/retained-f04-evidence-binding.json",
+    "binding_sha256": "aecdd74e09beb0dd8c9c099ed31a1da6ca76e5d4dadf67b7f604c09c7a66b308",
+    "not_rerun": true
+  },
+  "scoped_conclusions": [
+    "Ratio method does not require invented zero-coefficient wording or coefficient mapping; all twelve real method/score/eligibility/unit/rounding/baseline/clamping fields remain mandatory. Nonzero ratio coefficients/unknown fields/unquoted parameter values rejected. Mean above/below coefficient evidence remains required, complete mean works. These26 prior independent assertions are retained with exact unchanged source and one-line/new-function delta proof.",
+    "Exact original complete synthetic Chinese PDF containing explicit 基准价不取整 now registers and computes40×100/125=32.00. Variants不作中间取整 and不进行四舍五入 independently register and calculate the same score.",
+    "Positive baseline rounding, negative followed by positive rounding, unclosed exception continuation, and newline followed by positive rounding all stay rejected without formula staging. Three accepted formulas persist, no implicit saved plan."
+  ],
+  "limits": [
+    "True one-page Chinese text-layer PDFs are independently extracted with PDFium and exactly match declared lines; page publication SQL is explicit synthetic fixture. Does not qualify generic parser/OCR or ordinary intake behavior.",
+    "Actual nonowner PG/API ASGI and memory formula object port, explicit offline model client. Zero real provider/OSS/consumer, no DDL/owner privilege repair or shared8806/8808/frontend changes by QA.",
+    "No whole pricing-model, formal scoring, full lifecycle, frontend or production acceptance. Conditional retained26 checks are not reported as reexecuted under05. HistoricalInput only read-only manifest preflight in this task; software validation remains pending."
+  ],
+  "paid_calls": 0,
+  "oss_requests": 0,
+  "consumers_started": 0,
+  "new_sql_applied": false,
+  "reviewed_source_modified": false
+}

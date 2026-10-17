@@ -1,0 +1,16 @@
+{
+  "scope": "candidate01 ordinary ledger with isolated real PG/nonowner roles and explicit MockTransport/in-memory objects",
+  "candidate_sha256": "78441a80539fa76f128e6dcc56f42476edb7e5daffc3c334d328358f369a7c5f",
+  "developer_cases_independently_run": 6,
+  "additional_concurrent_and_cancel_checks": [
+    "two concurrent same-key attempts create one reservation",
+    "concurrent shared-command calls budget does not oversubscribe",
+    "concurrent shared-command tokens budget does not oversubscribe",
+    "late response preserves billing truth after cancellation but old fence cannot publish effects"
+  ],
+  "source_hashes_unchanged_before_after": true,
+  "credentials_read": false,
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "Kafka_or_model_efficacy_accepted": false
+}

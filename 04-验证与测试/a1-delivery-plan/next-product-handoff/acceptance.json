@@ -1,0 +1,100 @@
+{
+  "scope": "完整A2/任务及06-07后续真实UI任务，非已执行结果",
+  "software_executed": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "UI-A2-01",
+      "title": "目录树完整动作",
+      "setup": "有层级与人工内容的草稿，新增/移动/复制/删除/升降级及键盘，造循环与并发",
+      "expected": "稳定ID/同级序/原子ACK；环路拒绝，删除影响可见不删要求，重登可恢复",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-A2-02",
+      "title": "编写计划与页预算",
+      "setup": "设置章节目标/要求/待补/页预算，再真实生成不同分页PDF",
+      "expected": "计划不冒实际页；物理页范围/超页和未知分别展示，不自动删内容",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-A2-03",
+      "title": "目录与版式模板",
+      "setup": "分别选两模板及新版本，原有人工修改/暗标冲突",
+      "expected": "两版本独立冻结、目录先差异；人工/引用不盲覆盖，项目强制要求优先",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-A2-04",
+      "title": "表图真实链",
+      "setup": "保存真实表格/图片并DOCX/PDF导出，含受支持合并与跨页",
+      "expected": "数据/图原字节和来源可还原；真表/嵌图、断表缺图可见，未支持明确不静默丢弃",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-A2-05",
+      "title": "导入及Word接续",
+      "setup": "外部Word含不支持对象，导入预览/转换失败后补PDF",
+      "expected": "原件保留、缺口与覆盖影响可见；PDF独立版本/unverified声明，不授Word资格/不重传招标",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-A2-06",
+      "title": "真实AI局部差异",
+      "setup": "选区含中文/格式/未选内容，生成后基准或来源变化再应用",
+      "expected": "选区外不改、引用可信；一次Action无二次调用，stale/412保留候选；采纳非解决",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-TASK-01",
+      "title": "补遗子能力诚实",
+      "setup": "执行当前supplement_impact只有registered关系快照",
+      "expected": "写已登记补遗关系核对/语义影响未检查，技术成功非完整补遗完成，不自动效力决定",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-TASK-02",
+      "title": "完整语义补遗",
+      "setup": "加入真实新补遗，查看关联要求/章节/事实/问题与未定位范围",
+      "expected": "有来源完整范围/候选/未知，明确有据决定才新包，失败不自动忽略核心影响",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-TASK-03",
+      "title": "NL仅草案",
+      "setup": "自然语言说每天检查但未给范围时间，改字段并保存",
+      "expected": "集中问歧义；draft不自动定时/保存/收费，明确一次保存才版本；来源/target不能模型任填UUID",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-TASK-04",
+      "title": "接线/事件/cron",
+      "setup": "否决guard未接、评分无资格、重复事件/计划、暂停400天",
+      "expected": "真实未就绪拒绝/无假run；不无界补费、结果与原输入固定、模板不做人决定",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-07-KNOWLEDGE",
+      "title": "冻结07知识界面",
+      "setup": "关键词/可信项目用途、候选vs发布版、历史/适用拒因、引用影响",
+      "expected": "真实API/原页/版本明确，项目数与引用处数分开；派生查证不冒原文，过期不新用",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-07-METRICS",
+      "title": "冻结07指标界面",
+      "setup": "九stage/未知冲突取消流标/零分母/来源更正/隐藏预测",
+      "expected": "分母/当前头/快照诚实，不从分推中标；20只是展示门槛；实际用户观察另留证",
+      "status": "pending_application"
+    },
+    {
+      "id": "UI-06-F03",
+      "title": "收06最后F03结论",
+      "setup": "用最终冻结候选及真实界面做PRICE01—11受影响走查",
+      "expected": "有独立最终总结才记其scope通过；组件/早期观察不能代替，不反改未执行项",
+      "status": "pending_application"
+    }
+  ]
+}

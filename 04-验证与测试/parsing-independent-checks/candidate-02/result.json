@@ -1,0 +1,45 @@
+{
+  "scope": "解析隐藏字受影响增量真实TCP，不包含稳定鉴权/损坏全量重跑",
+  "passed": false,
+  "checks": [
+    {
+      "name": "INVISIBLE_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "NONVISIBLE_TEXT_LAYER_EXCLUDED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "ALPHA_ZERO_RULE",
+      "passed": true,
+      "marker_in_text": false,
+      "quality": "partial",
+      "gaps": [
+        "NONVISIBLE_TEXT_LAYER_EXCLUDED",
+        "SCAN_LAYOUT_TABLES_AND_VISUALS_UNVERIFIED"
+      ]
+    },
+    {
+      "name": "WHITE_ON_WHITE_RULE",
+      "passed": false,
+      "marker_in_text": true,
+      "quality": "usable",
+      "gaps": []
+    },
+    {
+      "name": "normal-visible-text-kept",
+      "passed": true
+    },
+    {
+      "name": "white-visible-on-black-kept",
+      "passed": true
+    }
+  ],
+  "paid_model_requests": 0,
+  "candidate_sha256": "43d857f3ed5a0952d549bf795d110323596eabbe96288d8a53d3a09edb463da7",
+  "actual_parser_digest": "a7678861fc3b487a4096eaf88f3bbf24e74d49ac03bf5b3dacadb87f2d4b915d",
+  "probe_sha256": "24a94e694e306b968573e4258c313fed90716d95b5dd277fb46220d777ea04ae"
+}

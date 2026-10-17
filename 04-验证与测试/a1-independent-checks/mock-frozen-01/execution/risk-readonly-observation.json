@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "critical": [
+    {
+      "id": "01d26406-88ee-4196-b7fa-86d3b5b52403",
+      "review_id": "86e13285-73d8-4b6b-a08a-8bc68e5a863e",
+      "rule_id": "dc39f49b-2a98-4caa-820e-8d6fac784849",
+      "category": "disqualification",
+      "severity": "critical",
+      "verdict": "violated",
+      "statement": "Offline controlled verdict for protocol validation",
+      "evidence_ids": [
+        "dbd49137-8e48-4a2a-ac88-d4ed361b5b06",
+        "f8ecb507-5181-4643-a06b-f3958504a53c"
+      ],
+      "searched_ranges": [
+        "4d2c9724-b160-4d76-890c-b9cd6c14071f:物理页1—3（未覆盖范围另列）"
+      ],
+      "decision": null,
+      "decision_revision": 1,
+      "origin_review_id": "3f95c86c-12d4-4d5b-9071-158f205dcc85",
+      "retained_known_critical": true,
+      "detection_run_state": "ran",
+      "lifecycle": "resolved_by_recheck"
+    }
+  ],
+  "all_severities": [
+    "critical",
+    "major"
+  ],
+  "source_result_sha256": "86ca86dc433683630243e6040042729b269dbae63bcf5374b786dd8f9790ee3a",
+  "explanation": "Original probe incorrectly required major findings as well as critical findings to keep first-round origin. Product guarantee applies to known critical risks. This read-only correction checks exact critical count/origin; other 13 original assertions remain unchanged.",
+  "paid_generation_calls": 0,
+  "readonly": true,
+  "probe_sha256": "27611b6a564fb60000c4bbdddf5c5a87504addb148e30031a3537b8bc791055e"
+}

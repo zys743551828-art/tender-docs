@@ -1,0 +1,44 @@
+{
+  "status": "passed_isolated_development_restore",
+  "database": "tender_restore_db1df2f8c5e74df8b633446ba65365e8",
+  "nonowner_login": "twb_release_api",
+  "transaction_read_only": "on",
+  "api_write_probe_denied_with_read_only_setting_disabled": true,
+  "restored_object_prefix": "workbench-environments/93c166c4791c4db38c51aaf774ec4ff6/restore-drills/db1df2f8c5e74df8b633446ba65365e8/",
+  "objects_verified": 3,
+  "tables_verified": 104,
+  "archive_manifest_sha256": "78608e12ef61196512a97c519e1acbc05b9d093a371fa3148560a12ff7f037e4",
+  "no_consumer_started": true,
+  "production_rpo_rto_qualified": false,
+  "retained_for_read_only_inspection": true,
+  "source_concurrent_commit_visible": true,
+  "post_snapshot_commit_excluded_from_manifest_and_restored_dump": true,
+  "source_services_paused": false,
+  "concurrent_marker_is_synthetic": true,
+  "model_calls": 0,
+  "bucket_list_calls": 0,
+  "source_object_mutations": 0,
+  "same_snapshot_api_dump_login": "twb_release_api",
+  "source_database": "tender_release",
+  "source_pg_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "object_store_backend": "oss",
+  "checks": {
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "pytest": "5 passed real PG+OSS integration",
+    "provider_sdk_warnings": "OSS SDK datetime.utcnow deprecation only"
+  },
+  "development_findings_fixed": [
+    "pg_restore requires an explicit target database even when PGDATABASE is inherited",
+    "Selective schema pg_dump omitted vector extension installed in design; switched to full database dump preserving extension installation namespace"
+  ],
+  "limits": [
+    "No production RPO/RTO qualification",
+    "No WAL/PITR or encryption/remote durability implementation",
+    "No Kafka redrive or write traffic restoration",
+    "Only this offline restore DB capabilities are restricted; source privileges untouched"
+  ],
+  "private_archive_relative_path": ".local/backups/snapshot-concurrency-0b422d605ac341d28d9dad605d5c8954"
+}

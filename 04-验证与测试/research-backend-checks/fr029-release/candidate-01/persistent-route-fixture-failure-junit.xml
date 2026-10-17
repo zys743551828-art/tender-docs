@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="14.290" timestamp="2026-10-17T01:21:28.243154+00:00" hostname="597cea30c71f"><testcase classname="tests.test_model_governance_registry_integration" name="test_registry_actual_bytes_shadow_cas_restore_permissions_and_invalidation" time="6.422"><failure message="assert (3 == 0)">client = (&lt;starlette.testclient.TestClient object at 0x7f2b2a939760&gt;, UUID('ac067d55-ddf2-41fc-88ad-9758d796877c'), &lt;function c...8ac50a6271c97d4f2da2c0028cfda85a8dc40ab","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7f2b2aae3860&gt;
+
+    def test_registry_actual_bytes_shadow_cas_restore_permissions_and_invalidation(client, monkeypatch):
+        web, actor, headers, objects = client
+        job, _, items = queued_training(client)
+        completed = purpose_profiles.launch(
+            "train", job.json()["id"], profile=".local/model_release01-model_train.env"
+        )
+        assert completed.returncode == 0, completed.stdout
+        preview = web.get(f"/api/v1/model-registry/training-jobs/{job.json()['id']}/model-preview")
+        assert preview.status_code == 200, preview.text
+        put = storage.put
+        get = storage.get
+        io_checks = []
+    
+        def inspect_idle():
+            with connection() as c:
+                assert (
+                    c.execute(
+                        "SELECT count(*) AS n FROM pg_stat_activity WHERE datname=current_database() AND pid&lt;&gt;pg_backend_pid() AND state='idle in transaction'"
+                    ).fetchone()["n"]
+                    == 0
+                )
+            io_checks.append(True)
+    
+        def checked_put(*args):
+            inspect_idle()
+            return put(*args)
+    
+        def checked_get(*args):
+            inspect_idle()
+            return get(*args)
+    
+        monkeypatch.setattr(storage, "put", checked_put)
+        monkeypatch.setattr(storage, "get", checked_get)
+        registration_headers = headers(preview.headers["etag"])
+        request = {"training_job_id": job.json()["id"], "reason": "合成软件候选登记"}
+        registered = web.post(
+            "/api/v1/model-registry/models", json=request, headers=registration_headers
+        )
+        assert registered.status_code == 201, registered.text
+        candidate = registered.json()
+        assert candidate["origin"] == "synthetic" and candidate["research_only"]
+        assert candidate["formal_eligibility"] == "unavailable"
+        count = len(objects)
+        replay = web.post("/api/v1/model-registry/models", json=request, headers=registration_headers)
+        assert replay.status_code == 201 and replay.headers["idempotency-replayed"] == "true"
+        assert len(objects) == count
+        with connection() as c:
+            stored = c.execute(
+                "SELECT b.* FROM model_release.registrations r JOIN model_artifacts m ON m.id=r.model_id JOIN blobs b ON b.id=m.artifact_blob_id WHERE r.model_id=%s",
+                (candidate["model_id"],),
+            ).fetchone()
+        raw = objects[stored["object_key"]]
+        objects[stored["object_key"]] += b" "
+        bad = web.get("/api/v1/model-registry/models/" + candidate["model_id"])
+        assert bad.status_code == 409 and bad.json()["code"] == "ARTIFACT_BYTES"
+        objects[stored["object_key"]] = raw
+        assert web.get("/api/v1/model-registry/models/" + candidate["model_id"]).status_code == 200
+        shadow_path = "/api/v1/model-registry/routes/shadow/" + candidate["route_key"]
+        initial = web.get(shadow_path)
+&gt;       assert initial.json()["revision"] == 0 and initial.json()["model_id"] is None
+E       assert (3 == 0)
+
+tests/test_model_governance_registry_integration.py:111: AssertionError</failure></testcase><testcase classname="tests.test_model_governance_registry_integration" name="test_concurrent_route_cas_and_db_envelope_or_isolation_refusal" time="7.348"><failure message="assert (5 == 2)">client = (&lt;starlette.testclient.TestClient object at 0x7f2b298272f0&gt;, UUID('3d82317a-561b-46ce-930d-42f78403f108'), &lt;function c...\x9a\xe7\xbb\x84\xe7\xbb\x87\xe6\x8a\x80\xe6\x9c\xaf\xe6\xad\xa3\xe6\x96\x87"}],"id":"full-body","pages":[1]}]}', ...})
+
+    def test_concurrent_route_cas_and_db_envelope_or_isolation_refusal(client):
+        from concurrent.futures import ThreadPoolExecutor
+    
+        web, actor, headers, _ = client
+        first_job, cohort, _ = queued_training(client)
+        first, document = register_trained(client, first_job)
+        current = web.get("/api/v1/model-governance/cohorts/" + cohort.json()["id"])
+        second_job = web.post(
+            "/api/v1/model-governance/training-jobs",
+            json={"cohort_id": cohort.json()["id"], "reason": "独立CPU任务，同一合成训练源"},
+            headers=headers(current.headers["etag"]),
+        )
+        assert second_job.status_code == 201
+        second, _ = register_trained(client, second_job)
+        path = "/api/v1/model-registry/routes/shadow/" + first["route_key"]
+        initial = web.get(path)
+        active = web.post(
+            path + "/changes",
+            json={"action": "publish", "model_id": first["model_id"], "reason": "合成初版shadow"},
+            headers=headers(initial.headers["etag"]),
+        )
+        assert active.status_code == 200, active.text
+        actions = [
+            {"action": "publish", "model_id": second["model_id"], "reason": "合成并发升级"},
+            {"action": "suspend", "reason": "合成并发暂停"},
+        ]
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            futures = [
+                pool.submit(
+                    web.post, path + "/changes", json=body, headers=headers(active.headers["etag"])
+                )
+                for body in actions
+            ]
+            responses = [future.result(timeout=30) for future in futures]
+        assert sorted(response.status_code for response in responses) == [200, 412], [
+            response.text for response in responses
+        ]
+        latest = web.get(path)
+&gt;       assert (
+            latest.json()["revision"] == 2 and latest.json()["rollback_model_id"] == first["model_id"]
+        )
+E       assert (5 == 2)
+
+tests/test_model_governance_registry_integration.py:253: AssertionError</failure></testcase></testsuite></testsuites>

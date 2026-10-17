@@ -1,0 +1,38 @@
+{
+  "input": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-03/candidate.json",
+  "sha256": "5e2ab741c3f39227dc1436b83aa7a714252ec94f18abb3536a7f01f478992391",
+  "inputs_verified_before_after": 23,
+  "result": "AR03 original counterexample closed; AR04 nonpinned role mechanism statically corrected; permits controlled new own source/target rehearsal, not actual recovery acceptance",
+  "independent_tests": 72,
+  "tests_include_original_counterexample_fixed": true,
+  "not_run": [
+    "resource creation",
+    "DDL",
+    "DB",
+    "cloud objects",
+    "model",
+    "consumer"
+  ],
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-architect-review/code-03/probe.py",
+      "sha256": "bf6802c1d5e670e8de7c0449120ab1f68d3d2f3f9013bd5cc3266f5fa85a91f1"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-architect-review/code-03/test_pause_creation.py",
+      "sha256": "b0119ec2f2b18401140224998a3098e550fd96979324c0c373b71b2281e45531"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-architect-review/code-03/pause-counterexample.json",
+      "sha256": "19f7be1b3ec1172bd78bf9f7cc2726c6c082c24c605be0d74824e9491805bc4c"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-architect-review/code-03/independent-junit.xml",
+      "sha256": "5cfd78c2207f1bab276323bce313165e8e727f138a5789912942c6aba23f196a"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-architect-review/code-03/result.json",
+      "sha256": "e58d8953e87afad44d67f104caa568b664abccc73e492f0ead0abc2306e01552"
+    }
+  ]
+}

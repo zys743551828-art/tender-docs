@@ -1,0 +1,15 @@
+{
+  "source": "/workspace/tender-workbench/packages/assistant/sql/intent-budget.sql",
+  "sha256": "29a78914ef825bb519b2ea4a072559d2fc30bb243015bfc6ec267f058a2271a1",
+  "new_tables": 5,
+  "new_nologin_group": "tender_assistant_budget_admin",
+  "creates_login": false,
+  "runtime_ddl_executed": false,
+  "business_admin_table_access": "Only budget configuration and settlement; no identity/fact/model qualification writes or direct reads",
+  "prior_schemas_required": [
+    "design assistant.sql",
+    "existing fact/identity/decision capability"
+  ],
+  "price_basis": "Frozen official provider context hard ceiling plus output cap; reserved estimate, not provider invoice hard spending limit",
+  "old_unbounded_obligations": "Pause; never retroactively assign a cheap current price"
+}

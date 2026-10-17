@@ -1,0 +1,55 @@
+{
+  "scope": "unfrozen observed draft; isolated PG and explicit fixture models only",
+  "input_sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/indexing.py",
+      "sha256": "4f9466b10dbaf9b24a564608b24129471a1e951bdec80bec941e786f08bfd6a5"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/lexical.py",
+      "sha256": "6198d8ec3e80039fcab28375bd0cfcc91e9488b284a25cdb1ce503198417272e"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/local_models.py",
+      "sha256": "84cfa544ecc37291595d991f3ada71807be399e5169ed894f0930eb0247a5411"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/rag/repository.py",
+      "sha256": "5cbd61e0847325a3754415289d72f36b3b5fea74020c35ace13fb7d87e482cff"
+    }
+  ],
+  "credentials_read": false,
+  "paid_calls": 0,
+  "shared_environments_used": false,
+  "reparse_after_withdrawal": {
+    "same_document_version": "8db0e819-d211-4bfd-952f-8305a0597099",
+    "distinct_sources": true,
+    "withdrawn_source_eligible_chunks": 0,
+    "new_parse_eligible_chunks": 1,
+    "heads": [
+      {
+        "source_id": "944a2ab9-08e2-5b30-b856-f0e0aec10741",
+        "status": "published"
+      },
+      {
+        "source_id": "c667177f-553f-5f45-99cd-ef9e1e3e6976",
+        "status": "withdrawn"
+      }
+    ]
+  },
+  "apply_guard_race": {
+    "revocation_committed_while_application_transaction_open": true,
+    "trace_write_after_revocation_committed": "8f0567d9-ddd1-4a44-8260-fbfdcdf43c5f",
+    "scope": "guard serialization counterexample; no application route exists yet"
+  },
+  "embedding_holds_global_revocation_lock": true,
+  "background_errors": []
+}

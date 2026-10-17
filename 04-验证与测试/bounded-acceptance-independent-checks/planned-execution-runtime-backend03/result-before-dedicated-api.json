@@ -1,0 +1,37 @@
+{
+  "status": "passed_tested_frozen_backend03_tool03_combo_not_execution_permission",
+  "runtime_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/planned-execution-runtime-backend03/runtime-candidate.json",
+    "sha256": "ce01d25d5adb45bf5991b8802d3394d84b2567dce782dd5a193327204db92f91"
+  },
+  "runtime_source_count": 157,
+  "backend_candidate_sha256": "100234b0775f63f107123a915bbee21a52505a16feed0571e1e1df6b91fadb7f",
+  "tool_candidate_sha256": "2867b7b571a444045a7f558cbca34fca2078c60aa80cd4f4de9826075bec3292",
+  "tool_boundary_result": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/candidate-03-result.json",
+    "sha256": "e3095dd81ad2ed4d3c57cd1888bb9fb0d0ccc17fbe56d207d57e3213a3779a12"
+  },
+  "backend_delta_result": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/backend-candidate-03-delta-result.json",
+    "sha256": "55b31473a46a1e8f2f6b5d94025a30b12e789f74fc53ff0b4ad4c5a60792a8d9"
+  },
+  "combo_results": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/planned-execution-runtime-backend03/success-execution/result.json",
+      "sha256": "7f81f02939d6288ce21e46cfe3adb3b985a6bb4370451e7ea1e0b4ec6a6b9ed2"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/planned-execution-runtime-backend03/post-validation-execution/result.json",
+      "sha256": "62563752884eb1e28309194fd51c51bb7d0b39092625e358c8f15997b70f0957"
+    }
+  ],
+  "execution_plan": {
+    "path": "/workspace/tender-docs/04-验证与测试/bounded-acceptance-independent-checks/受控评审执行方案.md",
+    "sha256": "3c38da554e0e60b875489824eb782d82e5673e7fa5c4e815673d42736911eeaf"
+  },
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "execute_entry_invocations": 0,
+  "scope": "Actual restricted PG, actual parser setup, ASGI and ordinary handler with injected fake consumer and explicit MockTransport; in-memory model artifacts. Not real paid Kafka execution.",
+  "authorization": "Prior automatic approval refusal remains; no real execute/consumer started. User authorization for this exact project/two calls/fee range still required."
+}

@@ -1,0 +1,59 @@
+{
+  "policy_sha256": "72874d8f4d4ed43981433ed61351648ce493401f2d3014877d109c06b58e60fe",
+  "broker": "127.0.0.1:19097",
+  "cluster_matches_creation": true,
+  "created_topics": [
+    "tender.task.assistant.v1",
+    "tender.task.comparison.v1",
+    "tender.task.assistant-global.v1"
+  ],
+  "topics": [
+    {
+      "topic": "tender.task.document.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.review.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.export.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.research.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.assistant.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.comparison.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.assistant-global.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.domain.events.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    },
+    {
+      "topic": "tender.task.dead-letter.v1",
+      "partitions": 6,
+      "configuration_verified": true
+    }
+  ],
+  "api_workers_or_consumers_started": false,
+  "other_brokers_modified": false
+}

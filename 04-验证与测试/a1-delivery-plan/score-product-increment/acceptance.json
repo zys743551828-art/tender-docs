@@ -1,0 +1,100 @@
+{
+  "scope": "本批产品协议待执行应用/API/浏览器任务，非软件验收",
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "SCALE-01",
+      "title": "有据技术总满分",
+      "setup": "官方招标/补遗原页明示技术总满分60，另混权重40%/官方标签100/条款和80",
+      "expected": "只精确原文和适用量尺可确认60；其他不能推权威，保存待核对留输入",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-02",
+      "title": "一次登记及聚合分开",
+      "setup": "一次确认满分且聚合unknown；后有据补聚合",
+      "expected": "确认满分不二次审批；分母可用而总分不合成，后续更正新版本，不改旧",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-03",
+      "title": "未知分母不假百分比",
+      "setup": "无authority时SQL B technical_maximum=null，已有条款6/8",
+      "expected": "显示已评条款6/8与技术总满分待核对，不用sum/标签/100作分母，模型资格仍unavailable",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-04",
+      "title": "结构冲突与量尺",
+      "setup": "权威60、条款合计80、官方成绩另一量尺；尝试自动缩放",
+      "expected": "冲突明确，无缩放凑满分；technical_total/原量尺/聚合逐项匹配",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-05",
+      "title": "严格与历史时点",
+      "setup": "2026确认2019满分，分别请求current/strict和historical input",
+      "expected": "系统确认/known不倒造；历史需Subject/claim和精确当年适用，不能借历史分支过普通用途",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-06",
+      "title": "更正撤回范围并发",
+      "setup": "改lot/round/量尺/来源或撤回与freeze竞争，重放旧请求",
+      "expected": "CAS及来源当前头重核，stale/冲突不旧绿；旧authority/产物可还原，输入保留",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-07",
+      "title": "证据身份",
+      "setup": "旧parse配新evidence、跨项目/轮次、错误quote、官方label作源",
+      "expected": "confirm整笔拒绝无部分绿，可信context不给任意ID，actor服务端",
+      "status": "pending_application"
+    },
+    {
+      "id": "SCALE-08",
+      "title": "模型内容隔离",
+      "setup": "max权威伴历史proof/官方成绩/人工核验讨论",
+      "expected": "模型只获允许的原评分办法/完整正文/必要事前事实，proof/标签隔离，三判断/模型门槛不变",
+      "status": "pending_application"
+    },
+    {
+      "id": "ARCH-R01",
+      "title": "归档研究不重开",
+      "setup": "closed/archive项目有有效HistoricalInput/proof及预算执行独立回溯/训练候选",
+      "expected": "不需要重开，研究新产物独立；原phase/archived/实交/current_review不动；current_review普通评分仍拒",
+      "status": "pending_application"
+    },
+    {
+      "id": "ARCH-R02",
+      "title": "无用途字符串后门",
+      "setup": "只传client purpose，或proof/源/主体/权限/预算失效",
+      "expected": "服务端authority/执行用途/角色重核拒绝或暂停，不豁免source；不借旧ticket写work",
+      "status": "pending_application"
+    },
+    {
+      "id": "NL-B01",
+      "title": "受限首片与持久编辑",
+      "setup": "四任务/明确每日08:30/明确资料更新，保存后刷新草案",
+      "expected": "解释器身份/范围明确、持久可编辑可恢复；draft无模板/计划/run/费用，显式保存模板一次生效",
+      "status": "pending_application"
+    },
+    {
+      "id": "NL-B02",
+      "title": "unresolved不锁表单",
+      "setup": "混合任务/每周模糊时刻/跨项目或否定，再修表单",
+      "expected": "集中未定字段，可编辑不因ready=false锁死；不明trigger保manual，未完整配置不启计划",
+      "status": "pending_application"
+    },
+    {
+      "id": "NL-B03",
+      "title": "事件边界与一般能力",
+      "setup": "上传后请求与频繁分片完成；复杂表达超首片",
+      "expected": "界面是资料入库完成领域事件不是每分片；超范围明确unresolved，28pure不宣称API/通用NL已验",
+      "status": "pending_application"
+    }
+  ]
+}

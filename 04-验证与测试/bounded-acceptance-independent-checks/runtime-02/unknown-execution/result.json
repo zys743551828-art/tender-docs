@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "bounded_tool_stops_at_expected_state",
+      "passed": true,
+      "observation": {
+        "status": "stopped_model_failure_or_unknown",
+        "guarded_invocations": 1
+      }
+    },
+    {
+      "name": "foreign_messages_skipped_and_no_offset_commit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unknown_preserved_single_invocation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "any_prior_call_blocks_restart_before_consumer_init",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "584bb9db-81eb-4f67-a4d9-da5a6791b332",
+  "bounded_tool_result": {
+    "status": "stopped_model_failure_or_unknown",
+    "guarded_invocations": 1
+  },
+  "offline_consumer_observations": {
+    "foreign_skipped": false,
+    "closed": true,
+    "consumer_initializations": 1,
+    "handled": [
+      "prepare/1"
+    ],
+    "commits": 0,
+    "config": {
+      "bootstrap.servers": "127.0.0.1:19095",
+      "group.id": "tender-acceptance-be6197ee531449e98f9847c8a63e033f",
+      "enable.auto.commit": false,
+      "enable.auto.offset.store": false,
+      "auto.offset.reset": "earliest",
+      "max.poll.interval.ms": 300000
+    },
+    "topics": [
+      "tender.task.review.v1"
+    ]
+  },
+  "ledger": [
+    {
+      "state": "unknown",
+      "usage": {
+        "actual": null,
+        "reservation": {
+          "fence": 1,
+          "owner": "44e74178-ea44-4eca-8839-97b9533b4f41",
+          "step_key": "extract-rules",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "c3237542fefca874e3960950facc797342381b012510865003cb732ac16c9dde"
+        },
+        "failure_code": "MODEL_TIMEOUT",
+        "billing_state": "unknown"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "handler_version": "prepare/1",
+      "state": "failed"
+    }
+  ],
+  "offline_transport_requests": 1,
+  "tool_sha256": "97d37e942c04007ee2dfbd218f5cab6a4bbb9e05e9d737608e2bbe08cd448e0f",
+  "probe_sha256": "12917a4b5cf83af98cf30e865d19bb139fcd0f79b452393bae1d9b49bda0190b"
+}

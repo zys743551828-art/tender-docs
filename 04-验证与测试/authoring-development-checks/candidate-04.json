@@ -1,0 +1,50 @@
+{
+  "candidate": "authoring-backend-04",
+  "status": "developer_checks_passed_pending_incremental_review",
+  "scope": "candidate03_plus_trusted_explicit_follow_up_context_only",
+  "sources": {
+    "apps/api/authoring.py": "d78748caa8a9d839d26a3d21afd8cb5e9e1711a6b9edf8f394a49f220508d6cd",
+    "packages/authoring/README.md": "1db2b21ed87f5a99c2194311355232ad795a3c20cc86f33537e1175704452c3c",
+    "packages/authoring/__init__.py": "8185e8582bfb53bdf87f9d461447ccefcb14481eef72e6d4663a10bc9a0eb04e",
+    "packages/authoring/build.py": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+    "packages/authoring/build_repository.py": "a9bdda02b788fe9d209c9adef5063f75d09e3c9a9109145aa79ad0142738a91b",
+    "packages/authoring/content.py": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+    "packages/authoring/contracts.py": "a4cae325908c616f4d95ec26e42560fa31d45b50ed688d997e666b5a3ed6b937",
+    "packages/authoring/generation.py": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+    "packages/authoring/patches.py": "c65859090493701e0ad95c84338b80cd493f3fd7ae5b4a51c0d98327cfe6d6ac",
+    "packages/authoring/repository.py": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+    "tests/test_authoring.py": "91d36a0950d6d3eebad4c209dd89fbaed569ae0d59c391d5f7e4c99d0ff3ab32",
+    "tests/test_authoring_integration.py": "221ba58de5e712f87bf8286c8d9e2196fc243753a02b18ee603556d211c22d42"
+  },
+  "frozen_source_root": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate04-inputs",
+  "evidence": {
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate04-evidence/quality-result.json": "56076be39ef947951d0ab5ac3f923883851ebeb79716be377537b6195dbf6a5c",
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate04-evidence/unit-result.xml": "99535107c93284b852ff90dcdca9ab0faca06b71502f97eb752337050e72657d",
+    "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate04-evidence/integration-result.xml": "4bac77e71f95e009be1ca58282b556517641eac794300c9e33a02e2b7c5f1634"
+  },
+  "prior_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate-03.json",
+    "sha256": "c63ad6c5974c99f99714fc1b706509d8d39f4554b7632da338b8f85769f0f6ee"
+  },
+  "dependency_source_sha256": {
+    "requirements.lock.txt": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+    "packages/domain/runtime.py": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "packages/rag/indexing.py": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22"
+  },
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed",
+    "unit_and_real_LibreOffice": 14,
+    "real_PG_nonowner_S3_HTTP": 13
+  },
+  "not_claimed": [
+    "API_follow_up_control_plane",
+    "Kafka_export_end_to_end",
+    "frontend",
+    "production_renderer_sandbox",
+    "real_model_quality"
+  ],
+  "paid_model_calls": 0
+}

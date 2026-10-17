@@ -1,0 +1,47 @@
+{
+  "scope": "T0+PDF资料入库切片，非完整A1或业务P0验收",
+  "project_title": "产品实走-资料切片-f72e07a3",
+  "checks": [
+    {
+      "name": "real_login",
+      "passed": true
+    },
+    {
+      "name": "create_minimal_project",
+      "passed": true,
+      "required_fields": [
+        "项目名称"
+      ]
+    },
+    {
+      "name": "supported_files_survive_unsupported_peer",
+      "passed": true,
+      "verified_expected": 2,
+      "unsupported": "DOCX诚实拒绝，未宣称转换"
+    },
+    {
+      "name": "review_interruption",
+      "passed": false,
+      "error_type": "Error",
+      "reason": "APIRequestContext.get: Invalid URL"
+    }
+  ],
+  "software_execution": "实际浏览器＋真实API；未调用模型评分",
+  "secrets_exported": false,
+  "fixtures": [
+    {
+      "filename": "product-tender.pdf",
+      "sha256": "ee6455ad039141ac557aa017e262b1657636826130a489b5fdf05ae0007fbcbe"
+    },
+    {
+      "filename": "product-body.pdf",
+      "sha256": "dff6b6eb6a2385088f2b71251162614a4f173ce69139399035329a7f40d1adda"
+    },
+    {
+      "filename": "unsupported.docx",
+      "sha256": "7f175b6944ea239bf471d201c63654ee86004f2eb6402c54c78ae6f5fbdbafe1"
+    }
+  ],
+  "project_id": "ab02f97e-3f0b-47e6-889c-09f9f292da11",
+  "status": "partial_review_interrupted"
+}

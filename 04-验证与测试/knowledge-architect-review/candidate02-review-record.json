@@ -1,0 +1,38 @@
+{
+  "conclusion": "passed scoped D02 K01 remediation and enterprise knowledge API bridge",
+  "blocking_findings": 0,
+  "candidate_sha256": "5cb9aa2dd23cc791b905d3e25f068954c41bc85f18a3696141bbf7669e931f1d",
+  "sources": {
+    "apps/api/knowledge_routes.py": "fc03d6ebe5b5e61d45559c393fe6f58d4b1e6041a1ca04a9906aac9571b11fcf",
+    "packages/knowledge/README.md": "74726aa0ea1e9313199ad375bd65ca3dfce12e06d98100d62c5409953e0ea78c",
+    "packages/knowledge/__init__.py": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+    "packages/knowledge/bridge.py": "3bbb2fe49c3bbb5e1739b21d64836a58739a2b6ccae202c87ac00f573d0650ab",
+    "packages/knowledge/content.py": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+    "packages/knowledge/contracts.py": "501c4f5009a35b19baf5ae5d56d5c2f6c0f2b6f3590883ef104d7fab507a742a",
+    "packages/knowledge/repository.py": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+    "packages/knowledge/sources.py": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127",
+    "tests/test_knowledge.py": "bbe7472d1ec2a8d561d5cb9b9525db39f6dff266272f8b60095da0aab3fae199",
+    "tests/test_knowledge_integration.py": "ca38034ea8ddfb2522a6d0fd7b249abc1da41502c6444884c6c9ce189924f494"
+  },
+  "dependencies": {
+    "requirements.lock.txt": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+    "packages/domain/runtime.py": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+    "packages/domain/fact_sets.py": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38",
+    "packages/domain/rule_sets.py": "702a947fc34e42c1c3bddc3d229b9dcc752d73c322f526f48bca7d62aa0e9be8",
+    "packages/domain/human_decisions.py": "fbb9d2a794ac2888089e90797711a3b422dcec91e0c828a68ab5415f4d2def35",
+    "packages/domain/review_data.py": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+    "packages/authoring/repository.py": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+    "packages/rag/indexing.py": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22",
+    "apps/api/auth.py": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+  },
+  "evidence": {
+    "probe_candidate02.py": "c353cbaa8634c0dca361637d2e50480b2f91a11e1a2bee3902fa5e66fac9e12b",
+    "candidate02-frozen-plus-original-regression.py": "865412a7f8fe726939fb7c688ea92f527ae4cf391272482b0c5158c71cccaa52",
+    "candidate02-independent-result.json": "771d38c443a845b9012493dfb6909437d9c8097ad4b2b5ad271b270bf1ae895e",
+    "candidate02-independent-junit.xml": "5aeab92add9309804514c0c679315c9d7b2909410935acac32666c510e73d411",
+    "candidate02-original-counterexample-regression.json": "3490440713ab8e790249d1cd033f6a588103a0d6eb4c8a44c8508b68688f66e6",
+    "整改复核.md": "916d7cdfd789cddab6b5cdcecfba44475fb405b92d1e5d0d24a73f767c8938de"
+  },
+  "paid_calls": 0,
+  "credentials_read": false
+}

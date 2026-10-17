@@ -1,0 +1,29 @@
+{
+  "scope": "candidate03 error handling with actual PDFium and synthetic converter output; no real LO quality claim",
+  "candidate_sha256": "c63ad6c5974c99f99714fc1b706509d8d39f4554b7632da338b8f85769f0f6ee",
+  "observed": {
+    "returned": true,
+    "outputs": [
+      {
+        "format": "docx",
+        "state": "succeeded",
+        "gaps": [],
+        "object_key": "blobs/5f5145c708ec87d0b99d1c29fa4cfc24dbce54212e27067932366baec62be35d",
+        "digest": "5f5145c708ec87d0b99d1c29fa4cfc24dbce54212e27067932366baec62be35d",
+        "byte_size": 2121,
+        "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "format": "pdf",
+        "state": "failed",
+        "gaps": [
+          "RENDER_SANDBOX_NOT_ATTESTED",
+          "PDF_INVALID"
+        ]
+      }
+    ]
+  },
+  "paid_calls": 0,
+  "real_object_requests": 0,
+  "credentials_read": false
+}

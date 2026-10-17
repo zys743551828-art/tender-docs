@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="8" time="3.204" timestamp="2026-10-17T01:33:19.010250+00:00" hostname="597cea30c71f"><testcase classname="tests.test_model_governance_historical_integration" name="test_pending_and_exact_subject_claim_confirmation_preserve_original_facts" time="0.631" /><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[other_project]" time="0.268" /><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[wrong_lot]" time="0.223" /><testcase classname="tests.test_model_governance_historical_integration" name="test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[string_round]" time="0.109" /><testcase classname="tests.test_model_governance_historical_integration" name="test_invalid_quote_atomic_and_latest_parse_invalidates_confirm_replay" time="0.415" /><testcase classname="tests.test_model_governance_historical_integration" name="test_company_known_requires_current_historical_subject_and_replay_cannot_ignore_new_pending" time="0.663" /><testcase classname="tests.test_model_governance_historical_integration" name="test_first_decision_closes_child_set_even_when_append_started_before_commit" time="0.139"><failure message="AssertionError: assert (None == '55000')&#10; +  where None = &lt;built-in method get of dict object at 0x7f4ac9147cc0&gt;('code')&#10; +    where &lt;built-in method get of dict object at 0x7f4ac9147cc0&gt; = {'pid': 219448}.get">client = (&lt;starlette.testclient.TestClient object at 0x7f4aca2bfa40&gt;, UUID('1601e066-919d-4f42-960a-e184b3eb53f5'), &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f4aca2b18a0&gt;, {})
+
+    def test_first_decision_closes_child_set_even_when_append_started_before_commit(client):
+        from threading import Event, Thread
+    
+        web, actor, _, _ = client
+        item, _, _ = fixture(client)
+        claim_id = uuid4()
+        with connection() as c:
+            digest = c.execute(
+                "SELECT b.digest FROM document_versions d JOIN blobs b ON b.id=d.blob_id WHERE d.id=%s",
+                (item["body"],),
+            ).fetchone()["digest"]
+            c.execute(
+                "INSERT INTO historical_backtest.claims(id,bid_id,submission_id,document_version_id,document_digest,declared_origin,reason,actor_id) VALUES(%s,%s,%s,%s,%s,'synthetic','合成待决定父记录',%s)",
+                (claim_id, item["bid"], item["submission"], item["body"], digest, actor),
+            )
+            c.execute(
+                "INSERT INTO historical_backtest.facts(claim_id,fact_kind,claimed_at,explanation) VALUES(%s,'published',NULL,'合成未知')",
+                (claim_id,),
+            )
+        ready, finished = Event(), Event()
+        observed = {}
+    
+        def append():
+            try:
+                with connection() as c:
+                    observed["pid"] = c.execute("SELECT pg_backend_pid() AS value").fetchone()["value"]
+                    ready.set()
+                    c.execute(
+                        "INSERT INTO historical_backtest.facts(claim_id,fact_kind,claimed_at,explanation) VALUES(%s,'effective',NULL,'不准偷偷扩张已决定版本')",
+                        (claim_id,),
+                    )
+                observed["written"] = True
+            except psycopg.Error as failure:
+                observed["code"] = failure.sqlstate
+            finally:
+                finished.set()
+    
+        with connection() as decision:
+            decision.execute("SELECT pg_advisory_xact_lock(91143,1)")
+            thread = Thread(target=append, daemon=True)
+            thread.start()
+            assert ready.wait(3)
+            blocked = False
+            for _ in range(60):
+                with connection() as monitor:
+                    blocked = monitor.execute(
+                        "SELECT EXISTS(SELECT FROM pg_locks WHERE pid=%s AND locktype='advisory' AND classid=91143 AND objid=1 AND NOT granted) AS value",
+                        (observed["pid"],),
+                    ).fetchone()["value"]
+                if blocked or finished.wait(0.05):
+                    break
+            assert blocked and not finished.is_set()
+            decision.execute(
+                "SELECT historical_backtest.decide_claim(%s,0,'pending','首个合成决定',%s,%s)",
+                (claim_id, actor, uuid4()),
+            )
+        assert finished.wait(5)
+        thread.join(timeout=1)
+&gt;       assert observed.get("code") == "55000" and "written" not in observed
+E       AssertionError: assert (None == '55000')
+E        +  where None = &lt;built-in method get of dict object at 0x7f4ac9147cc0&gt;('code')
+E        +    where &lt;built-in method get of dict object at 0x7f4ac9147cc0&gt; = {'pid': 219448}.get
+
+tests/test_model_governance_historical_integration.py:381: AssertionError</failure></testcase><testcase classname="tests.test_model_governance_historical_integration" name="test_purpose_roles_cannot_read_historical_proof_and_rr_cannot_confirm" time="0.183"><failure message="NameError: name 'psycopg' is not defined">client = (&lt;starlette.testclient.TestClient object at 0x7f4aca2bc380&gt;, UUID('7b8f7f49-7e82-4afe-adff-5321910e9800'), &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f4ac91814e0&gt;, {})
+
+    def test_purpose_roles_cannot_read_historical_proof_and_rr_cannot_confirm(client):
+        from psycopg.rows import dict_row
+    
+        from packages.model_governance.purpose_profiles import read_profile
+    
+        _, actor, _, _ = client
+        item, proof, projection = fixture(client)
+        saved = save_subject(client, item, proof, projection)
+        assert saved.status_code == 201
+        environments = [
+            read_profile(role, f".local/delivery_protocols01-model_{role}.env")
+            for role in ("train", "evaluate")
+        ]
+        dsns = [
+            os.environ[key]
+            for key in (
+                "WORKER_DATABASE_DSN",
+                "RESEARCH_WORKER_DATABASE_DSN",
+                "SCORE_READ_DATABASE_DSN",
+            )
+        ]
+        dsns += [
+            next(value for key, value in env.items() if key.endswith("DATABASE_DSN"))
+            for env in environments
+        ]
+        for dsn in dsns:
+&gt;           with psycopg.connect(dsn, row_factory=dict_row) as c:
+                 ^^^^^^^
+E           NameError: name 'psycopg' is not defined
+
+tests/test_model_governance_historical_integration.py:424: NameError</failure></testcase></testsuite></testsuites>

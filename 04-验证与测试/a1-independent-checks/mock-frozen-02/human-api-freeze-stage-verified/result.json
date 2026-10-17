@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "only_extract_and_core_offline_calls",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "full_body_all_physical_pages_and_evidence_not_rag",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "frozen_manifest_and_actual_evidence_blob_sha",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "four_layers_scoring_excluded_from_core_denominator",
+      "passed": true,
+      "observation": {
+        "scoring": {
+          "gaps": [
+            "正式评分尚未具备完整章节三次判断与模型准入"
+          ],
+          "state": "not_run",
+          "planned": 1,
+          "completed": 0,
+          "denominator_basis": "评分条款独立覆盖，不属于核心核对分母"
+        },
+        "judgment": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "本轮已识别生效核心条款的核对执行；满足、违反、无法判断分别展示"
+        },
+        "source_scope": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 7,
+          "completed": 7,
+          "denominator_basis": "本轮生效来源的全部物理页；可读文字不代表表图或扫描已核验"
+        },
+        "core_extraction": {
+          "gaps": [],
+          "state": "complete",
+          "planned": 2,
+          "completed": 2,
+          "denominator_basis": "已识别核心条款与已知提取范围；不是实际漏提率"
+        },
+        "quality_report_id": null,
+        "extraction_quality": "not_measured",
+        "human_confirmation_pending": 3
+      }
+    },
+    {
+      "name": "rules_pending_and_formal_prediction_unavailable",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_risks_exist_and_not_model_confirmed",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "rule_confirmation_cas_kind_and_exact_replay",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "confirmed_deferred_change_only_human_layer_without_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "batch_rejects_already_confirmed_without_partial_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "invalid_second_addition_rolls_back_entire_manual_pack",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "manual_add_and_confirm_atomic_new_pack_no_auto_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_manual_pack_cannot_overwrite_current_pack",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "reextraction_omission_preserves_human_rule_and_confirmation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unassigned_fact_proof_rejected_without_partial_fact_write",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "manual_fact_save_confirms_once_atomically",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unchanged_fact_confirmation_carryover_explicit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "confirmed_fact_proof_original_pages_parse_frozen_in_root",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "fact_withdrawal_new_set_keeps_original_history_and_no_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "withdrawn_ancestor_invalidates_live_fact_confirmation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stale_confirmed_fact_proof_blocks_new_freeze_no_core_model",
+      "passed": true,
+      "observation": {
+        "caught_code": "FACT_SOURCE_REVALIDATION_NEEDED",
+        "calls_before": 5,
+        "calls_after": 6
+      }
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "0ce11cde-443c-4f6e-8df8-12b26fc369e0",
+  "human_cases_sha256": "552d23067d69191e1d26bbe0cc94e0154020014567dce801b0ba3a79de61a379",
+  "first_human_rule": {
+    "id": "242fd28d-211d-43c0-a449-3fe6c8d65e01",
+    "rule_set_id": "78695edb-a69c-4c0e-a410-44a8c0518a4a",
+    "kind": "mandatory",
+    "statement": "A site visit is required.",
+    "conditions": [],
+    "exceptions": [],
+    "maximum": null,
+    "evidence_ids": [
+      "d484da3e-a9f3-4258-9c45-fc498833f4e0"
+    ],
+    "confirmation": "confirmed",
+    "decision_revision": 2,
+    "carryover": null,
+    "scope": {
+      "bid_id": "0ce11cde-443c-4f6e-8df8-12b26fc369e0",
+      "description": "Current synthetic project"
+    },
+    "bands": [],
+    "origin_kind": "human_added",
+    "manual_origin_rule_id": "242fd28d-211d-43c0-a449-3fe6c8d65e01",
+    "provenance_status": "effective"
+  },
+  "retained_human_rule": [
+    {
+      "id": "30738f16-9347-4c83-9c21-574a2e800472",
+      "rule_set_id": "473b808a-9305-4fa2-a37e-c3cdaefd5cb8",
+      "kind": "mandatory",
+      "statement": "A site visit is required.",
+      "conditions": [],
+      "exceptions": [],
+      "maximum": null,
+      "evidence_ids": [
+        "d484da3e-a9f3-4258-9c45-fc498833f4e0"
+      ],
+      "confirmation": "confirmed",
+      "decision_revision": 1,
+      "carryover": {
+        "from_rule_id": "242fd28d-211d-43c0-a449-3fe6c8d65e01",
+        "from_decision_id": "0593c656-de6a-4c5f-af20-265679b617b9",
+        "equivalence_digest": "7390d5a7d67bf04e2fa311cfda3c30d36afdaec7256ea3bbc523e46b228e249a",
+        "adopted_at": "2026-10-16T18:45:12.736788+00:00"
+      },
+      "scope": {
+        "bid_id": "0ce11cde-443c-4f6e-8df8-12b26fc369e0",
+        "description": "Current synthetic project"
+      },
+      "bands": [],
+      "origin_kind": "carried_human",
+      "manual_origin_rule_id": "242fd28d-211d-43c0-a449-3fe6c8d65e01",
+      "provenance_status": "effective"
+    }
+  ],
+  "confirmed_fact_root_manifest": {
+    "as_of": "2026-10-16T18:45:13.986817+00:00",
+    "bid_id": "0ce11cde-443c-4f6e-8df8-12b26fc369e0",
+    "purpose": "compliance_and_scoring",
+    "frozen_at": "2026-10-16T18:45:14.082651+00:00",
+    "fact_set_id": "8c83a899-920b-41b6-9072-1351de821827",
+    "rule_set_id": "a73ba7b2-ba05-4b23-be62-d31f6cdab852",
+    "source_refs": [
+      {
+        "id": "4678325f-6753-504d-a94d-028d440bc043",
+        "kind": "body",
+        "digest": "0747503eb755936dc028141685ac45691731d91569d021741b0477f40bed905e",
+        "known_at": "2026-10-16T17:45:10.180742+00:00",
+        "lineage_manifest_digest": "203f3f8cfe0dbeb84650ebbfe31bdd80ffbb7ccacf6e37133df5e0e9a400c19e"
+      },
+      {
+        "id": "10c57920-cf7b-5d58-9436-becc131372f7",
+        "kind": "supplement",
+        "digest": "f92d4ee337707bf0b7c790d05c3034cb64e020fb11bd784ad17cb07bf7156fe5",
+        "known_at": "2026-10-16T17:45:12.374835+00:00",
+        "lineage_manifest_digest": "2e44d6bb2721495ec1f6cce612a109a61ac7b4f24017fb960caa59598b858f08"
+      },
+      {
+        "id": "f1e2ec5c-79ae-5806-b66e-c6c3561c74d6",
+        "kind": "tender",
+        "digest": "00f2e206c78f1c86a58e383db1b0b423f21b0f542a308368876b6d8a68843c99",
+        "known_at": "2026-10-16T17:45:10.071090+00:00",
+        "lineage_manifest_digest": "f1cbaa3deb8c2c9b366a3d25b7384b9d1cfd0d0975d7f0be8325a6b26baf39b5"
+      },
+      {
+        "id": "0d7d88a9-ef6a-5e3d-9a1c-aa5a8a3aab17",
+        "kind": "prebid_fact",
+        "digest": "3e89cc4d41bdd4e7a882680724e05d4a2eef36cef11f7a4cc35aa4b45ec10706",
+        "known_at": "2026-10-16T17:45:13.364111+00:00",
+        "lineage_manifest_digest": "201f4bd104aca9050aac526127149ef9801c5b87cf03edfb5905870991e055e4"
+      }
+    ],
+    "method_digest": "31b00fdb890dfbe971e6e5efe7471fa0e5bc21ec14cd839c5e35d5673c060d51",
+    "parse_run_ids": [
+      "445823b9-ff8d-4943-8c48-bffbd7a6af12",
+      "563ad257-dee2-4a0c-ac40-573ef16b6f71",
+      "64705084-6526-4ddf-81a8-4981bbaeaf57",
+      "f0bf31a2-8a89-4d49-9e94-56ea0625a5ee"
+    ],
+    "policy_digest": "2b5d6201232c68e52350f37abc21bd241cc61d424b583b3e5b178fb614b575d0",
+    "content_checks": {
+      "consistency": true,
+      "scope_residue": true
+    },
+    "body_version_id": "b205163c-4004-42b2-8671-0a2164e0cd84",
+    "material_revision": 3,
+    "material_snapshot_id": "286cdbb7-dcaf-487f-a942-af44f483c6ed",
+    "evidence_manifest_digest": "2094e26c1019da994a228ca720a8b5b981893cd8b8ba72c560917efc4c9a88c9",
+    "evaluation_context_digest": "7c86842eee812cf54fe9ae3ca0070c8a9126de69104fb6cd4c4a2ac5d93302c6"
+  },
+  "invalidated_fact": {
+    "id": "fcf7cd7d-558f-479c-994c-38a2b3f6645f",
+    "subject": "本投标人",
+    "scope": "当前合成项目",
+    "name": "合成证书编号",
+    "value": "QA123",
+    "unit": null,
+    "evidence_ids": [
+      "93708ceb-beb1-4629-95a7-4ec1b3ea75ac"
+    ],
+    "confirmation": "pending",
+    "decision_revision": 1,
+    "source_validity": "needs_revalidation",
+    "source_issues": [
+      "FACT_SOURCE_REVALIDATION_NEEDED"
+    ],
+    "carryover": {
+      "from_fact_id": "2250b103-1dfc-4af0-b951-1dcaf0969a08",
+      "from_decision_id": "6b44fac6-80a5-480a-8e90-6296dc8ba41a",
+      "equivalence_digest": "9146fd6360d9d758091a730268393726303c047cb3268dfed11616ac7cb6d434",
+      "adopted_at": "2026-10-16T18:45:14.617128+00:00"
+    },
+    "decision": {
+      "id": "6b44fac6-80a5-480a-8e90-6296dc8ba41a",
+      "object_id": "a1ae20c8-2efc-4697-9d70-e9b473d71051",
+      "object_revision": 1,
+      "decision": "confirmed",
+      "reason": "保存并确认合成证书原页",
+      "actor_id": "e3b4672a-b0b4-40a1-87c5-c7f34fa25578",
+      "created_at": "2026-10-16T18:45:13.526409+00:00"
+    }
+  },
+  "offline_transport_requests": 6,
+  "probe_sha256": "76fee0d45f7bebb189871e6a21a327304525f8defce805e89decbd2fc7782977"
+}

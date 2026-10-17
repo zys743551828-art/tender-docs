@@ -1,0 +1,36 @@
+{
+  "scope": "Optional dedicated assistant budget administrator LOGIN only in a fresh database; private single-DSN profile; no business runtime grant changes",
+  "runtime_root": "/workspace/tender-docs/04-\u9a8c\u8bc1\u4e0e\u6d4b\u8bd5/fresh-bootstrap-development-checks/candidate04/runtime",
+  "sources": [
+    {
+      "path": "deploy/bootstrap_fresh.py",
+      "sha256": "1f21459796bfbabf135bee1cf119ea88b1a997ed20c9c0cc05b805d69d75b185",
+      "ownership": "pm-delta"
+    },
+    {
+      "path": "tests/test_bootstrap_fresh.py",
+      "sha256": "848d24f916f885d0e831e7635acb730598509337b1856e8aa71cd81a062abb27",
+      "ownership": "pm-delta"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "ownership": "unchanged-dependency"
+    }
+  ],
+  "development_tests": 47,
+  "quality": {
+    "ruff": true,
+    "format": true,
+    "mypy_production": true,
+    "bandit_findings": 0
+  },
+  "database_connections": 0,
+  "ddl_executed": false,
+  "new_profiles_created": false,
+  "assistant_budget_sql02_not_approved": true,
+  "requires_specific_reviewed_sql_before_actual_fresh": true,
+  "new_group_checked_after_sql_before_any_login_creation": true,
+  "default_roles_unchanged": true,
+  "first_test_failure": "Four fake SQL selector failures: broad rolcanlogin branch parsed scalar group parameter as characters; original source/JUnit preserved, corrected only fake dispatch."
+}

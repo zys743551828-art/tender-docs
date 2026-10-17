@@ -1,0 +1,83 @@
+{
+  "status": "passed_development_fresh_combination_foundation_only",
+  "created_at": "2026-10-16T20:14:38.772218+00:00",
+  "database": "tender_checks_combined_delivery01",
+  "schemas": [
+    "design",
+    "model_governance",
+    "public",
+    "retrieval"
+  ],
+  "tables": 129,
+  "fresh_logins": 6,
+  "ordered_sql_verified_before_create": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "path": "packages/knowledge/sql/rag.sql",
+      "sha256": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003"
+    },
+    {
+      "path": "deploy/sql/model-governance.sql",
+      "sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a"
+    }
+  ],
+  "unit_tests_passed": 11,
+  "actual_nonowner_identity_and_denial_probes": "passed",
+  "native_provider_from_env_prefix_probe": "passed_configuration_only_no_requests",
+  "new_broker": "127.0.0.1:19096",
+  "distinct_cluster_project_volume_verified": true,
+  "topics_verified": 6,
+  "consumer_groups": 0,
+  "new_origin": "http://127.0.0.1:5176",
+  "planned_api_port": 8806,
+  "existing_broker_19095_available": true,
+  "existing_profiles_or_databases_modified": false,
+  "only_new_combination_origin_adjusted_before_freeze": true,
+  "business_profile_owner_and_purpose_dsns_removed": true,
+  "private_profiles_mode600": true,
+  "prior_prefix_gap": "three prior checks profiles share inherited effective provider prefix; not equal to current external-release.env, no historical runtime identity inferred",
+  "model_calls": 0,
+  "native_OSS_requests": 0,
+  "application_messages_produced": 0,
+  "api_relay_consumers_started": false,
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed_4_sources",
+    "bandit": "passed"
+  },
+  "previous_frozen_candidates_preserved": {
+    "docs/metrics-development-checks/candidate03/candidate.json": "92cc733d0fb295d325c827879b81b705c8aef6ab691d298a5d4cf72a81489c46",
+    "docs/backup-generic-development-checks/candidate.json": "ebcd8b4d674ce067419b5878b5c751186394587a1932cb5308eba6c13c07d5f3",
+    "docs/backup-generic-native-development-checks/candidate.json": "1eae16b06254bf4c2e62a563b0d70ec292f4734735b049d6498c4dec5aeae26f"
+  },
+  "independent_approved": false,
+  "full_application_delivery_claimed": false
+}

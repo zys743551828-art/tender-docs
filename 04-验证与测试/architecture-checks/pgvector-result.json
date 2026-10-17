@@ -1,0 +1,34 @@
+{
+  "scope": "5000条合成向量、1%过滤命中；为暴露候选不足而固定查询计划，不是中文语义检索质量或容量测试",
+  "passed": true,
+  "postgresql": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "pgvector": "0.8.7",
+  "exact_ids": [
+    1600,
+    4700,
+    600,
+    500,
+    3100,
+    800,
+    3400,
+    1300,
+    2900,
+    300
+  ],
+  "naive_hnsw_ids": [],
+  "iterative_hnsw_ids": [
+    1600,
+    4700,
+    600,
+    500,
+    3100,
+    800,
+    3400,
+    1300,
+    2900,
+    300
+  ],
+  "query_plan": "Limit  (cost=52.35..248.30 rows=10 width=12)\n  ->  Index Scan using candidates_hnsw on candidates  (cost=52.35..1032.12 rows=50 width=12)\n        Order By: (embedding <-> '[0.5,0.5,0.5]'::vector)\n        Filter: (group_tag = 'eligible'::text)",
+  "negative_control_reproduced": true,
+  "external_model_calls": 0
+}

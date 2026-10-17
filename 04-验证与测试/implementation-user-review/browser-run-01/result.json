@@ -1,0 +1,107 @@
+{
+  "review_role": "user_view",
+  "method": "actual_playwright_chromium_browser_walkthrough",
+  "decision": "no_remaining_observed_user_blocker_for_pdf_material_slice",
+  "scope": "login_projects_single_pdf_upload_verify_batch_materials_partial_parse_raw_pages_versions_download_history",
+  "project_id": "98e21dbc-2b6b-465a-8d4c-a9d8b692d6b9",
+  "source_identity_scope": "current_source_snapshot_not_yet_final_pm_candidate",
+  "source_sha256": {
+    "apps/api/implemented.openapi.json": "75c280f0422630ab8a8173bcaa03fc74e86a4d9b7c589af3ba1b223a5140a09e",
+    "apps/api/main.py": "6de91f9bc1872dd61bdf8864f7a8434ae6c7466056d539711f6ec57d4546baf6",
+    "apps/api/views.py": "2e88b08836d00b9618d04cb75ed7749ceabc952a706a5041ed1ea7c8991278fa",
+    "apps/web/index.html": "c2ce35ae892ba7cd4a919d045a4dd5af147c4772ec593a8c7ee3adddfb5800b8",
+    "apps/web/src/App.tsx": "61bc66a8a55989df514fe7d1fe1b147db3bb5a2b8262bc6b9c6585c91220f07f",
+    "apps/web/src/Evidence.tsx": "362634fc3777f83edfbac15dd85c9a8733b92dae983bd87661b595dbdce00f0d",
+    "apps/web/src/HistoryPanel.tsx": "42bae1fe6658fb34661034fdb652a17dad2b263474a276f705a9e1eac0e700d9",
+    "apps/web/src/PdfPreview.tsx": "c8e32ab938fbc9906d8e91610fb10d56267dc15b315e6f50761a1f27a93b8b9e",
+    "apps/web/src/Project.tsx": "fcf7b653547e46823ab559e581e4bb6dfea9c29e4f675bad9567c3e688fb36c2",
+    "apps/web/src/api.ts": "525386561e70136ba47d82b2feab2c7e4f1890cd36eac8b3504f2d85a3cf3ee6",
+    "apps/web/src/components.tsx": "f24c647d1b3b0ad7a0b6bfe1d16ebd83eddd77c68ceab39fd6e8a05f848f72af",
+    "apps/web/src/contracts.ts": "4967e07d61f8f34191f93d69cd5dada3cd50c0c2480a76163c82bb38d618a993",
+    "apps/web/src/main.tsx": "a6bcae9c4f04d6ff36406b2966379834342b41b08b83ba7bd0334712d6cf87f0",
+    "apps/web/src/styles.css": "a7565f6f716a1c0cc29ad1b451698d162e07ca679ef3078b4a9154f2cfcdb7b2",
+    "apps/web/src/test-setup.ts": "c2ccf2417a8183a91935356b3d91c9aefc75b23abe2e72e335e671c12654f65d"
+  },
+  "evidence_sha256": {
+    "browser-run-01/01-project-empty-desktop.png": "e396307ce7fdedb4bfe3b1b4313daeb0d575776a989ae9062a43ab20a70db854",
+    "browser-run-01/02-partial-batch-desktop.png": "7a5147d7c7b58080c408477c05e881591575ea5766928a628c5ae4a6075c5267",
+    "browser-run-01/03-materials-desktop.png": "2c3a6637c246809a7551a8a1d05ae0a8141adc6164f536dea2ef1aeda888424c",
+    "browser-run-01/04-original-page1-desktop.png": "c4d12552952dcc7d1565189eac317eb7c900947ec05507262ff67af5aa9cd975",
+    "browser-run-01/05-scanned-page2-desktop.png": "f538481e872421e03a57954f395bc7fe11950e767010d93c9ec51408bdbaf439",
+    "browser-run-01/06-blank-page3-desktop.png": "9d464e3db20d19c7b1ab8ba08300e5e72b4483f8cb893d62269c2ee3f70c719c",
+    "browser-run-01/07-project-mobile.png": "10f947c3324389c600218e12c48af9cf73119e66572c2aff9b1309aaa7a63e4e",
+    "browser-run-01/08-evidence-mobile-scanned.png": "8687e73d98143b08a5444c01b52dcdba52137890e0b9f153954b49a5419cd312",
+    "browser-run-01/09-evidence-mobile-viewport.png": "9b7c13860a6fdcc22f68ab389cadf929edd9a273fb2bd647764e4f8c189cd13b",
+    "browser-run-01/10-conflict-preserved.png": "eb6be7b132716c80d2c1ef05bd1de5a602cf188ec8bfbf34fe4ab09d9a89277a",
+    "browser-run-01/12-conflict-preserved.png": "8580c6ac6b78fa0a3372a9cd3632c39d595c26ecc078f2800c8c21ff7a3c01b5",
+    "browser-run-01/14-rebinding-options.png": "948d8bca19cddb819a406adf38a8f051f4e2f946251fb161601428392e1f1ac3",
+    "browser-run-01/15-recovered-v5.png": "e5ceb2a5f6e8a1681266d0b63a15cf40b00d0278cee3ebaeab79a08f9d015ab5",
+    "browser-run-01/16-version-history.png": "96c434b8e0f59f1ecc741619a9f9f01c5eb643130887312a03f65650c51415aa",
+    "browser-run-01/17-historical-original-v1.png": "a6a712ab1bc1ae56e5f1f234891a2c03ed84da89b1129f7b766768b2321d47a0",
+    "browser-run-01/18-history-mobile.png": "b6ab643655579541c961bf30f6107e1d4fcd8ec5e2fb604ab78c9a55232d1679",
+    "browser-run-01/downloaded-body-original.pdf": "ad3b3bacf61598cf87b6f538f32fccf7395f505109d49da58ebf3e3fd12ab72d",
+    "browser-run-01/fixtures/招标资料.pdf": "911507f7f2f32288104474ea52440ee25cf8c16985e9b7282f7ead976dd77b3c",
+    "browser-run-01/fixtures/损坏附件.pdf": "e25f8c02a770bc984935479b2dbee7a251ce4d771c88e9431c9854fe5b4b6515",
+    "browser-run-01/fixtures/正文V1.pdf": "f2fb0652497c032ae0f4ebb930ae4ff523566636abd88b74ad4fc34806ec3b6a",
+    "browser-run-01/fixtures/正文V2.pdf": "3d15741fe4858153af03d197f7bbc0cc295163c750976db116fd9e9e9f49edee",
+    "browser-run-01/fixtures/正文V3.pdf": "dac07f2a4d62194a0a5738f77f52401a1c38a2401c693a5740c77fa022878d48",
+    "browser-run-01/fixtures/正文V4.pdf": "7beeed5284d2540feb6e08209e5fd6d1908efcfbf423264d249d99b525811e43",
+    "browser-run-01/fixtures/正文V5.pdf": "ad3b3bacf61598cf87b6f538f32fccf7395f505109d49da58ebf3e3fd12ab72d",
+    "browser-run-01/observations-deltas.json": "fe84e1bb10032c593ea3c960755e2892d970d638fba58ad955fc0831a4aa1f7e",
+    "browser-run-01/observations-initial.json": "21f1dd12440eb5daf31bec123139a809d73a10a2e2f2422ae7656ff645af5b39"
+  },
+  "report": "实际PDF切片走查.md",
+  "report_sha256": "d464a36e26c7f2908ecf6964506a40429250eb16e5e6e7d4dffd92562a5cbc47",
+  "observed_views": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "observed_paths": [
+    "login_and_own_project_create",
+    "upload_entry_and_next_step",
+    "partial_batch_invalid_pdf_success_preserved",
+    "parse_gaps_not_review_pass",
+    "actual_canvas_physical_pages_1_2_3",
+    "modal_keyboard_tab_escape_focus_return",
+    "committed_data_after_refresh",
+    "mobile_material_actions_visible_no_horizontal_scroll",
+    "stale_version_412_preserves_verified_original",
+    "rebind_current_target_and_commit_without_reupload",
+    "direct_original_download_sha_match",
+    "previous_version_chain_and_old_v1_evidence"
+  ],
+  "real_participants": 0,
+  "design_walkthroughs_miscounted_as_browser_execution": false,
+  "a1_full_workflow_passed": false,
+  "not_delivered": [
+    "full_core_review",
+    "RAG",
+    "scoring",
+    "Word_import_or_conversion",
+    "report_and_annotated_exports",
+    "actual_submission_gate"
+  ],
+  "pending_ui_observations": [
+    "real_session_expiry",
+    "real_network_failure_and_authorization_expiry",
+    "1100px",
+    "scanned_page_zoom_readability",
+    "complex_Chinese_tables_and_images",
+    "all_keyboard_order_and_screen_reader",
+    "intranet_asset_loading"
+  ],
+  "interrupted_script_scope": [
+    "role_enum_typo",
+    "strict_locator_multiple_matches",
+    "exact_label_with_nested_option_text"
+  ],
+  "script_interruptions_counted_as_product_defects": false,
+  "final_pm_candidate_binding": "pending",
+  "report_relative_links_checked": 17
+}

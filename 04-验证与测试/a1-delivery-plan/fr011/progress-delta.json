@@ -1,0 +1,36 @@
+{
+  "scope": "本次产品下一批交接与候选事实；不修改既有40FR剩余/历史passed记录",
+  "frontend04": {
+    "path": "/workspace/tender-workbench/apps/web/qa-previews/a2-integration-04/frontend-candidate.json",
+    "sha256": "82356c8b4f85cd22c5b930c173941ce4e2cf96f9c880bd6dea400f358bfe737f",
+    "expected_sha256": "82356c8b4f85cd22c5b930c173941ce4e2cf96f9c880bd6dea400f358bfe737f",
+    "declared_source_count": 76,
+    "product_browser_review_this_round": false
+  },
+  "live_api": {
+    "paths": 81,
+    "operations": 90,
+    "authority": "PM本次任务提供，本次产品未直访；03源码移动尚未部署",
+    "product_runtime_observed": false
+  },
+  "identity02": {
+    "path": "/workspace/tender-docs/04-验证与测试/identity-architect-review/candidate02-independent-result.json",
+    "sha256": "afbffab68a213c2e0d8321eb1d846f94bc6a821b86f531df957ff2a428f613c7",
+    "decision": null,
+    "scope": "仅该架构报告原范围，完整身份应用验收未由此通过"
+  },
+  "deferred": {
+    "frontend04_product_readonly_review": "按PM资源调度留后续专门回合；不混称已验收",
+    "research03": "SQL固定，架构/fresh库验证待对应Owner收口，不授训练或正式资格",
+    "D03": "PM报告新增拒pending主体；实际联动和产品验收待执行"
+  },
+  "next_executable_scope": [
+    "A1.2/1.3候选03部署后做规则500上限、补漏/事实/效力/提交/报告实际长路径；独立检测FR004/005仍保留",
+    "identity02接03后与D适用性联调，未知主体不得默认正式复用",
+    "FR011按本交接实现阶段事实/有效头/分母/风险快照/趋势和在线误差只读，14项待应用验收",
+    "前端04 A2/RAG/B-C只读产品实际走查另派；现有用户早期实走仅原范围"
+  ],
+  "software_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false
+}

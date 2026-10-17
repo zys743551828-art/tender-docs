@@ -1,0 +1,67 @@
+{
+  "scope": "全新隔离SQL模型，不导入既有应用；不是正式迁移或完整业务实现",
+  "passed": true,
+  "postgresql": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "external_model_calls": 0,
+  "cases": [
+    {
+      "name": "32次并发同键确认",
+      "counts": [
+        1,
+        1,
+        1
+      ],
+      "revision": 2,
+      "passed": true
+    },
+    {
+      "name": "idempotency_conflict",
+      "passed": true
+    },
+    {
+      "name": "stale_revision",
+      "passed": true
+    },
+    {
+      "name": "injected_failure_before_commit",
+      "passed": true
+    },
+    {
+      "name": "负对照_全局自增游标漏晚提交事件",
+      "missed_seq": 1,
+      "client_cursor": 2,
+      "failure_reproduced": true
+    },
+    {
+      "name": "同会话串行事件序号",
+      "sequences": [
+        1,
+        2
+      ],
+      "passed": true
+    },
+    {
+      "name": "旧缓存引用经主库复核被拒绝",
+      "passed": true
+    },
+    {
+      "name": "负对照_只看直接group遗漏派生知识",
+      "naive": [
+        1,
+        5,
+        6
+      ],
+      "corrected": [
+        1,
+        6
+      ],
+      "failure_reproduced": true
+    },
+    {
+      "name": "冲突成绩不回退旧已核验分",
+      "naive_old_score": "52.1",
+      "corrected_count": 0,
+      "passed": true
+    }
+  ]
+}

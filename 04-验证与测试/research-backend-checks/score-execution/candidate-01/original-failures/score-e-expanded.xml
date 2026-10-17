@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="5.321" timestamp="2026-10-17T03:10:31.933353+00:00" hostname="597cea30c71f"><testcase classname="tests.test_scoring_integration" name="test_expanded_new_review_scope_still_cannot_resend_shared_unknown_chapter" time="4.426"><failure message="psycopg.errors.CheckViolation: new row for relation &quot;operations&quot; violates check constraint &quot;operations_check&quot;&#10;DETAIL:  Failing row contains (707b426d-d8f2-45eb-84b6-e33bd698afda, a324170b-8ea2-48f4-86e9-6b17130c21bf, 34dac345-1dcd-407c-af0e-49abda8a6f3c, review, 466d2b85f174aba354852897383c8423271ff69c994aa3f7ef330deb5b5779bd, cancelled, review/1, null, null, 2026-10-17 03:10:35.934238+00).">project = (&lt;starlette.testclient.TestClient object at 0x7f02915c2990&gt;, &lt;function client.&lt;locals&gt;.&lt;lambda&gt; at 0x7f0294271d00&gt;, 'a...6-a39f-644290b654f2","status":"published","valid_from":"2026-10-17T03:10:33.252178+00:00","valid_until":null}]}', ...})
+
+    def test_expanded_new_review_scope_still_cannot_resend_shared_unknown_chapter(project):
+        web, headers, bid, review, _, _ = project
+        first_input, first_job = create_job(project, "current")
+        unknown = child("timeout", first_job.json()["id"])
+        assert not unknown["ok"] and unknown["mock_calls"] == 1, unknown
+        # Explicit synthetic SQL fixture: append a second necessary item, then freeze a
+        # NEW ordinary review through its real HTTP request/server freeze. Never rewrite
+        # the old root or claim the appended item was part of the old review.
+        with connection() as c:
+            c.execute("SELECT design.lock_worker_bid(%s)", (bid,))
+&gt;           c.execute(
+                "UPDATE operations SET state='cancelled' WHERE id=(SELECT operation_id FROM review_runs WHERE id=%s)",
+                (review,),
+            )
+
+tests/test_scoring_integration.py:410: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;psycopg.Connection [BAD] at 0x7f02914eb9e0&gt;
+query = "UPDATE operations SET state='cancelled' WHERE id=(SELECT operation_id FROM review_runs WHERE id=%s)"
+params = ('76db227d-5960-4d0b-9552-c016ec74be9f',)
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -&gt; Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+&gt;           raise ex.with_traceback(None)
+E           psycopg.errors.CheckViolation: new row for relation "operations" violates check constraint "operations_check"
+E           DETAIL:  Failing row contains (707b426d-d8f2-45eb-84b6-e33bd698afda, a324170b-8ea2-48f4-86e9-6b17130c21bf, 34dac345-1dcd-407c-af0e-49abda8a6f3c, review, 466d2b85f174aba354852897383c8423271ff69c994aa3f7ef330deb5b5779bd, cancelled, review/1, null, null, 2026-10-17 03:10:35.934238+00).
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: CheckViolation</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,851 @@
+{
+  "scope": "分批产品交付及验收准备；未声明当前软件通过",
+  "owner": "产品Owner",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "current_accepted_scope": {
+    "id": "PDF_SLICE_ACCEPTED",
+    "gate": "04-验证与测试/project-gates/software-slice-gate.json",
+    "product_review": "04-验证与测试/implementation-product-review/PDF资料切片实际产品评审.md",
+    "excluded": [
+      "完整A1评审",
+      "RAG",
+      "正式评分",
+      "Word输入/转换",
+      "研究/模型业务验收",
+      "生产验收"
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "02-业务与产品/AI投标工作台PRD.md",
+      "sha256": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e"
+    },
+    {
+      "path": "02-业务与产品/AI投标工作台产品化方案.md",
+      "sha256": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2"
+    },
+    {
+      "path": "02-业务与产品/GitHub实现功能保留对照.md",
+      "sha256": "a3ba5207818c6c942251d245ddc2181491d4a2521beb939008d0f6ee34d93be4"
+    },
+    {
+      "path": "05-技术与设计/AI投标工作台全新系统技术方案.md",
+      "sha256": "7d088ff1912692ac3a79de13541bdcdb2b1006f83741fa4aaeadd899dc7f397b"
+    },
+    {
+      "path": "05-技术与设计/AI投标工作台详细技术设计.md",
+      "sha256": "b7990c7c655d02e0bf2229b6197fbac6bc7d79893fb7981146891f5f6ce6dc32"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "05-技术与设计/detailed-design/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "04-验证与测试/design-remediation-checks/application-acceptance.json",
+      "sha256": "4f796c81ab029881b872821ca9b0d328b539a98df52f546586cd6bdec91b18f9"
+    },
+    {
+      "path": "04-验证与测试/project-gates/software-slice-gate.json",
+      "sha256": "49c4013b4bc9f5ebdb655e93af9fc9c4c7ea00fcd5eb8037cb36ccdc4ccfc05d"
+    }
+  ],
+  "stages": [
+    {
+      "id": "P",
+      "name": "真实供应商与对象存储适配",
+      "status": "pending_application",
+      "dependencies": [
+        "PDF_SLICE_ACCEPTED"
+      ],
+      "functional_requirements": [],
+      "deliverables_or_tasks": [
+        "供应商适配和配置边界",
+        "对象存储上传/下载保留已验收身份链"
+      ],
+      "exit_conditions": [
+        "模型和对象存储有真实隔离调用/读写证据，超时/限额/未配置失败真实可恢复",
+        "连通不授检测质量或评分资格；产品不自行读凭据或收费探针"
+      ]
+    },
+    {
+      "id": "A1.1",
+      "name": "可恢复一键PDF评审与风险/矩阵",
+      "status": "pending_application",
+      "dependencies": [
+        "PDF_SLICE_ACCEPTED",
+        "P"
+      ],
+      "functional_requirements": [
+        "FR-001",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-008",
+        "FR-012",
+        "FR-013",
+        "FR-014",
+        "FR-033",
+        "FR-034",
+        "FR-036"
+      ],
+      "deliverables_or_tasks": [
+        "A1-S01",
+        "A1-S02",
+        "U03-A"
+      ],
+      "exit_conditions": [
+        "完整必要来源和核心逐行核对的真实成功/失败链路",
+        "准备请求持久接续，冻结review真实可读，旧结果不抢当前",
+        "界面风险优先、一个下一步、四层覆盖及原页证据"
+      ]
+    },
+    {
+      "id": "A1.2",
+      "name": "人工核验、补漏、事实和外部复检",
+      "status": "pending_application",
+      "dependencies": [
+        "A1.1"
+      ],
+      "functional_requirements": [
+        "FR-008",
+        "FR-010",
+        "FR-016",
+        "FR-017",
+        "FR-018",
+        "FR-019",
+        "FR-020",
+        "FR-038"
+      ],
+      "deliverables_or_tasks": [
+        "A1-S03",
+        "A1-S04",
+        "A1-S05",
+        "PPR-AC-01",
+        "PPR-AC-02",
+        "PPR-AC-03",
+        "PPR-AC-03-B",
+        "PPR-AC-03-C",
+        "U04-A"
+      ],
+      "exit_conditions": [
+        "单条/批量决定、事实补替撤原子且可恢复",
+        "补漏和已知关键风险不因模型漏提/开关洗掉",
+        "补遗明确效力动作，外部PDF改稿和旧轮比较可走通"
+      ]
+    },
+    {
+      "id": "A1.3",
+      "name": "提交事实与用途明确的报告",
+      "status": "pending_application",
+      "dependencies": [
+        "A1.2"
+      ],
+      "functional_requirements": [
+        "FR-007",
+        "FR-015",
+        "FR-035"
+      ],
+      "deliverables_or_tasks": [
+        "A1-S06",
+        "PPR-AC-04",
+        "U01-A"
+      ],
+      "exit_conditions": [
+        "标准gate实时重算与有据线下补录分开",
+        "Word评审报告/批注PDF实际生成下载，与本轮输入和页面同源",
+        "A1最短业务长路径真实验收，不代替评分P0"
+      ]
+    },
+    {
+      "id": "R",
+      "name": "向量/词法/RAG及有效证据",
+      "status": "pending_application",
+      "dependencies": [
+        "PDF_SLICE_ACCEPTED",
+        "P"
+      ],
+      "functional_requirements": [
+        "FR-026",
+        "FR-036"
+      ],
+      "deliverables_or_tasks": [
+        "当前项目查证",
+        "禁止来源与失效引用"
+      ],
+      "exit_conditions": [
+        "bge-m3固定profile/分块/pgvector/词法/融合/重排/引用/失效完整链路",
+        "用途、as-of、项目/主体适用性和撤回反例通过",
+        "真实召回质量另测；全文评分不以片段替代"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "历史资料与正式标签新入库",
+      "status": "pending_application",
+      "dependencies": [
+        "PDF_SLICE_ACCEPTED"
+      ],
+      "functional_requirements": [
+        "FR-009",
+        "FR-014",
+        "FR-021",
+        "FR-022",
+        "FR-023",
+        "FR-028",
+        "FR-030",
+        "FR-031",
+        "FR-032",
+        "FR-034",
+        "FR-036"
+      ],
+      "deliverables_or_tasks": [
+        "U05-A",
+        "新资料导入与异常任务"
+      ],
+      "exit_conditions": [
+        "新资料批量dry-run/归组/异常和实交身份核验可用",
+        "正式结果未知/综合分/技术分/冲突分开，样本准入和更正影响可追踪",
+        "档案可查，不假造当时预测"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "完整章节三判断和模型资格",
+      "status": "pending_application",
+      "dependencies": [
+        "P",
+        "A1.1",
+        "R"
+      ],
+      "functional_requirements": [
+        "FR-002",
+        "FR-028",
+        "FR-029",
+        "FR-030",
+        "FR-036"
+      ],
+      "deliverables_or_tasks": [
+        "PPR-AC-05",
+        "PPR-AC-06",
+        "研究/模型验收独立任务"
+      ],
+      "exit_conditions": [
+        "完整章节及图表、干净输入、三次独立合法判断与费用/恢复真实链路",
+        "研究可运行与模型业务精度各自结论；后者依赖B标签和独立冻结协议",
+        "基线/分组时间隔离/影子/发布回退和错误影响完成；不合格不授正式预测"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "知识可靠复用",
+      "status": "pending_application",
+      "dependencies": [
+        "R",
+        "B"
+      ],
+      "functional_requirements": [
+        "FR-023",
+        "FR-024",
+        "FR-025",
+        "FR-026",
+        "FR-027",
+        "FR-030"
+      ],
+      "deliverables_or_tasks": [
+        "知识生命周期与跨主体反例"
+      ],
+      "exit_conditions": [
+        "候选/发布/适用性/版本/冲突/停用和引用影响可追踪",
+        "历史案例可引用但不自动变本项目事实",
+        "失效阻止新用，旧原件可还原"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "可选章节编制和正文生成",
+      "status": "pending_application",
+      "dependencies": [
+        "A1.2"
+      ],
+      "functional_requirements": [
+        "FR-007",
+        "FR-010",
+        "FR-037",
+        "FR-038",
+        "FR-039"
+      ],
+      "deliverables_or_tasks": [
+        "U02-A",
+        "草稿保存/补丁/构建/版面核对"
+      ],
+      "exit_conditions": [
+        "目录/要求/来源联动、差异预览、保存ACK/CAS/断线恢复",
+        "冻结快照模板DOCX/PDF真实构建，格式失败和Word/PDF独立资格",
+        "始终保留现成PDF外部改稿主路径"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "报价、业务复盘和任务自动化",
+      "status": "pending_application",
+      "dependencies": [
+        "A1.3"
+      ],
+      "functional_requirements": [
+        "FR-006",
+        "FR-011",
+        "FR-016",
+        "FR-017",
+        "FR-018",
+        "FR-040"
+      ],
+      "deliverables_or_tasks": [
+        "报价和旧方案",
+        "任务触发与运行记录",
+        "真实业务指标"
+      ],
+      "exit_conditions": [
+        "十进制报价/版本手算与可关闭模块",
+        "真实分母/事前预测隔离的指标与走势",
+        "预置/自定义任务、手动/事件/定时及取消恢复，任务不自动做人决定"
+      ]
+    },
+    {
+      "id": "E",
+      "name": "可运行交付与生产保障",
+      "status": "pending_application",
+      "dependencies": [
+        "PDF_SLICE_ACCEPTED"
+      ],
+      "functional_requirements": [
+        "FR-031",
+        "FR-032",
+        "FR-033"
+      ],
+      "deliverables_or_tasks": [
+        "NFR-001—014",
+        "非功能负载/恢复/生产任务"
+      ],
+      "exit_conditions": [
+        "各批登录/审计/取消/恢复/可访问性和错误处理",
+        "分片/SSE/容量、导出/备份恢复/未来结构升级/生产回退独立验证",
+        "生产放行由独立环境与运维证据，不外推开发单节点"
+      ]
+    }
+  ],
+  "functional_requirements": [
+    {
+      "id": "FR-001",
+      "name": "废标／否决及强制核对",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-002",
+      "name": "评分预测与边界",
+      "stages": [
+        "C"
+      ]
+    },
+    {
+      "id": "FR-003",
+      "name": "响应矩阵",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-004",
+      "name": "前后矛盾",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-005",
+      "name": "范围残留",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-006",
+      "name": "报价试算",
+      "stages": [
+        "F"
+      ]
+    },
+    {
+      "id": "FR-007",
+      "name": "报告与导出",
+      "stages": [
+        "A1.3",
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-008",
+      "name": "规则、事实与依据",
+      "stages": [
+        "A1.1",
+        "A1.2"
+      ]
+    },
+    {
+      "id": "FR-009",
+      "name": "正式结果登记",
+      "stages": [
+        "B"
+      ]
+    },
+    {
+      "id": "FR-010",
+      "name": "问题复核与局部改稿",
+      "stages": [
+        "A1.2",
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-011",
+      "name": "业务指标与成绩对照",
+      "stages": [
+        "F"
+      ]
+    },
+    {
+      "id": "FR-012",
+      "name": "项目资料与自动评审",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-013",
+      "name": "项目功能开关",
+      "stages": [
+        "A1.1"
+      ]
+    },
+    {
+      "id": "FR-014",
+      "name": "项目、历史、资料等入口与跨入口导航",
+      "stages": [
+        "A1.1",
+        "B"
+      ]
+    },
+    {
+      "id": "FR-015",
+      "name": "项目业务生命周期",
+      "stages": [
+        "A1.3"
+      ]
+    },
+    {
+      "id": "FR-016",
+      "name": "会话生命周期",
+      "stages": [
+        "A1.2",
+        "F"
+      ]
+    },
+    {
+      "id": "FR-017",
+      "name": "AI 操作与确认",
+      "stages": [
+        "A1.2",
+        "F"
+      ]
+    },
+    {
+      "id": "FR-018",
+      "name": "可操作卡片",
+      "stages": [
+        "A1.2",
+        "F"
+      ]
+    },
+    {
+      "id": "FR-019",
+      "name": "结构化项目记忆",
+      "stages": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "FR-020",
+      "name": "跨轮比较与可比性",
+      "stages": [
+        "A1.2"
+      ]
+    },
+    {
+      "id": "FR-021",
+      "name": "历史搜索与档案",
+      "stages": [
+        "B"
+      ]
+    },
+    {
+      "id": "FR-022",
+      "name": "批量导入与异常队列",
+      "stages": [
+        "B"
+      ]
+    },
+    {
+      "id": "FR-023",
+      "name": "案例比较与引用",
+      "stages": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "id": "FR-024",
+      "name": "知识实体与分类",
+      "stages": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-025",
+      "name": "知识确认与版本发布",
+      "stages": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-026",
+      "name": "适用检索与可追溯引用",
+      "stages": [
+        "R",
+        "D"
+      ]
+    },
+    {
+      "id": "FR-027",
+      "name": "知识失效及影响",
+      "stages": [
+        "D"
+      ]
+    },
+    {
+      "id": "FR-028",
+      "name": "评分样本严格准入",
+      "stages": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": "FR-029",
+      "name": "模型评测与受控发布",
+      "stages": [
+        "C"
+      ]
+    },
+    {
+      "id": "FR-030",
+      "name": "错误更正与影响追踪",
+      "stages": [
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "id": "FR-031",
+      "name": "归档、保留与清理边界",
+      "stages": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "id": "FR-032",
+      "name": "初始化、导出与恢复",
+      "stages": [
+        "B",
+        "E"
+      ]
+    },
+    {
+      "id": "FR-033",
+      "name": "后台任务与站内通知",
+      "stages": [
+        "A1.1",
+        "E"
+      ]
+    },
+    {
+      "id": "FR-034",
+      "name": "工程、标段、轮次、主体身份",
+      "stages": [
+        "A1.1",
+        "B"
+      ]
+    },
+    {
+      "id": "FR-035",
+      "name": "标准提交与已发生事实补录",
+      "stages": [
+        "A1.3"
+      ]
+    },
+    {
+      "id": "FR-036",
+      "name": "任务用途与事后信息隔离",
+      "stages": [
+        "A1.1",
+        "R",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "id": "FR-037",
+      "name": "章节编制、编写计划与AI修改预览",
+      "stages": [
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-038",
+      "name": "补遗变更及跨文档影响",
+      "stages": [
+        "A1.2",
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-039",
+      "name": "目录／版式模板、版本生成与版面核对",
+      "stages": [
+        "A2"
+      ]
+    },
+    {
+      "id": "FR-040",
+      "name": "可复用任务、触发与运行记录",
+      "stages": [
+        "F"
+      ]
+    }
+  ],
+  "nonfunctional_requirements": [
+    {
+      "id": "NFR-001",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-002",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-003",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-004",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-005",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-006",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-007",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-008",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-009",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-010",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-011",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-012",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-013",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    },
+    {
+      "id": "NFR-014",
+      "execution": "每个受影响切片执行相应回归，整体E阶段补齐真实环境证明；未因计划列出而通过"
+    }
+  ],
+  "release_boundaries": [
+    {
+      "name": "快速PDF评审A1可用",
+      "requires": [
+        "A1.1",
+        "A1.2",
+        "A1.3"
+      ],
+      "condition": "真实PDF长路径、失败恢复、关键不变式及独立API/界面验收通过",
+      "does_not_grant": "研究可运行、模型业务精度或完整产品交付"
+    },
+    {
+      "name": "研究链路可运行",
+      "requires": [
+        "R",
+        "C"
+      ],
+      "condition": "真实完整输入、三次独立合法判断、费用/恢复/隔离产物通过",
+      "does_not_grant": "正式总分/区间或模型真实精度资格"
+    },
+    {
+      "name": "模型业务验收通过",
+      "requires": [
+        "B",
+        "C"
+      ],
+      "condition": "满足PRD9/13/14冻结独立协议、代表性官方标签、基线对照及真实精度门槛",
+      "does_not_grant": "生产容量、其他尚未实现FR或个例因果承诺"
+    },
+    {
+      "name": "完整产品交付",
+      "requires": [
+        "P",
+        "A1.1",
+        "A1.2",
+        "A1.3",
+        "R",
+        "B",
+        "C",
+        "D",
+        "A2",
+        "F",
+        "E"
+      ],
+      "condition": "FR-001—040及NFR-001—014逐项真实验收、目标双P0成立、依赖材料和生产边界全部明确",
+      "does_not_grant": "无证据业务效果或永久模型资格"
+    }
+  ],
+  "contract_gaps": [
+    {
+      "id": "GAP-PREPARE-INTENT",
+      "stage": "A1.1",
+      "need": "首次缺规则包的持久准备请求、operation及刷新恢复查询；就绪自动接续，无第二次开始",
+      "target_exists": [
+        "requestReview",
+        "getOperation"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-MANIFEST-READ",
+      "stage": "A1.1",
+      "need": "可读取冻结ReviewManifest，精确历史轮输入身份；ReviewView只给digest不够",
+      "target_exists": [
+        "getReview"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-HISTORY-READ",
+      "stage": "A1.2+A1.3",
+      "need": "本项目评审历史/实交列表刷新可发现，不依赖localStorage",
+      "target_exists": [
+        "getReview",
+        "getSubmission"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-DECISION-ETAG",
+      "stage": "A1.2",
+      "need": "规则/事实/问题单对象读取的强决定ETag，不猜拼法或用集合令牌",
+      "target_exists": [
+        "getRules",
+        "getFacts",
+        "listFindings"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-SOURCE-EFFECTIVITY",
+      "stage": "A1.2",
+      "need": "明确有据生效/取代/局部关系的领域受理动作；只读source impacts不足",
+      "target_exists": [
+        "getSourceImpacts"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-FINDING-SUGGESTION",
+      "stage": "A1.2",
+      "need": "直接从问题绑定当前稿/来源发起建议，复用conversation/action领域，不依赖通用任务平台",
+      "target_exists": [
+        "createConversation",
+        "sendMessage",
+        "getAction"
+      ],
+      "actual_contract_needed": true
+    },
+    {
+      "id": "GAP-DECISION-WHITELIST",
+      "stage": "A1.2",
+      "need": "将通用DecisionRequest.string落实对象级白名单；人工新增事实单事务保存并确认",
+      "target_exists": [
+        "decideRule",
+        "decideFact",
+        "decideFinding",
+        "changeFacts"
+      ],
+      "actual_contract_needed": true
+    }
+  ],
+  "decision_whitelists": {
+    "rule": [
+      "confirmed",
+      "rejected",
+      "deferred"
+    ],
+    "fact": [
+      "confirmed",
+      "rejected"
+    ],
+    "finding": [
+      "confirm",
+      "dismiss",
+      "defer",
+      "reopen"
+    ],
+    "manual_finding_forbidden": [
+      "resolve",
+      "resolved_by_recheck"
+    ]
+  },
+  "feedback_rules": [
+    "前后端据actual契约联调，目标operation有名不等于已实现",
+    "开发/测试/架构/用户review产品，由Owner收口，PM组织受影响验证",
+    "没有实现/材料/真人时保留pending；不得清零或自动继承旧切片通过",
+    "本计划不新增岗位审批、不改冻结主规格、不取消原13项"
+  ]
+}

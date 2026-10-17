@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="11" time="3.546" timestamp="2026-10-17T04:02:37.417747+00:00" hostname="597cea30c71f"><testcase classname="tests.test_authoring_rich_integration" name="test_real_nonowner_asset_roundtrip_worker_read_and_exact_memory_bytes" time="0.143" /><testcase classname="tests.test_authoring_rich_integration" name="test_withdraw_rejects_new_use_but_old_version_and_exact_receipt_survive" time="0.148" /><testcase classname="tests.test_authoring_rich_integration" name="test_concurrent_withdraw_has_one_cas_winner" time="0.313" /><testcase classname="tests.test_authoring_rich_integration" name="test_actual_worker_dml_is_denied_and_api_metadata_is_not_updatable" time="0.201" /><testcase classname="tests.test_authoring_rich_integration" name="test_cross_bid_and_wrong_version_identity_do_not_read_or_qualify" time="0.204" /><testcase classname="tests.test_authoring_rich_integration" name="test_source_ancestor_change_blocks_new_image_use_and_history_stays" time="0.371" /><testcase classname="tests.test_authoring_rich_integration" name="test_final_guard_refuses_repeatable_read_connection" time="0.084" /><testcase classname="tests.test_authoring_rich_integration" name="test_final_guard_refuses_autocommit_that_would_release_bid_lock" time="0.152" /><testcase classname="tests.test_authoring_rich_integration" name="test_actual_image_http_csrf_upload_exact_replay_withdraw_and_old_bytes" time="1.189" /><testcase classname="tests.test_authoring_rich_integration" name="test_object_unknown_has_recoverable_record_and_no_automatic_retry" time="0.230" /><testcase classname="tests.test_authoring_rich_integration" name="test_rich_save_freezes_real_asset_versions_and_old_snapshot_is_byte_stable" time="0.156"><failure message="assert 3 == 2">images = {'actor': UUID('2bce5186-7cb8-4e6f-8361-b5e404d5b6ce'), 'bid': UUID('4538cf61-d9e4-4178-aae4-86caf04a3154'), 'draft': ...ct_key': 'authoring-images/4538cf61-d9e4-4178-aae4-86caf04a3154/fd50a47b-b8dc-44d0-a72d-b19e9c6db13b/normalized'}, ...}
+
+    def test_rich_save_freezes_real_asset_versions_and_old_snapshot_is_byte_stable(images):
+        from packages.authoring.repository import save_draft, snapshot_content
+        from packages.domain.runtime import etag
+    
+        value, _, _, _ = register(images)
+        body = rich_change(images, value)
+        with connection() as c:
+            original = snapshot_content(c, images["bid"], UUID(images["saved"]["snapshot_id"]))
+            saved = save_draft(
+                c,
+                images["bid"],
+                images["draft"],
+                images["actor"],
+                body,
+                etag("draft", images["draft"], 1),
+            )
+            frozen = snapshot_content(c, images["bid"], UUID(saved["snapshot_id"]))
+            assert frozen["sections"][0] == body["changes"][0]["content"]
+            assert frozen["authoring_images"]["items"][0]["asset_version_id"] == value["id"]
+            assert (
+                frozen["authoring_images"]["items"][0]["normalization_proof"]
+                == value["normalization_proof"]
+            )
+            row = c.execute(
+                "SELECT schema_digest FROM section_revisions WHERE section_id=%s AND revision=2",
+                (images["section"]["section_id"],),
+            ).fetchone()
+            assert row["schema_digest"] == body["changes"][0]["schema_digest"]
+        with connection() as c:
+            rich_assets.withdraw(
+                c,
+                images["bid"],
+                UUID(value["asset_id"]),
+                images["actor"],
+                value["etag"],
+                "撤回已在稿图片",
+            )
+        later = rich_change(images, value, revision=2)
+        with connection() as c, pytest.raises(DomainError) as error:
+            save_draft(
+                c,
+                images["bid"],
+                images["draft"],
+                images["actor"],
+                later,
+                etag("draft", images["draft"], 2),
+            )
+        assert error.value.code == "AUTHORING_IMAGE_STALE"
+        with connection() as c:
+            assert snapshot_content(c, images["bid"], UUID(saved["snapshot_id"])) == frozen
+            assert snapshot_content(c, images["bid"], UUID(images["saved"]["snapshot_id"])) == original
+&gt;           assert (
+                c.execute("SELECT revision FROM drafts WHERE id=%s", (images["draft"],)).fetchone()[
+                    "revision"
+                ]
+                == 2
+            )
+E           assert 3 == 2
+
+tests/test_authoring_rich_integration.py:503: AssertionError</failure></testcase></testsuite></testsuites>

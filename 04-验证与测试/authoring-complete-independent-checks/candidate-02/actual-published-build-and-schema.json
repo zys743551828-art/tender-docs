@@ -1,0 +1,420 @@
+{
+  "actual_api_nonowner": {
+    "current_user": "twb_checks_authoring_complete01_c3820400_api",
+    "rolsuper": false,
+    "rolbypassrls": false
+  },
+  "published_positive_build": {
+    "build_id": "9acf2bf0-c3cd-4da9-b6b4-da87cae034ee",
+    "operation_id": "d545d912-d219-4af7-bbae-1e0ec7bb9807",
+    "draft_snapshot_id": "d6aec334-1bc8-4da3-8131-10793ffe7b31",
+    "manifest": {
+      "formats": [
+        "docx",
+        "pdf"
+      ],
+      "follow_up": "none",
+      "created_by": "5ead2bf8-3a5e-4928-a4bd-c21741599efe",
+      "writer_kind": "generated_text/2",
+      "artifact_kind": "bid_body",
+      "writer_digest": "3965a42ba206a5c210fc3e4b4268ef5b85311325ff71fabe6d7effb3df0c45e9",
+      "render_options": {
+        "font": "Noto Sans CJK SC",
+        "page": "A4",
+        "margin_twips": 1440,
+        "content_subset": 1,
+        "renderer_filter": "writer_pdf_Export",
+        "font_size_halfpoints": 22
+      },
+      "render_protocol": "authoring-generated-sandbox/1",
+      "snapshot_digest": "aff15eddd077cc7863846ac9c43c9dc1a60b5c700cee37f7f05f40aa5fdbdb6e",
+      "follow_up_context": {
+        "enabled": false,
+        "draft_id": "8803a211-dd1f-4257-aea5-22b69abea093",
+        "fact_set_id": null,
+        "bid_revision": 1,
+        "fact_revision": 0,
+        "draft_revision": 3,
+        "current_body_id": null,
+        "current_draft_id": "8803a211-dd1f-4257-aea5-22b69abea093",
+        "draft_snapshot_id": "d6aec334-1bc8-4da3-8131-10793ffe7b31",
+        "material_revision": 1,
+        "settings_revision": 1,
+        "current_material_id": null,
+        "current_rule_set_id": null,
+        "draft_snapshot_digest": "aff15eddd077cc7863846ac9c43c9dc1a60b5c700cee37f7f05f40aa5fdbdb6e"
+      },
+      "renderer_identity": {
+        "identity": {
+          "protocol": "authoring-generated-sandbox/1",
+          "base_profile": {
+            "identity": {
+              "assets": {
+                "/etc/fonts": "7d62cbf2b3d7d77103b462ec5ce31ae7ac4ca954367bc22a3e40f63815eb741d",
+                "/usr/share/fonts": "f1e97419d3ab60bd8842c5e901438eda7ffd3077050a084ca3fdd43d63ce7f6d",
+                "/usr/bin/fc-match": "87b1a590e9199229add8438d4fcf54a77630b38559769e4068fe11c2b42f4c90",
+                "/usr/bin/python3.13": "963d2888870a93eeef837fbd0fc174179ee4e92e7ccf25634f4b41841de02b48",
+                "/usr/lib/python3.13": "2292f26f3eec7c770c9121fe9c9ddcc4d441be82a80099a2a6a79f12d4ee7749",
+                "/usr/local/bin/docker": "bab79bfe6e2f1611599390ea221c13c767f129686b802058e0b09bece79ab2d4",
+                "/usr/share/fontconfig": "18625b0c1389c48e6e347a193108cf90527e6e58d3b9570f5eb917000375dfbb",
+                "/usr/lib/x86_64-linux-gnu": "81c7b3f1ea463e41fc6dfbcfbfa2720e9ed016f237f86be8e88fd073a2821230",
+                "/opt/codex/runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice": "ca564d637524bb5f0acef04f235bb550327d42568867a54fb5b1773550c4d7d9",
+                "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/word_intake/sandbox_runner.py": "d4ef7ee9ef096e3f741d2e25991295287bd2f928044380aee7bbca2d9894d5fa"
+              },
+              "options": {
+                "ipc": "none",
+                "cpus": 1,
+                "pids": 64,
+                "user": "65534:65534",
+                "filter": "writer_pdf_Export",
+                "memory": 536870912,
+                "network": "none",
+                "timeout": 50,
+                "cap_drop": "ALL",
+                "read_only": true,
+                "tmp_bytes": 134217728,
+                "output_bytes": 67108864,
+                "max_pdf_bytes": 52428800,
+                "no_new_privileges": true
+              },
+              "image_id": "sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c",
+              "protocol": "word-docker-render/1",
+              "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+              "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+              "renderer_digest": "4a023d3ce691414ad774f7ad88624544322a61d23b604b23d9750ce7cafb2d6a",
+              "adapter_source_digest": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+              "image_environment_names": [
+                "GOSU_VERSION",
+                "LANG",
+                "PATH",
+                "PGDATA",
+                "PG_MAJOR",
+                "PG_VERSION"
+              ],
+              "inspection_source_digest": "76032305050a35450cf96272708ac0db3ad3d1eafddf78ff80e74b7f84339792"
+            },
+            "profile_digest": "e8a264ee407755b9208235ed0e77a52b9361465022619baf1624dfaff557bd85"
+          },
+          "adapter_digest": "98018f64bdf848d31059562a2cf63f6a1af8a4539bd12301bde284580459ef24",
+          "generator_digest": "dea55a54b55e6bbddaeeb92ff2ab684e12208cc30acef22df23db00d5470a923",
+          "validator_digest": "ba1251007aa7ecc4d609d33881c502666fc738ae6f71de820c73310afc6bdfcd",
+          "dynamic_field_policy": "one_canonical_footer_PAGE_only",
+          "correspondence_policy": "complete_body_plus_per_page_geometric_header_footer_v1"
+        },
+        "profile_digest": "b2495c0f824d37f84071b4881ac1a61f90540dc3d00f08f1aeada4f77983a97f"
+      },
+      "actual_page_ranges": null,
+      "generator_identity": {
+        "sources": {
+          "build.py": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+          "content.py": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+          "templates.py": "7ad2f0e90a4afb46f68d1bc7acca0f72b2744c90370674b46889550c6ae9caa4",
+          "generated_docx.py": "c3aaa4e73f7a63567bd2ee515c4494b6df280b3c2c6b618786b0308b964bff30",
+          "structured_docx.py": "7e3406c2dadefa265695bee5906489354309b4b5c3d6a4ae7595221352a7b4fd",
+          "snapshot_structure.py": "4020c221fc7a18d66db97a42f326a00e4893c04559872fc79fbc03c60d1b093f"
+        },
+        "protocol": "authoring-generated-text/2",
+        "content_schema_digest": "9e22e5a83d21e688ce1acf28484e960d89a78c5fb14ea9c2a0ee8e05d2508f3c",
+        "structure_schema_digest": "74086ed2003b47b137dffb8e9d82139be82457fde8a812d64134b1950ca5f533"
+      },
+      "authoring_authority": {
+        "format": {
+          "notice": "仅按人工有据绑定的字段优先应用；其他格式与暗标语义未自动核完，不代表要求或版面已通过",
+          "coverage": "manual_field_bindings_only",
+          "conflicts": [],
+          "requires_ack": false,
+          "review_digest": "5c86e00ebcbf52f6fa01d3e2c1b6aefc7f3fff28e678cdceb551196b1d2fbbd2",
+          "binding_manifest": [],
+          "effective_config": {
+            "font": "Noto Sans CJK SC",
+            "page": "A4",
+            "cover_title": "投标正文",
+            "footer_text": "",
+            "header_text": "",
+            "page_number": true,
+            "toc_enabled": true,
+            "cover_enabled": false,
+            "schema_version": 1,
+            "margin_top_twips": 1440,
+            "chapter_numbering": "decimal",
+            "margin_left_twips": 1440,
+            "margin_right_twips": 1440,
+            "margin_bottom_twips": 1440,
+            "font_size_halfpoints": 22,
+            "paragraph_after_twips": 0
+          },
+          "unjudged_rule_ids": [],
+          "rule_context_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "sources": []
+      },
+      "template_version_id": "bce07704-db7c-5918-ba3e-1b9025c32520",
+      "style_template_version_id": "bce07704-db7c-5918-ba3e-1b9025c32520",
+      "authoring_structure_digest": "0eed6d169c2c2b9b7dd9fab501c57e34783fdebff1d7ae384f6c9223b7494d72",
+      "directory_template_version_id": "160c51cd-d3f1-5cfa-84bd-d9938b3f25fe"
+    }
+  },
+  "exact_effect_receipts": 1,
+  "columns": [
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "draft_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "section_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "revision",
+      "type": "bigint"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "base_section_revision",
+      "type": "bigint"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "state",
+      "type": "text"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "planned_pages",
+      "type": "integer"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "payload",
+      "type": "jsonb"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "digest",
+      "type": "sha256"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "created_by",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_plan_versions",
+      "attname": "created_at",
+      "type": "timestamp with time zone"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "structure_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "draft_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "section_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "parent_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "ordinal",
+      "type": "integer"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "node_type",
+      "type": "text"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "deleted",
+      "type": "boolean"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "section_revision",
+      "type": "bigint"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "plan_version_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "template_family_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_nodes",
+      "attname": "template_key",
+      "type": "text"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "draft_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "draft_revision",
+      "type": "bigint"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "snapshot_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "directory_template_version_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "style_template_version_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "metadata",
+      "type": "jsonb"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "digest",
+      "type": "sha256"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "created_by",
+      "type": "uuid"
+    },
+    {
+      "relname": "authoring_structure_versions",
+      "attname": "created_at",
+      "type": "timestamp with time zone"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "draft_snapshot_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "template_digest",
+      "type": "sha256"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "render_digest",
+      "type": "sha256"
+    },
+    {
+      "relname": "build_inputs",
+      "attname": "manifest",
+      "type": "jsonb"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "build_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "format",
+      "type": "text"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "document_version_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "state",
+      "type": "text"
+    },
+    {
+      "relname": "build_outputs",
+      "attname": "gaps",
+      "type": "jsonb"
+    },
+    {
+      "relname": "builds",
+      "attname": "id",
+      "type": "uuid"
+    },
+    {
+      "relname": "builds",
+      "attname": "bid_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "builds",
+      "attname": "input_id",
+      "type": "uuid"
+    },
+    {
+      "relname": "builds",
+      "attname": "operation_id",
+      "type": "uuid"
+    }
+  ]
+}

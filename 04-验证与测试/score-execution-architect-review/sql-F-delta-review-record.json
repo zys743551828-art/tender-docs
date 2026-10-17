@@ -1,0 +1,33 @@
+{
+  "scope": "F SQL only mechanical delta vs reviewed E",
+  "inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-E/score-execution.sql",
+      "sha256": "a53bc2cbce417d121dc3a32c36266ca800b7c2035089410d90c46c4835e3b480"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-F/score-execution.sql",
+      "sha256": "28e9a2f5042e29078c24a20d2191ada9935034b745627e8b1a5c865b487ec5be"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-F/draft.json",
+      "sha256": "8da83dc1ede68a9c15f632f3a72e538213d0bb6911951050e6efea441500f528"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-F/score-e-diagnostic.xml",
+      "sha256": "14abd98e9eaf534cd92f42276865d128856d738b229763da5b4e3c3991598ecc"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/score-execution/sql-draft-F/score-e-first-integration.xml",
+      "sha256": "729063b74db5b53152eb81ae1b8fe3f34c26b2e270cf6228b3fe619903a34496"
+    }
+  ],
+  "executed": {
+    "sql_diff": true,
+    "ddl": false,
+    "database_connections": 0,
+    "accounts_created": 0,
+    "external_calls": 0
+  },
+  "conclusion": "No new static blocker; independent fresh F initialization permitted. Runtime validation pending; application branch changes not covered."
+}

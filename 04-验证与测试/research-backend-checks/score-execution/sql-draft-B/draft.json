@@ -1,0 +1,20 @@
+{
+  "draft": "B",
+  "sha256": "28c52c85c5e485ab5901af09915b2de4ce58a4de0a4b22123d2b755b01cb7bcc",
+  "prior": "A aea80880ed78108a29fce669e4b2a015fb4cb5e8c62b1f87c12aa8545a1206fa",
+  "status": "static_review_requested_not_executed",
+  "changes": [
+    "Server-sealed execution_key = method + sorted clean package digests; excludes random input/job/command IDs and creation time",
+    "Global UNIQUE(profile_digest,chapter_digest,replicate) actual call records plus immutable RPC-only per-job/chapter/replicate/call bindings",
+    "Start/reserve/resume detect any unresolved shared chapter across equivalent or expanded inputs; successful global calls may only be reused through exact request/profile/package/fresh-source checks",
+    "Reused calls incur zero new reserve/estimated fee for a new target job; owned actual calls retain truthful accounting on original owner job",
+    "Finite positive scoring maximum and fact_set explicit refusal",
+    "Unknown and known-not-sent pause; generic failed worker can pause only its live fenced job",
+    "Closed result/payload/shadow keys and all independent exact quote/band bindings"
+  ],
+  "no_implicit_paid_rerun": "No explicit re-execution authorization exists; new input/job/command nonce or cosmetic method changes cannot reset global unknown/not_sent. Future paid rerun requires separately reviewed bounded authorization.",
+  "pure_native_mock_tests": 35,
+  "fresh_database_tests": "pending approval; not executed",
+  "paid_calls": 0,
+  "consumers": 0
+}

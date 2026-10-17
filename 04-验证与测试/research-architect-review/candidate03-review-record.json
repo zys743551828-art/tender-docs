@@ -1,0 +1,51 @@
+{
+  "candidate_sha256": "2877c2a331e4d3a5ca3884626322b6731b3311cd27a4fea779949dc935dfb9ce",
+  "sources_verified": 20,
+  "candidate_suite_cases": 38,
+  "additional_original_regressions": 3,
+  "original_defects_closed": true,
+  "actual_postgresql_nonowner": true,
+  "model_transport": "explicit native DeepSeekClient MockTransport",
+  "object_port": "explicit in-memory",
+  "paid_calls": 0,
+  "credentials_read": false,
+  "source_module_directory": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs",
+  "loaded_frozen_modules": {
+    "packages.research.batches": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/batches.py",
+    "packages.research.chapters": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/chapters.py",
+    "packages.research.execution": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/execution.py",
+    "packages.research.ledger": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/ledger.py",
+    "packages.research.model_port": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/model_port.py",
+    "packages.research.worker": "/workspace/tender-docs/04-验证与测试/research-backend-checks/candidate-03/frozen-inputs/packages/research/worker.py",
+    "apps.api.research_routes": "/workspace/tender-workbench/apps/api/research_routes.py"
+  },
+  "reference_inputs_verified": 11,
+  "source_authority_installed": true,
+  "executed_tests": {
+    "passed": 40,
+    "skipped": 1,
+    "failures": 0,
+    "candidate_cases_including_skip": 38,
+    "additional_architect_regressions": 3
+  },
+  "test_evidence": {
+    "probe_candidate03.py": "26d14c6130566ac4e60b213ed057348b26ad97929d88ada2edfee6d0dcc2cc53",
+    "candidate03-frozen-plus-original-regressions.py": "28252ef6445cfddb2fc9520bcc2c69585a9d849dad9363baf3368e4c0b69dc2c",
+    "candidate03-independent-junit.xml": "e2658973a58d483028d1058c08fcf0e516309bf271860b378fca724175b6d46f",
+    "candidate03-budget-regression.json": "934510c18e9032acd70707c1d31bafd2546d1303e6f0234252792a914025b182",
+    "candidate03-withdrawal-regression.json": "0fc6325bbd2b92acfc5b49b7c43066270c18fdc694239b97d5371f2e19436ac4",
+    "candidate03-admission-regression.json": "df57548161967ea76372eb0de069e842ed31b3afcd4aa171dffce4730b0e326f"
+  },
+  "conclusion": "passed_scoped_research03_application_mechanisms_no_blockers",
+  "unverified": [
+    "real_paid_provider",
+    "actual_Kafka_turnover",
+    "actual_cloud_object_IO",
+    "real_official_labels",
+    "real_material_quality",
+    "statistical_accuracy",
+    "formal_model_qualification",
+    "frontend",
+    "production_capacity"
+  ]
+}

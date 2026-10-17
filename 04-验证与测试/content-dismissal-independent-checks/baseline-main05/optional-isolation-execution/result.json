@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "explicit_nonretryable_failed_optional_neither_aborts_sibling_nor_starts_finalizer",
+      "passed": true,
+      "observation": {
+        "operation_state": "running",
+        "sibling_call_state": "reserved",
+        "finalizer_dispatches": 0
+      }
+    },
+    {
+      "name": "explicit_nonretryable_required_finalizer_dispatched_exactly_once_after_both_optional_terminals",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "explicit_nonretryable_final_success_keeps_failure_evidence_and_no_extra_paid_attempts",
+      "passed": true,
+      "observation": {
+        "operation_state": "succeeded",
+        "steps": {
+          "consistency-check": "failed",
+          "scope-residue-check": "succeeded",
+          "finalize-review": "succeeded"
+        },
+        "effects": 3,
+        "dead_letter_intents": 1,
+        "model_reservations": 2
+      }
+    },
+    {
+      "name": "expired_third_attempt_old_lease_cannot_renew_or_publish",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "expired_third_attempt_failed_optional_neither_aborts_sibling_nor_starts_finalizer",
+      "passed": true,
+      "observation": {
+        "operation_state": "running",
+        "sibling_call_state": "reserved",
+        "finalizer_dispatches": 0
+      }
+    },
+    {
+      "name": "expired_third_attempt_own_unknown_kept_without_poisoning_sibling",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "expired_third_attempt_required_finalizer_dispatched_exactly_once_after_both_optional_terminals",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "expired_third_attempt_final_success_keeps_failure_evidence_and_no_extra_paid_attempts",
+      "passed": true,
+      "observation": {
+        "operation_state": "succeeded",
+        "steps": {
+          "consistency-check": "failed",
+          "scope-residue-check": "succeeded",
+          "finalize-review": "succeeded"
+        },
+        "effects": 3,
+        "dead_letter_intents": 1,
+        "model_reservations": 2
+      }
+    }
+  ],
+  "paid_calls": 0,
+  "model_transport_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Actual restrictedPG ordinary engine and reservation ledger. Synthetic document/1 optional-stage plan and no-op artifact publisher only, no real detector/model/Kafka claim.",
+  "probe_sha256": "a4f21a241d7565df9cf1b1128191aa6dab37daee6fc438b0097163a8297386be",
+  "runtime_manifest_sha256": "063b6abed2220947da341cf196510d7e6845c91e2709c6847bea7aff9670fc6c"
+}

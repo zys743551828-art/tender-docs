@@ -1,0 +1,94 @@
+{
+  "candidate": "project-lifecycle-command-mechanisms-01",
+  "created_at": "2026-10-16T20:11:07.530305+00:00",
+  "scope": "Explicit business phase/archive command and writable guard mechanisms, not full application archive enforcement",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/lifecycle/__init__.py",
+      "sha256": "46bb6bd088221b65fe100d175ed74b95ad91d2055603cfa6943ae3173f89311d",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/frozen-inputs/packages/lifecycle/__init__.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/lifecycle/service.py",
+      "sha256": "4a47aee310069d14f1cf386beca20a7279939caf01f561853a9473244c768678",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/frozen-inputs/packages/lifecycle/service.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/lifecycle/contracts.py",
+      "sha256": "b5c3b4afb9ba9d1bcd0de8a7e97be7431ac31bd8f63a115be473c8cea314b2e5",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/frozen-inputs/packages/lifecycle/contracts.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/lifecycle_routes.py",
+      "sha256": "64383d992aa28088ab820daf37fad7285a03283003237ee23365ae9f07874ff5",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/frozen-inputs/apps/api/lifecycle_routes.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_project_lifecycle.py",
+      "sha256": "fc2c559708be41de6decc89c02f663bdf6a2c30db7c1d358f6631842183ada29",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/frozen-inputs/tests/test_project_lifecycle.py"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "/workspace/tender-workbench/tests/test_work_conversations.py",
+      "sha256": "e20193a353f514f63c7c241fce5d532f7c5c0ae7ab659fae7b01015285c4d1cb",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/dependencies/tests/test_work_conversations.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/dependencies/apps/api/auth.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/apps/api/views.py",
+      "sha256": "206794028670b986865c2aede747ed8d877271f4b3532395f3d48b7a899b0cda",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/dependencies/apps/api/views.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/dependencies/packages/domain/runtime.py"
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/dependencies/packages/identity/repository.py"
+    }
+  ],
+  "actual_openapi": {
+    "path": "/workspace/tender-docs/04-验证与测试/lifecycle-development-checks/candidate-01/actual.openapi.json",
+    "sha256": "70f8c48605560bb88594df8833222d22d19ab678e0ff2753adc6b7c65ae48874",
+    "operations": 2
+  },
+  "development_validation": {
+    "real_nonowner_pg_asgi_tests": 3,
+    "command": "deploy/run.py --env-file .local/rag-checks.env -- env RUN_PROJECT_LIFECYCLE=1 pytest tests/test_project_lifecycle.py -q",
+    "checks": [
+      "phase command cannot fabricate submission/review; stale and missing Bid ETag and same-key replay",
+      "archive refuses queued tasks without cancellation, session/conversation/history retained; reopen explicit reason",
+      "real guarded producer waits behind archive project lock then rejects late mutation"
+    ],
+    "quality": [
+      "ruff",
+      "format",
+      "mypy",
+      "bandit"
+    ],
+    "paid_calls": 0,
+    "oss_requests": 0,
+    "kafka_consumers_started": 0
+  },
+  "integration_gate": "DO NOT include lifecycle router until ordinary API/control-plane producers use the same lock+guard and archival supplements are distinguished; standalone mechanism tests do not prove whole application read-only",
+  "remaining": [
+    "Global producer guard coverage and explicit archival supplement upload intent",
+    "Keep phase/archive when recording offline submission in closed/terminated/archive",
+    "UI task wait/cancel/continue and historical result reminders",
+    "Independent QA/architecture/product/user review"
+  ],
+  "scope_limits": [
+    "No automatic task cancellation or submission completion",
+    "No default physical retention/cleanup",
+    "No legacy migration"
+  ]
+}

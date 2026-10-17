@@ -1,0 +1,878 @@
+{
+  "scope": "产品Owner按固定实现和独立证据重新核定40FR；保留所有原始需求与历史证据，非整产品验收",
+  "previous_snapshot": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/score-product-increment/remaining-fr.json",
+    "sha256": "1d6539060566d0f50d7d5892950ff07673de47f88473bf02a258579a9b045638"
+  },
+  "baseline_prd": {
+    "path": "/workspace/tender-docs/02-业务与产品/AI投标工作台PRD.md",
+    "sha256": "16f776ef3115f9bace2ff7cf63bfff6652770199c4432e72965bb1369a693297",
+    "modified_this_review": false
+  },
+  "current_combination": "PM统一399源组合仍联调，不能将各独立测试组合视为同一已验收部署",
+  "functional_requirements": [
+    {
+      "id": "FR-001",
+      "name": "废标／否决及强制核对",
+      "acceptance_criteria": "真实API/Kafka/Worker/私有存储+浏览器成功与失败恢复；已知关键风险不洗；代表性漏检/误报另验",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1"
+      ],
+      "implementation_signal": "backend07固定组合具备核心规则/风险/人工决定/复检/闸门报告实现；模块机制及旧PDF片有证据，统一main399仍联调",
+      "next_deliverable": "用统一固定组合贯通双PDF→关键风险/两侧原页→人工补漏/效力→新稿复检→标准/补录→报告；按原13项逐条绑定实际证据",
+      "accountable_delivery_owner": "主开发+前端；QA/产品/用户独立",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-002",
+      "name": "评分预测与边界",
+      "acceptance_criteria": "真实标签与干净输入/完整图文、三有效独立判断；独立协议/基线/组时间隔离、校准与发布回退；不能以合成或20对冒资格",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL"
+      ],
+      "implementation_signal": "Score01完整当前/历史每项三判断及影子结果有QA12；技术总满分/数值预测/正式资格仍null；Scale C静审及fresh开发链不等于权威验收",
+      "next_deliverable": "Scale当前/历史有据登记与更正撤回→有效覆盖分母；真实历史监督与独立实验/发布资格，真实标签缺证继续pending",
+      "accountable_delivery_owner": "研究开发+架构；QA+PM",
+      "delivery_packets": [
+        "SCORE"
+      ],
+      "evidence_ids": [
+        "SCORE",
+        "SCALE",
+        "HIST"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-003",
+      "name": "响应矩阵",
+      "acceptance_criteria": "覆盖和业务满足分开，10/10不声称零漏提，纯评分缺口不混核心分母，引用版本真实",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1"
+      ],
+      "implementation_signal": "规则/事实/矩阵与四层覆盖已在固定后端/既有前端实现，不是待从零开发",
+      "next_deliverable": "统一新组合实际逐行定位、无法判断/空分母/纯评分失败与来源变化回读；与漏提质量指标分开",
+      "accountable_delivery_owner": "主开发+前端；QA+用户",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-004",
+      "name": "前后矛盾",
+      "acceptance_criteria": "完整相关文字/范围；未运行/失败不计满足；已知critical仍可定位处理/阻断；无有效复检不解决",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1-DETECT"
+      ],
+      "implementation_signal": "固定backend07包含独立consistency检测/断言校验/状态和处置守卫；不再标未实施；backend07 QA14不等于本检测质量验收",
+      "next_deliverable": "运行完整相关文字的矛盾案例，验证双侧依据、partial、旧驳回不沿用新95/125冲突、关开关已知critical保留",
+      "accountable_delivery_owner": "主开发；QA+产品",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "CONTENT06"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-005",
+      "name": "范围残留",
+      "acceptance_criteria": "不把同数字/近名当同工程；开关/失败与已知风险规则同FR004，误报可有理由驳回",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1-DETECT"
+      ],
+      "implementation_signal": "固定backend07包含scope_residue独立阶段与工程/范围断言守卫；准确率未验收",
+      "next_deliverable": "真实项目范围/主体/工期单位残留正反例与否定语句，缺范围partial；关开关保留既有关键风险并可处理",
+      "accountable_delivery_owner": "主开发；QA+产品",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "CONTENT06"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-006",
+      "name": "报价试算",
+      "acceptance_criteria": "金额单位完整声明/Decimal/主分null和真0、每点重算、预填/迟到保护、全入口开关、来源并发重核",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "F"
+      ],
+      "accepted_subscopes": [
+        {
+          "source": "implementation-user-review/pricing-f05/报价用户闭环复验.md",
+          "scope": "固定原生08/API8808 F05最低比值法有据登记/试算/显式保存/刷新dirty恢复/旧方案/开关/390/原页取件",
+          "not_accepted": "均值法所有边界/真人可发现性/正式报价效果/生产/全FR"
+        }
+      ],
+      "implementation_signal": "F05+原生frontend08最低比值法登记/试算/显式保存/dirty恢复/旧方案/开关/移动有独立用户闭环；两法完整质量未验收",
+      "next_deliverable": "补均值偏差法各边界/候选不合格null/曲线迟到/来源并发变化/多方案恢复；真实条款适配清单保持受限",
+      "accountable_delivery_owner": "报价Owner+前端；QA+用户",
+      "delivery_packets": [
+        "PRICING"
+      ],
+      "evidence_ids": [
+        "F05"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-007",
+      "name": "报告与导出",
+      "acceptance_criteria": "产物真字节/原页/输入可还原；无精确范围仅物理页注释；DOCX批注unsupported；不能当正文标准提交",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "A2"
+      ],
+      "implementation_signal": "报告Word/PDF与物理页批注实现；Word桥接和A2 PAGE双格式各有独立机制；非全格式交付通过",
+      "next_deliverable": "统一浏览器核正文/报告/批注下载身份与字段覆盖；补A2整包格式质量；不支持DOCX批注明确拒绝",
+      "accountable_delivery_owner": "主开发+编制+前端；QA",
+      "delivery_packets": [
+        "INTEGRATE",
+        "A2-M1"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "WORD",
+        "A2PAGE"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-008",
+      "name": "规则、事实与依据",
+      "acceptance_criteria": "一次明确确认、原子新包/集、强ETag/幂等；纯confirmed/deferred不收费重跑；缺证保表单无部分绿",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1"
+      ],
+      "implementation_signal": "规则500批量、事实、补漏、效力三动作已实现固定组合；不再停main04信号",
+      "next_deliverable": "逐条/显式选中批量与事实替撤、补漏持久、效力多来源、缺证与412保输入实际贯通",
+      "accountable_delivery_owner": "主开发+前端；QA+用户",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "CONTENT06"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-009",
+      "name": "正式结果登记",
+      "acceptance_criteria": "零/未知/综合分分开，官方技术分与stage独立；旧verified不绕新冲突；U05在实际页面/真人分别留证",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY",
+        "F"
+      ],
+      "implementation_signal": "成绩登记/追加更正/核验已有研究模块，阶段结果由指标模块独立实现；真实官方标签材料仍缺",
+      "next_deliverable": "实际官方技术成绩身份/满分/聚合/取得时间原页核验；零/未知/综合/冲突分开，不从技术分推中标",
+      "accountable_delivery_owner": "研究开发+前端；QA+用户",
+      "delivery_packets": [
+        "RESULTS"
+      ],
+      "evidence_ids": [
+        "METRICS"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-010",
+      "name": "问题复核与局部改稿",
+      "acceptance_criteria": "采纳/确认非解决，failed/partial不解决；原根风险/历史/新问题可见；数值/工期有范围依据",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "A2",
+        "ASSIST"
+      ],
+      "implementation_signal": "问题处置、新稿有效复检已有；A2文本补丁/建议有基础，完整表图/批量AI未交付",
+      "next_deliverable": "风险→选区建议/外部新稿→复检→新增/仍在/已解决统一闭环；A2批量放第二整包",
+      "accountable_delivery_owner": "主开发+编制+前端；QA",
+      "delivery_packets": [
+        "INTEGRATE",
+        "A2-M2"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "A2PAGE"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-011",
+      "name": "业务指标与成绩对照",
+      "acceptance_criteria": "有效实交唯一；candidate非awarded、未知/冲突/取消/流标不乱入分母；零分母null、隐藏不泄分、20门槛无资格升级",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "F"
+      ],
+      "implementation_signal": "metrics03机制和frontend07合成阶段台账/更正/率有独立用户定向实走；非官方核实正例或完整在线效果通过",
+      "next_deliverable": "统一入口核有效实交唯一/阶段证据/风险冻结与不可比趋势；官方核实正例和20对门槛后误差显示另验",
+      "accountable_delivery_owner": "主开发+前端；QA+用户",
+      "delivery_packets": [
+        "RESULTS"
+      ],
+      "evidence_ids": [
+        "METRICS",
+        "USER07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-012",
+      "name": "项目资料与自动评审",
+      "acceptance_criteria": "无需第二次开始；成功资料保留；新head/迟到不抢当前；Word未接收时不说已保存；全长路径可恢复",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "OPS"
+      ],
+      "implementation_signal": "PDF上传/解析首片已验，分片/批次/持久prepare/自动接续具备候选；Word主桥接有QA11但未统一部署验收",
+      "next_deliverable": "main399按冻结policy实际对象/Kafka/Worker/多页PDF与受控Word上传接续，失ACK和漂移不重传成功资料/不重复评审",
+      "accountable_delivery_owner": "主开发+解析+PM；QA",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "WORD"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-013",
+      "name": "项目功能开关",
+      "acceptance_criteria": "已知critical关检测不洗；评分/报价隐藏同报告与卡；提醒关闭不禁止记录事实；可选失败不造第五gate",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "F"
+      ],
+      "accepted_subscopes": [
+        {
+          "source": "implementation-user-review/pricing-f05/报价用户闭环复验.md",
+          "scope": "该F05报价关闭恢复/输入与旧方案保留且无重跑",
+          "not_accepted": "所有其他开关全入口/全FR"
+        }
+      ],
+      "implementation_signal": "settings/检测/评分/报价/提醒开关已实现，F05报价关开有独立用户证据",
+      "next_deliverable": "同一冻结组合核所有入口/卡/报告/导出；已知critical与纯评分规则保持，optional失败不造第五gate",
+      "accountable_delivery_owner": "主开发+前端；QA",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "F05"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-014",
+      "name": "项目、历史、资料等入口与跨入口导航",
+      "acceptance_criteria": "GovDash紧凑、风险一个下一步，显式历史/版本不换对象；390px/键盘/返回恢复；未提供功能不假按钮",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "UI"
+      ],
+      "accepted_subscopes": [
+        {
+          "source": "implementation-user-review/knowledge09-delta/知识历史版本修复复验.md",
+          "scope": "W07-U01历史版本URL/刷新前后退/trace-citation上下文/错误version不回落最新；09资产overlay、旧API8806",
+          "not_accepted": "09独立Origin部署/完整知识/真人/全FR"
+        }
+      ],
+      "implementation_signal": "frontend10实际128源/215资产，14组独立用户通过并留U10-01 P2；09知识历史修复、08报价原生链各自范围通过",
+      "next_deliverable": "frontend11只复长会话可达性；统一main399匹配assets/API/路由实际核A1/A2/历史/知识，勿把overlay当独立部署",
+      "accountable_delivery_owner": "前端+PM；用户+QA",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "FE10",
+        "USER10",
+        "KNOW09",
+        "F05"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-015",
+      "name": "项目业务生命周期",
+      "acceptance_criteria": "缺分可结束/归档，真实提交才已提交；在途等/明确取消后归档；重开不改旧实交/截止，新招标新轮；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "LIFECYCLE"
+      ],
+      "implementation_signal": "backend07生命周期同bid锁/上传批次阻断/保留原件重绑等QA14；router当时未公开，不再说全部守卫未实现",
+      "next_deliverable": "统一主入口公开前覆盖报告/构建/知识/任务各producer与在途终态；归档等待/显式abort，不静默销毁或回挂work",
+      "accountable_delivery_owner": "主开发+PM；QA+架构",
+      "delivery_packets": [
+        "LIFECYCLE"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-016",
+      "name": "会话生命周期",
+      "acceptance_criteria": "全局bid=null不假ID；跨项目草稿/来源不串；结束/隐藏不取消任务或删业务审计",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "ASSIST"
+      ],
+      "implementation_signal": "全局私有/项目共享主会话、恢复和跨成员边界已在frontend10独立用户实走；长会话续写有P2",
+      "next_deliverable": "frontend11最小可达性delta，后续真实transport与独立新意图预算候选；结束/隐藏不取消任务或删业务",
+      "accountable_delivery_owner": "前端+助手Owner；用户+QA",
+      "delivery_packets": [
+        "ASSIST"
+      ],
+      "evidence_ids": [
+        "USER10"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-017",
+      "name": "AI 操作与确认",
+      "acceptance_criteria": "模型不直接写正式状态；按钮明确提交不二次聊天确认；stale/expired/幂等与输入保留",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "ASSIST"
+      ],
+      "implementation_signal": "Action一次消费/业务收据及旧卡不重复执行有实现，frontend10只读回看已执行卡；不等于所有域命令浏览器执行",
+      "next_deliverable": "真实Action效果逐类绑定与过期/来源/身份漂移，补原review.request等正式命令；未知新问题按单独协议后验",
+      "accountable_delivery_owner": "助手Owner+前端；QA",
+      "delivery_packets": [
+        "ASSIST"
+      ],
+      "evidence_ids": [
+        "USER10",
+        "BACK07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-018",
+      "name": "可操作卡片",
+      "acceptance_criteria": "确认/任务终态/业务待办分离；纯定位blocked仍可进入处理，写操作服务端守卫；不靠模型话术认成功",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "ASSIST"
+      ],
+      "implementation_signal": "frontend10动作卡/运行/草案/通知入口已有独立14组任务实走；统一主服务未完成",
+      "next_deliverable": "long-chat delta后固定统一组合，失败/终态/纯导航可处理与写入守卫核实；不靠模型话术认业务成功",
+      "accountable_delivery_owner": "前端+助手Owner；QA+用户",
+      "delivery_packets": [
+        "ASSIST"
+      ],
+      "evidence_ids": [
+        "USER10"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-019",
+      "name": "结构化项目记忆",
+      "acceptance_criteria": "摘要不覆盖正式记录；其他公司事实不搬；聊天声明不confirmed；变更使相关输入过期且不丢旧依据",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "ASSIST"
+      ],
+      "implementation_signal": "项目结构记忆/可信事实和来源冻结有后端实现；会话切换草稿独立用户已核，完整记忆更新影响仍未验",
+      "next_deliverable": "事实更正/撤回后记忆更新、旧finding状态、跨项目/公司隔离与摘要不能覆盖正式事实",
+      "accountable_delivery_owner": "助手Owner+主开发；QA",
+      "delivery_packets": [
+        "ASSIST"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "USER10"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-020",
+      "name": "跨轮比较与可比性",
+      "acceptance_criteria": "新增/仍在/已解决/未复检逐项；正文/规则/事实/方法可见，不可比分断点，不归因改稿/不自动再收费",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1-COMPARE"
+      ],
+      "implementation_signal": "backend07已有review_comparison/comparisons/API与独立免费comparison lane，不再标未实现；QA14核错路消息隔离",
+      "next_deliverable": "真实双轮新增/仍在/已解决/未复检与方法可比性浏览器，真实免费lane运输；不同规则/方法分数不作改稿因果",
+      "accountable_delivery_owner": "主开发+PM+前端；QA",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-021",
+      "name": "历史搜索与档案",
+      "acceptance_criteria": "同一真实对象不复制档案；无分未知可存；原页/实交身份固定，来源无权限/失效如实",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY",
+        "UI"
+      ],
+      "implementation_signal": "历史列表/检索/原件及知识历史版本已具备；独立用户只验限定读态和知识V1恢复",
+      "next_deliverable": "统一项目/实交/档案导航筛选与返回，成绩未知可存；不把知识历史V1范围当所有档案通过",
+      "accountable_delivery_owner": "主开发+前端；用户+QA",
+      "delivery_packets": [
+        "HISTORY"
+      ],
+      "evidence_ids": [
+        "KNOW09",
+        "HIST"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-022",
+      "name": "批量导入与异常队列",
+      "acceptance_criteria": "当前时间不倒造；offline_fact reviewNULL可合法研究但不标准通过；批次异常保留且无重复提交/伪事前预测",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY"
+      ],
+      "implementation_signal": "历史导入与proof/subject/HistoricalInput现已有独立19应用机制，当前上传→2019补录→合法回溯输入可达；非仍待代码",
+      "next_deliverable": "统一批导异常队列+proof/subject/input可用界面，缺证pending/重复不重建；真实材料核验后接研究",
+      "accountable_delivery_owner": "研究开发+前端；QA+用户",
+      "delivery_packets": [
+        "HISTORY"
+      ],
+      "evidence_ids": [
+        "HIST"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-023",
+      "name": "案例比较与引用",
+      "acceptance_criteria": "工程/轮次/主体条件显式，不转移他案分数/资格/事实；当前用途适用性和失效并发重核",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "D",
+        "HISTORY"
+      ],
+      "implementation_signal": "案例/知识引用和来源检索有实现，完整案例对比/章节复用未独立验收",
+      "next_deliverable": "有身份的两案差异比较→当前章节参考→来源适用性重核；不得搬他案分数/事实资格",
+      "accountable_delivery_owner": "知识+研究+编制Owner；前端+QA",
+      "delivery_packets": [
+        "KNOWLEDGE"
+      ],
+      "evidence_ids": [
+        "USER07",
+        "KNOW09"
+      ],
+      "current_status": "partial_implementation_with_named_remaining_scope"
+    },
+    {
+      "id": "FR-024",
+      "name": "知识实体与分类",
+      "acceptance_criteria": "空集合不代表全适用，pending主体不新用；候选和当前发布版区分；字段缺口直接说明",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "D"
+      ],
+      "implementation_signal": "D实体分类/适用条件/版本页面已有frontend07定向独立用户实走，不是仅模块未用",
+      "next_deliverable": "统一新组合核维护候选/发布版、期限/主体/范围/条件/来源；补未覆盖实体类型实际任务",
+      "accountable_delivery_owner": "知识Owner+前端；QA+用户",
+      "delivery_packets": [
+        "KNOWLEDGE"
+      ],
+      "evidence_ids": [
+        "USER07"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-025",
+      "name": "知识确认与版本发布",
+      "acceptance_criteria": "一次明确人工决定；新候选不抢有效已发布版，错误旧版即时停用，失效版不能原地复活",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "D"
+      ],
+      "accepted_subscopes": [
+        {
+          "source": "implementation-user-review/knowledge09-delta/知识历史版本修复复验.md",
+          "scope": "W07-U01历史版本URL/刷新前后退/trace-citation上下文/错误version不回落最新；09资产overlay、旧API8806",
+          "not_accepted": "09独立Origin部署/完整知识/真人/全FR"
+        }
+      ],
+      "implementation_signal": "D发布/候选/历史/撤回已有定向用户走查；09仅历史V1 URL修复通过",
+      "next_deliverable": "完整当前发布/新候选并存、失效不可复活、跨成员决定/并发与来源撤回联动",
+      "accountable_delivery_owner": "知识Owner+前端；QA",
+      "delivery_packets": [
+        "KNOWLEDGE"
+      ],
+      "evidence_ids": [
+        "USER07",
+        "KNOW09"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-026",
+      "name": "适用检索与可追溯引用",
+      "acceptance_criteria": "向量/词法/融合重排真实且用途/主体/时点过滤；空命中非无要求；普通RAG不继承历史proof时间豁免",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "RAG",
+        "D"
+      ],
+      "implementation_signal": "项目RAG/知识RAG候选及frontend07原页/引用/停用实际定向用户任务通过；并非真实检索质量通过",
+      "next_deliverable": "统一向量/词法/融合重排链、引用归属/用途/时点/来源撤回、空命中和真实代表资料质量评测",
+      "accountable_delivery_owner": "知识+RAG Owner+PM；QA",
+      "delivery_packets": [
+        "KNOWLEDGE"
+      ],
+      "evidence_ids": [
+        "USER07"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-027",
+      "name": "知识失效及影响",
+      "acceptance_criteria": "按项目数和引用处数区分；禁止新增失效引用，旧版原件可还原；未注册模型影响不冒称完整追踪",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "D"
+      ],
+      "implementation_signal": "知识停用/影响组和引用处数呈现已有用户增量；历史V1导航已修",
+      "next_deliverable": "并发更新/到期/祖先撤回到运行任务/章节/模型样本影响范围；未注册影响明确unknown",
+      "accountable_delivery_owner": "知识Owner+研究+主开发；QA",
+      "delivery_packets": [
+        "KNOWLEDGE"
+      ],
+      "evidence_ids": [
+        "USER07",
+        "KNOW09"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    },
+    {
+      "id": "FR-028",
+      "name": "评分样本严格准入",
+      "acceptance_criteria": "精确body/lot/round/bidder与官方技术标签；缺本方历史known/received证据pending；不靠current profile/旧admitted放行",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL"
+      ],
+      "implementation_signal": "HISTinput QA19可合法冻结旧实交reviewNULL，Score01当前/历史用途机制QA12；严格样本/Scale权威和真实资格独立未完成",
+      "next_deliverable": "有据历史proof/Subject/完整图文/技术满分/官方标签→新样本准入；现转PDF不复制Word2019已知事实",
+      "accountable_delivery_owner": "研究开发+架构；QA",
+      "delivery_packets": [
+        "SCORE"
+      ],
+      "evidence_ids": [
+        "HIST",
+        "SCORE",
+        "SCALE"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-029",
+      "name": "模型评测与受控发布",
+      "acceptance_criteria": "训练/最终标签访问隔离、最终曝光不可重选；real独立协议和模型资格另验；research_only回测不冒事前，real历史不永久污染未来训练",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "MODEL"
+      ],
+      "implementation_signal": "合成StageA/受控shadow及评分01已有独立机制，真实历史四时点/cohort/cert/模型发布仍无资格",
+      "next_deliverable": "独立真实监督入口/回溯留出authority→冻结组/曝光→基线评测→观察/发布回退；strict未来边界不放宽",
+      "accountable_delivery_owner": "研究开发+架构+PM；QA",
+      "delivery_packets": [
+        "SCORE"
+      ],
+      "evidence_ids": [
+        "SCORE",
+        "HIST"
+      ],
+      "current_status": "partial_implementation_with_named_remaining_scope"
+    },
+    {
+      "id": "FR-030",
+      "name": "错误更正与影响追踪",
+      "acceptance_criteria": "追加不覆写，当前冲突不回退旧绿；运行/缓存/冻结authority重核，旧产物可还原但不当当前",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "HISTORY",
+        "D",
+        "MODEL"
+      ],
+      "implementation_signal": "更正/撤回处理器横跨规则事实/身份/实交/成绩/知识，HIST/Score已验部分来源变化反例",
+      "next_deliverable": "统一跨域影响链与运行/缓存/authority/影子模型当前资格回读，不覆写历史，不回退旧绿",
+      "accountable_delivery_owner": "各领域Owner+PM；QA",
+      "delivery_packets": [
+        "INTEGRATE",
+        "SCORE"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "HIST",
+        "SCORE"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-031",
+      "name": "归档、保留与清理边界",
+      "acceptance_criteria": "不自动物理删正式原件/知识/审计；删除会话不删业务，仍引用文件不可直接清，归档不藏待补成绩；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "LIFECYCLE",
+        "OPS"
+      ],
+      "implementation_signal": "backend07已核归档阻断上传/批次、显式保留字节重绑和迟到不发布；不代表全保留清理/恢复通过",
+      "next_deliverable": "统一归档UI及所有普通producer/引用文件清理边界；OPS保留和一致恢复，禁静默物理删除",
+      "accountable_delivery_owner": "主开发+备份Owner；QA",
+      "delivery_packets": [
+        "LIFECYCLE",
+        "OPS"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-032",
+      "name": "初始化、导出与恢复",
+      "acceptance_criteria": "原件SHA和引用/版本/决定关系可核；缺文件报告不装完整；无密钥导出；恢复为新系统正常运维非旧迁移",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "OPS"
+      ],
+      "implementation_signal": "初始化有fresh证据；完整导出恢复OPS03仍静审/真实演练待收，旧AR03/04失败保留",
+      "next_deliverable": "冻结OPS03→静审→全新隔离目标一致恢复演练，原件SHA/引用/审计/模型配置清单验证并记录缺件",
+      "accountable_delivery_owner": "备份Owner+架构+PM；QA",
+      "delivery_packets": [
+        "OPS"
+      ],
+      "evidence_ids": [
+        "BOARD"
+      ],
+      "current_status": "partial_implementation_with_named_remaining_scope"
+    },
+    {
+      "id": "FR-033",
+      "name": "后台任务与站内通知",
+      "acceptance_criteria": "断流非成功/取消，离开继续、事件游标补读/去重、401不重放人工决定、未知费用不普通重发；归档同锁检查未终结uploads/open batches，旧ticket/迟到producer不能归档后新写work，隔离字节不自动销毁/挂回",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "ASSIST",
+        "TASKS",
+        "OPS"
+      ],
+      "implementation_signal": "后台任务账本/取消/SSE与通知投影已有实现；frontend10独立用户实看本人成员通知/他人成员隔离；非真实调度运输",
+      "next_deliverable": "冻结实际relay/consumer/coordinator事件/cron触发→run→runs.notify→SSE断流补读闭环，取消/漏时/去重和unknown不重发",
+      "accountable_delivery_owner": "主开发+PM+前端；QA",
+      "delivery_packets": [
+        "TRANSPORT"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "USER10"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-034",
+      "name": "工程、标段、轮次、主体身份",
+      "acceptance_criteria": "近名不合并、pending主体不授可靠新用；旧冻结身份不被current profile改写，历史lot/round/body精确有据",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "IDENTITY",
+        "HISTORY",
+        "D"
+      ],
+      "implementation_signal": "当前identity真实主体选择/绑定/更正/分页已有实现，HISTinput QA19冻结旧主体；真实主体材料仍待",
+      "next_deliverable": "统一多工程/标段轮次/同公司默认显式绑定，历史Subject不从current profile补；缺证pending，近名不合并",
+      "accountable_delivery_owner": "主开发+研究+前端；QA",
+      "delivery_packets": [
+        "INTEGRATE",
+        "HISTORY"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "HIST"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-035",
+      "name": "标准提交与已发生事实补录",
+      "acceptance_criteria": "严格四类gate、纯评分不额外阻断；自身附件只用户声明非平台回执；事后检查走补录，不未来时间/假UUID/伪事前",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1"
+      ],
+      "implementation_signal": "标准/线下实交及更正/gate实现已有，事前身份/时间/证据声明产品口径明确；完整统一浏览器未验",
+      "next_deliverable": "PDF标准登记和事后补录各一条真路径+四gate反例，evidence自身稿仅用户声明非平台回执，risk snapshot同点冻结",
+      "accountable_delivery_owner": "主开发+前端；QA+用户",
+      "delivery_packets": [
+        "INTEGRATE"
+      ],
+      "evidence_ids": [
+        "BACK07"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-036",
+      "name": "任务用途与事后信息隔离",
+      "acceptance_criteria": "完整章节三判断、当前真实时间不回填、普通RAG不获历史豁免，测试组及未来信息不得穿来源祖先泄漏",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "HISTORY",
+        "MODEL",
+        "ASSIST",
+        "RAG"
+      ],
+      "implementation_signal": "HISTinput/Score用途隔离、完整图文三判断、无label/proof混入已有定向独立机制，助手聊天不授正式评分输入",
+      "next_deliverable": "统一各worker/缓存/authority源图隔离及历史四时点/真实监督标签准入；档案研究不回填事前预测",
+      "accountable_delivery_owner": "研究+助手+RAG Owner；QA+架构",
+      "delivery_packets": [
+        "SCORE"
+      ],
+      "evidence_ids": [
+        "HIST",
+        "SCORE",
+        "USER10"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-037",
+      "name": "章节编制、编写计划与AI修改预览",
+      "acceptance_criteria": "ACK才已保存/生成；冲突不覆盖，局部不动未选章节，失效引用拒绝；采纳非风险解决；PDF主路不被迫编辑器",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A2",
+        "ASSIST"
+      ],
+      "implementation_signal": "A2树/计划/双模板/PAGE02已实现并有QA4实际8页构建，不再说树计划缺；RICH/外来内容导入/完整AI尚未交付",
+      "next_deliverable": "A2-M1完整人工成稿整包，再A2-M2选区/多章AI差异；具体9任务见A2完整成稿交接",
+      "accountable_delivery_owner": "编制+解析+前端；QA+用户",
+      "delivery_packets": [
+        "A2-M1",
+        "A2-M2"
+      ],
+      "evidence_ids": [
+        "A2PAGE",
+        "WORD"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-038",
+      "name": "补遗变更及跨文档影响",
+      "acceptance_criteria": "机器只校字节/出处不假法律理解；多来源共同支撑不整批结束；notes不无谓造包，未知不猜最后上传",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A1",
+        "A2"
+      ],
+      "implementation_signal": "补遗三动作/效力和人工补漏已实现；Task05补遗仅registered关系核对，完整语义影响未完成",
+      "next_deliverable": "统一证据效力→新规则包→既有人工规则存续→章节/风险影响；独立完整语义补遗任务，不能将registered快照命名为完整检查",
+      "accountable_delivery_owner": "主开发+任务+编制Owner；QA",
+      "delivery_packets": [
+        "INTEGRATE",
+        "TASK-SEMANTIC"
+      ],
+      "evidence_ids": [
+        "BACK07",
+        "TASK05",
+        "USER10"
+      ],
+      "current_status": "implemented_frozen_scope_pending_full_acceptance"
+    },
+    {
+      "id": "FR-039",
+      "name": "目录／版式模板、版本生成与版面核对",
+      "acceptance_criteria": "受控Word→PDF链可追；外部同名不认同稿，失败Word保持未检查；格式分开、迟到不抢新稿；生产sandbox另验",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "A2"
+      ],
+      "implementation_signal": "A2双模板/PAGE页脚和Word受控转换有独立机制；真实目录章页、富文本、Word结构导入仍缺",
+      "next_deliverable": "A2-M1同一rich最终版面收TOC实页和章页范围/格式检查；外来Word动态域保持既有受限，不当目录生成通道",
+      "accountable_delivery_owner": "编制+解析+前端；QA+架构",
+      "delivery_packets": [
+        "A2-M1"
+      ],
+      "evidence_ids": [
+        "A2PAGE",
+        "WORD"
+      ],
+      "current_status": "scoped_independent_mechanism_evidence_pending_integration"
+    },
+    {
+      "id": "FR-040",
+      "name": "可复用任务、触发与运行记录",
+      "acceptance_criteria": "默认manual，AsiaShanghai/next_at明确，重复/漏时不无界收费；模板永不替人规则确认/提交/核分/发布",
+      "whole_requirement_accepted": false,
+      "implementation_streams": [
+        "TASKS"
+      ],
+      "implementation_signal": "Task05持久可编辑受限中文草案3API/一次保存有101开发+56架构，frontend10独立用户草案→模板→版本/事件/cron配置已实走；非NL未实现",
+      "next_deliverable": "真实调度运输和漏时去重；完整supplement语义与通用NL后续能力保留；4任务各自有效领域结果，不偷做人工决定",
+      "accountable_delivery_owner": "任务Owner+PM+前端；QA+用户",
+      "delivery_packets": [
+        "TRANSPORT",
+        "TASK-SEMANTIC"
+      ],
+      "evidence_ids": [
+        "TASK05",
+        "USER10"
+      ],
+      "current_status": "scoped_user_browser_evidence_pending_integration"
+    }
+  ],
+  "evidence_index": "evidence-index.json",
+  "software_runs_this_review": 0,
+  "browser_runs_this_review": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "whole_product_accepted": false,
+  "formal_model": "unavailable"
+}

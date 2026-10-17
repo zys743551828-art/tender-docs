@@ -1,0 +1,302 @@
+{
+  "schema": "word-mainflow-independent-acceptance/1",
+  "created_at": "2026-10-17T03:18:27.485484+00:00",
+  "status": "passed_scoped_mechanisms_with_actual_sandbox_conversion",
+  "blocking_findings": [],
+  "candidate_sha256": "9b609a89975c31ab945aacbbe8f63639edd37d51b622ee92c788146270cd7168",
+  "manifest_sha256": "d176e49a1e6a75ccb0ee5bac06d033689b1adf53e5a79ec7769ab4fabe8f6132",
+  "sources": 335,
+  "own_sources": 21,
+  "source_binding": "Executed original immutable runtime-preview-02 because its sandbox_runner absolute path is part of renderer identity; all 335 verified before/after and separately archived here. Copied audit tree not used as a different execution path.",
+  "loaded_application_modules": 159,
+  "actual": {
+    "sha256": "e1f7c5389386d7a9224ffc469bd878500a79e819780fee8c581781f73758e602",
+    "paths": 165,
+    "operations": 192,
+    "schemas": 315,
+    "cold_export_equals_frozen": true
+  },
+  "renderer_profile_digest": "61284d08db2703f4d753a3d098e0e54d8d84926ec5fa65c7ee3d3cf1f14a406b",
+  "executions": [
+    {
+      "path": "byte-response-fixed-execution/executed-test.py",
+      "sha256": "b31990eb4a7456ba32cedbaf78a204bbd08eda9b57a758802b38c4433b428ba5"
+    },
+    {
+      "path": "byte-response-fixed-execution/junit.xml",
+      "sha256": "8e4546545d021cce07afda7fc739da14128ecf70c9d1e7beb8501fb3fecf8651"
+    },
+    {
+      "path": "byte-response-fixed-execution/observations.json",
+      "sha256": "85517bcf801abbd7b39c6a9e1c9681c72e6df5000a64e705be3dc384fa7d9b0e"
+    },
+    {
+      "path": "download-field-fixed-execution/executed-test.py",
+      "sha256": "5d1b20e6d3d19f47c7df72f3816ecc573a77f9a1ade08bfd17e8042dc9a33938"
+    },
+    {
+      "path": "download-field-fixed-execution/junit.xml",
+      "sha256": "c2e73150c34ceccf619532ef8e28912f0e6771f0335d40ca2cb220ecfbc060c7"
+    },
+    {
+      "path": "download-field-fixed-execution/observations.json",
+      "sha256": "7a5ce1f3a6bea2e9a8a1db36da50f0871b328c4b3d24ccfd41d81e205ea25b6f"
+    },
+    {
+      "path": "withdrawal-and-order-delta-execution/executed-test.py",
+      "sha256": "4fcd7cf4585ff08328b18a9ef267f0fa4385ba96678fa24ce3c6fe9dd07de6c7"
+    },
+    {
+      "path": "withdrawal-and-order-delta-execution/junit.xml",
+      "sha256": "b577ed6d3f1b31988ba403eb0adab8b350b8f9473acfc5749da9e47227a38ba7"
+    },
+    {
+      "path": "withdrawal-and-order-delta-execution/observations.json",
+      "sha256": "7a6e6f2ee021bfe61f3ab5d6e07c0886445714dbe856a2422c576cdc3e76ca3e"
+    }
+  ],
+  "unique_cases": 11,
+  "observations": [
+    {
+      "name": "disabled_and_cross_bid",
+      "disabled_before_storage": true,
+      "wrong_bid_reads": 2
+    },
+    {
+      "name": "active_field",
+      "original_sha256": "2e4c62d2cb1b84dc2c1885218c565b0e1ca10a1fe6fcf7574b459cb4b415fd47",
+      "actual_docker_calls": 0,
+      "no_controlled_pdf": true,
+      "gaps": [
+        "WORD_PACKAGE_ACTIVE_CONTENT_BLOCKED"
+      ]
+    },
+    {
+      "name": "active_external",
+      "original_sha256": "361e1be91a735be30dc8015b4a0769961d2692e142d0f442329bebda109bd4fc",
+      "actual_docker_calls": 0,
+      "no_controlled_pdf": true,
+      "gaps": [
+        "WORD_PACKAGE_ACTIVE_CONTENT_BLOCKED"
+      ]
+    },
+    {
+      "name": "cancel_close",
+      "cancelled_finish_rejected": true,
+      "closed_worker_failed_no_pdf": true,
+      "profile": "explicit disabled renderer for race mechanism"
+    },
+    {
+      "name": "manual_pdf_and_new_word",
+      "manual_pdf_relation": "unverified",
+      "new_word_clears_current_pdf": true,
+      "prior_pdf_preserved_history": true
+    },
+    {
+      "name": "controlled_early",
+      "actual_no_network_docker": true,
+      "actual_cpu_parser": true,
+      "coverage": "complete",
+      "physical_pages": 1,
+      "pdf_sha256": "01ef4e8ee244de121e79d9ea56e9698c4b2154d8cfb98a630ff6075b4553d7c3",
+      "original_and_pdf_download_exact": true,
+      "word_root_no_chunks": true,
+      "word_pdf_parse_ancestry": true
+    },
+    {
+      "name": "controlled_late",
+      "actual_no_network_docker": true,
+      "actual_cpu_parser": true,
+      "coverage": "complete",
+      "physical_pages": 1,
+      "pdf_sha256": "fdfc4399b7b5cdcb695333061fd708427988e4c26681a708f3b755ba68e3d411",
+      "original_and_pdf_download_exact": true,
+      "word_root_no_chunks": true,
+      "word_pdf_parse_ancestry": true
+    },
+    {
+      "name": "adoption_byte_sha",
+      "tampered_actual_bytes_rejected": true,
+      "restored_exact_bytes_adopted": true
+    },
+    {
+      "name": "late_old_render",
+      "new_word_remains_selected": true,
+      "old_pdf_preserved_history": true,
+      "no_new_body_adoption": true
+    },
+    {
+      "name": "withdrawn_ancestor",
+      "actual_pg_head_withdrawn": true,
+      "adoption": {
+        "state": "needs_selection",
+        "reason": "WORD_SOURCE_WITHDRAWN",
+        "source_document_version_id": "fafeecf3-238f-4f99-b49c-602750dde58e",
+        "conversion_operation_id": "4b187042-fe82-4a8c-b7f2-ca270b7ca8ac",
+        "selection_id": "404f29ab-0984-47b5-910c-488dd70f7d2c"
+      },
+      "scope": "Ancestry explicitly established via actual API helper before withdrawal; no source head existed before first adoption in initial QA fixture"
+    },
+    {
+      "name": "request_order_latest_and_permissions",
+      "old_transaction_new_insert_wins": true,
+      "pending_and_failed_do_not_fall_back_to_old_success": true,
+      "protected_api_columns": 2,
+      "new_request": "explicit API repository mechanism fixture, not success-state retry HTTP permission",
+      "failure": "explicit local disabled render outcome/profile port adaptation; not natural renderer failure"
+    }
+  ],
+  "own_originals": [
+    {
+      "path": "own-originals/094d3bb5da39b0a8c04dff8c9937cc6fd1a939e374b0fd5a5dd3caa247051cd8.docx",
+      "sha256": "094d3bb5da39b0a8c04dff8c9937cc6fd1a939e374b0fd5a5dd3caa247051cd8",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/14b02da172173fc4abd1ccab5c2d723397f38da098037a534f97a80a2abdda61.docx",
+      "sha256": "14b02da172173fc4abd1ccab5c2d723397f38da098037a534f97a80a2abdda61",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/2e4c62d2cb1b84dc2c1885218c565b0e1ca10a1fe6fcf7574b459cb4b415fd47.docx",
+      "sha256": "2e4c62d2cb1b84dc2c1885218c565b0e1ca10a1fe6fcf7574b459cb4b415fd47",
+      "bytes": 924
+    },
+    {
+      "path": "own-originals/33aa1db7c921e05f21a4eaf1feb7d80af695017e1293f212085cd830ef0dc5d2.docx",
+      "sha256": "33aa1db7c921e05f21a4eaf1feb7d80af695017e1293f212085cd830ef0dc5d2",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/361e1be91a735be30dc8015b4a0769961d2692e142d0f442329bebda109bd4fc.docx",
+      "sha256": "361e1be91a735be30dc8015b4a0769961d2692e142d0f442329bebda109bd4fc",
+      "bytes": 934
+    },
+    {
+      "path": "own-originals/6d24c93949bc901f2b8972474d916e24df3cbfb499650a698a3db418c839fdde.docx",
+      "sha256": "6d24c93949bc901f2b8972474d916e24df3cbfb499650a698a3db418c839fdde",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/763ed6c25f39b319625387b373e7690f049738e3291dac54237ee01cb684d438.docx",
+      "sha256": "763ed6c25f39b319625387b373e7690f049738e3291dac54237ee01cb684d438",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/771a6d81b85a711e23ba2735fef0b876328b9b3224b9466ca7456e39cc5c557a.docx",
+      "sha256": "771a6d81b85a711e23ba2735fef0b876328b9b3224b9466ca7456e39cc5c557a",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/796b3a7184901b8cf115a24001509b81c3badd71f125f63c6ee993402b7b33f9.docx",
+      "sha256": "796b3a7184901b8cf115a24001509b81c3badd71f125f63c6ee993402b7b33f9",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/8bb65e2f9cefb9d79091f61d115587d2acc74431b2dd6e6a777ea8d6e135b142.docx",
+      "sha256": "8bb65e2f9cefb9d79091f61d115587d2acc74431b2dd6e6a777ea8d6e135b142",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/b6fdc24de7f53d3dd45f455fd992cb8bf10dff4fc5dabfa3d97077e735d252ba.docx",
+      "sha256": "b6fdc24de7f53d3dd45f455fd992cb8bf10dff4fc5dabfa3d97077e735d252ba",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/bddb723e61af817445f4b055663287b404b327e70a727697f65c78319237d1f8.docx",
+      "sha256": "bddb723e61af817445f4b055663287b404b327e70a727697f65c78319237d1f8",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/d85227121e0c1e4446d9f893ed83c4a602b6aa38d12fc7cd974a0311ea8328e9.docx",
+      "sha256": "d85227121e0c1e4446d9f893ed83c4a602b6aa38d12fc7cd974a0311ea8328e9",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/e102dba62a4a24fca74040060db251ef29af4c8008a573a5f93c80515f7e4ddc.docx",
+      "sha256": "e102dba62a4a24fca74040060db251ef29af4c8008a573a5f93c80515f7e4ddc",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/e2d013d54e18614d9b605d973a513db5b558df35a1813bf54ec704862b08c6ee.docx",
+      "sha256": "e2d013d54e18614d9b605d973a513db5b558df35a1813bf54ec704862b08c6ee",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/eaa7b9328649d2fa17ab320878900664d34a9498c00fd0e70cb73705a9aae207.docx",
+      "sha256": "eaa7b9328649d2fa17ab320878900664d34a9498c00fd0e70cb73705a9aae207",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/eeff40ed50d5b5d018262196532897b6a4d0b143469addb4fc88434aa28476a6.docx",
+      "sha256": "eeff40ed50d5b5d018262196532897b6a4d0b143469addb4fc88434aa28476a6",
+      "bytes": 939
+    },
+    {
+      "path": "own-originals/f8820cb843026997118303e32fa2220e1a2a9d52df5e691a84d45c715052ff12.docx",
+      "sha256": "f8820cb843026997118303e32fa2220e1a2a9d52df5e691a84d45c715052ff12",
+      "bytes": 939
+    }
+  ],
+  "catalog": {
+    "path": "actual-catalog-and-own-runs.json",
+    "sha256": "3b1236950c61e6ae23056c57b6cb0a5cb33384cd2b573a953c77037bc9333e80",
+    "actual_request_order_default": "clock_timestamp()",
+    "own_model_calls": 0
+  },
+  "counter": {
+    "real_model_calls": 0,
+    "cloud_object_requests": 0,
+    "consumers": 0,
+    "relays": 0,
+    "new_DDL": 0,
+    "owner_permission_changes": 0,
+    "live_services_changed": 0
+  },
+  "ports": {
+    "http": "real ASGI with Cookie/CSRF/Origin, actual main router registration; not TCP/browser",
+    "database": "real isolated word_mainflow03 nonowner API and ordinary Worker; no DDL/grant changes",
+    "object_transport": "explicit Memory object facade through actual same-origin transfer PUT/GET handlers; no native OSS",
+    "conversion": "actual fixed local no-network/nonroot/read-only Docker sandbox and fixed renderer profile for successful production paths",
+    "parse": "actual isolated local CPU parser with frozen implementation and local assets; not external HTTP8812 adapter",
+    "queue": "authoritative actual Outbox envelopes, actual engine acquire/run_compute/finish; no Kafka",
+    "latest_failed": "explicit local disabled-render port injected only for newly accepted latest request; no natural renderer-failure claim"
+  },
+  "preserved_failed_rounds": [
+    {
+      "path": "primary-execution",
+      "cause": "QA Memory put returned None but same-origin handler legitimately requires ETag; only QA port changed"
+    },
+    {
+      "path": "memory-port-fixed-execution",
+      "cause": "QA attempted JSON decode of legitimate empty PUT 200; only QA assertion changed"
+    },
+    {
+      "path": "docker-execution",
+      "cause": "QA used url instead of actual download_url after successful actual Docker/adoption/parse; only QA field corrected"
+    },
+    {
+      "path": "download-field-fixed-execution",
+      "cause": "4 passed; withdrawal QA UPDATE affected zero rows because no provenance root yet existed before first adoption; corrected fixture establishes actual helper ancestry then asserts precisely 1 withdrawn row, final delta passes"
+    }
+  ],
+  "qualified_boundaries": [
+    "Default Word intake disabled returns 503 before object write; dedicated test flag enabled only in process",
+    "Dynamic PAGE field and external relationships retained as original bytes without any sandbox invocation or controlled PDF qualification",
+    "Actual early/late controlled conversion adopts current PDF, parses readable evidence, exact Word/PDF byte download, Word root has no chunks",
+    "Actual changed PDF object rejected before adoption; restoration of exact bytes accepted",
+    "Late old controlled PDF retained as history and cannot replace new selected Word",
+    "Existing explicit canonical Word ancestry withdrawn makes adoption needs_selection; fixture explicitly uses API ancestry helper before withdrawal",
+    "Cancelled finish rejected; closed project ordinary Worker produces no Word outcome/PDF; disabled-render race mechanism",
+    "User provided same-draft PDF relation remains unverified; later Word clears current PDF and retains historical original",
+    "New request accepted by older transaction orders by INSERT time; new pending/failed does not use old green result; API cannot update created_at/outcome"
+  ],
+  "not_accepted": [
+    "Kafka and production consumer recovery across process restarts",
+    "Native OSS or production cloud transport",
+    "Browser/Word front end",
+    "Real user complex Word fidelity, missing-font corpus or broad parser accuracy",
+    "Formal review/score/three judgments or Word delivery-check qualification",
+    "Broader lifecycle/comparison/assistant/moving source combinations"
+  ]
+}

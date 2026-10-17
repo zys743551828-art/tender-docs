@@ -1,0 +1,173 @@
+{
+  "candidate": "application-recovery-code-02",
+  "status": "frozen_for_static_review_before_new_resources",
+  "predecessor": {
+    "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-01/candidate.json",
+    "sha256": "a886ce893db31eeb36b7e3a4f74152b46c1d932b2b5780a3f3b5f05aa05460cd",
+    "original_frozen_files_reverified_unchanged": true
+  },
+  "protocol_handoff": {
+    "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/frozen-handoff.json",
+    "sha256": "c83277d5bde654b75fa9448d2961a967ed810c36ebbf66e2e6068dade70126e1"
+  },
+  "owned_sources": [
+    {
+      "path": "deploy/application_recovery/__init__.py",
+      "sha256": "e4d465414abbe571ccc96c65d27f7ab0e4352ad53dbfd876cdd4e2c3eefa92d5",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/__init__.py"
+    },
+    {
+      "path": "deploy/application_recovery/__main__.py",
+      "sha256": "f9e1b159225e663a00485e8964b464faf9ffe64fb3ac36ee0ca27bce619020b7",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/__main__.py"
+    },
+    {
+      "path": "deploy/application_recovery/application.py",
+      "sha256": "01d07137889022d6b089f063fc1cae9e132572301e81f7085bea50ac6666645a",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/application.py"
+    },
+    {
+      "path": "deploy/application_recovery/archive.py",
+      "sha256": "0fc31336296b22e7686567150f95023b1819b331855d819e013f35a3520d37f0",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/archive.py"
+    },
+    {
+      "path": "deploy/application_recovery/assets.py",
+      "sha256": "c2943d06b95101229a6a662ece9682ef003e56720f8ee381e2a7c16e2a549e5b",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/assets.py"
+    },
+    {
+      "path": "deploy/application_recovery/binding.py",
+      "sha256": "7bef1c064ca49b9fa1d7230757dcf23bce6a015a093edff3805f3c4226a43a7d",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/binding.py"
+    },
+    {
+      "path": "deploy/application_recovery/cluster.py",
+      "sha256": "6b229e49845bcdc8efa58f9cecef00736a1bea90ce6b0b3dee5423bfb1180c59",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/cluster.py"
+    },
+    {
+      "path": "deploy/application_recovery/fixture.py",
+      "sha256": "d525307a303e17df9b874f733255c40bcc24a76d3703b1603c0636c904cb7594",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/fixture.py"
+    },
+    {
+      "path": "deploy/application_recovery/probes.py",
+      "sha256": "502913ec58fab64549099712f632e8fe31f7d9c49778da3521004de0545a381e",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/probes.py"
+    },
+    {
+      "path": "deploy/application_recovery/runtime_child.py",
+      "sha256": "5f3b0837f266caf80aa0e890b40316f69c75a3f8e554f63c299a97a9bcd96eff",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/runtime_child.py"
+    },
+    {
+      "path": "deploy/application_recovery/security.py",
+      "sha256": "e24cafbeca06994459af7ef66f6483120c14da74c0991c5c126149750db0c4a3",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/deploy/application_recovery/security.py"
+    },
+    {
+      "path": "tests/test_application_recovery.py",
+      "sha256": "2b8c18b6d9effaef5a4482b37b64ae090ae2ac6d32c05985ebb88356d697679d",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/tests/test_application_recovery.py"
+    },
+    {
+      "path": "tests/test_application_recovery_binding.py",
+      "sha256": "5aa85f612b99dcefd6836445aac3556da7b7f96c3325e4ba68c46acba41de069",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/frozen-inputs/tests/test_application_recovery_binding.py"
+    }
+  ],
+  "observed_dependencies": [
+    {
+      "path": "deploy/backups/generic.py",
+      "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/deploy/backups/generic.py"
+    },
+    {
+      "path": "deploy/backups/run.py",
+      "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/deploy/backups/run.py"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/requirements.lock.txt"
+    },
+    {
+      "path": "requirements-rag.lock.txt",
+      "sha256": "2d7e749d61d11b1294a75b30df0ea0c55891a5a54138abcb232fa2a3c5830776",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/requirements-rag.lock.txt"
+    },
+    {
+      "path": "requirements-parsing.lock.txt",
+      "sha256": "fc8886726ba4ccf2a0e62291adc9da624f8c28cb08305b6327d1b739de7115a8",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/requirements-parsing.lock.txt"
+    },
+    {
+      "path": "packages/parsing/assets.json",
+      "sha256": "c7f61266d71825d9bf97195e1cf675fd5d42ff6a5c9f7cc2db3d4c607dee06c5",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/packages/parsing/assets.json"
+    },
+    {
+      "path": "packages/parsing/core.py",
+      "sha256": "0574d97ee49c9e226b1de882a7ded9a69c43bb52672bf4b7a0f56d77ec28a3c3",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/packages/parsing/core.py"
+    },
+    {
+      "path": "packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+      "archive": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/observed-inputs/packages/word_intake/renderer.py"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/offline-tests.xml",
+      "sha256": "08815d7e332cc1382e5e2b58f8d066f0850f6cc99cd8c81bd961aadb76aa963c"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/module-origin-check.json",
+      "sha256": "79618718b93ea5f53177029a66e0cf8a657cb4553b94d63c5e27f108926007ff"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/code-02/implementation-delta.md",
+      "sha256": "f6baa26e6d2e31b872dabc0ad3e54e1211c3caa2c0eda9c3799e3e98d10841e0"
+    }
+  ],
+  "backend": {
+    "manifest": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/runtime-manifest.json",
+    "sha256": "71fe0fb2c9dbde7d85e62d20bef2da8e188e59ac00e9eb056cc021a1bd75274e",
+    "file_count": 308,
+    "source_root": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs"
+  },
+  "scope": "All phase source-only fixed07 binding; actual API acceptance isolated single-purpose -I child; positive environment and no live import fallback; stricter disk gates",
+  "offline_tests_passed": 53,
+  "actual_imported_fixed_production_modules": 132,
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy_11": "passed",
+    "bandit": "passed"
+  },
+  "resources_created": 0,
+  "DDL_executed": false,
+  "DB_connections": 0,
+  "OSS_requests": 0,
+  "model_calls": 0,
+  "consumers_started": false,
+  "default_application_state": "work_paused",
+  "old_inflight_resume_qualified": false,
+  "resource_gate": {
+    "initial_free_required_MiB": 1600,
+    "before_each_cluster_required_MiB": 900,
+    "image_pull_allowed": false,
+    "cleanup_others_allowed": false
+  },
+  "known_limits": [
+    "No actual new fresh/restore/application evidence yet",
+    "15 reviewed SQL only; newer Word and score changes require separate input review",
+    "API environment/input isolation is not an OS filesystem sandbox",
+    "External CPU assets remain bytes-only, Word sandbox pending",
+    "No old queue continuation or persistent backend recovery epoch fence",
+    "No production RPO/RTO/capacity qualification"
+  ]
+}

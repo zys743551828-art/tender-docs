@@ -1,0 +1,89 @@
+{
+  "scope": "历史协议与全量交付任务的静态完整性；非架构SQL、应用、真人或模型通过",
+  "passed": true,
+  "checks": [
+    {
+      "name": "40FR完整",
+      "passed": true
+    },
+    {
+      "name": "40FR可执行且未自动通过",
+      "passed": true
+    },
+    {
+      "name": "八工作包归属存在",
+      "passed": true
+    },
+    {
+      "name": "历史13任务均待执行",
+      "passed": true
+    },
+    {
+      "name": "主04契约摘要匹配",
+      "passed": true
+    },
+    {
+      "name": "研究03读取依据未改",
+      "passed": true
+    },
+    {
+      "name": "旧记录字节不变:a1-acceptance.json",
+      "passed": true
+    },
+    {
+      "name": "旧记录字节不变:product-progress/remaining-fr.json",
+      "passed": true
+    },
+    {
+      "name": "旧记录字节不变:plan-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "链接存在:历史可见证明与回测输入协议.md",
+      "passed": true
+    },
+    {
+      "name": "链接存在:README.md",
+      "passed": true
+    },
+    {
+      "name": "链接存在:归档写入意图边界.md",
+      "passed": true
+    },
+    {
+      "name": "无软件/浏览器/收费或凭据操作",
+      "passed": true
+    }
+  ],
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "architecture_boundary": "协议已交架构，actual Schema/受限SQL及fresh执行须后续静审和独立验证，本轮不宣称完成",
+  "bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/历史可见证明与回测输入协议.md",
+      "sha256": "c951503cb9c357b095fec96f13d5f624d46ad7b2c1440ac3597a39e4756de9c7"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/acceptance.json",
+      "sha256": "bccb278a34e5814c5a5f62b7064bbbaef08488162408800b339d839d92b85704"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/protocol-inputs.json",
+      "sha256": "45fbdbf5b0f1e4eea451174b03a65612a4b8f386288c4f68f8f25c4ea18c20a7"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/execution-backlog/README.md",
+      "sha256": "430fb12e96b8aa93541219f51dfc12528da80bdc0eb69c4e38ac32707862a744"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/execution-backlog/remaining-fr.json",
+      "sha256": "82863dded5e7105377e4772cac611bf3954163a5516a2b8b10765b07d490b888"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/execution-backlog/归档写入意图边界.md",
+      "sha256": "bcc81e6f4bd1d3532a28b228bb9316cd75fd9cb6d352eb7ee684ebe6fd31c349"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "first": {
+    "bid_id": "2804a6c0-3c8c-41e8-9d84-805672932691",
+    "phase": "working",
+    "archived_at": null,
+    "revision": 1,
+    "allowed_actions": [
+      "terminate"
+    ],
+    "archive_blockers": [],
+    "active_operations": [],
+    "unfinished_uploads": [],
+    "unfinished_batches": [],
+    "batch_closure_available": true
+  },
+  "later": {
+    "bid_id": "2804a6c0-3c8c-41e8-9d84-805672932691",
+    "phase": "working",
+    "archived_at": null,
+    "revision": 1,
+    "allowed_actions": [
+      "terminate"
+    ],
+    "archive_blockers": [],
+    "active_operations": [],
+    "unfinished_uploads": [],
+    "unfinished_batches": [
+      {
+        "id": "aa5c0a7b-b27d-4a45-aade-679c7abcb00a",
+        "state": "open",
+        "revision": 1
+      }
+    ],
+    "batch_closure_available": true
+  },
+  "first_etag": "\"project-lifecycle:2804a6c0-3c8c-41e8-9d84-805672932691:6c8c9e3a1c7d080eb9ac42b56822db3ab886395245313d6ef8461bdeefce4069\"",
+  "later_etag": "\"project-lifecycle:2804a6c0-3c8c-41e8-9d84-805672932691:1ca6bca112522744dd174493701a622d49efe1318a8fc76c5a483355cd71da21\"",
+  "stale_write_status": 412,
+  "original_candidate01_evidence_preserved": true
+}

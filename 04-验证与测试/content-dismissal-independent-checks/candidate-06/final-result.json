@@ -1,0 +1,97 @@
+{
+  "status": "passed_in_scoped_independent_acceptance",
+  "blocking_findings": [],
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/candidate-06.json",
+    "sha256": "b86d5c3c818c18b09ad42720f318b61852a99737a82bac017637d7aec08cd60f",
+    "own_sources": 11,
+    "runtime_sources": 266,
+    "runtime_manifest_sha256": "6ed8d9b578e2c098e8f806bf3649e3394d3f8afe93cb5833448008a8302440b8"
+  },
+  "actual_openapi": {
+    "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/cold-identity-execution/actual.openapi.json",
+    "sha256": "50f48f6803485cf33f3bfcc78cfd81a768b4fcde0dc4317285ee31408e03f633",
+    "paths": 136,
+    "operations": 160,
+    "schemas": 281,
+    "cold_export_not_live_upgrade": true
+  },
+  "independent_executions": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/execution/result.json",
+      "sha256": "1dd137034fb9bdc0b0dcf060d5af734f3581121864d9d9c1740155a33bc0b1ea",
+      "passed": true,
+      "checks": 6
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/legacy-read-and-decision-execution/result.json",
+      "sha256": "dbe55fef862a15e1be61456b2b67169cb9e4c088cc8db8a48f98c4010799e023",
+      "passed": true,
+      "checks": 7
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/local-quote-execution/result.json",
+      "sha256": "3d3a6cb691c8cbeae5f7c89e7fa5ae7e767556778abaa2b170f115c487c40f95",
+      "passed": true,
+      "checks": 5
+    }
+  ],
+  "cold_identity": {
+    "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/cold-identity-execution/result.json",
+    "sha256": "255c31cf6394298481667d37d996bd98e8e42ad02a381612e7c5564dad1a699f",
+    "passed": true,
+    "checks": 0
+  },
+  "retained_baselines": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/baseline-main05/fixed-page-digest-execution/result.json",
+      "sha256": "2ac183ff4058dd89ea9dbb59c8cc4b5e6d607d00afd867fe7f573b51501847df",
+      "passed": false,
+      "checks": 6
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/baseline-main05/local-quote-execution/result.json",
+      "sha256": "21d5e00a678c1d09e9ef2c03c60e86623f8b83095282fc142a0afb8530a5f78e",
+      "passed": false,
+      "checks": 5
+    }
+  ],
+  "carried_forward_not_rerun": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/baseline-main05/optional-isolation-execution/result.json",
+      "sha256": "8506a3e2468875adc7122941ef65a52e6223feb0ae96334ea45429e02fc2dc62",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/baseline-main05/conversation-persistence-execution/result.json",
+      "sha256": "7dab875de8044aac3c274c4bfd34ef410cc9bf467ef40dcd97d57bd192fa2ae1",
+      "passed": true,
+      "checks": 9
+    }
+  ],
+  "carry_forward_source_binding": {
+    "path": "/workspace/tender-docs/04-验证与测试/content-dismissal-independent-checks/candidate-06/unchanged-mechanism-source-binding.json",
+    "sha256": "148265b042a338b456cafcf9331b648623b44c8e14eda98a959386e2351e08f4",
+    "exact_unchanged_files": 7
+  },
+  "allowed_scope": [
+    "Actual restricted Worker fenced content publish: old grounded90/120 reasoned dismiss and identical frozen-body control; new real PDF SHA95/125 with two new evidence sides remains open/new root without old decision.",
+    "Actual nonowner PG + real GETfinding/POSTfindingdecision ASGI on immutable erroneous frozen05 carry: old decision excluded from projection, late ancestor dismiss cannot silence new conflict, new decision writes actual new finding, idempotent lost-ACK replay; old row and old decision unchanged.",
+    "Independent complete-range dictionaries through production prepare/validate_output: other-project, other-lot and nested-quote borrowed numeric values rejected, partial and critical-rule impact retained; two valid local relations accepted.",
+    "Previously executed optional failure isolation8 and work-conversation persistence9 conditionally retained for exactly SHA-unchanged engine/ledger/runtime/conversation/auth source paths; not executed again against06."
+  ],
+  "limits": [
+    "Synthetic Chinese PDF originals are real bytes; targeted publisher fixtures use explicit parsed-page/source SQL and explicit model-output dictionaries. No parser/OCR/business-model quality acceptance.",
+    "Fenced content publish uses explicit test routing from document/1 engine envelope; it is not actual review Kafka scheduling/consumer or remote model acceptance.",
+    "HTTP tests use actual production routers through ASGI, not live browser/network API upgrade. Core fixture profile has no current review and cannot establish complete submission gate behavior.",
+    "No whole lifecycle/global assistant generation/comparison transport/production quality acceptance. No new SQL, owner business permissions or changes to frozen05/fixed263/live8806.",
+    "Physical legacy carry provenance is immutable and remains; applicability projection and decision_subject prevent borrowing old human decisions. Fresh06 publication starts a new root when evidence is not equivalent."
+  ],
+  "paid_calls": 0,
+  "provider_calls": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "new_sql_applied": false,
+  "test_sources_modified": false
+}

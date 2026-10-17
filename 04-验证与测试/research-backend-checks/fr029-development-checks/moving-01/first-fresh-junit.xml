@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="13.112" timestamp="2026-10-16T20:01:13.985018+00:00" hostname="597cea30c71f"><testcase classname="tests.test_model_governance_integration" name="test_real_purpose_child_training_then_committed_exposure_evaluation_remains_synthetic" time="7.446" /><testcase classname="tests.test_model_governance_integration" name="test_purpose_permissions_and_exposure_must_commit_before_final_label_read" time="5.152"><failure message="TypeError: 'NoneType' object is not subscriptable">client = (&lt;starlette.testclient.TestClient object at 0x7ffa223ea2a0&gt;, UUID('dff16b4b-5a2d-4d6f-af92-518ce9e1ae32'), &lt;function c...a5fc2a904d038e65a1b81d6dbc49d8f7a7f2597","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+
+    def test_purpose_permissions_and_exposure_must_commit_before_final_label_read(client):
+&gt;       job, _, _ = queued_evaluation(client)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_model_governance_integration.py:228: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_model_governance_integration.py:181: in queued_evaluation
+    job, cohort, items = queued_training(client)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_model_governance_integration.py:169: in queued_training
+    cohort, items = frozen_cohort(client)
+                    ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = (&lt;starlette.testclient.TestClient object at 0x7ffa223ea2a0&gt;, UUID('dff16b4b-5a2d-4d6f-af92-518ce9e1ae32'), &lt;function c...a5fc2a904d038e65a1b81d6dbc49d8f7a7f2597","usage":{"completion_tokens":20,"prompt_tokens":10,"total_tokens":30}}', ...})
+
+    def frozen_cohort(client):
+        web, _, headers, _ = client
+        run, samples, items = complete_research(client)
+        protocol = web.post(
+            "/api/v1/model-governance/training-protocols",
+            json={"document": bundle()["protocol"], "reason": "显式合成软件协议，永不授正式资格"},
+            headers=headers(),
+        )
+        if protocol.status_code == 409 and protocol.json().get("code") == "TRAINING_PROTOCOL_EXISTS":
+            from packages.model_governance.common import digest
+    
+            with connection() as c:
+&gt;               existing = c.execute(
+                    "SELECT id FROM model_governance.protocols WHERE digest=%s",
+                    (digest(bundle()["protocol"]),),
+                ).fetchone()["id"]
+E               TypeError: 'NoneType' object is not subscriptable
+
+tests/test_model_governance_integration.py:145: TypeError</failure></testcase></testsuite></testsuites>

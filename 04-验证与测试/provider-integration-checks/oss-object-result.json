@@ -1,0 +1,46 @@
+{
+  "scope": "指定真实杭州OSS bucket的本次合成UUID前缀PUT/GET/私有签名/匿名拒绝/中文名/条件写/清理",
+  "passed": true,
+  "started_at": "2026-10-16T16:26:39.900813+00:00",
+  "checks": [
+    "指定本次UUID中文key条件PUT成功",
+    "真实鉴权GET原字节SHA一致",
+    "同key forbid-overwrite拒绝409且原字节保持",
+    "中文名私有签名下载真实SHA一致，去签名匿名403"
+  ],
+  "object_list_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "object_key": "workbench-checks/de291803-b31a-4746-ade7-73bc09728cf6/合成资料原件-市政道路.pdf",
+  "put": {
+    "status": 200,
+    "request_id": "6AD250407A439F31386D3923"
+  },
+  "get": {
+    "status": 200,
+    "request_id": "6AD250417A439F3138373A23",
+    "sha256": "8c58fc0a7174f377d230adb13b4614777c9104e86777a556c06bead851735616"
+  },
+  "conditional_put": {
+    "status": 409,
+    "code": "FileAlreadyExists",
+    "request_id": "6AD250417A439F31384C3B23"
+  },
+  "signed_download": {
+    "status": 200,
+    "sha256": "8c58fc0a7174f377d230adb13b4614777c9104e86777a556c06bead851735616",
+    "filename": "资料原件-市政道路.pdf",
+    "request_id": "6AD250427A439F3138953C23"
+  },
+  "anonymous": {
+    "status": 403,
+    "request_id": "6AD250427A439F3138353D23"
+  },
+  "cleanup": {
+    "status": 204,
+    "request_id": "6AD250427A439F3138CA3D23",
+    "only_created_object": true,
+    "exact_version": false
+  },
+  "finished_at": "2026-10-16T16:26:42.751360+00:00",
+  "probe_sha256": "a83568cf1bc4b070edcb75bec91b245a69bd552374735ba499c5ffe4f7c9c35e"
+}

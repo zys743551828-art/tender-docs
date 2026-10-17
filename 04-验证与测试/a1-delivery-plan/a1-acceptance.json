@@ -1,0 +1,1311 @@
+{
+  "scope": "原13项后续应用验收的执行拆解；不改变原状态，不是软件执行证据",
+  "original_source": "04-验证与测试/design-remediation-checks/application-acceptance.json",
+  "original_source_sha256": "4f796c81ab029881b872821ca9b0d328b539a98df52f546586cd6bdec91b18f9",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "fixture_requirements": [
+    "无敏感合成来源和正文；版本/物理页/引用可核验",
+    "测试适配器与真实模型路径分别标记；脚本化判断不证明实际检测质量",
+    "故障由开发/测试隔离注入，不篡改其他成员项目",
+    "真人任务观察独立记录，智能体浏览器不算真人验证"
+  ],
+  "cases": [
+    {
+      "id": "PPR-AC-01",
+      "original_setup": "已有已确认关键矛盾，关闭检测后刷新、导出并尝试标准登记",
+      "original_expected": "统一风险清单与报告仍可定位该问题并处理；未处理仍阻断。模块普通催办停止。",
+      "original_requires": "应用/API与浏览器",
+      "delivery_stage": "A1.2+A1.3",
+      "execution_steps": [
+        "建立同一项目招标和正文V1的真实关键矛盾夹具；执行评审并确认该问题待改，记录finding和origin_review身份。",
+        "关闭consistency，刷新并离开重回；查看统一风险列表、问题详情、响应矩阵，再创建Word评审报告。",
+        "查看提交检查并尝试标准登记；另核普通非阻断矛盾提醒是否停止。"
+      ],
+      "ui_assertions": [
+        "关键问题仍可定位、打开原轮及两侧依据；说明先前检测发现、本轮未运行，确认待改不显示解决。",
+        "报告保留相同未处理关键问题，gate定位该问题；普通模块催办可停止。"
+      ],
+      "backend_assertions": [
+        "Settings变更只停后续可选检测，不能删除或隐式dismiss既有关键finding。",
+        "该问题retained_known_critical=true，未解决/未有理由驳回时在新统一清单和gate中；标准写入再次重算并拒绝。"
+      ],
+      "target_operation_ids": [
+        "requestReview",
+        "updateSettings",
+        "getReview",
+        "listFindings",
+        "decideFinding",
+        "getMatrix",
+        "createReport",
+        "authorizeDownload",
+        "getSubmissionGate",
+        "registerSubmission"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ProjectSettings",
+          "fields": [
+            "consistency"
+          ]
+        },
+        {
+          "schema": "FindingView",
+          "fields": [
+            "id",
+            "origin_review_id",
+            "retained_known_critical",
+            "detection_run_state",
+            "lifecycle",
+            "decision"
+          ]
+        },
+        {
+          "schema": "GateView",
+          "fields": [
+            "allowed",
+            "blockers"
+          ]
+        },
+        {
+          "schema": "ArtifactView",
+          "fields": [
+            "artifact_kind",
+            "state",
+            "sha256"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R03"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-02",
+      "original_setup": "关闭检测再创建一轮无此检测的评审，随后分别有效复检或有理由驳回",
+      "original_expected": "本轮标未运行，旧问题不自动解决；仅有效复检或有理由决定改变实际状态。",
+      "original_requires": "应用/API与浏览器",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "保留PPR-AC-01的未解决关键问题，关闭检测后对当前稿发起真实新评审。",
+        "分两条独立夹具：A重新开启检测并上传有据修正PDF、有效复检；B对误报填写理由并驳回。",
+        "再刷新旧轮、当前问题和提交检查；另试暂缓、采纳建议、手动发送resolve。"
+      ],
+      "ui_assertions": [
+        "新轮未运行显示未运行；采纳/暂缓/确认均不称解决。",
+        "A显示有效复检解决，B显示有理由驳回；两者不再因该项阻断且旧依据/决定可查。"
+      ],
+      "backend_assertions": [
+        "无检测或零新finding不能生成resolved_by_recheck；只有覆盖相同义务的有效复核可写该状态。",
+        "拒绝人工resolve/resolved_by_recheck；dismiss理由非空并留操作者和时间；其他独立阻断照常存在。"
+      ],
+      "target_operation_ids": [
+        "updateSettings",
+        "requestReview",
+        "listFindings",
+        "decideFinding",
+        "getSubmissionGate",
+        "getReview"
+      ],
+      "schema_refs": [
+        {
+          "schema": "FindingView",
+          "fields": [
+            "id",
+            "review_id",
+            "origin_review_id",
+            "detection_run_state",
+            "lifecycle",
+            "decision_revision"
+          ]
+        },
+        {
+          "schema": "DecisionRequest",
+          "fields": [
+            "decision",
+            "reason",
+            "evidence_ids"
+          ]
+        },
+        {
+          "schema": "DecisionView",
+          "fields": [
+            "actor_id",
+            "created_at",
+            "object_revision"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R03",
+        "AU-05"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-03",
+      "original_setup": "标注核心来源11项而抽取10项，当前10项均完成；人工补回遗漏项",
+      "original_expected": "只称已识别核心规则10/10，来源范围和遗漏分别表达；补回新规则包使旧评审过期。",
+      "original_requires": "应用/API与代表性人工标注来源",
+      "delivery_stage": "A1.1+A1.2",
+      "execution_steps": [
+        "测试提供已人工标注11项核心要求的来源，适配器明确只提取10项；使已识别10项全部有效完成。",
+        "查看覆盖卡和矩阵，分别核必要全文读取、已提取要求、已识别核心判定、评分、人工确认和检测质量。",
+        "打开遗漏原页，补充并确认第11项；刷新旧轮并明确发起复评。"
+      ],
+      "ui_assertions": [
+        "只显示已识别核心规则核对10/10；全文读取、已知提取缺口、评分及待人工确认分开。",
+        "无代表性质量测量时显示检测质量待验证，不以单例10/10或全文读取声称零漏提。",
+        "补回后新包可读，旧轮标输入过期，有明确复评入口，不能直接当前可登记。"
+      ],
+      "backend_assertions": [
+        "ReviewCoverage四层独立分母与gaps；提取质量not_measured不能被转换为measured。",
+        "correctRuleSet生成新规则集和人工确认，旧manifest保持原10项，新请求冻结11项。"
+      ],
+      "target_operation_ids": [
+        "getRules",
+        "getReview",
+        "getMatrix",
+        "correctRuleSet",
+        "requestReview",
+        "getSubmissionGate",
+        "getEvidence"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ReviewCoverage",
+          "fields": [
+            "source_scope",
+            "core_extraction",
+            "judgment",
+            "scoring",
+            "extraction_quality",
+            "quality_report_id",
+            "human_confirmation_pending"
+          ]
+        },
+        {
+          "schema": "CoverageLayer",
+          "fields": [
+            "state",
+            "planned",
+            "completed",
+            "denominator_basis",
+            "gaps"
+          ]
+        },
+        {
+          "schema": "RuleSetView",
+          "fields": [
+            "id",
+            "material_revision",
+            "rules",
+            "revision"
+          ]
+        },
+        {
+          "schema": "ReviewManifest",
+          "fields": [
+            "rule_set_id",
+            "material_revision",
+            "body_version_id"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R01",
+        "AU-R04"
+      ],
+      "actual_contract_gaps": [
+        "GAP-MANIFEST-READ"
+      ],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-04",
+      "original_setup": "核心核对均有效，纯评分失败；另造兼有否决条件的同条款核心核对失败",
+      "original_expected": "前者保留评分缺口且可按核心闸门登记，后者阻断；不以评分资格代替核心条件。",
+      "original_requires": "应用/API",
+      "delivery_stage": "A1.1+A1.3",
+      "execution_steps": [
+        "夹具A：全部核心要求核对及必要人工确认有效，只有纯评分判断失败或预测未验收。",
+        "夹具B：同条款同时有否决/强制义务，其核心核对失败；保留评分失败。",
+        "分别看覆盖、提交检查及标准登记实际响应。"
+      ],
+      "ui_assertions": [
+        "A保留评分缺口/无法可靠估分，核心满足时可登记；B定位核心失败并阻断。",
+        "评分失败不当0分、半分、旧分；同条款核心义务不能因分类为评分被忽略。"
+      ],
+      "backend_assertions": [
+        "Gate根据生效核心义务、完整必要范围、待确认项及未解决关键问题重算；纯评分failed不单独成为阻断。",
+        "服务端registerSubmission拒绝B，A成功须冻结真实body/review/material关系并留审计。"
+      ],
+      "target_operation_ids": [
+        "getMatrix",
+        "getPrediction",
+        "getSubmissionGate",
+        "registerSubmission",
+        "getSubmission"
+      ],
+      "schema_refs": [
+        {
+          "schema": "RuleView",
+          "fields": [
+            "kind",
+            "statement",
+            "conditions"
+          ]
+        },
+        {
+          "schema": "MatrixRow",
+          "fields": [
+            "rule",
+            "check_status",
+            "verdict",
+            "error_code"
+          ]
+        },
+        {
+          "schema": "ReviewCoverage",
+          "fields": [
+            "judgment",
+            "scoring"
+          ]
+        },
+        {
+          "schema": "PredictionView",
+          "fields": [
+            "mode",
+            "reasons"
+          ]
+        },
+        {
+          "schema": "SubmissionRequest",
+          "fields": [
+            "body_version_id",
+            "review_id",
+            "material_revision",
+            "submitted_at",
+            "evidence_ref"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R07",
+        "AU-06"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-05",
+      "original_setup": "模型未验收条件下演示相同稿件的风险与完整章节三判断研究产物",
+      "original_expected": "A1、研究链路、模型业务验收三个独立状态；无合并评分通过绿标，禁止正式总分冒充。",
+      "original_requires": "应用与交付验收",
+      "delivery_stage": "C",
+      "execution_steps": [
+        "前提是A1已独立验收和研究链路真实可运行；模型业务资格仍未验收。",
+        "对相同稿件展示真实风险结果，再独立发起完整相关章节及必要图表的三次独立判断研究运行。",
+        "取研究实际输入/三判断/费用与失败产物，查看项目预测和交付状态。"
+      ],
+      "ui_assertions": [
+        "A1可用、研究可运行、模型业务验收三个结论分别呈现，不作合并全绿。",
+        "研究产物明示研究用途、未具正式预测资格；日常PDF用户无需进入研究配置才能核对/登记。"
+      ],
+      "backend_assertions": [
+        "ScoreInput与ChapterPackage完整冻结，不以RAG top-k替代；三次须独立且合法，失败不凑数。",
+        "无业务验收资格不得返回正式accepted总分/区间；保留研究及风险各自真实身份。"
+      ],
+      "target_operation_ids": [
+        "requestReview",
+        "getReview",
+        "getPrediction",
+        "previewResearch",
+        "getResearchPreview",
+        "startResearch",
+        "getResearchRun",
+        "listResearchItems",
+        "resumeResearch"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ReviewManifest",
+          "fields": [
+            "body_version_id",
+            "purpose",
+            "source_refs",
+            "method_digest"
+          ]
+        },
+        {
+          "schema": "PredictionView",
+          "fields": [
+            "mode",
+            "reasons",
+            "method_digest"
+          ]
+        },
+        {
+          "schema": "ResearchRunView",
+          "fields": [
+            "id",
+            "manifest_digest",
+            "state",
+            "succeeded",
+            "failed",
+            "pending"
+          ]
+        },
+        {
+          "schema": "ResearchPreviewView",
+          "fields": [
+            "estimated_calls",
+            "estimated_fee",
+            "estimate_notes"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R07"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-06",
+      "original_setup": "真实官方标签尚未齐备",
+      "original_expected": "开发及有边界试用可继续，真实精度验收保持未通过并标所缺材料。",
+      "original_requires": "交付验收",
+      "delivery_stage": "P+A1.1+A1.2+A1.3+R+B+C+D+A2+F+E",
+      "execution_steps": [
+        "列出当前真实官方标签、代表性样本、分组及冻结独立测试协议的缺口，不使用预测伪造官方标签。",
+        "核对每批交付声明、预测呈现和PM证据门槛，再决定相应开发/有限试用范围。"
+      ],
+      "ui_assertions": [
+        "没有材料时明确模型业务验收尚未通过及具体缺项；已可用的A1不因此被改写成不可开发。",
+        "不显示暂无真实分的0分、估计精度或未经测试的效果承诺。"
+      ],
+      "backend_assertions": [
+        "数据不足不能触发publishModel资格；正式标签与研究结果分用途保存。",
+        "该任务的通过仅证明交付边界诚实，不等于真实精度通过。"
+      ],
+      "target_operation_ids": [
+        "getPrediction",
+        "getModelRoute",
+        "publishModel"
+      ],
+      "schema_refs": [
+        {
+          "schema": "PredictionView",
+          "fields": [
+            "mode",
+            "reasons"
+          ]
+        },
+        {
+          "schema": "OutcomeView",
+          "fields": [
+            "score_kind",
+            "value",
+            "verification",
+            "source_version_id"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-02",
+        "AU-R07"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "U01-A",
+      "original_setup": "取得修改依据，再取得实际投标正文，并离开页面从下载文件辨认",
+      "original_expected": "分别独立取得用途正确的产物，文件名和详情可区分正文、评审报告与批注审阅稿。",
+      "original_requires": "真实用户/浏览器",
+      "delivery_stage": "A1.3",
+      "execution_steps": [
+        "在真实评审结果分别生成评审报告Word与批注审阅稿PDF，并下载本轮实际上传的投标正文原件。",
+        "等待真实产物后直接取件；离开页面后根据文件名和详情辨认用途与版本，核字节摘要。",
+        "切换旧轮再取件；分别注入生成失败和下载授权过期。"
+      ],
+      "ui_assertions": [
+        "按钮明确下载评审报告（Word）、下载批注审阅稿（PDF）、下载投标正文（实际格式）；正文不是报告/批注。",
+        "失败常驻可重试，直接真实下载而非只开预览，不增加泛化确认；批注不能作标准正文。"
+      ],
+      "backend_assertions": [
+        "ArtifactView用途、review身份、源PDF页及sha256真实一致；旧产物不可被新轮覆盖。",
+        "展示隐藏预测/失效来源影响与报告一致，failed不返回空壳文件；上传原件可沿用当前已实现取件入口，不依赖A2生成。"
+      ],
+      "target_operation_ids": [
+        "createReport",
+        "authorizeDownload",
+        "getReview"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ReportRequest",
+          "fields": [
+            "artifact_kind",
+            "format",
+            "presentation_revision",
+            "source_impact_revision"
+          ]
+        },
+        {
+          "schema": "ArtifactView",
+          "fields": [
+            "id",
+            "artifact_kind",
+            "format",
+            "state",
+            "sha256",
+            "gaps"
+          ]
+        },
+        {
+          "schema": "ReviewManifest",
+          "fields": [
+            "body_version_id"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-08"
+      ],
+      "actual_contract_gaps": [
+        "GAP-MANIFEST-READ"
+      ],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "U02-A",
+      "original_setup": "外部DOCX转换失败后，用户自导出PDF继续",
+      "original_expected": "原Word保存明确、本轮未检查明确；就地补传同项目/逻辑文件目标PDF，无需重传招标；同名不自动认证同稿，当前评审指向实际PDF。",
+      "original_requires": "真实转换/对象存储/API/浏览器",
+      "delivery_stage": "A2",
+      "execution_steps": [
+        "前提是真实候选已接收DOCX；注入其解析/转换失败，保留原件及原任务身份。",
+        "原失败卡点击上传此修改稿的PDF，选择用户自行导出的实际PDF，沿用项目与改稿来源。",
+        "评审该PDF，刷新Word失败卡与两种格式的受检身份。"
+      ],
+      "ui_assertions": [
+        "持续写Word原件已保存/本次对应检查未完成；就地补PDF不重传招标、不强迫编辑器。",
+        "PDF独立版本和实际受检身份清楚；同名不证明同稿，PDF通过不赋予DOCX已检查资格。"
+      ],
+      "backend_assertions": [
+        "DocumentRelation只表达明确来源关系，不将不同格式硬塞同一逻辑文件版本；旧DOCX失败轮保留。",
+        "ReviewManifest.body_version_id指实际PDF；DOCX仍按其自身覆盖和失败状态。PDF限定切片拒绝Word不是本用例通过。"
+      ],
+      "target_operation_ids": [
+        "createUpload",
+        "completeUpload",
+        "commitBatch",
+        "getMaterials",
+        "requestReview",
+        "getReview",
+        "getOperation"
+      ],
+      "schema_refs": [
+        {
+          "schema": "DocumentView",
+          "fields": [
+            "id",
+            "filename",
+            "media_type",
+            "parse_coverage",
+            "file_id",
+            "file_revision",
+            "source_relation"
+          ]
+        },
+        {
+          "schema": "ReviewManifest",
+          "fields": [
+            "body_version_id",
+            "parse_run_ids",
+            "content_checks"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R06"
+      ],
+      "actual_contract_gaps": [
+        "GAP-MANIFEST-READ"
+      ],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "U03-A",
+      "original_setup": "两个关键阻断与数项普通建议，处理第一个主要动作",
+      "original_expected": "无提示发现第二项关键风险，能区分普通建议；提交拦截不能替代可发现性观察。",
+      "original_requires": "真实用户/浏览器",
+      "delivery_stage": "A1.1+A1.2",
+      "execution_steps": [
+        "提供两个独立关键阻断及数项普通建议，首次进入简洁结果，不提示按钮位置。",
+        "使用者先处理主要动作，再自主寻找第二关键风险并辨别普通建议。",
+        "记录浏览器可达、真人发现过程及所需提示，分开技术可达和可理解结论。"
+      ],
+      "ui_assertions": [
+        "关键风险总数持续可见、全部列表可发现，处理第一项后下一步指第二项。",
+        "严重性、未知/失败、普通建议和仍待复检不同；仅有提交末端拦截不能证明发现性。"
+      ],
+      "backend_assertions": [
+        "统一next_action按PRD3.7优先级；risk_count未知为null不填0，分页不遗漏第二项。",
+        "确认/采纳不解决；同级稳定顺序，所有关键问题可取真实依据。"
+      ],
+      "target_operation_ids": [
+        "getBid",
+        "getReview",
+        "listFindings",
+        "getMatrix",
+        "decideFinding",
+        "getEvidence"
+      ],
+      "schema_refs": [
+        {
+          "schema": "NextAction",
+          "fields": [
+            "action",
+            "reason",
+            "target_url",
+            "blocked"
+          ]
+        },
+        {
+          "schema": "ReviewView",
+          "fields": [
+            "risk_count",
+            "next_action"
+          ]
+        },
+        {
+          "schema": "FindingPage",
+          "fields": [
+            "items",
+            "next_cursor",
+            "has_more"
+          ]
+        },
+        {
+          "schema": "FindingView",
+          "fields": [
+            "severity",
+            "verdict",
+            "lifecycle"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-03"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "U04-A",
+      "original_setup": "明确替代、局部变更、互相矛盾三组补遗",
+      "original_expected": "能看原页，仅确认有依据关系，冲突保留待核实；不按上传顺序猜。",
+      "original_requires": "真实用户/浏览器",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "准备明确整体替代、明确局部变更、相互矛盾无明确优先级三组补遗，乱序上传。",
+        "从影响卡打开双方原页，提交有依据的效力关系；冲突场景只记录待核实。",
+        "核相关矩阵/人工条款/旧报告与当前gate，再刷新回到未决任务。"
+      ],
+      "ui_assertions": [
+        "明确关系可处理且只核本次歧义；局部变更显示范围，冲突给待核实与具体影响。",
+        "不按上传时间或文件名猜效力，不要求配置通用规则引擎；旧原页仍可还原。"
+      ],
+      "backend_assertions": [
+        "效力关系命令要绑定来源/引用/当前修订并写审计；有冲突不能假complete。",
+        "受影响规则/事实/评审失去当前资格并可重建；无关成功文件保留，人工要求遵守存续不变式。"
+      ],
+      "target_operation_ids": [
+        "getSourceImpacts",
+        "getRules",
+        "getFacts",
+        "getMatrix",
+        "getEvidence",
+        "getSubmissionGate",
+        "requestReview"
+      ],
+      "schema_refs": [
+        {
+          "schema": "RuleView",
+          "fields": [
+            "conditions",
+            "exceptions",
+            "provenance_status",
+            "manual_origin_rule_id"
+          ]
+        },
+        {
+          "schema": "ReviewView",
+          "fields": [
+            "source_impact_revision",
+            "current"
+          ]
+        },
+        {
+          "schema": "ReviewCoverage",
+          "fields": [
+            "source_scope",
+            "core_extraction"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R05"
+      ],
+      "actual_contract_gaps": [
+        "GAP-SOURCE-EFFECTIVITY"
+      ],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "U05-A",
+      "original_setup": "最终技术分、只有综合分、主体冲突三份官方材料",
+      "original_expected": "复用身份只核差异，未知不写零，预测不抄为官方分，冲突留待核验。",
+      "original_requires": "真实用户/浏览器",
+      "delivery_stage": "B",
+      "execution_steps": [
+        "为已有具体实交记录分别提供最终技术分、只有综合分和主体冲突三份官方材料。",
+        "复用项目/标段/主体/实交身份，仅核新增差异和官方出处；保存再核验。",
+        "重开冲突项、未知项并核样本准入，比较当时预测与后来回测身份。"
+      ],
+      "ui_assertions": [
+        "技术分与综合分分开；未知保持未知，冲突待核验，允许真实缺口保存。",
+        "不再逐项手填已知身份、不抄预测为官方分、不补造当时预测。"
+      ],
+      "backend_assertions": [
+        "Outcome绑定真实submission/source_version/known_at，验证不通过不进入正式标签样本。",
+        "综合分不能假技术分；更正留历史并使相关样本/研究影响可追踪。"
+      ],
+      "target_operation_ids": [
+        "getSubmission",
+        "recordOutcome",
+        "verifyOutcome",
+        "getOutcome"
+      ],
+      "schema_refs": [
+        {
+          "schema": "OutcomeRequest",
+          "fields": [
+            "submission_id",
+            "score_kind",
+            "value",
+            "maximum",
+            "source_version_id",
+            "known_at"
+          ]
+        },
+        {
+          "schema": "OutcomeView",
+          "fields": [
+            "verification",
+            "score_kind",
+            "value"
+          ]
+        },
+        {
+          "schema": "SubmissionView",
+          "fields": [
+            "id",
+            "body_version_id",
+            "kind",
+            "submitted_at"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-L01"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-03-B",
+      "original_setup": "当前包存在漏提，使用补充并确认命令；分别注入逐字证据错误、跨bid/失效来源、条件歧义及并发补入",
+      "original_expected": "合法请求原子追加新包和新增人工confirmed，原条款决定等价沿用不伪造actor；旧评审过期需重新评审正文；同key只一包，非法全部拒绝且保留输入，两个当前包CAS仅一个通过；不自动放行或新增二次确认。",
+      "original_requires": "实际应用/API/真实证据校验",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "选择当前规则包，填性质/逐字条款/条件/例外/scope/分值分档与逐字原页引用，点一次补充并确认条款。",
+        "分别注入错引文、跨项目、撤回来源、条件歧义和并发当前包变更；失败后检查表单与写入。",
+        "同幂等键重放，再读取新旧包及原决定身份，并发两包仅一个CAS成功。"
+      ],
+      "ui_assertions": [
+        "合法提交一次完成新包及新增规则人工确认，仍提示正文需复评；没有二次确认/岗位审批。",
+        "非法整笔拒绝并保留输入，412展示差异；成功前不显示已确认或可提交。"
+      ],
+      "backend_assertions": [
+        "服务端逐字/evidence归属/效力/条件校验；原子追加新包+confirmed+审计，等价原决定沿用原actor。",
+        "同key只一包，CAS冲突无部分写；旧评审stale，新规则confirmed不代表正文satisfied。"
+      ],
+      "target_operation_ids": [
+        "getRules",
+        "correctRuleSet",
+        "getEvidence",
+        "getValidationDiagnostics",
+        "requestReview",
+        "getReview"
+      ],
+      "schema_refs": [
+        {
+          "schema": "RuleSetCorrectionRequest",
+          "fields": [
+            "base_rule_set_id",
+            "reason",
+            "additions"
+          ]
+        },
+        {
+          "schema": "RuleAddition",
+          "fields": [
+            "kind",
+            "statement",
+            "conditions",
+            "exceptions",
+            "scope",
+            "maximum",
+            "bands",
+            "evidence_quotes"
+          ]
+        },
+        {
+          "schema": "RuleEvidenceQuote",
+          "fields": [
+            "evidence_id",
+            "quote"
+          ]
+        },
+        {
+          "schema": "RuleView",
+          "fields": [
+            "origin_kind",
+            "manual_origin_rule_id",
+            "confirmation",
+            "carryover"
+          ]
+        },
+        {
+          "schema": "DecisionView",
+          "fields": [
+            "actor_id",
+            "object_id",
+            "decision"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R04"
+      ],
+      "actual_contract_gaps": [],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    },
+    {
+      "id": "PPR-AC-03-C",
+      "original_setup": "人工有据补入并确认的核心条款完成新包；随后触发同来源重提取但模型再次漏提，再分别变更补遗效力或出现来源冲突",
+      "original_expected": "来源仍有效且适用时人工条款不能因模型漏提消失；来源或适用变化有明确保留/待核验/重新确认状态和审计，未决关键问题不静默消失或放行；不把模型重提取当人工撤回。",
+      "original_requires": "实际提取应用/API/规则版本与来源效力夹具",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "先有据人工补充并确认核心要求，记录manual_origin_rule_id与原引文。",
+        "同来源有效且适用时重提取，令模型再次漏提或重复提取；再造来源变更/效力冲突。",
+        "分别处理有据取代/更正和仍不明确场景，读取规则、影响提示、旧审计及gate。"
+      ],
+      "ui_assertions": [
+        "有效人工要求持续出现并保留来源身份；重复提取不叠加义务。",
+        "适用不明明确待重新核验，不用旧confirmed绿标盖过；有据取代/更正可结束义务且留历史。"
+      ],
+      "backend_assertions": [
+        "model_extracted/human_added/carried_human、manual_origin_rule_id、provenance_status保留真实链。",
+        "模型重提取不是人工撤回；未决核心缺口或关键风险不能静默消失/放行；有效依据可有据结束不永久阻断。"
+      ],
+      "target_operation_ids": [
+        "correctRuleSet",
+        "getRules",
+        "getSourceImpacts",
+        "requestReview",
+        "getReview",
+        "getSubmissionGate"
+      ],
+      "schema_refs": [
+        {
+          "schema": "RuleView",
+          "fields": [
+            "id",
+            "origin_kind",
+            "manual_origin_rule_id",
+            "provenance_status",
+            "confirmation",
+            "evidence_ids"
+          ]
+        },
+        {
+          "schema": "RuleCarryoverView",
+          "fields": [
+            "from_rule_id",
+            "from_decision_id",
+            "equivalence_digest",
+            "adopted_at"
+          ]
+        },
+        {
+          "schema": "GateView",
+          "fields": [
+            "allowed",
+            "blockers"
+          ]
+        }
+      ],
+      "user_scenario_ids": [
+        "AU-R04",
+        "AU-R05"
+      ],
+      "actual_contract_gaps": [
+        "GAP-SOURCE-EFFECTIVITY"
+      ],
+      "status": "pending_application",
+      "execution_evidence": {
+        "api_worker_runs": 0,
+        "browser_runs": 0,
+        "human_participants": 0,
+        "paid_calls": 0
+      }
+    }
+  ],
+  "supporting_tasks": [
+    {
+      "id": "A1-S01",
+      "title": "一次开始、持久准备与新稿竞争",
+      "delivery_stage": "A1.1",
+      "execution_steps": [
+        "从无规则包项目一次开始评审，离开/刷新，成功后自动接续。",
+        "分别注入准备失败、效力歧义及冻结前V2到达；切换auto_review开关；冻结后再上传V3。"
+      ],
+      "ui_assertions": [
+        "准备中/准备失败/过期/真实运行文字按交接§1.1；有对应稿件，不需第二次开始。",
+        "开关开启时明示归并新版；关闭时旧人工请求过期需明确发新版；没有永久转圈或重复收费评审。"
+      ],
+      "backend_assertions": [
+        "202返回真实operation及持久请求，不制造缺IDmanifest；规则就绪由可恢复控制面自动冻结。",
+        "head fence阻止迟到抢当前；冻结manifest不可变，读操作可重找历史/在途。"
+      ],
+      "target_operation_ids": [
+        "requestReview",
+        "getOperation",
+        "getReview",
+        "getBid",
+        "getSettings"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ReviewRequest",
+          "fields": [
+            "body_version_id",
+            "material_revision",
+            "trigger"
+          ]
+        },
+        {
+          "schema": "ReviewManifest",
+          "fields": [
+            "body_version_id",
+            "rule_set_id",
+            "fact_set_id",
+            "material_revision"
+          ]
+        },
+        {
+          "schema": "ReviewView",
+          "fields": [
+            "current",
+            "operation_id"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    },
+    {
+      "id": "A1-S02",
+      "title": "逐条核对与诚实失败",
+      "delivery_stage": "A1.1",
+      "execution_steps": [
+        "核心条款包含满足/违反/缺失/不适用/无法判断；另注入一行失败和必要图表漏读。",
+        "进入矩阵、切两侧原页，按缺口恢复并重新读取。"
+      ],
+      "ui_assertions": [
+        "运行状态与判定分开；缺失型列已查范围，不能伪造正文引文；失败和未知不绿色通过。",
+        "必要范围缺失可定位和恢复，成功行与已上传资料保留。"
+      ],
+      "backend_assertions": [
+        "引用必须匹配实际版本和物理页；任意伪造引用/非法数字不能产生有效结论。",
+        "Matrix逐行check_status及coverage分母真实，空结果不等同满足；核心缺口阻断。"
+      ],
+      "target_operation_ids": [
+        "getMatrix",
+        "listFindings",
+        "getEvidence",
+        "getReview",
+        "getValidationDiagnostics",
+        "getSubmissionGate"
+      ],
+      "schema_refs": [
+        {
+          "schema": "MatrixRow",
+          "fields": [
+            "check_status",
+            "verdict",
+            "error_code",
+            "evidence_ids"
+          ]
+        },
+        {
+          "schema": "FindingView",
+          "fields": [
+            "searched_ranges",
+            "evidence_ids",
+            "verdict"
+          ]
+        },
+        {
+          "schema": "CoverageLayer",
+          "fields": [
+            "state",
+            "planned",
+            "completed",
+            "gaps"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    },
+    {
+      "id": "A1-S03",
+      "title": "事实从空集到补替撤与确认",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "facts id=null/revision=0开始评审；单条确认/驳回已有pending事实。",
+        "人工填主体/范围/名称/值/单位/依据，保存并确认；替换后撤回最后一条。",
+        "注入无依据/失效来源/歧义/412/重放，核表单保留、旧集与当前结果。"
+      ],
+      "ui_assertions": [
+        "无需先填事实库；新增/替换一次明确保存并确认，不追加审批；无效不能先绿。",
+        "失败保留输入，旧来源可回看；撤完仍留历史，不把其他项目事实默认为本项目真值。"
+      ],
+      "backend_assertions": [
+        "人工新增/替换与confirmed决定同事务，操作者来自会话；单条pending确认合法，禁止未支持的批量事实。",
+        "变更新factset使旧review过期；withdraw用facts head ETag；同key幂等、CAS冲突无部分写。"
+      ],
+      "target_operation_ids": [
+        "getFacts",
+        "changeFacts",
+        "decideFact",
+        "withdrawFact",
+        "requestReview"
+      ],
+      "schema_refs": [
+        {
+          "schema": "FactSetView",
+          "fields": [
+            "id",
+            "revision",
+            "facts"
+          ]
+        },
+        {
+          "schema": "FactView",
+          "fields": [
+            "subject",
+            "scope",
+            "name",
+            "value",
+            "unit",
+            "evidence_ids",
+            "confirmation",
+            "decision_revision"
+          ]
+        },
+        {
+          "schema": "FactChangeRequest",
+          "fields": [
+            "fact",
+            "replaces_fact_id"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    },
+    {
+      "id": "A1-S04",
+      "title": "后置规则单条与显式批量确认",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "不确认完整规则包先完成评审；打开一条条件例外及依据，单条确认/驳回/暂缓。",
+        "显式勾选待处理规则批量确认；混入已处理项、并发修订和501项。"
+      ],
+      "ui_assertions": [
+        "确认不代表正文满足；普通浏览不强制逐项签字，提交时剩余核心集中处理。",
+        "不默认全选，不覆盖已有决定；412保留选择/输入与差异，不声称部分通过。"
+      ],
+      "backend_assertions": [
+        "对象白名单confirmed/rejected/deferred；batch最多500，items有expected_decision_revision，原子CAS。",
+        "pending才确认，已处理项skipped；真实单对象ETag由actual读取，不能用集合token猜单项。"
+      ],
+      "target_operation_ids": [
+        "getRules",
+        "decideRule",
+        "confirmPendingRules",
+        "getSubmissionGate"
+      ],
+      "schema_refs": [
+        {
+          "schema": "RuleView",
+          "fields": [
+            "confirmation",
+            "decision_revision",
+            "carryover"
+          ]
+        },
+        {
+          "schema": "BatchRuleConfirmationRequest",
+          "fields": [
+            "items"
+          ]
+        },
+        {
+          "schema": "RuleConfirmationItem",
+          "fields": [
+            "rule_id",
+            "expected_decision_revision"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    },
+    {
+      "id": "A1-S05",
+      "title": "外部改稿、复检和旧轮可恢复",
+      "delivery_stage": "A1.2",
+      "execution_steps": [
+        "从问题取得建议，复制到外部Word修改并导出V2，上传为新PDF后复检。",
+        "先采纳/确认待改但不改稿，再真实修正；打开两轮比较，刷新后找回历史轮与原页。",
+        "V1较晚完成、方法变更或部分失败时检查当前资格和比较说明。"
+      ],
+      "ui_assertions": [
+        "不先要求在线编辑器/模板/知识库；采纳不解决；V2与旧轮真实身份可辨。",
+        "比较区分内容变化与方法变化，部分核对不冒充问题减少；旧轮/原件不丢。"
+      ],
+      "backend_assertions": [
+        "直接建议关联finding和冻结来源；当前指针受head fence守护。",
+        "仅有效完整复核相同义务可resolved_by_recheck；ComparisonRequest冻结左右实际ID。"
+      ],
+      "target_operation_ids": [
+        "createConversation",
+        "sendMessage",
+        "getAction",
+        "requestReview",
+        "getReview",
+        "compareReviews",
+        "listFindings"
+      ],
+      "schema_refs": [
+        {
+          "schema": "ComparisonRequest",
+          "fields": [
+            "left_review_id",
+            "right_review_id",
+            "same_method_rerun"
+          ]
+        },
+        {
+          "schema": "MessageRequest",
+          "fields": [
+            "client_message_id",
+            "text",
+            "source_version_ids"
+          ]
+        },
+        {
+          "schema": "FindingView",
+          "fields": [
+            "lifecycle",
+            "origin_review_id"
+          ]
+        },
+        {
+          "schema": "ReviewView",
+          "fields": [
+            "current",
+            "input_digest",
+            "manifest_digest"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    },
+    {
+      "id": "A1-S06",
+      "title": "标准登记、线下事实及恢复",
+      "delivery_stage": "A1.3",
+      "execution_steps": [
+        "提交前集中处理剩余核心规则/必要事实；选择真实正文和评审、输入真实时间/凭据，登记。",
+        "gate读取后改稿/补遗再提交，核拒绝；另走已发生实交事实补录。",
+        "注入401/412/409/422/503、双击和取消竞争，刷新后找回记录。"
+      ],
+      "ui_assertions": [
+        "阻断可定位/处理；标准登记不等于交易平台提交。线下补录独立且持续标未完整检查。",
+        "不会为记录事实强迫伪造通过或换干净稿；输入不丢，重新登录不自动执行过期决定。"
+      ],
+      "backend_assertions": [
+        "register服务端重算gate并冻结正文/review/material；旧轮不放行新稿，同key一记录。",
+        "offline记录actual_document_version_id而非推定current；review可空、gate_checked=false；不补造事前预测。"
+      ],
+      "target_operation_ids": [
+        "getSubmissionGate",
+        "registerSubmission",
+        "recordOfflineSubmission",
+        "getSubmission",
+        "getOperation",
+        "cancelOperation"
+      ],
+      "schema_refs": [
+        {
+          "schema": "SubmissionRequest",
+          "fields": [
+            "body_version_id",
+            "review_id",
+            "material_revision",
+            "submitted_at",
+            "evidence_ref"
+          ]
+        },
+        {
+          "schema": "OfflineSubmissionRequest",
+          "fields": [
+            "actual_document_version_id",
+            "submitted_at",
+            "evidence_ref",
+            "explanation"
+          ]
+        },
+        {
+          "schema": "SubmissionView",
+          "fields": [
+            "kind",
+            "review_id",
+            "gate_checked"
+          ]
+        },
+        {
+          "schema": "Error",
+          "fields": [
+            "code",
+            "message",
+            "retryable",
+            "details"
+          ]
+        }
+      ],
+      "user_scenario_ids": [],
+      "actual_contract_gaps": [],
+      "status": "pending_application"
+    }
+  ],
+  "evidence_requirements": [
+    "候选源码/契约/部署与输入摘要",
+    "步骤、实际界面文字、请求对象和终态",
+    "截图/产物摘要及失败恢复；API/Worker另有独立证据",
+    "未执行项及依赖；浏览器可达、真人理解、检测质量、模型精度分别结论"
+  ]
+}

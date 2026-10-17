@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "bounded_tool_stops_at_expected_state",
+      "passed": true,
+      "observation": {
+        "status": "succeeded",
+        "guarded_invocations": 2
+      }
+    },
+    {
+      "name": "foreign_messages_skipped_and_no_offset_commit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "ordinary_extract_core_finalize_chain_limited_to_two",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "any_prior_call_blocks_restart_before_consumer_init",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen isolated runtime ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "ea0f9fd0-830b-4b6c-a4c8-8228d69111a5",
+  "parser_setup_observations": [
+    {
+      "role": "tender",
+      "document_version_id": "004f08df-aabc-4024-a034-e32c25331a38",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    },
+    {
+      "role": "body",
+      "document_version_id": "82a4b0d4-6242-486c-9396-ec33d50f5578",
+      "status_code": 200,
+      "observed_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165"
+    }
+  ],
+  "bounded_tool_result": {
+    "status": "succeeded",
+    "guarded_invocations": 2
+  },
+  "offline_consumer_observations": {
+    "foreign_skipped": false,
+    "closed": true,
+    "consumer_initializations": 1,
+    "handled": [
+      "prepare/1",
+      "review/1",
+      "review/1"
+    ],
+    "commits": 0,
+    "config": {
+      "bootstrap.servers": "127.0.0.1:19095",
+      "group.id": "tender-acceptance-d42bff1d18d34fbcb4c447e37cc1afa8",
+      "enable.auto.commit": false,
+      "enable.auto.offset.store": false,
+      "auto.offset.reset": "earliest",
+      "max.poll.interval.ms": 300000
+    },
+    "topics": [
+      "tender.task.review.v1"
+    ]
+  },
+  "ledger": [
+    {
+      "state": "succeeded",
+      "usage": {
+        "actual": {
+          "total_tokens": 50,
+          "prompt_tokens": 20,
+          "completion_tokens": 30
+        },
+        "reservation": {
+          "fence": 1,
+          "owner": "79907e7c-f424-487d-a143-c87a63ad3f6f",
+          "step_key": "extract-rules",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "dd31dad1e66a4021bf6c5d25242bcae9c4b31a96cd3db32cc616f80b38fe54dc"
+        },
+        "billing_state": "usage_reported"
+      }
+    },
+    {
+      "state": "succeeded",
+      "usage": {
+        "actual": {
+          "total_tokens": 50,
+          "prompt_tokens": 20,
+          "completion_tokens": 30
+        },
+        "reservation": {
+          "fence": 1,
+          "owner": "800fad49-19bb-4fd2-a9a7-ac2fe5de66b1",
+          "step_key": "core-judgment",
+          "generation": 1,
+          "max_tokens": 8192,
+          "input_digest": "8441eba75644e61a1cf8b54f7f1f0d0941d83539b2a70d42dac56b1017582148"
+        },
+        "billing_state": "usage_reported"
+      }
+    }
+  ],
+  "operations": [
+    {
+      "handler_version": "prepare/1",
+      "state": "succeeded"
+    },
+    {
+      "handler_version": "prepare/1",
+      "state": "succeeded"
+    },
+    {
+      "handler_version": "review/1",
+      "state": "succeeded"
+    }
+  ],
+  "offline_transport_requests": 2,
+  "tool_sha256": "26587edab50b7d903f919fbab5a76d83eaa9466f0c539706372d5ffc65eee1fd",
+  "probe_sha256": "1e2953e0dbbb3c3bdd403c5e1167359de5f3a8d087a99950b5f20679e4dedd47"
+}

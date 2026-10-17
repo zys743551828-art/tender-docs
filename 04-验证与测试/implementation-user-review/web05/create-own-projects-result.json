@@ -1,0 +1,481 @@
+{
+  "at": "2026-10-16T20:10:16.005744+00:00",
+  "fixtures": {
+    "uuid": "6e5726c669",
+    "company_name": "用户走查合成市政主体-6e5726c669",
+    "company_id": "ad0183da-f8f3-4418-b12c-0156a768d792",
+    "source_url": "http://127.0.0.1:5175/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+    "target_url": "http://127.0.0.1:5175/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+    "region_mismatch_url": "http://127.0.0.1:5175/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials"
+  },
+  "events": [
+    {
+      "at": "2026-10-16T20:10:12.975420+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:12.978464+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.209721+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.214139+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.218432+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.219030+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.230354+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.276638+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.286597+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.353147+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.503316+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.512128+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.673527+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids",
+      "status": 201
+    },
+    {
+      "at": "2026-10-16T20:10:13.780183+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.784662+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.800483+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.801973+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.803731+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.821853+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.824530+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.846176+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.855080+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.858840+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.864428+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.879197+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/e71c179a-6838-4190-9e8b-0ebd6c77ecc3",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:13.912694+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/e7d9f908-359a-45a5-8645-d51751cafd14/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.347868+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.349840+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.471775+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.480710+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.485588+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.486571+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.490206+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.545557+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.585494+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.598169+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.698527+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.699602+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.794195+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids",
+      "status": 201
+    },
+    {
+      "at": "2026-10-16T20:10:14.862188+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.874563+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.875776+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.876608+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.877401+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.887303+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.924924+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.931754+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.932662+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.935443+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.937101+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.937527+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/0108735a-6410-4d40-9ba2-69b9c74eb7b1",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:14.966317+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/3c47bab7-edee-4192-b583-7f3bfc015ceb/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.302684+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.307048+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.392306+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.396694+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.411041+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.412343+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.413746+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/bidders",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.447495+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.453556+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.486393+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.586130+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.588430+00:00",
+      "method": "GET",
+      "path": "/api/v1/identity/engineering-projects",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.695194+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids",
+      "status": 201
+    },
+    {
+      "at": "2026-10-16T20:10:15.764783+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.770084+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.783554+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.785099+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.793326+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.794190+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.828106+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.828834+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.831594+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.835838+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14/materials",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.836591+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.844460+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/c5e8928c-7046-459d-a7c1-fda257d9bc14",
+      "status": 200
+    },
+    {
+      "at": "2026-10-16T20:10:15.863865+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/e3b26cca-21d8-420c-813b-d115558adb68/events",
+      "status": 200
+    }
+  ]
+}

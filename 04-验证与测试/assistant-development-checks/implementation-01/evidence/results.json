@@ -1,0 +1,29 @@
+{
+  "real_pg_passed": 44,
+  "real_pg_failed": 0,
+  "real_pg_errors": 0,
+  "deselected_build_or_external_paths": 7,
+  "pg_groups": {
+    "tests.test_assistant_integration": 28,
+    "tests.test_work_conversations": 5,
+    "tests.test_authoring_integration": 11
+  },
+  "pure_passed": 11,
+  "quality_checks": {
+    "ruff": 0,
+    "format": 0,
+    "mypy": 0,
+    "bandit": 0
+  },
+  "warning": "Upstream Starlette/anyio deprecated alias only; not test failure",
+  "scope_exclusions": [
+    "Shared main/engine07 actual registration",
+    "Complete producer lifecycle matrix",
+    "Actual Kafka broker/consumer transport",
+    "Native OSS object service",
+    "Real model answer quality or enterprise accuracy",
+    "Frontend and whole-product acceptance",
+    "Real Word/PDF build paths in this batch",
+    "Production publishing"
+  ]
+}

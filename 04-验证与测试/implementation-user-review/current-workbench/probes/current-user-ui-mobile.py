@@ -1,0 +1,14 @@
+import json
+from pathlib import Path
+from playwright.sync_api import sync_playwright,expect
+from current_user_helpers import *
+events=[];r={'started_at':stamp(),'project_id':PROJECT}
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox']);c=b.new_context(viewport={'width':390,'height':844},storage_state='/tmp/current-user-auth.json');guarded(c,events);page=c.new_page();page.set_default_timeout(12000);page.goto(f'{BASE}/bids/{PROJECT}/authoring',wait_until='domcontentloaded');select=page.get_by_role('combobox',name='打开已有正文草稿',exact=True);select.wait_for()
+ if not page.locator('[contenteditable="true"]').count():
+  o=select.locator('option').filter(has_text='用户人工草稿-道路保通-01').first;o.wait_for(state='attached');select.select_option(o.get_attribute('value'))
+ page.locator('[contenteditable="true"]').wait_for();capture(page,'22-authoring-mobile');r['mobile_page_dimensions']=page.evaluate('({viewport:innerWidth,width:document.documentElement.scrollWidth})');r['nav_links']=page.locator('.project-tabs a').evaluate_all('(es)=>es.map(e=>({text:e.innerText,rect:{x:e.getBoundingClientRect().x,w:e.getBoundingClientRect().width}}))');r['editor_box']=page.locator('[contenteditable="true"]').bounding_box();r['before_source_focus']=page.evaluate("document.activeElement?.getAttribute('aria-label')")
+ summary=page.locator('summary').filter(has_text='本章要求与来源')
+ if not summary.evaluate('(e)=>e.parentElement.open'):summary.click()
+ source=page.get_by_role('button',name='查看本章来源原页（1）',exact=True);source.wait_for();source.focus();page.keyboard.press('Enter');page.wait_for_timeout(800);capture(page,'22b-source-open-before-canvas');page.get_by_role('button',name='打开物理页 1 · 文件版本 1',exact=True).click();page.locator('canvas').wait_for(timeout=20000);page.screenshot(path=str(ROOT/'23-source-mobile-viewport.png'));r['source_body']=page.locator('body').inner_text();r['source_dialogs']=page.get_by_role('dialog').count();r['active_in_source']=page.evaluate("(document.activeElement?.innerText||'').slice(0,160)");page.keyboard.press('Escape');page.wait_for_timeout(250);r['after_escape_focus']=page.evaluate("(document.activeElement?.innerText||'').slice(0,160)");r['remaining_dialogs_after_escape']=page.get_by_role('dialog').count();capture(page,'24-source-return-mobile')
+ page.get_by_role('link',name='项目概览',exact=True).click();page.wait_for_timeout(700);capture(page,'25-overview-mobile');r['overview_body']=page.locator('body').inner_text();r['requests']=events;r['ended_at']=stamp();(ROOT/'mobile-and-sources.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k not in ['source_body','overview_body','requests']},ensure_ascii=False));print(r['overview_body']);b.close()

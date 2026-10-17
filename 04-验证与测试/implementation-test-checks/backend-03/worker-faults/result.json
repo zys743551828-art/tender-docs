@@ -1,0 +1,65 @@
+{
+  "scope": "真实PG/Kafka/S3与实际Worker；故障注入仅在测试进程，非模型/生产多节点验收",
+  "passed": true,
+  "checks": [
+    "实际PG提交后offset前进程退出，重启重放且领域效果一次",
+    "两次瞬时失败持久退避2/8秒后实际成功，重试与对账不重复派发"
+  ],
+  "started_at": "2026-10-16T14:22:48.121574+00:00",
+  "bid_id": "24e8b545-e863-4705-a415-e392e818c6ea",
+  "offset_recovery": {
+    "operation_id": "3267b73d-81e3-4344-9efb-8c34ce9cce48",
+    "partition": 4,
+    "message_offset": 5,
+    "committed_before": 5,
+    "effects_after": 1
+  },
+  "retry_observations": {
+    "attempts": [
+      {
+        "kind": "compute_attempt",
+        "at": "2026-10-16T14:23:41.818148+00:00",
+        "monotonic": 22398.503281709,
+        "operation_id": "b4cf5d35-d124-4a72-8aed-8528406af081",
+        "attempt": 1,
+        "generation": 1
+      },
+      {
+        "kind": "compute_attempt",
+        "at": "2026-10-16T14:23:44.141376+00:00",
+        "monotonic": 22400.826507618,
+        "operation_id": "b4cf5d35-d124-4a72-8aed-8528406af081",
+        "attempt": 2,
+        "generation": 2
+      },
+      {
+        "kind": "compute_attempt",
+        "at": "2026-10-16T14:23:52.200418+00:00",
+        "monotonic": 22408.885549684,
+        "operation_id": "b4cf5d35-d124-4a72-8aed-8528406af081",
+        "attempt": 3,
+        "generation": 3
+      }
+    ],
+    "outbox": [
+      {
+        "generation": "1",
+        "available_at": "2026-10-16 14:23:38.338208+00:00",
+        "created_at": "2026-10-16T14:23:38.345113+00:00"
+      },
+      {
+        "generation": "2",
+        "available_at": "2026-10-16 14:23:43.841416+00:00",
+        "created_at": "2026-10-16T14:23:41.840389+00:00"
+      },
+      {
+        "generation": "3",
+        "available_at": "2026-10-16 14:23:52.150861+00:00",
+        "created_at": "2026-10-16T14:23:44.150196+00:00"
+      }
+    ],
+    "started_before_own_outbox_due": []
+  },
+  "finished_at": "2026-10-16T14:23:52.760076+00:00",
+  "probe_sha256": "d9d00a867a7ac36807f8cb1c9cdf62b7b07665bf9b6a0c795ad6ebb74d772a69"
+}

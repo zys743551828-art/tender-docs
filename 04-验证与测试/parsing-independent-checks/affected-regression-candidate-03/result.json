@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "same_original_digest_and_physical_pages",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "real_chinese_scan_still_partial",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "blank_still_has_no_evidence",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "grid_numbers_retained_with_honest_scope",
+      "passed": true,
+      "observation": {
+        "method": "pdf_text",
+        "quality": "usable",
+        "tables": 1,
+        "gaps": []
+      }
+    },
+    {
+      "name": "blocks_preserve_sha_page_and_finite_point_bbox",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "rotated_physical_page_matches_independent_render",
+      "passed": true,
+      "observation": {
+        "render_ink_bbox": [
+          717,
+          67,
+          738,
+          305
+        ],
+        "width": 842.0,
+        "height": 595.0
+      }
+    }
+  ],
+  "candidate_sha256": "2c94690cabd1a29fdf461d2879b8000d527fa404d3b1249d4082d5ba66e9309f",
+  "parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "paid_model_requests": 0,
+  "source_sha256": "f3c1ec268c618dce708a17c67dfa079a97744cf7c8ad9d1550660ddfa9b87b9d",
+  "probe_sha256": "dfd05cd9acdfe04aa4b7d92ee9d23c6042fc7c2c9272feab041f50a24653a544",
+  "scope": "Visibility/OCR/bbox affected regression; unchanged authorization/limits retain original candidate01 evidence"
+}

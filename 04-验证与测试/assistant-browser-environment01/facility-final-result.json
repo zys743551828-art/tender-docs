@@ -1,0 +1,26 @@
+{
+  "scope": "explicit fixture only",
+  "facility_candidate_sha256": "c3e9fb43c4b82513e20e5826d3a0105a598a281bccedeb684d4950602bd118e7",
+  "product_candidate_sha256": "63a3954f61eadd944c666f5d4d7a20a83b622eefacbef9edb6296c038efdaa66",
+  "fixture_files_verified": 12,
+  "http_mechanism_groups_passed": 5,
+  "prior_terminal_jobs_read_back": 5,
+  "unit_tests_passed": 14,
+  "quality": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "mypy": "passed (11 files; skip imported dependencies)",
+    "bandit": "passed (test asserts B101 excluded; fixed execve B606 narrowly suppressed)"
+  },
+  "loaded_module_counts": {
+    "api": 135,
+    "worker": 48,
+    "publisher": 38
+  },
+  "real_provider_attempts": 0,
+  "kafka_delivery_accepted": false,
+  "native_oss_accepted": false,
+  "independent_browser_accepted": false,
+  "control_owner": "frontend_development; do not mutate until handback",
+  "pending_product_candidate05": true
+}

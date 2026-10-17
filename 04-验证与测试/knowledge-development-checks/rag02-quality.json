@@ -1,0 +1,60 @@
+[
+  {
+    "argv": [
+      ".venv/bin/ruff",
+      "check",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py",
+      "tests/test_knowledge_rag_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      ".venv/bin/ruff",
+      "format",
+      "--check",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py",
+      "tests/test_knowledge_rag_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "16 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      ".venv/bin/mypy",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Success: no issues found in 15 source files\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      ".venv/bin/bandit",
+      "-q",
+      "-r",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      ".venv/bin/pytest",
+      "tests/test_knowledge_rag.py",
+      "tests/test_knowledge.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "stdout": ".......................                                                  [100%]\n23 passed in 0.24s\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "scope": "T0底座首个单文件PDF资料切片独立验收；不代表全部T0或完整A1",
+  "conclusion": "passed_scoped_slice",
+  "blocking_failures": 0,
+  "completed_at": "2026-10-16T14:30:30.698521+00:00",
+  "combined_candidate_sha256": "8b64ba0239190ce5cd1de0e00cd569d7b70d111cd28fc7ff5fc8440088b6affd",
+  "backend_candidate_sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+  "frontend_candidate_sha256": "7bef8d1038ed4da77776f2301a6694842df0efcc6bcf36efd6462df7919872b9",
+  "actual_openapi_sha256": "093deb9c6f36c37894d9a267eb35c83d66c21e52199906462bee121e6d84fe64",
+  "final_input_manifest_sha256": "5f87f0243ea6d92df96cc032d601847b09972aa9a0be224dac1e4b891abaf0c4",
+  "source_count_verified": 69,
+  "configuration_sha256": "0fb89a609895cc0349b8ef7fe1d2b1236fa00e08483147e92658a3cb694fee2f",
+  "observed_database_schema_sha256": "17ca60f65ea00d6624164f105095f36c5c7bbc1aa5b09f58f697a5b2edae996b",
+  "infrastructure": {
+    "postgres_port": 55440,
+    "kafka_port": 19094,
+    "s3_port": 19002,
+    "api_port": 8801,
+    "web_port": 5174,
+    "real_pg": true,
+    "real_kafka": true,
+    "real_s3": true,
+    "synthetic_documents": true,
+    "temporary_members": true,
+    "model": "unconfigured",
+    "owner_business_execution": false
+  },
+  "results": [
+    {
+      "name": "HTTP认证/CSRF/幂等",
+      "path": "backend-03/api-boundary-result.json",
+      "sha256": "6d9dee4821c027604e722a79a38e035400897e227e563c0097a98f34a6021c6c",
+      "passed": true,
+      "candidate": "backend03",
+      "note": "真实HTTP7项"
+    },
+    {
+      "name": "PDF真实入库/解析/哈希负例/未配置模型",
+      "path": "backend-02/pdf-slice-result.json",
+      "sha256": "6f85530ddeb780bd0e4adebade086c97b3d5d0a36a16ec43b6c1e1ac11eef3cc",
+      "passed": true,
+      "candidate": "backend02_retained",
+      "note": "03只改取消及Operation ETag；既有正常PDF范围保留，03浏览器再次走真实PDF链路"
+    },
+    {
+      "name": "并发CAS/重绑/禁止身份",
+      "path": "backend-02/upload-competition-result.json",
+      "sha256": "17497a0f434007b234e626980115d71b60ece24eb5e1e204367d4677a5de81ed",
+      "passed": true,
+      "candidate": "backend02_retained",
+      "note": "03无上传/绑定/commit事务变更，6组不无故重复"
+    },
+    {
+      "name": "进程重启持久化",
+      "path": "backend-02/persistence-result.json",
+      "sha256": "2175bed3a148524a4a8d42ede885931e410c616327fabcc82c11d1fb06d32944",
+      "passed": true,
+      "candidate": "backend02_retained",
+      "note": "实际API进程168044→253641，旧会话/项目/同键及第二成员"
+    },
+    {
+      "name": "实际LOGIN权限",
+      "path": "backend-03/runtime-roles-result.json",
+      "sha256": "233db257b75374bc94eaaef886b6df3b5e40ae5a2f359411930171c3d7bbe3d4",
+      "passed": true,
+      "candidate": "backend03",
+      "note": "四实际LOGIN非owner/nonsuper及禁止路径11项"
+    },
+    {
+      "name": "PDF浏览器/下载/390px/历史",
+      "path": "backend-03/browser-final/result.json",
+      "sha256": "299df8b59f7e8e821420fab8bc976e47d0d71e5ae4b2037bdb7ec58306e44893",
+      "passed": true,
+      "candidate": "backend03_and_frontend_frozen",
+      "note": "8组，真实Chromium无mock；三页像素及V1原名SHA"
+    },
+    {
+      "name": "offset崩溃/瞬时重试",
+      "path": "backend-03/worker-faults/result.json",
+      "sha256": "9919a2b054913c6e8a7392edf8639e6a272cd8b2bf13672a3da89dd8fbdd615d",
+      "passed": true,
+      "candidate": "backend03",
+      "note": "真实Kafka/S3/PG；73退出重放一次效果及2/8秒退避"
+    },
+    {
+      "name": "租约/对账/取消/失联预算",
+      "path": "backend-03/recovery-final/result.json",
+      "sha256": "0a755d15c66e650116c6ad90426380f0f152b5778f861ead5758430061cd3fbc",
+      "passed": true,
+      "candidate": "backend03",
+      "note": "5组，实际Kafka领取，只有时间过期由隔离QA PG注入"
+    },
+    {
+      "name": "实际Kafka死信",
+      "path": "backend-03/deadletter-accepted-result.json",
+      "sha256": "8771f663ad048bbda00c31e71ff7dd7ea4b0c64b07bc7f010d2d20dc45123e11",
+      "passed": true,
+      "candidate": "backend03",
+      "note": "实际死信、意图1、失败收据1无有效原件、重复acquire拒绝"
+    }
+  ],
+  "retained_failures": "所有历史失败保持原文件；探针定位、路由、超时与夹具缺字段分别附probe-limit-note，不当产品失败也不伪造通过",
+  "untested": [
+    "完整T0的生产安全/多节点/压力/备份恢复",
+    "multipart分片补传和过期重授权",
+    "完整A1风险检测与规则补漏/更正/重提保留",
+    "RAG检索/Embedding/重排/失效证据",
+    "模型业务评审/正式评分/三判断/提交闸门",
+    "Word转换失败恢复/报告和正文导出",
+    "真实代表性投标资料/真人可用性/生产部署"
+  ],
+  "original_application_acceptance_13": "仍保留既有pending，未由本切片结果自动改写"
+}

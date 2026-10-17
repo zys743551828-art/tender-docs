@@ -1,0 +1,23 @@
+{
+  "manifest_sha256": "4019c48dae4a9d3214615a8d431682e8f29944d25667f5ed5ce8187c00b0a5ee",
+  "sources_verified": 310,
+  "junit": {
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_pure_cases": 22,
+  "new_real_nonowner_http": 1,
+  "existing_pricing_pg_regressions": 31,
+  "sql_changed": false,
+  "external_model_object_calls": 0,
+  "actual_contract_sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "independent_acceptance": "pending separate QA report; F04 has retained no-baseline-rounding counterexample"
+}

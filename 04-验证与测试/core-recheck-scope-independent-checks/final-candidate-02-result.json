@@ -1,0 +1,67 @@
+{
+  "status": "passed_targeted_necessary_scope_remediation",
+  "candidate_sha256": "38d69b2f90f72eef4dc7345149a5c0e433cf962a0bf3a6a494433256685157d5",
+  "predecessor_scope01_sha256": "71ad1d8ec7211fe49ee8d85d31a9b15c5aadf434cf34972c3569bd5b79316dbd",
+  "base_main04_sha256": "eb5266493f8106fb2da16bbc5508a64dff8aae09264b134e2fe22696217431f7",
+  "runtime_manifest_sha256": "f541fb01ea865a40ef04e96310c2e9389271e6edfd9d1aacd49a2995a17f8dec",
+  "runtime_files": 232,
+  "runtime_byte_stability_reverified": true,
+  "execution_groups": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-independent-checks/candidate-02/original-counterexample/result.json",
+      "sha256": "8238877da551083dd9cb70ce794fdb369da2c50ec46bf37db1f973bb564d47f2",
+      "assertions": 13
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-independent-checks/candidate-02/no-crossref-counterexample/result.json",
+      "sha256": "370da14cc264d41768995960a7ac6ad6d3056937d21ad47796be7e60d5b95a83",
+      "assertions": 13
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-independent-checks/candidate-02/scope-sql/result.json",
+      "sha256": "d8b2376948982a486a88675d3321c819f4f490b74a9df4d0cb8a6cd34ef18a4d",
+      "assertions": 4
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-independent-checks/candidate-02/physical-page-set-execution/result.json",
+      "sha256": "116bda7d8154532f032d67e6209b6d8ad81a092a6f0db7029f1b1b443c76da3b",
+      "assertions": 4
+    }
+  ],
+  "shared_preconditions_note": "Two actual13-assertion runs share12 A1 setup/precondition assertions. They are not26 distinct business cases.",
+  "mechanisms": [
+    "Original explicit final-schedule page3 unread: old critical remains open, raw satisfied matrix stays distinct from valid lifecycle closure",
+    "No cross-reference: unknown unread body page3 still required, old critical remains open",
+    "Fully read body10 with independent document100 reference qualifies; no regex page100 body requirement",
+    "Complete body plus unrelated independent partial attachment qualifies; matching core diagnostic still blocks",
+    "Malformed declared complete page sets: missing/outside, extra, zero-count and multiple frozen body parses fail closed"
+  ],
+  "original_scope01_observations": {
+    "original_counterexample_fixed": {
+      "path": "candidate-01/original-counterexample/result.json",
+      "sha256": "a1b8dee663d2f1f756bc310030d366f89991a134072d6787c8ed6769181af811"
+    },
+    "independent_cross_document_false_block": {
+      "path": "candidate-01/scope-sql/result.json",
+      "sha256": "346683eb4c1476e9cfffc5c304f0d688db7d57d45a7e4e370c4b2f8912be7ee9",
+      "retained": true,
+      "resolved_by_scope02": true
+    }
+  },
+  "original_main04_failure": {
+    "path": "../a1-independent-checks/backend-candidate-04-necessary-range-counterexample.json",
+    "sha256": "0a9ab6a285344da002f5782bb89f3f36461335911b528e410d0d5a6def88dd3d",
+    "retained": true
+  },
+  "execution": "Actual restrictedPG/ASGI/direct ordinary Worker with realTCP Parser03 setup; explicit controlled partial outputs and offline MockTransport. Extra SQL fixtures evaluated by actual restricted Worker.",
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "object_network_requests": 0,
+  "model_qualification": false,
+  "limits": [
+    "No real business materials/model quality, native Kafka or browser integration.",
+    "Necessary-page faults are explicit parser-output fixtures, not measured Parser03 extraction failures.",
+    "No trusted chapter-range producer exists; current conservative requirement is the full frozen body, with no scope reduction inferred from wording.",
+    "Original main04 report/submission52 pass evidence remains unchanged and is not rerun here."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "suite": {
+    "tests": "50",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "1",
+    "time": "252.993"
+  },
+  "scope": "synthetic_software_mathematics_and_real_nonowner_PG_HTTP_purpose_roles_not_business_qualification",
+  "database": "tender_checks_model_governance02",
+  "actual_api_session_csrf": true,
+  "actual_isolated_train_and_evaluate_subprocesses": true,
+  "cpu_environment_keys": {
+    "train": [
+      "MODEL_TRAIN_DATABASE_DSN",
+      "LANG",
+      "LC_ALL",
+      "TZ"
+    ],
+    "evaluate": [
+      "MODEL_EVALUATE_DATABASE_DSN",
+      "LANG",
+      "LC_ALL",
+      "TZ"
+    ]
+  },
+  "environment_whitelist_asserted_at_actual_subprocess_run": true,
+  "general_env_values_or_keys_forwarded": false,
+  "private_DSN_values_logged": false,
+  "sensitive_modules_in_isolated_import_probe": [],
+  "labels_access": "training/final labels separate SQL exports; read_final only after exposure committed in earlier top-level transaction",
+  "purpose_raw_table_reads": "42501",
+  "owner_used_for_business": false,
+  "model_calls": "only explicit httpx.MockTransport synthetic calls; no provider network",
+  "external_paid_calls": 0,
+  "external_OSS_requests": 0,
+  "storage_port": "explicit per-test in-memory dictionary",
+  "physical_object_prefix_isolation_claimed": false,
+  "Kafka_processes_started": 0,
+  "main_API_included": false,
+  "live_deployment_tested": false,
+  "implemented_operations": 9,
+  "formal_qualification": "unavailable",
+  "API_protocol_origin": "synthetic_permanent_research_only",
+  "real_history_upload_to_legal_backtest_reachable": false,
+  "real_history_blockers": [
+    "missing independently evidenced historical visibility/knowledge authority",
+    "missing evidenced historical subject confirmation for imports without frozen identity",
+    "missing retrospective input authority separate from submission.review_id"
+  ],
+  "pending_software": [
+    "dedicated Kafka CPU dispatch and failure/recovery projection",
+    "JSON model blob registry",
+    "baseline-shadow observation",
+    "acceptance protocol/report binding and CAS publish/rollback",
+    "current project score owned-operation authority and controlled fee ledger/producer"
+  ],
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "independent_acceptance": false
+}

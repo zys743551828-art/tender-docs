@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="4.865" timestamp="2026-10-17T03:41:44.767295+00:00" hostname="597cea30c71f"><testcase classname="" name="test_real_http_registered_export_PAGE_full_body_and_no_auto_adoption" time="3.930"><error message="failed on setup with &quot;packages.domain.runtime.DomainError: ('INVALID_SECTION_CONTENT', '章节结构不符合当前编辑格式', 422)&quot;">/workspace/tender-workbench/qa/test_authoring_page_independent02.py:43: in w
+    saved=save_draft(c,bid,draft,actor,dict(base_draft_revision=1,changes=[dict(section_id=str(section['section_id']),base_section_revision=1,schema_digest=SCHEMA_DIGEST,content=content)]),etag('draft',draft,1))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/repository.py:291: in save_draft
+    append_section(
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/repository.py:200: in append_section
+    assert_sources(c, bid, content)
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/repository.py:32: in assert_sources
+    validate_content(content)
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/content.py:118: in validate_content
+    node(child, 0, "doc")
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/content.py:100: in node
+    invalid()
+/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/candidate-02/frozen-tree/packages/authoring/content.py:29: in invalid
+    raise DomainError("INVALID_SECTION_CONTENT", message, 422)
+E   packages.domain.runtime.DomainError: ('INVALID_SECTION_CONTENT', '章节结构不符合当前编辑格式', 422)</error></testcase></testsuite></testsuites>

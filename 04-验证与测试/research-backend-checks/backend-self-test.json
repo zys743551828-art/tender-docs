@@ -1,0 +1,32 @@
+{
+  "status": "passed_development_mechanisms",
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": "10.704",
+  "actual_nonowner_postgresql": true,
+  "actual_sessions_and_csrf": true,
+  "explicit_synthetic_documents": true,
+  "object_store": "explicit_in_memory_for_tests",
+  "model_transport": "native_DeepSeekClient_with_explicit_httpx.MockTransport",
+  "external_paid_model_requests": 0,
+  "real_official_labels": 0,
+  "real_user_participants": 0,
+  "actual_kafka_roundtrip_this_candidate": false,
+  "formal_model_release_eligible": false,
+  "quality": {
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "unverified": [
+    "independent_QA",
+    "independent_architect_product_user_review",
+    "real_model_three_judgments",
+    "real_material_quality",
+    "statistical_training_and_independent_accuracy",
+    "production_deployment_and_capacity"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "actual ASGI routes with isolated PG/nonowner connections; no shared dev/QA or Kafka/S3",
+  "passed": true,
+  "input_sha256": {
+    "apps/worker/engine.py": "da8d15578a0aa018f0ea2d52dca62de6568f60e886cf1d4b089cab8b9e6f7adb",
+    "packages/domain/runtime.py": "7a500fc49e047e81976f727a816b97e52cdbf0751b52ef089977fd5b7333152e",
+    "packages/contracts/sql/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "packages/contracts/sql/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "apps/api/main.py": "5ee6e4f615f1aaeb83710e8057fbe72a4c2e3e0ccc31d5adbf73dad047392025",
+    "apps/api/views.py": "522c52ca4f19ea4fab612833c3a01ac3cd24f90b1f3f5b2153757c12c4ba0322",
+    "apps/api/auth.py": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+  },
+  "checks": [
+    "stable heartbeat tag; same body with changed generation gets new strong tag",
+    "missing If-Match 428 and previous generation 412 without state change",
+    "valid cancel and terminal-afterward replay keep original result; changed condition 409; one cancel audit"
+  ],
+  "source_modified": false,
+  "shared_dev_or_qa_used": false
+}

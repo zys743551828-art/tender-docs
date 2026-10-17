@@ -1,0 +1,45 @@
+{
+  "scope": "temporarily parked earliest synthetic local S3 runtimes; native OSS/PG/Kafka unchanged",
+  "private_base": "/workspace/tender-workbench/.local/parked-early-object-stores01",
+  "records": [
+    {
+      "name": "tender-workbench-qa-object-store-1",
+      "removed_container_id": "79c3ec4a0d4f5cfe8b39a5671389f58a8e350428766f2c5ea9ac6dc3c0a55182",
+      "image_id": "sha256:ebb528e4b10c99974dbfbe0bb699f40e487c09346e324d5791ba05060c0eaac0",
+      "retained_volume": "tender-workbench-qa_object_data",
+      "private_original_config": "/workspace/tender-workbench/.local/parked-early-object-stores01/tender-workbench-qa-object-store-1/original-inspect.json",
+      "rootfs_archive": "/workspace/tender-workbench/.local/parked-early-object-stores01/tender-workbench-qa-object-store-1/container-rootfs.tar.gz",
+      "compressed_sha256": "af179e584b444c8e45c93ce5c59f9de42539f804466f220f9115e9f864c1f79f",
+      "uncompressed_tar_sha256": "88d266a5568cc3c67331eb5725b86ea8b9fa68522703e827ac20f292c81b4d8e",
+      "uncompressed_bytes": 152218112,
+      "compressed_bytes": 65642869,
+      "bound_config_sha256": "638a8dcb77c3e5aef02c806c2cf49a1f40340471a1a8bee1ce6273337b057493",
+      "exit_code": 0,
+      "volume_unchanged_identity": true,
+      "free_before": 1062838272,
+      "free_after": 1368252416,
+      "volume_deleted": false,
+      "objects_deleted": false
+    },
+    {
+      "name": "tender-workbench-dev-object-store-1",
+      "removed_container_id": "dee6a2311dfaa4bef1c0274900fcd492a511e3842f0ce51d54398aae4b5321ab",
+      "image_id": "sha256:ebb528e4b10c99974dbfbe0bb699f40e487c09346e324d5791ba05060c0eaac0",
+      "retained_volume": "tender-workbench-dev_object_data",
+      "private_original_config": "/workspace/tender-workbench/.local/parked-early-object-stores01/tender-workbench-dev-object-store-1/original-inspect.json",
+      "rootfs_archive": "/workspace/tender-workbench/.local/parked-early-object-stores01/tender-workbench-dev-object-store-1/container-rootfs.tar.gz",
+      "compressed_sha256": "7d736be0f6bfe20aa94e9e5cd9d99be9542656565dc2a9db57ab141339225bf0",
+      "uncompressed_tar_sha256": "c841b7c7e4e5fed5f17b066d94aea0ed2bd3bfc9214112b714af26305d842da7",
+      "uncompressed_bytes": 152218112,
+      "compressed_bytes": 65642837,
+      "bound_config_sha256": "5f072189fdb6c231f0447f4ed173cf01f336732167e2a3c2bb391c94b75ae484",
+      "exit_code": 0,
+      "volume_unchanged_identity": true,
+      "free_before": 1368223744,
+      "free_after": 1608564736,
+      "volume_deleted": false,
+      "objects_deleted": false
+    }
+  ],
+  "free_after": 1608556544
+}

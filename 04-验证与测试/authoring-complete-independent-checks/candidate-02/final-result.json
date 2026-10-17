@@ -1,0 +1,244 @@
+{
+  "schema": "authoring-PAGE-build-independent-checks/1",
+  "created_at": "2026-10-17T03:45:06.425901+00:00",
+  "status": "passed_scoped_actual_registered_PAGE_build_mechanisms",
+  "blocking_findings": [],
+  "candidate_sha256": "5cb2bd6f9c205bace488158d3b9656222b3e9a54aa215d1c6bf2d834f11773e9",
+  "own_sources": 31,
+  "dependencies": 304,
+  "executed_sources": 335,
+  "source_binding": "Original candidate-02/frozen-tree path executed and rechecked all 335 before/after; separate audit copy preserved here but not executed under a different root/profile",
+  "inputs_manifest_sha256": "04780bce04ae6dd9b8918b7016c9c4ab830d1a4dc063d897afcb56ac2778bf83",
+  "actual": {
+    "sha256": "d9f95834559640aed7f95a632cb00d998306f40e3084fab29ffb3c1c3271d240",
+    "paths": 173,
+    "operations": 200,
+    "schemas": 331,
+    "cold_composed_export_equals_frozen": true,
+    "composition": "Fixed main plus explicit authoring_structure router in local TestClient; no shared/live service changed"
+  },
+  "renderer": {
+    "profile_digest": "b2495c0f824d37f84071b4881ac1a61f90540dc3d00f08f1aeada4f77983a97f",
+    "private_profile_sha256": "96b5c9f13b9d954d92f25266606878f7b526401ca2ac499ede0035190be2c834",
+    "profile_creation": "Actual sandbox.build_profile then generated_renderer.profile_for in original candidate frozen root; private generated profile600, no static profile rewritten or global settings changed",
+    "runner_file_mode": "0o444"
+  },
+  "unique_cases": 4,
+  "observations": [
+    {
+      "name": "actual_HTTP_registered_export",
+      "physical_pages": [
+        {
+          "physical_page": 1,
+          "footer": "1"
+        },
+        {
+          "physical_page": 2,
+          "footer": "2"
+        },
+        {
+          "physical_page": 3,
+          "footer": "3"
+        },
+        {
+          "physical_page": 4,
+          "footer": "4"
+        },
+        {
+          "physical_page": 5,
+          "footer": "5"
+        },
+        {
+          "physical_page": 6,
+          "footer": "6"
+        },
+        {
+          "physical_page": 7,
+          "footer": "7"
+        },
+        {
+          "physical_page": 8,
+          "footer": "8"
+        }
+      ],
+      "docx_sha256": "e0a1b0ef746a6daf819ddf1bc83aaff239db6cd733613d860034c4693d84b061",
+      "pdf_sha256": "7d58070820a9879d2bdebd3d0f4df5dc7b71b77007c54db8345767bf2e47517c",
+      "body_text_sha256": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e",
+      "body_digits": 1102,
+      "expected_digest": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e",
+      "connections_closed_before_Docker": true,
+      "one_effect_and_duplicate_not_acquired": true,
+      "no_automatic_body_adoption": true,
+      "explicit_unknown_gaps": [
+        "ACTUAL_SECTION_PAGE_RANGES_UNKNOWN",
+        "TOC_PAGE_NUMBERS_UNKNOWN"
+      ]
+    },
+    {
+      "name": "cancel_late",
+      "actual_render_complete": true,
+      "outputs": 0,
+      "effects": 0
+    },
+    {
+      "name": "late_editor_revision",
+      "frozen_outputs_retained": 2,
+      "new_body_not_adopted": true,
+      "follow_up": "needs_selection"
+    },
+    {
+      "name": "source_withdrawal_late",
+      "real_pdf_original_bytes": true,
+      "source_fixture": "actual PDFium local parse explicitly published metadata, not Parser03 accuracy acceptance",
+      "outputs": 0,
+      "effects": 0
+    }
+  ],
+  "readback": {
+    "physical_pages": [
+      {
+        "physical_page": 1,
+        "footer": "1"
+      },
+      {
+        "physical_page": 2,
+        "footer": "2"
+      },
+      {
+        "physical_page": 3,
+        "footer": "3"
+      },
+      {
+        "physical_page": 4,
+        "footer": "4"
+      },
+      {
+        "physical_page": 5,
+        "footer": "5"
+      },
+      {
+        "physical_page": 6,
+        "footer": "6"
+      },
+      {
+        "physical_page": 7,
+        "footer": "7"
+      },
+      {
+        "physical_page": 8,
+        "footer": "8"
+      }
+    ],
+    "docx_sha256": "e0a1b0ef746a6daf819ddf1bc83aaff239db6cd733613d860034c4693d84b061",
+    "pdf_sha256": "7d58070820a9879d2bdebd3d0f4df5dc7b71b77007c54db8345767bf2e47517c",
+    "body_text_sha256": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e",
+    "body_digits": 1102,
+    "expected_digest": "559fe02d17ffaaa972dd0254e15196928685f86559b6405b304b32e98a628b1e"
+  },
+  "artifacts": [
+    {
+      "path": "own-artifacts/positive/body.docx",
+      "sha256": "e0a1b0ef746a6daf819ddf1bc83aaff239db6cd733613d860034c4693d84b061",
+      "bytes": 3069
+    },
+    {
+      "path": "own-artifacts/positive/body.pdf",
+      "sha256": "7d58070820a9879d2bdebd3d0f4df5dc7b71b77007c54db8345767bf2e47517c",
+      "bytes": 113834
+    },
+    {
+      "path": "own-artifacts/positive/readback.json",
+      "sha256": "c7a6207c5d842bbeef73733cc94f23acf0c4dd38015b6581ec37413ebca875d7",
+      "bytes": 872
+    }
+  ],
+  "execution_evidence": [
+    {
+      "path": "node-fixture-fixed-execution/executed-test.py",
+      "sha256": "dfac2e7ef6bd786273ccb3680f3cae8849138c6275f4f706745dc921d40caf6c",
+      "bytes": 15774
+    },
+    {
+      "path": "node-fixture-fixed-execution/junit.xml",
+      "sha256": "7981f36f2728b50d60002f20b10f689d8843aef969e2c08cc71891a7c1b8971f",
+      "bytes": 364
+    },
+    {
+      "path": "node-fixture-fixed-execution/observations.json",
+      "sha256": "b20497e2673d6a093ddd7742af0d240245dc1edf0f8995bf0e0cb8e3fe40068a",
+      "bytes": 32422
+    },
+    {
+      "path": "adversarial-execution/executed-test.py",
+      "sha256": "dfac2e7ef6bd786273ccb3680f3cae8849138c6275f4f706745dc921d40caf6c",
+      "bytes": 15774
+    },
+    {
+      "path": "adversarial-execution/junit.xml",
+      "sha256": "071021051ec9290873a2c813b4fa55be78d22b0a793f0bf271d3ee6ea3fd34a1",
+      "bytes": 2237
+    },
+    {
+      "path": "adversarial-execution/observations.json",
+      "sha256": "ff64bc4e8eaa6d0a047a1881a6e9bb90aa7561322bdfad3d3cc747f777863fbf",
+      "bytes": 31351
+    },
+    {
+      "path": "selected-source-fixed-execution/executed-test.py",
+      "sha256": "b53fa7a98aef618621ca47457eb7207e856afdae59e621de8be6fd7a6550ffdc",
+      "bytes": 16297
+    },
+    {
+      "path": "selected-source-fixed-execution/junit.xml",
+      "sha256": "17973062379249612ad371f788626210db5feb175bcfc6bb40eaa3de38fd3a2e",
+      "bytes": 369
+    },
+    {
+      "path": "selected-source-fixed-execution/observations.json",
+      "sha256": "c3d7029527ea4a0f89fe0c75bbaa3413b79a70b363cee7818aa88cc22db38ddd",
+      "bytes": 31511
+    }
+  ],
+  "published_catalog": {
+    "path": "actual-published-build-and-schema.json",
+    "sha256": "5fdf94cfd9ba42639907f863773c86683bd65b4a992c07de4f7f6a4e1e689d04",
+    "exact_positive_effect_receipts": 1
+  },
+  "ports": {
+    "database": "Actual isolated authoring_complete01 API+ordinaryWorker nonowner LOGINs, no owner or grant/DDL",
+    "http": "Actual ASGI session/Origin/CSRF/CAS build request, cancel and editor save; in-process only",
+    "objects": "Complete explicit Memory storage.get/put/client HEAD/get facade; byte-return checks retained. requests/httpx real transports hard blocked.",
+    "renderer": "Actual registered export/1 engine acquire/run_compute/finish + fixed no-network Docker LibreOffice + actual PDFium readback",
+    "source_fixture": "Own actual PDF original stored entirely in Memory; exact PDFium text/page metadata explicitly published and selected as current tender via own SQL fixture then new transaction plan save. Not ordinary Parser03/RAG full-source intake or accuracy acceptance.",
+    "models": "from_env hard blocked; genuine provider keys removed; no model execution",
+    "queue": "Actual authoritative export outbox envelopes/direct engine; Kafka and consumers not started"
+  },
+  "preserved_failed_qa_rounds": [
+    {
+      "path": "primary-execution",
+      "cause": "Own newly constructed paragraph fixture omitted required attrs.id; actual validation correctly rejected before build. Only QA input fixed."
+    },
+    {
+      "path": "adversarial-execution",
+      "cause": "2 passed plus source fixture save_plan rejected because source not selected in current material and newly clock_timestamp-known rows were used before initial source transaction committed. Corrected only own material/commit fixture and reran that one case; no source or authorization changed."
+    }
+  ],
+  "counters": {
+    "remote_http_calls": 0,
+    "real_model_calls": 0,
+    "cloud_object_requests": 0,
+    "consumers": 0,
+    "relay": 0,
+    "new_DDL": 0,
+    "owner_permission_changes": 0,
+    "shared_live_service_changes": 0
+  },
+  "not_accepted": [
+    "TOC chapter page numbers or actual section page ranges remain explicitly unknown",
+    "Rich tables/images, visual preview, selection AI and external Word import",
+    "Real provider quality/formal scoring or business submission qualification",
+    "Native OSS, Kafka, browser, production capacity and complete A2 release",
+    "External Word PAGE acceptance; this generated trusted lane does not relax external Word03",
+    "Other 80 developer regression cases or entire fixed dependency system"
+  ]
+}

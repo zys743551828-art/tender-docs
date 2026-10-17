@@ -1,0 +1,135 @@
+{
+  "scope": "显式用户请求引起的产品与技术约束修改；保留历史三轮审查原样",
+  "updates": [
+    {
+      "id": "USR-KAFKA-RAG-GREENFIELD",
+      "authorization_source": "user_request",
+      "request": "mq换成kafka，为什么没有向量数据库，我们不需要rag吗，我们是全新的系统没有迁移需求，记住",
+      "recorded_at": "2026-10-16T10:47:49.881072+00:00",
+      "changes": [
+        "消息基础设施采用Kafka及独立Python Worker",
+        "明确pgvector向量数据库和首批RAG链路",
+        "取消旧系统迁移、兼容与状态映射；保留新资料入库和备份恢复"
+      ],
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "9c8df6ab66c31a8f5c1d110343d2e7322b130c3e56c897cef2c3e4729956054b",
+        "02-业务与产品/AI投标工作台PRD.md": "353f85df7fe1829ea8e38a674e82954c12d51e39a161849bcf199ffaad07ff48",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "b812f9f286de3fa1ea26cd0f5d525c44393270b868cf263801d91f163b752a4f",
+        "04-验证与测试/prd-checks/scenarios.json": "b98cf68e3bd2a185120b79e7bce5f49660355ce2ba8281e2485e89b89f8b8625"
+      },
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "900172789bca1bbacee8c0b62554ef1018af4f7c17b5f6d4eef9ba14c0e66926",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "d1a9876ff84c8c68dc7e6e5c7368399fa0d2e7b8171b78494d9e0cb8fc43a3e0",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      }
+    },
+    {
+      "id": "USR-IMPLEMENTABLE-DETAILED-DESIGN",
+      "authorization_source": "user_request",
+      "request": "把详细设计写的更加细致一点，要可落地",
+      "recorded_at": "2026-10-16T11:23:27.794141+00:00",
+      "changes": [
+        "补齐全新建库与运行角色",
+        "将接口响应由通用引用扩展为具体业务视图",
+        "固定首批解析、1024维向量profile和实现规约",
+        "补充可运行基础设施与真实机制验证"
+      ],
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "900172789bca1bbacee8c0b62554ef1018af4f7c17b5f6d4eef9ba14c0e66926",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "d1a9876ff84c8c68dc7e6e5c7368399fa0d2e7b8171b78494d9e0cb8fc43a3e0",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      },
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "900172789bca1bbacee8c0b62554ef1018af4f7c17b5f6d4eef9ba14c0e66926",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "6390f9f02559c52415805f18e9c4092eb4d269918b915db2f5347f0bb7745747",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      }
+    },
+    {
+      "id": "USR-RETAINED-FEATURES-DEVELOPMENT-READINESS",
+      "authorization_source": "user_request",
+      "request": "对比的结论有了，详细设计完善了吗，是否能开始开发",
+      "recorded_at": "2026-10-16T12:50:21.543006+00:00",
+      "changes": [
+        "将GitHub保留能力的十项设计缺口落实至PRD、详细规约、目标Schema/OpenAPI和全新建库SQL",
+        "明确分阶段开发准入及仍需真实软件和业务验收的边界"
+      ],
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "900172789bca1bbacee8c0b62554ef1018af4f7c17b5f6d4eef9ba14c0e66926",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "6390f9f02559c52415805f18e9c4092eb4d269918b915db2f5347f0bb7745747",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      },
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "897b39ee97e9678f0582b7b7ed2313921703b892c568bc213389b6c56200ed78",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "6390f9f02559c52415805f18e9c4092eb4d269918b915db2f5347f0bb7745747",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      }
+    },
+    {
+      "id": "USR-TEAM-REMEDIATION-AND-IMPLEMENTATION",
+      "authorization_source": "user_request",
+      "request": "可以对架构师的问题做修改了，产品和用户的问题出来也继续修改，你可以开一个开发的子智能体，你这个主会话作为整个项目的项目经理，架构是产品用户都审核没问题了就可以开始开发了，完成后也需要进行测试以及架构时产品用后的review，测试智能体你也可以开",
+      "responsibility_request": "开发、测试、架构师、用户都可以review产品方案，产品智能体应该是负责产品方案的；请按照一般的团队分工，对几个智能体做出要求和责任划分，你自己对整个项目负责",
+      "recorded_at": "2026-10-16T13:28:53.337415+00:00",
+      "changes": [
+        "修正合法Worker权限与研究调用原子预留，明确审计/业务/执行身份并统一as_of读取",
+        "闭合上传重绑定和人工补入核心规则的CAS、来源存续与复评",
+        "产品Owner明确已有关键风险、分层覆盖、三状态交付、下载用途与DOCX恢复",
+        "团队按产品、架构、开发、独立测试、用户及项目经理分工，设计复审通过后开始新实现"
+      ],
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "873d394bfe964d609288588c5946512c4273f940ebdd8e85ee8244dd0b699c75",
+        "02-业务与产品/AI投标工作台PRD.md": "897b39ee97e9678f0582b7b7ed2313921703b892c568bc213389b6c56200ed78",
+        "05-技术与设计/交互与视觉设计.md": "c47a3a32d028e867bc4f50948d7e0a70ac7474c636aa9c61ea6352902b6a5a75",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "6390f9f02559c52415805f18e9c4092eb4d269918b915db2f5347f0bb7745747",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      },
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2",
+        "02-业务与产品/AI投标工作台PRD.md": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e",
+        "05-技术与设计/交互与视觉设计.md": "2ee6809cc12fbb4450ff1b8b038d71c4e5fb7f8e4f361def215743de83150dc9",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "7d088ff1912692ac3a79de13541bdcdb2b1006f83741fa4aaeadd899dc7f397b",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      }
+    },
+    {
+      "id": "USR-DELEGATED-TEAM-SCORE-PRODUCT-INCREMENT",
+      "authorization_source": "user_request",
+      "request": "验证完成后，请带着你的团队完成我们的项目，有卡点或达到最终版再来找我；继续",
+      "recorded_at": "2026-10-17T03:38:18.432291+00:00",
+      "changes": [
+        "受控技术总满分登记与来源时点",
+        "档案研究通过独立资格入口，不重开项目",
+        "受限中文任务草案先保存与编辑，通用NL要求保留",
+        "回溯四时点与严格未来预测资格分离"
+      ],
+      "owner_decision": "04-验证与测试/a1-delivery-plan/score-product-increment/owner-decision.json",
+      "PM_change_record": "00-项目管理/产品主记录变更-20261017-score-increment.json",
+      "before_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2",
+        "02-业务与产品/AI投标工作台PRD.md": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e",
+        "05-技术与设计/交互与视觉设计.md": "2ee6809cc12fbb4450ff1b8b038d71c4e5fb7f8e4f361def215743de83150dc9",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "7d088ff1912692ac3a79de13541bdcdb2b1006f83741fa4aaeadd899dc7f397b",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      },
+      "after_hashes": {
+        "02-业务与产品/AI投标工作台产品化方案.md": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2",
+        "02-业务与产品/AI投标工作台PRD.md": "16f776ef3115f9bace2ff7cf63bfff6652770199c4432e72965bb1369a693297",
+        "05-技术与设计/交互与视觉设计.md": "2ee6809cc12fbb4450ff1b8b038d71c4e5fb7f8e4f361def215743de83150dc9",
+        "05-技术与设计/AI投标工作台全新系统技术方案.md": "7d088ff1912692ac3a79de13541bdcdb2b1006f83741fa4aaeadd899dc7f397b",
+        "04-验证与测试/prd-checks/scenarios.json": "4fd58beda991c037ea1bfb0cc4d107bb70ee00045267ccb5c0016dae3e363aa6"
+      }
+    }
+  ]
+}

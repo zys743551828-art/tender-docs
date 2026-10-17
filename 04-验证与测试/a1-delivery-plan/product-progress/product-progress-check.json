@@ -1,0 +1,74 @@
+{
+  "scope": "本次产品差距及交接的静态完整性，不是软件或业务验收",
+  "passed": true,
+  "checks": [
+    {
+      "name": "40FR完整",
+      "passed": true
+    },
+    {
+      "name": "40FR未由源码自动通过",
+      "passed": true
+    },
+    {
+      "name": "11报价任务未执行",
+      "passed": true
+    },
+    {
+      "name": "原13仍待执行",
+      "passed": true
+    },
+    {
+      "name": "a1-acceptance.json旧字节保留",
+      "passed": true
+    },
+    {
+      "name": "delivery-plan.json旧字节保留",
+      "passed": true
+    },
+    {
+      "name": "plan-check-result.json旧字节保留",
+      "passed": true
+    },
+    {
+      "name": "新交接链接有效",
+      "passed": true
+    },
+    {
+      "name": "本次无软件收费凭据操作",
+      "passed": true
+    }
+  ],
+  "source_changes_since_observation": [],
+  "runtime_calls_completed": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "live_read_attempt": "GET localhost8802/openapi.json在执行沙箱EPERM拒绝，无HTTP响应，无认证和业务动作",
+  "input_bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/报价最小产品协议.md",
+      "sha256": "44bb045e67571021eddf0b18c7342e9bbcb94666c5409a434615e339c2533cde"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/身份选择与确认交互.md",
+      "sha256": "f1e921ae23be0e6f7bfd47a7d8665d7fc5c222f317a431e64d80944a8a9fa40a"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/pricing-acceptance.json",
+      "sha256": "7ad01bd135097fc2a8a3808b500f20aedfc07a757d3bfcb439188dbbe5ba65b4"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/product-progress/README.md",
+      "sha256": "027259cad7aad6eabb6656330871ea67a2492811c834be71bb557b8a1e98f43e"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/product-progress/补遗效力操作交接.md",
+      "sha256": "08064261f88229269ee7395b5327247da3a00275fa43a130e220773789877531"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/product-progress/remaining-fr.json",
+      "sha256": "09586bbad659e4dc687257d677cd629f4cc87f1efe3d9f48386a5aff10dd633d"
+    }
+  ]
+}

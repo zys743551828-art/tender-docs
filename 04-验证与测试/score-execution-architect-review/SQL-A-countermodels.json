@@ -1,0 +1,35 @@
+{
+  "candidate_sha256": "aea80880ed78108a29fce669e4b2a015fb4cb5e8c62b1f87c12aa8545a1206fa",
+  "mode": "actual nonowner PostgreSQL read-only scalar WHERE models; not full score schema/RPC execution",
+  "equivalent_input_unknown": [
+    {
+      "input_id": "I1",
+      "start_unknown_guard_allows": false
+    },
+    {
+      "input_id": "I2",
+      "start_unknown_guard_allows": true
+    }
+  ],
+  "nonfinite_maximum": [
+    {
+      "maximum": "100",
+      "early_maximum_rejected": false,
+      "inherited_band_points_accepted": true
+    },
+    {
+      "maximum": "NaN",
+      "early_maximum_rejected": false,
+      "inherited_band_points_accepted": true
+    },
+    {
+      "maximum": "Infinity",
+      "early_maximum_rejected": false,
+      "inherited_band_points_accepted": true
+    }
+  ],
+  "DDL": 0,
+  "model_calls": 0,
+  "object_calls": 0,
+  "consumers": 0
+}

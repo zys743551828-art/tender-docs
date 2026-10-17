@@ -1,0 +1,54 @@
+{
+  "gate": "first_pdf_material_software_slice",
+  "decision": "passed_scoped_slice",
+  "responsible": "project_manager",
+  "scope": "T0底座首个PDF资料切片，允许本地演示与继续开发；不是全部T0或完整A1",
+  "remaining_slice_blockers": 0,
+  "source_count_verified": 69,
+  "test_result_count_verified": 9,
+  "combined_candidate_sha256": "8b64ba0239190ce5cd1de0e00cd569d7b70d111cd28fc7ff5fc8440088b6affd",
+  "backend_candidate_sha256": "e8891f9b0f0aac7ead91b00a17d96180bd3cb938b9b2f17a6dc39eccf5df5fb3",
+  "frontend_candidate_sha256": "7bef8d1038ed4da77776f2301a6694842df0efcc6bcf36efd6462df7919872b9",
+  "evidence": [
+    {
+      "path": "04-验证与测试/首个PDF资料切片验收.md",
+      "sha256": "ceae55ff9e12b0174c4eeacd39f81ce522b3a24cb77df88116c5e083a272f238"
+    },
+    {
+      "path": "04-验证与测试/project-gates/implementation-candidate.json",
+      "sha256": "8b64ba0239190ce5cd1de0e00cd569d7b70d111cd28fc7ff5fc8440088b6affd"
+    },
+    {
+      "path": "04-验证与测试/project-gates/infrastructure-result.json",
+      "sha256": "a09f9c6bb66ce830d8d417b7094d0ab7eec1473127ca60fd2d435942350efd97"
+    },
+    {
+      "path": "04-验证与测试/implementation-test-checks/final-result.json",
+      "sha256": "ed584c3a9e75d6ba60b483f01433a1db518c2855f6086b886d521fdff5bf2c97"
+    },
+    {
+      "path": "04-验证与测试/implementation-test-checks/final-verification.json",
+      "sha256": "cbbf97bf422e3bd47ccbd72e15731bfe6f6b3ef49d6f756de13041804b0158cb"
+    },
+    {
+      "path": "04-验证与测试/implementation-architect-review/final-review-record.json",
+      "sha256": "5720862148828764d761bd11d1d3877c2486d40b9200340984c66d89784e4c1e"
+    },
+    {
+      "path": "04-验证与测试/implementation-product-review/pdf-slice-review/candidate-03-metadata-review.json",
+      "sha256": "efdf5df63a25ad88c225d16e72e005e900f9b973fa481492681ac5730d648948"
+    },
+    {
+      "path": "04-验证与测试/implementation-user-review/browser-run-01/backend-03-identity-delta.json",
+      "sha256": "f2544cd98d4e240f2e3a9461f38f2e209ee5d0ff0d4511c23a6fec8056f6b261"
+    }
+  ],
+  "project_complete": false,
+  "full_T0_complete": false,
+  "full_A1_complete": false,
+  "RAG_delivered": false,
+  "formal_model_accepted": false,
+  "real_user_acceptance": false,
+  "production_accepted": false,
+  "next_tasks": "00-项目管理/实施任务板.md#6-后续实施责任与依赖"
+}

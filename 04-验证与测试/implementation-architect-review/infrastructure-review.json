@@ -1,0 +1,18 @@
+{
+  "scope": "架构只读核对基础设施脚本及PM实际探针输入；未重跑部署",
+  "source_hashes": {
+    "deploy/check_compose.py": "6e07962d384b3a3d82bb7626d586dec08585a64836b4310890c638b79a8e4717",
+    "deploy/check_environment.py": "d35a01eb9df4b660758ceb4728ff3fc5e9a286a40fc886de7dc1f3e455506598",
+    "deploy/configure_local.py": "941b91036e6d1da8dd3ed77bb3fab58031c15d12304095b806f481c3a8e571e4",
+    "deploy/initialize_database.py": "797b4bb6e3d70ee03655e029511eb2249a9a1775432f8f8961e045455b114d98",
+    "deploy/initialize_object_store.py": "9b68bd3e1e6839791ebd7acb14e3b2deca795afe0d08de4bddb97464fa4ad121",
+    "deploy/initialize_topics.py": "4af0947c05b51079ed79e7b1c09ca1896506a84668a94416826ebeeb7eb8e886",
+    "deploy/run.py": "7e001fb63d4c29ecaa786f6723e1f03002fd15616c68f753c1fa1ad088984484",
+    "deploy/compose.yaml": "94942ef84563479345382c88a147b553a49d6cd349f4e3f90a0c0e8727829ff9",
+    "requirements.lock.txt": "81ef04f6a41eca287a6a8bfbaa5babcb1aa6fedcacdab5ba17b501cc24f9695b"
+  },
+  "pm_result_sha256": "a09f9c6bb66ce830d8d417b7094d0ab7eec1473127ca60fd2d435942350efd97",
+  "input_binding_matches": true,
+  "code_review": "空库拒绝重初始化、独立能力LOGIN、仅本地端口、独立dev/QA、固定镜像及私有S3配置边界一致",
+  "production_acceptance": false
+}

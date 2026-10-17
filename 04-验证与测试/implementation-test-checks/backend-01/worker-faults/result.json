@@ -1,0 +1,14 @@
+{
+  "scope": "真实PG/Kafka/S3与实际Worker；故障注入仅在测试进程，非模型/生产多节点验收",
+  "passed": false,
+  "checks": [],
+  "started_at": "2026-10-16T14:02:31.438744+00:00",
+  "bid_id": "f45288e7-b3dc-4218-a0b0-14f5064906ba",
+  "failure": {
+    "stage": "PG提交后offset前崩溃",
+    "type": "AssertionError",
+    "message": "重启后真实offset推进"
+  },
+  "finished_at": "2026-10-16T14:03:16.432918+00:00",
+  "probe_sha256": "640fc83a3a1fb4e7082dd2e2112aca34ed0e9612eb99c3aff33d8416770765e0"
+}

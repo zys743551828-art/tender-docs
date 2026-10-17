@@ -1,0 +1,21 @@
+{
+  "candidate_sha256": "1376e0eb4bc026363e75055dc682e84affa8d5431489a03d7798143e02f039c4",
+  "verified_archived_sources": 25,
+  "existing_files_changed_from03": [
+    "deploy/application_recovery/fixture.py"
+  ],
+  "added_from03": [
+    "deploy/application_recovery/seed_retry.py",
+    "tests/test_application_recovery_fixture.py"
+  ],
+  "protocol_handoff_sha256": "5dc82fe2f9652ba9f260caf49e0d116cd20b1fbf64d770eecd9a98bb1ec44599",
+  "protocol_document_sha256": "80d043cd5e274dcbf309c532864f25693e667ba4685d9b8d60f3db0e93a91d65",
+  "resource_execution": false,
+  "DDL": false,
+  "conclusion": "范围内可执行受控source重试与串行演练；尚未验证恢复成功",
+  "independent_offline_tests": 4,
+  "test_evidence_sha256": "8f9b31bc1da3fa13c1c536688ff913a4993e91643aff73b6c1bf366bd11d4326",
+  "real_database_checks_by_architect": 0,
+  "actual_code03_source_receipt_sha256": "d2b874c4c167a62abd0301284c813269ab5e32d8cc3485ba6768cb088ad2f1fc",
+  "power_loss_durability_attested": false
+}

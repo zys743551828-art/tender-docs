@@ -1,0 +1,53 @@
+{
+  "scope": "offline Boolean model of changed time predicate; not PostgreSQL execution",
+  "cases": [
+    {
+      "strict": false,
+      "header_before_submission": false,
+      "confirmed_before_submission": false,
+      "B_time_guard": true
+    },
+    {
+      "strict": false,
+      "header_before_submission": false,
+      "confirmed_before_submission": true,
+      "B_time_guard": true
+    },
+    {
+      "strict": false,
+      "header_before_submission": true,
+      "confirmed_before_submission": false,
+      "B_time_guard": true
+    },
+    {
+      "strict": false,
+      "header_before_submission": true,
+      "confirmed_before_submission": true,
+      "B_time_guard": true
+    },
+    {
+      "strict": true,
+      "header_before_submission": false,
+      "confirmed_before_submission": false,
+      "B_time_guard": false
+    },
+    {
+      "strict": true,
+      "header_before_submission": false,
+      "confirmed_before_submission": true,
+      "B_time_guard": false
+    },
+    {
+      "strict": true,
+      "header_before_submission": true,
+      "confirmed_before_submission": false,
+      "B_time_guard": false
+    },
+    {
+      "strict": true,
+      "header_before_submission": true,
+      "confirmed_before_submission": true,
+      "B_time_guard": true
+    }
+  ]
+}

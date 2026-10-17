@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "case": "global_answer_persisted",
+      "job_id": "48e607e5-bf18-4193-8835-ed4a57fd2f62",
+      "state": "passed"
+    },
+    {
+      "case": "global_sourced_action_exactly_once",
+      "job_id": "cb1748ed-8cfb-465e-85f9-388e5d13053f",
+      "action_id": "ee778175-adb6-429b-97a9-f5f4f778e79d",
+      "state": "passed"
+    },
+    {
+      "case": "global_unknown_no_second_attempt",
+      "job_id": "98832f62-3393-4f56-aed5-32b024c250f7",
+      "state": "passed"
+    },
+    {
+      "case": "global_cancel_before_mock",
+      "job_id": "81bee8b3-3e5e-4ee3-8bed-60ef557e86dd",
+      "state": "passed"
+    },
+    {
+      "case": "project_actual_engine_answer_persisted",
+      "job_id": "18e3d59c-562f-4584-a1ce-5d1ef7272b72",
+      "state": "passed"
+    }
+  ],
+  "real_provider_attempts": 0,
+  "transport": "explicit-direct-handler-not-kafka",
+  "storage": "explicit-local-synthetic",
+  "browser_accepted": false
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "解释该次探针限制，不改写原失败",
+  "classification": "probe_timeout_inconclusive",
+  "observed": "实际PG成功收据已写、进程按预定73退出，35秒内未观察到Kafka组offset推进",
+  "reason": "故意进程崩溃后未正常LeaveGroup；客户端默认会话超时可达45秒，原35秒探针不足以覆盖该恢复窗口",
+  "next": "将独立观察截止扩到70秒，候选02实际重跑；不将该超时单独认定应用缺陷，也不宣称故障恢复通过"
+}

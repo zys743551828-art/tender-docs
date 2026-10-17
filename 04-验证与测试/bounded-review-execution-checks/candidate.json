@@ -1,0 +1,55 @@
+{
+  "status": "prepared_not_authorized_not_executed",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/deploy/review_acceptance.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/frozen-inputs/deploy/review_acceptance.py",
+      "sha256": "b69a359f2099f844e3af164d3221eed607d5af4d99167fc8870eef5f83a53d85"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_review_acceptance.py",
+      "frozen_path": "/workspace/tender-docs/04-验证与测试/bounded-review-execution-checks/frozen-inputs/tests/test_review_acceptance.py",
+      "sha256": "5f91aec87d38e0bfa3723a8b3fabb195de4d2bfa2fe7c7e02e831541185dee96"
+    }
+  ],
+  "candidate_scope": "Bounded acceptance executor, not general review consumer",
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit_runtime": "passed",
+    "offline_and_restricted_pg_lock": 5
+  },
+  "fixture": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-independent-checks/real-fixture/result.json",
+    "sha256": "fe5334e948c8a23f38eac6fa5386e897724d18a04bf6bfb8364b52044c51ce6e",
+    "bid_id": "da2d5493-2732-4f17-b8c4-5b237cf7abfa"
+  },
+  "limits": {
+    "logical_keys": [
+      "extract-rules",
+      "core-judgment"
+    ],
+    "each_key_invocations": 1,
+    "total_invocations": 2,
+    "input_utf8_bytes_each": 24576,
+    "output_tokens_each": 8192,
+    "window_seconds": 180,
+    "isolated_consumer_group": true,
+    "existing_calls_reject_restart": true
+  },
+  "estimated_fee": {
+    "currency": "USD",
+    "conservative_usage_estimate": "0.0350208",
+    "planning_allowance": "0.05",
+    "assumption": "Official frozen peak cache-miss prices, input token count conservatively bounded by UTF8 content+1024 overhead; this is not a provider confirmed bill or billing guarantee"
+  },
+  "auto_review_rejection": {
+    "action": "Start global consume-review against external release",
+    "executed": false,
+    "reason": "No explicit user scope for project/call count/fees",
+    "bypass_performed": false
+  },
+  "independent_review": "pending; execute flag not authorized",
+  "paid_generation_calls": 0
+}

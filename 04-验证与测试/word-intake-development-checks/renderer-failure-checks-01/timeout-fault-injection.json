@@ -1,0 +1,44 @@
+{
+  "fault": "host deadline 0.001 sec (test override), real Docker launch/cleanup",
+  "result": {
+    "state": "failed",
+    "coverage": "failed",
+    "conversion_attempted": true,
+    "error_code": "WORD_CONVERSION_TIMEOUT",
+    "retryable": true,
+    "gaps": [
+      "WORD_CONVERSION_TIMEOUT"
+    ],
+    "chain": {
+      "source_docx_digest": "56db8926b6307a289bf4fd3334d6069b1b2bb9618ba336cb39a6c3506f9bed84",
+      "profile_digest": "44156be02a1cdaf53dd2200b5864653d14ace69020a402630306304d1684bd45",
+      "renderer_digest": "b37fc2930a1628eadd2830f77317929ed5660f842099d3754827248472faecc5",
+      "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+      "options_digest": "0ea354236ad7923b9b531b62d8f15d9a4a932aa23d802a5e377a12e7f3b7cb39"
+    },
+    "isolation": {
+      "local_image_pinned": true,
+      "network_none": true,
+      "ipc_none": true,
+      "pid_private": true,
+      "uts_private": true,
+      "nonroot": true,
+      "read_only": true,
+      "not_privileged": true,
+      "capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_limited": true,
+      "cpu_limited": true,
+      "pids_limited": true,
+      "no_daemon_document_logs": true,
+      "clean_environment": true,
+      "all_bind_mounts_readonly": true,
+      "exact_allowlisted_bind_mounts": true,
+      "no_anonymous_persistent_volumes": true,
+      "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+      "no_docker_socket_mount": true,
+      "bounded_tmpfs_output": true,
+      "own_job_cleanup_confirmed": true
+    }
+  }
+}

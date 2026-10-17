@@ -1,0 +1,234 @@
+{
+  "schema": "research-backend-candidate/3",
+  "created_at": "2026-10-16T19:02:34.861930+00:00",
+  "source_root": "/workspace/tender-workbench",
+  "scope": "B/C_03_admission_group_identity_and_whole_preview_lock_qualification",
+  "supersedes_candidate": "candidate-02/research-candidate-02.json",
+  "prior_candidate_sha256": "c53c68b39f28a2ed145c68d3f99141b2918dbfa43c5197b0220544e2187807a9",
+  "implemented_research_operations": 23,
+  "sources": [
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "008c5909a8fba2e97190d3a1bb23690e8ed7fc10b329251f613ea4190fe79eb0",
+      "bytes": 20973
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+      "bytes": 19971
+    },
+    {
+      "path": "packages/research/README.md",
+      "sha256": "788f33c1c88ea1da37c137a1623dc2b6e325b26bda42b14ae59306a81987bea6",
+      "bytes": 9377
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "bytes": 85
+    },
+    {
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264",
+      "bytes": 1571
+    },
+    {
+      "path": "packages/research/authority.py",
+      "sha256": "855404c135231ea783031a6bf244cde1e90ab45a5bb5f8d67223121e7ca6e9f1",
+      "bytes": 7705
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "cf0299442661730043f17d5c45b29027ed16547ca39ee813e465d460e5bc9565",
+      "bytes": 23062
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a",
+      "bytes": 9101
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "3b35d403d2124bc62a7573468677ccc1259d825403039860d70fa9646c423841",
+      "bytes": 16103
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "bytes": 10555
+    },
+    {
+      "path": "packages/research/execution.py",
+      "sha256": "0b973858ade5aa81292a720473c59f42feb7b1c81c03a34a8d580a8b7c9868ad",
+      "bytes": 12883
+    },
+    {
+      "path": "packages/research/identities.py",
+      "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+      "bytes": 2137
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "2833a43407134b8b64a86fd928e3fa58d3464dfdc5e4c780cb63aba73e5b4a93",
+      "bytes": 12793
+    },
+    {
+      "path": "packages/research/ledger.py",
+      "sha256": "3b53f263360a766d0d5c2360de3189945ca1e71c0f6bef8d940285f784b41d50",
+      "bytes": 9852
+    },
+    {
+      "path": "packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728",
+      "bytes": 7856
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+      "bytes": 23029
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "bytes": 2097
+    },
+    {
+      "path": "packages/research/worker.py",
+      "sha256": "39673ab943b301169141ae7746102857c37cf209719277a42561deabdc46f685",
+      "bytes": 12229
+    },
+    {
+      "path": "tests/test_research_core.py",
+      "sha256": "425a60f0018774d5ef9793c5202f55391031456afb8060a774102a6bd7d2919e",
+      "bytes": 9630
+    },
+    {
+      "path": "tests/test_research_integration.py",
+      "sha256": "b7a4de833beb2227bf87f24c3c390ec09362484dea9b17b349c26328935a5f6f",
+      "bytes": 58550
+    }
+  ],
+  "reference_inputs": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "1b1e7e54290fec1c8e1e00d4b550cd47e7a2929ca35eeed9afafd9b55adeba22"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237"
+    },
+    {
+      "path": "deploy/profiles/deepseek-research-price.json",
+      "sha256": "9771e2c00710e9bd14ef7bdc38f4ca882ed3dac69da3c3f8cc20ad0110c182c3"
+    },
+    {
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22"
+    }
+  ],
+  "identity_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/identity-development-checks/candidate-02/candidate.json",
+    "sha256": "e3644f59a564b4a2757a3a9fbee34b3b3be8800ffea05cb1fb42854ce46442b3"
+  },
+  "fresh_initialization": {
+    "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/fresh-source-authority-initialization-03.json",
+    "sha256": "c3dc582e9fbaa31056c6d3369e2a833bde315904ce851fbdf7d21e87f406a27f"
+  },
+  "self_test": {
+    "status": "passed_development_mechanisms",
+    "fresh_schema_suite": {
+      "tests": "38",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "1",
+      "time": "47.195"
+    },
+    "old_schema_fail_closed_suite": {
+      "tests": "14",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "0.689"
+    },
+    "focused_regressions": {
+      "tests": "3",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "6.883"
+    },
+    "actual_nonowner_postgresql": true,
+    "database": "tender_checks_research03",
+    "actual_sessions_and_csrf": true,
+    "explicit_synthetic_documents": true,
+    "object_store": "explicit_in_memory_for_tests",
+    "model_transport": "native_DeepSeekClient_with_explicit_httpx.MockTransport",
+    "external_paid_model_requests": 0,
+    "real_official_labels": 0,
+    "real_user_participants": 0,
+    "kafka_consumer_relay_coordinator_started": false,
+    "formal_model_release_eligible": false,
+    "quality": {
+      "ruff": "passed",
+      "ruff_format": "passed",
+      "mypy": "passed",
+      "bandit": "passed"
+    },
+    "counterexamples": [
+      "price_config_descriptor_token_mismatch_rejected",
+      "withdrawn_body_root_zero_new_requests",
+      "withdraw_during_result_stage_refuses_publish_preserves_three_known_mock_calls",
+      "api_and_research_no_idle_transaction_during_manifest_get_put_and_model",
+      "worker_mapping_select_insert_denied",
+      "wrong_chapter_rejected",
+      "repeatable_read_rejected",
+      "old_parse_child_cannot_qualify_new_parse_evidence",
+      "missing_new_schema_explicit_nonretryable_503",
+      "new_same_project_admission_pauses_and_zero_new_calls",
+      "admission_during_result_stage_blocks_publish_preserves_three_known_usage_records",
+      "new_admission_bridges_two_prior_groups_immutable_group_guard_rejects_even_if_run_reopened",
+      "no_submission_identity_freeze_cannot_be_washed_by_current_binding_or_at_time",
+      "identity_change_preserves_old_submission_and_zero_new_calls_and_current_history_not_green",
+      "reserve_waits_for_other_preview_bid_identity_transaction_then_rejects_zero_calls",
+      "all_three_authority_tables_select_and_insert_denied_to_research_worker"
+    ],
+    "unverified": [
+      "independent_review_of_candidate_03",
+      "actual_native_object_store_IO_for_this_candidate",
+      "actual_Kafka_roundtrip",
+      "real_model_three_judgments",
+      "real_material_quality",
+      "statistical_training_and_independent_accuracy",
+      "production_deployment_and_capacity"
+    ],
+    "conservative_limitation": "Only submission.evidence.identity grants explicit frozen identity; review-root-only identity and audit_at_time do not grant admission in this implementation."
+  }
+}

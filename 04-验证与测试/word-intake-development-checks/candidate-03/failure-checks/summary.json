@@ -1,0 +1,29 @@
+{
+  "profile_digest": "b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18",
+  "provider_requests": 0,
+  "business_documents": 0,
+  "checks": [
+    {
+      "name": "missing_font",
+      "state": "succeeded",
+      "coverage": "partial",
+      "gaps": [
+        "WORD_FONT_SUBSTITUTED"
+      ]
+    },
+    {
+      "name": "missing_glyph",
+      "state": "succeeded",
+      "coverage": "partial",
+      "gaps": [
+        "WORD_FONT_GLYPH_UNAVAILABLE"
+      ]
+    },
+    {
+      "name": "timeout-fault-injection",
+      "state": "failed",
+      "error_code": "WORD_CONVERSION_TIMEOUT",
+      "cleanup": true
+    }
+  ]
+}

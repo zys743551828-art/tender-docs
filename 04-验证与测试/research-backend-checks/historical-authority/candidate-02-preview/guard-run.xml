@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.377" timestamp="2026-10-17T01:53:38.239018+00:00" hostname="597cea30c71f"><testcase classname="" name="tests.test_historical_context_isolation" time="0.000"><error message="collection failure">ImportError while importing test module '/workspace/tender-docs/04-验证与测试/research-backend-checks/historical-authority/candidate-02-preview/runtime/tests/test_historical_context_isolation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/research-backend-checks/historical-authority/candidate-02-preview/runtime/tests/test_historical_context_isolation.py:9: in &lt;module&gt;
+    from apps.api import historical_routes
+/workspace/tender-docs/04-验证与测试/research-backend-checks/historical-authority/candidate-02-preview/runtime/apps/api/historical_routes.py:10: in &lt;module&gt;
+    from packages.model_governance import historical_repository as repo
+/workspace/tender-docs/04-验证与测试/research-backend-checks/historical-authority/candidate-02-preview/runtime/packages/model_governance/historical_repository.py:10: in &lt;module&gt;
+    from packages.rag.indexing import original_source_id, parse_source_id
+/workspace/tender-docs/04-验证与测试/research-backend-checks/historical-authority/candidate-02-preview/runtime/packages/rag/indexing.py:10: in &lt;module&gt;
+    from packages.rag.core import Chunk, Embedder, EvidenceText, Tokenizer, chunk_evidence
+E   ModuleNotFoundError: No module named 'packages.rag.core'</error></testcase></testsuite></testsuites>

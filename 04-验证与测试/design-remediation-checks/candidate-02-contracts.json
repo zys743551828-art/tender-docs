@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "scope": "独立摘要固定向量及Schema/OpenAPI恢复契约；无真实业务API执行",
+  "checks": 29,
+  "check_names": [
+    "独立固定向量:initial",
+    "独立固定向量:later_request",
+    "独立固定向量:explicit_rerun",
+    "独立固定向量:effective_time_changed",
+    "独立固定向量:source_effect_changed",
+    "独立固定向量:method_changed",
+    "独立固定向量:rules_changed",
+    "只改变冻结审计时间不改变内容与执行",
+    "nonce仅创建独立执行",
+    "实际业务输入变化:effective_time_changed",
+    "实际业务输入变化:source_effect_changed",
+    "实际业务输入变化:method_changed",
+    "实际业务输入变化:rules_changed",
+    "键序/解析集合顺序/等价UTC格式规范化",
+    "重复parse身份拒绝",
+    "缺时区拒绝",
+    "不能省略业务评估时点",
+    "未知业务字段不能静默漏出摘要",
+    "重复来源身份参考算法拒绝",
+    "重绑定目标+最新修订+理由有机器契约",
+    "另建文件可显式选择",
+    "缺少目标",
+    "缺少理由",
+    "旧式顶层revision",
+    "批次明确绑定用户选择",
+    "不带binding的旧式commit拒绝",
+    "重绑定具备幂等/CAS/CSRF及冲突/过期响应",
+    "覆盖四层与未知检测质量可独立表达",
+    "提取层不能被执行10/10替代"
+  ],
+  "vector_results": {
+    "initial": {
+      "manifest_digest": "b3dd4199d2805c5ccf6870d526e4af161c6a7c8f4920f240b6d5334f87430a51",
+      "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+      "execution_digest": "85ef327cf53d16b4b69e2f44b3999b12f2caab2684e74a591dfb5d1e36461280"
+    },
+    "later_request": {
+      "manifest_digest": "6be0b4657b802974c18400fa4e7ad840956fc5e55f71a3fc5abeafdb22ef89c2",
+      "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+      "execution_digest": "85ef327cf53d16b4b69e2f44b3999b12f2caab2684e74a591dfb5d1e36461280"
+    },
+    "explicit_rerun": {
+      "manifest_digest": "b3dd4199d2805c5ccf6870d526e4af161c6a7c8f4920f240b6d5334f87430a51",
+      "input_digest": "2a31736d94550557fa0d84c6402cb2297766848bbae0936b6884571300532130",
+      "execution_digest": "96982b32025ee0571cd9d624bdc4c543c68235e9e9f27314c756bb1348d0c2d0"
+    },
+    "effective_time_changed": {
+      "manifest_digest": "656dc662cb5e446124d59f974d5cdd8c7bda635fb7b39b08dd76b1ea1c014ecf",
+      "input_digest": "e63de73139693e0a32e8ebc5ab1707c2b5664b403e8afa0595838c8617bd74c0",
+      "execution_digest": "c4d19963d24351c132af7d1aa4ee462efeb0d6ba0dcf24fbac0c1b24198ca617"
+    },
+    "source_effect_changed": {
+      "manifest_digest": "6197f53835a6b71faa30a3120d27839cfbd073cdde566d5c69d93db693641f6d",
+      "input_digest": "856ef0f54fdb5da7b15daff2aaabd6b840bc88bacf1d8d4590844fa48319e480",
+      "execution_digest": "ed045280713752f341b76cf4e246817b9fface247dc1b4b76ddb90a3b46bdd62"
+    },
+    "method_changed": {
+      "manifest_digest": "db043134b1994ea11df180b78479c95ec250ae16dd05265f8cebb98d0d5f483f",
+      "input_digest": "b25eb98d44e7a2ea006e48be56c600c19f795c65805ee05cba8590ac6d7690e5",
+      "execution_digest": "4ead2487006677081ff0c152c91a5a6120c726daaf4e0a7a23749f50378f21b3"
+    },
+    "rules_changed": {
+      "manifest_digest": "297d7bd023513b0101c542c640314af5988c789a5eb18e57643b511e598ee6d5",
+      "input_digest": "6a9ff4a7ace908211421a0debc59319c30d88ca39979c5e65c6672fcaa151e89",
+      "execution_digest": "357dd1cc6d429b6c09a0ec54acf4cf346133f0d29bd8f4a1f70a22e5b18db6fc"
+    }
+  },
+  "input_sha256": {
+    "protocol.schema.json": "144b2fab9cab13d6d31c06ab71703b38ec9fb4c1dc94681bd29d94c40fb9633f",
+    "openapi.json": "9ed9ae702a0a660ed85119f405ebd15db206cd0509f518280aff21eff2f8ce06",
+    "identity_reference.py": "b5408b4653816222b1291d34bcd0782b16644250e757d0573e404a1e9543eacf",
+    "review-identity-vectors.json": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a"
+  },
+  "probe_sha256": "8c16a7253771375a8475c08b997b184d9017e251ed2d4ac650ed46542d09dfcd",
+  "software_end_to_end_executed": false
+}

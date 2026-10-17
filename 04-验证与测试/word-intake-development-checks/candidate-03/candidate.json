@@ -1,0 +1,217 @@
+{
+  "candidate": "word-intake-development-03",
+  "created_at": "2026-10-17T02:44:27.135449+00:00",
+  "scope": "local isolated synthetic Word intake/render slice; awaiting independent review and main integration",
+  "sql": {
+    "path": "packages/word_intake/schema.sql",
+    "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe"
+  },
+  "renderer": {
+    "private_profile_path": "/workspace/tender-workbench/.local/word-render-profile-dev06.json",
+    "profile_digest": "b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18",
+    "public_identity_path": "renderer-profile.json"
+  },
+  "sources": [
+    {
+      "path": "apps/api/word_intake_routes.py",
+      "sha256": "47c3dc263c7180bd31051ac6104377e07d99a2ca43109b09721e2d0fede931b4",
+      "frozen_path": "frozen-inputs/apps/api/word_intake_routes.py"
+    },
+    {
+      "path": "apps/worker/word_intake_handlers.py",
+      "sha256": "832bd59675b2d6fd494eb52eab32aad8948003931b1aeffe81d7bb12db229e1e",
+      "frozen_path": "frozen-inputs/apps/worker/word_intake_handlers.py"
+    },
+    {
+      "path": "packages/word_intake/IMPLEMENTATION.md",
+      "sha256": "f4040cdd60a9e806316ad6b17c7c99b3c781752d9a8e129199c47e4ec1214d7a",
+      "frozen_path": "frozen-inputs/packages/word_intake/IMPLEMENTATION.md"
+    },
+    {
+      "path": "packages/word_intake/__init__.py",
+      "sha256": "49576cdcfd69173cb3906483103c3e4e9c05f9f9879a0fc4c7748dd9bfdc8b8c",
+      "frozen_path": "frozen-inputs/packages/word_intake/__init__.py"
+    },
+    {
+      "path": "packages/word_intake/contracts.py",
+      "sha256": "58ec38a8078d9d5dc75ec0c6ada2d3c2930fc8b9cc1a799c708659a2ef593af4",
+      "frozen_path": "frozen-inputs/packages/word_intake/contracts.py"
+    },
+    {
+      "path": "packages/word_intake/inspection.py",
+      "sha256": "76032305050a35450cf96272708ac0db3ad3d1eafddf78ff80e74b7f84339792",
+      "frozen_path": "frozen-inputs/packages/word_intake/inspection.py"
+    },
+    {
+      "path": "packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+      "frozen_path": "frozen-inputs/packages/word_intake/renderer.py"
+    },
+    {
+      "path": "packages/word_intake/repository.py",
+      "sha256": "cf9d670f172bc6ca0a5ca2d2b932550f9559e8c361a3a29168bbd077bcf13cc8",
+      "frozen_path": "frozen-inputs/packages/word_intake/repository.py"
+    },
+    {
+      "path": "packages/word_intake/sandbox_runner.py",
+      "sha256": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289",
+      "frozen_path": "frozen-inputs/packages/word_intake/sandbox_runner.py"
+    },
+    {
+      "path": "packages/word_intake/schema.sql",
+      "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe",
+      "frozen_path": "frozen-inputs/packages/word_intake/schema.sql"
+    },
+    {
+      "path": "tests/test_word_intake.py",
+      "sha256": "4f7ad9d6b3a201be685b8a98726120c4b9f89a1b7a582f0b98c69ec85a372e9e",
+      "frozen_path": "frozen-inputs/tests/test_word_intake.py"
+    },
+    {
+      "path": "tests/test_word_intake_integration.py",
+      "sha256": "a2636ef3b1a41c4c8f551ca3eb906e696334831741e724ab06a77df8b9905cc3",
+      "frozen_path": "frozen-inputs/tests/test_word_intake_integration.py"
+    }
+  ],
+  "checks": {
+    "pytest": {
+      "passed": 54,
+      "failed": 0,
+      "skipped": 0,
+      "unit": 48,
+      "restricted_pg_http_and_optional_real_docker": 6
+    },
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed; 8 source files",
+    "bandit_findings": 0,
+    "real_docker_failure_delta": {
+      "profile_digest": "b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18",
+      "provider_requests": 0,
+      "business_documents": 0,
+      "checks": [
+        {
+          "name": "missing_font",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_SUBSTITUTED"
+          ]
+        },
+        {
+          "name": "missing_glyph",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_GLYPH_UNAVAILABLE"
+          ]
+        },
+        {
+          "name": "timeout-fault-injection",
+          "state": "failed",
+          "error_code": "WORD_CONVERSION_TIMEOUT",
+          "cleanup": true
+        }
+      ]
+    },
+    "provider_requests": 0,
+    "business_documents": 0,
+    "storage_transport": "explicit in-memory test transport; not OSS qualification",
+    "kafka_consumer_started": false,
+    "original_w01_counterexamples": "3 exact originals scanned; all ineligible with dynamic-field gap; no field execution",
+    "cross_bid_replay": "actual frozen01 returned 202/replayed; candidate02 returns404 before ACK, valid scope replay202",
+    "original_w01_w03_counterexamples": "6 exact originals scanned, all conversion ineligible; no field or renderer execution on those originals",
+    "field_policy": "All complex/simple field markup blocked before renderer pending qualified field policy, including legitimate PAGE/TOC. Plain text keywords allowed. No dynamic TOC/PAGE qualification."
+  },
+  "evidence": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "41a05df726a2bd8e9be336c200020e746bf24b2167b175c518330ec3b5312eae"
+    },
+    {
+      "path": "bandit-stderr.txt",
+      "sha256": "5c7e045d18c9e65d2a34d0d50e6c52346b2ca7a444617b99e999918e72643329"
+    },
+    {
+      "path": "bandit.json",
+      "sha256": "d2e3a060b156b2581a0566a6faf42a488523b44b93849b3d1ab95c1144a6a92e"
+    },
+    {
+      "path": "cross-bid-replay.json",
+      "sha256": "eddb7af2478d40ac4891aa9dd60fb97fbbd52b5c7ba1f063fc150323d25183af"
+    },
+    {
+      "path": "failure-checks/missing_font.docx",
+      "sha256": "f8fafb3a5cac892545ff5714d07131cabc555dacb39743b3fd5a538d934069dd"
+    },
+    {
+      "path": "failure-checks/missing_font.json",
+      "sha256": "b6c4be80a6a8ce8551de724777571381449276d360a21fb6995f5a3195deff8d"
+    },
+    {
+      "path": "failure-checks/missing_font.pdf",
+      "sha256": "b4a5d41353e78369fad14a0201c8c13dedfa64b14025cd6415149ec842c389c2"
+    },
+    {
+      "path": "failure-checks/missing_glyph.docx",
+      "sha256": "1d7120d29c6d8f9324833dcc424a327be60b4236c8c347f6b78a7ec256526f90"
+    },
+    {
+      "path": "failure-checks/missing_glyph.json",
+      "sha256": "6bdd5679d4d2c525c460e339e9e8e3d65e749c00ed39907b5b2754a27f8e00ad"
+    },
+    {
+      "path": "failure-checks/missing_glyph.pdf",
+      "sha256": "88d2ee0fa34bc874a6598eda9d3ce9be35287f5b7911a951a62f22f24369ba14"
+    },
+    {
+      "path": "failure-checks/summary.json",
+      "sha256": "b1c4b60726e1007accc6814bcf0d3c455bbdc23ab6e6dadf01494cbdb46a0e83"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.docx",
+      "sha256": "6bb3c5ea57c474937d4d359bb8193427c6f31a4a0e7b8fa35e92d5a298e45910"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.json",
+      "sha256": "880146eb45709e829aa319aa2c856661e713447fdfea0a0a9cac1ef58b4fc8b8"
+    },
+    {
+      "path": "original-w01-w03-regression.json",
+      "sha256": "c54eb34f4be1cfc5504e2d904eb4fd86090e2ea50d60b0a29ee0317914c0813f"
+    },
+    {
+      "path": "real-word-chain.json",
+      "sha256": "b1c45fd0043bcab7483ceabdecfbbe09b538216be62d4651028c9444d1e6384a"
+    },
+    {
+      "path": "real-word-output.pdf",
+      "sha256": "147c445f9cd2eabdd75591ca1a6ec20bb99c01b87d23689e8162b21c6ee8444e"
+    },
+    {
+      "path": "real-word-source.docx",
+      "sha256": "2210505435a62c8d3e7153059cd39f8dd7468ed5e1d87e0f480db15880deb0f2"
+    },
+    {
+      "path": "renderer-profile.json",
+      "sha256": "7faf2b4bf4a1099404b07d7bdcc6d8dc1f7d4bf6724a38fb87e7543bd24588da"
+    },
+    {
+      "path": "result.xml",
+      "sha256": "2e089f200648d6c811237f717f4082aee742665e7e2b48cfe8534e210346be5f"
+    }
+  ],
+  "pending": [
+    "main upload/API/Worker registration and actual object storage integration",
+    "Kafka lease/fence/cancel integration",
+    "canonical converted PDF adoption and stale-source filtering",
+    "independent architecture/QA/product/user acceptance",
+    "complex Word layout and structured preview/import",
+    "business accuracy and production sandbox/capacity qualification"
+  ],
+  "prior_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-02/candidate.json",
+    "sha256": "5dcc4dfad4ee05df0ae326c9bb1f64eff9faaae2abd41e4aa40bb4717e7cb2db",
+    "status": "blocked by W03 fragmented fields; retained exact"
+  }
+}

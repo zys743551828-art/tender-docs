@@ -1,0 +1,7 @@
+# 历史输入资格SQL材料范围增量复核
+
+结论：草案C可仅用于独立新库初始化和机制验证。精确SHA256为 `a5d3823cfa1f9cd360649114da8026a07bf5b93b13ec900c22226117137c1052`，位于 research-backend-checks/historical-input/draft-C/historical-input-qualification.sql。B及其既有实证记录保持不变；本次没有执行DDL或应用测试。
+
+B在合法同批tender＋body上传路径误拒body角色，由开发实际API长链发现并保全失败XML。独立核对B→C差异：材料快照允许body但要求其artifact_kind为bid_body；招标必要资料集合仅取tender／supplement，二者仍要求source_original、没有重复原件；drawing、boq、official_result、other仍被拒绝。正文单独取已冻结submission.body_version_id，不从快照body项替换或扩张；评分条款原证据仍必须来自所选tender／supplement。material_assignments的同bid组合外键补足此处文档归属约束。
+
+因此，C修复合法组合入库可达性，没有把快照内其他正文或结果资料授予模型，也没有改变历史证明、当前来源权威、精确页集合、封口、origin或角色权限。后续新库须验证同批合法正文与招标资料正向通过、快照body不同于原submission时仍只使用原正文，以及其余不支持资料继续拒绝；普通上传到历史输入的完整应用和对象I/O仍待独立验收。

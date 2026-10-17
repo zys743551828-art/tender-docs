@@ -1,0 +1,44 @@
+--- executed-driver-02.py
++++ driver-03.py
+@@ -16,7 +16,7 @@
+ DEV = Path('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks')
+ SOURCE = Path('/workspace/tender-workbench/.local/backups/application/drill04-20261017-c23d8a71')
+ PROTOCOL = DOC/'单目标独立恢复协议.md'
+-PROTOCOL_SHA = 'd4ad0221362a05746c6d892ae06149b56a9f804e3c6127f1b2bc48069d9c94a3'
++PROTOCOL_SHA = 'db7abef9a5b6ee4ead27a6506953696c557af47ea52bf2b84b5c15f597d96e7c'
+ MINIMUM = 1536*1048576
+ FLOOR = 256*1048576
+ 
+@@ -35,12 +35,23 @@
+ def check(value,code):
+     if not value:
+         raise RuntimeError(code)
++
++def validate_recovery_marker(plan,manifest):
++    nonce=plan['nonce']
++    check(isinstance(nonce,str) and len(nonce)==32 and all(c in '0123456789abcdef' for c in nonce),'SOURCE_MARKER_SHAPE_INVALID')
++    raw=json.dumps({'value':nonce},separators=(',',':')).encode()
++    digest=hashlib.sha256(len(raw).to_bytes(8,'big')+raw).hexdigest()
++    matches=[r for r in manifest['tables'] if r['schema']=='recovery_control' and r['name']=='identity']
++    check(len(matches)==1 and matches[0]['rows']==1 and matches[0]['sha256']==digest,'SOURCE_MARKER_NOT_BOUND_TO_ARCHIVE')
++    return nonce
+ 
+ def verify_originals():
+     check(sha(PROTOCOL)==PROTOCOL_SHA,'PROTOCOL_CHANGED')
+     data=read(DOC/'readonly-result.json')
+     for item in data['inputs']:
+         check(sha(item['path'])==item['sha256'],'ORIGINAL_INPUT_CHANGED')
++    check(sha(SOURCE/'plan.json')=='62a347bdd144c80f1e8ebcbb4c81fb579b70068598aebb4120e4dc8317bc82da','SOURCE_PLAN_CHANGED')
++    validate_recovery_marker(read(SOURCE/'plan.json'),read(SOURCE/'archive/manifest.json'))
+ 
+ def prepare():
+     verify_originals()
+@@ -97,7 +108,7 @@
+     values={k:v for k,v in read(SOURCE/'source-objects.json').items() if k in s.OBJECT_ENV}
+     values['OBJECT_STORE_PREFIX']=values['OBJECT_STORE_PREFIX'].rstrip('/').rsplit('/',1)[0]+'/independent05-'+cfg['token']+'-target/'
+     check(values['OBJECT_STORE_PREFIX'] not in [manifest['object_store']['prefix'],read(SOURCE/'target-objects.json')['OBJECT_STORE_PREFIX']],'OBJECT_PREFIX_NOT_DISTINCT')
+-    intent={'scenario':'immutable_archive_to_one_fresh_target','nonce':cfg['token'],'backend':cfg['backend'],'target_port':cfg['target_port'],'protocol_sha256':PROTOCOL_SHA,'initial_free_bytes':shutil.disk_usage('/workspace').free,'started_at':datetime.now(timezone.utc).isoformat()}
++    intent={'scenario':'immutable_archive_to_one_fresh_target','execution_uuid':cfg['token'],'nonce':validate_recovery_marker(read(SOURCE/'plan.json'),manifest),'backend':cfg['backend'],'target_port':cfg['target_port'],'protocol_sha256':PROTOCOL_SHA,'initial_free_bytes':shutil.disk_usage('/workspace').free,'started_at':datetime.now(timezone.utc).isoformat()}
+     save(directory/'execution-intent.json',intent)
+     target=None; report={'status':'running','scenario':intent['scenario'],'protocol_sha256':PROTOCOL_SHA,'prepared_sha256':sha(path),'provider_calls':0,'consumers':0,'objects_listed':0,'objects_deleted':0,'stages':[]}
+     def stage(name):

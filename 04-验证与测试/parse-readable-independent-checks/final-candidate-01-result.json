@@ -1,0 +1,33 @@
+{
+  "status": "passed_targeted_readable_publication_mechanisms",
+  "candidate_sha256": "5cb588e86ca4a5bf5827d8ba6c315c3539ec4c79c9e32d1cc468ef52fca08da2",
+  "runtime_manifest_path": "/workspace/tender-docs/04-验证与测试/core-recheck-scope-independent-checks/candidate-02/runtime-manifest.json",
+  "runtime_manifest_sha256": "f541fb01ea865a40ef04e96310c2e9389271e6edfd9d1aacd49a2995a17f8dec",
+  "runtime_files": 232,
+  "runtime_combination": "Frozen main04 exact dependencies + scope01 and scope02 deltas + parse-readable01; no moving main05",
+  "execution_result_sha256": "04b25fa47d924a4f6fef465d7eb356ec40bd9a30259a58bcf3f8dee51d424813",
+  "executed_probe_sha256": "2f325a618aa3a5ac2f3d05e11d12ce0537e618f47ccf770d9e8e0292ff68abc1",
+  "checks_passed": 9,
+  "scope": "Real TCP Parser03 computation plus actual restrictedPG/ordinary engine publication and knowledge source_positions function. Memory original bytes and explicit partial/failed outcomes. No embedding/vector/LLM request, no Kafka dispatch.",
+  "passed": [
+    "Invalid lease owner cannot publish and leaves zero partial parse",
+    "Real TCP Parser03 full two-page PDF compute -> fenced restrictedPG publish -> both canonical and parse source heads published, chunks remain0",
+    "Knowledge source_positions immediately returns exact physical page/quote and parse-derived source identity before vector indexing",
+    "Repeated already-published parse preserves source head revision",
+    "Withdrawn canonical source cannot be revived; attempted new parse transaction rolls back",
+    "Explicit partial text remains partial and readable; failed/empty outcomes do not publish readable authority"
+  ],
+  "real_parser_digest": "0578f501d377855240d5dae3e42cd295a43496cfc3bf28674e63a1e83ab49165",
+  "actual_original_sha256": "8a086a044b8d23489e0ed753f078633e66ecc69e9c342238e2d56b2b3a60e20a",
+  "model_requests": 0,
+  "object_network_requests": 0,
+  "kafka_consumers_started": 0,
+  "fixture_scope": "Frozen scheduled() creates explicit task/outcome fixture only; no developer assertion/test function executed",
+  "retained_probe_error": "Original probe attempted text_content at wrong projection field after actual publish; correct authoritative reference.excerpt used in final run. No candidate source changed.",
+  "limits": [
+    "Memory object original bytes in this run; no OSS/S3 network storage acceptance claimed.",
+    "Direct authoritative-outbox handlers, not actual Kafka delivery/consumer recovery.",
+    "Partial/failed/empty cases explicitly synthetic outcomes, not actual parser effect/accuracy.",
+    "No embedding/reranker/model request, full knowledge/RAG qualification or browser acceptance."
+  ]
+}

@@ -1,0 +1,94 @@
+"""Enable one exact browser origin on an otherwise unconfigured private project bucket."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from datetime import datetime, timezone
+from pathlib import Path
+
+import oss2
+
+from packages.domain.providers.oss import OssClient
+
+ORIGIN = "http://127.0.0.1:5175"
+
+
+def summarize(rule):
+    return {
+        "allowed_origins": list(rule.allowed_origins),
+        "allowed_methods": sorted(rule.allowed_methods),
+        "allowed_headers": sorted(rule.allowed_headers),
+        "expose_headers": sorted(rule.expose_headers),
+        "max_age_seconds": rule.max_age_seconds,
+    }
+
+
+def configure(apply: bool) -> dict:
+    if os.environ.get("APP_ORIGIN") != ORIGIN:
+        raise ValueError("Only the exact isolated browser integration origin is supported")
+    bucket = OssClient.from_env().native
+    if bucket.get_bucket_acl().acl != "private":
+        raise ValueError("Expected private project bucket; ACL changes are not performed")
+    rule = oss2.models.CorsRule(
+        allowed_origins=[ORIGIN],
+        allowed_methods=["GET", "PUT", "HEAD"],
+        allowed_headers=["Content-Type", "Range", "x-oss-forbid-overwrite"],
+        expose_headers=["ETag", "Content-Range", "Accept-Ranges", "x-oss-request-id"],
+        max_age_seconds=300,
+    )
+    try:
+        previous = bucket.get_bucket_cors().rules
+    except oss2.exceptions.ServerError as error:
+        if error.status != 404 or error.code != "NoSuchCORSConfiguration":
+            raise RuntimeError("Bucket CORS read failed") from None
+        previous = []
+    planned = summarize(rule)
+    if previous and [summarize(item) for item in previous] != [planned]:
+        raise ValueError("Existing CORS rules require reconciliation; refusing to overwrite")
+    changed = False
+    if apply and not previous:
+        # User authorized this project bucket for implementation. Preserve private ACL and
+        # allow only the isolated browser origin; never replace a pre-existing rule set.
+        bucket.put_bucket_cors(oss2.models.BucketCors([rule], response_vary=True))
+        changed = True
+        if [summarize(item) for item in bucket.get_bucket_cors().rules] != [planned]:
+            raise RuntimeError("CORS read-back did not match the exact integration rule")
+        if bucket.get_bucket_acl().acl != "private":
+            raise RuntimeError("Bucket private ACL read-back failed")
+    return {
+        "scope": "Exact local origin for project browser integration; no object or ACL mutations",
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "apply": apply,
+        "changed": changed,
+        "previous_rule_count": len(previous),
+        "rule": planned,
+        "private_acl_verified": True,
+        "object_list_requests": 0,
+        "object_mutations": 0,
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--output", type=Path, required=True)
+    arguments = parser.parse_args()
+    result = configure(arguments.apply)
+    arguments.output.parent.mkdir(parents=True, exist_ok=True)
+    arguments.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    print(
+        json.dumps(
+            {
+                "changed": result["changed"],
+                "private_acl_verified": True,
+                "origin": ORIGIN,
+                "apply": arguments.apply,
+            }
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()

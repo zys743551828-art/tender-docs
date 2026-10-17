@@ -1,0 +1,19 @@
+--- A
++++ B
+@@ -1,4 +1,4 @@
+--- Score denominator DRAFT A. Static review, then NEW fresh DB only.
++-- Score denominator DRAFT B. Static review, then NEW fresh DB only.
+ -- Requires the exact Score F, Scale C and StageA D baselines; changes none of them.
+ BEGIN;
+ CREATE SCHEMA score_basis;
+@@ -93,7 +93,9 @@
+  -- model judgments, but its exact source bytes must really have been prebid-visible.
+  -- Strict samples additionally require the authority actually existed by submission.
+  RETURN v.purpose='current_prebid'
+-  AND (scope->>'purpose'<>'strict_prebid' OR v.created_at<=(scope->>'submitted_at')::timestamptz)
++  AND (scope->>'purpose'<>'strict_prebid' OR (v.created_at<=(scope->>'submitted_at')::timestamptz
++   AND EXISTS(SELECT FROM technical_scale.heads h JOIN technical_scale.decisions d ON d.id=h.decision_id
++    WHERE h.version_id=v.id AND d.version_id=v.id AND d.state='confirmed' AND d.created_at<=(scope->>'submitted_at')::timestamptz)))
+   AND NOT EXISTS(SELECT FROM technical_scale.evidence e JOIN technical_scale.source_heads frozen ON frozen.evidence_id=e.id
+    WHERE e.version_id=v.id AND (frozen.known_at>boundary OR frozen.valid_from>boundary OR frozen.valid_until<=boundary));
+ END $$;

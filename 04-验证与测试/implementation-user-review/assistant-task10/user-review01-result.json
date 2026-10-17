@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-17T03:42:57.379653+00:00",
+  "stage": "cross-member-private",
+  "checks": [
+    {
+      "case": "native-frozen-assets-actual-api-binding",
+      "pass": true
+    },
+    {
+      "case": "global-unknown-restored-no-resend-editable",
+      "pass": true,
+      "composer_rect": {
+        "x": 323,
+        "y": 7374.875,
+        "width": 1014,
+        "height": 115.5625
+      },
+      "viewport": {
+        "height": 1000,
+        "scrollY": 0,
+        "documentHeight": 7715
+      }
+    },
+    {
+      "case": "persisted-action-executed-receipt-no-confirm-again",
+      "pass": true,
+      "action_cards": 5
+    },
+    {
+      "case": "historical-cancel-worker-terminal-visible",
+      "pass": true
+    },
+    {
+      "case": "explicit-scope-switch-no-cross-context-draft-mix",
+      "pass": true
+    },
+    {
+      "case": "same-project-drawer-draft-mobile-escape-focus-return",
+      "pass": true
+    },
+    {
+      "case": "real-projected-notification-opens-exact-run-coverage-truthful",
+      "pass": true,
+      "notice_count": 1,
+      "run": "9e1e635c-f988-41c5-989a-c51401194893"
+    },
+    {
+      "case": "four-kind-explicit-control-default-manual",
+      "pass": true,
+      "options": [
+        "否决核对",
+        "评分核对",
+        "已登记补遗关系核对",
+        "章节修改建议"
+      ]
+    },
+    {
+      "case": "ambiguous-NL-persistent-editable-draft-only-no-template-no-run",
+      "pass": true,
+      "draft_id": "e0665ed4-61da-4ccd-ab34-2cc887e65071"
+    },
+    {
+      "case": "one-explicit-save-one-shared-template-no-run-after-refresh",
+      "pass": true,
+      "template_id": "4666e25f-78dd-4f72-9323-6774e756566e"
+    },
+    {
+      "case": "event-cron-edit-create-version-pause-retained-old-manual-immutable-no-run",
+      "pass": true,
+      "current_revision": 4
+    }
+  ],
+  "findings": [
+    {
+      "id": "U10-01",
+      "priority": "P2",
+      "problem": "长会话首次进入停在页顶，输入框位于全部消息及处理记录之后，无固定输入区或直达最新/继续提问控制。",
+      "measured_composer_top": 7375,
+      "viewport_height": 1000,
+      "source": "native /assistant existing 14 ended jobs + unknown fixture, screenshot 02"
+    }
+  ],
+  "network": [
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definition-drafts/e0665ed4-61da-4ccd-ab34-2cc887e65071/save",
+      "method": "POST",
+      "status": 201
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e/pause",
+      "method": "POST",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/bids/d62284e0-f41c-41e8-8c95-134760df3e19/task-definitions/4666e25f-78dd-4f72-9323-6774e756566e",
+      "method": "PUT",
+      "status": 200
+    }
+  ],
+  "page_errors": [],
+  "blocked_external": [],
+  "loaded_assets": {
+    "/assets/index-jD9WPLOk.css": "2fc5a96edefe7b63d7f833076bf6737e00c7299100e86f9c68216481b84ebcae",
+    "/assets/index-C9mWuFz1.js": "6214d928299b16cc0df82dc023a2980b984ad7f4f76201c63241166af16652b6",
+    "/assets/TaskPanel-Col0Xejm.js": "015c8c87ef376f7aebf93f5f6330b5385a75e8765e157cf013e431377b424124"
+  },
+  "candidate_sha256": "d1be8aa67adfa75adaf7f904efcc626b720e5931b694adec8fca115126af3aee",
+  "source_count": 128,
+  "asset_count": 215,
+  "scope": "independent actual Chromium user walkthrough; explicit Mock/local originals/real PG facility; no model commands or scheduling runner"
+}

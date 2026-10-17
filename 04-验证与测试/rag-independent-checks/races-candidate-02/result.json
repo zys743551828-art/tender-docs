@@ -1,0 +1,71 @@
+{
+  "scope": "独立真实本地BGE/受限PG/当前ASGI检索重放反例；SQL原文夹具非真实PDF解析，不冒充live8802",
+  "passed": true,
+  "paid_model_requests": 0,
+  "controlled_race_checks": [
+    {
+      "name": "body_head_change_after_real_retrieval",
+      "status": 409,
+      "trace_rollback": true,
+      "command_rollback": true,
+      "passed": true
+    },
+    {
+      "name": "material_head_change_after_real_retrieval",
+      "status": 409,
+      "trace_rollback": true,
+      "command_rollback": true,
+      "passed": true
+    }
+  ],
+  "bid_id": "d6c7e760-48af-4f12-8b08-969d8b5a4463",
+  "source_id": "8472e3fd-f897-5daa-ae2d-260b8d1c34ae",
+  "root_id": "c301f321-a768-5c3a-83bc-b74b2fc48139",
+  "first_status": 200,
+  "unchanged_replay_status": 200,
+  "old_head_revision": 2,
+  "new_head_revision": 3,
+  "old_head_valid_until": "None",
+  "new_head_valid_until": "2026-11-15 17:54:07.313020+00:00",
+  "replay_after_head_change_status": 409,
+  "replayed_original": false,
+  "expected_after_change": 409,
+  "first_response": {
+    "trace_id": "92571a5e-0e5d-40a9-83d7-d72f96834b7b",
+    "policy_digest": "105f74d3a0297bee33b86724dbe15e5bed7c0a467db01c66761e22b5f4402a57",
+    "hits": [
+      {
+        "chunk_id": "42f17958-17a3-58a3-bc7f-445c782d413c",
+        "source_version_id": "03d5439d-fa5b-4155-a41f-cca5225f310e",
+        "parse_run_id": "688cde64-a650-4df1-899e-1efe087970a6",
+        "physical_page": 1,
+        "citation_id": "bdde97e3-2ad0-5d10-8c0c-02b5c63c4abc",
+        "excerpt": "本项目道路围挡高度不得低于2米。排水沟宽度为0.6米。独立合成来源。",
+        "embedding_profile_id": "d1e6ebae-8268-5a9b-b482-1193be12f86e",
+        "rank": 1
+      }
+    ],
+    "coverage": "partial",
+    "gaps": [
+      "仅检索已建立索引的可读文字；扫描、结构化表格和图页范围以资料读取记录为准"
+    ]
+  },
+  "after_head_change_response": {
+    "code": "RETRIEVAL_SOURCE_CHANGED",
+    "message": "此前检索来源的版本或效力已变化，请重新查证",
+    "request_id": "dfc07f03-bffc-44b7-bbef-381003490980",
+    "retryable": false,
+    "details": {}
+  },
+  "dense_identity": {
+    "model_name": "BAAI/bge-m3",
+    "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "weights_digest": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+    "preprocessing_digest": "3df98f34cdc8f2a82279c50f6c6ae7e8ec2313861f12de6281fecad0b14a7b3e"
+  },
+  "api_identity": {
+    "current_user": "twb_rag_checks_api",
+    "rolsuper": false
+  },
+  "probe_sha256": "d57cbc67e2a93f03ecde867196110d91032ee54953dde81653a22bb153ed98be"
+}

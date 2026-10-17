@@ -1,0 +1,17 @@
+{
+  "status": "blocked_before_process_creation_by_automatic_approval_review",
+  "at": "2026-10-17T04:32:11.951422+00:00",
+  "protocol_sha256": "db7abef9a5b6ee4ead27a6506953696c557af47ea52bf2b84b5c15f597d96e7c",
+  "driver_sha256": "bfaf841ae77cc01313dc95cfcff2ed007205c690d41860981b577cbecef22665",
+  "prepared_sha256": "3ca8de5f3490ac1e204d6a6040003d21ebbd8b95d3d1cfc26bd5739a7a044a84",
+  "review_reason": "The bounded restore is explicitly approved by the project manager, but it will also transmit archive-derived application objects over the network to the OSS bucket; the user authorized using that bucket generally, not this specific sensitive recovery payload, so sensitive-egress authorization is insufficient.",
+  "review_instruction": "Do not bypass this rejection through a workaround or indirect execution.",
+  "process_started": false,
+  "new_docker_containers": 0,
+  "new_pg_connections": 0,
+  "remote_objects_transferred": 0,
+  "provider_calls": 0,
+  "consumers": 0,
+  "new_execution_intent_created": false,
+  "next_step": "Prepare explicitly no-cloud DB-only alternative; complete native object recovery only after specific user authorization"
+}

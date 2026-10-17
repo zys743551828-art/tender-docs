@@ -1,0 +1,1250 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/bids/{bid_id}/task-definitions": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "List Templates",
+        "operationId": "list_templates_api_v1_bids__bid_id__task_definitions_get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Cursor"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplatePage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Create Template",
+        "operationId": "create_template_api_v1_bids__bid_id__task_definitions_post",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemplateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplateView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-definitions/{definition_id}": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Get Template",
+        "operationId": "get_template_api_v1_bids__bid_id__task_definitions__definition_id__get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "definition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Definition Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplateView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Revise Template",
+        "operationId": "revise_template_api_v1_bids__bid_id__task_definitions__definition_id__put",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "definition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Definition Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemplateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplateView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-definitions/{definition_id}/pause": {
+      "post": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Pause Template",
+        "operationId": "pause_template_api_v1_bids__bid_id__task_definitions__definition_id__pause_post",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "definition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Definition Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PauseRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplateView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-definitions/{definition_id}/versions/{version_id}": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Get Template Version",
+        "operationId": "get_template_version_api_v1_bids__bid_id__task_definitions__definition_id__versions__version_id__get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "definition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Definition Id"
+            }
+          },
+          {
+            "name": "version_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Version Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemplateVersionView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-definitions/{definition_id}/runs": {
+      "post": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Run Template",
+        "operationId": "run_template_api_v1_bids__bid_id__task_definitions__definition_id__runs_post",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "definition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Definition Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-runs/{run_id}": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Task Run",
+        "operationId": "task_run_api_v1_bids__bid_id__task_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunView"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-runs": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Task Run Page",
+        "operationId": "task_run_page_api_v1_bids__bid_id__task_runs_get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunPage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-notifications": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Task Notifications",
+        "operationId": "task_notifications_api_v1_bids__bid_id__task_notifications_get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bids/{bid_id}/task-schedule-recoveries": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Task Recoveries",
+        "operationId": "task_recoveries_api_v1_bids__bid_id__task_schedule_recoveries_get",
+        "parameters": [
+          {
+            "name": "bid_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Bid Id"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/task-kinds": {
+      "get": {
+        "tags": [
+          "task templates"
+        ],
+        "summary": "Task Kinds",
+        "operationId": "task_kinds_api_v1_task_kinds_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "PauseRequest": {
+        "properties": {
+          "paused": {
+            "type": "boolean",
+            "title": "Paused"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "paused"
+        ],
+        "title": "PauseRequest"
+      },
+      "RunPage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/RunView"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_after": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next After"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "items",
+          "next_after"
+        ],
+        "title": "RunPage"
+      },
+      "RunRequest": {
+        "properties": {
+          "rerun": {
+            "type": "boolean",
+            "title": "Rerun",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "RunRequest"
+      },
+      "RunView": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Bid Id"
+          },
+          "definition_version_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Definition Version Id"
+          },
+          "root_operation_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Root Operation Id"
+          },
+          "final_operation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Final Operation Id"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "cancel_requested",
+              "succeeded",
+              "failed",
+              "cancelled",
+              "awaiting_review",
+              "blocked",
+              "superseded",
+              "unknown",
+              "reconciliation_required"
+            ],
+            "title": "State"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "preparation",
+              "review",
+              "execution"
+            ],
+            "title": "Stage"
+          },
+          "frozen_manifest": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Frozen Manifest"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Code"
+          },
+          "formal_decisions_created": {
+            "type": "boolean",
+            "const": false,
+            "title": "Formal Decisions Created"
+          },
+          "coverage": {
+            "type": "string",
+            "enum": [
+              "registered_effectivity_only_semantic_unknown",
+              "not_formal_score"
+            ],
+            "title": "Coverage"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "bid_id",
+          "definition_version_id",
+          "root_operation_id",
+          "final_operation_id",
+          "state",
+          "stage",
+          "frozen_manifest",
+          "result",
+          "error_code",
+          "formal_decisions_created",
+          "coverage"
+        ],
+        "title": "RunView"
+      },
+      "SourceSelection": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "current_project",
+              "selected_versions"
+            ],
+            "title": "Mode",
+            "default": "current_project"
+          },
+          "version_ids": {
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "type": "array",
+            "maxItems": 30,
+            "title": "Version Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "SourceSelection"
+      },
+      "TemplatePage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/TemplateView"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Cursor"
+          },
+          "has_more": {
+            "type": "boolean",
+            "title": "Has More"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "items",
+          "next_cursor",
+          "has_more"
+        ],
+        "title": "TemplatePage"
+      },
+      "TemplateRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Name"
+          },
+          "task_kind": {
+            "type": "string",
+            "enum": [
+              "denial_check",
+              "scoring_review",
+              "supplement_impact",
+              "chapter_suggestion"
+            ],
+            "title": "Task Kind"
+          },
+          "instructions": {
+            "type": "string",
+            "maxLength": 8000,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Instructions"
+          },
+          "section_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section Id"
+          },
+          "source_selection": {
+            "$ref": "#/components/schemas/SourceSelection"
+          },
+          "trigger": {
+            "$ref": "#/components/schemas/Trigger"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "task_kind",
+          "instructions"
+        ],
+        "title": "TemplateRequest"
+      },
+      "TemplateSnapshotConfig": {
+        "properties": {
+          "schema": {
+            "type": "string",
+            "const": "task-template/1",
+            "title": "Schema"
+          },
+          "definition": {
+            "$ref": "#/components/schemas/TemplateRequest"
+          },
+          "paused": {
+            "type": "boolean",
+            "title": "Paused"
+          },
+          "formal_decisions_allowed": {
+            "type": "boolean",
+            "const": false,
+            "title": "Formal Decisions Allowed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema",
+          "definition",
+          "paused",
+          "formal_decisions_allowed"
+        ],
+        "title": "TemplateSnapshotConfig"
+      },
+      "TemplateVersionView": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Bid Id"
+          },
+          "definition_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Definition Id"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Revision"
+          },
+          "instructions": {
+            "type": "string",
+            "title": "Instructions"
+          },
+          "config": {
+            "$ref": "#/components/schemas/TemplateSnapshotConfig"
+          },
+          "digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Digest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "bid_id",
+          "definition_id",
+          "revision",
+          "instructions",
+          "config",
+          "digest"
+        ],
+        "title": "TemplateVersionView"
+      },
+      "TemplateView": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "bid_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Bid Id"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Revision"
+          },
+          "version_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Version Id"
+          },
+          "digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Digest"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "assist",
+              "compliance"
+            ],
+            "title": "Purpose"
+          },
+          "paused": {
+            "type": "boolean",
+            "title": "Paused"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/TemplateRequest"
+          },
+          "next_run_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Run At"
+          },
+          "run_created": {
+            "type": "boolean",
+            "const": false,
+            "title": "Run Created"
+          },
+          "active_runs_cancelled": {
+            "type": "boolean",
+            "const": false,
+            "title": "Active Runs Cancelled"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "bid_id",
+          "revision",
+          "version_id",
+          "digest",
+          "purpose",
+          "paused",
+          "configuration",
+          "next_run_at",
+          "run_created",
+          "active_runs_cancelled"
+        ],
+        "title": "TemplateView"
+      },
+      "Trigger": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "material_updated",
+              "schedule"
+            ],
+            "title": "Mode",
+            "default": "manual"
+          },
+          "cron": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cron"
+          },
+          "timezone": {
+            "type": "string",
+            "title": "Timezone",
+            "default": "Asia/Shanghai"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Trigger"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

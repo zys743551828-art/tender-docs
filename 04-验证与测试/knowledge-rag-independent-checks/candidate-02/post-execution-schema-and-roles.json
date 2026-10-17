@@ -1,0 +1,1109 @@
+{
+  "api": {
+    "role": {
+      "current_user": "twb_checks_combined_delivery01_54ae4928_api",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false
+    },
+    "trace_privileges": {
+      "can_read": true,
+      "table_insert": false,
+      "some_column_insert": true,
+      "some_column_update": false,
+      "can_delete": false
+    },
+    "column_inserts": [
+      {
+        "column_name": "id",
+        "can_insert": true
+      },
+      {
+        "column_name": "bid_id",
+        "can_insert": true
+      },
+      {
+        "column_name": "actor_id",
+        "can_insert": true
+      },
+      {
+        "column_name": "purpose",
+        "can_insert": true
+      },
+      {
+        "column_name": "query_digest",
+        "can_insert": true
+      },
+      {
+        "column_name": "profile_id",
+        "can_insert": true
+      },
+      {
+        "column_name": "policy_digest",
+        "can_insert": true
+      },
+      {
+        "column_name": "frozen_scope",
+        "can_insert": true
+      },
+      {
+        "column_name": "scope_digest",
+        "can_insert": true
+      },
+      {
+        "column_name": "selected_units",
+        "can_insert": true
+      },
+      {
+        "column_name": "route",
+        "can_insert": true
+      },
+      {
+        "column_name": "observed_reranker_identity",
+        "can_insert": true
+      },
+      {
+        "column_name": "created_at",
+        "can_insert": false
+      }
+    ]
+  },
+  "worker": {
+    "role": {
+      "current_user": "twb_checks_combined_delivery01_54ae4928_worker",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreatedb": false,
+      "rolcreaterole": false
+    },
+    "trace_privileges": {
+      "can_read": false,
+      "table_insert": false,
+      "some_column_insert": false,
+      "some_column_update": false,
+      "can_delete": false
+    },
+    "column_inserts": []
+  },
+  "columns": [
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_index_heads",
+      "column_name": "knowledge_version_id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_index_heads",
+      "column_name": "profile_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_index_heads",
+      "column_name": "revision",
+      "ordinal_position": 3,
+      "data_type": "bigint",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int8",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_index_heads",
+      "column_name": "desired_index_id",
+      "ordinal_position": 4,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_index_heads",
+      "column_name": "ready_index_id",
+      "ordinal_position": 5,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "knowledge_version_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "profile_id",
+      "ordinal_position": 3,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "origin_bid_id",
+      "ordinal_position": 4,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "operation_id",
+      "ordinal_position": 5,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "input_manifest",
+      "ordinal_position": 6,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "input_digest",
+      "ordinal_position": 7,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "chunk_policy_digest",
+      "ordinal_position": 8,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "lexical_dictionary_digest",
+      "ordinal_position": 9,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "requested_head_revision",
+      "ordinal_position": 10,
+      "data_type": "bigint",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int8",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "created_by",
+      "ordinal_position": 11,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "created_at",
+      "ordinal_position": 12,
+      "data_type": "timestamp with time zone",
+      "udt_schema": "pg_catalog",
+      "udt_name": "timestamptz",
+      "is_nullable": "NO",
+      "column_default": "clock_timestamp()"
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "state",
+      "ordinal_position": 13,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": "'queued'::text"
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "expected_unit_count",
+      "ordinal_position": 14,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "published_unit_count",
+      "ordinal_position": 15,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": "0"
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "unit_manifest_digest",
+      "ordinal_position": 16,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "error_code",
+      "ordinal_position": 17,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_indexes",
+      "column_name": "completed_at",
+      "ordinal_position": 18,
+      "data_type": "timestamp with time zone",
+      "udt_schema": "pg_catalog",
+      "udt_name": "timestamptz",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "bid_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "actor_id",
+      "ordinal_position": 3,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "purpose",
+      "ordinal_position": 4,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "query_digest",
+      "ordinal_position": 5,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "profile_id",
+      "ordinal_position": 6,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "policy_digest",
+      "ordinal_position": 7,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "frozen_scope",
+      "ordinal_position": 8,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "scope_digest",
+      "ordinal_position": 9,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "selected_units",
+      "ordinal_position": 10,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "route",
+      "ordinal_position": 11,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "observed_reranker_identity",
+      "ordinal_position": 12,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_retrieval_traces",
+      "column_name": "created_at",
+      "ordinal_position": 13,
+      "data_type": "timestamp with time zone",
+      "udt_schema": "pg_catalog",
+      "udt_name": "timestamptz",
+      "is_nullable": "NO",
+      "column_default": "clock_timestamp()"
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_embeddings",
+      "column_name": "index_id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_embeddings",
+      "column_name": "unit_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_embeddings",
+      "column_name": "profile_id",
+      "ordinal_position": 3,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_embeddings",
+      "column_name": "embedding",
+      "ordinal_position": 4,
+      "data_type": "USER-DEFINED",
+      "udt_schema": "design",
+      "udt_name": "vector",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "citation_id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "trace_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "bid_id",
+      "ordinal_position": 3,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "unit_id",
+      "ordinal_position": 4,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "knowledge_version_id",
+      "ordinal_position": 5,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "approved_quote",
+      "ordinal_position": 6,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "unit_span_start",
+      "ordinal_position": 7,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "unit_span_end",
+      "ordinal_position": 8,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "reference_manifest",
+      "ordinal_position": 9,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_unit_references",
+      "column_name": "created_at",
+      "ordinal_position": 10,
+      "data_type": "timestamp with time zone",
+      "udt_schema": "pg_catalog",
+      "udt_name": "timestamptz",
+      "is_nullable": "NO",
+      "column_default": "clock_timestamp()"
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "id",
+      "ordinal_position": 1,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "index_id",
+      "ordinal_position": 2,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "knowledge_version_id",
+      "ordinal_position": 3,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "ordinal",
+      "ordinal_position": 4,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "source_id",
+      "ordinal_position": 5,
+      "data_type": "uuid",
+      "udt_schema": "pg_catalog",
+      "udt_name": "uuid",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "unit_kind",
+      "ordinal_position": 6,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "ref_ordinal",
+      "ordinal_position": 7,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "span_start",
+      "ordinal_position": 8,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "span_end",
+      "ordinal_position": 9,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "text_content",
+      "ordinal_position": 10,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "text_digest",
+      "ordinal_position": 11,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "token_count",
+      "ordinal_position": 12,
+      "data_type": "integer",
+      "udt_schema": "pg_catalog",
+      "udt_name": "int4",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "lexemes",
+      "ordinal_position": 13,
+      "data_type": "text",
+      "udt_schema": "pg_catalog",
+      "udt_name": "text",
+      "is_nullable": "NO",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "lex_tsv",
+      "ordinal_position": 14,
+      "data_type": "tsvector",
+      "udt_schema": "pg_catalog",
+      "udt_name": "tsvector",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "table_schema": "retrieval",
+      "table_name": "knowledge_units",
+      "column_name": "provenance",
+      "ordinal_position": 15,
+      "data_type": "jsonb",
+      "udt_schema": "pg_catalog",
+      "udt_name": "jsonb",
+      "is_nullable": "NO",
+      "column_default": null
+    }
+  ],
+  "constraints": [
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_desired_index_id_knowledge_version_i_fkey",
+      "definition": "FOREIGN KEY (desired_index_id, knowledge_version_id, profile_id) REFERENCES retrieval.knowledge_indexes(id, knowledge_version_id, profile_id)"
+    },
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_knowledge_version_id_fkey",
+      "definition": "FOREIGN KEY (knowledge_version_id) REFERENCES retrieval.knowledge_versions(id)"
+    },
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_pkey",
+      "definition": "PRIMARY KEY (knowledge_version_id, profile_id)"
+    },
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_profile_id_fkey",
+      "definition": "FOREIGN KEY (profile_id) REFERENCES retrieval.embedding_profiles(id)"
+    },
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_ready_index_id_knowledge_version_id__fkey",
+      "definition": "FOREIGN KEY (ready_index_id, knowledge_version_id, profile_id) REFERENCES retrieval.knowledge_indexes(id, knowledge_version_id, profile_id)"
+    },
+    {
+      "relname": "knowledge_index_heads",
+      "conname": "knowledge_index_heads_revision_check",
+      "definition": "CHECK ((revision > 0))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_check",
+      "definition": "CHECK (((state <> 'ready'::text) OR ((expected_unit_count IS NOT NULL) AND (unit_manifest_digest IS NOT NULL) AND (completed_at IS NOT NULL) AND (published_unit_count = expected_unit_count) AND (error_code IS NULL))))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_check1",
+      "definition": "CHECK (((state <> ALL (ARRAY['failed'::text, 'superseded'::text])) OR ((error_code IS NOT NULL) AND (completed_at IS NOT NULL))))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_created_by_fkey",
+      "definition": "FOREIGN KEY (created_by) REFERENCES members(id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_error_code_check",
+      "definition": "CHECK ((error_code ~ '^[A-Z][A-Z0-9_]{0,99}$'::text))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_expected_unit_count_check",
+      "definition": "CHECK (((expected_unit_count >= 1) AND (expected_unit_count <= 1000)))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_id_knowledge_version_id_key",
+      "definition": "UNIQUE (id, knowledge_version_id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_id_knowledge_version_id_profile_id_key",
+      "definition": "UNIQUE (id, knowledge_version_id, profile_id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_id_profile_id_key",
+      "definition": "UNIQUE (id, profile_id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_input_manifest_check",
+      "definition": "CHECK ((jsonb_typeof(input_manifest) = 'object'::text))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_knowledge_version_id_fkey",
+      "definition": "FOREIGN KEY (knowledge_version_id) REFERENCES retrieval.knowledge_versions(id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_origin_bid_id_fkey",
+      "definition": "FOREIGN KEY (origin_bid_id) REFERENCES bids(id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_origin_bid_id_operation_id_fkey",
+      "definition": "FOREIGN KEY (origin_bid_id, operation_id) REFERENCES operations(bid_id, id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_profile_id_fkey",
+      "definition": "FOREIGN KEY (profile_id) REFERENCES retrieval.embedding_profiles(id)"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_published_unit_count_check",
+      "definition": "CHECK (((published_unit_count >= 0) AND (published_unit_count <= 1000)))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_requested_head_revision_check",
+      "definition": "CHECK ((requested_head_revision > 0))"
+    },
+    {
+      "relname": "knowledge_indexes",
+      "conname": "knowledge_indexes_state_check",
+      "definition": "CHECK ((state = ANY (ARRAY['queued'::text, 'ready'::text, 'failed'::text, 'superseded'::text])))"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_actor_id_fkey",
+      "definition": "FOREIGN KEY (actor_id) REFERENCES members(id)"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_bid_id_fkey",
+      "definition": "FOREIGN KEY (bid_id) REFERENCES bids(id)"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_frozen_scope_check",
+      "definition": "CHECK ((jsonb_typeof(frozen_scope) = 'object'::text))"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_id_bid_id_key",
+      "definition": "UNIQUE (id, bid_id)"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_observed_reranker_identity_check",
+      "definition": "CHECK (((observed_reranker_identity IS NULL) OR (jsonb_typeof(observed_reranker_identity) = 'object'::text)))"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_profile_id_fkey",
+      "definition": "FOREIGN KEY (profile_id) REFERENCES retrieval.embedding_profiles(id)"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_purpose_check",
+      "definition": "CHECK ((purpose = ANY (ARRAY['assist'::text, 'authoring'::text, 'compliance'::text, 'history'::text])))"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_route_check",
+      "definition": "CHECK ((jsonb_typeof(route) = 'array'::text))"
+    },
+    {
+      "relname": "knowledge_retrieval_traces",
+      "conname": "knowledge_retrieval_traces_selected_units_check",
+      "definition": "CHECK (((jsonb_typeof(selected_units) = 'array'::text) AND (jsonb_array_length(selected_units) <= 8)))"
+    },
+    {
+      "relname": "knowledge_unit_embeddings",
+      "conname": "knowledge_unit_embeddings_embedding_check",
+      "definition": "CHECK ((abs((vector_norm(embedding) - (1.0)::double precision)) < (0.001)::double precision))"
+    },
+    {
+      "relname": "knowledge_unit_embeddings",
+      "conname": "knowledge_unit_embeddings_index_id_profile_id_fkey",
+      "definition": "FOREIGN KEY (index_id, profile_id) REFERENCES retrieval.knowledge_indexes(id, profile_id)"
+    },
+    {
+      "relname": "knowledge_unit_embeddings",
+      "conname": "knowledge_unit_embeddings_index_id_unit_id_fkey",
+      "definition": "FOREIGN KEY (index_id, unit_id) REFERENCES retrieval.knowledge_units(index_id, id)"
+    },
+    {
+      "relname": "knowledge_unit_embeddings",
+      "conname": "knowledge_unit_embeddings_pkey",
+      "definition": "PRIMARY KEY (unit_id, profile_id)"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_approved_quote_check",
+      "definition": "CHECK ((length(btrim(approved_quote)) > 0))"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_check",
+      "definition": "CHECK ((unit_span_end > unit_span_start))"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_citation_id_fkey",
+      "definition": "FOREIGN KEY (citation_id) REFERENCES retrieval.citations(id)"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_pkey",
+      "definition": "PRIMARY KEY (citation_id)"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_reference_manifest_check",
+      "definition": "CHECK ((jsonb_typeof(reference_manifest) = 'object'::text))"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_trace_id_bid_id_fkey",
+      "definition": "FOREIGN KEY (trace_id, bid_id) REFERENCES retrieval.knowledge_retrieval_traces(id, bid_id)"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_unit_id_knowledge_version_id_fkey",
+      "definition": "FOREIGN KEY (unit_id, knowledge_version_id) REFERENCES retrieval.knowledge_units(id, knowledge_version_id)"
+    },
+    {
+      "relname": "knowledge_unit_references",
+      "conname": "knowledge_unit_references_unit_span_start_check",
+      "definition": "CHECK ((unit_span_start >= 0))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_check",
+      "definition": "CHECK ((span_end > span_start))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_check1",
+      "definition": "CHECK ((((unit_kind = 'knowledge_text'::text) AND (ref_ordinal IS NULL)) OR ((unit_kind = 'original_quote'::text) AND (ref_ordinal IS NOT NULL) AND ((ref_ordinal >= 0) AND (ref_ordinal <= 99)))))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_id_knowledge_version_id_key",
+      "definition": "UNIQUE (id, knowledge_version_id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_index_id_id_key",
+      "definition": "UNIQUE (index_id, id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_index_id_knowledge_version_id_fkey",
+      "definition": "FOREIGN KEY (index_id, knowledge_version_id) REFERENCES retrieval.knowledge_indexes(id, knowledge_version_id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_index_id_ordinal_key",
+      "definition": "UNIQUE (index_id, ordinal)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_ordinal_check",
+      "definition": "CHECK (((ordinal >= 0) AND (ordinal < 1000)))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_provenance_check",
+      "definition": "CHECK ((jsonb_typeof(provenance) = 'object'::text))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_source_id_fkey",
+      "definition": "FOREIGN KEY (source_id) REFERENCES retrieval.source_nodes(id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_source_id_key",
+      "definition": "UNIQUE (source_id)"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_span_start_check",
+      "definition": "CHECK ((span_start >= 0))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_text_content_check",
+      "definition": "CHECK ((length(btrim(text_content)) > 0))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_token_count_check",
+      "definition": "CHECK (((token_count >= 1) AND (token_count <= 1200)))"
+    },
+    {
+      "relname": "knowledge_units",
+      "conname": "knowledge_units_unit_kind_check",
+      "definition": "CHECK ((unit_kind = ANY (ARRAY['knowledge_text'::text, 'original_quote'::text])))"
+    }
+  ],
+  "triggers": []
+}

@@ -1,0 +1,163 @@
+{
+  "scope": "独立真实BGE+实际受限PG机制/来源/引用；SQL原文夹具不是实际PDF入库，非业务召回质量",
+  "passed": true,
+  "checks": [
+    {
+      "name": "真实API/Worker独立非super登录",
+      "passed": true,
+      "observation": {
+        "api": "twb_rag_checks_api",
+        "worker": "twb_rag_checks_worker"
+      }
+    },
+    {
+      "name": "实际BGE和PG存储1024有限单位向量",
+      "passed": true
+    },
+    {
+      "name": "真实index compute不持图锁/发布不调用HTTP",
+      "passed": true,
+      "observation": {
+        "indexed_sources": 8
+      }
+    },
+    {
+      "name": "实际tokenizer长中文分块保页且原文精确",
+      "passed": true
+    },
+    {
+      "name": "非法向量wrong_dimensions拒绝",
+      "passed": true
+    },
+    {
+      "name": "非法向量nan拒绝",
+      "passed": true
+    },
+    {
+      "name": "非法向量inf拒绝",
+      "passed": true
+    },
+    {
+      "name": "非法向量zero拒绝",
+      "passed": true
+    },
+    {
+      "name": "正常来源正向返回",
+      "passed": true
+    },
+    {
+      "name": "多跳future祖先当前排除",
+      "passed": true
+    },
+    {
+      "name": "future在允许业务时点后正向",
+      "passed": true
+    },
+    {
+      "name": "多跳withdrawn祖先排除",
+      "passed": true
+    },
+    {
+      "name": "禁止组传递祖先排除与无禁组正向",
+      "passed": true
+    },
+    {
+      "name": "正式评分排除标签祖先，普通许可用途单独",
+      "passed": true
+    },
+    {
+      "name": "业务as_of区间下界含上界不含",
+      "passed": true
+    },
+    {
+      "name": "审计冻结不参与有效时点SQL",
+      "passed": true
+    },
+    {
+      "name": "跨项目私有源在推理前拒绝",
+      "passed": true
+    },
+    {
+      "name": "同1024维但profile不符仍推理前拒绝",
+      "passed": true
+    },
+    {
+      "name": "普通检索构造不接正式评分用途",
+      "passed": true
+    },
+    {
+      "name": "真实RRF与BGE重排有实际引用",
+      "passed": true,
+      "observation": {
+        "route": "exact_vector+lexical+rrf+reranker",
+        "reranker_identity": {
+          "model": "BAAI/bge-reranker-v2-m3",
+          "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+          "assets_and_runtime_digest": "8f93302fca9aa3078917b49c94735a257caed96db5dbacdf74cb7c82e2560fb4"
+        }
+      }
+    },
+    {
+      "name": "实际PG先白名单物化精确向量路由",
+      "passed": true
+    },
+    {
+      "name": "自有原文夹具逐字/物理页/parse引用一致",
+      "passed": true
+    },
+    {
+      "name": "伪ID引用拒绝",
+      "passed": true
+    },
+    {
+      "name": "错页引用拒绝",
+      "passed": true
+    },
+    {
+      "name": "伪引文引用拒绝",
+      "passed": true
+    },
+    {
+      "name": "重排不可用明确RRF降级",
+      "passed": true
+    },
+    {
+      "name": "应用校验持图锁至commit再释放",
+      "passed": true
+    },
+    {
+      "name": "检索后祖先撤回应用时拒绝",
+      "passed": true
+    },
+    {
+      "name": "重发索引不得复活撤回原件根",
+      "passed": true
+    },
+    {
+      "name": "错误物理页的原文chunk不可写入",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "paid_generation_calls": 0,
+  "dense_identity": {
+    "model_name": "BAAI/bge-m3",
+    "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "weights_digest": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+    "preprocessing_digest": "3df98f34cdc8f2a82279c50f6c6ae7e8ec2313861f12de6281fecad0b14a7b3e"
+  },
+  "bid_id": "6c1773e1-b3c8-4994-bd63-6ef16847c947",
+  "foreign_bid_id": "e7357220-9a66-4ea4-9a78-40e8913a1c90",
+  "source_ids": {
+    "base": "cae83032-c79d-56de-9641-dd5115167341",
+    "future": "25a15f76-4e9e-5c5b-ba5d-fa0399875d26",
+    "withdrawn": "3c3edf8a-9220-58c3-a1f1-0671b9d34f26",
+    "grouped": "bcd8e3b3-76cb-5981-b665-839e8c831316",
+    "policy": "e997a66d-39c7-58fa-ad2c-2f8f9aad8ca9",
+    "bounds": "534e6c3a-3a2b-53ff-819e-91447da3b736",
+    "foreign": "c326010d-bf5d-5686-990c-a01bd1c69215",
+    "reindex": "38c2d5fa-d45b-551a-b899-0be5deef7bc4"
+  },
+  "candidate_sha256": "03cbcf424b021d91c08d398e4a482b38b957c7fa0def1c6f2be7a86bd095e101",
+  "probe_sha256": "4efbbbbb50081c6262f14204f06ad1d4950158806c865f34c3d9ad4ee4840350"
+}

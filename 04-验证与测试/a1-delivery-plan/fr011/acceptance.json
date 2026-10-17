@@ -1,0 +1,167 @@
+{
+  "scope": "FR011后续应用/API/浏览器验收任务；非软件执行证据",
+  "owner_protocol": "业务结果与指标交接.md",
+  "software_executed": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "cases": [
+    {
+      "id": "MET-01",
+      "title": "阶段与成绩独立",
+      "steps": [
+        "有技术分但无中标结论；再登记candidate。"
+      ],
+      "expected": [
+        "阶段仍未知后转候选，不由高分推中标；score_kind及技术分原值不变。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-02",
+      "title": "九阶段/核验独立",
+      "steps": [
+        "逐个登记pending、technical_shortlisted、not_shortlisted、rejected、candidate、awarded、not_awarded、cancelled、failed_tender。",
+        "分别设pending核验/verified/conflict/rejected核验。"
+      ],
+      "expected": [
+        "阶段rejected明确招标方否决；核验rejected明确记录未采信；取消/流标独立；无消息不变未中标。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-03",
+      "title": "精确率分母与未知",
+      "steps": [
+        "10个当前有效提交：8个明确阶段各1（技术入围、未入围、否决、候选、中标、未中标、取消、流标），1个阶段pending，1个核验冲突。"
+      ],
+      "expected": [
+        "known=8、unknown=1、conflict=1；入围率numerator4/denominator6；中标率1/4；取消、流标、未知、冲突不进两率，候选不算中标。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-04",
+      "title": "零分母与真实零",
+      "steps": [
+        "只有取消/流标/未知；再造有分母但0中标夹具。"
+      ],
+      "expected": [
+        "前者value=null；后者真实numerator=0且denominator>0才显示0%；界面与导出一致。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-05",
+      "title": "有效提交唯一/替代",
+      "steps": [
+        "S1有awarded结果，追加有据新实际提交S2替代；仅上传未实交V3；另造同单位重复身份冲突。"
+      ],
+      "expected": [
+        "只统计S2且其无结果时未知；V3不换实交头；旧S1可查不重复计；冲突不能按最新时间猜一个。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-06",
+      "title": "结果追加更正/来源失效",
+      "steps": [
+        "候选追加更正为中标；随后当前头有冲突/官方来源失效。",
+        "并发更正和同key重放。"
+      ],
+      "expected": [
+        "每提交只当前结果头贡献一次；冲突/失效不回退旧verified；旧记录可还原，CAS一方成功/重放不重复。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-07",
+      "title": "报送与官方核验",
+      "steps": [
+        "保存user_reported无官方原件；尝试verified；再提供真实官方原页与身份时间。",
+        "切默认台账与verified_only。"
+      ],
+      "expected": [
+        "可有据保存未核实台账但不能假官方核实；核验依据不足拒绝；两口径数字说明明确，无岗位审批。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-08",
+      "title": "风险快照不可洗掉",
+      "steps": [
+        "在有当时审计依据的实交补录冻结1项open风险；登记后有效复检或有理由驳回。",
+        "另补录无当时评审证据的实交。"
+      ],
+      "expected": [
+        "原快照仍1不随当前变0；无证据basis=unknown计数null；已知/未知快照提交数可见，不能以今天重评补当时0。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-09",
+      "title": "风险闭环去重及因果",
+      "steps": [
+        "同根问题跨三轮复制，分别confirm、defer、resolved_by_recheck、dismiss；另有一般建议。"
+      ],
+      "expected": [
+        "按本次范围根身份去重；confirm/defer不解决，resolved/dismissed分开，一般建议不混否决强制；官方否决仅由阶段事实，不推系统因果。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-10",
+      "title": "不可比逐轮与真实官方分",
+      "steps": [
+        "两轮正文改变但方法相同；再造方法/规则满分/适用范围改变和缺输入轮次。"
+      ],
+      "expected": [
+        "固定每轮身份，不可比断点及原因；不算改稿收益，官方分只标其真实实交稿。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-11",
+      "title": "隐藏预测无旁路",
+      "steps": [
+        "关闭单项目show_prediction，读取趋势、聚合误差和导出。"
+      ],
+      "expected": [
+        "风险数仍可见；预测值/区间/差分及可反推的MAE/bias不泄露；配对从误差计算排除并说明范围。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-12",
+      "title": "20配对门槛不授资格",
+      "steps": [
+        "分别0/19/20个合法可见事前技术总分配对；其中20个每个预测80/100，官方70/100；再更正/隐藏一条。"
+      ],
+      "expected": [
+        "0/19对MAE/bias=null；20对MAE=10、bias=+10百分制；回到19重新隐藏，不沿用旧值；模型业务资格不变。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-13",
+      "title": "事前资格与固定一对",
+      "steps": [
+        "混入事后回测、综合分、官方分冲突、旧提交、缺满分、实际稿不符、标签已见及多次重跑。"
+      ],
+      "expected": [
+        "全部按原因排除；每有效提交只固定一主配对，不事后选最近官方分的一次。"
+      ],
+      "status": "pending_application"
+    },
+    {
+      "id": "MET-14",
+      "title": "范围及失败恢复",
+      "steps": [
+        "用同一真实submitted_at、不同录入日记录跨时间窗；注入401/409/412/422、分页和报表读取。"
+      ],
+      "expected": [
+        "按实交时点归属窗口，as_of/范围/口径/排除数可见；输入保留、重登不重放、报告同有效头，无演示0/商业看板。"
+      ],
+      "status": "pending_application"
+    }
+  ]
+}

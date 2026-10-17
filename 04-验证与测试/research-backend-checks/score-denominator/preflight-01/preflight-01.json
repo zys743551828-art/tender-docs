@@ -1,0 +1,109 @@
+{
+  "schema": "score-denominator-and-retrospective-preflight/1",
+  "created_at": "2026-10-17T04:17:54.739445+00:00",
+  "status": "C_review_and_new_fresh_pending_not_application_accepted",
+  "sources": [
+    {
+      "path": "deploy/sql/score-denominator.sql",
+      "sha256": "e771ab52c25cbd19ac0e48f5732de051c2f8f5ecc7b6599a0f7064826b169195",
+      "bytes": 15602
+    },
+    {
+      "path": "apps/api/denominator_routes.py",
+      "sha256": "5eeecd46f1027a0cec63bfda91b61b8a6fc71db1cefe14e5375d99ebb3346283",
+      "bytes": 5706
+    },
+    {
+      "path": "packages/model_governance/denominator.py",
+      "sha256": "06616f73d4e894b946f0cd2136b9dfb54265c023666bb8d481f51cb5cfaa2f00",
+      "bytes": 4873
+    },
+    {
+      "path": "packages/model_governance/denominator_repository.py",
+      "sha256": "fc77367aee5575cc931097e2a0fca333545dceb2a30e9d10a8a54b1c6f61696a",
+      "bytes": 8833
+    },
+    {
+      "path": "packages/model_governance/denominator_contracts.py",
+      "sha256": "3bf5af9619e9021daa39f6d79b2106e560ecd3fe8208f51cf38958ea4ac66433",
+      "bytes": 7407
+    },
+    {
+      "path": "packages/model_governance/research_timing.py",
+      "sha256": "1cd43cb75462b6888f3a60c2197f91ed0c9f7682ece67858b89e7a3c74f9d1f7",
+      "bytes": 4912
+    },
+    {
+      "path": "packages/model_governance/DENOMINATOR-DEVELOPMENT.md",
+      "sha256": "414356647b7412479e5bd9b6b174effdcb89f646b31d593e06d02b8dcd9c1f11",
+      "bytes": 3905
+    },
+    {
+      "path": "tests/test_score_denominator.py",
+      "sha256": "158ba4820e7593f899995080c394c97761df0c94011ba25979d65ef4eb7a5fbf",
+      "bytes": 5630
+    },
+    {
+      "path": "tests/test_research_timing.py",
+      "sha256": "1187097f7000732f732ac4f7e01168279398971667f5eca2555ec4fe53ce645e",
+      "bytes": 4497
+    },
+    {
+      "path": "tests/test_denominator_integration.py",
+      "sha256": "414532ed10e9056ad764941bd788383cbae10c10a096e6dd3383c3700770fd13",
+      "bytes": 11070
+    },
+    {
+      "path": "tests/test_denominator_pdf_helper.py",
+      "sha256": "57eb43f5e7f0177c8106727907122cf4633c8c5d509cceebb8f463d3e07fbdbe",
+      "bytes": 391
+    }
+  ],
+  "preserved_frozen_candidates": [
+    {
+      "candidate": "score",
+      "manifest_sha256": "32893b6df6fe1d6f0b5485bb3191aa8b4987fee8d690d4062b842d206ba3f9e7",
+      "sources_exact": true,
+      "count": 12
+    },
+    {
+      "candidate": "scale",
+      "manifest_sha256": "9ad9becd41065d334ff03246026da4f9a79f90db89a5aa0696b3a0ada01c6f62",
+      "sources_exact": true,
+      "count": 10
+    }
+  ],
+  "actual_operations": 9,
+  "pure_tests": 28,
+  "pg_tests": {
+    "count": 5,
+    "database": "tender_checks_score_denominator01",
+    "sql_version": "B",
+    "sql_sha256": "c3f3b86260e7c967e4e14ab63865955ad6c71df74bb43791743d435c9388bab2",
+    "scope": "current/historical only; C strict method delta NOT exercised",
+    "provider_paid": 0,
+    "object_cloud": 0,
+    "docker": 0,
+    "consumers": 0
+  },
+  "C_sql_sha256": "e771ab52c25cbd19ac0e48f5732de051c2f8f5ecc7b6599a0f7064826b169195",
+  "unreviewed_wip": {
+    "path": "deploy/sql/retrospective-research.sql",
+    "status": "incomplete_not_submitted_do_not_execute",
+    "sha256": "8f5c093653fc62ad5c42a5e4d251905cc27bb46194a068722e9345b80219306e"
+  },
+  "remaining": [
+    "C static review then PM fresh; strict actual chronological positive and late-confirm negative",
+    "StageA sourced training export must not infer max/scale from observed labels",
+    "retrospective SQL groups/ports/export/CPU actual execution incomplete; timing module pure only",
+    "real historical Word/PDF derived-representation authority absent",
+    "main/live/frontend unconnected; official aggregation execution and model certification unavailable"
+  ],
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy_files": 5,
+    "bandit_runtime": "passed"
+  },
+  "resource_note": "Only small source/evidence copies; no Docker/fresh invocation; initial freeze command used system Python without psycopg and failed before creating archive, corrected to project venv."
+}

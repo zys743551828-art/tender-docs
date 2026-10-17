@@ -1,0 +1,65 @@
+--- code03/fixture.py
++++ code04/fixture.py
+@@ -66,20 +66,35 @@
+     objects = {}
+     for kind, raw in raw_objects.items():
+         identity = uuid4()
+-        key = "application-recovery/" + str(identity)
+-        port.put_object(
+-            Bucket=values["OBJECT_STORE_BUCKET"],
+-            Key=key,
+-            Body=raw,
+-            ContentType="application/octet-stream",
+-        )
+         objects[kind] = {
+             "id": identity,
+-            "key": key,
++            "key": "application-recovery/" + str(identity),
+             "sha256": s.sha(raw),
+             "bytes": len(raw),
+             "document": uuid4(),
+         }
++    # Record exact owned keys before any remote PUT, including failed/unknown outcomes.
++    s.save(
++        directory / "object-put-intent.json",
++        {
++            "objects": {
++                kind: {
++                    key: str(value) if key in {"id", "document"} else value
++                    for key, value in obj.items()
++                }
++                for kind, obj in objects.items()
++            },
++            "locator": archive.safe.locator(values),
++            "state": "planned_before_first_put",
++        },
++    )
++    for kind, raw in raw_objects.items():
++        port.put_object(
++            Bucket=values["OBJECT_STORE_BUCKET"],
++            Key=objects[kind]["key"],
++            Body=raw,
++            ContentType="application/octet-stream",
++        )
+     with psycopg.connect(s.connection_dsn(cluster, "api"), row_factory=dict_row) as c:
+         c.execute("SET LOCAL search_path=design,public")
+         c.execute(
+@@ -174,7 +189,7 @@
+             (ids["rule"], ids["bid"], ids["rules"], [ids["evidence"]]),
+         )
+         c.execute(
+-            "INSERT INTO review_inputs(id,bid_id,material_snapshot_id,body_version_id,input_digest,method_digest,manifest,frozen_at) VALUES(%s,%s,%s,%s,%s,%s,%s,clock_timestamp())",
++            "INSERT INTO review_inputs(id,bid_id,material_snapshot_id,body_version_id,input_digest,method_digest,manifest,frozen_at,evidence_manifest_blob_id,manifest_digest,as_of,evaluation_context_digest) VALUES(%s,%s,%s,%s,%s,%s,%s,clock_timestamp(),%s,%s,clock_timestamp(),%s)",
+             (
+                 ids["input"],
+                 ids["bid"],
+@@ -183,6 +198,9 @@
+                 digest,
+                 objects["method"]["sha256"],
+                 Jsonb({"synthetic": True, "method_original_blob_id": str(objects["method"]["id"])}),
++                objects["chapter"]["id"],
++                objects["chapter"]["sha256"],
++                digest,
+             ),
+         )
+         c.execute(

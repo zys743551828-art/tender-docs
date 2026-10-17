@@ -1,0 +1,23 @@
+{
+  "scope": "same-origin-object-transfer",
+  "status": "developer_checks_passed_pending_independent_review",
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/apps/api/object_transfer.py",
+      "sha256": "5aa7646c297f2e5745ecc9a442b3fa36eed0270d774ce1e08f533a4378f989ce"
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_object_transfer.py",
+      "sha256": "7676fb7593d6ef1c3d50000440da780fdefa07504ae7917a951ba43d9b2b188c"
+    }
+  ],
+  "verification": {
+    "pytest_passed": 37,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "real_oss_requests_by_this_agent": 0,
+  "real_model_requests_by_this_agent": 0
+}

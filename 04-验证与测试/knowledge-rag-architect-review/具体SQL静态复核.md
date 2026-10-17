@@ -1,0 +1,13 @@
+# 企业知识检索具体SQL静态复核
+
+结论：当前SQL及协议03可进入独立新空库初始化与真实角色机制验证，无静态阻塞；不是检索实现或完整引用链通过。未执行DDL或连接现有库。
+
+SQL SHA256 `51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003`；协议03 SHA256 `4d2146db7f369b8aaecf239d8faea8df08e2f779be6482848fd5be28ce42ce5e`。原字节与记录保存在本目录。协议03保留KR01四条统一守卫，并要求D03明确身份authority／digest及事实基准；不由profile UUID或审计回看补造资格。
+
+六表的profile／version／index／unit组合FK均有对应UNIQUE，operation绑定origin bid；向量为1024维并校验归一化范数，类型本身拒绝非有限坐标，仍须真PG非法值反例。ready要求非空正数expected count、相等published count、完整manifest和完成时刻；失败／superseded有错误码与时间，空集合不能标ready。unit类型、引用ordinal、span、token数和JSON形状有约束。API／Worker均无不可变单元、向量、trace、reference的UPDATE／DELETE权限。
+
+API索引INSERT权限只含可信输入列，不含state／count／manifest结果，且无索引UPDATE，也不授ready头写权，先前state列权限疑点已收口。Worker只能写结果及ready指针，不改input或desired revision；没有新增主体工程、commands或trace/reference能力。失败状态通过真实operation只读投影，不能伪造成功。未新增SECURITY DEFINER，也未修改原文chunks或正式评分上下文。
+
+新库实施验收必须同时证明合法API建输入／头和Worker完整publish可执行，以及API伪造ready／结果、Worker改input／读trace、混版混profile、空ready、非法向量等真实权限／约束反例。grant不替代fence、source／unit权威、approved envelope、完整count和幂等摘要的应用检查。trace与引用的组合FK不会独立证明unit确实在selected_units中，亦不会独立证明citation的bid／source与新reference一致；实际引用事务必须逐项核服务器trace、unit、citation与目标归属，加入跨trace／跨bid／错source反例。
+
+最终查询仍须复用完整scope守卫，显式拒旧I1、同值新事实basis、unit自身失效；当前静态表定义不等于这些业务机制已实现。Kafka、真实本地BGE、引用还原、容量与真实公司内容质量分别验收。没有收费、消费者或私有配置读取。

@@ -1,0 +1,36 @@
+{
+  "scope": "evidence_consistency_only",
+  "status": "passed",
+  "evidence_sha256": "d3fde3356d49cda758a269c7e7bfd72823776138faf989d96ec47850c0dff3d9",
+  "report_sha256": "3e7229afaea4ed7c100e7bf1892183e026fe393114683cd845009b4fdc32cb3a",
+  "checks": [
+    {
+      "name": "source_hashes",
+      "checked": 10,
+      "status": "passed"
+    },
+    {
+      "name": "citation_lines_and_excerpts",
+      "checked": 30,
+      "status": "passed"
+    },
+    {
+      "name": "scenario_and_finding_citation_references",
+      "checked": 14,
+      "status": "passed"
+    },
+    {
+      "name": "local_report_links",
+      "checked": 12,
+      "status": "passed"
+    },
+    {
+      "name": "finding_ids_in_report",
+      "checked": 5,
+      "status": "passed"
+    }
+  ],
+  "real_user_tests": 0,
+  "business_software_tests": 0,
+  "meaning": "验证本次引用与场景证据自洽；不证明可用性或业务软件通过"
+}

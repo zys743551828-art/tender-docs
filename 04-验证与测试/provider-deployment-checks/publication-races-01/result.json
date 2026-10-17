@@ -1,0 +1,52 @@
+{
+  "scope": "受控QA临时API8803：实际OSS写后屏障＋8802并发命令＋真实PG短锁公布校验；非未插桩时序",
+  "passed": true,
+  "checks": [
+    "authorizations：真实OSS写后竞争胜出，旧公布拒绝、原key不变、无引用候选清理",
+    "complete：真实OSS写后竞争胜出，旧公布拒绝、原key不变、无引用候选清理",
+    "abort：真实OSS写后竞争胜出，旧公布拒绝、原key不变、无引用候选清理"
+  ],
+  "model_requests": 0,
+  "races": [
+    {
+      "command": "authorizations",
+      "upload_id": "6eafaaa7-6a0f-4962-948f-5f512e2099f1",
+      "command_status": 200,
+      "old_stream_status": 403,
+      "actual_oss_write": true,
+      "staging_key_unchanged": true,
+      "valid_document_versions": 0,
+      "candidate_references": 0,
+      "cleanup_status": 204
+    },
+    {
+      "command": "complete",
+      "upload_id": "ac018e95-07f0-4293-a82f-069e0bc529e7",
+      "command_status": 202,
+      "old_stream_status": 409,
+      "actual_oss_write": true,
+      "staging_key_unchanged": true,
+      "valid_document_versions": 0,
+      "candidate_references": 0,
+      "cleanup_status": 204
+    },
+    {
+      "command": "abort",
+      "upload_id": "8182df5b-e6fa-439c-868e-7f3cd178abc4",
+      "command_status": 200,
+      "old_stream_status": 409,
+      "actual_oss_write": true,
+      "staging_key_unchanged": true,
+      "valid_document_versions": 0,
+      "candidate_references": 0,
+      "cleanup_status": 204
+    }
+  ],
+  "bid_id": "ae13d716-59bf-4708-8b2f-b09fab370921",
+  "controlled_api_pid": 1252575,
+  "sources": {
+    "/workspace/tender-workbench/qa/provider_proxy_publication_probe.py": "c36b3a46b9e1748436ef2ac7bff54ad04a1e84b6893d4319a75cf6790cb947c6",
+    "qa/provider_proxy_fault_api.py": "9e0e521979bd5fe7e15ec711db0c1f6e2f526d9dc10d33bc29b50a4008cffb32",
+    "apps/api/object_transfer.py": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83"
+  }
+}

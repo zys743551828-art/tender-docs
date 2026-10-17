@@ -1,0 +1,29 @@
+{
+  "candidate_sha256": "0f23c448a071ed86804911e69c7204d1da446ee9ae34f7f1caac7c104a1d7d87",
+  "conclusion": "blocked conditional knowledge eligibility pending K01",
+  "blocking_findings": [
+    "K01"
+  ],
+  "sources": {
+    "apps/api/knowledge_routes.py": "fc03d6ebe5b5e61d45559c393fe6f58d4b1e6041a1ca04a9906aac9571b11fcf",
+    "packages/knowledge/README.md": "6cf55addab57e78dd716a12fb8f1b5703f52f6bb35b93410c96611e90f82cfa5",
+    "packages/knowledge/__init__.py": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+    "packages/knowledge/bridge.py": "337e206d09ce1c85488e36bfd0250410c42f233c0be9427454b949b93f2223ef",
+    "packages/knowledge/content.py": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+    "packages/knowledge/contracts.py": "501c4f5009a35b19baf5ae5d56d5c2f6c0f2b6f3590883ef104d7fab507a742a",
+    "packages/knowledge/repository.py": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+    "packages/knowledge/sources.py": "6fc06fff336f2e18f543d45d58e6ac7820388ff28b35e5f80aa46d9d55b78c10",
+    "tests/test_knowledge.py": "bbe7472d1ec2a8d561d5cb9b9525db39f6dff266272f8b60095da0aab3fae199",
+    "tests/test_knowledge_integration.py": "b59b72c75db9e5ba268e1cfe40815f4e5fdf27169a0f2f4b724bfe13d597f496"
+  },
+  "evidence": {
+    "probe_candidate01.py": "9e37e65a3ecc7813c85db11824a68634f3629ee0328a4ba19e24bd6c1a1f3350",
+    "frozen-plus-independent-tests.py": "73cf2640b096d57564ee782d0430ba51ef9e1695a1f52aa2951f09754139171d",
+    "candidate01-independent-result.json": "5d61b8bbad67322dd86052e6de85e4dbf6aab712e13d94b9643fe7d6b09e4afc",
+    "candidate01-independent-junit.xml": "c990d1c8949bb3245ecbe3bd7f4271f839a40a0c003509e2b718e87fdedf9a4e",
+    "unconfirmed-fact-counterexample.json": "9db66a9be59a68413f9614cee2be18db8158751a64565e149c740dd8c33357d6",
+    "早期审查.md": "45da77fb210c00c68b9eb006360b63d139302fadf3840da4776130f5e11dad7a"
+  },
+  "paid_calls": 0,
+  "credentials_read": false
+}

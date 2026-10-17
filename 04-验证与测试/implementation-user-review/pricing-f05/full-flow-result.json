@@ -1,0 +1,2016 @@
+{
+  "plans_after_trial": 0,
+  "saveA_status": 201,
+  "saveA_body": {
+    "id": "15ca7194-d2c7-4599-a89c-dfa86006ff89",
+    "simulation_id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+    "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+    "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+    "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+    "input": {
+      "currency": "CNY",
+      "amount_unit": "元",
+      "curve_range": null,
+      "candidate_price": "100",
+      "rounding_policy": "half_up_2dp",
+      "candidate_prices": [
+        "90",
+        "110"
+      ],
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "competitor_price_assumptions": [
+        "80",
+        "120"
+      ]
+    },
+    "formula_snapshot": {
+      "title": "用户F05合法最低报价比例-b24a351578",
+      "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "reason": "按完整同页原文登记：最低有效报价作基准；满分40；本方及所有有效数值对手至少3项，保留同价；报价大于0无额外上下界；人民币元；基准及计算过程不取整；最终四舍五入两位并限0至40。",
+      "schema": "pricing-formula/1",
+      "formula": {
+        "method": "lowest_valid_ratio",
+        "maximum": "40",
+        "maximum_price": null,
+        "minimum_price": null,
+        "above_coefficient": "0",
+        "below_coefficient": "0",
+        "minimum_valid_bids": 3
+      },
+      "currency": "CNY",
+      "calculator": {
+        "name": "bounded-decimal-price-calculator",
+        "version": 1,
+        "implementation_sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667"
+      },
+      "amount_unit": "元",
+      "confirmed_at": "2026-10-17T02:44:39.208311+00:00",
+      "confirmed_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+      "interpretation": {
+        "clamping": "zero_to_maximum",
+        "exclusions": "none",
+        "baseline_set": "own_and_all_numerically_eligible_assumptions",
+        "random_parameters": "none",
+        "intermediate_rounding": "none"
+      },
+      "evidence_quotes": [
+        {
+          "quote": "独立合成计分原页：报价金额单位元，币种CNY；价格满分40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "maximum",
+            "amount_unit",
+            "currency"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "有效报价须大于0，无最低限价、无最高限价；包含本方至少3个有效报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "minimum_price",
+            "maximum_price",
+            "minimum_valid_bids"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "本方及全部数值有效的对手假设共同组成有效集合，包含同价对手。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "77050784-d610-4f16-8bc9-0987afe18c62",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "baseline_set"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "不排除任何同价对手。最终价格分按half_up_2dp四舍五入保留2位小数。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "exclusions",
+            "rounding_policy"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "计算过程与基准价不取整；价格分限制0至40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "c1515002-bab6-445b-aaea-360360d56418",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "intermediate_rounding",
+            "clamping"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "取最低有效报价B作基准，价格分=40乘B除以本方报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "de759dd1-8ab5-459c-ae50-f1e411922ecd",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "method"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        }
+      ],
+      "rounding_policy": "half_up_2dp",
+      "source_authority": {
+        "scope": {
+          "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+          "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+          "effective_documents": [
+            {
+              "role": "tender",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "ancestor_heads": [
+          {
+            "id": "f41aed87-9b67-5285-ae71-e48150b17b18",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_revision": 2,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "applicability_scope": {
+        "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+        "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+        "effective_documents": [
+          {
+            "role": "tender",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_snapshot_id": "f813ff0c-2f99-4a3d-9f35-7143555b4a6c",
+      "matches_source_confirmed": true,
+      "terms_complete_confirmed": true
+    },
+    "result": {
+      "id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+      "curve": [],
+      "notes": [],
+      "maximum": "40",
+      "eligible": true,
+      "candidates": [
+        {
+          "notes": [],
+          "price": "100",
+          "score": "32.00",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：32.00；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "90",
+          "score": "35.56",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：35.56；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "110",
+          "score": "29.09",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：29.09；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        }
+      ],
+      "assumptions": [
+        "对手报价均为用户情景假设，不是已知实际成交价",
+        "每个候选和曲线点均重新计算包含本方报价的基准价",
+        "金额单位沿用公式出处，未进行货币或金额单位转换"
+      ],
+      "price_score": "32.00",
+      "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+      "baseline_price": "80",
+      "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+      "candidate_price": "100",
+      "calculation_steps": [
+        "有效报价数量：3；不合格的对手假设已排除",
+        "基准价：80",
+        "满分×最低有效报价÷本方报价",
+        "价格分：32.00；取整：half_up_2dp"
+      ],
+      "valid_price_count": 3,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "formula_evidence_ids": [
+        "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+        "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+        "77050784-d610-4f16-8bc9-0987afe18c62",
+        "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+        "c1515002-bab6-445b-aaea-360360d56418",
+        "de759dd1-8ab5-459c-ae50-f1e411922ecd"
+      ],
+      "technical_exchange_note": "价格分仅在同一量尺、权重和资格条件下可与技术分比较；本试算不提供必中标或成本利润结论。",
+      "excluded_competitor_assumptions": []
+    },
+    "reason": "独立合成方案A：本方100元，对手80/120元；只是用户情景，不当最优报价。",
+    "created_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+    "created_at": "2026-10-17T02:47:23.031749+00:00",
+    "current_applicability": {
+      "applicable": true,
+      "reasons": []
+    }
+  },
+  "planA_initial": {
+    "id": "15ca7194-d2c7-4599-a89c-dfa86006ff89",
+    "simulation_id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+    "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+    "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+    "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+    "input": {
+      "currency": "CNY",
+      "amount_unit": "元",
+      "curve_range": null,
+      "candidate_price": "100",
+      "rounding_policy": "half_up_2dp",
+      "candidate_prices": [
+        "90",
+        "110"
+      ],
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "competitor_price_assumptions": [
+        "80",
+        "120"
+      ]
+    },
+    "formula_snapshot": {
+      "title": "用户F05合法最低报价比例-b24a351578",
+      "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "reason": "按完整同页原文登记：最低有效报价作基准；满分40；本方及所有有效数值对手至少3项，保留同价；报价大于0无额外上下界；人民币元；基准及计算过程不取整；最终四舍五入两位并限0至40。",
+      "schema": "pricing-formula/1",
+      "formula": {
+        "method": "lowest_valid_ratio",
+        "maximum": "40",
+        "maximum_price": null,
+        "minimum_price": null,
+        "above_coefficient": "0",
+        "below_coefficient": "0",
+        "minimum_valid_bids": 3
+      },
+      "currency": "CNY",
+      "calculator": {
+        "name": "bounded-decimal-price-calculator",
+        "version": 1,
+        "implementation_sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667"
+      },
+      "amount_unit": "元",
+      "confirmed_at": "2026-10-17T02:44:39.208311+00:00",
+      "confirmed_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+      "interpretation": {
+        "clamping": "zero_to_maximum",
+        "exclusions": "none",
+        "baseline_set": "own_and_all_numerically_eligible_assumptions",
+        "random_parameters": "none",
+        "intermediate_rounding": "none"
+      },
+      "evidence_quotes": [
+        {
+          "quote": "独立合成计分原页：报价金额单位元，币种CNY；价格满分40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "maximum",
+            "amount_unit",
+            "currency"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "有效报价须大于0，无最低限价、无最高限价；包含本方至少3个有效报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "minimum_price",
+            "maximum_price",
+            "minimum_valid_bids"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "本方及全部数值有效的对手假设共同组成有效集合，包含同价对手。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "77050784-d610-4f16-8bc9-0987afe18c62",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "baseline_set"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "不排除任何同价对手。最终价格分按half_up_2dp四舍五入保留2位小数。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "exclusions",
+            "rounding_policy"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "计算过程与基准价不取整；价格分限制0至40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "c1515002-bab6-445b-aaea-360360d56418",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "intermediate_rounding",
+            "clamping"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "取最低有效报价B作基准，价格分=40乘B除以本方报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "de759dd1-8ab5-459c-ae50-f1e411922ecd",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "method"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        }
+      ],
+      "rounding_policy": "half_up_2dp",
+      "source_authority": {
+        "scope": {
+          "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+          "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+          "effective_documents": [
+            {
+              "role": "tender",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "ancestor_heads": [
+          {
+            "id": "f41aed87-9b67-5285-ae71-e48150b17b18",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_revision": 2,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "applicability_scope": {
+        "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+        "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+        "effective_documents": [
+          {
+            "role": "tender",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_snapshot_id": "f813ff0c-2f99-4a3d-9f35-7143555b4a6c",
+      "matches_source_confirmed": true,
+      "terms_complete_confirmed": true
+    },
+    "result": {
+      "id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+      "curve": [],
+      "notes": [],
+      "maximum": "40",
+      "eligible": true,
+      "candidates": [
+        {
+          "notes": [],
+          "price": "100",
+          "score": "32.00",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：32.00；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "90",
+          "score": "35.56",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：35.56；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "110",
+          "score": "29.09",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：29.09；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        }
+      ],
+      "assumptions": [
+        "对手报价均为用户情景假设，不是已知实际成交价",
+        "每个候选和曲线点均重新计算包含本方报价的基准价",
+        "金额单位沿用公式出处，未进行货币或金额单位转换"
+      ],
+      "price_score": "32.00",
+      "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+      "baseline_price": "80",
+      "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+      "candidate_price": "100",
+      "calculation_steps": [
+        "有效报价数量：3；不合格的对手假设已排除",
+        "基准价：80",
+        "满分×最低有效报价÷本方报价",
+        "价格分：32.00；取整：half_up_2dp"
+      ],
+      "valid_price_count": 3,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "formula_evidence_ids": [
+        "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+        "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+        "77050784-d610-4f16-8bc9-0987afe18c62",
+        "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+        "c1515002-bab6-445b-aaea-360360d56418",
+        "de759dd1-8ab5-459c-ae50-f1e411922ecd"
+      ],
+      "technical_exchange_note": "价格分仅在同一量尺、权重和资格条件下可与技术分比较；本试算不提供必中标或成本利润结论。",
+      "excluded_competitor_assumptions": []
+    },
+    "reason": "独立合成方案A：本方100元，对手80/120元；只是用户情景，不当最优报价。",
+    "created_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+    "created_at": "2026-10-17T02:47:23.031749+00:00",
+    "current_applicability": {
+      "applicable": true,
+      "reasons": []
+    }
+  },
+  "refreshA_inputs": {
+    "本方候选报价": "100",
+    "对手报价假设（每行一个，最多200项）": "80\n120",
+    "补充本方候选（每行一个，最多50项）": "90\n110"
+  },
+  "planA_after_refresh": {
+    "id": "15ca7194-d2c7-4599-a89c-dfa86006ff89",
+    "simulation_id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+    "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+    "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+    "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+    "input": {
+      "currency": "CNY",
+      "amount_unit": "元",
+      "curve_range": null,
+      "candidate_price": "100",
+      "rounding_policy": "half_up_2dp",
+      "candidate_prices": [
+        "90",
+        "110"
+      ],
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "competitor_price_assumptions": [
+        "80",
+        "120"
+      ]
+    },
+    "formula_snapshot": {
+      "title": "用户F05合法最低报价比例-b24a351578",
+      "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "reason": "按完整同页原文登记：最低有效报价作基准；满分40；本方及所有有效数值对手至少3项，保留同价；报价大于0无额外上下界；人民币元；基准及计算过程不取整；最终四舍五入两位并限0至40。",
+      "schema": "pricing-formula/1",
+      "formula": {
+        "method": "lowest_valid_ratio",
+        "maximum": "40",
+        "maximum_price": null,
+        "minimum_price": null,
+        "above_coefficient": "0",
+        "below_coefficient": "0",
+        "minimum_valid_bids": 3
+      },
+      "currency": "CNY",
+      "calculator": {
+        "name": "bounded-decimal-price-calculator",
+        "version": 1,
+        "implementation_sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667"
+      },
+      "amount_unit": "元",
+      "confirmed_at": "2026-10-17T02:44:39.208311+00:00",
+      "confirmed_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+      "interpretation": {
+        "clamping": "zero_to_maximum",
+        "exclusions": "none",
+        "baseline_set": "own_and_all_numerically_eligible_assumptions",
+        "random_parameters": "none",
+        "intermediate_rounding": "none"
+      },
+      "evidence_quotes": [
+        {
+          "quote": "独立合成计分原页：报价金额单位元，币种CNY；价格满分40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "maximum",
+            "amount_unit",
+            "currency"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "有效报价须大于0，无最低限价、无最高限价；包含本方至少3个有效报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "minimum_price",
+            "maximum_price",
+            "minimum_valid_bids"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "本方及全部数值有效的对手假设共同组成有效集合，包含同价对手。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "77050784-d610-4f16-8bc9-0987afe18c62",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "baseline_set"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "不排除任何同价对手。最终价格分按half_up_2dp四舍五入保留2位小数。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "exclusions",
+            "rounding_policy"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "计算过程与基准价不取整；价格分限制0至40分。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "c1515002-bab6-445b-aaea-360360d56418",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "intermediate_rounding",
+            "clamping"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        },
+        {
+          "quote": "取最低有效报价B作基准，价格分=40乘B除以本方报价。",
+          "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+          "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+          "evidence_id": "de759dd1-8ab5-459c-ae50-f1e411922ecd",
+          "physical_page": 1,
+          "source_revision": 2,
+          "supported_fields": [
+            "method"
+          ],
+          "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+        }
+      ],
+      "rounding_policy": "half_up_2dp",
+      "source_authority": {
+        "scope": {
+          "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+          "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+          "effective_documents": [
+            {
+              "role": "tender",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "ancestor_heads": [
+          {
+            "id": "f41aed87-9b67-5285-ae71-e48150b17b18",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "kind": "document",
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "status": "published",
+            "known_at": "2026-10-17T02:43:53.307386+00:00",
+            "revision": 2,
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "valid_from": "2026-10-17T02:43:53.307386+00:00",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_revision": 2,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "applicability_scope": {
+        "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+        "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+        "effective_documents": [
+          {
+            "role": "tender",
+            "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ]
+      },
+      "material_snapshot_id": "f813ff0c-2f99-4a3d-9f35-7143555b4a6c",
+      "matches_source_confirmed": true,
+      "terms_complete_confirmed": true
+    },
+    "result": {
+      "id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+      "curve": [],
+      "notes": [],
+      "maximum": "40",
+      "eligible": true,
+      "candidates": [
+        {
+          "notes": [],
+          "price": "100",
+          "score": "32.00",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：32.00；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "90",
+          "score": "35.56",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：35.56；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        },
+        {
+          "notes": [],
+          "price": "110",
+          "score": "29.09",
+          "eligible": true,
+          "baseline_price": "80",
+          "calculation_steps": [
+            "有效报价数量：3；不合格的对手假设已排除",
+            "基准价：80",
+            "满分×最低有效报价÷本方报价",
+            "价格分：29.09；取整：half_up_2dp"
+          ],
+          "valid_price_count": 3
+        }
+      ],
+      "assumptions": [
+        "对手报价均为用户情景假设，不是已知实际成交价",
+        "每个候选和曲线点均重新计算包含本方报价的基准价",
+        "金额单位沿用公式出处，未进行货币或金额单位转换"
+      ],
+      "price_score": "32.00",
+      "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+      "baseline_price": "80",
+      "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+      "candidate_price": "100",
+      "calculation_steps": [
+        "有效报价数量：3；不合格的对手假设已排除",
+        "基准价：80",
+        "满分×最低有效报价÷本方报价",
+        "价格分：32.00；取整：half_up_2dp"
+      ],
+      "valid_price_count": 3,
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "formula_evidence_ids": [
+        "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+        "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+        "77050784-d610-4f16-8bc9-0987afe18c62",
+        "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+        "c1515002-bab6-445b-aaea-360360d56418",
+        "de759dd1-8ab5-459c-ae50-f1e411922ecd"
+      ],
+      "technical_exchange_note": "价格分仅在同一量尺、权重和资格条件下可与技术分比较；本试算不提供必中标或成本利润结论。",
+      "excluded_competitor_assumptions": []
+    },
+    "reason": "独立合成方案A：本方100元，对手80/120元；只是用户情景，不当最优报价。",
+    "created_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+    "created_at": "2026-10-17T02:47:23.031749+00:00",
+    "current_applicability": {
+      "applicable": true,
+      "reasons": []
+    }
+  },
+  "dirty_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n独\n退出\n投标工作 / 投标项目\n业务结果与指标\n投标项目\n项目档案\n评分研究\n企业知识\n资料工作区\n返回项目列表\n项目工作区\n用户F05独立报价全流程-b24a351578\n准备资料\n上传新版资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n报价情景\n实交与成绩\n处理记录\n项目设置\n\n左右滑动可查看全部工作面，包括章节编制、实交与成绩。\n\n查证资料\n报价情景\n\n有据公式、对手假设与价格分单独记录，不改变核心提交检查，不预测中标概率。\n\n登记新的有据公式\n选择已确认公式\n选择公式版本\n用户F05合法最低报价比例-b24a351578 · 288b4128 · 当前可适用\n用户F05合法最低报价比例-b24a351578\n\n固定公式 288b4128 · 确认于 2026/10/17 02:44:39 · 输入单位 元 · 人民币，不自动换算。\n\n查看已确认公式全部原页（6）\n输入报价情景并试算\n\n单位固定为该有据公式的 元 · 人民币；取整规则沿原公式，不自动换算。对手均为用户假设，不替代真实竞争信息。\n\n本方候选报价\n对手报价假设（每行一个，最多200项）\n补充本方候选（每行一个，最多50项）\n比较受限区间曲线\n试算当前情景\n已保存情景方案\n\n试算不自动保存方案。历史采用当时公式、输入与结果，不按最新条款重算。\n\n用户F05合法最低报价比例-b24a351578\n\n2026/10/17 02:47:23 · 方案 15ca7194 · 本方情景 100 元 · 价格分 32.00\n\n当前依据可适用\n\n回看此固定情景方案",
+  "plans_after_dirty": 1,
+  "dirty_save_disabled": true,
+  "dirty_restored_value": "-",
+  "saveB_status": 201,
+  "plans_after_B": [
+    {
+      "id": "15ca7194-d2c7-4599-a89c-dfa86006ff89",
+      "simulation_id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+      "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+      "input": {
+        "currency": "CNY",
+        "amount_unit": "元",
+        "curve_range": null,
+        "candidate_price": "100",
+        "rounding_policy": "half_up_2dp",
+        "candidate_prices": [
+          "90",
+          "110"
+        ],
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "competitor_price_assumptions": [
+          "80",
+          "120"
+        ]
+      },
+      "formula_snapshot": {
+        "title": "用户F05合法最低报价比例-b24a351578",
+        "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+        "reason": "按完整同页原文登记：最低有效报价作基准；满分40；本方及所有有效数值对手至少3项，保留同价；报价大于0无额外上下界；人民币元；基准及计算过程不取整；最终四舍五入两位并限0至40。",
+        "schema": "pricing-formula/1",
+        "formula": {
+          "method": "lowest_valid_ratio",
+          "maximum": "40",
+          "maximum_price": null,
+          "minimum_price": null,
+          "above_coefficient": "0",
+          "below_coefficient": "0",
+          "minimum_valid_bids": 3
+        },
+        "currency": "CNY",
+        "calculator": {
+          "name": "bounded-decimal-price-calculator",
+          "version": 1,
+          "implementation_sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667"
+        },
+        "amount_unit": "元",
+        "confirmed_at": "2026-10-17T02:44:39.208311+00:00",
+        "confirmed_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+        "interpretation": {
+          "clamping": "zero_to_maximum",
+          "exclusions": "none",
+          "baseline_set": "own_and_all_numerically_eligible_assumptions",
+          "random_parameters": "none",
+          "intermediate_rounding": "none"
+        },
+        "evidence_quotes": [
+          {
+            "quote": "独立合成计分原页：报价金额单位元，币种CNY；价格满分40分。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "maximum",
+              "amount_unit",
+              "currency"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "有效报价须大于0，无最低限价、无最高限价；包含本方至少3个有效报价。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "minimum_price",
+              "maximum_price",
+              "minimum_valid_bids"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "本方及全部数值有效的对手假设共同组成有效集合，包含同价对手。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "77050784-d610-4f16-8bc9-0987afe18c62",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "baseline_set"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "不排除任何同价对手。最终价格分按half_up_2dp四舍五入保留2位小数。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "exclusions",
+              "rounding_policy"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "计算过程与基准价不取整；价格分限制0至40分。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "c1515002-bab6-445b-aaea-360360d56418",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "intermediate_rounding",
+              "clamping"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "取最低有效报价B作基准，价格分=40乘B除以本方报价。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "de759dd1-8ab5-459c-ae50-f1e411922ecd",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "method"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ],
+        "rounding_policy": "half_up_2dp",
+        "source_authority": {
+          "scope": {
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+            "effective_documents": [
+              {
+                "role": "tender",
+                "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+                "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+              }
+            ]
+          },
+          "ancestor_heads": [
+            {
+              "id": "f41aed87-9b67-5285-ae71-e48150b17b18",
+              "kind": "document",
+              "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "status": "published",
+              "known_at": "2026-10-17T02:43:53.307386+00:00",
+              "revision": 2,
+              "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "valid_from": "2026-10-17T02:43:53.307386+00:00",
+              "valid_until": null,
+              "policy_class": "prebid_content",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            },
+            {
+              "id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "kind": "document",
+              "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "status": "published",
+              "known_at": "2026-10-17T02:43:53.307386+00:00",
+              "revision": 2,
+              "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "valid_from": "2026-10-17T02:43:53.307386+00:00",
+              "valid_until": null,
+              "policy_class": "prebid_content",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "material_revision": 2,
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "applicability_scope": {
+          "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+          "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+          "effective_documents": [
+            {
+              "role": "tender",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "material_snapshot_id": "f813ff0c-2f99-4a3d-9f35-7143555b4a6c",
+        "matches_source_confirmed": true,
+        "terms_complete_confirmed": true
+      },
+      "result": {
+        "id": "2eba1707-2dc0-4096-9e44-3a2f18c75c61",
+        "curve": [],
+        "notes": [],
+        "maximum": "40",
+        "eligible": true,
+        "candidates": [
+          {
+            "notes": [],
+            "price": "100",
+            "score": "32.00",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：32.00；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          },
+          {
+            "notes": [],
+            "price": "90",
+            "score": "35.56",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：35.56；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          },
+          {
+            "notes": [],
+            "price": "110",
+            "score": "29.09",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：29.09；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          }
+        ],
+        "assumptions": [
+          "对手报价均为用户情景假设，不是已知实际成交价",
+          "每个候选和曲线点均重新计算包含本方报价的基准价",
+          "金额单位沿用公式出处，未进行货币或金额单位转换"
+        ],
+        "price_score": "32.00",
+        "input_digest": "83d66b5efe32f98b0424d060ad6ba8ff541c29fbef5917a3be54b84eb473a380",
+        "baseline_price": "80",
+        "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+        "candidate_price": "100",
+        "calculation_steps": [
+          "有效报价数量：3；不合格的对手假设已排除",
+          "基准价：80",
+          "满分×最低有效报价÷本方报价",
+          "价格分：32.00；取整：half_up_2dp"
+        ],
+        "valid_price_count": 3,
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "formula_evidence_ids": [
+          "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+          "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+          "77050784-d610-4f16-8bc9-0987afe18c62",
+          "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+          "c1515002-bab6-445b-aaea-360360d56418",
+          "de759dd1-8ab5-459c-ae50-f1e411922ecd"
+        ],
+        "technical_exchange_note": "价格分仅在同一量尺、权重和资格条件下可与技术分比较；本试算不提供必中标或成本利润结论。",
+        "excluded_competitor_assumptions": []
+      },
+      "reason": "独立合成方案A：本方100元，对手80/120元；只是用户情景，不当最优报价。",
+      "created_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+      "created_at": "2026-10-17T02:47:23.031749+00:00",
+      "current_applicability": {
+        "applicable": true,
+        "reasons": []
+      }
+    },
+    {
+      "id": "e24e0b03-6502-44de-883b-ba4ac1dc8a5f",
+      "simulation_id": "56d32179-d1f3-4fae-a27c-4bbf11dc216c",
+      "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+      "input_digest": "e2c17458ca6dd996cd7064938f22993d24c4875e28cbdedf8b80f5450ce4711e",
+      "input": {
+        "currency": "CNY",
+        "amount_unit": "元",
+        "curve_range": null,
+        "candidate_price": "120",
+        "rounding_policy": "half_up_2dp",
+        "candidate_prices": [
+          "90",
+          "110"
+        ],
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "competitor_price_assumptions": [
+          "80",
+          "120"
+        ]
+      },
+      "formula_snapshot": {
+        "title": "用户F05合法最低报价比例-b24a351578",
+        "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+        "reason": "按完整同页原文登记：最低有效报价作基准；满分40；本方及所有有效数值对手至少3项，保留同价；报价大于0无额外上下界；人民币元；基准及计算过程不取整；最终四舍五入两位并限0至40。",
+        "schema": "pricing-formula/1",
+        "formula": {
+          "method": "lowest_valid_ratio",
+          "maximum": "40",
+          "maximum_price": null,
+          "minimum_price": null,
+          "above_coefficient": "0",
+          "below_coefficient": "0",
+          "minimum_valid_bids": 3
+        },
+        "currency": "CNY",
+        "calculator": {
+          "name": "bounded-decimal-price-calculator",
+          "version": 1,
+          "implementation_sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667"
+        },
+        "amount_unit": "元",
+        "confirmed_at": "2026-10-17T02:44:39.208311+00:00",
+        "confirmed_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+        "interpretation": {
+          "clamping": "zero_to_maximum",
+          "exclusions": "none",
+          "baseline_set": "own_and_all_numerically_eligible_assumptions",
+          "random_parameters": "none",
+          "intermediate_rounding": "none"
+        },
+        "evidence_quotes": [
+          {
+            "quote": "独立合成计分原页：报价金额单位元，币种CNY；价格满分40分。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "maximum",
+              "amount_unit",
+              "currency"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "有效报价须大于0，无最低限价、无最高限价；包含本方至少3个有效报价。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "minimum_price",
+              "maximum_price",
+              "minimum_valid_bids"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "本方及全部数值有效的对手假设共同组成有效集合，包含同价对手。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "77050784-d610-4f16-8bc9-0987afe18c62",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "baseline_set"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "不排除任何同价对手。最终价格分按half_up_2dp四舍五入保留2位小数。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "exclusions",
+              "rounding_policy"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "计算过程与基准价不取整；价格分限制0至40分。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "c1515002-bab6-445b-aaea-360360d56418",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "intermediate_rounding",
+              "clamping"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          },
+          {
+            "quote": "取最低有效报价B作基准，价格分=40乘B除以本方报价。",
+            "parse_id": "df62625b-8aa1-4a5d-91eb-bd3d77411590",
+            "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+            "evidence_id": "de759dd1-8ab5-459c-ae50-f1e411922ecd",
+            "physical_page": 1,
+            "source_revision": 2,
+            "supported_fields": [
+              "method"
+            ],
+            "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+          }
+        ],
+        "rounding_policy": "half_up_2dp",
+        "source_authority": {
+          "scope": {
+            "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+            "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+            "effective_documents": [
+              {
+                "role": "tender",
+                "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+                "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+              }
+            ]
+          },
+          "ancestor_heads": [
+            {
+              "id": "f41aed87-9b67-5285-ae71-e48150b17b18",
+              "kind": "document",
+              "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "status": "published",
+              "known_at": "2026-10-17T02:43:53.307386+00:00",
+              "revision": 2,
+              "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "valid_from": "2026-10-17T02:43:53.307386+00:00",
+              "valid_until": null,
+              "policy_class": "prebid_content",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            },
+            {
+              "id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "kind": "document",
+              "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "status": "published",
+              "known_at": "2026-10-17T02:43:53.307386+00:00",
+              "revision": 2,
+              "source_id": "fb0c1e08-f114-57de-82c0-dd295d2dd74a",
+              "valid_from": "2026-10-17T02:43:53.307386+00:00",
+              "valid_until": null,
+              "policy_class": "prebid_content",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "material_revision": 2,
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "applicability_scope": {
+          "bid_id": "063abe5d-b8c0-41ba-8104-f53c27afab97",
+          "round_id": "1b4b2730-4f02-4ef5-92ed-a2fd5de4e700",
+          "effective_documents": [
+            {
+              "role": "tender",
+              "digest": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7",
+              "document_version_id": "bfaf94ca-8d20-4d53-96aa-c03b7170968e"
+            }
+          ]
+        },
+        "material_snapshot_id": "f813ff0c-2f99-4a3d-9f35-7143555b4a6c",
+        "matches_source_confirmed": true,
+        "terms_complete_confirmed": true
+      },
+      "result": {
+        "id": "56d32179-d1f3-4fae-a27c-4bbf11dc216c",
+        "curve": [],
+        "notes": [],
+        "maximum": "40",
+        "eligible": true,
+        "candidates": [
+          {
+            "notes": [],
+            "price": "120",
+            "score": "26.67",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：26.67；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          },
+          {
+            "notes": [],
+            "price": "90",
+            "score": "35.56",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：35.56；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          },
+          {
+            "notes": [],
+            "price": "110",
+            "score": "29.09",
+            "eligible": true,
+            "baseline_price": "80",
+            "calculation_steps": [
+              "有效报价数量：3；不合格的对手假设已排除",
+              "基准价：80",
+              "满分×最低有效报价÷本方报价",
+              "价格分：29.09；取整：half_up_2dp"
+            ],
+            "valid_price_count": 3
+          }
+        ],
+        "assumptions": [
+          "对手报价均为用户情景假设，不是已知实际成交价",
+          "每个候选和曲线点均重新计算包含本方报价的基准价",
+          "金额单位沿用公式出处，未进行货币或金额单位转换"
+        ],
+        "price_score": "26.67",
+        "input_digest": "e2c17458ca6dd996cd7064938f22993d24c4875e28cbdedf8b80f5450ce4711e",
+        "baseline_price": "80",
+        "formula_digest": "d7bacc4a2b44f765ecc66e698a350cc3f0ebfe90f268107ce000cb517de82ef2",
+        "candidate_price": "120",
+        "calculation_steps": [
+          "有效报价数量：3；不合格的对手假设已排除",
+          "基准价：80",
+          "满分×最低有效报价÷本方报价",
+          "价格分：26.67；取整：half_up_2dp"
+        ],
+        "valid_price_count": 3,
+        "formula_version_id": "288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+        "formula_evidence_ids": [
+          "224ea457-b3c7-4d24-9bd4-67d85820a0aa",
+          "6ed1fa5c-6fbc-4bbc-9b1e-7ef8d1c1114c",
+          "77050784-d610-4f16-8bc9-0987afe18c62",
+          "7d025b37-97c7-494d-9802-70bb4f83bfa5",
+          "c1515002-bab6-445b-aaea-360360d56418",
+          "de759dd1-8ab5-459c-ae50-f1e411922ecd"
+        ],
+        "technical_exchange_note": "价格分仅在同一量尺、权重和资格条件下可与技术分比较；本试算不提供必中标或成本利润结论。",
+        "excluded_competitor_assumptions": []
+      },
+      "reason": "独立合成方案B：本方改为120元，其余假设相同；追加保存，不改方案A。",
+      "created_by": "25891d93-6cb6-4a00-94be-3a338d6d7948",
+      "created_at": "2026-10-17T02:47:29.550500+00:00",
+      "current_applicability": {
+        "applicable": true,
+        "reasons": []
+      }
+    }
+  ],
+  "planA_immutable_after_B": true,
+  "planA_immutable_sha": "b22e5a291f0715e27c7de675da6c4b082e10405bb855f6a3b84467ba0c62cea9",
+  "plans_after_second_refresh": 2,
+  "buttons_before_feature_off": [
+    "退出",
+    "返回项目列表",
+    "上传新版资料",
+    "查证资料",
+    "登记新的有据公式",
+    "查看已确认公式全部原页（6）",
+    "试算当前情景",
+    "回看此固定情景方案",
+    "回看此固定情景方案"
+  ],
+  "document_width": 390,
+  "trial_button_visible_box": {
+    "x": 19,
+    "y": 401.703125,
+    "width": 352,
+    "height": 40
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "keyboard_next_label": "对手报价假设（每行一个，最多200项）",
+  "auto_review_still_off": true,
+  "feature_off_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n独\n退出\n投标工作 / 投标项目\n业务结果与指标\n投标项目\n项目档案\n评分研究\n企业知识\n资料工作区\n返回项目列表\n项目工作区\n用户F05独立报价全流程-b24a351578\n准备资料\n上传新版资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n实交与成绩\n处理记录\n项目设置\n\n左右滑动可查看全部工作面，包括章节编制、实交与成绩。\n\n查证资料\n本项目报价辅助已关闭\n\n公式、历史方案与未提交输入保留。开启后不会自动重跑或保存。\n\n在项目设置中开启报价辅助",
+  "feature_off_trial_visible": false,
+  "after_reenable_quote": "120",
+  "plans_after_reenable": 2,
+  "planA_immutable_after_reenable": true,
+  "final_body": "跳到主要内容\n投\n投标工作台\n市政工程 · AI WORKSPACE\n独\n退出\n投标工作 / 投标项目\n业务结果与指标\n投标项目\n项目档案\n评分研究\n企业知识\n资料工作区\n返回项目列表\n项目工作区\n用户F05独立报价全流程-b24a351578\n准备资料\n上传新版资料\n项目概览\n项目资料\n评审与风险\n响应矩阵\n规则核对\n工程事实\n章节编制\n报价情景\n实交与成绩\n处理记录\n项目设置\n\n左右滑动可查看全部工作面，包括章节编制、实交与成绩。\n\n查证资料\n报价情景\n\n有据公式、对手假设与价格分单独记录，不改变核心提交检查，不预测中标概率。\n\n登记新的有据公式\n选择已确认公式\n选择公式版本\n用户F05合法最低报价比例-b24a351578 · 288b4128 · 当前可适用\n用户F05合法最低报价比例-b24a351578\n\n固定公式 288b4128 · 确认于 2026/10/17 02:44:39 · 输入单位 元 · 人民币，不自动换算。\n\n查看已确认公式全部原页（6）\n输入报价情景并试算\n\n单位固定为该有据公式的 元 · 人民币；取整规则沿原公式，不自动换算。对手均为用户假设，不替代真实竞争信息。\n\n本方候选报价\n对手报价假设（每行一个，最多200项）\n补充本方候选（每行一个，最多50项）\n比较受限区间曲线\n试算当前情景\n已保存情景方案\n\n试算不自动保存方案。历史采用当时公式、输入与结果，不按最新条款重算。\n\n用户F05合法最低报价比例-b24a351578\n\n2026/10/17 02:47:23 · 方案 15ca7194 · 本方情景 100 元 · 价格分 32.00\n\n当前依据可适用\n\n回看此固定情景方案\n用户F05合法最低报价比例-b24a351578\n\n2026/10/17 02:47:29 · 方案 e24e0b03 · 本方情景 120 元 · 价格分 26.67\n\n当前依据可适用\n\n回看此固定情景方案",
+  "at": "2026-10-17T02:47:36.631401+00:00",
+  "events": [
+    {
+      "at": "2026-10-17T02:47:17.742864+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:17.843435+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:17.845471+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:17.894098+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:17.899861+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.180689+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.270820+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.272787+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.273450+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.280202+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:18.306400+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:19.362807+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:20.808074+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:20.956183+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:22.346974+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-simulations",
+      "status": 201
+    },
+    {
+      "at": "2026-10-17T02:47:22.810430+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.104668+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 201
+    },
+    {
+      "at": "2026-10-17T02:47:23.156638+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.190215+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.354392+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.371649+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.380425+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.392820+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.431992+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.752683+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.784523+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.838072+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:23.993201+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.068331+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.076012+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.129221+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.132306+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.419409+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.496845+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.503401+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.527914+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.529722+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.545092+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:24.869649+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:25.118636+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:26.664825+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:26.711762+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:26.721365+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:26.794503+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:27.055508+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:27.135553+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:27.481518+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:27.695304+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:28.996473+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-simulations",
+      "status": 201
+    },
+    {
+      "at": "2026-10-17T02:47:29.629474+00:00",
+      "method": "POST",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 201
+    },
+    {
+      "at": "2026-10-17T02:47:29.712244+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:29.715743+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:29.850720+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.222443+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.231946+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.241037+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.241813+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.391204+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.507497+00:00",
+      "method": "GET",
+      "path": "/api/v1/auth/session",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.586236+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.609792+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.669983+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:30.992625+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:31.145530+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:31.438314+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:31.473911+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.186620+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.195039+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/identity",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.364194+00:00",
+      "method": "PATCH",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.437470+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.438424+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.719853+00:00",
+      "method": "GET",
+      "path": "/api/v1/streams/48d69d8a-f1d5-43fb-9c83-586de7044d7c/events",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:32.911819+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.080962+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.082953+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.087190+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.099314+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.560994+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.623260+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.632675+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/identity",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.790257+00:00",
+      "method": "PATCH",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.832219+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:33.843124+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.131115+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.137064+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.139465+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.143353+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.145398+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/identity",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.571319+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.645299+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/settings",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:35.761563+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-plans",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:36.062070+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas/288b4128-6a26-4bc4-b709-09e0fe8b7cb7",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:36.102411+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/pricing-formulas",
+      "status": 200
+    },
+    {
+      "at": "2026-10-17T02:47:36.570457+00:00",
+      "method": "GET",
+      "path": "/api/v1/bids/063abe5d-b8c0-41ba-8104-f53c27afab97/review-state",
+      "status": 200
+    }
+  ]
+}

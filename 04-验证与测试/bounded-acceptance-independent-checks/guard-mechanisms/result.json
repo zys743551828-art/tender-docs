@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "concurrent_two_logical_keys_each_at_most_once",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "foreign_malformed_purpose_size_token_limits_before_delegation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "deadline_rejects_before_delegation",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "unknown_attempt_consumes_logical_slot_and_cannot_retry",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_frozen_source_mutation_blocks_before_upstream",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "real_pg_second_executor_rejected_without_open_business_transaction",
+      "passed": true,
+      "observation": {
+        "role": {
+          "current_user": "twb_rag_checks_worker",
+          "rolsuper": false,
+          "rolbypassrls": false
+        },
+        "lock_sessions": [
+          {
+            "state": "idle",
+            "xact_start": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "real_pg_lock_released_on_exit",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "real_pg_lock_released_on_exception",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "default_preview_never_enters_execute",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cli_cannot_open_more_than_180_seconds",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_model_calls": 0,
+  "real_kafka_consumers": 0,
+  "tool_sha256": "b69a359f2099f844e3af164d3221eed607d5af4d99167fc8870eef5f83a53d85",
+  "probe_sha256": "110609cd7b7ff0ce281111ddaac3605f3bd16ab7568e423f40f9ddf98c29e445"
+}

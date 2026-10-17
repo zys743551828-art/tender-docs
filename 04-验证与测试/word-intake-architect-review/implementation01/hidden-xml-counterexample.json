@@ -1,0 +1,38 @@
+{
+  "candidate_sha256": "199d31e0bde9a9cccb8f9893127e7962ead4b035c3bd8e045327474bd8bbf98a",
+  "mode": "pure synthetic OOXML inspection only; no field/render/PG/object execution",
+  "records": [
+    {
+      "part": "header1.xml",
+      "sha256": "5e3970092847e6fe22b479ba3d217501b68162a5326658fc54cdcbe1472e95ae",
+      "conversion_eligible": false,
+      "active_content_gaps": [
+        "EXTERNAL_OR_DYNAMIC_FIELD"
+      ],
+      "unsupported_layout_features": [
+        "fldChar",
+        "hdr",
+        "instrText"
+      ],
+      "xml_part_count": 5
+    },
+    {
+      "part": "header1.XML",
+      "sha256": "c088fecbf09da6249f03ef00e328df0d34fe0f1d42d1bae426f5b402868487d5",
+      "conversion_eligible": true,
+      "active_content_gaps": [],
+      "unsupported_layout_features": [],
+      "xml_part_count": 4
+    },
+    {
+      "part": "header1.dat",
+      "sha256": "d84178245ac61806264c7f6892a5a99866532b279049e59b7331bcddb573fca5",
+      "conversion_eligible": true,
+      "active_content_gaps": [],
+      "unsupported_layout_features": [],
+      "xml_part_count": 4
+    }
+  ],
+  "paid_calls": 0,
+  "renderer_jobs": 0
+}

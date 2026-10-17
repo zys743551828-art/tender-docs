@@ -1,0 +1,40 @@
+{
+  "first": {
+    "bid_id": "26fbcf0a-beec-478b-8322-ee598f913e4a",
+    "phase": "working",
+    "archived_at": null,
+    "revision": 1,
+    "allowed_actions": [
+      "terminate"
+    ],
+    "archive_blockers": [],
+    "active_operations": [],
+    "unfinished_uploads": [],
+    "unfinished_batches": [],
+    "batch_closure_available": true
+  },
+  "later": {
+    "bid_id": "26fbcf0a-beec-478b-8322-ee598f913e4a",
+    "phase": "working",
+    "archived_at": null,
+    "revision": 1,
+    "allowed_actions": [
+      "terminate"
+    ],
+    "archive_blockers": [],
+    "active_operations": [],
+    "unfinished_uploads": [],
+    "unfinished_batches": [
+      {
+        "id": "fe2bab9e-2a1e-4f0b-9a7a-cfa9cc40886f",
+        "state": "open",
+        "revision": 1
+      }
+    ],
+    "batch_closure_available": true
+  },
+  "first_etag": "\"bid:26fbcf0a-beec-478b-8322-ee598f913e4a:a52fc3ff5f47dd96c10a1ef420f6bdfe9f66e2bcbb64060fceead4caf9abd6af\"",
+  "later_etag": "\"bid:26fbcf0a-beec-478b-8322-ee598f913e4a:a52fc3ff5f47dd96c10a1ef420f6bdfe9f66e2bcbb64060fceead4caf9abd6af\"",
+  "batch_id": "fe2bab9e-2a1e-4f0b-9a7a-cfa9cc40886f",
+  "scope": "actual authenticated ASGI + nonowner PG; no archive attempted"
+}

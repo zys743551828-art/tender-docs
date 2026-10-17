@@ -1,0 +1,52 @@
+{
+  "scope": "目标RAG协议，真实资料质量尚未验收",
+  "required_capability": true,
+  "vector_store": "postgresql_pgvector",
+  "lexical_store": "postgresql_fts",
+  "pipeline": [
+    "parse_with_evidence",
+    "chunk_with_source_ranges",
+    "embed",
+    "index",
+    "purpose_filter",
+    "hybrid_retrieve",
+    "rrf_fuse",
+    "optional_rerank",
+    "assemble_cited_context",
+    "validate_citations"
+  ],
+  "server_owned_fields": [
+    "purpose",
+    "allowed_manifest",
+    "as_of",
+    "excluded_groups",
+    "embedding_profile_id"
+  ],
+  "public_contexts": [
+    "assistant",
+    "authoring",
+    "body_evidence",
+    "history"
+  ],
+  "formal_score_assembly": "expand_retrieved_chapters_to_full_ranges",
+  "profile_fields": [
+    "model_digest",
+    "dimensions",
+    "distance",
+    "normalization",
+    "preprocessing_digest"
+  ],
+  "source_validity_recheck": [
+    "before_retrieval",
+    "after_retrieval",
+    "before_apply"
+  ],
+  "initial_candidates": {
+    "lexical": 50,
+    "vector": 50,
+    "rerank": 20,
+    "context": 8
+  },
+  "initial_candidates_status": "待真实标注调优",
+  "legacy_migration_required": false
+}

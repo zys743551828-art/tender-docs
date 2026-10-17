@@ -1,0 +1,19 @@
+# 独立评分执行SQL草案静审
+
+结论：需先修正下列模块阻塞，再提交新候选供独立新库初始化。输入为 score-execution/sql-draft-A/score-execution.sql，SHA256 `aea80880ed78108a29fce669e4b2a015fb4cb5e8c62b1f87c12aa8545a1206fa`。全453行已静态审阅，未执行该DDL、未启动评分或消费者。
+
+**SE01／P1：随机新输入ID能绕过未知计费防重发。** start_job第242行仅查询old.input_id=target的reserved／unknown。inputs允许为同一review、method及相同chapter_package新建多个ID，current_chapters也允许同包绑定不同input。旧I1中请求未知后，新建等价I2并start_job不会命中旧账本；reserve_call第316行又只查本job，未比较同业务执行的旧请求／profile／逻辑章节／replicate。因此普通重试若重新冻结input，能够再次发送同一次未知收费请求。全局91143锁可提供串行化，但查询键本身没有业务去重身份。
+
+应由服务器冻结不包含随机input／job／command ID的业务执行身份，对等价输入的每个逻辑章节、replicate、request和profile查全部reserved／unknown；在同一串行事务检查和预留。若产品允许明确另付费重跑，需独立、可审计的授权语义，不能靠换input默认获得。验收至少包括两个等价新input的并发预留、未知后新command／input重试零新send，以及正常新执行与成功项恢复路径。
+
+**SE02／P1：当前评审分支未限定尚未支持的事实范围。** expected_current_chapter第159行仅构建rule与完整body；current_input没有确认事实或fact_set范围拒绝及来源权威核验。若review manifest含必要的当前confirmed事实，包却会省略它们仍按同一方法声明完整。开发已另行指出此限制，拟在API及SQL先保守拒不支持的事实范围；不能只依赖调用端描述“本次不含事实”。验收要覆盖有确认事实的规则、空事实合法路径，以及事实变化不被旧seal当作完整新输入。扩展多来源事实能力应另冻方法和完整来源，不静默沿用现有descriptor。
+
+**SE03／P2：当前评分条款满分缺有限值校验。** 第205行只拒max_points NULL；后续valid_band_points不验证maximum有限。PostgreSQL中10<=numeric NaN或Infinity成立，所以有限band点数可能使这类无效规则上界通过。当前分支应明确max_points>0且非NaN／±Infinity，与历史输入守卫对齐；合法有限数正向和非有限／非正数反例均应覆盖。此处指单条规则上界，不是允许从条款求和得到技术总满分。
+
+SE01和SE03的最小SQL条件反模型在实际非owner PostgreSQL只读标量查询中执行，结果见 SQL-A-countermodels.json；没有创建score schema或模拟完整owned RPC，不把条件模型当作整条生产调用实证。SE02为源码范围缺口并结合Owner自查确认，尚未执行新库完整反例。
+
+其余关键边界已核：API封口后禁止追加章节，owned RPC校验job代次／fence／owner／租约；等待scope锁后重读job；完整页集合1..N、精确body／rule evidence及当前来源祖先；真实usage允许在来源失效或租约过期后结算，发布仍要求当前资格；三条独立调用与完整章节集合交叉核对；无直接桶key／label／proof读取或业务认证铸造。tender_model_score仅获指定RPC，未获表扫描。上述静态方向不替代新库真实权限、NULL／篡改、并发锁、未知收费及晚到结果测试。
+
+technical_maximum保持NULL、maximum_verified=false，结果features／prediction以及正式资格保持unavailable，不能从官方标签、条款总和或旧模型登记补齐该权威。草案并不关闭完整正式评分或历史留出研究产品任务。
+
+本轮零DDL、模型、对象、消费者；仅执行只读条件探针。待新候选修正后由PM在独立新库初始化，原A及此记录保持不变。

@@ -1,0 +1,25 @@
+{
+  "scope": "Owned synthetic build blob inventory only in this fresh isolated checks DB, including preflight and final legacy export regressions; no bucket scan. Some listed outputs use explicit memory object fixtures, so inventory is not independent proof that every row was PUT to OSS. Legacy test_real_worker_build and followup[failed]/preflight[adopted] used configured existing OSS and round-trip digest checks; no model calls.",
+  "database": "tender_checks_authoring_complete01",
+  "objects": [
+    {
+      "digest": "623989dfd849d740d7f934a68bbd756536004bbf98328840c29d952b88dd7e3c",
+      "object_key": "blobs/623989dfd849d740d7f934a68bbd756536004bbf98328840c29d952b88dd7e3c",
+      "byte_size": 2233,
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "digest": "7675ba14bf64105e9115b57ee345e1d00f37b6b3b3830edac79f610717ca0118",
+      "object_key": "blobs/7675ba14bf64105e9115b57ee345e1d00f37b6b3b3830edac79f610717ca0118",
+      "byte_size": 2212,
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "digest": "83f39d5ecdb2ad2aa85a28b1eb586049898fad9e021f17bb6ffc4b5fcfc3cdd9",
+      "object_key": "blobs/83f39d5ecdb2ad2aa85a28b1eb586049898fad9e021f17bb6ffc4b5fcfc3cdd9",
+      "byte_size": 2124,
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    }
+  ],
+  "cleanup": "No blob with a persisted document reference is deleted; no bucket policy/CORS change or pre-existing object deletion."
+}

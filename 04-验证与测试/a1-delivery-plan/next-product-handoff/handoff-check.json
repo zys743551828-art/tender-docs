@@ -1,0 +1,88 @@
+{
+  "scope": "本批产品交接静态引用与完整性，不代表应用/架构SQL/真人/模型通过",
+  "passed": true,
+  "checks": [
+    {
+      "name": "原历史协议精确快照保留",
+      "passed": true
+    },
+    {
+      "name": "40FR编号完整且未变绿",
+      "passed": true
+    },
+    {
+      "name": "13UI任务和9时点任务待执行",
+      "passed": true
+    },
+    {
+      "name": "UI引用真实",
+      "passed": true
+    },
+    {
+      "name": "旧40FR快照未改",
+      "passed": true
+    },
+    {
+      "name": "原13/旧passed字节未改",
+      "passed": true
+    },
+    {
+      "name": "本地链接:历史可见证明与回测输入协议.md",
+      "passed": true
+    },
+    {
+      "name": "本地链接:历史留出研究时点决定.md",
+      "passed": true
+    },
+    {
+      "name": "本地链接:完整A2与任务UI交接.md",
+      "passed": true
+    },
+    {
+      "name": "本地链接:README.md",
+      "passed": true
+    },
+    {
+      "name": "本轮无软件/模型/费用/凭据操作",
+      "passed": true
+    }
+  ],
+  "software_runs": 0,
+  "browser_runs": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "bindings": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/历史可见证明与回测输入协议.md",
+      "sha256": "f8e38a80da5b1d62a5fb9cbf9bb74d7b11c37367f9d5d10a3fc32396b7ecc762"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/历史留出研究时点决定.md",
+      "sha256": "57a623f9383c3dd7c621d9c094f0de6278ebfefc3feeb65a61e116aa4d7eb07a"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/timing-owner-decision.json",
+      "sha256": "4194368e993e68d642aec37b7286535cd4a911fe9a929ead096cbafab60cee9b"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/timing-acceptance.json",
+      "sha256": "b45c62b7bdab4b52681d2a53361b98116ee61aac3584f5795609d88f4fbcdfad"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/next-product-handoff/完整A2与任务UI交接.md",
+      "sha256": "471d0defbee06fef0d6e90105a3898e4d5a158edf4801096d4580bb82ceab20b"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/next-product-handoff/README.md",
+      "sha256": "9e90fb7daa7316b8c88fd5f1efedae426530e9763237824a7fa74cb3840f1b22"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/next-product-handoff/remaining-fr.json",
+      "sha256": "9bf0e375aa285a3287f89d5ad520c9234e6560e33c64b59814840448eda98109"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/next-product-handoff/acceptance.json",
+      "sha256": "a78e67fcd751e0c75409323d6f6a3f3b1c99e97e0a3d74b26a2736534fe5979c"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "deploy/backups/generic.py",
+    "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f",
+    "kind": "sources"
+  },
+  {
+    "path": "deploy/backups/GENERIC.md",
+    "sha256": "662da44906cdac80ffad8f2434ee126919134826dd6762b0ff4fe50ac3556321",
+    "kind": "sources"
+  },
+  {
+    "path": "tests/test_backup_generic.py",
+    "sha256": "8f675096e10c3a593b81f00ef9ec602c9cb5960587859c5702019b0b08213c22",
+    "kind": "sources"
+  },
+  {
+    "path": "deploy/backups/run.py",
+    "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604",
+    "kind": "dependencies"
+  },
+  {
+    "path": "packages/contracts/sql/core.sql",
+    "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "kind": "new-probe-init-SQL"
+  },
+  {
+    "path": "packages/contracts/sql/domain.sql",
+    "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "kind": "new-probe-init-SQL"
+  },
+  {
+    "path": "packages/contracts/sql/retrieval.sql",
+    "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "kind": "new-probe-init-SQL"
+  },
+  {
+    "path": "packages/contracts/sql/roles.sql",
+    "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "kind": "new-probe-init-SQL"
+  },
+  {
+    "path": "packages/contracts/sql/worker-functions.sql",
+    "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "kind": "new-probe-init-SQL"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "status": "review_complete_with_findings",
+  "scope": "三角色原始评审报告的整合与引用核对；整改和再次放行另行记录",
+  "recorded_at": "2026-10-16T13:15:45.990216+00:00",
+  "conclusion": "带条件可开工",
+  "design_gate_passed": false,
+  "remediation_authorized": true,
+  "findings": {
+    "architecture": 3,
+    "product": 4,
+    "user_ui_acceptance": 2,
+    "user_observation": 3
+  },
+  "real_pg_role_counterexamples": 5,
+  "product_software_tests": 0,
+  "real_user_tests": 0,
+  "report_hashes": {
+    "architecture": {
+      "path": "04-验证与测试/架构师独立审查.md",
+      "sha256": "2444d582b16956cc6808c19221f46ab14f2ee975e8b079574e2c8d355e7f14ac"
+    },
+    "product": {
+      "path": "04-验证与测试/产品负责人独立评审.md",
+      "sha256": "8f13ccca1ea3efc83a67d55d92cdd8ef3379ba9a4376862ffd159d75b29a8845"
+    },
+    "user_simulation": {
+      "path": "04-验证与测试/用户视角模拟评审.md",
+      "sha256": "3e7229afaea4ed7c100e7bf1892183e026fe393114683cd845009b4fdc32cb3a"
+    }
+  },
+  "evidence_hashes": {
+    "architecture": {
+      "path": "04-验证与测试/architect-review-checks/review-record.json",
+      "sha256": "f81361aac034c53b3aa10a3f7b5e757858138f3526dfec5829014d24eba1a6ca"
+    },
+    "product": {
+      "path": "04-验证与测试/product-review-checks/review-evidence.json",
+      "sha256": "bc34d57671709c925afe884ef09b93b1e5f6739daef6413b8b82d12986d24a69"
+    },
+    "user_simulation": {
+      "path": "04-验证与测试/user-review-checks/evidence.json",
+      "sha256": "d3fde3356d49cda758a269c7e7bfd72823776138faf989d96ec47850c0dff3d9"
+    }
+  },
+  "local_links_checked": 43,
+  "historical_results_rewritten": false
+}

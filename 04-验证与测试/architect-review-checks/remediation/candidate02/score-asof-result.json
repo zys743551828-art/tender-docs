@@ -1,0 +1,27 @@
+{
+  "scope": "正式评分读取的业务时点回归；合成PG机制，非业务API",
+  "inputs": {
+    "core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+  },
+  "postgres_version": "17.11 (Debian 17.11-1.pgdg12+2)",
+  "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+  "as_of": "2026-01-15T00:00:00Z",
+  "frozen_at": "2026-02-15T00:00:00Z",
+  "expected_sources": [
+    "00000000-0000-0000-0000-00000000012d",
+    "00000000-0000-0000-0000-00000000012f"
+  ],
+  "actual_sources": [
+    "00000000-0000-0000-0000-00000000012d",
+    "00000000-0000-0000-0000-00000000012f"
+  ],
+  "matches_business_as_of": true,
+  "future_source_included": false,
+  "previously_effective_source_omitted": false,
+  "executed_with_real_login": true,
+  "product_end_to_end_executed": false
+}

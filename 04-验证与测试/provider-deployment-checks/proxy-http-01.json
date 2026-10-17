@@ -1,0 +1,70 @@
+{
+  "scope": "真实release HTTP/PG/Kafka/OSS同源传输独立合法/异常/禁止/竞争；非A1模型评审",
+  "passed": true,
+  "checks": [
+    "真实Cookie/CSRF/Origin与同成员不同session均限制短票据",
+    "可信Origin不取Host/Forwarded；token完整性、upload对象与方法绑定",
+    "真实HTTP准确长度/Content-Type/编码/PDF魔数/上限/超额实体和半连接短传拒绝且无定位副作用",
+    "同源真实OSS暂存→旧ticket拒绝→parts恢复→显式complete→Kafka实际SHA核验",
+    "真实中文名下载SHA/Range全量、匿名/跨session/会话撤销拒绝",
+    "同大小不同PDF实体经真实Worker复算SHA隔离，无有效版本",
+    "隔离PG将本次上传有效期设4秒，服务端刷新真实短授权并自然到期410",
+    "100 Continue实际流读取屏障下refresh/complete/abort分别胜出，旧流拒绝且不换key"
+  ],
+  "started_at": "2026-10-16T17:12:51.520630+00:00",
+  "model_requests": 0,
+  "bid_id": "d791ed93-5fcc-435d-839a-3dccb067d544",
+  "authorization": [
+    {
+      "case": "anonymous",
+      "status": 401
+    },
+    {
+      "case": "missing_csrf",
+      "status": 403
+    },
+    {
+      "case": "wrong_csrf",
+      "status": 403
+    },
+    {
+      "case": "foreign_origin",
+      "status": 403
+    },
+    {
+      "case": "other_member",
+      "status": 403
+    },
+    {
+      "case": "same_member_other_session",
+      "status": 403
+    }
+  ],
+  "oversized_wire_status": 413,
+  "short_connection_status": null,
+  "upload_id": "f355aa6b-9f36-4957-80f4-b0aff353d42b",
+  "document_version_id": "dcc87821-dabd-4e45-89bf-1b4532654291",
+  "download_sha256": "b2afa5af67bb0b9e03a87e7043aec1136d7fc6a12c6f75811eec87d49ee2e437",
+  "races": [
+    {
+      "command": "authorizations",
+      "status": 200,
+      "old_stream_status": 403,
+      "key_unchanged": true
+    },
+    {
+      "command": "complete",
+      "status": 202,
+      "old_stream_status": 409,
+      "key_unchanged": true
+    },
+    {
+      "command": "abort",
+      "status": 200,
+      "old_stream_status": 409,
+      "key_unchanged": true
+    }
+  ],
+  "probe_sha256": "929c44619b469b666f1130685083d10426206d5db23959a4c99f86b9822342d0",
+  "finished_at": "2026-10-16T17:13:05.329271+00:00"
+}

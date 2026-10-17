@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="14.747" timestamp="2026-10-17T03:28:29.030104+00:00" hostname="597cea30c71f"><testcase classname="" name="test_current_root_identity_and_complete_rule_scope_revalidated[late_rule]" time="3.499" /><testcase classname="" name="test_current_root_identity_and_complete_rule_scope_revalidated[published_head]" time="3.015" /><testcase classname="" name="test_current_root_identity_and_complete_rule_scope_revalidated[forged_root]" time="3.449" /><testcase classname="" name="test_shadow_snapshot_same_result_route_changes_leave_history" time="3.873"><failure message="KeyError: 'ETag'">/workspace/tender-workbench/qa/test_score_independent01.py:155: in test_shadow_snapshot_same_result_route_changes_leave_history
+    training,_,_=queued_training((api,w['actors'][0],headers,w['objects']))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/score-execution-independent-checks/candidate-01/execution-inputs/tests/test_model_governance_integration.py:202: in queued_training
+    cohort, items = frozen_cohort(client, related_final=related_final)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/score-execution-independent-checks/candidate-01/execution-inputs/tests/test_model_governance_integration.py:170: in frozen_cohort
+    run, samples, items = complete_research(
+/workspace/tender-docs/04-验证与测试/score-execution-independent-checks/candidate-01/execution-inputs/tests/test_model_governance_integration.py:74: in complete_research
+    samples.append(admission(web, headers, item))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-docs/04-验证与测试/score-execution-independent-checks/candidate-01/execution-inputs/tests/test_research_integration.py:317: in admission
+    headers=headers(grouping.headers["ETag"]),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/httpx/_models.py:302: in __getitem__
+    raise KeyError(key)
+E   KeyError: 'ETag'</failure></testcase></testsuite></testsuites>

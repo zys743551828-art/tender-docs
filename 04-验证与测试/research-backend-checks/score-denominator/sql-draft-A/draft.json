@@ -1,0 +1,20 @@
+{
+  "draft": "A",
+  "sql_path": "/workspace/tender-workbench/deploy/sql/score-denominator.sql",
+  "sql_sha256": "21a41e3937a81dd2c8967360e7ef86b3ba1bf8dcffba4dbf0ecb164bf0811e96",
+  "status": "static_review_requested_not_executed",
+  "baseline": "exact Score F + Scale C + StageA D, all prior bytes preserved",
+  "slice": "independent immutable denominator references and zero-call derived coverage/features; no score raw table CHECK changes",
+  "purposes": [
+    "current score input",
+    "historical input / historical score input",
+    "strict StageA cohort member"
+  ],
+  "closed_limits": [
+    "only unweighted native rule scale linked; weighted registration preserved but link unavailable",
+    "strict reference authority created before actual submission; current late human registration allowed only same exact source originally prebid visible",
+    "no model or final qualification",
+    "no direct score/CPU grants; no broad label or private-root export",
+    "retrospective new-label/cohort authority separate subsequent SQL, not implemented by this file"
+  ]
+}

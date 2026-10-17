@@ -1,0 +1,52 @@
+{
+  "schema": "pricing-backend-self-check/3",
+  "status": "passed_development_engineering_not_independent_acceptance",
+  "engineering_suite": {
+    "tests": "45",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "9.571"
+  },
+  "actual_nonowner_postgresql": true,
+  "database": "tender_checks_research03",
+  "actual_session_csrf": true,
+  "engineering_object_port": "explicit_in_memory",
+  "model_calls": 0,
+  "kafka_processes_started": 0,
+  "new_native_oss_requests": 0,
+  "quality": {
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "regressions": [
+    "unknown_complete_tokens_zhaoyuan_hanyuan_and_arbitrary_prefix_rejected_before_PUT",
+    "unquoted_KRW_original_page_conflict_rejected_before_PUT",
+    "single_yuan_block_cannot_establish_complete_unit_declaration",
+    "same_parse_other_page_declaration_cannot_prove_formula_measure",
+    "adjacent_original_blocks_han_plus_yuan_cannot_be_separated_by_invented_boundary",
+    "explicit_colon_and_yi_wei_danwei_and_renminbi_forms_supported",
+    "old_wanyuan_zhaoyuan_hanyuan_wrong_formula_denies_new_simulation_save_and_write_replay",
+    "old_wrong_simulation_and_saved_plan_remain_readable_with_original_result_current_invalidity",
+    "all_existing_decimal_null_source_CAS_transaction_and_switch_regressions"
+  ],
+  "native_evidence_scope": {
+    "status": "not_reexecuted_for_candidate_03",
+    "prior_result": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-01/native-oss-result.json",
+    "prior_result_sha256": "a3a0f8567cf8eaed06351dce877352f5a3c5bf483d909f9c7d20aa344b8a311b",
+    "scope": "Candidate01 one self-owned object roundtrip only; no new candidate03 native result claimed."
+  },
+  "implemented_router_operations": 10,
+  "main_api_included_at_candidate_freeze": true,
+  "main_integration_accepted": false,
+  "live_deployment_tested": false,
+  "unverified": [
+    "independent_QA_architect_product_user_reviews",
+    "browser_PRICE01_to_11",
+    "whole_product_integration",
+    "representative_real_clause_applicability"
+  ],
+  "conservative_grammar_boundary": "Only complete explicit amount-unit and currency declarations; measure evidence and method same original parse/page. Crosspage/ambiguous unsupported; no arbitrary natural-language equivalence proof."
+}

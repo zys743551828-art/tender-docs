@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "real_RC_transaction_accepted",
+      "passed": true
+    },
+    {
+      "name": "autocommit_authority_rejected",
+      "passed": true
+    },
+    {
+      "name": "autocommit_replay_first_guard_rejected",
+      "passed": true
+    },
+    {
+      "name": "repeatable read_authority_rejected",
+      "passed": true
+    },
+    {
+      "name": "repeatable read_replay_first_guard_rejected",
+      "passed": true
+    },
+    {
+      "name": "serializable_authority_rejected",
+      "passed": true
+    },
+    {
+      "name": "serializable_replay_first_guard_rejected",
+      "passed": true
+    }
+  ],
+  "paid_generation_calls": 0,
+  "model_rpc_requests": 0,
+  "readonly": true,
+  "probe_sha256": "107a5c68766232f49141f7129adb6add33611d2c74128e056adb33606334e4d6"
+}

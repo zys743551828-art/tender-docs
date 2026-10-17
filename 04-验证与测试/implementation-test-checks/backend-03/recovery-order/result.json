@@ -1,0 +1,33 @@
+{
+  "scope": "实际非owner Worker/Kafka/S3的领取、控制旧计算与真实恢复；时间过期仅QA夹具注入",
+  "passed": false,
+  "checks": [
+    "真实旧计算过期→reconcile废fence→旧renew/finish拒绝→新代实际完成",
+    "真实瞬时失败生成未来重试，对账不抢跑，原代次到期实际成功"
+  ],
+  "started_at": "2026-10-16T14:23:59.196797+00:00",
+  "bid_id": "3c556540-c2db-4ebf-8237-3da920f71253",
+  "old_fence": {
+    "operation_id": "ab3e3d74-dc4f-4dd8-a7e7-7158a9c448f3",
+    "old_fence": 1,
+    "new_fence": 3,
+    "old_renew": false,
+    "old_finish": false,
+    "effects": 1
+  },
+  "future_retry": {
+    "operation_id": "4c32f2b3-9edb-4e79-b53a-049b184c924c",
+    "generation_before": 2,
+    "generation_after": 2,
+    "outbox_before": 2,
+    "outbox_after": 2,
+    "due": "2026-10-16 14:24:10.454196+00:00"
+  },
+  "failure": {
+    "stage": "取消与无重传恢复",
+    "type": "AssertionError",
+    "message": "取消缺条件头明确拒绝"
+  },
+  "finished_at": "2026-10-16T14:24:15.383304+00:00",
+  "probe_sha256": "39bad79a8e27fd12f10f3e443aa324a6f0768f1c09a3a67c489155521cecb36d"
+}

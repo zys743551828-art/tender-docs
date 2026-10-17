@@ -1,0 +1,20 @@
+{
+  "candidate_sha256": "6dcab3b2807598cf6b88ebb9066c0908cd6c9beaa5b1764fa716859c3c2be4f9",
+  "scope": "template/schedule foundation only; new source ownership handed to backup_development",
+  "pure_clock_cases_passed": 18,
+  "real_nonowner_pg_asgi_cases_passed": 6,
+  "immutable_runtime_final_passed": 24,
+  "frozen_result_xml_sha256": "a28190f6293410ec526b1e3fa4e2eb872bec4cc660cf1545f39434810a781f6c",
+  "schema_changed": false,
+  "provider_calls": 0,
+  "object_network_calls": 0,
+  "kafka_calls": 0,
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed_5_production_sources_with_check_untyped_defs",
+    "bandit": "passed"
+  },
+  "independent_review": "pending",
+  "remaining": "dispatch/events/persistent schedule ticks/run records/semantic supplement handler/main+UI; Owner continues in new candidate"
+}

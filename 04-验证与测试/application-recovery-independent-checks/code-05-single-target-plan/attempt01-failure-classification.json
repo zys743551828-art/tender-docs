@@ -1,0 +1,19 @@
+{
+  "status": "attempt01_orchestration_marker_failure_preserved_guard_correct",
+  "attempt_result_sha256": "7207c783f1b8e2d10cf418b57f70c85a1235ee7228bac28d70816229f76f5f2f",
+  "prepared_sha256": "6c42fdc8ff830d3fb3a3c5b616d484698c8b579c84ae2723caafaab6b19c7ca4",
+  "executed_driver_archived_sha256": "bd07a298be3992565c264911e3b70033a5b58e3f64e26276ea324fab7785404c",
+  "original_403_inputs_unchanged_after_failure": true,
+  "prepared_25_inputs_unchanged_after_failure": true,
+  "actual_dump_toc_sha256": "ec876f7fccdb0f713d6ae60bf67a32f468b7e88e0be9f28bdd0dffcfd0c76604",
+  "table_data_entries": 164,
+  "failure_stage": "archive.restore: accounts created; first restricted reader identity verification failed before object_port",
+  "remote_object_requests": 0,
+  "remote_object_evidence": "frozen restore flow reaches object_port only after reader_guard; RecoveryError occurs at recovery marker check",
+  "own_container_removed": true,
+  "own_volume_retained": "twb-ar-data-8424a94ed45745299d4abbcc58aded3c",
+  "source_untouched": true,
+  "provider_calls": 0,
+  "consumers": 0,
+  "next_attempt_requires_new_prepared_and_resource_gate": true
+}

@@ -1,0 +1,40 @@
+{
+  "state": "failed",
+  "coverage": "failed",
+  "conversion_attempted": true,
+  "error_code": "AUTHORING_GENERATED_CONVERSION_TIMEOUT",
+  "retryable": true,
+  "gaps": [
+    "AUTHORING_GENERATED_CONVERSION_TIMEOUT"
+  ],
+  "chain": {
+    "source_docx_digest": "fd44d9d4f41212a0ead51492c9b0be769122df2b77bfa7468a0288f7afdde9ed",
+    "profile_digest": "813f347311fbc472d44a54c933c904e4edb887f252ebc6e0a6afe8efa4a53d78"
+  },
+  "isolation": {
+    "local_image_pinned": true,
+    "network_none": true,
+    "ipc_none": true,
+    "pid_private": true,
+    "uts_private": true,
+    "nonroot": true,
+    "read_only": true,
+    "not_privileged": true,
+    "capabilities_dropped": true,
+    "no_new_privileges": true,
+    "memory_limited": true,
+    "cpu_limited": true,
+    "pids_limited": true,
+    "no_daemon_document_logs": true,
+    "clean_environment": true,
+    "all_bind_mounts_readonly": true,
+    "exact_allowlisted_bind_mounts": true,
+    "no_anonymous_persistent_volumes": true,
+    "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true,
+    "no_docker_socket_mount": true,
+    "bounded_tmpfs_output": true,
+    "own_job_cleanup_confirmed": true
+  },
+  "scope": "Exact static01 PAGE lane, real sandbox on public synthetic input; no DB/model/Kafka/OSS",
+  "fault_injection": "read deadline 0.001sec test-only, not capacity"
+}

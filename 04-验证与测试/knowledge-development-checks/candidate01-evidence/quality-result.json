@@ -1,0 +1,51 @@
+[
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "check",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py",
+      "tests/test_knowledge.py",
+      "tests/test_knowledge_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/ruff",
+      "format",
+      "--check",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py",
+      "tests/test_knowledge.py",
+      "tests/test_knowledge_integration.py"
+    ],
+    "exit_code": 0,
+    "stdout": "9 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/mypy",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "Success: no issues found in 7 source files\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/bandit",
+      "-q",
+      "-r",
+      "packages/knowledge",
+      "apps/api/knowledge_routes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

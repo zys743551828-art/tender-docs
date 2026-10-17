@@ -1,0 +1,69 @@
+{
+  "status": "passed_development_mechanisms",
+  "fresh_schema_suite": {
+    "tests": "38",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "1",
+    "time": "47.195"
+  },
+  "old_schema_fail_closed_suite": {
+    "tests": "14",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "0.689"
+  },
+  "focused_regressions": {
+    "tests": "3",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "6.883"
+  },
+  "actual_nonowner_postgresql": true,
+  "database": "tender_checks_research03",
+  "actual_sessions_and_csrf": true,
+  "explicit_synthetic_documents": true,
+  "object_store": "explicit_in_memory_for_tests",
+  "model_transport": "native_DeepSeekClient_with_explicit_httpx.MockTransport",
+  "external_paid_model_requests": 0,
+  "real_official_labels": 0,
+  "real_user_participants": 0,
+  "kafka_consumer_relay_coordinator_started": false,
+  "formal_model_release_eligible": false,
+  "quality": {
+    "ruff": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed",
+    "bandit": "passed"
+  },
+  "counterexamples": [
+    "price_config_descriptor_token_mismatch_rejected",
+    "withdrawn_body_root_zero_new_requests",
+    "withdraw_during_result_stage_refuses_publish_preserves_three_known_mock_calls",
+    "api_and_research_no_idle_transaction_during_manifest_get_put_and_model",
+    "worker_mapping_select_insert_denied",
+    "wrong_chapter_rejected",
+    "repeatable_read_rejected",
+    "old_parse_child_cannot_qualify_new_parse_evidence",
+    "missing_new_schema_explicit_nonretryable_503",
+    "new_same_project_admission_pauses_and_zero_new_calls",
+    "admission_during_result_stage_blocks_publish_preserves_three_known_usage_records",
+    "new_admission_bridges_two_prior_groups_immutable_group_guard_rejects_even_if_run_reopened",
+    "no_submission_identity_freeze_cannot_be_washed_by_current_binding_or_at_time",
+    "identity_change_preserves_old_submission_and_zero_new_calls_and_current_history_not_green",
+    "reserve_waits_for_other_preview_bid_identity_transaction_then_rejects_zero_calls",
+    "all_three_authority_tables_select_and_insert_denied_to_research_worker"
+  ],
+  "unverified": [
+    "independent_review_of_candidate_03",
+    "actual_native_object_store_IO_for_this_candidate",
+    "actual_Kafka_roundtrip",
+    "real_model_three_judgments",
+    "real_material_quality",
+    "statistical_training_and_independent_accuracy",
+    "production_deployment_and_capacity"
+  ],
+  "conservative_limitation": "Only submission.evidence.identity grants explicit frozen identity; review-root-only identity and audit_at_time do not grant admission in this implementation."
+}

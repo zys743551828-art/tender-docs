@@ -1,0 +1,1054 @@
+{
+  "sources": [
+    {
+      "path": "apps/api/assistant_routes.py",
+      "sha256": "31023b7a4f9dd1f42968b3947ef4337765be8fe6b141912f5a2165aa3d386b47",
+      "archive": "frozen-tree/apps/api/assistant_routes.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/README.md",
+      "sha256": "f4c4e0ba9d68c740b927a96095bbd233df6f10208141198e1cf014c0b7edb91c",
+      "archive": "frozen-tree/packages/assistant/README.md",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/__init__.py",
+      "sha256": "829cf0726d0d30b97cb61fb2949b210d70572baad678aebd77683bb2e1e3ee5e",
+      "archive": "frozen-tree/packages/assistant/__init__.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/actions.py",
+      "sha256": "531581fb9f2c697dab0b89eba21eb06a3ad280a43dfa26bd2ca38307d9a0a248",
+      "archive": "frozen-tree/packages/assistant/actions.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/actual.py",
+      "sha256": "e2d8446ea560ff1b663ece367a9d441915fb25eabd938c0d2f34fb27ba23a6dc",
+      "archive": "frozen-tree/packages/assistant/actual.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/authority.py",
+      "sha256": "049bb7c182abed95154d1bac88d9c4ea6a1b2c42f032e3f26299ff48a520345e",
+      "archive": "frozen-tree/packages/assistant/authority.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/context.py",
+      "sha256": "8616efab3bcab9f99a2d3e284a8d64dd5f2512d66c93ce7220cfd8c9347f5559",
+      "archive": "frozen-tree/packages/assistant/context.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/contracts.py",
+      "sha256": "91eb70db9b0b65ceb812a2c15931fbcc76953a1275a50fb4bfa012a630cf1ad2",
+      "archive": "frozen-tree/packages/assistant/contracts.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/conversations.py",
+      "sha256": "b60b95f3287bc2ff626a1101bd6fa6b1a06c1e01912ba2a6775355382c86ddf9",
+      "archive": "frozen-tree/packages/assistant/conversations.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/coordinator.py",
+      "sha256": "e1a1479128bf2e13d572eae9ca7aca61ec987bd4727358b3192eeabd8f0d54fb",
+      "archive": "frozen-tree/packages/assistant/coordinator.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/generation.py",
+      "sha256": "29f991719d299106d28568c2502b8161d40f9ea6ef60dfa1cc352e5cc0fae399",
+      "archive": "frozen-tree/packages/assistant/generation.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/global_runtime.py",
+      "sha256": "b46c21fbbaea777f5f4cbad471f650d3c0352061d82120d09fa9afb17f489905",
+      "archive": "frozen-tree/packages/assistant/global_runtime.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/jobs.py",
+      "sha256": "572c4abaf0a435d95c38491369767caba6fabf5375ccc2a2252e2455d18ec238",
+      "archive": "frozen-tree/packages/assistant/jobs.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/protocol.py",
+      "sha256": "6c0eccee978207b9698138a5b9b7605d367c4dd2d584f57fe6741d2f3dec8047",
+      "archive": "frozen-tree/packages/assistant/protocol.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/sql/assistant.sql",
+      "sha256": "30104431617fea8798bd21955d9dc8f349b70b1f6d25006a27c7705aecb3b8f9",
+      "archive": "frozen-tree/packages/assistant/sql/assistant.sql",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/tasks.py",
+      "sha256": "b3812d9c4342bb07a169c29da7591c6b918beca08b151b87d1899859d7683ac8",
+      "archive": "frozen-tree/packages/assistant/tasks.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/assistant/transport.py",
+      "sha256": "975327b735146397e59dc81ead12dc76c53c9994c47550955c03e2e51b60c486",
+      "archive": "frozen-tree/packages/assistant/transport.py",
+      "category": "source"
+    },
+    {
+      "path": "packages/authoring/patches.py",
+      "sha256": "268d1ef5f967ff7238a72a9bf1a000cbe958392d010adb57087abfe2a0b04af5",
+      "archive": "frozen-tree/packages/authoring/patches.py",
+      "category": "source"
+    },
+    {
+      "path": "tests/test_assistant.py",
+      "sha256": "0d99ffc6d222ca771c1c3a1bc323cd7528083bb668ade3d908aa41838c337424",
+      "archive": "frozen-tree/tests/test_assistant.py",
+      "category": "source"
+    },
+    {
+      "path": "tests/test_assistant_integration.py",
+      "sha256": "2d2f150e840d514c85d1f952f147c3532a6dcd2d901387ba331da55fd3082248",
+      "archive": "frozen-tree/tests/test_assistant_integration.py",
+      "category": "source"
+    },
+    {
+      "path": "tests/test_work_conversations.py",
+      "sha256": "15581c9bea407784e119f12a9fb75c331c68d6b19a3a6e2b6339553927d58d13",
+      "archive": "frozen-tree/tests/test_work_conversations.py",
+      "category": "source"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d",
+      "archive": "frozen-tree/apps/api/auth.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/authoring.py",
+      "sha256": "869e21439ccea3e024eccea35d5c4057181c81e59f5f1a2abdfef226b4f7d314",
+      "archive": "frozen-tree/apps/api/authoring.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/comparison_contracts.py",
+      "sha256": "d70d7a1ddb1ec20472396980f836397062d1d5f39a8a2651ff3aac7ae0859678",
+      "archive": "frozen-tree/apps/api/comparison_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/comparison_routes.py",
+      "sha256": "f0d946a756615a2f45f4db7a2ccec2b0f7ea6fdc1c774313eb6529c880cc9c2a",
+      "archive": "frozen-tree/apps/api/comparison_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/event_routes.py",
+      "sha256": "e734f6f05ec2a5628a59e6bc53d9aace561d2b6399d567626ac9fcff37b25780",
+      "archive": "frozen-tree/apps/api/event_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/export_openapi.py",
+      "sha256": "57257e4bee443097c2b1361ef73e84c22c386afa0f4f0df4ab91f6f1de3ebd66",
+      "archive": "frozen-tree/apps/api/export_openapi.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/history_routes.py",
+      "sha256": "12eed771933f96000d8ec5542b1da0dce3167f93c4d2ab12419fdf3d0d9b6322",
+      "archive": "frozen-tree/apps/api/history_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/human_contracts.py",
+      "sha256": "9d6198d47b86aa7425676eadc2aaf8cb6876d28c5e1609517517c3c227dc7283",
+      "archive": "frozen-tree/apps/api/human_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/human_routes.py",
+      "sha256": "fa93a58c3d03eb540e162b588c053b81d21dd87d90b3fd8bd1b80187d20d30b5",
+      "archive": "frozen-tree/apps/api/human_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/identity_routes.py",
+      "sha256": "eb64c21f6084b59708d17aaebcfc6f0f9acfad6de6a5c6bbb283451337e067da",
+      "archive": "frozen-tree/apps/api/identity_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/knowledge_routes.py",
+      "sha256": "00abbeb1a72c165da099ea139c0599af4273b82ad0173918c877ab22d54f480c",
+      "archive": "frozen-tree/apps/api/knowledge_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/main.py",
+      "sha256": "b6d736ab503931c6d7454a98bfa8968f0fd9398e3e6669dcfbb830d160b1eb01",
+      "archive": "frozen-tree/apps/api/main.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/metrics_routes.py",
+      "sha256": "d5dfc777f7d7bcb3d8c6141054c5f8ea1d4746693d50ab61e521d12a69d4be9e",
+      "archive": "frozen-tree/apps/api/metrics_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/multipart_routes.py",
+      "sha256": "38a245935634f70c4285389f9531685e3155d608b0e233364470f89f55854d43",
+      "archive": "frozen-tree/apps/api/multipart_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/object_transfer.py",
+      "sha256": "f32d0cffbd4f0bdfdb8ee74d5b60aa84e8b78d5a0c6c34fbb086f899a3dadfca",
+      "archive": "frozen-tree/apps/api/object_transfer.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/pricing_routes.py",
+      "sha256": "354dbd12a3af873f4fae1371199978efbb579af9b86a95ec5664d027ee3701f4",
+      "archive": "frozen-tree/apps/api/pricing_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/rag_routes.py",
+      "sha256": "d5d41f9abab829f498aba0ade5784b83b9602021336d2349f7f30b03b19f5d68",
+      "archive": "frozen-tree/apps/api/rag_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/report_contracts.py",
+      "sha256": "db87c5a97dd424eb9af746f7c2a1bf437ff16b993441ba96454e0c5bdcb9b4c1",
+      "archive": "frozen-tree/apps/api/report_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/report_routes.py",
+      "sha256": "78f7176d598949f24821f2786ed8c4a2f3554b43b6c1a2de291c729e30dfff99",
+      "archive": "frozen-tree/apps/api/report_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/research_routes.py",
+      "sha256": "008c5909a8fba2e97190d3a1bb23690e8ed7fc10b329251f613ea4190fe79eb0",
+      "archive": "frozen-tree/apps/api/research_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/review_contracts.py",
+      "sha256": "da0c7ad8282d35e3b17c4bb386f9f9c5cd3411768c4ae443cf6f3ca92d83f6db",
+      "archive": "frozen-tree/apps/api/review_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/review_routes.py",
+      "sha256": "86845d74fb5fd5eba3dfd34f798ed454cde9680fcd7e62fbab6d5404562841ff",
+      "archive": "frozen-tree/apps/api/review_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/review_views.py",
+      "sha256": "ca242ea615303ea209f47173611e3b1ba77c02cb2a5b93b94763c7a73eda1b39",
+      "archive": "frozen-tree/apps/api/review_views.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/settings_routes.py",
+      "sha256": "6f88c86dafb041aebb954051609473613bc6e54b48b15f885b331a9939707244",
+      "archive": "frozen-tree/apps/api/settings_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/source_effectivity_contracts.py",
+      "sha256": "6d36caa8d6e3b632b5e7e63b12da231431d8676407a9fc10a2fd6bb6807fb51d",
+      "archive": "frozen-tree/apps/api/source_effectivity_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/source_effectivity_routes.py",
+      "sha256": "f1eb03ea63edc244143b314923cd5b126c1e3e1d3d3c5b2e49ed0d86176f5554",
+      "archive": "frozen-tree/apps/api/source_effectivity_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/submission_contracts.py",
+      "sha256": "c79aef5382a5babb3a996d28bb1626f8327232b0e905bfef163a24fef77a290d",
+      "archive": "frozen-tree/apps/api/submission_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/submission_routes.py",
+      "sha256": "da394422a05b630fbe6cbb460e2533f7462b202aac6f55f95f96d7b2405db11f",
+      "archive": "frozen-tree/apps/api/submission_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/upload_contracts.py",
+      "sha256": "9670fcf3c099fcccb80ed84795a38cdcafec418392d12cb893dfa35c8b641799",
+      "archive": "frozen-tree/apps/api/upload_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/upload_layout_routes.py",
+      "sha256": "f2d7f6c3183ab135def96267eec345ea76eda47a995d657186f0a177dc2c0ff8",
+      "archive": "frozen-tree/apps/api/upload_layout_routes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/api/views.py",
+      "sha256": "206794028670b986865c2aede747ed8d877271f4b3532395f3d48b7a899b0cda",
+      "archive": "frozen-tree/apps/api/views.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive": "frozen-tree/apps/worker/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/comparison_handlers.py",
+      "sha256": "7b8739725490d378f70049c89d3d07b360647b8ee9ddf5137be081b45be4af07",
+      "archive": "frozen-tree/apps/worker/comparison_handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/content_handlers.py",
+      "sha256": "d9f51c9cc968e8ed80ae0cf91757384a07f28ca9fbdf4d2954a1c571e122b0a7",
+      "archive": "frozen-tree/apps/worker/content_handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/engine.py",
+      "sha256": "f8de4159850ff1ebe7c045f79ca2ea3796761964a4c58191720994867b4cc02b",
+      "archive": "frozen-tree/apps/worker/engine.py",
+      "category": "dependency",
+      "observed_input_path": "/workspace/tender-workbench/docs/a1-backend-development-checks/frozen-inputs-05/apps/worker/engine.py",
+      "binding_reason": "Backend05 fixed bytes; backend07 currently WIP, explicit test port adapter only"
+    },
+    {
+      "path": "apps/worker/export_handlers.py",
+      "sha256": "bebf701d5fbcb800c04048016df3a8ac20475769eed0a0f7faaf0161f21ad609",
+      "archive": "frozen-tree/apps/worker/export_handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/handlers.py",
+      "sha256": "1f2cf6a16a99aa9494ef60d0df9817bd2abbb062c594ac2b24552978ead27b47",
+      "archive": "frozen-tree/apps/worker/handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/report_handlers.py",
+      "sha256": "0d109e6c35f9ff554a1643876fea70d409ac3ec79d720e709c1a15e8a523c0d4",
+      "archive": "frozen-tree/apps/worker/report_handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "apps/worker/review_handlers.py",
+      "sha256": "0a7bd3076d95b413c92326535de39f73e46de5844e73bc0b921349c95c1fac78",
+      "archive": "frozen-tree/apps/worker/review_handlers.py",
+      "category": "dependency"
+    },
+    {
+      "path": "deploy/initialize_database.py",
+      "sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+      "archive": "frozen-tree/deploy/initialize_database.py",
+      "category": "dependency"
+    },
+    {
+      "path": "deploy/run.py",
+      "sha256": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107",
+      "archive": "frozen-tree/deploy/run.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/build.py",
+      "sha256": "e8be8061c71ded0fc222d611007f12d69882eea926a1c98fad7b5c17de94a96c",
+      "archive": "frozen-tree/packages/authoring/build.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/build_repository.py",
+      "sha256": "a9bdda02b788fe9d209c9adef5063f75d09e3c9a9109145aa79ad0142738a91b",
+      "archive": "frozen-tree/packages/authoring/build_repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/content.py",
+      "sha256": "a9b8ee88d103123aada39ebe5af6253e06ccde70d01334ccdb1c21fb86e02377",
+      "archive": "frozen-tree/packages/authoring/content.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/contracts.py",
+      "sha256": "5fd46773776351115ab85efea43735118d5b3b1e69c1f968300e2b4d445779ab",
+      "archive": "frozen-tree/packages/authoring/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/generation.py",
+      "sha256": "7a98b95be0d3ec2343846d5570c1d77f88e9d9de2b488dec147ed010a9ce4463",
+      "archive": "frozen-tree/packages/authoring/generation.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/authoring/repository.py",
+      "sha256": "5554bb747093df46c28a753f07c1308913bce25bb140afd20ecec15428e14885",
+      "archive": "frozen-tree/packages/authoring/repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/design-source.json",
+      "sha256": "de56347ab7a90bb9825740e2d6b743aa496f96aadf0df7f198a6e7eeea51df57",
+      "archive": "frozen-tree/packages/contracts/design-source.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/implemented.openapi.json",
+      "sha256": "33e3e86a956778919fb7929d41e1d4e61a91921452a1a1ac857bfa0f80037472",
+      "archive": "frozen-tree/packages/contracts/implemented.openapi.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/openapi/http-examples.json",
+      "sha256": "665404f8f5887bc0ff177a9aeda2880a1d9511644a29c3551bcb90ce8d3f92ef",
+      "archive": "frozen-tree/packages/contracts/openapi/http-examples.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/openapi/openapi.json",
+      "sha256": "bd66446bf73b3ba70ae68d103f8f315c0f9e3c178bc52360b35ed18caab783af",
+      "archive": "frozen-tree/packages/contracts/openapi/openapi.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/policies/execution-policy.json",
+      "sha256": "dbc68d4f6eb622e052f43b3b08573055ded80ace032337c1f146c0061a966b67",
+      "archive": "frozen-tree/packages/contracts/policies/execution-policy.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/policies/retrieval-policy.json",
+      "sha256": "acbf24b4410f32b278577f47d2b28ea69c5b9e294058ea83c3d990ce5eb72a74",
+      "archive": "frozen-tree/packages/contracts/policies/retrieval-policy.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/schemas/protocol.schema.json",
+      "sha256": "71554dfea13fad6e2bad110c8b6b427e019963be19d34a2d2fcf9f12270a2535",
+      "archive": "frozen-tree/packages/contracts/schemas/protocol.schema.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/schemas/review-identity-vectors.json",
+      "sha256": "521ddc05c523380fe7e0ad10c8b064615421a248041c542d1a35a8e49386627a",
+      "archive": "frozen-tree/packages/contracts/schemas/review-identity-vectors.json",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+      "archive": "frozen-tree/packages/contracts/sql/core.sql",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+      "archive": "frozen-tree/packages/contracts/sql/domain.sql",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+      "archive": "frozen-tree/packages/contracts/sql/retrieval.sql",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+      "archive": "frozen-tree/packages/contracts/sql/roles.sql",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+      "archive": "frozen-tree/packages/contracts/sql/worker-functions.sql",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive": "frozen-tree/packages/domain/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/build_followups.py",
+      "sha256": "b37c94bba92b927e19bc8a880004b7e8142fcd67dcf3fb71dee57aa70bbe7616",
+      "archive": "frozen-tree/packages/domain/build_followups.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/comparisons.py",
+      "sha256": "8b56aee2f04cb30274f933646764afb23d5d488bfa18c7746d90b65ccb429bea",
+      "archive": "frozen-tree/packages/domain/comparisons.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/content_check_status.py",
+      "sha256": "3cf55d761abb3be207d0cdbbc98e4595b76c38410f17d04824c94876ebe2c503",
+      "archive": "frozen-tree/packages/domain/content_check_status.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/content_checks.py",
+      "sha256": "1fc5d69a39e2b44b813bd1211f91f3847bc73e346e6f88a8faa41557dc96a5ad",
+      "archive": "frozen-tree/packages/domain/content_checks.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/content_decision_basis.py",
+      "sha256": "1a51b1ebcd369201dd6b0d3feda2e666157ccbfb329081a1d3c2f03c703a2e7a",
+      "archive": "frozen-tree/packages/domain/content_decision_basis.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/core_recheck_scope.py",
+      "sha256": "422bd66cb2367b5a31d2de63226fa5813c1c500ee93d362f6edf64c8fa4786ed",
+      "archive": "frozen-tree/packages/domain/core_recheck_scope.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/engineering.py",
+      "sha256": "d15366315a21709879e1c531b3072e0546d60044fefbcce70fdccb934063fe0f",
+      "archive": "frozen-tree/packages/domain/engineering.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/fact_sets.py",
+      "sha256": "3c57927422bfa63cb9112bb84f2d109b7ef0824b8b21435f01da50174cd95e38",
+      "archive": "frozen-tree/packages/domain/fact_sets.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/finding_lifecycle.py",
+      "sha256": "f5ad72bb307538227c1aafb733b7c63486a6d837dc7544e548385fb2526e7ef8",
+      "archive": "frozen-tree/packages/domain/finding_lifecycle.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/human_decisions.py",
+      "sha256": "4634ece2d913d6dfe0a793df2b954829d57d957766fc8bea7911920679eda841",
+      "archive": "frozen-tree/packages/domain/human_decisions.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/input_changes.py",
+      "sha256": "b5947e0cbbf03cbcfc2b4f98d4fb87be10ef718e27b3ffb5ac0ed477df00ff1a",
+      "archive": "frozen-tree/packages/domain/input_changes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/model_calls.py",
+      "sha256": "77a5e89799fdf46e130424634e8b61754efb7eff32c899cf3da1aed74a847f01",
+      "archive": "frozen-tree/packages/domain/model_calls.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/model_recovery.py",
+      "sha256": "6872d377d1fb5b9d36abd9f1bf5a4c7f0ba519e23ca6f19facb960107f6d59ef",
+      "archive": "frozen-tree/packages/domain/model_recovery.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/parsing_profile.py",
+      "sha256": "f61a997b4af11a635660f431086f6d0c73fac8f96262674698ba7a6a9bd8e1db",
+      "archive": "frozen-tree/packages/domain/parsing_profile.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237",
+      "archive": "frozen-tree/packages/domain/providers/deepseek.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/providers/oss.py",
+      "sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "archive": "frozen-tree/packages/domain/providers/oss.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/reports.py",
+      "sha256": "e9f747006c670a55fdcab83b44329fbd646d27bfd84a4b12522382712f8147df",
+      "archive": "frozen-tree/packages/domain/reports.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/review_comparison.py",
+      "sha256": "854786301ed939f0ba3c43a406289c2c4d46eb668d4429fe0c3f3fa5632637a8",
+      "archive": "frozen-tree/packages/domain/review_comparison.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/review_data.py",
+      "sha256": "0c3878d17e0a9097166fd7f959119e232dce2130df26fd994e0ca7489213a822",
+      "archive": "frozen-tree/packages/domain/review_data.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/review_identity.py",
+      "sha256": "d6f03e98fd5fee7a7699dfe7c9092d88b871b4b980cff0fb00e025aad90d1358",
+      "archive": "frozen-tree/packages/domain/review_identity.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/reviews.py",
+      "sha256": "a69e65f4b5d13a4b61460fba2848b002e6515f66261780c3e6ea76bbdab4b70b",
+      "archive": "frozen-tree/packages/domain/reviews.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/rule_corrections.py",
+      "sha256": "635d76d36d5bb8163c7d37dcfcb79c883072daf1e75e6c7fc537e56a50b20e8f",
+      "archive": "frozen-tree/packages/domain/rule_corrections.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/rule_sets.py",
+      "sha256": "fb4800911262cca213cc699a79b577c94bbfeeaec2bcbea2c9aec7c175127d67",
+      "archive": "frozen-tree/packages/domain/rule_sets.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/runtime.py",
+      "sha256": "c333121a288ce2c4ea97d9a1904a17e1759ea7070898f5dce36244c1837afb1d",
+      "archive": "frozen-tree/packages/domain/runtime.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/source_effectivity.py",
+      "sha256": "acdab0c772bea603152f7ec35036d3ace294f8e8cc000807497a3adfab282aa7",
+      "archive": "frozen-tree/packages/domain/source_effectivity.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "archive": "frozen-tree/packages/domain/storage.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/submission_gate.py",
+      "sha256": "33ac41614487a34f7526a9636dc48a224cb268c5a5e7bb8492ef45d1bf570b62",
+      "archive": "frozen-tree/packages/domain/submission_gate.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/submissions.py",
+      "sha256": "909905a73bed084ea56d6f8b349132d395d6b061f6faafd26e5036379262df9d",
+      "archive": "frozen-tree/packages/domain/submissions.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/domain/work_access.py",
+      "sha256": "db728daea0b539da6f84e5985ad3be73810a4fa32eec101f65b4dd77435231d7",
+      "archive": "frozen-tree/packages/domain/work_access.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/identity/__init__.py",
+      "sha256": "19b0fee7ac088579ab13fd1ac3883281c7e5da207142120c093ab4974dea6d8e",
+      "archive": "frozen-tree/packages/identity/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/identity/contracts.py",
+      "sha256": "87002f8b2637233295a70a2ecf86dbb8b30dc34439c0889e586dea4bc7e94cbe",
+      "archive": "frozen-tree/packages/identity/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/identity/pagination.py",
+      "sha256": "ecbbe5c08a8bcd4d9c4adb16cfc7ade5f8f226d0dca13f7b47f075338d8eed89",
+      "archive": "frozen-tree/packages/identity/pagination.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22",
+      "archive": "frozen-tree/packages/identity/repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/__init__.py",
+      "sha256": "5c892ebfbc3ce50a587795396cecaf7feddd37d164dd136682ed4e526c439188",
+      "archive": "frozen-tree/packages/knowledge/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/bridge.py",
+      "sha256": "084ba465b63c5cd124b0b135edcf60095e44099695fc055424fc16f392093986",
+      "archive": "frozen-tree/packages/knowledge/bridge.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/content.py",
+      "sha256": "2f027f32256c606af628878c8a07a27c464eb7d85fd299bffafc8b792dc13218",
+      "archive": "frozen-tree/packages/knowledge/content.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/contracts.py",
+      "sha256": "fe5959b68d1e6e4c44f1d52133f9f2f333007e501b870e28075b3217e8833d5b",
+      "archive": "frozen-tree/packages/knowledge/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_api.py",
+      "sha256": "8f203c5e4732f57eb81a91e6663de54be7cd095187a35c4b668fc5652e578eaf",
+      "archive": "frozen-tree/packages/knowledge/rag_api.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_contracts.py",
+      "sha256": "d8d84e838ece2b18f59bcf87b5a31d3d5b9918a6ac820c8c470d81e73ed3cc1f",
+      "archive": "frozen-tree/packages/knowledge/rag_contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_index.py",
+      "sha256": "c86f605d4b12d80bc5ad72adebafa6b1faf7f6f6aafc1e19906f0ad5aaca212b",
+      "archive": "frozen-tree/packages/knowledge/rag_index.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_repository.py",
+      "sha256": "2abb83dbe679ccbd2f5fe150ce840b2ef9cd361e2b9055b40be8ea1e086781f1",
+      "archive": "frozen-tree/packages/knowledge/rag_repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_search.py",
+      "sha256": "7b150f102907588d892c4ab41acef13e6a63ec28f9bb5ee00281352a7acc3ee5",
+      "archive": "frozen-tree/packages/knowledge/rag_search.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_tasks.py",
+      "sha256": "e8a4f3bfc2a0b782ef3efec8ce54843391dbf8e80b41621805d65120ddae9682",
+      "archive": "frozen-tree/packages/knowledge/rag_tasks.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/rag_types.py",
+      "sha256": "317741f0eb1a38c9388cc4470c31986dd9ac44ca02eabc3d209f43e4c047df29",
+      "archive": "frozen-tree/packages/knowledge/rag_types.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/repository.py",
+      "sha256": "233ea062f8e3bc9070944db0224fd58464e24c400da1ac631c853ed2a538091c",
+      "archive": "frozen-tree/packages/knowledge/repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/knowledge/sources.py",
+      "sha256": "4d630a57f1c1a8e1ce2a8ef9240ba37ae9dfed2ea78fd667914cdecb30d09127",
+      "archive": "frozen-tree/packages/knowledge/sources.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/lifecycle/service.py",
+      "sha256": "e8a214125eb207a51ec323d1a638960babab54b4eded0e6d81325c58cc2da06d",
+      "archive": "frozen-tree/packages/lifecycle/service.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/__init__.py",
+      "sha256": "8928f40c9a970d97210328a29cd54e333ee2ded36db8caa965f3e7494e44d6aa",
+      "archive": "frozen-tree/packages/metrics/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/contracts.py",
+      "sha256": "f6549612c78ad7ef6a35e7aed2af758e1337d8f9ef0e0a7c39a94e7dc57e3563",
+      "archive": "frozen-tree/packages/metrics/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/core.py",
+      "sha256": "9ddf4e93ba72c7b3f4e38a89eb63efc06ea3562282776770681a745c9d07b609",
+      "archive": "frozen-tree/packages/metrics/core.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/predictions.py",
+      "sha256": "b64c75572fecc536bc851251fed2419132ed175ee4a71f860af49018de733b02",
+      "archive": "frozen-tree/packages/metrics/predictions.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/records.py",
+      "sha256": "0ef3b58db374ce898df4e0eb27dec7d83bc6e9541c00f354b56b9b2dc0ac63ca",
+      "archive": "frozen-tree/packages/metrics/records.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/results.py",
+      "sha256": "6e7e2f5ccddc1e6bdde503d78936c63bc3b07a52019e266f312b2959db5de126",
+      "archive": "frozen-tree/packages/metrics/results.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/snapshots.py",
+      "sha256": "a17a6d186090571991528f3bc8264c6a3a485a69b179630a14219df359cd0ca2",
+      "archive": "frozen-tree/packages/metrics/snapshots.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/sources.py",
+      "sha256": "3aa07ae2bf9edac94032d7e97edf81064baf47123883075ce388c31ae9a9d962",
+      "archive": "frozen-tree/packages/metrics/sources.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/metrics/views.py",
+      "sha256": "cb4466734f401213a59d7e2537578a417f87cd0fe6bcb51b1f3058217b8f0d79",
+      "archive": "frozen-tree/packages/metrics/views.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/parsing/http_port.py",
+      "sha256": "05449fb046ceb1d706060e1038d22dc84dbbde5a7577a8c4aa07a6bc8e59c59c",
+      "archive": "frozen-tree/packages/parsing/http_port.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/__init__.py",
+      "sha256": "79a9c217fd20ac96f5dd2b7745b8cec5ffa116361f86681867e50cf4c9ed9f8d",
+      "archive": "frozen-tree/packages/pricing/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/calculator.py",
+      "sha256": "16499d9ff5dc93a72ce5e296a15464134ae9ce47bde50b2cc13b8eb0690e2667",
+      "archive": "frozen-tree/packages/pricing/calculator.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/contracts.py",
+      "sha256": "6eaad06a69de35bf0a485d62598e1b161b275e9d4bb4870270997a047579b806",
+      "archive": "frozen-tree/packages/pricing/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/models.py",
+      "sha256": "a0d26b94c947681d360717774578a71e5700c0242a3e7e2a3db22d99b8251cd7",
+      "archive": "frozen-tree/packages/pricing/models.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/repository.py",
+      "sha256": "8c26202da6a0e234a3fcff64663143886f2710bdb6e9a2abfd27682c4d6d76a5",
+      "archive": "frozen-tree/packages/pricing/repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/sources.py",
+      "sha256": "cfc3edd58867c9c2e9ab8826c10d0a65d4ecda1cddffff63325357593de1ce4c",
+      "archive": "frozen-tree/packages/pricing/sources.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/pricing/terms.py",
+      "sha256": "6621bbbe786f1c508a3db52a2f1a8fb4a695a41e4184603e83189d2a19547259",
+      "archive": "frozen-tree/packages/pricing/terms.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/__init__.py",
+      "sha256": "ad2b98bd5419cee3caa8201e4426bef791af2eb380b9d391cef507ef43f183e7",
+      "archive": "frozen-tree/packages/rag/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/core.py",
+      "sha256": "6b5f3c196cf6895f319f372d5ff461628a064de896134dd1ac359cfcc11d7eb3",
+      "archive": "frozen-tree/packages/rag/core.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/http_port.py",
+      "sha256": "149cf1bef79c19d5857acd7b028f84d273ee2eb7e4d34b1a295babe2d8a3fad6",
+      "archive": "frozen-tree/packages/rag/http_port.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad",
+      "archive": "frozen-tree/packages/rag/indexing.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/repository.py",
+      "sha256": "032108edfddeb02cadc0109d3c0f51f4eef08c137e18a0b3f9cd769b588051dd",
+      "archive": "frozen-tree/packages/rag/repository.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/search.py",
+      "sha256": "26e6dd37d6ba2d0049bd910d4f94576ae528d354cc85f8a2734bb9496908ea84",
+      "archive": "frozen-tree/packages/rag/search.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/rag/tasks.py",
+      "sha256": "154b52e2aa1e6f0b4d5a8cfa333de88767e3a6ef36205938ac7d8e4a766fda7f",
+      "archive": "frozen-tree/packages/rag/tasks.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/__init__.py",
+      "sha256": "f2b85c0875ed1e3c641d8f6a84caed8cf24aa36a97f5ad57b7d5a41cf5879cb1",
+      "archive": "frozen-tree/packages/research/__init__.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264",
+      "archive": "frozen-tree/packages/research/artifacts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/authority.py",
+      "sha256": "855404c135231ea783031a6bf244cde1e90ab45a5bb5f8d67223121e7ca6e9f1",
+      "archive": "frozen-tree/packages/research/authority.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/batches.py",
+      "sha256": "cf0299442661730043f17d5c45b29027ed16547ca39ee813e465d460e5bc9565",
+      "archive": "frozen-tree/packages/research/batches.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a",
+      "archive": "frozen-tree/packages/research/chapters.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/contracts.py",
+      "sha256": "3b35d403d2124bc62a7573468677ccc1259d825403039860d70fa9646c423841",
+      "archive": "frozen-tree/packages/research/contracts.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa",
+      "archive": "frozen-tree/packages/research/core.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/identities.py",
+      "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e",
+      "archive": "frozen-tree/packages/research/identities.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/importing.py",
+      "sha256": "2833a43407134b8b64a86fd928e3fa58d3464dfdc5e4c780cb63aba73e5b4a93",
+      "archive": "frozen-tree/packages/research/importing.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/outcomes.py",
+      "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1",
+      "archive": "frozen-tree/packages/research/outcomes.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc",
+      "archive": "frozen-tree/packages/research/profile.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/uploads/journal.py",
+      "sha256": "c912761b703d185b9d3d1a9752d554f1b78e1a2dc2ca2ca64de8a03de065ae41",
+      "archive": "frozen-tree/packages/uploads/journal.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/uploads/native.py",
+      "sha256": "f836967db006a249abf79e87e4e53ec4a63ddc4eb6d5ddf4143f9f96df0fb5e5",
+      "archive": "frozen-tree/packages/uploads/native.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/uploads/protocol.py",
+      "sha256": "68a5ee4c07655aa4ae01d1ef8d3e04743cee00dabcdefbffc46326324103e4d2",
+      "archive": "frozen-tree/packages/uploads/protocol.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/uploads/read_model.py",
+      "sha256": "97318581c6b6105e2261d3dfa25628884328a9271014c12679821404cfd6a33d",
+      "archive": "frozen-tree/packages/uploads/read_model.py",
+      "category": "dependency"
+    },
+    {
+      "path": "packages/uploads/service.py",
+      "sha256": "0643a59820cd52266d6aa3e89009d54da743253c1369bd9986796a079fc3d3de",
+      "archive": "frozen-tree/packages/uploads/service.py",
+      "category": "dependency"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eab3531329b02bffff9925dfdd89f91f67096c831562282a1cb094559c24df89",
+      "archive": "frozen-tree/pyproject.toml",
+      "category": "dependency"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "archive": "frozen-tree/requirements.lock.txt",
+      "category": "dependency"
+    },
+    {
+      "path": "tests/test_authoring_integration.py",
+      "sha256": "dd993f146d12c145e7f984fa5b19d09a538ea118508fee66a4abd9549a4b7009",
+      "archive": "frozen-tree/tests/test_authoring_integration.py",
+      "category": "dependency"
+    },
+    {
+      "path": "tests/test_knowledge_integration.py",
+      "sha256": "1acc5af0ca09a283f6b8b5204ea91fc7e1b23c3faddd1bcb4661ea467bce42d8",
+      "archive": "frozen-tree/tests/test_knowledge_integration.py",
+      "category": "dependency"
+    }
+  ],
+  "external_inputs": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/authoring-development-checks/candidate03-evidence/synthetic-body.pdf",
+      "archive": "external-inputs/synthetic-body.pdf",
+      "sha256": "808604de8a9f5e294604a0ddfac15294e63f13ab5f16d5ada0f3d70349ffa3b5",
+      "purpose": "Public synthetic PDFium fixture; no private original"
+    }
+  ]
+}

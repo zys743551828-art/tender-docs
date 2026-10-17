@@ -1,0 +1,25 @@
+{
+  "scope": "真实provider adapter输入冻结；不含私有凭据",
+  "files": {
+    "packages/domain/storage.py": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+    "packages/domain/providers/__init__.py": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+    "packages/domain/providers/oss.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "packages/domain/providers/deepseek.py": "fd4e701d5e8c57d80b5f6134bbbfbb910ae9efb6237bf356305411349f73e1f0",
+    "packages/domain/providers/README.md": "4b76a42593c2cc28952918fe9c39bccadf0662eb275511c1356859aa2a819570",
+    "tests/test_providers.py": "e13f47150913ba53a5036dbd8527db99239117e86cb7a7011a60c5e236f3aa28",
+    "requirements.lock.txt": "3db81efd8d21c0a6da74fded790948c7b636bb2fa5cdc4b614120fbf9698f921",
+    "qa/provider_preflight.py": "0faeea761e5ccac9b5d7abffc2aaa70ce6aa341580005a72692f7f383cd28866",
+    "qa/provider_adapter_probe.py": "6a91d83f93c4f7863d526622970a63682abe6ca806784049496e7881d41f32aa",
+    "qa/provider_oss_probe.py": "a83568cf1bc4b070edcb75bec91b245a69bd552374735ba499c5ffe4f7c9c35e",
+    "qa/provider_chat_probe.py": "36130f179e981553a22b036ff61912115187487726ba684f47f681b5a3af89ab",
+    "qa/provider_negative_probe.py": "460f129624ca26df812c48da170024b4c4cbc36fcb29d926f3a0c3386cd15c0d",
+    "executed-deepseek-adapter.py": "81f03971e4ad491990054ab59cc946e9ad12eab1d8a1e2f0bfff68665f769c50",
+    "executed-oss-adapter.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "provider-candidate.json": "084ec7937bd2a048342e962c31c5547e3426e9f1a33c82938cacf46ba0f7b133"
+  },
+  "versions": {
+    "oss2": "2.19.1",
+    "httpx": "0.28.1",
+    "requests": "2.34.2"
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "HIST_acceptance_13_cases": "pending_application; this candidate is component software evidence only",
+  "actual": {
+    "formal_model_eligibility": "unavailable",
+    "historical_input_execution": false,
+    "live": false,
+    "openapi_extension": "packages.model_governance.historical_contracts.extend_openapi",
+    "operations": 8,
+    "router": "apps.api.historical_routes.router",
+    "shared_main_include": false
+  },
+  "created_at": "2026-10-17T01:40:09.357342+00:00",
+  "product_protocol": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-delivery-plan/historical-backtest/历史可见证明与回测输入协议.md",
+    "sha256": "c951503cb9c357b095fec96f13d5f624d46ad7b2c1440ac3597a39e4756de9c7"
+  },
+  "reference_inputs": [
+    {
+      "bytes": 2214,
+      "path": "apps/api/auth.py",
+      "sha256": "e13a3fd78e08676c275cba5869d3895ebbec943a745c82574cd514517200809d"
+    },
+    {
+      "bytes": 11418,
+      "path": "apps/api/model_governance_routes.py",
+      "sha256": "c62efbb303f05a46bcf434ec1d24c60c38ac190e9a1467d8fde4c79ce638d2fb"
+    },
+    {
+      "bytes": 7753,
+      "path": "apps/api/model_registry_routes.py",
+      "sha256": "4c2b29c74657fa3d7fae300b1385a32ff73351f34ee712721f91e2ce0c9638a5"
+    },
+    {
+      "bytes": 14289,
+      "path": "deploy/sql/model-governance-release.sql",
+      "sha256": "80d5c94246bbfe4c47f320c9ad749eea2328a0c66b30a5614556168e0398d936"
+    },
+    {
+      "bytes": 34551,
+      "path": "deploy/sql/model-governance.sql",
+      "sha256": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a"
+    },
+    {
+      "bytes": 19971,
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    },
+    {
+      "bytes": 12968,
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "bytes": 32709,
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "bytes": 7058,
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "bytes": 5192,
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "bytes": 5543,
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "bytes": 13083,
+      "path": "packages/domain/providers/deepseek.py",
+      "sha256": "c63f9b9f57098ec391b6bd922cc8f0a6fabfb4845352a6a14c56c56531f56237"
+    },
+    {
+      "bytes": 12284,
+      "path": "packages/domain/runtime.py",
+      "sha256": "7fbee870bffee0b3ce35ae8dfb912b45dfc69e0da76e24e8a2541906705a397e"
+    },
+    {
+      "bytes": 1486,
+      "path": "packages/domain/storage.py",
+      "sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+    },
+    {
+      "bytes": 11263,
+      "path": "packages/identity/repository.py",
+      "sha256": "e7115fd3a916e66591bceb6a56810c9d6644dbae1819ab8be2dd734ab327db22"
+    },
+    {
+      "bytes": 6250,
+      "path": "packages/model_governance/README.md",
+      "sha256": "78e1a2605e19160ffcc160fbc8a170b8c891497c6f1b27003cca9874f6736d91"
+    },
+    {
+      "bytes": 4529,
+      "path": "packages/model_governance/RELEASE-DEVELOPMENT.md",
+      "sha256": "75f42795dec78457d60713b4c2db1b1e833fca56637ec9526c09b44ea5d821ce"
+    },
+    {
+      "bytes": 91,
+      "path": "packages/model_governance/__init__.py",
+      "sha256": "293b5f097894aabc72fce0119f1ddd5b77c13a05f7aa7f8a9d356f398a3216f0"
+    },
+    {
+      "bytes": 10925,
+      "path": "packages/model_governance/artifacts.py",
+      "sha256": "d92925299d14455d71866d40653b46b1b93b78580b994b050b2318514d9f1285"
+    },
+    {
+      "bytes": 1975,
+      "path": "packages/model_governance/common.py",
+      "sha256": "a6f237d4cfc4d6790d643b2a5109dca6385da01705af8251ebdd81f0020d21f4"
+    },
+    {
+      "bytes": 5637,
+      "path": "packages/model_governance/contracts.py",
+      "sha256": "578ce0e4265c0dd154301b78934fbe89161131072ba65649fd475d7eaa74a17b"
+    },
+    {
+      "bytes": 8720,
+      "path": "packages/model_governance/evaluation.py",
+      "sha256": "d0ac7e2029644105173395f3ba315e0e87a74f19555f55a4eb01e2588792b967"
+    },
+    {
+      "bytes": 7439,
+      "path": "packages/model_governance/features.py",
+      "sha256": "5a0ccef1edfbe15d245052fced684e681fd35a9f41b2e7a926697a1b2abbec9b"
+    },
+    {
+      "bytes": 17087,
+      "path": "packages/model_governance/intake.py",
+      "sha256": "97d12f551a1a61399977d8d7a6bf0a4a20c643694cbe9fa8e2dbb7000a89cf18"
+    },
+    {
+      "bytes": 3388,
+      "path": "packages/model_governance/leakage.py",
+      "sha256": "8c2c4d7b3ea0ca0ba116760e60000793b556d854ef0d6a3dbc50d262b202881a"
+    },
+    {
+      "bytes": 11190,
+      "path": "packages/model_governance/model-governance-candidate-01.json",
+      "sha256": "3929d000f1f3f8f2f19f4c7a6d22f32afad389c3b8fda700a28dfef825074c54"
+    },
+    {
+      "bytes": 12172,
+      "path": "packages/model_governance/model-release-candidate-01.json",
+      "sha256": "f4306991dafab46f6e1c9364132c0617ecfaeda16692bf2f02828df6da76e865"
+    },
+    {
+      "bytes": 2361,
+      "path": "packages/model_governance/purpose_profiles.py",
+      "sha256": "55607a303df70b465d4ea571feafc4abf1775170122e19bdeb3a4a13a62fcf00"
+    },
+    {
+      "bytes": 9844,
+      "path": "packages/model_governance/purpose_runtime.py",
+      "sha256": "242b73768810be57d3e733e1e20b7ee9139d1265cc8fa8fc58810d9cd202ac5f"
+    },
+    {
+      "bytes": 8429,
+      "path": "packages/model_governance/registry.py",
+      "sha256": "19b3de9164027e23d6f42daa0bec8b19d548f376e38ebfb4f296851e61262fca"
+    },
+    {
+      "bytes": 3844,
+      "path": "packages/model_governance/registry_contracts.py",
+      "sha256": "e26f044cff1583b85efd1ab8375baaf4636f57055e2fb91e734e194306d17367"
+    },
+    {
+      "bytes": 12113,
+      "path": "packages/model_governance/repository.py",
+      "sha256": "9d6cf595b624f8c6aa5740ee75b557e2fef4a158b210caa6c0b85c9775ebfe53"
+    },
+    {
+      "bytes": 10984,
+      "path": "packages/model_governance/statistics.py",
+      "sha256": "dcffb36e8b29e872fc50e1364521e1a4f8a6ea2468637e7f9ed0f96ff472f604"
+    },
+    {
+      "bytes": 8306,
+      "path": "packages/model_governance/training.py",
+      "sha256": "9833ecd4a6173459f35a55bd1bd4cbe305a50db59d32b8c66514ae367d9b6af3"
+    },
+    {
+      "bytes": 11828,
+      "path": "packages/rag/indexing.py",
+      "sha256": "362451119c67f935ac2b0a530278a53fb75daa2ad95ceaf8b8e52601701c56ad"
+    },
+    {
+      "bytes": 1571,
+      "path": "packages/research/artifacts.py",
+      "sha256": "553014f588ef44291db646f299b22ac26bc415380d847049b51888805b12b264"
+    },
+    {
+      "bytes": 7705,
+      "path": "packages/research/authority.py",
+      "sha256": "855404c135231ea783031a6bf244cde1e90ab45a5bb5f8d67223121e7ca6e9f1"
+    },
+    {
+      "bytes": 23062,
+      "path": "packages/research/batches.py",
+      "sha256": "cf0299442661730043f17d5c45b29027ed16547ca39ee813e465d460e5bc9565"
+    },
+    {
+      "bytes": 9101,
+      "path": "packages/research/chapters.py",
+      "sha256": "77dba70a4c4692962a161d0db014f010a013076e19ef67f36a3a2104c88adb2a"
+    },
+    {
+      "bytes": 10555,
+      "path": "packages/research/core.py",
+      "sha256": "76e2ac91a0c868367cb3cf96a1e6bea89892da4d7d119a965a7f373528eb6faa"
+    },
+    {
+      "bytes": 12883,
+      "path": "packages/research/execution.py",
+      "sha256": "0b973858ade5aa81292a720473c59f42feb7b1c81c03a34a8d580a8b7c9868ad"
+    },
+    {
+      "bytes": 2137,
+      "path": "packages/research/identities.py",
+      "sha256": "a7c430221e0e299cc0f2974f892b6a2abc67c907ab51762147307fa56bff003e"
+    },
+    {
+      "bytes": 9852,
+      "path": "packages/research/ledger.py",
+      "sha256": "3b53f263360a766d0d5c2360de3189945ca1e71c0f6bef8d940285f784b41d50"
+    },
+    {
+      "bytes": 7856,
+      "path": "packages/research/model_port.py",
+      "sha256": "dd7e5365e9769189a95dfeb5c94baee5e85f6c96e62d0ac9e05d35b1c7e6d728"
+    },
+    {
+      "bytes": 23029,
+      "path": "packages/research/outcomes.py",
+      "sha256": "739e5957142e8912baa8d47d9dfeeffacbef47d81f8c8808a46e8c96c73fc2b1"
+    },
+    {
+      "bytes": 2097,
+      "path": "packages/research/profile.py",
+      "sha256": "eab4fb0b82ebac0c5337f378e521157da4f106c2bb005b8fccb39a90d24771dc"
+    },
+    {
+      "bytes": 12229,
+      "path": "packages/research/worker.py",
+      "sha256": "39673ab943b301169141ae7746102857c37cf209719277a42561deabdc46f685"
+    },
+    {
+      "bytes": 1058,
+      "path": "requirements.lock.txt",
+      "sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923"
+    },
+    {
+      "bytes": 6556,
+      "path": "tests/test_model_governance_artifacts.py",
+      "sha256": "5c4f73d9217d92d8d8ef787b8292dc59933dfc40e6a45a75f235e45a882dda43"
+    },
+    {
+      "bytes": 1733,
+      "path": "tests/test_model_governance_contracts.py",
+      "sha256": "72b78468a187f9c4b246c823075377095466b7ec000764cd8d0223c26c92eb34"
+    },
+    {
+      "bytes": 4452,
+      "path": "tests/test_model_governance_features.py",
+      "sha256": "d09962ae6ad8b2945e350cfb7f10fc5a104463e6cf05f080b439fdc4f644875f"
+    },
+    {
+      "bytes": 33557,
+      "path": "tests/test_model_governance_integration.py",
+      "sha256": "a249fa81c86b6b708c58dc592b53592bf7a0c6287c092308b72290b3a39e14df"
+    },
+    {
+      "bytes": 3049,
+      "path": "tests/test_model_governance_purpose.py",
+      "sha256": "aedf212bf1f52db962078214d063d98fc437ac77d3d36755d04cc40ef3f68983"
+    },
+    {
+      "bytes": 2679,
+      "path": "tests/test_model_governance_purpose_profiles.py",
+      "sha256": "799fc51b77d53d44a8d1e832f77f8e2cc0b11f1d7e9c2e998862220d1957fdac"
+    },
+    {
+      "bytes": 2229,
+      "path": "tests/test_model_governance_registry_contracts.py",
+      "sha256": "ded575ced0e8bfe5bcd318b8a91912cc24a8ee27425eeb0b64b6e60fc285fa8c"
+    },
+    {
+      "bytes": 16577,
+      "path": "tests/test_model_governance_registry_integration.py",
+      "sha256": "c5dedfd80c46bf7a9e1e1328c45b7a2200ed276266ccc9a69f30713e7df544ff"
+    },
+    {
+      "bytes": 2502,
+      "path": "tests/test_model_governance_registry_unconfigured.py",
+      "sha256": "cf821cfebb2a4b120ea98cd7eae080e5d3059aaa40f299b67edefd870ff4c6af"
+    },
+    {
+      "bytes": 9787,
+      "path": "tests/test_model_governance_statistics.py",
+      "sha256": "3d1dea1985db849cfe9a3924b7963fd70931c0cebb080dfe8d79f95172c0c85e"
+    },
+    {
+      "bytes": 2505,
+      "path": "tests/test_model_governance_unconfigured.py",
+      "sha256": "e8b5a6dc3cb9f46a539ca5ea47c810334c1a15f9808e7e9aae743235e2e3219a"
+    },
+    {
+      "bytes": 58550,
+      "path": "tests/test_research_integration.py",
+      "sha256": "b7a4de833beb2227bf87f24c3c390ec09362484dea9b17b349c26328935a5f6f"
+    }
+  ],
+  "remaining": [
+    "ordinary_current_upload_to_verified_historical_input_long_API_path",
+    "partial_identity_fields_draft_persistence_and_UI",
+    "HistoricalInputAuthority_freeze_and_current_input_qualifier",
+    "purpose_owned_job_chapter_read_and_ledger",
+    "strict_historical_sample_group_time_protocol_and_model_content_separation",
+    "real_data_origin_provenance; declared_origin_does_not_enable_StageA_real",
+    "browser_product_user_independent_review"
+  ],
+  "schema": "historical-proof-candidate/1",
+  "scope": "first_phase_manual_source_and_historical_subject_authority_only",
+  "source_root": "/workspace/tender-workbench",
+  "sources": [
+    {
+      "bytes": 6163,
+      "path": "apps/api/historical_routes.py",
+      "sha256": "743cee8b183928db9670a07ab02f1b11534fe8128af3a0abe05796c8b4627966"
+    },
+    {
+      "bytes": 23867,
+      "path": "deploy/sql/historical-backtest.sql",
+      "sha256": "e811920d92478fd6e20a9b0d200c2769396eae92deee142a0cc2fbafd0086c44"
+    },
+    {
+      "bytes": 4856,
+      "path": "packages/model_governance/HISTORICAL-DEVELOPMENT.md",
+      "sha256": "c2d17d3877c988aa459181309b6efd6a5ebf539d36ad560167e8cbc705786d28"
+    },
+    {
+      "bytes": 6735,
+      "path": "packages/model_governance/historical_contracts.py",
+      "sha256": "74a7e7c708a3637b8fa1bb1c9ac2a00f960bd53ac81497648844d75a0cb7198e"
+    },
+    {
+      "bytes": 18588,
+      "path": "packages/model_governance/historical_repository.py",
+      "sha256": "e088094bea198110f8d5c6b50260310c54a71417a1aeef4f3658b47e7229ead6"
+    },
+    {
+      "bytes": 5075,
+      "path": "packages/model_governance/historical_requests.py",
+      "sha256": "b01d0a1d4fb11554b8f8f2f013e2e77b300d95af63b0a2e1ca857895c814181c"
+    },
+    {
+      "bytes": 1507,
+      "path": "tests/test_model_governance_historical_contracts.py",
+      "sha256": "35229d24f1aa21bd6937491815d8218d3e297c40e8cbb48deedc1ebcaafe1638"
+    },
+    {
+      "bytes": 24115,
+      "path": "tests/test_model_governance_historical_integration.py",
+      "sha256": "2c797298bc2edb9c0a4da5ffd757efaca3773db003e2519afe12134c3a932f17"
+    },
+    {
+      "bytes": 5438,
+      "path": "tests/test_model_governance_historical_requests.py",
+      "sha256": "fed2d9754985429997b948ff00cfcd58d9a8d161fae7c46f12d4cc61601d0893"
+    },
+    {
+      "bytes": 2020,
+      "path": "tests/test_model_governance_historical_unconfigured.py",
+      "sha256": "45906f50ab6709a4e6fcefda317426bad70a56c4577b9f13a1a9f13c99bdc28c"
+    }
+  ],
+  "sql": {
+    "E_sha256": "e811920d92478fd6e20a9b0d200c2769396eae92deee142a0cc2fbafd0086c44",
+    "fresh_db": "tender_checks_delivery_protocols01",
+    "init_evidence": "/workspace/tender-docs/04-验证与测试/delivery-protocols-initialization-checks/candidate01/fresh-initialization.json",
+    "old_database_patched": false
+  },
+  "verification": {
+    "Kafka_consumers": 0,
+    "bandit": true,
+    "fixture_kind": "explicit_synthetic_nonowner_SQL_offline_record_and_proof; not ordinary_upload_path",
+    "format": true,
+    "fresh_tests_passed": 31,
+    "mypy": true,
+    "native_OSS_calls": 0,
+    "old_schema_probe_auth_is_explicit_stub_not_real_auth_evidence": true,
+    "old_schema_readonly_503_probe_passed": 1,
+    "paid_calls": 0,
+    "real_session_CSRF_idempotency_CAS_in_fresh_suite": true,
+    "release01_frozen_sources_unchanged": true,
+    "ruff": true,
+    "stage_A_frozen_sources_unchanged": true
+  }
+}

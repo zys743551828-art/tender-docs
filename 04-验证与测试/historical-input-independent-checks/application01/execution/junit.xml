@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="11" failures="0" skipped="0" tests="11" time="7.850" timestamp="2026-10-17T03:02:31.749171+00:00" hostname="597cea30c71f"><testcase classname="" name="test_current_ordinary_upload_offline_and_full_body_input" time="0.782"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_actual_artifact_bytes_checked_on_get_and_replay" time="0.693"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_source_proof_or_parse_change_in_object_window_is_atomic[source]" time="0.647"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_source_proof_or_parse_change_in_object_window_is_atomic[proof]" time="0.679"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_source_proof_or_parse_change_in_object_window_is_atomic[parse]" time="0.467"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_withdrawal_history_stale_replay_not_green_and_rr_guard" time="0.511"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_exact_scope_requests_reject_before_object_write[body_as_material]" time="0.465"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_exact_scope_requests_reject_before_object_write[wrong_body_claim]" time="0.478"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_exact_scope_requests_reject_before_object_write[fake_qualification]" time="0.541"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_exact_scope_requests_reject_before_object_write[wrong_rule_bid]" time="0.599"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase><testcase classname="" name="test_sealed_child_wait_and_non_api_privilege_boundaries" time="0.673"><error message="failed on setup with &quot;psycopg.errors.UndefinedColumn: column &quot;created_at&quot; does not exist&#10;LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...&#10;                                                             ^&quot;">/workspace/tender-workbench/qa/test_historical_input_independent01.py:79: in prepared
+    complete=expect(api.post(f'/api/v1/uploads/{grant["upload_id"]}/complete',json=dict(parts=[],declared_sha256=sha(raw)),headers=s['h']()),202);execute(s,complete)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/qa/test_historical_input_independent01.py:64: in execute
+    with connection() as c:m=c.execute('SELECT payload FROM outbox WHERE operation_id=%s ORDER BY created_at,id LIMIT 1',(op,)).fetchone()['payload']
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/workspace/tender-workbench/.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "created_at" does not exist
+E   LINE 1: ...ayload FROM outbox WHERE operation_id=$1 ORDER BY created_at...
+E                                                                ^</error></testcase></testsuite></testsuites>

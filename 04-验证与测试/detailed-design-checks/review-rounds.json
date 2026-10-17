@@ -1,0 +1,62 @@
+{
+  "scope": "三轮详细技术设计规格核对；自动检查为终稿汇总，不表示各轮独立执行完整软件或真实业务验收",
+  "rounds": [
+    {
+      "round": 1,
+      "focus": "需求、身份与契约",
+      "findings": [
+        "补全报价、历史导入、跨轮比较、业务指标与迁入迁出技术落点",
+        "fact_set允许为空，不把事实库变成首次评审必填",
+        "异步响应区分冻结评审与最新待评意图，读接口补强ETag输出"
+      ],
+      "status": "已完成规格核对"
+    },
+    {
+      "round": 2,
+      "focus": "并发、恢复与关系约束",
+      "findings": [
+        "标准实交增加正文种类与评审正文一致约束，线下补录独立保留真实情况",
+        "快照章节增加草稿级复合外键，防同项目跨草稿混用",
+        "独立测量nonce与原材料输入摘要区分，避免影响语义去重"
+      ],
+      "status": "已完成规格核对"
+    },
+    {
+      "round": 3,
+      "focus": "运行、交付与证据",
+      "findings": [
+        "推荐队列基线保留故障对照门槛，单节点quorum不宣称高可用",
+        "区分契约校验、隔离SQL验证和完整产品验收",
+        "评分实验可在基础隔离后并行，不等待完整章节工作区"
+      ],
+      "status": "已完成规格核对"
+    }
+  ],
+  "completed_at": "2026-10-16T09:46:30.594463+00:00",
+  "final_design_inputs": {
+    "05-技术与设计/AI投标工作台详细技术设计.md": "e121877a6f35bafd123e926d84c0a1b631c84f4bfe500d415f16778031a178e8",
+    "05-技术与设计/detailed-design/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "05-技术与设计/detailed-design/protocol.schema.json": "f0f930795e845ec189ff298e2b6d6925e7c5b3d87a7479a6c733503c69baad1e",
+    "05-技术与设计/detailed-design/openapi.json": "a62cf107ac87a983f1efd751e89445645617e301efc44b7cfd75dabecbe8f86b",
+    "05-技术与设计/detailed-design/execution-policy.json": "9453f11994d04719768983171e392782019c4bc062d8b6fed5da68e8a9a45861",
+    "05-技术与设计/detailed-design/README.md": "0b64068b92a590df499d2672c72b2c845b6adcf847504c26a194ddc1a9a6969e",
+    "04-验证与测试/detailed-design-checks/requirements-trace.json": "6a52e025770dd664b363c6ea9c094f2cf693e2b3ae2d72c1c1744d5a11747f13",
+    "04-验证与测试/detailed-design-checks/README.md": "d6de08bbea119b53bd24c268d591efc3aab159b25db958e61d0b7bc39f2e75c7",
+    "04-验证与测试/detailed-design-checks/requirements.lock.txt": "b6694358b23abb4512fb238325091f75cde5ba11ce6faa4aa13d3f55ec200dab",
+    "04-验证与测试/detailed-design-checks/check_contracts.py": "356f96cc2de752b62eb501e9f1597a9dc4f84a5c1c24281907887e3db5eedfa5"
+  },
+  "evidence": {
+    "contract-result.json": "228221677fe5862d0a827ed2db58d8b4b94c5136f479c58a5c2af54f371c3441",
+    "sql-result.json": "b6b40b7e2c83ca856498acc03201fbbc3fab8a5de82113a1907bd9c9af53d000",
+    "product-regression-result.json": "d1d8ed5043d45268df817b4462d4135d134452331fd0c69e379d1074d6494a17",
+    "architecture-regression-result.json": "1c006405c57bd3b1b7e5b7236d11842cd276e4f067a2d5a3a75005fb44757148"
+  },
+  "unexecuted": [
+    "产品API与worker端到端",
+    "Celery／RabbitMQ故障对照",
+    "真实模型与文档解析",
+    "Word版式与对应资格",
+    "评分预测真实精度",
+    "生产部署与恢复"
+  ]
+}

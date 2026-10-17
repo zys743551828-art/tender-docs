@@ -1,0 +1,771 @@
+{
+  "status": "cold_load_and_local_archive_validate_passed_no_actual_restore",
+  "prepared_sha256": "6c42fdc8ff830d3fb3a3c5b616d484698c8b579c84ae2723caafaab6b19c7ca4",
+  "protocol_sha256": "d4ad0221362a05746c6d892ae06149b56a9f804e3c6127f1b2bc48069d9c94a3",
+  "script_sha256": "a0a3bfd8348cc8b9054dea6bfb4744b039fac913b673744f0fc4adbc02735295",
+  "loaded_recovery_sources": [
+    {
+      "module": "deploy.application_recovery",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/__init__.py",
+      "sha256": "e4d465414abbe571ccc96c65d27f7ab0e4352ad53dbfd876cdd4e2c3eefa92d5"
+    },
+    {
+      "module": "deploy.application_recovery.archive",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/archive.py",
+      "sha256": "47b1810034a6e4f205df7379dc699a9a92b7fe131e38842dde5a300e820f3ea6"
+    },
+    {
+      "module": "deploy.application_recovery.binding",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/binding.py",
+      "sha256": "7bef1c064ca49b9fa1d7230757dcf23bce6a015a093edff3805f3c4226a43a7d"
+    },
+    {
+      "module": "deploy.application_recovery.cluster",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/cluster.py",
+      "sha256": "23d9d55c03c4e1ad2f1488407a9a139949d6e4a9f43195ff1c6cb509e9462713"
+    },
+    {
+      "module": "deploy.application_recovery.definition_equivalence",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/definition_equivalence.py",
+      "sha256": "1581e1b04c75bf1c5225c893a153aabae7320e5002ddcbc640fd6127d916dcca"
+    },
+    {
+      "module": "deploy.application_recovery.security",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/application_recovery/security.py",
+      "sha256": "dd29109059060f463fbe9a69264bc9b0472bc2d0659baa3cdc536816d8d7fb8f"
+    },
+    {
+      "module": "deploy.backups.generic",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/backups/generic.py",
+      "sha256": "5307f1cb06a8f1fcceabc7e66c3cc797110adc9ded4461af49b3192d6949021f"
+    },
+    {
+      "module": "deploy.backups.run",
+      "path": "/workspace/tender-workbench/.local/qa-recovery05-40e8c1ed7230406293111e2c85006b98/deploy/backups/run.py",
+      "sha256": "a64c40a64271c62210b072b95bfad69b123169e6b7808c00d51d181ae1497604"
+    }
+  ],
+  "loaded_backend_sources": [
+    {
+      "module": "apps",
+      "origin": null,
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps"
+      ]
+    },
+    {
+      "module": "apps.api",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api"
+      ]
+    },
+    {
+      "module": "apps.api.assistant_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/assistant_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.auth",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/auth.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.authoring",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/authoring.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.comparison_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.comparison_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/comparison_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.event_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/event_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.export_openapi",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/export_openapi.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.history_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/history_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.human_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.human_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/human_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.identity_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/identity_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.knowledge_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/knowledge_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.main",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/main.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.metrics_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/metrics_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.multipart_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/multipart_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.object_transfer",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/object_transfer.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.pricing_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/pricing_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.rag_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/rag_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.report_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.report_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/report_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.research_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/research_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.retained_upload_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/retained_upload_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.review_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.review_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.review_views",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/review_views.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.settings_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/settings_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.source_effectivity_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.source_effectivity_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/source_effectivity_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.submission_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.submission_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/submission_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.task_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/task_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.upload_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.upload_layout_routes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/upload_layout_routes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "apps.api.views",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/apps/api/views.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages",
+      "origin": null,
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages"
+      ]
+    },
+    {
+      "module": "packages.assistant",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant"
+      ]
+    },
+    {
+      "module": "packages.assistant.actual",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/actual.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.assistant.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.assistant.conversations",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/conversations.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.assistant.generation",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/generation.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.assistant.protocol",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/assistant/protocol.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring"
+      ]
+    },
+    {
+      "module": "packages.authoring.build",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring.build_repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/build_repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring.content",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/content.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring.patches",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/patches.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.authoring.repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/authoring/repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain"
+      ]
+    },
+    {
+      "module": "packages.domain.build_followups",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/build_followups.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.comparisons",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/comparisons.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.core_recheck_scope",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/core_recheck_scope.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.fact_sets",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/fact_sets.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.finding_lifecycle",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/finding_lifecycle.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.human_decisions",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/human_decisions.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.input_changes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/input_changes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.model_recovery",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/model_recovery.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.parsing_profile",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/parsing_profile.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.providers",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers"
+      ]
+    },
+    {
+      "module": "packages.domain.providers.deepseek",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/providers/deepseek.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.reports",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reports.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.review_data",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_data.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.review_identity",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/review_identity.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.reviews",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/reviews.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.rule_corrections",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_corrections.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.rule_sets",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/rule_sets.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.runtime",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/runtime.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.source_effectivity",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/source_effectivity.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.storage",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/storage.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.submission_gate",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submission_gate.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.submissions",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/submissions.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.domain.work_access",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/domain/work_access.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.identity",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity"
+      ]
+    },
+    {
+      "module": "packages.identity.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.identity.pagination",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/pagination.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.identity.repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/identity/repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge"
+      ]
+    },
+    {
+      "module": "packages.knowledge.bridge",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/bridge.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge.content",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/content.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge.rag_contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/rag_contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge.repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.knowledge.sources",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/knowledge/sources.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.lifecycle",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle"
+      ]
+    },
+    {
+      "module": "packages.lifecycle.service",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/lifecycle/service.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics"
+      ]
+    },
+    {
+      "module": "packages.metrics.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.core",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/core.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.predictions",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/predictions.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.records",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/records.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.results",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/results.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.snapshots",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/snapshots.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.sources",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/sources.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.metrics.views",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/metrics/views.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.parsing",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing"
+      ]
+    },
+    {
+      "module": "packages.parsing.http_port",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/parsing/http_port.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing"
+      ]
+    },
+    {
+      "module": "packages.pricing.calculator",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/calculator.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing.models",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/models.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing.repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing.sources",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/sources.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.pricing.terms",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/pricing/terms.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.rag",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag"
+      ]
+    },
+    {
+      "module": "packages.rag.core",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/core.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.rag.http_port",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/http_port.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.rag.indexing",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/indexing.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.rag.repository",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/repository.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.rag.search",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/rag/search.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research"
+      ]
+    },
+    {
+      "module": "packages.research.artifacts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/artifacts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.authority",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/authority.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.batches",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/batches.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.chapters",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/chapters.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.contracts",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/contracts.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.core",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/core.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.identities",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/identities.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.importing",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/importing.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.outcomes",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/outcomes.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.research.profile",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/research/profile.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.tasks",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/__init__.py",
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks"
+      ]
+    },
+    {
+      "module": "packages.tasks.inputs",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/inputs.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.tasks.models",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/models.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.tasks.runs",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/runs.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.tasks.scheduling",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/scheduling.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.tasks.templates",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/tasks/templates.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.uploads",
+      "origin": null,
+      "namespace_paths": [
+        "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads"
+      ]
+    },
+    {
+      "module": "packages.uploads.journal",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/journal.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.uploads.native",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/native.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.uploads.protocol",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/protocol.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.uploads.read_model",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/read_model.py",
+      "namespace_paths": []
+    },
+    {
+      "module": "packages.uploads.service",
+      "origin": "/workspace/tender-docs/04-验证与测试/backend07-independent-checks/execution-inputs/packages/uploads/service.py",
+      "namespace_paths": []
+    }
+  ],
+  "local_archive_tables": 164,
+  "local_archive_objects": 7,
+  "actual": {
+    "paths": 161,
+    "operations": 188,
+    "schemas": 310,
+    "json_sorted_indent2_newline_sha256": "d3a0f761b2a6f7677f0efd97d382899e411030803d8853278645b5be6b326627"
+  },
+  "external_attempts": [],
+  "real_pg": false,
+  "real_docker": false,
+  "cloud_calls": 0,
+  "provider_calls": 0,
+  "limits": [
+    "OpenAPI generation is an offline shape check, not endpoint execution",
+    "Target restore and runtime API login remain pending"
+  ]
+}

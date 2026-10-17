@@ -1,0 +1,10 @@
+{
+  "observation_source": "previous root exec session 64723 retained in conversation",
+  "ready_status": 200,
+  "actual_contract_semantic_equality": true,
+  "failure": "module origin harness selected third-party botocore vendored requests/packages/urllib3/exceptions.py by an overbroad /packages/ substring",
+  "product_defect_established": false,
+  "correction": "select top-level product module names apps, packages, deploy before validating immutable runtime ancestry",
+  "provider_calls": 0,
+  "persistent_services_started": false
+}

@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "stored_real_zero_score_does_not_infer_business_stage",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "invalid_stage_no_partial_result_head",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancelled_has_known_stage_but_both_denominators_null",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stage_technical_shortlisted_uses_exact_distinct_denominators",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "stage_not_awarded_uses_exact_distinct_denominators",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "exact_old_command_replay_cannot_roll_back_conflicted_current_head",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "two_real_corrections_one_head_winner_and_one_cas_rejection",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "as_of_uses_conflict_before_later_correction_without_old_stage_fallback",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "two_effective_submission_heads_same_unit_are_both_excluded",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "one_microsecond_after_submission_observation_cannot_backfill_known_zero",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "exact_cutoff_immutable_risk_snapshot_records_actual_one_open_root",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "later_dismissal_changes_current_count_but_not_submission_snapshot",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "hidden_prediction_has_no_number_interval_or_error_derivatives",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "GET_metrics_never_creates_missing_historical_risk_snapshot",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "model_requests": 0,
+  "object_requests": 0,
+  "consumers_started": 0,
+  "scope": "Isolated nonownerPG + standalone actual metrics ASGI router; explicit SQL identities/reviews/outcomes fixtures, no live main/frontend or qualified official business result",
+  "known_independent_architect_blocker": "Canonical candidate/future-known source may still grant verified/usable; separately retained architect counterexamples. This partial QA does not release module01.",
+  "setup_helper_scope": "Frozen developer make_project/make_review only for SQL fixture setup; none of developer test functions or assertions executed",
+  "runtime_manifest_sha256": "3f888dce330c9f8b19d2c23448a0b10d9c7c369eb12df3895b8364179621c789",
+  "probe_sha256": "13467be1de8caabf5f489c8c92f66047fd93ca055210e53d8610dcc773ee2f7c"
+}

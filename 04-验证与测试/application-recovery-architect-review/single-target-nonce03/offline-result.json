@@ -1,0 +1,26 @@
+{
+  "driver_sha256": "bfaf841ae77cc01313dc95cfcff2ed007205c690d41860981b577cbecef22665",
+  "checks": [
+    {
+      "case": "exact_marker",
+      "passed": true
+    },
+    {
+      "case": "new_execution_uuid",
+      "passed": true
+    },
+    {
+      "case": "zero_rows",
+      "passed": true
+    },
+    {
+      "case": "wrong_digest",
+      "passed": true
+    },
+    {
+      "case": "duplicate_table",
+      "passed": true
+    }
+  ],
+  "scope": "isolated extracted functions and synthetic metadata; no private marker read; no DB/Docker/cloud"
+}

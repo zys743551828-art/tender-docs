@@ -1,0 +1,11 @@
+# 独立评分执行SQL草案E增量复核
+
+结论：本次静审范围内无剩余阻塞，可以由PM使用已审helper03在独立新库初始化精确E，再执行真实角色与机制验证。E SHA256 `a53bc2cbce417d121dc3a32c36266ca800b7c2035089410d90c46c4835e3b480`。C、D保持原字节，不执行；静审通过不是软件业务或模型资格通过。
+
+C→E业务差异只在frozen_review_current：真实ruleset必须coverage=complete，和原root完整row等值比较同时成立；root.source_closure和manifest.source_refs必须是数组，旧闭包非空、有上限并拒重复；从真实manifest的source IDs派生完整当前祖先闭包，以typed UUID／timestamptz／revision／status／policy／digest／有效窗双向EXCEPT比较。它比较原评审冻结权威，不以新捕获capsule替代旧root。时间按类型比较，避免相同时间因JSON文本写法不同被误判。
+
+原RC→91143→bid→图锁前置未变，完整根、文档、规则及三判断闭包继承C静审范围。全域共享章节未知调用、成功结果受控binding复用、原费用归属、归档历史research-only与current_review关闭拒绝等均未在此次增量削弱。tender_model_score仍只获owned RPC，不获root／标签／proof或桶读取，技术总满分和数字输出、正式资格仍不可用。
+
+新库至少应亲自验证：相同内容换input／command未知零新预留；必要范围增加但仍共享未知章节拒绝；成功跨job只经受控binding复用且新费用为0；当前root追加／删除规则、partial／conflict包拒绝；原head仍eligible但改revision／延期后旧root拒绝；typed等价时间正向可用；当前关闭项目拒绝而有据历史档案独立研究可用；少于三次或伪造复用call／payload／引用不能发布；来源在外部调用窗口失效时usage保留而结果拒绝。完整输入中的未直接出现在某评分条款证据里的招标／补遗，应有明确正向或明确不可用范围验证，避免必要文档集合与capsule集合误拒合法资料。
+
+本轮只读精确项目文件和离线测试，未连接数据库或外部服务、未执行DDL、未创建账号、无模型或对象请求。实际SQL语法、扩展依赖、权限和事务竞争仍由新库实测承担；没有将静态模式和开发测试次数当业务证明。

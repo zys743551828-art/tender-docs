@@ -1,0 +1,72 @@
+{
+  "candidate_path": "/workspace/tender-workbench/apps/api/provider-candidate-01.json",
+  "candidate_sha256": "084ec7937bd2a048342e962c31c5547e3426e9f1a33c82938cacf46ba0f7b133",
+  "all_candidate_sources_match": true,
+  "sources": [
+    {
+      "path": "/workspace/tender-workbench/packages/domain/storage.py",
+      "expected_sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "observed_sha256": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/__init__.py",
+      "expected_sha256": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+      "observed_sha256": "957a071d0a08e11a1dc25f3caff912c9008c32a16456b2dd5c7da1b844e43bb3",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/oss.py",
+      "expected_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "observed_sha256": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/deepseek.py",
+      "expected_sha256": "fd4e701d5e8c57d80b5f6134bbbfbb910ae9efb6237bf356305411349f73e1f0",
+      "observed_sha256": "fd4e701d5e8c57d80b5f6134bbbfbb910ae9efb6237bf356305411349f73e1f0",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/packages/domain/providers/README.md",
+      "expected_sha256": "4b76a42593c2cc28952918fe9c39bccadf0662eb275511c1356859aa2a819570",
+      "observed_sha256": "4b76a42593c2cc28952918fe9c39bccadf0662eb275511c1356859aa2a819570",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/tests/test_providers.py",
+      "expected_sha256": "e13f47150913ba53a5036dbd8527db99239117e86cb7a7011a60c5e236f3aa28",
+      "observed_sha256": "e13f47150913ba53a5036dbd8527db99239117e86cb7a7011a60c5e236f3aa28",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/requirements.lock.txt",
+      "expected_sha256": "3db81efd8d21c0a6da74fded790948c7b636bb2fa5cdc4b614120fbf9698f921",
+      "observed_sha256": "3db81efd8d21c0a6da74fded790948c7b636bb2fa5cdc4b614120fbf9698f921",
+      "matches": true
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/configure_external.py",
+      "observed_sha256": "3a58201a36898a44792f2f01bae0fd2661e476cfd7b1ecac72bcc99a1c3c36f4",
+      "scope": "deployment-observed-not-in-provider-candidate"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/compose.external.yaml",
+      "observed_sha256": "b66b17fb463728912aed5a322133c9dc34a09171a280d3defbc1655571668f3b",
+      "scope": "deployment-observed-not-in-provider-candidate"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/check_compose.py",
+      "observed_sha256": "f74d98040dde3355e9bde1f13e29d893061c73220410eaf343c217c5c2abdb60",
+      "scope": "deployment-observed-not-in-provider-candidate"
+    },
+    {
+      "path": "/workspace/tender-workbench/deploy/run.py",
+      "observed_sha256": "7e001fb63d4c29ecaa786f6723e1f03002fd15616c68f753c1fa1ad088984484",
+      "scope": "deployment-observed-not-in-provider-candidate"
+    }
+  ],
+  "paid_calls_by_architect": 0,
+  "credentials_read": false,
+  "final_pass": false
+}

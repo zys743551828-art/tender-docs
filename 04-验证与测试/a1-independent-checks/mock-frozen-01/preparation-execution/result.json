@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "preparation_is_durable_and_not_a_review",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_during_original_validation_no_late_prepare",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "missing_bid_cas_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "prepare_request_cas_and_exact_replay",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "auto_off_head_change_supersedes_without_model",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "cancel_cas_and_identity_are_required",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "actual_original_sha_failure_blocks_before_any_model_reservation",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "kafka_consumers_started": 0,
+  "scope": "Frozen01 ASGI/actual restricted PG, actual TCP parser03 originals, direct single-bid controller/authoritative outbox handlers, offline MockTransport/in-memory storage; not Kafka or paid effect",
+  "bid_id": "673750ca-6a00-4aec-bfdc-d862de47a0fc",
+  "offline_transport_requests": 0,
+  "model_call_rows": 0,
+  "probe_sha256": "30271f207068210e164258edef73c091aaec24b2ee25b4556303a762e0c68f13"
+}

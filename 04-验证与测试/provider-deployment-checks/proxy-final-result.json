@@ -1,0 +1,68 @@
+{
+  "scope": "同源服务端原生OSS传输＋现有单文件PDF资料链独立验收；不代表A1/RAG/正式评分/生产",
+  "conclusion": "passed_same_origin_oss_pdf_scope",
+  "blocking_failures": 0,
+  "paid_chat_requests": 0,
+  "bucket_configuration_mutations": 0,
+  "object_list_requests": 0,
+  "object_transfer_candidate_sha256": "90617425e936283c99222cbe1c3a7011ebc5c5800f840b1efb920b6e95fe8356",
+  "object_transfer_source_sha256": "cb3b16ddc515258fa0cb9007738b5e4f9c8eeace7393726ce04b3fe5b7b9dd83",
+  "frontend_candidate_sha256": "64da2b097bc36c3e6402271ac68d6b5de0a618a353720be57065a203cfc26d15",
+  "frontend_source_count_verified": 50,
+  "live_api_openapi_sha256": "ad260dc8f99237266e384547ecd960a87866984e648049d04c6f8eddb018cb52",
+  "live_api_paths": 28,
+  "controlled_api_openapi_sha256": "410c264ebd76b2f22a2502f8fd519491e7bcad1b33eb90ee341a109d714f9d4d",
+  "controlled_api_paths": 36,
+  "controlled_api_scope": "仅本次真实OSS写后barrier；新工作区main组装36路径不等于8802已升级；原8802为28路径并保持稳定",
+  "input_manifest_sha256": "0310024551ce591f420cbcce99ce94b3e9aa69df1aac0029681e5ec8cb4f64b0",
+  "configuration_sha256": "6dc9a9da9657a6971cd85e3c968afad8dc1feccff4fa980f64161e9509667a18",
+  "postgres_port": 55441,
+  "api_port": 8802,
+  "web_port": 5175,
+  "results": [
+    {
+      "path": "proxy-http-01.json",
+      "sha256": "b2f0a1339de8368f8b40696f266de4bd7d7f8d93114deaf212070f06444121c2",
+      "scope": "真实release HTTP/PG/Kafka/OSS同源传输独立合法/异常/禁止/竞争；非A1模型评审"
+    },
+    {
+      "path": "external-browser-01/result.json",
+      "sha256": "11c4c73f98689c6f0606e030e2c7847b650daf16b382a57608dd727b676415c2",
+      "scope": "实际Chromium与QA API/S3/Kafka的单PDF资料UI；无模型评审/真人使用结论"
+    },
+    {
+      "path": "publication-races-01/result.json",
+      "sha256": "f32733e00134a454c575567cc0467138916dbac3b186450662bff98c7e18275b",
+      "scope": "受控QA临时API8803：实际OSS写后屏障＋8802并发命令＋真实PG短锁公布校验；非未插桩时序"
+    },
+    {
+      "path": "download-boundary-supplement.json",
+      "sha256": "4bb44c77d18efe560fa36362bc2d047f34788ebd389e57e8d0916098b90fa065",
+      "scope": "既有合成原件只读下载边界补验；错误方法无写入"
+    }
+  ],
+  "approval_boundary": {
+    "cors_write_approval_rejected": true,
+    "source": "cors-configuration-decision.json，PM转述",
+    "cors_applied": false,
+    "workaround": "正常服务端同源对象传输，不绕过审批或修改bucket"
+  },
+  "concurrency": {
+    "read_phase": "真实8802 100Continue屏障下三种命令胜出，旧流拒绝、key保持",
+    "publication_phase": "受控API8803真实SDK成功后暂停，8802三命令胜出，旧公布拒绝；查无staging/blob引用再定点清理3候选204",
+    "controlled_api_terminated": true
+  },
+  "log_scope": {
+    "live_api_access_log_flag_disabled": true,
+    "own_artifact_secret_scan": "proxy-verification.json",
+    "bulk_live_api_pty_logs_examined": false
+  },
+  "untested": [
+    "完整A1业务/真实检测质量/正式模型预算调用账本接线",
+    "RAG及本地BGE检索效果（可能后台有本地索引，不计本次通过）",
+    "multipart/高并发负载/生产网络与容量",
+    "代理真实OSS依赖拒绝/超时故障与多节点",
+    "完整API PTY日志历史扫描/生产日志审计",
+    "真人/真实投标资料/正式评分/生产部署"
+  ]
+}

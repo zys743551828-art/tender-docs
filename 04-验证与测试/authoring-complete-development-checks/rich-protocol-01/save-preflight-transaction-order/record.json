@@ -1,0 +1,63 @@
+{
+  "classification": "test context order swallowed DomainError before connection manager saw it, committing preceding mutation; production API propagates error through its connection context",
+  "raw_junit": "../save-pg-junit.xml",
+  "actual_observation": "rejected save left revision3 in this fixture because exception was caught inside the transaction",
+  "correction": "pytest.raises must wrap connection context, so the transaction observes and rolls back the domain rejection",
+  "sources": [
+    {
+      "path": "packages/authoring/rich_snapshots.py",
+      "sha256": "41062810d5cf93eab9dcb3fcc138d9d657cb283a25ac3e24c34d2925220e6325",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_snapshots.py"
+    },
+    {
+      "path": "packages/authoring/rich_verification.py",
+      "sha256": "827e41608a1e862a969c662d3e73cc3b4255651e102ec863ddf3f79bc1165a6c",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_verification.py"
+    },
+    {
+      "path": "packages/authoring/rich_images.py",
+      "sha256": "af23cf1cb050624d9793d5815f11e31f205d528229760eef6824699ceb191a37",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_images.py"
+    },
+    {
+      "path": "packages/authoring/rich_content.py",
+      "sha256": "5d7a1dd0338bf280f4e378680a31756360219c90e74d342c88fc64c7f7efa7ff",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_content.py"
+    },
+    {
+      "path": "packages/authoring/rich_ooxml.py",
+      "sha256": "97f9bd69965325309bacf3adbf276d95e47db2a636eff4c1d6690844fe9886f2",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_ooxml.py"
+    },
+    {
+      "path": "packages/authoring/rich_uploads.py",
+      "sha256": "e470db53ac5feef47a2c4322c7220fe5afdd2f97c09bf2c4d96097ea35594e70",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_uploads.py"
+    },
+    {
+      "path": "packages/authoring/rich_assets.py",
+      "sha256": "d6b75b29311894373792935ef12bb7384d36a9ea2228d5d77680a1d508f35072",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_assets.py"
+    },
+    {
+      "path": "packages/authoring/rich_docx.py",
+      "sha256": "dc6a18f14dfc8f501e3c774cd46f4de2db9fe44454d7182e98321fe291ddd0a7",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/rich_docx.py"
+    },
+    {
+      "path": "packages/authoring/repository.py",
+      "sha256": "73bda91434ba6a57c371e4366095fcb34d566932c393d2bbeb64f653e76bfff3",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/repository.py"
+    },
+    {
+      "path": "packages/authoring/content.py",
+      "sha256": "6c271906d1651c2b03822abed45e1c282e6a9744124bf5923fbb48127132d5ae",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/packages/authoring/content.py"
+    },
+    {
+      "path": "tests/test_authoring_rich_integration.py",
+      "sha256": "641865a992b46f149b10047d6bd1c2578eb3014d6a9630417a445df6cf97fae0",
+      "archive": "/workspace/tender-docs/04-验证与测试/authoring-complete-development-checks/rich-protocol-01/save-preflight-transaction-order/sources/tests/test_authoring_rich_integration.py"
+    }
+  ]
+}

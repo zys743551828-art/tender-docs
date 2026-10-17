@@ -1,0 +1,37 @@
+{
+  "status": "frozen_for_independent_review",
+  "source_root": "/workspace/tender-workbench",
+  "previous_candidate_sha256": "a6ee9f9ab21268c69b5494b8c18492ec951cc7b64e0ee4a403cd8ba9db2ff27b",
+  "sources": {
+    "deploy/create_check_environment.py": "4d3603314f015f0718a74cb52a7bd77d1395ea2bc7b125460d555293ac8acd15",
+    "deploy/bootstrap_fresh.py": "44cb845ffc67aee6f147053fdff8b08317d64a1565100ff5c04a4a7b2fc53631",
+    "deploy/bootstrap_check_kafka.py": "34e5ef119d0a800a387dd1c9cebd1604b9deaec0c1d5699199faccde929eba13",
+    "deploy/probe_fresh_environment.py": "cebe9a30d797b8be7fdb86cff8c1f40c510845f6522342ecb38bf89114cc9ecb",
+    "tests/test_bootstrap_fresh.py": "d92483d15d4f7473ce98a7e23b815ea4c446aa72ebf9f2eceb1b0483f15c2465",
+    "docs/fresh-combination-development-checks/candidate02/implementation-protocol.md": "6cb2d9ab3ddb955f857e1a77471a7f3825eb98541d405939e7dd0619814f9bd4"
+  },
+  "observed_dependencies": {
+    "packages/contracts/sql/core.sql": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd",
+    "packages/contracts/sql/domain.sql": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96",
+    "packages/contracts/sql/retrieval.sql": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876",
+    "packages/contracts/sql/worker-functions.sql": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b",
+    "packages/contracts/sql/roles.sql": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1",
+    "deploy/sql/vector-runtime-grants.sql": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619",
+    "deploy/sql/research-source-qualification.sql": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027",
+    "packages/knowledge/sql/rag.sql": "51c98cf1aea5364b418747161e86bb374b9b3d44222d67891ec18e27bc200003",
+    "deploy/sql/model-governance.sql": "0b7dc8863fb83703116189fb3e6bcf442ed5fae2250d50993189e04aefa6f51a",
+    "deploy/compose.external.yaml": "b66b17fb463728912aed5a322133c9dc34a09171a280d3defbc1655571668f3b",
+    "deploy/initialize_database.py": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735",
+    "deploy/run.py": "ff9551bc8e6a3b1f2f782b40f5089dcccc58b9737b111e42c40c961c5f0cb107",
+    "deploy/initialize_topics.py": "4af0947c05b51079ed79e7b1c09ca1896506a84668a94416826ebeeb7eb8e886",
+    "packages/domain/providers/oss.py": "cca3b764d86a278f686f3792c3360cc44d69efb93ffb6044720068946db214ec",
+    "packages/domain/storage.py": "302ee87f93c90f9ca914ea4fd578b79db70aab8f69efd174ff5c4723ad39c265"
+  },
+  "evidence": {
+    "development-junit.xml": "60bb8326acdec3b9f6a43d0185aafd6fa06c75f05909ed664cfdf4718c39fbaa",
+    "nonowner-read-only-guard-probes.json": "03a9a2edeb3213c76ca73306d20cdf74b49e702fd990a08ad13978e6842344ee",
+    "development-result.json": "3dc7e0a294c42c444645949b6744f9b8e8dc6e3a4a1b293fe46fe2a62e4f3ef7"
+  },
+  "independent_approved": false,
+  "new_environment_created_with_candidate02": false
+}

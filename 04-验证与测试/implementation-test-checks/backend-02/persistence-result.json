@@ -1,0 +1,14 @@
+{
+  "scope": "实际API进程重启后的原会话、项目与命令持久性；非浏览器刷新模拟",
+  "passed": true,
+  "checks": [
+    "实际重启后原Cookie会话与PG项目仍有效",
+    "跨进程同key原结果重放且数据库命令只有一条",
+    "重启后其他成员仍可访问同一项目"
+  ],
+  "bid_id": "2544f96f-e7dc-45fe-8981-71dec6131be7",
+  "api_pid_before": 168044,
+  "api_pid_after": 253641,
+  "commands": 1,
+  "probe_sha256": "50c1da1a19a3dd9762781eb77dee8ba5813a09ea095b3d00c60a1e25bfb233a3"
+}

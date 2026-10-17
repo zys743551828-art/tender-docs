@@ -1,0 +1,13 @@
+# Word实现整改复核
+
+结论：原W01和W03在本次修正范围内闭合，安全预检及一次无域本地受控转换正向通过。候选SHA256 `b12e2e456ead217296510ae6fde3f7747198d75adffe42706bb3692c28406fa6`，12份冻结源执行前后均核对；不授予主Word上传／采用／评审整链通过。
+
+独立沿用01／02原六个DOCX原字节：任意命名XML中的DDEAUTO及跨run拆分的动态域均禁止进入转换，统一有FIELD_EVALUATION_UNSUPPORTED。源码对fldChar、instrText、delInstrText、fldSimple、fldData采取保守闭合，嵌套／不完整域不能因局部正则未命中而被放行。普通正文中写PAGE、TOC、DDEAUTO仍可核验与转换。合法PAGE／TOC字段同样不支持，应保留原件和PDF接续，不把该策略解释为字段保真或A2目录已支持。
+
+独立重跑48项纯机制全部通过，原六字节另有original-delta.json。首次自有夹具在预先导入测试helper后使用同名测试副本导致pytest import mismatch，诊断XML保留；仅调整架构师目录中的副本文件名后重跑，未修改候选。公开base OpenAPI资源仍按前轮公开依赖摘要补入自有执行目录，不混入主源码。
+
+另亲自执行一次无域合成中文DOCX真实Docker转换，使用dev06精确profile `b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18`。结果complete、gaps为空，PDF为16,142字节，实际字节与链SHA一致；22项实际isolation布尔值含own_job_cleanup_confirmed均true。因安装profile绑定原runner绝对路径，只将renderer从其原安装路径按精确候选SHA加载，domain依赖仍取固定归档；renderer、inspection、sandbox_runner三个安装文件在调用前后与冻结字节相等，没有改profile或换依赖来通过检查。公开原件、PDF及结果保存在本目录，未打印私有profile。
+
+这次转换确实使用固定本地daemon、镜像、非root、network-none、只读绑定、CPU／内存／进程与tmpfs限制及显式清理；没有拉镜像、远端模型、对象存储、数据库或消费者。缺字体、缺字、超时的开发真实Docker记录未在本轮独立重复；其失败资格守卫按原静态审查保留，不把收到开发证据算独立重跑。
+
+Worker publish仍须在既有fence事务内使用，主Word桥接的文件head／材料CAS、早晚采用、最新请求顺序、取消／失联／重复Kafka以及解析／RAG来源过滤继续另验。这个结论不包含真实业务Word任意布局精度、生产镜像攻防或容量。

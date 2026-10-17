@@ -1,0 +1,247 @@
+{
+  "scope": "合成接口示例，只验证形状，不代表端点已实现或业务已执行",
+  "examples": [
+    {
+      "operation_id": "createBid",
+      "direction": "request",
+      "schema": "CreateBid",
+      "body": {
+        "title": "合成道路项目"
+      }
+    },
+    {
+      "operation_id": "createUploadBatch",
+      "direction": "request",
+      "schema": "UploadBatch",
+      "body": {}
+    },
+    {
+      "operation_id": "saveDraft",
+      "direction": "request",
+      "schema": "SaveDraft",
+      "body": {
+        "base_draft_revision": 1,
+        "changes": [
+          {
+            "section_id": "00000000-0000-0000-0000-000000000001",
+            "base_section_revision": 1,
+            "schema_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "content": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "合成施工方案"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "operation_id": "getDraft",
+      "direction": "response",
+      "schema": "DraftView",
+      "body": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "bid_id": "00000000-0000-0000-0000-000000000001",
+        "revision": 1,
+        "snapshot_id": "00000000-0000-0000-0000-000000000001",
+        "sections": [
+          {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "title": "施工准备",
+            "revision": 1,
+            "ordinal": 0,
+            "rule_ids": [],
+            "save_state": "saved"
+          }
+        ]
+      }
+    },
+    {
+      "operation_id": "requestReview",
+      "direction": "response",
+      "schema": "Accepted",
+      "body": {
+        "resource_kind": "review",
+        "resource_id": "00000000-0000-0000-0000-000000000001",
+        "disposition": "created",
+        "operation_url": "/api/v1/operations/00000000-0000-0000-0000-000000000001",
+        "operation": {
+          "id": "00000000-0000-0000-0000-000000000001",
+          "bid_id": "00000000-0000-0000-0000-000000000001",
+          "kind": "review",
+          "state": "queued",
+          "input_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "handler_version": "review-v1",
+          "result_ref": null
+        }
+      }
+    },
+    {
+      "operation_id": "getPrediction",
+      "direction": "response",
+      "schema": "PredictionView",
+      "body": {
+        "review_id": "00000000-0000-0000-0000-000000000001",
+        "mode": "hidden",
+        "maximum": "100",
+        "reasons": [
+          "项目已关闭预测数值显示"
+        ],
+        "method_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "operation_id": "recordOutcome",
+      "direction": "request",
+      "schema": "OutcomeRequest",
+      "body": {
+        "submission_id": "00000000-0000-0000-0000-000000000001",
+        "score_kind": "technical_total",
+        "value": "0",
+        "maximum": "100",
+        "source_version_id": "00000000-0000-0000-0000-000000000001",
+        "known_at": "2026-10-16T08:00:00Z"
+      }
+    },
+    {
+      "operation_id": "recordOutcome",
+      "direction": "request",
+      "schema": "OutcomeRequest",
+      "body": {
+        "submission_id": "00000000-0000-0000-0000-000000000001",
+        "score_kind": "unknown",
+        "value": null,
+        "maximum": null,
+        "source_version_id": "00000000-0000-0000-0000-000000000001",
+        "known_at": "2026-10-16T08:00:00Z"
+      }
+    },
+    {
+      "operation_id": "retrieveEvidence",
+      "direction": "request",
+      "schema": "RetrievalRequest",
+      "body": {
+        "query": "管网施工如何安排临时排水",
+        "context": "body_evidence",
+        "bid_id": "00000000-0000-0000-0000-000000000001",
+        "limit": 8
+      }
+    },
+    {
+      "operation_id": "authorizeDownload",
+      "direction": "response",
+      "schema": "DownloadGrant",
+      "body": {
+        "artifact_id": "00000000-0000-0000-0000-000000000001",
+        "download_url": "https://private-storage.invalid/synthetic",
+        "expires_at": "2026-10-16T08:00:00Z",
+        "filename": "合成正文.pdf",
+        "artifact_kind": "bid_body",
+        "presentation_revision": null
+      }
+    },
+    {
+      "operation_id": "publishModel",
+      "direction": "request",
+      "schema": "ModelPublish",
+      "body": {
+        "acceptance_id": "00000000-0000-0000-0000-000000000001",
+        "expected_route_revision": 0,
+        "rollback_model_id": null,
+        "route_key": "technical_total.default"
+      }
+    },
+    {
+      "operation_id": "registerSubmission",
+      "direction": "request",
+      "schema": "SubmissionRequest",
+      "body": {
+        "body_version_id": "00000000-0000-0000-0000-000000000001",
+        "review_id": "00000000-0000-0000-0000-000000000001",
+        "material_revision": 1,
+        "submitted_at": "2026-10-16T08:00:00Z",
+        "evidence_ref": "00000000-0000-0000-0000-000000000001"
+      }
+    },
+    {
+      "operation_id": "rebindVerifiedUpload",
+      "direction": "request",
+      "schema": "UploadBindingRequest",
+      "body": {
+        "target": {
+          "kind": "new_version",
+          "file_id": "00000000-0000-4000-8000-000000000001",
+          "expected_file_revision": 3
+        },
+        "reason": "查看最新稿后，明确以已核验修改稿追加新版本"
+      }
+    },
+    {
+      "operation_id": "rebindVerifiedUpload",
+      "direction": "response",
+      "schema": "UploadBindingView",
+      "body": {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "upload_id": "00000000-0000-4000-8000-000000000001",
+        "bid_id": "00000000-0000-4000-8000-000000000001",
+        "file_id": "00000000-0000-4000-8000-000000000001",
+        "expected_file_revision": 3,
+        "previous_binding_id": "00000000-0000-4000-8000-000000000001",
+        "upload_revision": 5,
+        "verified_retain_until": "2026-10-23T01:00:00Z"
+      }
+    },
+    {
+      "operation_id": "commitBatch",
+      "direction": "request",
+      "schema": "BatchCommit",
+      "body": {
+        "accepted_upload_ids": [
+          "00000000-0000-4000-8000-000000000001"
+        ],
+        "accepted_binding_ids": [
+          "00000000-0000-4000-8000-000000000002"
+        ],
+        "explicit_partial_acceptance": false
+      }
+    },
+    {
+      "operation_id": "correctRuleSet",
+      "direction": "request",
+      "schema": "RuleSetCorrectionRequest",
+      "body": {
+        "base_rule_set_id": "00000000-0000-4000-8000-000000000001",
+        "reason": "人工核对发现原文中漏提的总工期要求",
+        "additions": [
+          {
+            "kind": "mandatory",
+            "statement": "总工期不得超过180日历天",
+            "conditions": [],
+            "exceptions": [],
+            "scope": {
+              "bid_id": "00000000-0000-4000-8000-000000000001",
+              "description": "本标段本轮施工投标"
+            },
+            "maximum": null,
+            "bands": [],
+            "evidence_quotes": [
+              {
+                "evidence_id": "00000000-0000-4000-8000-000000000001",
+                "quote": "总工期不得超过180日历天"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

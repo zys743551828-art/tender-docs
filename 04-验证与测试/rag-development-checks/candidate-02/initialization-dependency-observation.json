@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-16T18:49:50.293992+00:00",
+  "candidate": "/workspace/tender-docs/04-验证与测试/rag-development-checks/candidate-02/candidate.json",
+  "candidate_sha256": "03cbcf424b021d91c08d398e4a482b38b957c7fa0def1c6f2be7a86bd095e101",
+  "unchanged_sources": 22,
+  "changed_observed_sources": [
+    {
+      "path": "/workspace/tender-workbench/deploy/initialize_database.py",
+      "frozen_sha256": "ce22a2ff6c99e0cdd5a8be115c66a450d89aa5992e6f136370cbc39d767ce004",
+      "current_observed_sha256": "f171131d43a0c3cd273581217acf3419231b7d598d5e9ce9083ed2280eb5b735"
+    }
+  ],
+  "interpretation": "Prior RAG02 gate remains a historical scoped gate for its frozen sources. The initialization dependency now provisions reviewed source-authority tables in new empty databases; do not represent all current23source hashes as unchanged. No RAG runtime engine changed in this delta.",
+  "new_database_initialization_evidence": {
+    "path": "/workspace/tender-docs/04-验证与测试/research-backend-checks/fresh-source-authority-initialization.json",
+    "sha256": "faad21fd4d95bb941a73dd1f5cca98d29cd5b67debc174564835d4f8e2331c3b"
+  },
+  "future_research03_sql": "moving separately; not initialized or accepted by the historical evidence",
+  "paid_calls": 0
+}

@@ -1,0 +1,39 @@
+{
+  "candidate_sha256": "5679b97595cf181c2250ddc03d1abd167212975c62583ff2853793e5f2f75d84",
+  "sources_verified": 13,
+  "reference_inputs_verified": 11,
+  "candidate_cases": 45,
+  "independent_original_regressions_closed": 2,
+  "actual_postgresql_nonowner": true,
+  "actual_login_asgi": true,
+  "object_port": "explicit in-memory",
+  "source": "synthetic SQL parse fixtures, not actual PDF",
+  "paid_calls": 0,
+  "cloud_requests": 0,
+  "consumers_started": false,
+  "private_config_read": false,
+  "loaded_modules": {
+    "apps.api.pricing_routes": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/apps/api/pricing_routes.py",
+    "packages.pricing.repository": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/repository.py",
+    "packages.pricing.sources": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/sources.py",
+    "packages.pricing.calculator": "/workspace/tender-docs/04-验证与测试/pricing-development-checks/candidate-03/frozen-inputs/packages/pricing/calculator.py"
+  },
+  "conclusion": "passed_scoped_F03_complete_measure_declarations",
+  "blocking_findings": 0,
+  "total_passed": 47,
+  "old_F02_failures_preserved": true,
+  "evidence_sha256": {
+    "probe_candidate03.py": "73f3adf0a519a1b4deb2888a85079059c684a9f15218d80e9b512bd89c412b12",
+    "candidate03-independent-junit.xml": "133d103bc08fe4bfbec17a325b721385db7956b7896169a78e6880b5d1d7659e",
+    "candidate03-CNY-regression.json": "5b6a68362eff1ee8cbc5e8ccc6bb5bb7533015b17bddee5a4742b9657eb7bef4",
+    "candidate03-KRW-regression.json": "dad2c59750afc20472652ec04473525943925f07680266ab80637ee235502b3f"
+  },
+  "evidence_format_note": "Own two regression JSONs normalized trailing escaped newline after assertion run; result values unchanged.",
+  "unverified": [
+    "main_actual_export",
+    "frontend_PRICE01_to_11",
+    "real_clause_quality",
+    "new_native_OSS",
+    "production"
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "candidate": "word-intake-development-02",
+  "created_at": "2026-10-17T02:37:09.269154+00:00",
+  "scope": "local isolated synthetic Word intake/render slice; awaiting independent review and main integration",
+  "sql": {
+    "path": "packages/word_intake/schema.sql",
+    "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe"
+  },
+  "renderer": {
+    "private_profile_path": "/workspace/tender-workbench/.local/word-render-profile-dev05.json",
+    "profile_digest": "d700c87fb9f207cd64390e0fadfaf2e0824dbb516ceadfaa4b214389d8c537c7",
+    "public_identity_path": "renderer-profile.json"
+  },
+  "sources": [
+    {
+      "path": "apps/api/word_intake_routes.py",
+      "sha256": "74d3d63f02d738b7d6692da9cc033c50aa71c15fb26556b8cf99660b7f131775",
+      "frozen_path": "frozen-inputs/apps/api/word_intake_routes.py"
+    },
+    {
+      "path": "apps/worker/word_intake_handlers.py",
+      "sha256": "832bd59675b2d6fd494eb52eab32aad8948003931b1aeffe81d7bb12db229e1e",
+      "frozen_path": "frozen-inputs/apps/worker/word_intake_handlers.py"
+    },
+    {
+      "path": "packages/word_intake/IMPLEMENTATION.md",
+      "sha256": "7dad7aebb2e21b60f49887ed3373356504f5be7edc6aa603305eb2c8015a5714",
+      "frozen_path": "frozen-inputs/packages/word_intake/IMPLEMENTATION.md"
+    },
+    {
+      "path": "packages/word_intake/__init__.py",
+      "sha256": "49576cdcfd69173cb3906483103c3e4e9c05f9f9879a0fc4c7748dd9bfdc8b8c",
+      "frozen_path": "frozen-inputs/packages/word_intake/__init__.py"
+    },
+    {
+      "path": "packages/word_intake/contracts.py",
+      "sha256": "58ec38a8078d9d5dc75ec0c6ada2d3c2930fc8b9cc1a799c708659a2ef593af4",
+      "frozen_path": "frozen-inputs/packages/word_intake/contracts.py"
+    },
+    {
+      "path": "packages/word_intake/inspection.py",
+      "sha256": "7f7ee4bb61eb2d9c4154c830867ddd91ba7885e0f94ad6e22bfa2b8d1d7c3490",
+      "frozen_path": "frozen-inputs/packages/word_intake/inspection.py"
+    },
+    {
+      "path": "packages/word_intake/renderer.py",
+      "sha256": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+      "frozen_path": "frozen-inputs/packages/word_intake/renderer.py"
+    },
+    {
+      "path": "packages/word_intake/repository.py",
+      "sha256": "cf9d670f172bc6ca0a5ca2d2b932550f9559e8c361a3a29168bbd077bcf13cc8",
+      "frozen_path": "frozen-inputs/packages/word_intake/repository.py"
+    },
+    {
+      "path": "packages/word_intake/sandbox_runner.py",
+      "sha256": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289",
+      "frozen_path": "frozen-inputs/packages/word_intake/sandbox_runner.py"
+    },
+    {
+      "path": "packages/word_intake/schema.sql",
+      "sha256": "380a58eef00224a6094652c076d0d3ff0cb268a30a9868544671f4d37eb1dbfe",
+      "frozen_path": "frozen-inputs/packages/word_intake/schema.sql"
+    },
+    {
+      "path": "tests/test_word_intake.py",
+      "sha256": "af196c785b607a8862e90b304f7d62b0c3b9a27b12ae509da1b8f4b23a0b28a7",
+      "frozen_path": "frozen-inputs/tests/test_word_intake.py"
+    },
+    {
+      "path": "tests/test_word_intake_integration.py",
+      "sha256": "a2636ef3b1a41c4c8f551ca3eb906e696334831741e724ab06a77df8b9905cc3",
+      "frozen_path": "frozen-inputs/tests/test_word_intake_integration.py"
+    }
+  ],
+  "checks": {
+    "pytest": {
+      "passed": 39,
+      "failed": 0,
+      "skipped": 0,
+      "unit": 33,
+      "restricted_pg_http_and_optional_real_docker": 6
+    },
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed; 8 source files",
+    "bandit_findings": 0,
+    "real_docker_failure_delta": {
+      "profile_digest": "d700c87fb9f207cd64390e0fadfaf2e0824dbb516ceadfaa4b214389d8c537c7",
+      "provider_requests": 0,
+      "business_documents": 0,
+      "checks": [
+        {
+          "name": "missing_font",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_SUBSTITUTED"
+          ]
+        },
+        {
+          "name": "missing_glyph",
+          "state": "succeeded",
+          "coverage": "partial",
+          "gaps": [
+            "WORD_FONT_GLYPH_UNAVAILABLE"
+          ]
+        },
+        {
+          "name": "timeout-fault-injection",
+          "state": "failed",
+          "error_code": "WORD_CONVERSION_TIMEOUT",
+          "cleanup": true
+        }
+      ]
+    },
+    "provider_requests": 0,
+    "business_documents": 0,
+    "storage_transport": "explicit in-memory test transport; not OSS qualification",
+    "kafka_consumer_started": false,
+    "original_w01_counterexamples": "3 exact originals scanned; all ineligible with dynamic-field gap; no field execution",
+    "cross_bid_replay": "actual frozen01 returned 202/replayed; candidate02 returns404 before ACK, valid scope replay202"
+  },
+  "evidence": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "8c79ae5997ad9bb311f56789995e3d6931647c3e696e0b0d720ea1939f8a8d79"
+    },
+    {
+      "path": "bandit-stderr.txt",
+      "sha256": "5c7e045d18c9e65d2a34d0d50e6c52346b2ca7a444617b99e999918e72643329"
+    },
+    {
+      "path": "bandit.json",
+      "sha256": "9c24f121b4fa9fe56f20251b0044021409a59ad086deae5c3a7019fb8360369f"
+    },
+    {
+      "path": "cross-bid-replay.json",
+      "sha256": "eddb7af2478d40ac4891aa9dd60fb97fbbd52b5c7ba1f063fc150323d25183af"
+    },
+    {
+      "path": "failure-checks/missing_font.docx",
+      "sha256": "543e62756379d9e4a7bdd5adbef58f0a4e4f695b459bbceb5c443f4a567771e9"
+    },
+    {
+      "path": "failure-checks/missing_font.json",
+      "sha256": "acece58e24143e005a42e8cf9757f26198a2aa1129c9917f117991196a150b53"
+    },
+    {
+      "path": "failure-checks/missing_font.pdf",
+      "sha256": "90c9cd63a57db9ca0795d03103cd1000353d4865fca984e30aa35cd5f37e90af"
+    },
+    {
+      "path": "failure-checks/missing_glyph.docx",
+      "sha256": "2bbc5f353a535900daeff5efa01d57d0e551e69d855685e7aaf09fe963faf335"
+    },
+    {
+      "path": "failure-checks/missing_glyph.json",
+      "sha256": "bb5a874b87edc56cb5a5b770a09004b8878037e74b473676cc5bf1bc4bd81d4d"
+    },
+    {
+      "path": "failure-checks/missing_glyph.pdf",
+      "sha256": "51f81144d182c291192e2d23151e4036f2eb9e4ff48fcfcefea130dbbcbba942"
+    },
+    {
+      "path": "failure-checks/summary.json",
+      "sha256": "d1dd86a8f764ddc9766d3e7336364486626bb698f0593323247df682c395a5eb"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.docx",
+      "sha256": "ce0baf1679aee20084b9623c62418b3bc601f9879f787de60b89a028dff7ab1a"
+    },
+    {
+      "path": "failure-checks/timeout-fault-injection.json",
+      "sha256": "ca12796d2f4abce45594e43c74516584c4b8047729bbeb23360507d75be41dbb"
+    },
+    {
+      "path": "original-w01-regression.json",
+      "sha256": "7992dfb60b4c95594fd5eb0ebd21d6153aaf0a8d2809af0592252fcaa89d17c5"
+    },
+    {
+      "path": "real-word-chain.json",
+      "sha256": "32ee0add1893bc9f0b8cff0847cc2707bb112ae2dd6b2837461c532690d17edf"
+    },
+    {
+      "path": "real-word-output.pdf",
+      "sha256": "ef32f1e157c58702b64eecf92b3f76c0a719c946ea0fa9f442d631ee5e288694"
+    },
+    {
+      "path": "real-word-source.docx",
+      "sha256": "e215441ad2756a3c59e71f0b7015764c1df7640e5b0a0433ae64ea6fde579d26"
+    },
+    {
+      "path": "renderer-profile.json",
+      "sha256": "43d253195e39dfe330997483cb787be4f7d4f88415b7fb8acac249eafb6b3056"
+    },
+    {
+      "path": "result.xml",
+      "sha256": "dcb06127801c08c026245c16bb55aa203befe77f7ae0628832bb71584d9043b6"
+    }
+  ],
+  "pending": [
+    "main upload/API/Worker registration and actual object storage integration",
+    "Kafka lease/fence/cancel integration",
+    "canonical converted PDF adoption and stale-source filtering",
+    "independent architecture/QA/product/user acceptance",
+    "complex Word layout and structured preview/import",
+    "business accuracy and production sandbox/capacity qualification"
+  ],
+  "prior_candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-01/candidate.json",
+    "sha256": "199d31e0bde9a9cccb8f9893127e7962ead4b035c3bd8e045327474bd8bbf98a",
+    "status": "blocked by W01; retained exact"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed_scoped_ordinary_model_ledger",
+  "blocking_findings": 0,
+  "candidate": {
+    "path": "/workspace/tender-workbench/apps/api/a1-ledger-candidate-01.json",
+    "sha256": "78441a80539fa76f128e6dcc56f42476edb7e5daffc3c334d328358f369a7c5f"
+  },
+  "execution": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-ledger-independent-checks/candidate-01/result.json",
+    "sha256": "86947ebcd297090d7cd01030e5c1bcb01ae0c9bee24da9ef9ab44fad9b355166"
+  },
+  "supporting_source_inputs": {
+    "path": "/workspace/tender-docs/04-验证与测试/a1-ledger-independent-checks/candidate-01/supporting-inputs/manifest.json",
+    "sha256": "a1447e536abff87d8e7260c93ef4252c378e3f5616b87684e398a098448c446d"
+  },
+  "actual_database_schema": {
+    "path": "/workspace/tender-docs/04-验证与测试/rag-independent-checks/database-identity/actual-database-schema.json",
+    "sha256": "020fc8ea388c159e4f7ba0be8ebb60d7839e47ed4583f4cde0b54ae4b92e67a6"
+  },
+  "paid_generation_calls": 0,
+  "verified": [
+    "Distinct nonowner API/Worker LOGIN; reservations use actual lock/acquire protocol",
+    "Eight same-key concurrent callers yield one reservation; request/profile conflict rejected",
+    "Prepare/review command shared count10 and reserved-output32768 budgets including concurrent boundary",
+    "Injected transaction failure rolls back call and budget; wrong generation/fence/owner/expired lease cannot reserve",
+    "Reservation visible to second PG connection before transport; no remote-time operation row lock",
+    "Unknown billing single send only; no implicit resend; successful cache verifies stored result SHA",
+    "Cancel before transport prevents send; cancel during transport preserves late usage and refuses effect publication",
+    "Result persistence failure retains usage_reported; repeat does not send; official labels/human decisions/model routes denied"
+  ],
+  "not_verified": [
+    "Paid DeepSeek business generation or model-effect quality",
+    "Actual Kafka prepare/review controller+consumer chain",
+    "Complete A1.1 product flow including four-layer review, facts, rules, matrices and risk continuity"
+  ],
+  "fixture_boundary": "Explicit SQL synthetic operation fixtures in independent rag-checks database, no broker consumers; provider is httpx.MockTransport, storage in-memory; infrastructure and prior one real provider call remain separate evidence"
+}

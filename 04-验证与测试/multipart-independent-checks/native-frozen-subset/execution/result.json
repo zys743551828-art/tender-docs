@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "new_exact_upload_empty",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "out_of_order_real_parts_report_exact_sizes_and_etags",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "completed_real_object_full_readback_sha",
+      "passed": true,
+      "observation": {
+        "byte_size": 8388979,
+        "sha256": "cdc4886ca4fdddfe9128df22f03f7f92a25d0c69d919273819175baca2ff9b76"
+      }
+    },
+    {
+      "name": "same_size_wrong_declared_digest_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "wrong_declared_size_rejected",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "native_complete_forbids_existing_object_overwrite",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "forbidden_overwrite_leaves_original_sha_and_size",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "exact_abort_replay_is_idempotent",
+      "passed": true,
+      "observation": null
+    },
+    {
+      "name": "aborted_exact_upload_no_longer_lists_parts",
+      "passed": true,
+      "observation": null
+    }
+  ],
+  "paid_generation_calls": 0,
+  "real_kafka_consumers_started": 0,
+  "scope": "Native OSS SDK adapter only, own synthetic UUID prefix; no application HTTP, DB workflow, parser or browser acceptance",
+  "prefix": "workbench-checks/qa-multipart-5f61b5c7aa9f4039989fccd9def84c19/",
+  "no_bucket_scan": true,
+  "no_bucket_configuration_changes": true,
+  "cleanup": [
+    {
+      "kind": "exact_own_completed_object",
+      "cleaned": true,
+      "references": 0,
+      "exact_version": false
+    }
+  ],
+  "probe_sha256": "5895197ffd260d3867aea3e4d05f68f7c9e283e580bfa0d1e666251ed9ad7de1",
+  "input_manifest_sha256": "1bff7c07a0fbcaf652cd2b169938e8b870229c69a6411eeda3746cb7fd2eb6e9"
+}

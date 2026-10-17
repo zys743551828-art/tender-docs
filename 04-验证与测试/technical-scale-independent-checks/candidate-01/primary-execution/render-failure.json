@@ -1,0 +1,45 @@
+[
+  {
+    "outcome": {
+      "gaps": [
+        "WORD_CONVERSION_FAILED"
+      ],
+      "chain": {
+        "fontset_digest": "b66cc17da5e7fa69c77c21b39dbc148ff6e677cda6c8ec575db70149942f22c0",
+        "options_digest": "8cb1436da0639f8587c8f737a3a82e2f8100ce711571bbc01e0020c39c15a812",
+        "profile_digest": "b262e7628ec10b30ae235bf8dbd62a7302177441ab56b9b743a70c9d0172907d",
+        "renderer_digest": "7aa72ea6de682c828f21d94317ae4517caf4811af1c5fff731f876e0b85c29ed",
+        "source_docx_digest": "afd38328e18aaada0e4f802a2f1e6a66bfd142c901ff2de1e04640d1405f5971"
+      },
+      "state": "failed",
+      "coverage": "failed",
+      "isolation": {
+        "nonroot": true,
+        "ipc_none": true,
+        "read_only": true,
+        "cpu_limited": true,
+        "pid_private": true,
+        "uts_private": true,
+        "network_none": true,
+        "pids_limited": true,
+        "memory_limited": true,
+        "not_privileged": true,
+        "clean_environment": true,
+        "no_new_privileges": true,
+        "local_image_pinned": true,
+        "bounded_tmpfs_output": true,
+        "capabilities_dropped": true,
+        "no_docker_socket_mount": true,
+        "no_daemon_document_logs": true,
+        "all_bind_mounts_readonly": true,
+        "own_job_cleanup_confirmed": true,
+        "exact_allowlisted_bind_mounts": true,
+        "no_anonymous_persistent_volumes": true,
+        "image_data_volume_replaced_by_bounded_inaccessible_tmpfs": true
+      },
+      "retryable": true,
+      "error_code": "WORD_CONVERSION_FAILED",
+      "conversion_attempted": true
+    }
+  }
+]

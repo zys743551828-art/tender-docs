@@ -1,0 +1,53 @@
+{
+  "status": "frozen_for_independent_review",
+  "scope": "P1 main04 necessary body recheck range; raw matrix observations unchanged, old critical is not resolved without proved readable scope",
+  "sources": [
+    {
+      "path": "packages/domain/core_recheck_scope.py",
+      "sha256": "cbc58bb6f32fe58bd695ba3a5ce64c345f96fb942574563c3519412de7c868ab"
+    },
+    {
+      "path": "packages/domain/finding_lifecycle.py",
+      "sha256": "938d10838a8fa7f69a6d6dd48013712f9fadec5176c37275d181c160140369d3"
+    },
+    {
+      "path": "packages/domain/engineering.py",
+      "sha256": "a813334a9d68764d9a5b928e3d79ae88cc1e3a3ec65e1a7e9cccdfe4266e03fc"
+    },
+    {
+      "path": "tests/test_core_recheck_scope_integration.py",
+      "sha256": "be337b5556bfdeae20c5e7e7683f59e7b005bffbde6712870f6d7c4b08fd2b0a"
+    },
+    {
+      "path": "tests/test_engineering.py",
+      "sha256": "2af7004b52e8d1bfba4fb4db987a11c0b452b926ca53891e7b2c75a1327b0bd1"
+    },
+    {
+      "path": "docs/core-recheck-scope-development-checks/README.md",
+      "sha256": "bbaaf265c67b2a5905340f4e88ab5ed35e31ebda639476e6541884fe0af954bf"
+    }
+  ],
+  "predecessor": "main04 eb5266493f8106fb2da16bbc5508a64dff8aae09264b134e2fe22696217431f7",
+  "counterexample": "a1-independent-checks/main04-exact-dependencies/necessary-range-counterexample/result.json SHA77dc143e3967f18740d58649d21c76fc24ec4ac5b9cab899492dceb0ff8bbd41",
+  "validation": {
+    "real_nonowner_pg_worker": 4,
+    "pure_engineering": 29,
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed:3 production files",
+    "bandit": "passed",
+    "result": {
+      "path": "docs/core-recheck-scope-development-checks/developer-result.xml",
+      "sha256": "b78791da4473f5c258ca7471d05471fa1d4660e6aa4b62be3fa4caefd9694592"
+    },
+    "business_paid_calls": 0,
+    "model_or_parser_quality_claim": false
+  },
+  "scope_invariant": "No trusted chapter scope producer is present. Require full reliable frozen body parse and physical pages; regex only expands dependencies. Partial independent other source is not body partial. Relevant diagnostics/core_affected prevent closure. Human/source-ended obligation preserves existing authority path.",
+  "pending": [
+    "independent exact failed scenario rerun",
+    "independent no-crossref adversarial case and unrelated-source positive",
+    "architecture review",
+    "frontend explanatory reading projection in next integration"
+  ]
+}

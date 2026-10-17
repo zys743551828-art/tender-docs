@@ -1,0 +1,85 @@
+{
+  "status": "blocked_legal_explicit_no_baseline_rounding_clause",
+  "candidate": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/candidate.json",
+    "sha256": "4de90e779708d21d2e335845f9fdf174a643cfbeaa0f61a5e71b53a88b28a79f",
+    "runtime_sources": 310,
+    "production_delta_count": 2,
+    "runtime_manifest_sha256": "e8cad03529f5f867202d652b308f252395723f28d5cd684a3b0e173d7f1371cc"
+  },
+  "actual": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution/actual.openapi.json",
+    "sha256": "3249fec969b04a3bc298bfd77a2f0dda7d1a4f3a1f1213a1a8d6648db6998fe7",
+    "paths": 161,
+    "operations": 188,
+    "schemas": 310,
+    "main_cold_export": true
+  },
+  "blocking_findings": [
+    {
+      "id": "F04-QA-ROUNDING-NEGATION",
+      "priority": "P2",
+      "problem": "A complete legal ratio original explicitly states baseline price is not rounded, yet registration falsely rejects it as unsupported baseline rounding.",
+      "expected": "201 registration then bounded ratio simulation with the twelve real required evidence fields; no invented coefficient clause.",
+      "actual": "422 PRICING_FORMULA_UNSUPPORTED",
+      "verbatim": "计算过程与基准价不取整；价格分限制0至40分。",
+      "counterexample_path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/baseline04-rounding-counterexample.json",
+      "counterexample_sha256": "66a1973b80ac422c86c3094a5feafdbcee4d02d39271c024194bb57cd43f200c",
+      "original_pdf_sha256": "930c1515697239ce3b8ea860f4bf745beced4b1098b1044194ec01b09502d7d7"
+    }
+  ],
+  "successful_coefficient_delta": {
+    "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution/result.json",
+    "sha256": "c578e2006653996ab737ddbf36df679bca937f847e0b48489303c413327ee140",
+    "checks": 26,
+    "all_passed": true,
+    "semantics": [
+      "Another actual Chinese PDF contains no coefficient clause, keeps all twelve real evidence fields: actual HTTP201 registration→HTTP201 simulation price_score32.00 for40×100/125. Three eligible entries include two equal100 competitors; zero competitor excluded.",
+      "Each of the12 real fields missing alone is rejected with the exact missing_fields; nonzero ratio above/below coefficient rejected; maximum41 absent from original rejected; unknown formula/mapped field rejected.",
+      "Mean original actually contains above1/below2 clauses; omitting either coefficient field is rejected. Complete mean registration remains usable.",
+      "All rejected registrations stage no formula objects, and exactly two positive formula registrations persist. Simulation does not implicitly save a plan."
+    ]
+  },
+  "executions": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/execution",
+      "result_sha256": "ccdf7b5863cb5f1ca83a1139c8b505fb843ae74645c656ef0830c4480fd6eab2",
+      "junit_sha256": "125e1d74a60f5e6202d4cfc67cd3f7281ea82575175af2313e1e7b713ffaa979",
+      "executed_test_sha256": "a4a41abf105e886290ab156095d16afcb2983e68f94c414ce67cc66127b02a77"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-execution",
+      "result_sha256": "c578e2006653996ab737ddbf36df679bca937f847e0b48489303c413327ee140",
+      "junit_sha256": "f778a0917b8b49c920a206c5f319fffa12eb0da4bd4567690075853eefc247c7",
+      "executed_test_sha256": "11d7cbd61dcd8fa37fc3b3cdf098521740afa1e5799d31dc3da1da1a559b8c4a"
+    }
+  ],
+  "fixture_manifests": [
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/fixture-inputs/manifest.json",
+      "sha256": "551c1641f2fdeb8e086245cf2daab21a05007069a93aeb0ebd9672312ff19eea"
+    },
+    {
+      "path": "/workspace/tender-docs/04-验证与测试/pricing-independent-checks/candidate-04/alternative-wording-inputs/manifest.json",
+      "sha256": "a3acf74f7948c2c7e24f4d39e2125bd8c0d5324aa07a8609ac966e3e43519bd3"
+    }
+  ],
+  "limits": [
+    "Actual synthetic Chinese text-layer PDFs built with ReportLab and independently extracted with PDFium; all declared page text compared exactly. Full-page parse publication rows are explicit fixture, not ordinary upload/Parser03 or general OCR-quality acceptance.",
+    "Actual nonowner PG + production pricing ASGI handlers and frozen310 loaded module root; formula-object writes/reads use explicit memory storage. No real model/OSS/Kafka/browser/shared service/DDL/owner permission mutation.",
+    "Pricing coefficient delta passes only its stated range. The independent legal wording rejection remains a release blocker until repaired and independently regressed; source not changed by QA. F04 frontend separately frozen/accepted is outside this batch.",
+    "Initial failed test had a manual helper generator teardown leak after pytest had saved assertion/JUnit/results. Only the precisely matched own completed pytest PID2197732 was terminated; subsequent helper is a proper finally-closed fixture. This cleanup is unrelated to the actual production422."
+  ],
+  "historical_input_preparation": {
+    "candidate_sha256": "3d917c3190eca381e43d647bbf7a29422faebb1653605a45784a0a76e10fba45",
+    "archived_sources_verified": 10,
+    "archived_reference_inputs_verified": 37,
+    "actual_application_tests_executed": 0,
+    "note": "Read-only preflight only; next batch must add an explicit frozen transitive closure and correct fresh historical_input02 profile, no moving main merge."
+  },
+  "paid_calls": 0,
+  "oss_requests": 0,
+  "consumers_started": 0,
+  "new_sql_applied": false,
+  "reviewed_source_modified": false
+}

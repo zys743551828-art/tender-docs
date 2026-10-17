@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "scope": "测试角色独立人工阅读产品整改规格，非应用行为验证",
+  "checks": [
+    {
+      "id": "PPR-01",
+      "location": "PRD7.4、10.3",
+      "judgment": "关闭只停止新检测；已知关键风险仍显示且可处理；已解决/有理由驳回不再阻断，历史保留。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-02",
+      "location": "PRD7.3、10.3",
+      "judgment": "来源、核心提取、已识别核心规则执行、评分四层；人工确认独立；不以10/10证明零漏提，纯评分失败不混核心分母。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-03",
+      "location": "PRD19.2",
+      "judgment": "A1、研究链路、模型业务验收三个状态独立，双路径演示不代替精度验收。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-04",
+      "location": "产品化5—6、BRD6/8",
+      "judgment": "Kafka固定，模板为按需A2；真实环境验收是依赖而非永久范围外。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U01",
+      "location": "PRD15.2、交互9/12",
+      "judgment": "用途命名为实现规格，图片只布局参考，实际按钮/文件辨认待浏览器验收。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U02",
+      "location": "PRD10.7、交互11.1",
+      "judgment": "原DOCX失败卡可就地补PDF，原项目与角色承接；不同格式独立版本且声明关系不等于受控渲染，实际受检PDF明确。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "U03—U05",
+      "location": "PRD18.3、交互12",
+      "judgment": "保留真实任务观察，不新增未经验证的复杂审批或配置。",
+      "status": "specification_clear"
+    },
+    {
+      "id": "PPR-02-correction",
+      "location": "PRD7.3、保留规约3.1",
+      "judgment": "一次补充并确认原子新包/人工决定，不能绕过逐字来源、范围条件和CAS；旧评审过期须按新包复评；人工条款因模型漏提不得消失，来源变化待核验或有据结束义务。接口与人工来源字段有机器契约，但真实命令与重提取应用验收待执行。",
+      "status": "specification_clear"
+    }
+  ],
+  "input_sha256": {
+    "02-业务与产品/AI投标工作台PRD.md": "a8f2349ce87418fc7249af0ec3ca5ac7ef3a3444d8be650ec27e2d597c4a1f9e",
+    "02-业务与产品/AI投标工作台产品化方案.md": "0447a591ae2f8ea771d08a7354b849379e87445be8060835e90335bbd53e31c2",
+    "02-业务与产品/业务需求说明书.md": "69213453dacfdc4fa7f7ae4a93f0567add7b8e2530956b0f17a8a33866f17fc4",
+    "05-技术与设计/交互与视觉设计.md": "2ee6809cc12fbb4450ff1b8b038d71c4e5fb7f8e4f361def215743de83150dc9"
+  },
+  "software_executed": 0,
+  "pending_application_cases": "application-acceptance.json",
+  "review_method": "对未变部分沿用独立阅读结论，仅复核产品Owner批准的人工补漏及重提取存续delta；原结果保持原输入",
+  "technical_candidate_sha256": "d9e53659504a3f5dcb527266582495294de738fc92c036c97987e669d12175e4"
+}
