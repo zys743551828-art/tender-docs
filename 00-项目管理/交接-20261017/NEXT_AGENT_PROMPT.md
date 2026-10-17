@@ -24,3 +24,5 @@ python tender-app/workbench/qa/verify_handoff.py --workspace /workspace --invent
 ```
 
 已有同名目录时先盘点，不覆盖。若要恢复原固定绝对路径，只在不存在 `/workspace/tender-workbench` 时建立到`tender-app/workbench`的链接；原环境仍有私有状态时不要删除旧树。后续具体初始化、profile、端口、身份、费用与资源门均先读主入口，不因上述clone成功授执行资格。
+
+命名澄清：BACKLOG中的ASSISTANT-SQL03为设计任务WIP，SQL03文件尚未写入/冻结；WORD03-FINAL指Word补PDF声明/保留字节增量03，不能与已审外来Word intake03 `b12e2e45…`混同。架构师仅只读复核交接语义，没有重做远端SHA验证或业务测试。
