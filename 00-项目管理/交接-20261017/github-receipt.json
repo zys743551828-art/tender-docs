@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "verification": "Independent fresh bare clones from GitHub, remote commit and complete tree scope checked; every selected logical file size/SHA256 matched. Git blobs deduplicated only after their bytes were independently hashed.",
+  "files_verified": 31201,
+  "unique_blobs_hashed": 5639,
+  "inventory_sha256": "4aecbd820e9dab0082ff8f6ed1d6c9adbbde9908b854f9b0acd4df58c397f8dd",
+  "repositories": [
+    {
+      "repository": "tender-app",
+      "remote_commit": "27bc63909dd176676ea918beeee745daebdb8f6a",
+      "files_verified": 7918,
+      "tree_matches_expected": true,
+      "every_file_bytes_and_sha256_match": true
+    },
+    {
+      "repository": "tender-docs",
+      "remote_commit": "b0425e8a10ae8e08b099556b6f1183062562ce75",
+      "files_verified": 23009,
+      "tree_matches_expected": true,
+      "every_file_bytes_and_sha256_match": true
+    },
+    {
+      "repository": "tender-design",
+      "remote_commit": "eeaabe8925357a9175c5fda3dee23bd9c8eae646",
+      "files_verified": 23,
+      "tree_matches_expected": true,
+      "every_file_bytes_and_sha256_match": true
+    },
+    {
+      "repository": "tender-research",
+      "remote_commit": "a32229fd13fcce6c075ad04d811df33594df59ce",
+      "files_verified": 225,
+      "tree_matches_expected": true,
+      "every_file_bytes_and_sha256_match": true
+    },
+    {
+      "repository": "tender-datasets",
+      "remote_commit": "abc657ee594f5ef46f57265d1f65e67e36270f8d",
+      "files_verified": 26,
+      "tree_matches_expected": true,
+      "every_file_bytes_and_sha256_match": true
+    }
+  ],
+  "no_application_or_provider_execution": true,
+  "branch": "handoff/2026-10-17",
+  "receipt_note": "This receipt is appended after the verified source/evidence commits. The docs repository receipt commit necessarily descends from its verified snapshot commit; original 31,201 selected bytes remain unchanged. The inventory and generated receipt documents do not self-hash.",
+  "canonical_source": "tender-app/workbench; original /workspace/tender-workbench has an unborn independent Git repository and remains locally for fixed runtimes. The published app/workbench copy is the GitHub source of truth; do not edit two trees independently. Existing source files were copied with identical bytes via hardlinks at the frozen checkpoint.",
+  "private_state": "Original private .env/.local/DB/volume data remain in the original workspace, not in GitHub. Metadata indexes and recovery/reconfiguration instructions published; source clone alone does not reconstruct original running state.",
+  "all_agents_quiescent_at_snapshot": true
+}
