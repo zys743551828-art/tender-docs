@@ -43,7 +43,7 @@
   ],
   "no_application_or_provider_execution": true,
   "branch": "handoff/2026-10-17",
-  "receipt_note": "This receipt is appended after the verified source/evidence commits. The docs repository receipt commit necessarily descends from its verified snapshot commit; original 31,201 selected bytes remain unchanged. The inventory and generated receipt documents do not self-hash.",
+  "receipt_note": "This receipt is appended after the verified source/evidence commits. The final docs commit descends from the verified snapshot commit; original 31,201 selected file bytes remain unchanged. Two generated receipt documents plus one existing source directory symlink are supplemental and verified separately; the inventory/receipts do not self-hash.",
   "canonical_source": "tender-app/workbench; original /workspace/tender-workbench has an unborn independent Git repository and remains locally for fixed runtimes. The published app/workbench copy is the GitHub source of truth; do not edit two trees independently. Existing source files were copied with identical bytes via hardlinks at the frozen checkpoint.",
   "private_state": "Original private .env/.local/DB/volume data remain in the original workspace, not in GitHub. Metadata indexes and recovery/reconfiguration instructions published; source clone alone does not reconstruct original running state.",
   "all_agents_quiescent_at_snapshot": true,
@@ -55,5 +55,16 @@
       "BACKLOG ASSISTANT-SQL03 status refers to design/task WIP; SQL03 file has not been written or frozen.",
       "WORD03-FINAL is the Word PDF declaration/retained-byte increment03; it is distinct from previously reviewed external Word intake03 b12e2e45…."
     ]
-  }
+  },
+  "supplemental_symlinks": [
+    {
+      "repository": "tender-docs",
+      "path": "04-验证与测试/authoring-page-navigation-architect-review/candidate-01/runtime/packages/domain",
+      "git_mode": "120000",
+      "target": "/workspace/tender-workbench/docs/application-composition-development-checks/runtime-preview-02/packages/domain",
+      "target_text_sha256": "e36eab5529bb0e271b8d1f8c2ae80d10ada4708c2e21bb141e9bf866c9a5c54d",
+      "referenced_target_shipped_in": "tender-app/workbench/docs/application-composition-development-checks/runtime-preview-02/packages/domain",
+      "purpose": "Existing independent page-navigation review runtime dependency; link text preserved exactly. On a new machine restore /workspace/tender-workbench mapping before running this frozen harness."
+    }
+  ]
 }
