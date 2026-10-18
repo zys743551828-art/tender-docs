@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="0.976" timestamp="2026-10-18T12:57:51.535963+00:00" hostname="70f359a2b5cc"><testcase classname="" name="tests.test_authoring_generated" time="0.000"><error message="collection failure">ImportError while importing test module '/tmp/workbench/tests/test_authoring_generated.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_authoring_generated.py:12: in &lt;module&gt;
+    from packages.authoring import generated_docx, generated_verification, templates
+packages/authoring/generated_docx.py:8: in &lt;module&gt;
+    from packages.authoring import build, content, snapshot_structure, structure_schema, structured_docx
+packages/authoring/build.py:23: in &lt;module&gt;
+    from packages.authoring.content import validate_content
+packages/authoring/content.py:8: in &lt;module&gt;
+    from packages.domain.runtime import DomainError, sha
+packages/domain/runtime.py:16: in &lt;module&gt;
+    from jsonschema import Draft202012Validator, FormatChecker
+E   ModuleNotFoundError: No module named 'jsonschema'</error></testcase><testcase classname="" name="tests.test_authoring_rich_renderer" time="0.000"><error message="collection failure">ImportError while importing test module '/tmp/workbench/tests/test_authoring_rich_renderer.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_authoring_rich_renderer.py:11: in &lt;module&gt;
+    import test_authoring_generated as generated_cases
+tests/test_authoring_generated.py:12: in &lt;module&gt;
+    from packages.authoring import generated_docx, generated_verification, templates
+packages/authoring/generated_docx.py:8: in &lt;module&gt;
+    from packages.authoring import build, content, snapshot_structure, structure_schema, structured_docx
+packages/authoring/build.py:23: in &lt;module&gt;
+    from packages.authoring.content import validate_content
+packages/authoring/content.py:8: in &lt;module&gt;
+    from packages.domain.runtime import DomainError, sha
+packages/domain/runtime.py:16: in &lt;module&gt;
+    from jsonschema import Draft202012Validator, FormatChecker
+E   ModuleNotFoundError: No module named 'jsonschema'</error></testcase></testsuite></testsuites>
