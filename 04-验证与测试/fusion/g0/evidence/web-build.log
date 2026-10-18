@@ -1,0 +1,31 @@
+
+> @tender/workbench-web@0.1.0 prebuild
+> node scripts/copy-pdf-resources.mjs
+
+
+> @tender/workbench-web@0.1.0 build
+> tsc -b && vite build
+
+vite v6.3.5 building for production...
+transforming...
+✓ 138 modules transformed.
+rendering chunks...
+[plugin vite:reporter] 
+(!) D:/workspace/tender/tender-app/workbench/apps/web/src/AssistantWorkspace.tsx is dynamically imported by D:/workspace/tender/tender-app/workbench/apps/web/src/App.tsx but also statically imported by D:/workspace/tender/tender-app/workbench/apps/web/src/AssistantDrawer.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                              0.56 kB │ gzip:   0.39 kB
+dist/assets/pdf.worker.min-CjEcRF4W.mjs  1,264.34 kB
+dist/assets/AuthoringPanel-baXt2nJh.css      0.88 kB │ gzip:   0.37 kB
+dist/assets/index-C0mQI1UM.css              57.07 kB │ gzip:  11.68 kB
+dist/assets/businessNames-D2PcdCRi.js        1.04 kB │ gzip:   0.68 kB
+dist/assets/Metrics-lSnoCXjw.js              7.72 kB │ gzip:   3.15 kB
+dist/assets/ReportPanel-CdQ1eqit.js          7.82 kB │ gzip:   3.39 kB
+dist/assets/SubmissionPanel-CD0tuQDt.js     31.07 kB │ gzip:   9.97 kB
+dist/assets/PricingPanel-DqVfC7Mr.js        32.43 kB │ gzip:  10.47 kB
+dist/assets/TaskPanel-7KtGUL-M.js           33.43 kB │ gzip:  10.71 kB
+dist/assets/Knowledge-BJJ_JPZW.js           51.08 kB │ gzip:  16.19 kB
+dist/assets/AuthoringPanel-Cj-9_Vtb.js     286.96 kB │ gzip:  91.39 kB
+dist/assets/index-BFVDa7-_.js              426.45 kB │ gzip: 129.93 kB
+dist/assets/pdf-BtCWNl9F.js                483.74 kB │ gzip: 144.80 kB
+✓ built in 1.91s

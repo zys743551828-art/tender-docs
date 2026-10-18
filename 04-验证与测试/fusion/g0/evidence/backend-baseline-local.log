@@ -1,0 +1,832 @@
+.......sssssss............FF.F........FFF..................F............ [  4%]
+......................F....................FFFFFFF...F..ssssssssssssssss [  8%]
+sssssssssssssssssssssssssssssssssss.ssssssssssssssssssssssssssssssssssss [ 12%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss........s..... [ 17%]
+.................F.F.sssssssssssssssssssssssssss........................ [ 21%]
+......................ssssssssssssssssssssEE
+=================================== ERRORS ====================================
+_ ERROR at setup of test_rich_admission_is_exact_and_external_word_still_blocks_PAGE _
+
+    @pytest.fixture
+    def rich_input():
+        snapshot = generated_cases.snapshot.__wrapped__()
+        snapshot["sections"][0]["attrs"]["title"] = "Alpha"
+        config = snapshot["authoring_structure"]["style_template"]["config"] | {
+            "margin_left_twips": 720,
+            "margin_right_twips": 720,
+        }
+        extension = snapshot["authoring_structure"]
+        extension["style_template"] = extension["style_template"] | {
+            "config": config,
+            "config_digest": sha(config),
+        }
+        extension["digest"] = sha({k: v for k, v in extension.items() if k != "digest"})
+        normalized = rich_images.normalize(rich_cases.raster(metadata=True), "image/png")
+        asset, version = str(uuid4()), str(uuid4())
+        snapshot["sections"][0]["content"] = [
+            rich_cases.table(rich_cases.row(rich_cases.cell(3))),
+            {
+                "type": "image",
+                "attrs": {
+                    "id": uuid4().hex,
+                    "asset_id": asset,
+                    "asset_revision": 1,
+                    "asset_version_id": version,
+                    "width_twips": 2400,
+                    "height_twips": 1800,
+                    "alt": "明确离线合成图",
+                    "caption": "正文数字12与120不能删除",
+                },
+            },
+        ]
+        materials = [
+            {
+                "asset_id": asset,
+                "asset_revision": 1,
+                "asset_version_id": version,
+                "normalization_proof": normalized["proof"],
+                "bytes": normalized["bytes"],
+            }
+        ]
+        base = json.loads(
+            (
+                Path(__file__).resolve().parents[1]
+                / "docs/authoring-rich-static-checks/word03-base-profile.json"
+            ).read_text()
+        )
+>       profile = rich_renderer.profile_for(base)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_authoring_rich_renderer.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+packages\authoring\rich_renderer.py:27: in profile_for
+    text_renderer.profile_for(base)  # Exact approved Word03 source/base identity; no rendering.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+base = {'identity': {'adapter_source_digest': '547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e', 'assets': {... 'PG_MAJOR', 'PG_VERSION'], ...}, 'profile_digest': 'b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18'}
+
+    def profile_for(base):
+        if (
+            not isinstance(base, dict)
+            or set(base) != {"identity", "profile_digest"}
+            or not isinstance(base["identity"], dict)
+        ):
+            raise DomainError("AUTHORING_SANDBOX_PROFILE_INVALID", "基础Word沙箱配置不完整", 503)
+        for name, digest in WORD03.items():
+            if sha(Path(sandbox.__file__).with_name(name).read_bytes()) != digest:
+>               raise DomainError(
+                    "AUTHORING_SANDBOX_DEPENDENCY_CHANGED", "已审Word沙箱端口源已变，需重新核验", 503
+                )
+E               packages.domain.runtime.DomainError: ('AUTHORING_SANDBOX_DEPENDENCY_CHANGED', '已审Word沙箱端口源已变，需重新核验', 503)
+
+packages\authoring\generated_renderer.py:39: DomainError
+_ ERROR at setup of test_even_rehashed_profile_policy_changes_fail_before_Docker[max_layout_passes-4] _
+
+    @pytest.fixture
+    def rich_input():
+        snapshot = generated_cases.snapshot.__wrapped__()
+        snapshot["sections"][0]["attrs"]["title"] = "Alpha"
+        config = snapshot["authoring_structure"]["style_template"]["config"] | {
+            "margin_left_twips": 720,
+            "margin_right_twips": 720,
+        }
+        extension = snapshot["authoring_structure"]
+        extension["style_template"] = extension["style_template"] | {
+            "config": config,
+            "config_digest": sha(config),
+        }
+        extension["digest"] = sha({k: v for k, v in extension.items() if k != "digest"})
+        normalized = rich_images.normalize(rich_cases.raster(metadata=True), "image/png")
+        asset, version = str(uuid4()), str(uuid4())
+        snapshot["sections"][0]["content"] = [
+            rich_cases.table(rich_cases.row(rich_cases.cell(3))),
+            {
+                "type": "image",
+                "attrs": {
+                    "id": uuid4().hex,
+                    "asset_id": asset,
+                    "asset_revision": 1,
+                    "asset_version_id": version,
+                    "width_twips": 2400,
+                    "height_twips": 1800,
+                    "alt": "明确离线合成图",
+                    "caption": "正文数字12与120不能删除",
+                },
+            },
+        ]
+        materials = [
+            {
+                "asset_id": asset,
+                "asset_revision": 1,
+                "asset_version_id": version,
+                "normalization_proof": normalized["proof"],
+                "bytes": normalized["bytes"],
+            }
+        ]
+        base = json.loads(
+            (
+                Path(__file__).resolve().parents[1]
+                / "docs/authoring-rich-static-checks/word03-base-profile.json"
+            ).read_text()
+        )
+>       profile = rich_renderer.profile_for(base)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_authoring_rich_renderer.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+packages\authoring\rich_renderer.py:27: in profile_for
+    text_renderer.profile_for(base)  # Exact approved Word03 source/base identity; no rendering.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+base = {'identity': {'adapter_source_digest': '547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e', 'assets': {... 'PG_MAJOR', 'PG_VERSION'], ...}, 'profile_digest': 'b1b3e5633833172d0fb535b7195e8c875e9bc063fe907d962a6fe79159407a18'}
+
+    def profile_for(base):
+        if (
+            not isinstance(base, dict)
+            or set(base) != {"identity", "profile_digest"}
+            or not isinstance(base["identity"], dict)
+        ):
+            raise DomainError("AUTHORING_SANDBOX_PROFILE_INVALID", "基础Word沙箱配置不完整", 503)
+        for name, digest in WORD03.items():
+            if sha(Path(sandbox.__file__).with_name(name).read_bytes()) != digest:
+>               raise DomainError(
+                    "AUTHORING_SANDBOX_DEPENDENCY_CHANGED", "已审Word沙箱端口源已变，需重新核验", 503
+                )
+E               packages.domain.runtime.DomainError: ('AUTHORING_SANDBOX_DEPENDENCY_CHANGED', '已审Word沙箱端口源已变，需重新核验', 503)
+
+packages\authoring\generated_renderer.py:39: DomainError
+================================== FAILURES ===================================
+_________ test_private_paths_reject_traversal_symlink_and_public_mode _________
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_private_paths_reject_trav0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000248273410A0>
+
+    def test_private_paths_reject_traversal_symlink_and_public_mode(tmp_path, monkeypatch):
+        root = tmp_path / "private"
+        root.mkdir(mode=0o700)
+        monkeypatch.setattr(security, "PRIVATE_ROOT", root)
+        outside = tmp_path / "outside"
+        outside.write_text("private")
+        with pytest.raises(security.RecoveryError):
+            security.private_path(root / ".." / "outside")
+>       (root / "link").symlink_to(outside)
+
+tests\test_application_recovery.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_private_paths_reject_trav0/private/link')
+target = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_private_paths_reject_trav0/outside')
+target_is_directory = False
+
+    def symlink_to(self, target, target_is_directory=False):
+        """
+        Make this path a symlink pointing to the target path.
+        Note the order of arguments (link, target) is the reverse of os.symlink.
+        """
+        if not hasattr(os, "symlink"):
+            raise NotImplementedError("os.symlink() not available on this system")
+>       os.symlink(target, self, target_is_directory)
+E       OSError: [WinError 1314] 客户端没有所需的特权。: 'D:\\workspace\\tender\\tender-app\\workbench\\.local\\tmp\\pytest-of-74355\\pytest-1\\test_private_paths_reject_trav0\\outside' -> 'D:\\workspace\\tender\\tender-app\\workbench\\.local\\tmp\\pytest-of-74355\\pytest-1\\test_private_paths_reject_trav0\\private\\link'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1386: OSError
+_____________________ test_private_receipts_are_exclusive _____________________
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_private_receipts_are_excl0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000024830CF87A0>
+
+    def test_private_receipts_are_exclusive(tmp_path, monkeypatch):
+        monkeypatch.setattr(security, "PRIVATE_ROOT", tmp_path)
+        tmp_path.chmod(0o700)
+        path = tmp_path / "receipt.json"
+>       security.save(path, {"stage": "first"})
+
+tests\test_application_recovery.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+deploy\application_recovery\security.py:92: in save
+    path = private_path(path, exists=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_private_receipts_are_excl0/receipt.json')
+
+    def private_path(path, *, exists=True):
+        path = Path(path).absolute()
+        if ".." in path.parts:
+            raise RecoveryError("PRIVATE_PATH_TRAVERSAL")
+        if not path.is_relative_to(PRIVATE_ROOT) or path == PRIVATE_ROOT:
+            raise RecoveryError("PRIVATE_APPLICATION_ROOT_REQUIRED")
+        for ancestor in (path, *path.parents):
+            if ancestor == PRIVATE_ROOT.parent:
+                break
+            if ancestor.is_symlink() or (ancestor.exists() and ancestor.stat().st_mode & 0o077):
+>               raise RecoveryError("PRIVATE_PATH_MODE_OR_SYMLINK")
+E               deploy.application_recovery.security.RecoveryError: PRIVATE_PATH_MODE_OR_SYMLINK
+
+deploy\application_recovery\security.py:85: RecoveryError
+____________________ test_exact_reviewed_308_and_15_inputs ____________________
+
+    def test_exact_reviewed_308_and_15_inputs():
+        baseline = Path(
+            "/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json"
+        )
+>       document, sql_bytes = cluster.validate_inputs(baseline)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_application_recovery.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+deploy\application_recovery\cluster.py:20: in validate_inputs
+    if s.file_sha(baseline) != "76dc6abed9ae344dbf755a3c0d237e68f3a420b042fac6193debe2e16116f38f":
+       ^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\security.py:71: in file_sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\application-recovery-development-checks\\protocol-02\\baseline-inputs.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+________ test_preloaded_live_provider_cannot_be_rebound_by_path_order _________
+
+    def test_preloaded_live_provider_cannot_be_rebound_by_path_order():
+>       selected = binding.FrozenBackend(backend())
+                                         ^^^^^^^^^
+
+tests\test_application_recovery_binding.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_application_recovery_binding.py:20: in backend
+    return cluster.validate_inputs(BASELINE)[0]["backend"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\cluster.py:20: in validate_inputs
+    if s.file_sha(baseline) != "76dc6abed9ae344dbf755a3c0d237e68f3a420b042fac6193debe2e16116f38f":
+       ^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\security.py:71: in file_sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\application-recovery-development-checks\\protocol-02\\baseline-inputs.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+______________ test_namespace_cannot_append_a_second_search_root ______________
+
+    def test_namespace_cannot_append_a_second_search_root():
+>       selected = binding.FrozenBackend(backend())
+                                         ^^^^^^^^^
+
+tests\test_application_recovery_binding.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_application_recovery_binding.py:20: in backend
+    return cluster.validate_inputs(BASELINE)[0]["backend"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\cluster.py:20: in validate_inputs
+    if s.file_sha(baseline) != "76dc6abed9ae344dbf755a3c0d237e68f3a420b042fac6193debe2e16116f38f":
+       ^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\security.py:71: in file_sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\application-recovery-development-checks\\protocol-02\\baseline-inputs.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+___________ test_missing_frozen_module_never_falls_through_to_live ____________
+
+    def test_missing_frozen_module_never_falls_through_to_live():
+>       selected = binding.FrozenBackend(backend())
+                                         ^^^^^^^^^
+
+tests\test_application_recovery_binding.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_application_recovery_binding.py:20: in backend
+    return cluster.validate_inputs(BASELINE)[0]["backend"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\cluster.py:20: in validate_inputs
+    if s.file_sha(baseline) != "76dc6abed9ae344dbf755a3c0d237e68f3a420b042fac6193debe2e16116f38f":
+       ^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\security.py:71: in file_sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\application-recovery-development-checks\\protocol-02\\baseline-inputs.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+______ test_real_fixed_main_knowledge_and_provider_import_in_clean_child ______
+
+    def test_real_fixed_main_knowledge_and_provider_import_in_clean_child():
+        # Imports actual 07 source through the verified loader, without app lifespan or DB access.
+        script = """import json,sys
+    sys.path.insert(0,sys.argv[1])
+    from deploy.application_recovery import binding
+    selected=binding.install(json.load(sys.stdin))
+    import apps.api.main
+    import packages.knowledge.repository
+    import packages.domain.providers.oss
+    origins=selected.origins()
+    print(json.dumps({"count":len(origins),"origins":origins}))
+    """
+        env = security.api_environment(
+            "host=127.0.0.1 port=1 dbname=synthetic user=only_api password=fake"
+        )
+        # Poisoned paths/cloud/owner in ambient parent must not reach -I child.
+        previous = os.environ.get("PYTHONPATH")
+        os.environ["PYTHONPATH"] = str(security.ROOT)
+        try:
+            result = subprocess.run(
+                [sys.executable, "-I", "-c", script, str(security.ROOT)],
+>               input=json.dumps(backend()).encode(),
+                                 ^^^^^^^^^
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                env=env,
+                timeout=30,
+                check=False,
+            )
+
+tests\test_application_recovery_binding.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_application_recovery_binding.py:20: in backend
+    return cluster.validate_inputs(BASELINE)[0]["backend"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\cluster.py:20: in validate_inputs
+    if s.file_sha(baseline) != "76dc6abed9ae344dbf755a3c0d237e68f3a420b042fac6193debe2e16116f38f":
+       ^^^^^^^^^^^^^^^^^^^^
+deploy\application_recovery\security.py:71: in file_sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/application-recovery-development-checks/protocol-02/baseline-inputs.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\application-recovery-development-checks\\protocol-02\\baseline-inputs.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+__ test_seed_covers_current_required_columns_and_records_all_keys_before_put __
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000024830BFB440>
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_seed_covers_current_requi0')
+
+    def test_seed_covers_current_required_columns_and_records_all_keys_before_put(
+        monkeypatch, tmp_path
+    ):
+        saved, puts = {}, []
+        monkeypatch.setattr(fixture.binding, "require", lambda: None)
+        monkeypatch.setattr(s, "save", lambda path, value: saved.__setitem__(Path(path).name, value))
+        port = Mock()
+    
+        def put(**kwargs):
+            intent = saved["object-put-intent.json"]
+            assert len(intent["objects"]) == 7
+            assert kwargs["Key"] in {item["key"] for item in intent["objects"].values()}
+            puts.append(kwargs["Key"])
+    
+        port.put_object.side_effect = put
+        monkeypatch.setattr(fixture.archive, "object_port", lambda _: port)
+        connection = Mock()
+        connection.__enter__ = Mock(return_value=connection)
+        connection.__exit__ = Mock(return_value=False)
+        monkeypatch.setattr(fixture.psycopg, "connect", lambda *args, **kwargs: connection)
+        monkeypatch.setattr(s, "connection_dsn", lambda *args: "synthetic-only")
+        schema = Path(
+            "/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/domain.sql"
+>       ).read_text()
+          ^^^^^^^^^^^
+
+tests\test_application_recovery_fixture.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/historical-input-initialization-checks/candidate02/sql-inputs/packages/contracts/sql/domain.sql')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\historical-input-initialization-checks\\candidate02\\sql-inputs\\packages\\contracts\\sql\\domain.sql'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+____ test_local_object_traversal_and_external_address_rejected[../escape] _____
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an0')
+key = '../escape'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830D32F30>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an0')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+___ test_local_object_traversal_and_external_address_rejected[a/../escape] ____
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an1')
+key = 'a/../escape'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830D31BE0>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an1')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+____ test_local_object_traversal_and_external_address_rejected[/absolute] _____
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an2')
+key = '/absolute'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830A468D0>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an2')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+_______ test_local_object_traversal_and_external_address_rejected[a//b] _______
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an3')
+key = 'a//b'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830D33B30>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an3')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+_______ test_local_object_traversal_and_external_address_rejected[a\\b] _______
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an4')
+key = 'a\\b'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830BFA420>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an4')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+_ test_local_object_traversal_and_external_address_rejected[https://example.com/object] _
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an5')
+key = 'https://example.com/object'
+
+    @pytest.mark.parametrize(
+        "key", ["../escape", "a/../escape", "/absolute", "a//b", "a\\b", "https://example.com/object"]
+    )
+    def test_local_object_traversal_and_external_address_rejected(tmp_path, key):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830A44E90>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_traversal_an5')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+______________ test_local_object_exact_bytes_and_symlink_refusal ______________
+
+tmp_path = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_exact_bytes_0')
+
+    def test_local_object_exact_bytes_and_symlink_refusal(tmp_path):
+        tmp_path.chmod(0o700)
+>       store = LocalObjects(tmp_path)
+                ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_assistant_browser_fixture.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <qa.assistant_browser_fixture.local_storage.LocalObjects object at 0x0000024830A44C50>
+root = WindowsPath('D:/workspace/tender/tender-app/workbench/.local/tmp/pytest-of-74355/pytest-1/test_local_object_exact_bytes_0')
+
+    def __init__(self, root: Path):
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        if root.is_symlink() or root.stat().st_mode & 0o077:
+>           raise ValueError("Private local fixture directory required")
+E           ValueError: Private local fixture directory required
+
+qa\assistant_browser_fixture\local_storage.py:17: ValueError
+______ test_network_guard_blocks_http_and_nonloopback_but_mock_survives _______
+
+    def test_network_guard_blocks_http_and_nonloopback_but_mock_survives():
+        facility = Path(__file__).resolve().parents[1] / "qa/assistant_browser_fixture"
+        code = """
+    import sys, socket, asyncio, httpx
+    sys.path.insert(0, sys.argv[1])
+    from safety import install_network_guard
+    install_network_guard()
+    for url in ['https://api.deepseek.com/v1/chat/completions', 'http://127.0.0.1:1']:
+        try: httpx.get(url, trust_env=False)
+        except RuntimeError as error: assert 'blocks real HTTP' in str(error)
+        else: raise AssertionError('HTTP was not blocked')
+    try: socket.socket().connect(('198.51.100.1',443))
+    except RuntimeError as error: assert 'non-loopback' in str(error)
+    else: raise AssertionError('socket was not blocked')
+    with httpx.Client(transport=httpx.MockTransport(lambda request: httpx.Response(200,json={'explicit_mock':True}))) as client:
+        assert client.get('https://api.deepseek.com').json()['explicit_mock']
+    async def probe():
+        async with httpx.AsyncClient(trust_env=False) as client:
+            try: await client.get('https://api.deepseek.com')
+            except RuntimeError as error: assert 'blocks real HTTP' in str(error)
+            else: raise AssertionError('Async HTTP was not blocked')
+    asyncio.run(probe())
+    """
+        result = subprocess.run(
+            [sys.executable, "-I", "-c", code, str(facility)],
+            capture_output=True,
+            text=True,
+            timeout=20,
+            env={"PATH": os.defpath},
+        )
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: None
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['D:\\workspace\\tender\\tender-app\\workbench\\.venv\\Scripts\\python.exe', '-I', '-c', "\nimpo...n(probe())\n", 'D:\\workspace\\tender\\tender-app\\workbench\\qa\\assistant_browser_fixture'], returncode=1, stdout='').returncode
+
+tests\test_assistant_browser_fixture.py:149: AssertionError
+________ test_generated_port_rejects_before_any_sandbox_or_model_call _________
+
+snapshot = {'authoring_structure': {'digest': '1945d8c1adda4e0bfb1b626a874e7c8397b1b4ddac3a273e809f665f5aac2b10', 'directory_temp...f4c6a895163c461eb6dfe5e8d8bebed97f442bcdadbc44db045ebcd5cc3e5a', 'snapshot_id': '9dab6203-056e-434e-ac4a-75f3310ff4b9'}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000024830D0F830>
+
+    def test_generated_port_rejects_before_any_sandbox_or_model_call(snapshot, monkeypatch):
+        import json
+        from pathlib import Path
+    
+        from packages.authoring import generated_renderer
+    
+        public = Path(
+            os.environ.get(
+                "AUTHORING_GENERATED_BASE_PROFILE_FIXTURE",
+                "/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/renderer-profile.json",
+            )
+        )
+>       base = json.loads(public.read_text())
+                          ^^^^^^^^^^^^^^^^^^
+
+tests\test_authoring_generated.py:206: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/renderer-profile.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\word-intake-development-checks\\candidate-03\\renderer-profile.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+___________ test_prepare_positive_is_pure_and_preserves_body_digits ___________
+
+snapshot = {'authoring_structure': {'digest': '40f747fca3a165e8483ec6a0047111cc3b7f2f5ea3f548ab0fc91cc93f2634a2', 'directory_temp...f4c6a895163c461eb6dfe5e8d8bebed97f442bcdadbc44db045ebcd5cc3e5a', 'snapshot_id': '0245dbdc-852a-41b4-b6ef-4a3a45388ea1'}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000024830F836E0>
+
+    def test_prepare_positive_is_pure_and_preserves_body_digits(snapshot, monkeypatch):
+        import json
+        from pathlib import Path
+    
+        from packages.authoring import generated_renderer
+    
+        public = Path(
+            os.environ.get(
+                "AUTHORING_GENERATED_BASE_PROFILE_FIXTURE",
+                "/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/renderer-profile.json",
+            )
+        )
+>       profile = generated_renderer.profile_for(json.loads(public.read_text()))
+                                                            ^^^^^^^^^^^^^^^^^^
+
+tests\test_authoring_generated.py:259: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('/workspace/tender-docs/04-验证与测试/word-intake-development-checks/candidate-03/renderer-profile.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '\\workspace\\tender-docs\\04-验证与测试\\word-intake-development-checks\\candidate-03\\renderer-profile.json'
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1013: FileNotFoundError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:37
+  D:\workspace\tender\tender-app\workbench\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_assistant_browser_fixture.py::test_network_guard_blocks_http_and_nonloopback_but_mock_survives
+  D:\workspace\tender\tender-app\workbench\.venv\Lib\site-packages\_pytest\threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-2 (_readerthread)
+  
+  Traceback (most recent call last):
+    File "C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\threading.py", line 1075, in _bootstrap_inner
+      self.run()
+    File "C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\threading.py", line 1012, in run
+      self._target(*self._args, **self._kwargs)
+    File "C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1599, in _readerthread
+      buffer.append(fh.read())
+                    ^^^^^^^^^
+    File "<frozen codecs>", line 322, in decode
+  UnicodeDecodeError: 'utf-8' codec can't decode byte 0xce in position 436: invalid continuation byte
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\workspace\tender\tender-app\workbench\.local\backend-baseline-local.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_application_recovery.py::test_private_paths_reject_traversal_symlink_and_public_mode
+FAILED tests/test_application_recovery.py::test_private_receipts_are_exclusive
+FAILED tests/test_application_recovery.py::test_exact_reviewed_308_and_15_inputs
+FAILED tests/test_application_recovery_binding.py::test_preloaded_live_provider_cannot_be_rebound_by_path_order
+FAILED tests/test_application_recovery_binding.py::test_namespace_cannot_append_a_second_search_root
+FAILED tests/test_application_recovery_binding.py::test_missing_frozen_module_never_falls_through_to_live
+FAILED tests/test_application_recovery_binding.py::test_real_fixed_main_knowledge_and_provider_import_in_clean_child
+FAILED tests/test_application_recovery_fixture.py::test_seed_covers_current_required_columns_and_records_all_keys_before_put
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[../escape]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[a/../escape]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[/absolute]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[a//b]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[a\\b]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_traversal_and_external_address_rejected[https://example.com/object]
+FAILED tests/test_assistant_browser_fixture.py::test_local_object_exact_bytes_and_symlink_refusal
+FAILED tests/test_assistant_browser_fixture.py::test_network_guard_blocks_http_and_nonloopback_but_mock_survives
+FAILED tests/test_authoring_generated.py::test_generated_port_rejects_before_any_sandbox_or_model_call
+FAILED tests/test_authoring_generated.py::test_prepare_positive_is_pure_and_preserves_body_digits
+ERROR tests/test_authoring_rich_renderer.py::test_rich_admission_is_exact_and_external_word_still_blocks_PAGE
+ERROR tests/test_authoring_rich_renderer.py::test_even_rehashed_profile_policy_changes_fail_before_Docker[max_layout_passes-4]
+!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 20 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+18 failed, 184 passed, 200 skipped, 2 warnings, 2 errors in 5.35s

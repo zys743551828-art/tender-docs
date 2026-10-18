@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.199" timestamp="2026-10-18T20:11:36.463165+08:00" hostname="zhangyansong"><testcase classname="tests.test_bootstrap_role_isolation_pg" name="test_real_effective_privilege_pollution_is_rejected[pg17_maintain]" time="0.047"><failure message="Failed: DID NOT RAISE &lt;class 'deploy.bootstrap_fresh.BootstrapError'&gt;">acl_database = &lt;psycopg.Connection [IDLE] (host=127.0.0.1 port=15547 user=postgres database=fusion_role_acl) at 0x26cf7ffbf20&gt;
+name = 'pg17_maintain'
+grant = 'GRANT MAINTAIN ON design.business_data TO fusion_acl_login'
+revoke = 'REVOKE MAINTAIN ON design.business_data FROM fusion_acl_login'
+error = 'FORBIDDEN_EFFECTIVE_BUSINESS_PRIVILEGES'
+
+    @pytest.mark.parametrize("name,grant,revoke,error", FAULTS, ids=[row[0] for row in FAULTS])
+    def test_real_effective_privilege_pollution_is_rejected(acl_database, name, grant, revoke, error):
+        acl_database.execute(grant)
+        try:
+            with psycopg.connect(login_dsn()) as login:
+&gt;               with pytest.raises(fresh.BootstrapError, match=error):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               Failed: DID NOT RAISE &lt;class 'deploy.bootstrap_fresh.BootstrapError'&gt;
+
+tests\test_bootstrap_role_isolation_pg.py:160: Failed</failure></testcase><testcase classname="tests.test_bootstrap_role_isolation_pg" name="test_real_effective_privilege_pollution_is_rejected[inherited_allowed_function_owner]" time="0.023"><failure message="Failed: DID NOT RAISE &lt;class 'deploy.bootstrap_fresh.BootstrapError'&gt;">acl_database = &lt;psycopg.Connection [IDLE] (host=127.0.0.1 port=15547 user=postgres database=fusion_role_acl) at 0x26cf7ffbf20&gt;
+name = 'inherited_allowed_function_owner'
+grant = 'ALTER FUNCTION design.assistant_reconcile_budget(uuid,text,bigint,text,design.sha256) OWNER TO tender_assistant_budget_admin'
+revoke = 'ALTER FUNCTION design.assistant_reconcile_budget(uuid,text,bigint,text,design.sha256) OWNER TO postgres'
+error = 'FORBIDDEN_EFFECTIVE_BUSINESS_PRIVILEGES'
+
+    @pytest.mark.parametrize("name,grant,revoke,error", FAULTS, ids=[row[0] for row in FAULTS])
+    def test_real_effective_privilege_pollution_is_rejected(acl_database, name, grant, revoke, error):
+        acl_database.execute(grant)
+        try:
+            with psycopg.connect(login_dsn()) as login:
+&gt;               with pytest.raises(fresh.BootstrapError, match=error):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               Failed: DID NOT RAISE &lt;class 'deploy.bootstrap_fresh.BootstrapError'&gt;
+
+tests\test_bootstrap_role_isolation_pg.py:160: Failed</failure></testcase></testsuite></testsuites>
