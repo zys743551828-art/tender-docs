@@ -1,0 +1,46 @@
+{
+  "branch": "fusion/bid-workbench",
+  "purpose": "全新整份标书系统；Codex代码主线，当前dev机制与视觉供体；无旧业务数据迁移",
+  "repositories": [
+    {
+      "name": "tender-app",
+      "start": "27bc63909dd176676ea918beeee745daebdb8f6a",
+      "source": "codex-handoff",
+      "donor": "45a5921011fa22f400482f73710e96a32b916082",
+      "checkout_changed": false
+    },
+    {
+      "name": "tender-docs",
+      "start": "dbbce7098754ae3fc39014c16c9ab3d1ee2665af",
+      "source": "dev",
+      "codex_reference": "f1e5c36c1a818668c3f61a111a0443494515bae9",
+      "checkout_changed": true
+    },
+    {
+      "name": "tender-research",
+      "start": "a32229fd13fcce6c075ad04d811df33594df59ce",
+      "source": "codex-handoff",
+      "donor": "9ed745c10874819060d792deb1b9e47216f1e60c",
+      "checkout_changed": false
+    },
+    {
+      "name": "tender-design",
+      "start": "eeaabe8925357a9175c5fda3dee23bd9c8eae646",
+      "source": "codex-handoff",
+      "checkout_changed": false
+    },
+    {
+      "name": "tender-datasets",
+      "start": "abc657ee594f5ef46f57265d1f65e67e36270f8d",
+      "source": "codex-handoff",
+      "checkout_changed": false
+    }
+  ],
+  "execution_record": "创建时的起点与工作目录操作记录；后续开发不改起点，也不将checkout_changed当实时状态",
+  "task_source": "标书工作台融合实施计划.md",
+  "task_count": 120,
+  "work_package_count": 15,
+  "automation": "PAUSED，不恢复",
+  "main_merge": "不得自动合并",
+  "deployment_change": false
+}
