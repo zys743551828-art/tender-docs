@@ -1,0 +1,110 @@
+[
+  {
+    "nodeid": "tests.test_parsing_http.test_real_parser_http_auth_digest_and_bytes",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_http.py:16: in client\n    with TestClient(server.app) as client:\n         ^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:680: in __enter__\n    portal.call(self.wait_startup)\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:340: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:715: in wait_startup\n    await receive()\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:706: in receive\n    self.task.result()\n/usr/local/lib/python3.12/concurrent/futures/_base.py:449: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:696: in lifespan\n    await self.app(scope, self.stream_receive.receive, self.stream_send.send)\n/usr/local/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__\n    await super().__call__(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/applications.py:112: in __call__\n    await self.middleware_stack(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py:152: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py:100: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py:48: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:714: in __call__\n    await self.middleware_stack(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:723: in app\n    await self.lifespan(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:692: in lifespan\n    async with self.lifespan_context(app) as maybe_state:\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/contextlib.py:210: in __aenter__\n    return await anext(self.gen)\n           ^^^^^^^^^^^^^^^^^^^^^\npackages/parsing/server.py:26: in lifespan\n    parser = LocalParser()\n             ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_http.test_runtime_busy_never_runs_parallel_native_parsers",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_http.py:16: in client\n    with TestClient(server.app) as client:\n         ^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:680: in __enter__\n    portal.call(self.wait_startup)\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:340: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:715: in wait_startup\n    await receive()\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:706: in receive\n    self.task.result()\n/usr/local/lib/python3.12/concurrent/futures/_base.py:449: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/site-packages/starlette/testclient.py:696: in lifespan\n    await self.app(scope, self.stream_receive.receive, self.stream_send.send)\n/usr/local/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__\n    await super().__call__(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/applications.py:112: in __call__\n    await self.middleware_stack(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py:152: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py:100: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py:48: in __call__\n    await self.app(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:714: in __call__\n    await self.middleware_stack(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:723: in app\n    await self.lifespan(scope, receive, send)\n/usr/local/lib/python3.12/site-packages/starlette/routing.py:692: in lifespan\n    async with self.lifespan_context(app) as maybe_state:\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/contextlib.py:210: in __aenter__\n    return await anext(self.gen)\n           ^^^^^^^^^^^^^^^^^^^^^\npackages/parsing/server.py:26: in lifespan\n    parser = LocalParser()\n             ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_http.test_port_validates_result_geometry_and_text",
+    "kind": "failure",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_http.py:68: in test_port_validates_result_geometry_and_text\n    parser = server.LocalParser()\n             ^^^^^^^^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_actual_bytes_page_rotation_text_and_blank",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_chinese_scanned_page_real_ocr_and_explicit_visual_gaps",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_ruled_grid_has_cells_and_bbox",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_vector_diagram_is_not_complete_text_read",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_model_asset_tamper_rejected",
+    "kind": "failure",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:111: in test_model_asset_tamper_rejected\n    (source / (name + \".traineddata\")).read_bytes()\n/usr/local/lib/python3.12/pathlib.py:1019: in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.12/pathlib.py:1013: in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/workbench/.local/parsing-models/eng.traineddata'"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_broken_pdf_and_bbox_are_rejected",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_invisible_text_layer_does_not_claim_complete_read",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_table_does_not_hide_unrelated_diagram",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_mixed_visible_and_hidden_text_never_cites_hidden_rule",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_fully_transparent_text_is_not_evidence",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_white_text_routes_rendering_without_hiding_visible_white_text",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_parsing_local.test_occluded_or_clipped_text_never_becomes_reliable_evidence",
+    "kind": "error",
+    "root_cause": "missing exact real OCR models/runtime",
+    "details": "tests/test_parsing_local.py:17: in parser\n    return LocalParser()\n           ^^^^^^^^^^^^^\npackages/parsing/core.py:71: in __init__\n    raise ParseError(\"PARSING_ASSET_DIGEST_MISMATCH\")\nE   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH"
+  },
+  {
+    "nodeid": "tests.test_task_actual_contracts.test_actual_directory_request_response_and_read_projections_override_old_target",
+    "kind": "failure",
+    "root_cause": "actual OpenAPI extender called on app without registered package routes",
+    "details": "tests/test_task_actual_contracts.py:16: in test_actual_directory_request_response_and_read_projections_override_old_target\n    actual = implemented_openapi(app)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napps/api/export_openapi.py:116: in implemented_openapi\n    extend_bid_packages(actual)\npackages/contracts/bid_package_api.py:99: in extend_openapi\n    op = actual[\"paths\"][base + suffix][method]\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: '/api/v1/bids/{bid_id}/packages'"
+  },
+  {
+    "nodeid": "tests.test_task_actual_contracts.test_draft_contracts_are_mounted_only_when_actual_router_is_registered",
+    "kind": "failure",
+    "root_cause": "actual OpenAPI extender called on app without registered package routes",
+    "details": "tests/test_task_actual_contracts.py:48: in test_draft_contracts_are_mounted_only_when_actual_router_is_registered\n    actual = implemented_openapi(app)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napps/api/export_openapi.py:116: in implemented_openapi\n    extend_bid_packages(actual)\npackages/contracts/bid_package_api.py:99: in extend_openapi\n    op = actual[\"paths\"][base + suffix][method]\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: '/api/v1/bids/{bid_id}/packages'"
+  },
+  {
+    "nodeid": "tests.test_task_actual_contracts.test_task_drafts_do_not_replace_authoring_draft_contracts_in_combined_main",
+    "kind": "failure",
+    "root_cause": "actual OpenAPI extender called on app without registered package routes",
+    "details": "tests/test_task_actual_contracts.py:68: in test_task_drafts_do_not_replace_authoring_draft_contracts_in_combined_main\n    actual = implemented_openapi(app)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napps/api/export_openapi.py:116: in implemented_openapi\n    extend_bid_packages(actual)\npackages/contracts/bid_package_api.py:99: in extend_openapi\n    op = actual[\"paths\"][base + suffix][method]\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   KeyError: '/api/v1/bids/{bid_id}/packages'"
+  }
+]

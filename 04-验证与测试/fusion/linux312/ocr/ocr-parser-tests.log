@@ -1,0 +1,12 @@
+................sss                                                      [100%]
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+  /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------------- generated xml file: /evidence/ocr-parser-tests.xml --------------
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_parse_readable_integration.py:75: 需隔离非owner PG
+SKIPPED [2] tests/test_parse_readable_integration.py:170: 需隔离非owner PG
+16 passed, 3 skipped, 1 warning in 3.17s

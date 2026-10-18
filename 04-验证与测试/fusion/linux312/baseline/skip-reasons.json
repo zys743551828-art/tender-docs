@@ -1,0 +1,3803 @@
+{
+  "count": 865,
+  "reason_groups": [
+    {
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access",
+      "count": 66
+    },
+    {
+      "reason": "requires explicit isolated fusion_package_repo DB",
+      "count": 56
+    },
+    {
+      "reason": "Explicit disposable reconciliation PG17 DSN required",
+      "count": 55
+    },
+    {
+      "reason": "requires explicit isolated package API PG17",
+      "count": 47
+    },
+    {
+      "reason": "需要独立真实PG/S3受限API/Worker环境",
+      "count": 41
+    },
+    {
+      "reason": "需显式本地非owner PG环境；不发远端",
+      "count": 32
+    },
+    {
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务",
+      "count": 31
+    },
+    {
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls",
+      "count": 28
+    },
+    {
+      "reason": "需要专用真实PG",
+      "count": 28
+    },
+    {
+      "reason": "需要知识RAG独立新库",
+      "count": 27
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_live database required",
+      "count": 25
+    },
+    {
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务",
+      "count": 25
+    },
+    {
+      "reason": "Explicit fresh reviewed RICH nonowner profile required",
+      "count": 20
+    },
+    {
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls",
+      "count": 20
+    },
+    {
+      "reason": "需独立真实PG非owner API账号",
+      "count": 18
+    },
+    {
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile",
+      "count": 17
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_aggregate database required",
+      "count": 16
+    },
+    {
+      "reason": "requires explicit local disposable PG17 admin",
+      "count": 15
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_target database required",
+      "count": 14
+    },
+    {
+      "reason": "Explicit fresh complete-A2 restricted PG profile required",
+      "count": 14
+    },
+    {
+      "reason": "requires an explicitly isolated ACL database",
+      "count": 14
+    },
+    {
+      "reason": "Explicit isolated nonowner PG opt-in",
+      "count": 14
+    },
+    {
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business",
+      "count": 13
+    },
+    {
+      "reason": "Dedicated disposable fusion_budget_lock database required",
+      "count": 11
+    },
+    {
+      "reason": "需独立非owner PG",
+      "count": 11
+    },
+    {
+      "reason": "需专用真实PG",
+      "count": 11
+    },
+    {
+      "reason": "Explicit nonowner PG integration profile required",
+      "count": 11
+    },
+    {
+      "reason": "Requires separately fresh reviewed C",
+      "count": 11
+    },
+    {
+      "reason": "Requires PM fresh historical E; no DDL or external calls",
+      "count": 10
+    },
+    {
+      "reason": "Isolated reviewed nonowner Word/application DB only",
+      "count": 9
+    },
+    {
+      "reason": "专用PG显式执行",
+      "count": 9
+    },
+    {
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB",
+      "count": 8
+    },
+    {
+      "reason": "Explicit fresh closure schema opt-in",
+      "count": 7
+    },
+    {
+      "reason": "需要独立实际PG机制库",
+      "count": 7
+    },
+    {
+      "reason": "Word fresh非owner角色库",
+      "count": 7
+    },
+    {
+      "reason": "requires explicit fusion_package_acl database",
+      "count": 6
+    },
+    {
+      "reason": "需隔离PG/S3/本地转换器",
+      "count": 6
+    },
+    {
+      "reason": "需显式真实隔离PG/原生OSS环境",
+      "count": 6
+    },
+    {
+      "reason": "Explicit real model/PG opt-in",
+      "count": 6
+    },
+    {
+      "reason": "Explicit nonowner isolated PG opt-in",
+      "count": 6
+    },
+    {
+      "reason": "Isolated nonowner PG only",
+      "count": 5
+    },
+    {
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker",
+      "count": 5
+    },
+    {
+      "reason": "Requires explicit isolated PG fixture database",
+      "count": 5
+    },
+    {
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库",
+      "count": 5
+    },
+    {
+      "reason": "Explicit fresh reviewed application DB only",
+      "count": 4
+    },
+    {
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls",
+      "count": 4
+    },
+    {
+      "reason": "Explicit isolated nonowner PG test only",
+      "count": 4
+    },
+    {
+      "reason": "Requires NEW reviewed complete release-extension DB; never applies DDL",
+      "count": 3
+    },
+    {
+      "reason": "需隔离非owner PG",
+      "count": 3
+    },
+    {
+      "reason": "Explicit isolated PG opt-in",
+      "count": 3
+    },
+    {
+      "reason": "Explicit real local model/PG opt-in",
+      "count": 3
+    },
+    {
+      "reason": "需要独立真实PG/S3机制环境",
+      "count": 3
+    },
+    {
+      "reason": "New reviewed 19SQL explicit profile only",
+      "count": 2
+    },
+    {
+      "reason": "需独立PG",
+      "count": 2
+    },
+    {
+      "reason": "需要独立真实PG机制库",
+      "count": 2
+    },
+    {
+      "reason": "Explicit isolated nonowner DB",
+      "count": 2
+    },
+    {
+      "reason": "专用PG无费执行",
+      "count": 2
+    },
+    {
+      "reason": "实际固定Docker与Parser03本地端口",
+      "count": 2
+    },
+    {
+      "reason": "Word fresh库的受限PG机制",
+      "count": 2
+    },
+    {
+      "reason": "仅fresh合成PG反例",
+      "count": 2
+    },
+    {
+      "reason": "Old 17SQL explicit profile only",
+      "count": 1
+    },
+    {
+      "reason": "需真实LibreOffice及中文字体",
+      "count": 1
+    },
+    {
+      "reason": "explicit isolated real backup/restore profile required",
+      "count": 1
+    },
+    {
+      "reason": "explicit local PG profile required; no remote object calls",
+      "count": 1
+    },
+    {
+      "reason": "explicit isolated native OSS profile required; creates only synthetic own keys",
+      "count": 1
+    },
+    {
+      "reason": "Read-only old-schema API-role probe, no fixtures/DDL",
+      "count": 1
+    },
+    {
+      "reason": "Needs NEW reviewed fresh input DB and local parser environment",
+      "count": 1
+    },
+    {
+      "reason": "需要实际本地BGE/重排运行时",
+      "count": 1
+    },
+    {
+      "reason": "仅PM授权专用topic/group后运行",
+      "count": 1
+    },
+    {
+      "reason": "仅精确自有合成原件的原生OSS验收",
+      "count": 1
+    },
+    {
+      "reason": "只读连接明确缺少知识RAG表的受限API库",
+      "count": 1
+    },
+    {
+      "reason": "Separate actual old-schema probe",
+      "count": 1
+    },
+    {
+      "reason": "Read-only nonowner old schema; never writes session/fixtures or applies SQL",
+      "count": 1
+    },
+    {
+      "reason": "Explicit nonowner profile without release extension only",
+      "count": 1
+    },
+    {
+      "reason": "Needs independent nonowner API LOGIN on a schema without new model governance SQL",
+      "count": 1
+    },
+    {
+      "reason": "仅显式授权的独立命名空间原生OSS探针",
+      "count": 1
+    },
+    {
+      "reason": "Explicit nonowner PG only",
+      "count": 1
+    },
+    {
+      "reason": "Explicit restricted PG opt-in",
+      "count": 1
+    },
+    {
+      "reason": "需要专用真实PG/Kafka/S3开发环境",
+      "count": 1
+    },
+    {
+      "reason": "需真实本地S3验证合成原件字节身份",
+      "count": 1
+    },
+    {
+      "reason": "可选真实Docker转换，未配置不冒充已执行",
+      "count": 1
+    },
+    {
+      "reason": "实际隔离Docker转换",
+      "count": 1
+    },
+    {
+      "reason": "全新独立Word数据库+OSS前缀",
+      "count": 1
+    },
+    {
+      "reason": "原生固定Docker旧成功PDF与新失败机制",
+      "count": 1
+    }
+  ],
+  "tests": [
+    {
+      "nodeid": "tests.test_application_composition_integration.test_actual_capabilities_login_schema_and_no_formal_or_paid_upgrade",
+      "reason": "Explicit fresh reviewed application DB only"
+    },
+    {
+      "nodeid": "tests.test_application_composition_integration.test_lifecycle_closure_typed_task_replay_and_ordinary_new_work_guard",
+      "reason": "Explicit fresh reviewed application DB only"
+    },
+    {
+      "nodeid": "tests.test_application_composition_integration.test_archived_historical_pending_subject_is_explicit_exception_not_current_identity",
+      "reason": "Explicit fresh reviewed application DB only"
+    },
+    {
+      "nodeid": "tests.test_application_composition_integration.test_stage_a_protocol_immutable_replay_and_registry_do_not_promote_formal_models",
+      "reason": "Explicit fresh reviewed application DB only"
+    },
+    {
+      "nodeid": "tests.test_application_new_modules_integration.test_missing_new_sql_fails_closed_and_does_not_claim_scale_integration",
+      "reason": "Old 17SQL explicit profile only"
+    },
+    {
+      "nodeid": "tests.test_application_new_modules_integration.test_full_app_tree_plan_dual_template_actual_docx_fenced_publish_and_closed_guard",
+      "reason": "New reviewed 19SQL explicit profile only"
+    },
+    {
+      "nodeid": "tests.test_application_new_modules_integration.test_scale_authority_configuration_does_not_change_scoring_prediction_contract",
+      "reason": "New reviewed 19SQL explicit profile only"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_actual_three_scope_concurrent_admission_cannot_overspend[global]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_actual_three_scope_concurrent_admission_cannot_overspend[member]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_actual_three_scope_concurrent_admission_cannot_overspend[project]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_project_budget_is_shared_across_members",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_member_budget_is_shared_across_projects",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_distinct_scope_owners_do_not_share_that_limit[member]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_distinct_scope_owners_do_not_share_that_limit[project]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_prior_window_unknown_retains_original_obligation",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_missing_or_mismatched_currency_policy_fails_closed[False]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_missing_or_mismatched_currency_policy_fails_closed[True]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_global_budget_combines_distinct_members_and_projects",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_non_read_committed_rpc_rejects_general_and_project_before_side_effects[REPEATABLE READ-False]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_non_read_committed_rpc_rejects_general_and_project_before_side_effects[REPEATABLE READ-True]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_non_read_committed_rpc_rejects_general_and_project_before_side_effects[SERIALIZABLE-False]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_non_read_committed_rpc_rejects_general_and_project_before_side_effects[SERIALIZABLE-True]",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_aggregate.test_general_target_is_valid_under_read_committed",
+      "reason": "Explicit disposable fusion_budget_aggregate database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_valid_native_identity_matches_python_hash_and_dispatches_once[global-answer]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_valid_native_identity_matches_python_hash_and_dispatches_once[project-answer]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_valid_native_identity_matches_python_hash_and_dispatches_once[project-authoring]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,model}','\"deepseek-v4-pro\"')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,model}','\"deepseek-v4-pro\"')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,provider}','\"other\"')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,provider}','\"other\"')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,purpose}','\"core_review\"')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,purpose}','\"core_review\"')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,formal_scoring_eligible}','true')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,formal_scoring_eligible}','true')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,extra}','true')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,profile,extra}','true')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,price_version_id}','\"00000000-0000-0000-0000-000000000000\"')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{logical_intent,price_version_id}','\"00000000-0000-0000-0000-000000000000\"')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{request,max_tokens}','8192')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{request,max_tokens}','8192')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{request,max_tokens}','null')-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_jobs SET input_manifest=jsonb_set(input_manifest,'{request,max_tokens}','null')-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET output_upper=8192-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET output_upper=8192-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET input_upper=1-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET input_upper=1-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET currency='CNY'-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET currency='CNY'-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET reserved_minor=1-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_budget_reservations SET reserved_minor=1-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_price_versions SET model='deepseek-v4-pro'-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_price_versions SET model='deepseek-v4-pro'-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_price_versions SET valid_until=clock_timestamp()-interval '1 hour'-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_frozen_profile_price_and_amount_mutations_reject_before_dispatch[UPDATE design.assistant_price_versions SET valid_until=clock_timestamp()-interval '1 hour'-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET max_tokens=8192; UPDATE design.assistant_global_runs SET max_tokens=8192]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET max_tokens=8192]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_runs SET max_tokens=8192]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET profile_digest=repeat('0',64)]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET intent_digest=repeat('0',64)]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_runs SET input_digest=repeat('0',64)]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_runs SET fence=2,owner_token='00000000-0000-0000-0000-000000000001']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET usage='{}']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_global_native_tampering_rejected[UPDATE design.assistant_global_calls SET usage=jsonb_set(usage,'{reservation,fence}','\"1\"')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET profile_digest=repeat('0',64)]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET logical_call_key='core.review/1']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET attempt_no=2]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET research_run_id='00000000-0000-0000-0000-000000000001']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET reserved_amount=0.1]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,max_tokens}','8192')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,step_key}','\"wrong\"')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,input_digest}','\"wrong\"')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,generation}','2')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,fence}','2')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.model_calls SET usage=jsonb_set(usage,'{reservation,owner}','\"wrong\"')]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.operations SET handler_version='core/1']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.operation_steps SET handler_version='core/1']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_project_native_step_and_attempt_tampering_rejected[UPDATE design.step_receipts SET lease_until=clock_timestamp()-interval '1 hour']",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_dispatch.test_budget_identity_rpc_error_is_exposed_as_controlled_conflict",
+      "reason": "Explicit disposable reconciliation PG17 DSN required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_native_carryover_five_facts_match_actual_sql_authority",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_only_withdrawing_source_without_fact_changes_rejects_frozen_live_proof[root]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_only_withdrawing_source_without_fact_changes_rejects_frozen_live_proof[source]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[reserve-root]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[reserve-source]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[reserve-expired]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[reserve-role]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[reserve-new_parse]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[dispatch-root]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[dispatch-source]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[dispatch-expired]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[dispatch-role]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_budget_rpcs_reject_changed_live_facts_without_releasing_hold[dispatch-new_parse]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_dispatch_accepts_valid_native_carryover_basis",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_forged_or_missing_native_proof_cannot_grant_qualification[missing_basis]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_forged_or_missing_native_proof_cannot_grant_qualification[closure]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_forged_or_missing_native_proof_cannot_grant_qualification[fact_identity]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_forged_or_missing_native_proof_cannot_grant_qualification[missing_reference]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_withdrawal_wins_dispatch_race_without_deadlock_or_fee_release",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_source_expiring_while_waiting_for_graph_is_rechecked_at_dispatch[world0]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_actual_global_reserve_locks_target_bid_before_run_and_does_not_deadlock",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_native_confirmed_decision_without_basis_is_never_inferred",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_latest_native_carryover_mapping_must_keep_original_equivalence_digest",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_new_internal_helpers_do_not_confer_worker_or_public_fact_access",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_live_facts.test_one_final_clock_rechecks_early_fact_after_later_fact_processing[world0]",
+      "reason": "Explicit disposable fusion_budget_live database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_original_inverse_lock_order_has_actual_pg_deadlock[assistant_global_runs]",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_original_inverse_lock_order_has_actual_pg_deadlock[assistant_global_calls]",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_actual_fixed_reserve_replay_completes_without_releasing_unknown",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_actual_failure_commits_native_before_waiting_for_budget",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_new_native_call_freezes_original_lease_without_backfilling_old_calls",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_terminal_tick_recovers_native_commit_crash_window[unknown-unknown-None]",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_terminal_tick_recovers_native_commit_crash_window[not_sent-released-0]",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_lock_order.test_terminal_tick_recovers_native_commit_crash_window[usage_reported-settled-30]",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments0-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments0-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments1-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments1-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments2-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments2-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments3-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments3-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments4-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments4-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments5-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments5-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments6-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments6-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments7-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments7-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments8-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments8-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments9-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments9-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments10-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments10-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments11-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments11-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments12-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments12-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments13-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_invalid_arguments_preserve_unknown_hold_and_manual_flag[arguments13-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_not_sent-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_not_sent-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_billed-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_billed-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_zero_charge_failure-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[0-confirmed_zero_charge_failure-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_not_sent-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_not_sent-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_billed-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_billed-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_zero_charge_failure-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[1-confirmed_zero_charge_failure-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_not_sent-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_not_sent-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_billed-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_billed-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_zero_charge_failure-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_decision_amount_matrix[100-confirmed_zero_charge_failure-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[None-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[None-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[running-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[running-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[pending-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[pending-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[succeeded-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[succeeded-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[missing-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_nonterminal_or_missing_native_preserves_original_hold[missing-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[None-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[None-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[held-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[held-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[released-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[released-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[settled-global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_non_reconcilable_reservation_state_is_rejected[settled-project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_second_reconciliation_cannot_change_charge_or_duplicate_audit[global]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_reconciliation.test_second_reconciliation_cannot_change_charge_or_duplicate_audit[project]",
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_current_v2_stable_lot_and_same_five_facts_pass_identity_guard",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.audit_entries SET payload=payload-'identity_version']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.audit_entries SET payload=jsonb_set(payload,'{identity_version}','\"bid-identity/1\"')]",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.audit_entries SET payload=jsonb_set(payload,'{after,lot_id}','null')]",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.audit_entries SET payload=jsonb_set(payload,'{after,lot_id}','\"00000000-0000-0000-0000-000000000001\"')]",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.bid_rounds SET lot_id=NULL]",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.bid_rounds SET lot_id='00000000-0000-0000-0000-000000000002']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.bidders SET name='changed same-ID bidder name']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.engineering_projects SET title='changed project title']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.engineering_projects SET region='changed region']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.engineering_projects SET engineering_type='changed type']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.bid_rounds SET lot='changed display lot']",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_old_binding_or_changed_same_named_stable_lot_is_rejected[UPDATE design.bid_rounds SET round_no=2]",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_budget_target_identity.test_general_private_target_does_not_require_project_identity",
+      "reason": "Explicit disposable fusion_budget_target database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_generation_lock_order.test_original_generation_budget_then_graph_order_has_real_deadlock",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_generation_lock_order.test_actual_generation_queue_locks_graph_before_budget_and_reuses_without_execution",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_generation_lock_order.test_closed_project_still_rejects_before_budget_acceptance",
+      "reason": "Dedicated disposable fusion_budget_lock database required"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_real_null_scope_complete_close_restore_and_owner_isolation",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_unknown_never_reissues_for_replay_or_new_nonce_same_question",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_cancellation_before_execution_reports_request_then_real_terminal",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_expired_fence_cannot_reserve_or_publish",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_actual_schema_and_cursor_contracts",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_sourced_global_action_cross_member_exactly_once_actual_candidate_or_rejection[confirm]",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_sourced_global_action_cross_member_exactly_once_actual_candidate_or_rejection[reject]",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_source_withdrawn_before_dispatch_no_call_and_during_model_no_publication",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_action_context_change_stale_and_plain_yes_cannot_consume",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_call_reservation_serializes_different_runs_same_intent",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_remote_window_has_no_worker_transaction_and_cancel_suppresses_billed_answer",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_expired_card_rejects_effect_and_unsupported_model_tool_is_billed_failure",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_dedicated_global_outbox_relay_ack_and_consumer_duplicate_protocol",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_project_answer_real_core_ledger_receipt_and_original_conversation_recovery",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_selected_authoring_ledger_proposal_one_original_action_across_native_entry[confirm]",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_selected_authoring_ledger_proposal_one_original_action_across_native_entry[reject]",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_authoring_different_selection_is_distinct_intent_and_edit_during_generation_stale",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_source_chooser_strict_version_cross_project_guard_csrf_and_action_actual_schema",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_confirmed_current_facts_in_prompt_and_identity_change_native_apply_guard",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_archived_project_keeps_readonly_answer_but_rejects_action_and_generation",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_authoring_actual_source_allowlist_survives_into_applied_revision_citation",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_failed_physical_page_is_unselectable_and_never_queued",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_concurrent_members_opposite_action_only_one_receipt_effect",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_global_paid_result_late_fence_reuses_exact_blob_without_second_call",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_project_cancel_during_model_does_not_publish_or_fake_terminal",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_restricted_roles_keep_chat_business_identity_and_result_columns_separate",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_response_object_persist_failure_reports_known_usage_and_never_auto_reissues",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_assistant_integration.test_reported_response_storage_failure_stays_failed_replay_never_reissues",
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls"
+    },
+    {
+      "nodeid": "tests.test_authoring.test_real_libreoffice_pdf_has_expected_physical_text_and_chain",
+      "reason": "需真实LibreOffice及中文字体"
+    },
+    {
+      "nodeid": "tests.test_authoring_generated_integration.test_actual_registered_export_engine_closes_db_then_publishes_verified_PAGE",
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls"
+    },
+    {
+      "nodeid": "tests.test_authoring_generated_integration.test_real_http_cancel_discards_computed_late_PAGE_without_publication",
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls"
+    },
+    {
+      "nodeid": "tests.test_authoring_generated_integration.test_old_verified_PAGE_result_stays_history_after_editor_moves",
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls"
+    },
+    {
+      "nodeid": "tests.test_authoring_generated_integration.test_final_source_withdrawal_blocks_computed_PAGE_publish",
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_real_nonowner_concurrent_cas_and_frozen_history",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_real_command_replay_returns_original_ack_after_head_moved",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_illegal_reference_rolls_back_revision_and_snapshot",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_patch_apply_appends_revision_and_cannot_be_consumed_twice",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_real_withdrawn_ancestor_between_preview_and_apply_is_rejected",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_real_worker_build_uses_frozen_draft_and_publishes_independent_outputs",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_fact_head_change_invalidates_prior_patch",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_real_authenticated_http_save_replay_restore_and_build_freeze",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_generation_port_never_applies_text_and_rejects_unoffered_evidence",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_republished_ancestor_still_invalidates_prior_patch_identity",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_source_root_and_previous_parse_cannot_claim_latest_parse_evidence",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_generation_uses_only_latest_parse_child_and_unique_251_evidence",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_follow_up_context_is_trusted_frozen_and_explicit_not_project_default",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_actual_build_http_projects_real_followup_state_and_no_invented_review[not_requested]",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_actual_build_http_projects_real_followup_state_and_no_invented_review[pending]",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_actual_build_http_projects_real_followup_state_and_no_invented_review[adopted]",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_actual_build_http_projects_real_followup_state_and_no_invented_review[needs_selection]",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_integration.test_actual_build_http_projects_real_followup_state_and_no_invented_review[failed]",
+      "reason": "需独立真实PG非owner API账号"
+    },
+    {
+      "nodeid": "tests.test_authoring_knowledge_lifecycle.test_editor_new_work_is_atomic_but_original_ack_and_snapshot_remain[closed]",
+      "reason": "Isolated nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_authoring_knowledge_lifecycle.test_editor_new_work_is_atomic_but_original_ack_and_snapshot_remain[terminated]",
+      "reason": "Isolated nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_authoring_knowledge_lifecycle.test_editor_new_work_is_atomic_but_original_ack_and_snapshot_remain[archived]",
+      "reason": "Isolated nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_authoring_knowledge_lifecycle.test_archived_target_cannot_gain_either_reference_but_origin_archive_allows_index",
+      "reason": "Isolated nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_authoring_knowledge_lifecycle.test_editor_waits_for_actual_bid_lock_and_observes_committed_close",
+      "reason": "Isolated nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_actual_export_no_profile_retains_real_docx_pdf_failed_and_explicit_unknowns",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_asset_withdraw_after_compute_rejects_all_publication_but_keeps_old_snapshot",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_rich_requires_explicit_mode_and_exact_template_versions_and_pdf_for_review",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_tampered_snapshot_identity_cannot_publish_same_manifest",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_actual_http_cancel_rejects_late_rich_result_without_metadata",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_real_http_restore_uses_rich_digest_and_rechecks_withdrawn_assets",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_build_integration.test_actual_rich_schema_projects_real_http_responses_and_build_payload",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_real_nonowner_asset_roundtrip_worker_read_and_exact_memory_bytes",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_withdraw_rejects_new_use_but_old_version_and_exact_receipt_survive",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_concurrent_withdraw_has_one_cas_winner",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_actual_worker_dml_is_denied_and_api_metadata_is_not_updatable",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_cross_bid_and_wrong_version_identity_do_not_read_or_qualify",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_source_ancestor_change_blocks_new_image_use_and_history_stays",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_final_guard_refuses_repeatable_read_connection",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_final_guard_refuses_autocommit_that_would_release_bid_lock",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_actual_image_http_csrf_upload_exact_replay_withdraw_and_old_bytes",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_object_unknown_has_recoverable_record_and_no_automatic_retry",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_rich_save_freezes_real_asset_versions_and_old_snapshot_is_byte_stable",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_legacy_digest_does_not_admit_rich_and_overwide_save_rolls_back",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_rich_integration.test_real_http_rich_save_rejection_rolls_back_all_draft_mutations",
+      "reason": "Explicit fresh reviewed RICH nonowner profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_frozen_extension_actual_worker_read_without_new_table_capability",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_legacy_text_save_carries_structure_and_exact_old_snapshot",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_template_version_append_is_real_cas_and_old_config_immutable",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_tree_add_copy_delete_restore_and_plan_are_real_revisions",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_directory_style_restore_and_consumption_are_immutable",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_structured_build_freezes_both_templates_and_real_ooxml",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_structure_http_csrf_ack_replay_and_stale_action",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_plan_source_withdrawal_invalidates_pending_tree_action_and_worker_authority",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_closed_project_blocks_new_tree_apply_but_allows_rejection_and_history",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_actual_structure_projections_and_cross_scope_are_strict",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_two_reviewed_tree_actions_have_one_real_concurrent_cas_winner",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_deleted_section_rejects_old_save_generation_and_patch_and_order_bypass",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_project_format_binding_requires_current_confirmation_and_overrides_enterprise",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_authoring_structure_integration.test_create_draft_from_real_directory_keeps_keys_and_resets_plan_approval",
+      "reason": "Explicit fresh complete-A2 restricted PG profile required"
+    },
+    {
+      "nodeid": "tests.test_backup.test_snapshot_restore_with_concurrent_committed_source_write",
+      "reason": "explicit isolated real backup/restore profile required"
+    },
+    {
+      "nodeid": "tests.test_backup_generic.test_real_future_schema_snapshot_restore_read_only_without_object_requests",
+      "reason": "explicit local PG profile required; no remote object calls"
+    },
+    {
+      "nodeid": "tests.test_backup_generic_native.test_real_native_oss_catalog_backup_and_fresh_read_only_restore",
+      "reason": "explicit isolated native OSS profile required; creates only synthetic own keys"
+    },
+    {
+      "nodeid": "tests.test_bid_list_integration.test_base_only_and_missing_stream_do_not_poison_paginated_business_workunits",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_actual_api_login_can_save_and_load_frozen_revision",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_worker_can_check_parse_freeze_but_cannot_write_packages",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_worker_real_parse_trigger_distinguishes_unfrozen_and_frozen",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_new_helpers_have_no_public_execute_and_no_security_definer",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_package_ddl_precedes_public_revoke_and_worker_grant_follows_it",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_acl.test_api_lot_catalog_allows_registration_and_reading_without_mutation",
+      "reason": "requires explicit fusion_package_acl database"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_create_current_history_and_canonical_manifest",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_append_cas_idempotency_and_old_bytes",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_create_replay_conflict_and_rollback",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_client_cannot_inject_server_identity[scope-value0]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_client_cannot_inject_server_identity[file_digest-ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_client_cannot_inject_server_identity[source_kind-authority]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_client_cannot_inject_server_identity[page_count-2]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_client_cannot_inject_server_identity[parse-value4]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_unfrozen_original_keeps_unknown_without_guessing_latest_run",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_wrong_parse_scope_failed_run_and_cross_bid_history",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_auth_origin_csrf_and_required_idempotency",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_parallel_append_has_one_winner",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_closed_work_rejects_new_packages_and_revisions_but_keeps_ack_history[closed]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_closed_work_rejects_new_packages_and_revisions_but_keeps_ack_history[terminated]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_closed_work_rejects_new_packages_and_revisions_but_keeps_ack_history[archived]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_rebinding_requires_new_package_and_preserves_old_identity_bytes",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[tender-True]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[supplement-True]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[drawing-True]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[boq-True]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[body-False]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[official_result-False]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_authority_roles_require_server_verified_originals[other-False]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_original_with_prohibited_known_source_cannot_enter_package[official_label]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_original_with_prohibited_known_source_cannot_enter_package[post_outcome]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_original_with_prohibited_known_source_cannot_enter_package[derived_mixed]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_unverified_or_uncommitted_document_and_cross_bid_member_rejected",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_historical_identity_schema_retains_v1_and_rejects_mixed_identity",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_multiple_own_volumes_are_explicit_and_never_replace_current_body",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_explicit_new_parse_creates_new_revision_preserving_original_manifest",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\x00value-member_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\x00value-purposes]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\x00value-part_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\x00value-category]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\x00value-heading_path]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\ud800value-member_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\ud800value-purposes]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\ud800value-part_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\ud800value-category]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\ud800value-heading_path]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\udfffvalue-member_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\udfffvalue-purposes]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\udfffvalue-part_id]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\udfffvalue-category]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_invalid_text_is_422_before_commands_or_packages[bad\\udfffvalue-heading_path]",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_valid_non_bmp_text_roundtrips_raw_json_and_append_rejects_invalid_text",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_api.test_graph_writer_wins_then_waiting_api_rechecks_new_label_ancestor",
+      "reason": "requires explicit isolated package API PG17"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_master_data_roundtrip_manifest_and_independent_authority_package",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_replay_after_later_revision_does_not_rewind_head",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_stale_cas_rejects_and_leaves_no_partial_revision",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_current_profile_rejects_cross_round_lot_project_and_bidder[round_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_current_profile_rejects_cross_round_lot_project_and_bidder[lot_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_current_profile_rejects_cross_round_lot_project_and_bidder[engineering_project_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_current_profile_rejects_cross_round_lot_project_and_bidder[bidder_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_no_identity_authority_or_changed_profile_cannot_claim_confirmed",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_identity_correction_preserves_saved_package_and_replay",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_parse_and_file_binding_rejects_wrong_supplied_identity[file_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_parse_and_file_binding_rejects_wrong_supplied_identity[document_version_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_parse_and_file_binding_rejects_wrong_supplied_identity[parser_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_parse_and_file_binding_rejects_wrong_supplied_identity[evidence_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_real_parse_and_file_binding_rejects_wrong_supplied_identity[page_count]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_unknown_page_member_is_retained_as_unknown_in_real_storage",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[revision]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[member]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[part]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[binding]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[page_insert]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[evidence_insert]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_database_guards_reject_mutation_and_late_parse_expansion[head_rewind]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_actual_concurrent_cas_allows_one_writer",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_repeatable_read_writer_is_rejected_before_reading_stale_identity",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_pending_identity_snapshot_keeps_actual_then_name_separately_from_old_authority",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_incomplete_or_failed_parser_cannot_be_adopted_as_formal_frozen_input[failed-0]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_incomplete_or_failed_parser_cannot_be_adopted_as_formal_frozen_input[partial-1]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_incomplete_or_failed_parser_cannot_be_adopted_as_formal_frozen_input[complete-1]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_commit_malformed_manifest[empty]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_commit_malformed_manifest[missing_members]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_commit_malformed_manifest[parse_missing_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_commit_malformed_manifest[integer_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_commit_malformed_manifest[bad_part_range]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_deferred_constraint_rejects_missing_member_rows",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[missing-package_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[missing-revision_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[null-package_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[null-revision_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[empty-package_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[empty-revision_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[number-package_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[number-revision_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[mismatch-package_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_manifest_ids_cannot_bypass_row_identity_with_null_or_wrong_type[mismatch-revision_id]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_corrupt_loaded_record_returns_stable_domain_error",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_freeze_forged_parse_binding[file_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_freeze_forged_parse_binding[parser_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_freeze_forged_parse_binding[config_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_freeze_forged_parse_binding[evidence_digest]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_cannot_freeze_forged_parse_binding[page_count]",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_same_bytes_new_parse_can_append_without_changing_old_frozen_package",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_sql_canonical_json_matches_shared_protocol_for_unicode_and_safe_integers",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_two_connection_revocation_is_not_hidden_by_repeatable_read_snapshot",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_stable_lot_round_identity_is_unique_independent_of_display_name",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_two_distinct_stable_lots_may_have_same_display_name_and_round_number",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bid_package_repository.test_direct_sql_unfrozen_member_cannot_claim_wrong_file_digest",
+      "reason": "requires explicit isolated fusion_package_repo DB"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_nonowner_budget_login_has_only_the_allowed_effective_rights",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[upstream_api]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[transitive_noinherit_set_path]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[additional_login_group]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[admin_option]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[public_table_select]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[direct_column_select]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[business_execute]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[schema_create]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[sequence_usage]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[allowed_function_owner]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[direct_business_write]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[pg17_maintain]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_bootstrap_role_isolation_pg.test_real_effective_privilege_pollution_is_rejected[inherited_allowed_function_owner]",
+      "reason": "requires an explicitly isolated ACL database"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_real_pdf_adoption_is_atomic_once_and_records_request_not_fake_review",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_changed_inputs_keep_old_output_without_body_or_paid_request[draft]",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_changed_inputs_keep_old_output_without_body_or_paid_request[heads]",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_changed_inputs_keep_old_output_without_body_or_paid_request[historical_draft]",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_word_success_does_not_hide_pdf_failure_or_create_review",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_followups_integration.test_follow_up_none_stays_none_even_if_project_auto_review_enabled",
+      "reason": "需隔离PG/S3/本地转换器"
+    },
+    {
+      "nodeid": "tests.test_build_history_integration.test_builds_refresh_discovery_scope_cursor_and_single_view_equivalence",
+      "reason": "需独立PG"
+    },
+    {
+      "nodeid": "tests.test_cancel_integration.test_cancel_requires_latest_etag_and_replays_original_effect",
+      "reason": "需要独立真实PG机制库"
+    },
+    {
+      "nodeid": "tests.test_cancel_integration.test_generation_changes_etag_even_if_visible_operation_is_unchanged",
+      "reason": "需要独立真实PG机制库"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[identical]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[reversed_sides]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[changed_values]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[changed_method]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[changed_source_head]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_decision_applicability_integration.test_new_body_facts_require_new_decision_while_identical_frozen_body_may_reuse[legacy_changed_values]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_findings_integration.test_verified_conflict_or_engineering_diagnostic_publishes_once_under_fence[False]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_content_findings_integration.test_verified_conflict_or_engineering_diagnostic_publishes_once_under_fence[True]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[referenced_unread_schedule]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[unreferenced_unread_conflict]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[complete_body_unrelated_attachment_partial]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[complete_body_rule_diagnostic]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[cross_document_page_reference]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[zero_declared_pages]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[extra_physical_page]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[missing_physical_page]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[recurrence_after_earlier_success]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_core_recheck_scope_integration.test_only_proved_complete_body_recheck_can_close_old_critical[independent_conflict_not_closed_by_core]",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_denominator_integration.test_current_review_late_confirmation_derives_without_new_calls_or_rewriting_score_f",
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker"
+    },
+    {
+      "nodeid": "tests.test_denominator_integration.test_missing_authority_keeps_null_and_does_not_send",
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker"
+    },
+    {
+      "nodeid": "tests.test_denominator_integration.test_smaller_sourced_total_conflicts_without_rescaling_extracted_rule_points[30]",
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker"
+    },
+    {
+      "nodeid": "tests.test_denominator_integration.test_historical_closed_project_and_withdrawal_preserve_recorded_snapshot",
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker"
+    },
+    {
+      "nodeid": "tests.test_denominator_integration.test_authority_withdrawal_during_compute_prevents_new_derived_effect",
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker"
+    },
+    {
+      "nodeid": "tests.test_event_stream.test_real_replay_order_and_private_payload_projection",
+      "reason": "Requires explicit isolated PG fixture database"
+    },
+    {
+      "nodeid": "tests.test_event_stream.test_real_expired_cursor_returns_reset_and_new_snapshot_can_connect",
+      "reason": "Requires explicit isolated PG fixture database"
+    },
+    {
+      "nodeid": "tests.test_event_stream.test_real_session_revocation_stops_next_batch",
+      "reason": "Requires explicit isolated PG fixture database"
+    },
+    {
+      "nodeid": "tests.test_event_stream.test_real_revocation_during_stream_emits_control_and_closes",
+      "reason": "Requires explicit isolated PG fixture database"
+    },
+    {
+      "nodeid": "tests.test_event_stream.test_real_http_cookie_replay_and_status_before_headers",
+      "reason": "Requires explicit isolated PG fixture database"
+    },
+    {
+      "nodeid": "tests.test_fact_sets_integration.test_fact_snapshot_confirmation_exact_carry_and_effectivity_change",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_fact_sets_integration.test_fact_invalid_evidence_is_atomic_and_manual_resolve_is_forbidden",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_fact_sets_integration.test_manual_rule_correction_is_atomic_and_persists_after_model_omission",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_historical_context_isolation.test_context_guard_runs_before_submission_lookup[REPEATABLE READ]",
+      "reason": "Explicit isolated nonowner PG test only"
+    },
+    {
+      "nodeid": "tests.test_historical_context_isolation.test_context_guard_runs_before_submission_lookup[SERIALIZABLE]",
+      "reason": "Explicit isolated nonowner PG test only"
+    },
+    {
+      "nodeid": "tests.test_historical_context_isolation.test_context_guard_runs_before_submission_lookup[READ UNCOMMITTED]",
+      "reason": "Explicit isolated nonowner PG test only"
+    },
+    {
+      "nodeid": "tests.test_historical_context_isolation.test_confirmation_replay_cannot_publish_withdrawn_proof_from_established_rr",
+      "reason": "Explicit isolated nonowner PG test only"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_offline_without_old_review_now_known_can_freeze_full_input_and_replay",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_missing_known_to_bidder_rejected_before_any_put",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_remote_put_has_no_capture_transaction_and_change_during_put_blocks_publish",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_withdrawn_or_reparsed_input_readonly_stale_and_replay_denied",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_sealed_inputs_reject_late_children_and_repeated_read_old_snapshot",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_non_api_roles_cannot_read_or_seal_historical_inputs[WORKER_DATABASE_DSN]",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_non_api_roles_cannot_read_or_seal_historical_inputs[RESEARCH_WORKER_DATABASE_DSN]",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_integration.test_non_api_roles_cannot_read_or_seal_historical_inputs[SCORE_READ_DATABASE_DSN]",
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB"
+    },
+    {
+      "nodeid": "tests.test_historical_input_unconfigured.test_missing_input_authority_returns_specific_503_without_writes",
+      "reason": "Read-only old-schema API-role probe, no fixtures/DDL"
+    },
+    {
+      "nodeid": "tests.test_historical_input_upload_path.test_actual_new_upload_then_historical_input_keeps_real_now_and_no_old_review",
+      "reason": "Needs NEW reviewed fresh input DB and local parser environment"
+    },
+    {
+      "nodeid": "tests.test_identity.test_invalid_identity_is_not_registration[value0]",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_invalid_identity_is_not_registration[value1]",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_invalid_identity_is_not_registration[value2]",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_same_company_reused_and_similar_names_stay_distinct",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_no_default_is_silently_applied_to_project",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_new_lot_and_new_round_do_not_reuse_work_units",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_correction_preserves_audit_identity_at_time_and_does_not_invent_history",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_delayed_transaction_default_follows_action_order_not_transaction_start",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_delayed_correction_is_not_backdated_to_transaction_start",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_login_http_registration_default_cas_and_bid_correction",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_identity.test_directory_pagination_discovers_more_than_100_and_binds_filters",
+      "reason": "Explicit nonowner PG integration profile required"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_candidate_unknown_metadata_is_never_published_and_draft_is_preserved",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_publish_subject_scope_reference_withdraw_and_old_originals_restore",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_version_cas_keeps_published_old_until_explicit_new_publication",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_parent_withdrawal_invalidates_published_knowledge_and_old_quote_remains",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_expiry_unknown_and_missing_conditions_never_become_applicable",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_foreign_company_fact_and_forged_positions_do_not_create_versions",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_published_knowledge_expires_at_the_boundary_without_rewriting_history",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_actual_login_http_cas_replay_withdraw_and_reference_history",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_source_republication_cannot_resurrect_knowledge_and_changes_strong_etag",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_worker_does_not_gain_project_metadata_capabilities_and_only_reads_frozen_source_authority",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_impact_groups_follow_real_project_phase_and_never_rewrite_reference",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_source_positions_are_authoritative_not_client_inferred",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_later_publication_is_not_backfilled_into_earlier_reference_scope",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_unconfirmed_matching_fact_without_evidence_is_not_knowledge_permission[3_0]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_unconfirmed_matching_fact_without_evidence_is_not_knowledge_permission[3_1]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_current_confirmed_fact_and_multiple_exact_carryovers_are_usable",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_non_effective_decision_cannot_satisfy_condition[rejected]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_non_effective_decision_cannot_satisfy_condition[deferred]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_non_effective_decision_cannot_satisfy_condition[confirmed_without_basis]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change0]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change1]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change2]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_same_numeric_value_cannot_hide_subject_scope_unit_or_type_mismatch[change3]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_conflicting_or_pending_matching_fact_is_not_filtered_out[conflicting_confirmed]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_conflicting_or_pending_matching_fact_is_not_filtered_out[pending_equal]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[ancestor_head]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[withdrawn]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[new_parse]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_changed_confirmation_basis_or_unknown_carryover_stops_new_use[missing_carryover]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_fact_source_change_rechecks_authenticated_reference_replay_and_preserves_history",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[autocommit]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[REPEATABLE READ]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_trusted_bridge_rejects_transaction_modes_that_cannot_protect_current_authority[SERIALIZABLE]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition[3]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_confirmed_string_value_is_not_coerced_to_numeric_or_boolean_condition[True]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_fact_change_under_project_lock_is_seen_after_bridge_wait",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[missing]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[pending]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_matching_bidder_uuid_without_confirmed_binding_cannot_authorize_new_knowledge[profile_changed_same_bidder]",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_identity_context_freeze_and_http_replay_reject_pending_and_reconfirmed_same_uuid",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_integration.test_older_reference_without_identity_context_remains_readable_but_cannot_replay_new_use",
+      "reason": "需要独立真实PG/S3受限API/Worker环境"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_six_table_index_true_worker_permissions_and_float32_readback",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_real_sql_hybrid_trace_reference_exact_original_and_unsupplied_unit_denial",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_all_trace_new_use_paths_reject_changed_index_or_unit_authority[reindex]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_all_trace_new_use_paths_reject_changed_index_or_unit_authority[candidate_unit]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_all_trace_new_use_paths_reject_changed_index_or_unit_authority[withdrawn_unit]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_all_trace_new_use_paths_reject_changed_index_or_unit_authority[expired_unit]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_all_trace_new_use_paths_reject_changed_index_or_unit_authority[withdrawn_parent]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_new_table_column_capabilities_are_real_and_not_owner_workarounds",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_authenticated_http_actual_contract_replay_and_reindex_invalidate_old_trace_and_reference",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_source_withdrawal_during_model_compute_leaves_no_stuck_command_or_trace",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_late_index_generation_and_different_output_replay_cannot_publish_or_rewrite_units",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_changed_fact_basis_then_restored_same_value_cannot_reuse_old_trace",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_actual_bge_engine_http_and_reranker_have_no_prepare_or_search_connection",
+      "reason": "需要实际本地BGE/重排运行时"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_isolated_kafka_own_outbox_duplicate_delivery_uses_real_engine_fence",
+      "reason": "仅PM授权专用topic/group后运行"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_actual_worker_stale_fence_and_task_scope_cannot_publish",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_failed_partial_publication_rolls_back_and_new_index_generation_recovers",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_unit_own_lineage_policy_and_derived_known_time_are_independent_of_parent_ready[extra_direct_parent]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_unit_own_lineage_policy_and_derived_known_time_are_independent_of_parent_ready[wrong_own_policy]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_unit_own_lineage_policy_and_derived_known_time_are_independent_of_parent_ready[known_before_parent]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_database_constraints_reject_null_ready_wrong_vectors_and_cross_profile_or_version",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_api_coordinator_own_scope_freezes_one_intent_and_replays_without_duplicate",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_native_oss_exact_own_original_page_and_historical_reference_survive_withdrawal",
+      "reason": "仅精确自有合成原件的原生OSS验收"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_runtime_unavailable_never_fakes_hits_or_leaves_incomplete_command",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_foreign_subject_is_filtered_and_reference_target_cannot_cross_projects",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_schema_guard_refuses_real_worker_as_api_without_granting_trace_capability",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_malformed_api_owned_trace_rejected_consistently_on_cite_history_and_replay[text]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_malformed_api_owned_trace_rejected_consistently_on_cite_history_and_replay[digest]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_malformed_api_owned_trace_rejected_consistently_on_cite_history_and_replay[metadata]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_malformed_api_owned_trace_rejected_consistently_on_cite_history_and_replay[unsupplied]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_integration.test_malformed_api_owned_trace_rejected_consistently_on_cite_history_and_replay[duplicate]",
+      "reason": "需要知识RAG独立新库"
+    },
+    {
+      "nodeid": "tests.test_knowledge_rag_schema_unavailable.test_missing_schema_reports_unavailable_without_business_sql_or_owner_fallback",
+      "reason": "只读连接明确缺少知识RAG表的受限API库"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_no_operation_open_batch_blocks_archive_until_explicit_retained_closure",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_uncommitted_upload_without_operation_is_visible_and_stays_detached",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_changed_upload_manifest_rejects_old_closure_and_cross_project_receipt",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_verification_in_flight_is_not_cancelled_by_closure",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_partial_committed_batch_can_close_only_its_leftover_intent",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_worker_role_guard_and_immutable_closure_receipt",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_late_producer_waits_bid_lock_then_rejects_closed_batch",
+      "reason": "Explicit fresh closure schema opt-in"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_batch_closure_integration.test_missing_closure_schema_never_hides_unfinished_batch",
+      "reason": "Separate actual old-schema probe"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_resource_etag.test_unfinished_batch_changes_lifecycle_tag_and_old_tag_fails_without_losing_archive_guard",
+      "reason": "Explicit isolated nonowner DB"
+    },
+    {
+      "nodeid": "tests.test_lifecycle_resource_etag.test_inflight_operation_and_cancel_state_change_tag_and_current_tag_keeps_archive_blocked",
+      "reason": "Explicit isolated nonowner DB"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_api_stage_independent_from_score_correction_conflict_no_fallback",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_api_concurrent_correction_cas_epoch_and_official_evidence_boundaries",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_source_withdrawal_and_submission_replacement_do_not_inherit_old_result",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_same_unit_heads_conflict_and_submitted_time_scope",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_unknown_risk_freeze_is_immutable_and_historical_prediction_not_qualified",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_server_observation_risk_freeze_survives_later_dismiss_and_uses_root_identity",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_prepared_risk_snapshot_and_result_records_roll_back_atomically",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_round_trend_breaks_stable_paging_and_hidden_prediction_has_no_values",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_worker_observation_uses_restricted_lock_function_and_cannot_update_bid",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_actual_action_epoch_not_older_transaction_start_selects_head",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_prediction_needs_dedicated_producer_authority_not_scalar_or_client_claim",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_actual_read_schemas_and_openapi_do_not_reuse_old_metrics_shape",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[candidate]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[future_known]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[after_business_cutoff]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[future_valid]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[expired]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[withdrawn]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[missing_canonical]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[missing_head]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[missing_parse]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[wrong_evidence_parse]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_positive_source_authority_rejects_incomplete_or_ineffective[parent_candidate]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_current_authority_and_replay_do_not_restore_stale_verified_success[withdrawn]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_current_authority_and_replay_do_not_restore_stale_verified_success[revision]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_current_authority_and_replay_do_not_restore_stale_verified_success[closure]",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_source_withdrawal_serializes_before_final_verification",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_verification_waits_for_bid_before_acquiring_source_graph",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_historical_verification_without_frozen_authority_is_unusable_until_reverified",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_technical_outcome_source_projection_uses_same_canonical_and_time_guards",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_historical_official_business_time_does_not_require_old_system_publication",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_metrics_integration.test_old_protocol_frozen_authority_cannot_be_reused_for_new_protocol",
+      "reason": "需显式本地非owner PG环境；不发远端"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_pending_and_exact_subject_claim_confirmation_preserve_original_facts",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[other_project]",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[wrong_lot]",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_subject_relationship_cannot_be_confirmed_by_arbitrary_proof[string_round]",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_invalid_quote_atomic_and_latest_parse_invalidates_confirm_replay",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_company_known_requires_current_historical_subject_and_replay_cannot_ignore_new_pending",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_first_decision_closes_child_set_even_when_append_started_before_commit",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_purpose_roles_cannot_read_historical_proof_and_rr_cannot_confirm",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_future_known_proof_ancestor_is_rejected_before_any_authority_and_old_submission_history_remains_readable",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_integration.test_actual_auth_csrf_idempotency_and_stale_context_leave_no_partial_authority",
+      "reason": "Requires PM fresh historical E; no DDL or external calls"
+    },
+    {
+      "nodeid": "tests.test_model_governance_historical_unconfigured.test_old_schema_explicit_503_precedes_business_write",
+      "reason": "Read-only nonowner old schema; never writes session/fixtures or applies SQL"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_real_purpose_child_training_then_committed_exposure_evaluation_remains_synthetic",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_purpose_permissions_and_exposure_must_commit_before_final_label_read",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_fresh_source_or_identity_change_blocks_cpu_claim_without_result[latest_parse]",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_fresh_source_or_identity_change_blocks_cpu_claim_without_result[same_uuid_name]",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_fresh_source_or_identity_change_blocks_cpu_claim_without_result[candidate_source]",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_fresh_source_or_identity_change_blocks_cpu_claim_without_result[withdrawn_source]",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_second_manifest_job_cannot_reopen_same_final_source_closure",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_generation_changed_while_waiting_for_graph_lock_rejects_old_renew_and_finish",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_exposure_expands_unselected_group_members_and_history_registered_now_is_eligible",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_repeatable_read_purpose_qualification_fails_closed",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_remote_reads_and_real_purpose_cpu_begin_without_idle_transactions",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_even_complete_matching_frozen_heads_cannot_authorize_future_known_prebid_ancestor",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_integration.test_historical_known_before_submission_with_current_registration_head_window_is_supported",
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business"
+    },
+    {
+      "nodeid": "tests.test_model_governance_registry_integration.test_registry_actual_bytes_shadow_cas_restore_permissions_and_invalidation",
+      "reason": "Requires NEW reviewed complete release-extension DB; never applies DDL"
+    },
+    {
+      "nodeid": "tests.test_model_governance_registry_integration.test_concurrent_route_cas_and_db_envelope_or_isolation_refusal",
+      "reason": "Requires NEW reviewed complete release-extension DB; never applies DDL"
+    },
+    {
+      "nodeid": "tests.test_model_governance_registry_integration.test_union_scope_waits_for_other_candidate_identity_then_rejects_new_use",
+      "reason": "Requires NEW reviewed complete release-extension DB; never applies DDL"
+    },
+    {
+      "nodeid": "tests.test_model_governance_registry_unconfigured.test_missing_release_is_503_and_never_writes_objects",
+      "reason": "Explicit nonowner profile without release extension only"
+    },
+    {
+      "nodeid": "tests.test_model_governance_unconfigured.test_missing_new_authority_is_explicit_unconfigured_before_business_writes",
+      "reason": "Needs independent nonowner API LOGIN on a schema without new model governance SQL"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_atomic_reservation_duplicate_identity_and_cancel",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_prepare_and_review_share_command_budget_and_rollback",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_stale_generation_fence_and_expired_lease_cannot_reserve",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_result_reuse_verifies_sha_and_never_calls_twice",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_unknown_billing_is_persistent_and_does_not_resend",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_multi_stage_requires_every_stage_and_atomically_dispatches_next",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_ledger_integration.test_cross_operation_reserved_and_unknown_are_not_new_payment_intents",
+      "reason": "需要独立实际PG机制库"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[score]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[generic]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[None]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[42]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_invalid_purpose_rejected_before_client_or_reservation[bad5]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_default_profile_identity_reuse_and_cross_purpose_cache_isolation",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_unknown_for_new_purpose_remains_no_resend[assistant]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_model_purpose_integration.test_unknown_for_new_purpose_remains_no_resend[authoring]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_missing_part_recovery_lost_complete_response_and_replay",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_stale_remote_write_is_not_published_and_full_sha_quarantines",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_init_response_loss_never_reinitializes_and_abort_is_exact",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_abort_closes_old_tickets_and_replay",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_two_complete_requests_share_one_operation_and_block_refresh_abort",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_multipart_integration.test_real_foreign_session_and_wrong_part_ticket_are_rejected_before_storage",
+      "reason": "需显式真实隔离PG/原生OSS环境"
+    },
+    {
+      "nodeid": "tests.test_optional_stage_integration.test_optional_failure_keeps_sibling_budget_and_reaches_required_finalizer[explicit_failure]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_optional_stage_integration.test_optional_failure_keeps_sibling_budget_and_reaches_required_finalizer[lost_attempt_budget]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_parse_readable_integration.test_readable_sources_publish_with_parse_before_any_vector_index_and_withdrawal_is_not_revived",
+      "reason": "需隔离非owner PG"
+    },
+    {
+      "nodeid": "tests.test_parse_readable_integration.test_partial_with_real_text_is_readable_but_failed_empty_parse_is_not_published[partial-\\u771f\\u5b9e\\u53ef\\u8bfb\\u90e8\\u5206\\u5939\\u5177-published]",
+      "reason": "需隔离非owner PG"
+    },
+    {
+      "nodeid": "tests.test_parse_readable_integration.test_partial_with_real_text_is_readable_but_failed_empty_parse_is_not_published[failed--None]",
+      "reason": "需隔离非owner PG"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_registered_blob_feature_exact_sources_and_independent_simulation_saved_history",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_unknown_ineligible_and_real_zero_are_distinct_and_null_can_be_saved",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_replays_recheck_source_and_history_preserves_original_without_recalculation",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_formula_put_has_no_transaction_and_source_cas_refuses_withdrawal",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_switch_blocks_all_pricing_business_reads_writes_and_replay_but_preserves_history",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_cross_project_exact_parse_quote_and_unsupported_terms_rejected",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_measure_input_if_match_csrf_and_unknown_fields_do_not_create_simulation",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_product_hand_calculations_work_through_both_sourced_formula_apis",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_feature_extra_lineage_and_formula_blob_tampering_cannot_authorize_simulation",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_pricing_rr_snapshot_rejected_and_unrelated_body_material_change_keeps_formula_current",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_formula_single_confirmation_replay_reuses_same_object_and_rechecks_source",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_new_unread_supplement_invalidates_old_formula_and_preserves_old_simulation",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u4e07\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u5143-\\u4e07\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u5343\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u767e\\u4e07\\u5143-\\u4e07\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u7f8e\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u5146\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u97e9\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_whole_source_unit_mismatch_is_rejected_before_any_object_put[\\u4efb\\u610f\\u672a\\u77e5\\u5143-\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_consistent_wanyuan_is_supported_and_mixed_unit_formula_is_refused_before_put",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_previously_registered_wrong_unit_cannot_be_reused_or_replayed[\\u4e07\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_previously_registered_wrong_unit_cannot_be_reused_or_replayed[\\u5146\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_previously_registered_wrong_unit_cannot_be_reused_or_replayed[\\u97e9\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_explicit_complete_declaration_forms_register[\\u91d1\\u989d\\u5355\\u4f4d\\uff1a\\u5143\\uff0c\\u5e01\\u79cd\\uff1aCNY]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_explicit_complete_declaration_forms_register[\\u4ee5\\u4eba\\u6c11\\u5e01\\u5143\\u4e3a\\u5355\\u4f4d]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_explicit_complete_declaration_forms_register[\\u62a5\\u4ef7\\u5355\\u4f4d\\u4e3a\\u4eba\\u6c11\\u5e01\\u5143]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_trusted_page_and_whole_quote_reject_laundered_measure_before_put[KRW]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_trusted_page_and_whole_quote_reject_laundered_measure_before_put[single_character]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_trusted_page_and_whole_quote_reject_laundered_measure_before_put[other_page]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_integration.test_trusted_page_and_whole_quote_reject_laundered_measure_before_put[split_prefix]",
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_pricing_native_oss.test_native_oss_formula_roundtrip_has_no_api_transaction_and_only_own_object_cleanup",
+      "reason": "仅显式授权的独立命名空间原生OSS探针"
+    },
+    {
+      "nodeid": "tests.test_pricing_ratio_no_coeff_integration.test_ratio_registers_and_calculates_from_actual_quote_without_coefficients",
+      "reason": "Explicit nonowner PG only"
+    },
+    {
+      "nodeid": "tests.test_project_lifecycle.test_phase_is_not_a_review_or_submission_and_requires_current_state",
+      "reason": "Explicit isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_project_lifecycle.test_termination_archive_waits_for_tasks_and_reopen_preserves_history",
+      "reason": "Explicit isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_project_lifecycle.test_archive_serializes_a_guarded_producer_and_actual_contract",
+      "reason": "Explicit isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_real_integration.test_real_dense_lexical_pg_and_rerank",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_real_integration.test_cross_project_and_profile_identity_rejected",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_real_integration.test_new_excluded_ancestor_group_invalidates_application",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_real_integration.test_root_withdrawal_blocks_application_and_reparse",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_real_integration.test_future_and_validity_filters_in_real_pg",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_replay_guard.test_changed_but_eligible_ancestor_rejects_same_key_replay",
+      "reason": "Explicit real model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_staged_api.test_staged_real_models_close_connections_and_recheck_heads_effectivity",
+      "reason": "Explicit real local model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_staged_indexing.test_index_task_closes_read_connection_before_all_model_work[False]",
+      "reason": "Explicit real local model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_rag_staged_indexing.test_index_task_closes_read_connection_before_all_model_work[True]",
+      "reason": "Explicit real local model/PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_recovery_integration.test_expired_owner_cannot_revive_and_new_owner_can_finish",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_recovery_integration.test_future_retry_keeps_generation_and_backoff",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_recovery_integration.test_unpublished_initial_intent_is_not_duplicated",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_recovery_integration.test_three_lost_attempts_exhaust_without_fourth_execution",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_official_zero_verified_admitted_and_correction_never_falls_back",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_comprehensive_and_unknown_cannot_be_technical_labels_and_csrf_required",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_real_pg_frozen_manifest_preview_run_budget_and_unknown_billing",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_manifest_byte_tampering_is_not_trusted",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_controlled_port_three_real_ledger_records_no_paid_transport",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_real_research_process_uses_clean_full_body_packages_and_three_mock_calls",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_mock_timeout_remains_unknown_and_never_resends",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_research_role_cannot_read_labels_and_stale_execution_cannot_reserve",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_historical_import_dry_run_exceptions_confirmation_and_same_bytes_reuse",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_grouping_changes_pause_frozen_run_and_invalidate_split",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_actual_usage_estimate_over_budget_pauses_and_settlement_is_idempotent",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_cancel_waits_for_execution_terminal_and_keeps_unknown_reserved_fee",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_outcome_context_prefills_identity_and_partial_parse_refuses_full_scope",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_withdrawn_original_prevents_any_new_mock_model_request",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_no_idle_transaction_during_model_or_result_put_and_withdrawal_blocks_publish",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_research_authority_mapping_is_not_worker_readable_or_writable_and_rr_fails",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_old_parse_source_cannot_authorize_new_parse_evidence",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_unconfigured_authority_is_explicit_503_and_capability_false",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_manifest_io_and_model_io_run_outside_api_and_research_transactions",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_new_admission_same_project_changes_group_and_pauses_before_new_requests",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_admission_during_result_stage_refuses_success_and_preserves_known_usage",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_no_frozen_submission_identity_cannot_be_washed_by_current_binding_or_audit",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_admission_bridge_changes_both_groups_and_frozen_guard_rejects_even_if_run_reopened",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_frozen_identity_change_blocks_calls_without_rewriting_old_submission",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_research_integration.test_reserve_locks_other_preview_bid_before_reading_its_identity",
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务"
+    },
+    {
+      "nodeid": "tests.test_review_acceptance.test_real_restricted_pg_window_excludes_second_executor_and_releases",
+      "reason": "Explicit restricted PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_review_integration.test_real_freeze_and_full_core_pipeline_with_offline_model[False-False]",
+      "reason": "需要独立真实PG/S3机制环境"
+    },
+    {
+      "nodeid": "tests.test_review_integration.test_real_freeze_and_full_core_pipeline_with_offline_model[True-False]",
+      "reason": "需要独立真实PG/S3机制环境"
+    },
+    {
+      "nodeid": "tests.test_review_integration.test_real_freeze_and_full_core_pipeline_with_offline_model[True-True]",
+      "reason": "需要独立真实PG/S3机制环境"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_seven_api_current_confirm_correction_withdraw_history",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_historical_confirm_without_fake_review_and_extra_claim_rejected",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_invalid_evidence_rejected_before_object_get[wrong_quote]",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_invalid_evidence_rejected_before_object_get[cross_parse]",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_invalid_evidence_rejected_before_object_get[false_maximum]",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_source_change_during_object_io_rejected_at_final_cas",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_real_controlled_word_full_ancestor_claims_missing_extra_and_withdrawal",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_pending_preserves_unknown_denominator",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_closed_current_refused_but_separate_historical_registration_allowed",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_replay_after_source_withdrawal_is_not_current_confirmation",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scale_integration.test_worker_has_no_authority_access_and_api_rr_fails_closed",
+      "reason": "Requires separately fresh reviewed C"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable[current]",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_actual_complete_three_judgments_owned_worker_and_truthful_unavailable[historical]",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_unknown_billing_keeps_reserve_pauses_and_rejects_resume_or_second_nonce",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_score_purpose_has_no_raw_label_proof_export_or_call_table_read",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_equivalent_new_input_success_reuses_actual_calls_and_charges_no_new_fee",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_equivalent_new_input_cannot_wash_unknown_call_with_new_command",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_appended_rule_cannot_expand_old_frozen_review_and_rejects_before_put",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_archived_history_research_does_not_reopen_project_or_enable_current_scoring",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_withdrawal_during_mock_http_records_usage_but_cannot_publish_old_result",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_still_published_head_revision_cannot_recapture_an_old_review_as_current",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_expanded_new_review_scope_still_cannot_resend_shared_unknown_chapter",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_actual_partial_or_conflict_root_rejected_by_api_and_db_even_with_complete_known_chapters[partial]",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_actual_partial_or_conflict_root_rejected_by_api_and_db_even_with_complete_known_chapters[conflict]",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_same_result_shadow_is_persisted_without_new_model_calls_and_route_change_keeps_history",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_cancel_during_mock_http_preserves_late_usage_and_rejects_old_generation_publish",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_score_purpose_repeatable_read_cannot_claim_from_a_stale_snapshot",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_scoring_integration.test_api_role_cannot_seal_self_hashed_root_instead_of_actual_review_blob",
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile"
+    },
+    {
+      "nodeid": "tests.test_slice_integration.test_real_pdf_slice_and_command_replay",
+      "reason": "需要专用真实PG/Kafka/S3开发环境"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_partial_replacement_preserves_unaffected_human_actor_and_core_obligations",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_defer_creates_known_gap_and_repeated_note_does_not_clone_package",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_invalid_quote_rolls_back_every_new_rule_decision_and_package",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_explicit_partial_scope_cannot_be_confirmed_as_whole",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_whole_replacement_only_ends_exclusively_supported_obligations[whole]",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_whole_replacement_only_ends_exclusively_supported_obligations[mixed]",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_http_effectivity_cookie_csrf_cas_schema_and_response_loss_replay",
+      "reason": "需真实本地S3验证合成原件字节身份"
+    },
+    {
+      "nodeid": "tests.test_source_effectivity_integration.test_actual_batch_500_explicit_selection_atomic_limit_and_replay",
+      "reason": "需独立非owner PG"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_actual_login_catalog_round_bid_and_storage_form_one_identity_v2_chain",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_auth_origin_csrf_idempotency_and_schema_errors_are_real",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_stable_lot_scope_uniqueness_and_cursor_are_not_display_name_matching",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_unselected_lot_is_pending_and_explicit_correction_is_cas_guarded",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_legacy_binding_missing_stable_lot_is_not_reinterpreted_or_modified",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_direct_sql_after_waiting_for_bid_lock_rechecks_new_profile_snapshot",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_same_company_reused_and_similar_names_stay_distinct]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_no_default_is_silently_applied_to_project]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_new_lot_and_new_round_do_not_reuse_work_units]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_correction_preserves_audit_identity_at_time_and_does_not_invent_history]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_delayed_transaction_default_follows_action_order_not_transaction_start]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_delayed_correction_is_not_backdated_to_transaction_start]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_login_http_registration_default_cas_and_bid_correction]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_existing_identity_pg_scenarios_with_explicit_v2_test_database[test_directory_pagination_discovers_more_than_100_and_binds_filters]",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_stable_lot_identity.test_automatic_round_limit_and_v2_confirmed_shape_are_explicit",
+      "reason": "requires explicit local disposable PG17 admin"
+    },
+    {
+      "nodeid": "tests.test_submission_gate_integration.test_empty_gate_is_explicit_and_known_report_bytes_cannot_be_relabelled_across_projects",
+      "reason": "需专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_submission_lifecycle_integration.test_offline_fact_and_explicit_correction_preserve_terminal_or_archived_state[closed-False]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_submission_lifecycle_integration.test_offline_fact_and_explicit_correction_preserve_terminal_or_archived_state[terminated-False]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_submission_lifecycle_integration.test_offline_fact_and_explicit_correction_preserve_terminal_or_archived_state[working-True]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_submission_lifecycle_integration.test_offline_fact_and_explicit_correction_preserve_terminal_or_archived_state[preparation-False]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_submission_lifecycle_integration.test_offline_fact_and_explicit_correction_preserve_terminal_or_archived_state[working-False]",
+      "reason": "需要专用真实PG"
+    },
+    {
+      "nodeid": "tests.test_task_backend_hooks_integration.test_actual_registered_task_guard_prevents_shared_auto_rebase[advance]",
+      "reason": "专用PG无费执行"
+    },
+    {
+      "nodeid": "tests.test_task_backend_hooks_integration.test_actual_registered_task_guard_prevents_shared_auto_rebase[freeze]",
+      "reason": "专用PG无费执行"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_ambiguous_draft_lost_ack_is_private_and_never_schedules",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_edit_revision_cas_and_explicit_template_save_are_separate",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_cross_project_actor_and_untrusted_selected_version_are_refused",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_concurrent_draft_edits_have_one_winner_and_keep_original",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_closed_archive_preserves_read_and_old_ack_but_refuses_new_work",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_unresolved_blocks_save_and_explicit_form_edit_then_single_save_recovers",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_daily_draft_does_not_create_schedule_until_explicit_save_and_no_run",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_two_save_commands_race_to_one_template_and_old_ack_survives_archive",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_drafts_integration.test_private_draft_directory_restores_current_versions_with_scoped_pagination",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_manual_denial_lost_ack_reuses_and_parse_success_is_not_review_success",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_scoring_preflight_does_not_create_fake_success_or_runs",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_registered_impact_is_explicitly_partial_and_notifications_merge_without_poll_writes",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_pause_stops_only_new_triggers_not_existing_operations",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_material_event_dedup_same_input_and_old_event_does_not_run_current",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_schedule_skips_unbounded_history_and_current_slot_has_one_receipt",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_unknown_cost_blocks_new_key_and_explicit_rerun_and_changed_template",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_review_guard_marks_stale_before_auto_review_rebase",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_chapter_task_queues_real_existing_authoring_plan_without_applying_or_model",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_unknown_fee_cannot_be_bypassed_by_new_template_version",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_untrusted_event_identity_or_cross_project_event_is_not_accepted",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_run_write_is_blocked_after_archive_but_old_receipt_and_read_survive",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_saving_event_template_does_not_retroactively_run_old_material_event",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_unknown_preparation_cost_is_detected_after_root_parse_success",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_final_review_link_requires_unique_bound_context_not_current_review_guess[None]",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_final_review_link_requires_unique_bound_context_not_current_review_guess[wrong_context]",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_final_review_link_requires_unique_bound_context_not_current_review_guess[duplicate_event]",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_final_review_link_requires_unique_bound_context_not_current_review_guess[missing_context]",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_equivalent_inflight_review_is_reused_across_template_revision",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_runs_integration.test_unwired_review_executor_fails_closed_without_creating_task_run",
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_default_save_is_manual_and_lost_ack_replays_without_run",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_revision_and_pause_preserve_immutable_versions_and_do_not_cancel_work",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_concurrent_members_cannot_overwrite_and_cross_project_receipt_is_rejected",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_scoped_pagination_and_closed_project_allow_read_and_old_receipt_only",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_saved_receipt_survives_archive_but_new_command_cannot_reuse_it",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_task_templates_integration.test_cross_project_selected_versions_cannot_be_saved",
+      "reason": "Explicit nonowner isolated PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_upload_layout_integration.test_new_browser_reads_authoritative_layout_and_digest_without_local_grant",
+      "reason": "需独立PG"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_nonowner_real_original_saved_failure_and_pdf_followup",
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_sql_rejects_control_plane_result_forgery_and_json_null",
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_cross_role_source_and_retry_without_csrf_are_rejected",
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_recoverable_configuration_keeps_original_and_replays_accepted_retry",
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_real_docker_to_restricted_pg_success_and_exact_chain",
+      "reason": "可选真实Docker转换，未配置不冒充已执行"
+    },
+    {
+      "nodeid": "tests.test_word_intake_integration.test_retry_replay_validates_bid_version_before_old_ack",
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_shared_docx_verify_failure_keeps_original_then_unverified_pdf_recovery",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_new_word_clears_old_pdf_and_rejects_same_logical_file",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_default_closed_word_gate_precedes_storage",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_real_controlled_pdf_adoption_and_word_pdf_parse_ancestry[early]",
+      "reason": "实际固定Docker与Parser03本地端口"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_real_controlled_pdf_adoption_and_word_pdf_parse_ancestry[late]",
+      "reason": "实际固定Docker与Parser03本地端口"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_word_render_cancel_and_closed_project_have_no_publication",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_retained_word_reuses_verified_blob_and_worker_rebuilds_receipt",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_late_controlled_pdf_cannot_grab_new_word_head",
+      "reason": "实际隔离Docker转换"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_broken_renderer_config_still_saves_word_original",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_shared_multipart_docx_preserves_native_content_type_and_full_worker_inspection",
+      "reason": "Word fresh非owner角色库"
+    },
+    {
+      "nodeid": "tests.test_word_mainflow_integration.test_native_oss_cookie_single_render_adopt_parse_and_exact_byte_sha",
+      "reason": "全新独立Word数据库+OSS前缀"
+    },
+    {
+      "nodeid": "tests.test_word_materials_integration.test_pending_word_identity_is_current_material_not_parallel_inventory",
+      "reason": "Word fresh库的受限PG机制"
+    },
+    {
+      "nodeid": "tests.test_word_materials_integration.test_old_selection_cannot_cover_new_material_or_closed_project",
+      "reason": "Word fresh库的受限PG机制"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_declared_rebind_cannot_target_existing_pdf",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_new_browser_reads_exact_declaration_and_regular_pdf_rebind_still_works",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_single_and_multipart_initial_targets_are_checked_before_creating_new_intent",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_closed_batch_reuse_keeps_declaration_and_only_allows_independent_file",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_pending_old_binding_receipt_replays_but_new_commit_requires_rebinding",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_retained_source_is_revalidated_after_real_byte_io[source_version]",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_retained_source_is_revalidated_after_real_byte_io[expiry]",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_retained_cancel_and_close_refuse_late_publication[cancel]",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_pdf_declaration_bindings.test_retained_cancel_and_close_refuse_late_publication[close_project]",
+      "reason": "Isolated reviewed nonowner Word/application DB only"
+    },
+    {
+      "nodeid": "tests.test_word_request_order_counterexample.test_request_order_after_bid_lock",
+      "reason": "仅fresh合成PG反例"
+    },
+    {
+      "nodeid": "tests.test_word_request_order_counterexample.test_api_cannot_set_server_accepted_timestamp",
+      "reason": "仅fresh合成PG反例"
+    },
+    {
+      "nodeid": "tests.test_word_request_order_counterexample.test_latest_pending_and_failed_never_reuse_old_qualified_pdf",
+      "reason": "原生固定Docker旧成功PDF与新失败机制"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_new_work_rejected_and_prior_ack_replayed_after_termination",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_old_snapshot_cannot_make_current_authority_write[REPEATABLE READ]",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_old_snapshot_cannot_make_current_authority_write[SERIALIZABLE]",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_main_batch_command_uses_same_guard_and_replay",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_worker_stops_closed_work_and_releases_execution_right[False]",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_worker_stops_closed_work_and_releases_execution_right[True]",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_comparison_lane_refuses_paid_handler_before_acquire",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_each_transport_lane_rejects_other_handler_before_any_execution",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_access_integration.test_closed_batch_verified_bytes_require_new_explicit_batch_and_preserve_original",
+      "reason": "专用PG显式执行"
+    },
+    {
+      "nodeid": "tests.test_work_conversations.test_main_concurrent_members_and_lost_ack",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_work_conversations.test_messages_replay_identity_paging_and_cross_project",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_work_conversations.test_archive_restore_does_not_reopen_or_remove_messages",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_work_conversations.test_selected_sources_are_exact_references_and_missing_reference_rolls_back",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    },
+    {
+      "nodeid": "tests.test_work_conversations.test_actual_contract_keeps_persistence_and_exports_real_execution_routes",
+      "reason": "Explicit isolated nonowner PG opt-in"
+    }
+  ]
+}

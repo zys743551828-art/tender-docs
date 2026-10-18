@@ -1,0 +1,26 @@
+{
+  "python": "3.12.15 (main, Oct  6 2026, 02:02:31) [GCC 12.2.0]",
+  "checks": {
+    "pytest": 1,
+    "mypy": 0,
+    "ruff": 0,
+    "format": 0,
+    "bandit": 0
+  },
+  "source_commit": "521579ca582d667dab46bfe5886da289d86b9bd3",
+  "network": "none",
+  "business_env": "none",
+  "private_source_mode": "0o700",
+  "pytest_counts": {
+    "passed": 976,
+    "skipped": 865,
+    "failed": 5,
+    "errors": 13,
+    "collected": 1859
+  },
+  "skip_reason_groups": 84,
+  "failure_groups": {
+    "missing exact OCR models/runtime": 15,
+    "actual OpenAPI partial-app regression": 3
+  }
+}

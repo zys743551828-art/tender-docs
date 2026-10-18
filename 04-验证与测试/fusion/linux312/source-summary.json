@@ -1,0 +1,41 @@
+{
+  "source_commit": "521579ca582d667dab46bfe5886da289d86b9bd3",
+  "snapshot": "f00-source-521579ca582d",
+  "method": "fixed git archive regular allowlist members only; excluded contents never read or written",
+  "excluded": [
+    {
+      "path": "workbench/apps/web/.env.delivery06.local",
+      "reason": "excluded environment/private/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/.env.external.local",
+      "reason": "excluded environment/private/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/qa-previews/a2-integration-04/frozen-inputs/.env.external.local",
+      "reason": "excluded environment/private/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/qa-previews/multipart-knowledge-05/frozen-inputs/.env.external.local",
+      "reason": "excluded environment/private/dependency path"
+    }
+  ],
+  "runtime_lock_comparison": {
+    "requirements.lock.txt": {
+      "archive_sha256": "2b8f6a528e36d3976d11fd05c8716a21c2c6d9eab03f556735afffd6650d02b9",
+      "runtime_context_sha256": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923",
+      "same_after_crlf_normalization": true
+    },
+    "requirements-fusion-checks.txt": {
+      "archive_sha256": "3b604e301523a3c8f1202e445ff91ad409f6dc9eccf89eb018477a02d4c5c526",
+      "runtime_context_sha256": "570baf6153ec9b96de50179fa5bcf99f111694d1c60d98273adb29452d81de7a",
+      "same_after_crlf_normalization": true
+    }
+  },
+  "safe_tar_sha256": "fb215491ea216a44acd82aa449e4047931175ad8a41f38de801e7f94db49e186",
+  "safe_tar_bytes": 178124800,
+  "file_count": 7672,
+  "source_bytes": 164261422,
+  "full_source_receipt_sha256": "4b64de6d06e502c8825815a13037e5321a2db7c36c8311e22041ada59bc09a64",
+  "full_source_receipt_storage": "Ignored local validation evidence; full source manifest not copied into documentation."
+}
