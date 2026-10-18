@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="26" failures="0" errors="0" time="6.4248378">
+    <testsuite name="src/AssistantIntentRecovery.test.tsx" timestamp="2026-10-18T14:25:34.088Z" hostname="zhangyansong" tests="17" failures="0" errors="0" skipped="0" time="5.3454349">
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="unknown默认没有原任务或新对象，只有显式原引用才能形成continue" time="0.1923676">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="真实对象及允许用途明确选择，其他项目条款不能成为本项目目标" time="0.3521794">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="global章节目标还须明确选择所属项目来源，来源移除后目标失效而不暗换" time="0.3088383">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="只列真实当前评审的问题，未知或其他轮次问题不成为目标" time="0.2640399">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="关联原job只读回状态并保留草稿，普通发送仍禁且不自动触发" time="0.3883648">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="空草稿也可显式读回原任务，读回后不自动转为新问题" time="0.2144538">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="服务端复用原job时保留草稿并明确没有创建新任务" time="0.5566881">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="新问题受理答复丢失后只恢复同一请求和幂等键，不重选目标" time="0.5576552">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="选择新对象后出现真实在途任务，硬门立即恢复且不发送" time="0.5266091">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="global明确新项目时保留该项目版本来源，不自动切会话或添加原任务引用" time="0.4944899">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="关联原job收到其他job回包时保留输入且不宣称已读原处理" time="0.3402259">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="目标项目读取失败时不退回普通请求或沿用缓存身份" time="0.0763327">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="提交新rule只发送所选对象/用途，服务端不独立拒绝保留草稿且不自动改目标" time="0.5433576">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="running硬门不能被显式新对象流程解除" time="0.1111917">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="error硬门不能被显式新对象流程解除" time="0.1373801">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="foreign硬门不能被显式新对象流程解除" time="0.1403843">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="loading硬门不能被显式新对象流程解除" time="0.1397905">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AssistantWorkspace.test.tsx" timestamp="2026-10-18T14:25:34.091Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="1.0794029">
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="只显式创建同一主会话，保存讨论不请求AI，刷新能恢复服务器消息" time="0.4057086">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="412保留草稿，重新读取真实修订后明确继续，不能用旧ETag重发" time="0.2627092">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="全局主会话保持null项目与私有范围，不提供项目讨论写入" time="0.0129856">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="unknown费用不展示候选回答或提供重复启动，取消受理不能冒取消完成" time="0.0801397">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="可信来源只接受服务器指定版本，其他项目与不可用项不可误选" time="0.0612664">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="操作卡只有明确按钮执行一次，服务端已执行后第二入口不能再确认" time="0.0667366">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="归档不能直接激活，先恢复为已结束；会话状态改变不请求取消任务" time="0.149807">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="不同项目消息不混入当前主会话" time="0.0157818">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="会话过期收起侧栏保留草稿，不把键盘困在后台助手或请求取消" time="0.0234525">
+        </testcase>
+    </testsuite>
+</testsuites>
