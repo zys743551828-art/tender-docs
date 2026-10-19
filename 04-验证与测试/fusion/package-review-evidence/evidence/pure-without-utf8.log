@@ -1,0 +1,129 @@
+.................................FFFF                                    [100%]
+================================== FAILURES ===================================
+__________ test_actual_registered_get_contract_and_session_auth_only __________
+
+    def test_actual_registered_get_contract_and_session_auth_only():
+        from apps.api.main import app
+    
+>       operation = app.openapi()["paths"][
+                    ^^^^^^^^^^^^^
+            "/api/v1/bids/{bid_id}/packages/{package_id}/revisions/{revision_id}/evidence"
+        ]
+
+tests\test_bid_package_evidence_contract.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+apps\api\main.py:108: in openapi
+    return implemented_openapi(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+apps\api\export_openapi.py:34: in implemented_openapi
+    target = json.loads((ROOT / "packages/contracts/openapi/openapi.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/workspace/tender/tender-app/workbench/packages/contracts/openapi/openapi.json')
+encoding = 'locale', errors = None
+
+    def read_text(self, encoding=None, errors=None):
+        """
+        Open the file in text mode, read it, and close the file.
+        """
+        encoding = io.text_encoding(encoding)
+        with self.open(mode='r', encoding=encoding, errors=errors) as f:
+>           return f.read()
+                   ^^^^^^^^
+E           UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 71: illegal multibyte sequence
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1028: UnicodeDecodeError
+_____ test_app_without_package_router_does_not_publish_package_operations _____
+
+    def test_app_without_package_router_does_not_publish_package_operations():
+>       actual = implemented_openapi(FastAPI())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bid_package_openapi.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+apps\api\export_openapi.py:34: in implemented_openapi
+    target = json.loads((ROOT / "packages/contracts/openapi/openapi.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/workspace/tender/tender-app/workbench/packages/contracts/openapi/openapi.json')
+encoding = 'locale', errors = None
+
+    def read_text(self, encoding=None, errors=None):
+        """
+        Open the file in text mode, read it, and close the file.
+        """
+        encoding = io.text_encoding(encoding)
+        with self.open(mode='r', encoding=encoding, errors=errors) as f:
+>           return f.read()
+                   ^^^^^^^^
+E           UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 71: illegal multibyte sequence
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1028: UnicodeDecodeError
+___ test_requirements_only_app_does_not_require_unregistered_package_routes ___
+
+    def test_requirements_only_app_does_not_require_unregistered_package_routes():
+        app = FastAPI()
+        app.include_router(requirements_router)
+>       actual = implemented_openapi(app)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bid_package_openapi.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+apps\api\export_openapi.py:34: in implemented_openapi
+    target = json.loads((ROOT / "packages/contracts/openapi/openapi.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/workspace/tender/tender-app/workbench/packages/contracts/openapi/openapi.json')
+encoding = 'locale', errors = None
+
+    def read_text(self, encoding=None, errors=None):
+        """
+        Open the file in text mode, read it, and close the file.
+        """
+        encoding = io.text_encoding(encoding)
+        with self.open(mode='r', encoding=encoding, errors=errors) as f:
+>           return f.read()
+                   ^^^^^^^^
+E           UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 71: illegal multibyte sequence
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1028: UnicodeDecodeError
+_____ test_package_only_app_exports_all_registered_operations_and_schemas _____
+
+    def test_package_only_app_exports_all_registered_operations_and_schemas():
+        app = FastAPI()
+        app.include_router(router)
+        app.include_router(discovery_router)
+>       actual = implemented_openapi(app)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_bid_package_openapi.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+apps\api\export_openapi.py:34: in implemented_openapi
+    target = json.loads((ROOT / "packages/contracts/openapi/openapi.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/workspace/tender/tender-app/workbench/packages/contracts/openapi/openapi.json')
+encoding = 'locale', errors = None
+
+    def read_text(self, encoding=None, errors=None):
+        """
+        Open the file in text mode, read it, and close the file.
+        """
+        encoding = io.text_encoding(encoding)
+        with self.open(mode='r', encoding=encoding, errors=errors) as f:
+>           return f.read()
+                   ^^^^^^^^
+E           UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 71: illegal multibyte sequence
+
+C:\Users\74355\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1028: UnicodeDecodeError
+- generated xml file: D:\workspace\tender\tender-app\workbench\.local\review-boundaries\pure.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_bid_package_evidence_contract.py::test_actual_registered_get_contract_and_session_auth_only
+FAILED tests/test_bid_package_openapi.py::test_app_without_package_router_does_not_publish_package_operations
+FAILED tests/test_bid_package_openapi.py::test_requirements_only_app_does_not_require_unregistered_package_routes
+FAILED tests/test_bid_package_openapi.py::test_package_only_app_exports_all_registered_operations_and_schemas
+4 failed, 33 passed in 1.87s
