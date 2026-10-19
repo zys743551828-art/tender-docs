@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="295" failures="0" errors="0" time="71.2149457">
+    <testsuite name="src/A1Recovery.test.tsx" timestamp="2026-10-19T06:13:44.725Z" hostname="zhangyansong" tests="12" failures="0" errors="0" skipped="0" time="1.3853089">
+        <testcase classname="src/A1Recovery.test.tsx" name="刷新后从服务端恢复准备请求与固定稿件，运行中不再次开始" time="0.1235724">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="取消未冻结准备使用服务器ReviewState强令牌，412时保留原因而不声称已取消" time="0.3101414">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="取消表单打开后服务器换了请求，不将旧取消原因配新请求令牌自动提交" time="0.2676005">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="未冻结旧请求已过期时保留V1身份，当前稿V2需要明确开始且不自动收费" time="0.0405403">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="准备失败保留范围，明确重试只发一次当前输入和真实bid ETag" time="0.079132">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="actual接口已声明但旧live未提供时明确服务版本未就绪并禁用新请求" time="0.0237817">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="服务器历史分页发现旧轮，分页失败保留已读列表并可重试" time="0.2372095">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="历史manifest只读取固定V1受检稿，不以项目当前V2替换" time="0.1091274">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="关键阻断可打开定位，导航不会执行评审或提交命令" time="0.0622524">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="已受理新请求后，上一条服务器终态尚未刷新不能造成双击重复启动" time="0.0714046">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="新浏览器没有本地任务缓存仍能从服务器准备请求找到操作与失败详情入口" time="0.0457053">
+        </testcase>
+        <testcase classname="src/A1Recovery.test.tsx" name="服务器进度已切到新版而项目卡仍旧时禁用旧输入，刷新核对后才继续" time="0.0131531">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/A1Workspace.test.tsx" timestamp="2026-10-19T06:13:44.728Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="1.1177105">
+        <testcase classname="src/A1Workspace.test.tsx" name="来源、提取、判断、评分与人工确认分层，10/10不会写成原文零遗漏" time="0.067852">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="保留两项旧关键风险，不因本轮未检测或隐藏分数而消失" time="0.0784885">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="矩阵将检查失败与成功后的无法判断分开，不给失败项假满足" time="0.0391534">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="事实未知和布尔否不替换成0，空事实库不加首次评审前置" time="0.0183573">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="批量规则只提交明确勾选的pending项，不覆盖驳回和暂缓" time="0.3677508">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="单条决定对象已变化时保留输入并禁止旧解释配新ETag提交" time="0.3139166">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="显式历史轮次优先，不拿current指针替换所指review" time="0.0723447">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="读取刷新失败保留已知记录并显式标明未更新，不伪造空成功" time="0.0982697">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="矩阵默认将否决和强制要求置前，不因原始返回顺序让一般评分项遮住核心失败" time="0.0601602">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/api.test.ts" timestamp="2026-10-19T06:13:44.729Z" hostname="zhangyansong" tests="5" failures="0" errors="0" skipped="0" time="0.0086297">
+        <testcase classname="src/api.test.ts" name="首版条件保存携带If-None-Match和原幂等键，追加条件仍用If-Match" time="0.0038671">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="冲突的版本条件在发送前拒绝" time="0.0012299">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="同源字节PUT携带会话与当前CSRF，保留PDF类型与文件且不手设长度" time="0.0015739">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="外域S3不接收Cookie或CSRF，即使调用方误传CSRF也会移除" time="0.000769">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="同源绝对原页地址携带Cookie，GET不发送CSRF并保留取消信号" time="0.0005546">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/App.test.tsx" timestamp="2026-10-19T06:13:44.730Z" hostname="zhangyansong" tests="4" failures="0" errors="0" skipped="0" time="1.2276175">
+        <testcase classname="src/App.test.tsx" name="投标工作区 &gt; 登录失败持续显示，成功后空工作区不展示模拟指标" time="0.4460113">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="投标工作区 &gt; 会话过期保留未提交名称；重新登录不自动重放写入" time="0.6836885">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="投标工作区 &gt; 网络失败返回可恢复错误，不伪造业务结果" time="0.0025787">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="解析依据 &gt; 显示扫描缺口、真实物理页及原件用途，关闭后恢复焦点" time="0.0944684">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AssistantIntentRecovery.test.tsx" timestamp="2026-10-19T06:13:44.731Z" hostname="zhangyansong" tests="17" failures="0" errors="0" skipped="0" time="5.6126793">
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="unknown默认没有原任务或新对象，只有显式原引用才能形成continue" time="0.2388644">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="真实对象及允许用途明确选择，其他项目条款不能成为本项目目标" time="0.4009653">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="global章节目标还须明确选择所属项目来源，来源移除后目标失效而不暗换" time="0.3254257">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="只列真实当前评审的问题，未知或其他轮次问题不成为目标" time="0.2778629">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="关联原job只读回状态并保留草稿，普通发送仍禁且不自动触发" time="0.4269931">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="空草稿也可显式读回原任务，读回后不自动转为新问题" time="0.2581286">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="服务端复用原job时保留草稿并明确没有创建新任务" time="0.5579768">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="新问题受理答复丢失后只恢复同一请求和幂等键，不重选目标" time="0.5735965">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="选择新对象后出现真实在途任务，硬门立即恢复且不发送" time="0.5444324">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="global明确新项目时保留该项目版本来源，不自动切会话或添加原任务引用" time="0.4978278">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="关联原job收到其他job回包时保留输入且不宣称已读原处理" time="0.3392377">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="目标项目读取失败时不退回普通请求或沿用缓存身份" time="0.1086485">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="提交新rule只发送所选对象/用途，服务端不独立拒绝保留草稿且不自动改目标" time="0.497323">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="running硬门不能被显式新对象流程解除" time="0.1294596">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="error硬门不能被显式新对象流程解除" time="0.1403392">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="foreign硬门不能被显式新对象流程解除" time="0.1539515">
+        </testcase>
+        <testcase classname="src/AssistantIntentRecovery.test.tsx" name="loading硬门不能被显式新对象流程解除" time="0.1401657">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AssistantWorkspace.test.tsx" timestamp="2026-10-19T06:13:44.732Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="1.2700318">
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="只显式创建同一主会话，保存讨论不请求AI，刷新能恢复服务器消息" time="0.4836612">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="412保留草稿，重新读取真实修订后明确继续，不能用旧ETag重发" time="0.3096973">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="全局主会话保持null项目与私有范围，不提供项目讨论写入" time="0.0210997">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="unknown费用不展示候选回答或提供重复启动，取消受理不能冒取消完成" time="0.0740961">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="可信来源只接受服务器指定版本，其他项目与不可用项不可误选" time="0.0771818">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="操作卡只有明确按钮执行一次，服务端已执行后第二入口不能再确认" time="0.0698296">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="归档不能直接激活，先恢复为已结束；会话状态改变不请求取消任务" time="0.176065">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="不同项目消息不混入当前主会话" time="0.0234396">
+        </testcase>
+        <testcase classname="src/AssistantWorkspace.test.tsx" name="会话过期收起侧栏保留草稿，不把键盘困在后台助手或请求取消" time="0.0336106">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AuthoringBuilds.test.tsx" timestamp="2026-10-19T06:13:44.733Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="0.350019">
+        <testcase classname="src/AuthoringBuilds.test.tsx" name="构建等待保存ACK，使用确认修订；PDF失败不会把Word成功改写为整体就绪" time="0.1908302">
+        </testcase>
+        <testcase classname="src/AuthoringBuilds.test.tsx" name="失响应恢复重试原修订和幂等键，刷新后也不悄悄改用新稿" time="0.1134223">
+        </testcase>
+        <testcase classname="src/AuthoringBuilds.test.tsx" name="保存没有确认时不发送构建请求" time="0.0446674">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AuthoringFormatBindings.test.tsx" timestamp="2026-10-19T06:13:44.733Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="0.6854272">
+        <testcase classname="src/AuthoringFormatBindings.test.tsx" name="格式绑定只选已确认要求，用可信原页投影；来源不可新用时不构造ref" time="0.6842636">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AuthoringPlan.test.tsx" timestamp="2026-10-19T06:13:44.734Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.6364863">
+        <testcase classname="src/AuthoringPlan.test.tsx" name="人工预算保存走plan revision 0与draft11，不借section10冒充plan基准；空行不作事实" time="0.3659359">
+        </testcase>
+        <testcase classname="src/AuthoringPlan.test.tsx" name="412不清人工目标；异步最新计划不会静默重写用户输入" time="0.2694754">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AuthoringStructure.test.tsx" timestamp="2026-10-19T06:13:44.734Z" hostname="zhangyansong" tests="5" failures="0" errors="0" skipped="0" time="1.1724033">
+        <testcase classname="src/AuthoringStructure.test.tsx" name="删除先显示完整影响，不直接写稿；一次明确应用使用原draft tag" time="0.3787033">
+        </testcase>
+        <testcase classname="src/AuthoringStructure.test.tsx" name="预览失响应后刷新只恢复相同body/key/tag，不按新head重建身份" time="0.2464358">
+        </testcase>
+        <testcase classname="src/AuthoringStructure.test.tsx" name="412保留差异和删除影响，不能显示应用成功" time="0.2393787">
+        </testcase>
+        <testcase classname="src/AuthoringStructure.test.tsx" name="稳定ID按父级及ordinal排列；计划取plan revision，实际范围仍unknown" time="0.0008163">
+        </testcase>
+        <testcase classname="src/AuthoringStructure.test.tsx" name="版式未判明范围需服务器digest原样ACK，核对前不能显示可应用Action" time="0.3053246">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/AuthoringTemplateEditor.test.tsx" timestamp="2026-10-19T06:13:44.736Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.4382114">
+        <testcase classname="src/AuthoringTemplateEditor.test.tsx" name="编辑模板不写当前draft；内置只能另存，删除项包含子项，明确保存才一次创建" time="0.267473">
+        </testcase>
+        <testcase classname="src/AuthoringTemplateEditor.test.tsx" name="企业模板追加使用所选版本family实tag，失响应不会改成另存家族" time="0.1695417">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/BidPackages.test.tsx" timestamp="2026-10-19T06:13:44.736Z" hostname="zhangyansong" tests="13" failures="0" errors="0" skipped="0" time="3.2539412">
+        <testcase classname="src/BidPackages.test.tsx" name="未明确选解析时保存未知原件，多用途逗号输入保留，未接正式评审" time="0.4453285">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="用户明确选精确解析后添加物理页范围，失败解析不能选且不推断摘要" time="0.3513348">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="分页查找包、文件和解析记录，不把当前资料当作全部版本" time="0.2192528">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="历史查看不写入，编辑明确重读当前head并带If-Match" time="0.263582">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="CAS冲突保留本地选择，读取核对最新记录后才允许继续，绝不自动重试" time="0.5757763">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="切换类型使用独立目录，跨项目文档不显示，项目切换清空本地草稿" time="0.1363905">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="网络结果不明时保留选择，用户重试沿用原幂等键" time="0.1546848">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="切项目后旧保存响应不写进新项目工作区，旧资料仍由服务端目录可发现" time="0.1365599">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未决A操作冻结body和key，无法编辑B覆盖；刷新恢复A原操作再核对" time="0.2525242">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="追加修订丢ACK后刷新保留原If-Match，新head不自动覆盖未决基线" time="0.2485732">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未决操作按成员隔离，503不能假装原操作未提交" time="0.1417864">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未知结果重试遇登录失效仍保留原命令，不解除编辑锁" time="0.2042903">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="不能持久化原命令时不发送请求，避免刷新丢失未决身份" time="0.1221522">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/BusinessResults.test.tsx" timestamp="2026-10-19T06:13:44.738Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="1.1340784">
+        <testcase classname="src/BusinessResults.test.tsx" name="结果一次追加不自动核验；CAS失败保留候选输入并显式重读当前头" time="0.9736165">
+        </testcase>
+        <testcase classname="src/BusinessResults.test.tsx" name="pending实交身份只读；历史结果不借当前身份解锁新增" time="0.0623238">
+        </testcase>
+        <testcase classname="src/BusinessResults.test.tsx" name="普通用户报送不能一键核实成官方结果；服务端核实仍绑定强结果头" time="0.0968835">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/CoverageEditor.test.tsx" timestamp="2026-10-19T06:13:44.739Z" hostname="zhangyansong" tests="20" failures="0" errors="0" skipped="0" time="6.4362592">
+        <testcase classname="src/CoverageEditor.test.tsx" name="starts omitted and unknown without requesting all quotes or producing coverage automatically" time="0.134779">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="permits an unmapped missing observation with a reason and no fabricated evidence or range" time="0.366544">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="requires the complete own range, exact material evidence and an explicit human declaration" time="0.7461865">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="does not turn a partial inspection into verified but preserves it as a negative observation" time="0.8059526">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="rejects zero, negative, fractional and outside-part physical pages rather than dropping the range" time="0.9627178">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="permits already grounded NA with separately explicit confirmation and authority evidence, without a range" time="0.58691">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="does not offer positive state when frozen confirmation, source, applicability, parsing or quantity gates are missing" time="0.3635057">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="does not let a client state invent NA without frozen applicability evidence" time="0.0617981">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="rejects a quote from another parse even if the exact directory entry was valid" time="0.4179522">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="rejects an outside-part directory without resolving it against a latest parse" time="0.113823">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="does not promote authority evidence into verified own-material proof" time="0.8151134">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="checks the revision and digest on every directory page rather than only the first page" time="0.1259608">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="restores the original result but waits for a fresh exact-ID evidence check before calling it valid" time="0.1034521">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="keeps disabled restored inputs and emitted observation intact" time="0.0204152">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="ignores a late quote after inventory context changes and locks the original input" time="0.4028108">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="retains but rejects restored candidate evidence without calling it published" time="0.0288011">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="retains but rejects restored withdrawn evidence without calling it published" time="0.0315035">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="emits only newly selected B and leaves omitted A for server-derived unknown" time="0.2956212">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="shows member parsing gaps without guessing a requirement missing verdict" time="0.0155723">
+        </testcase>
+        <testcase classname="src/CoverageEditor.test.tsx" name="does not silently collapse multiple restored ranges for one part into a new result" time="0.034995">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/DocumentRelationNotice.test.tsx" timestamp="2026-10-19T06:13:44.742Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="0.0411493">
+        <testcase classname="src/DocumentRelationNotice.test.tsx" name="声明补PDF只用实际Word祖先链接，不称受控或继承检查" time="0.0405037">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/editorSchema.test.ts" timestamp="2026-10-19T06:13:44.743Z" hostname="zhangyansong" tests="4" failures="0" errors="0" skipped="0" time="0.0082802">
+        <testcase classname="src/editorSchema.test.ts" name="段落拆分后保留原节点身份并给新段落唯一身份，要求和来源不因文字编辑消失" time="0.0045523">
+        </testcase>
+        <testcase classname="src/editorSchema.test.ts" name="补丁节点摘要与服务端UTF-8排序JSON算法一致，中文和标记不被当成不同选区" time="0.0014038">
+        </testcase>
+        <testcase classname="src/editorSchema.test.ts" name="切换段落与标题保留稳定节点身份和原文字标记，补丁边界不因格式变化重建" time="0.0010309">
+        </testcase>
+        <testcase classname="src/editorSchema.test.ts" name="不接收目标之外的表格或外部图片节点，避免伪装无损Word编辑" time="0.0006956">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/eventStream.test.tsx" timestamp="2026-10-19T06:13:44.744Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.0191791">
+        <testcase classname="src/eventStream.test.tsx" name="流分帧支持分块、CRLF及多行数据，空revision仍是有效变化；重复和跨项目事件不更新" time="0.0031281">
+        </testcase>
+        <testcase classname="src/eventStream.test.tsx" name="同源Cookie流从最后序号续接，410先刷新清游标，401停止且不清除本地正文" time="0.0154333">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/HistoryPanel.test.tsx" timestamp="2026-10-19T06:13:44.744Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.2482065">
+        <testcase classname="src/HistoryPanel.test.tsx" name="从真实版本链找回旧文件名和身份，打开旧原件且不套用当前检查" time="0.218444">
+        </testcase>
+        <testcase classname="src/HistoryPanel.test.tsx" name="历史投影返回另一文件时拒绝展示，保留可重试错误" time="0.0288179">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/Identity.test.tsx" timestamp="2026-10-19T06:13:44.745Z" hostname="zhangyansong" tests="5" failures="0" errors="0" skipped="0" time="1.8883975">
+        <testcase classname="src/Identity.test.tsx" name="真实默认主体在表单可见，创建一次即绑定所选ID，无第二次确认且不按近似名合并" time="0.4080326">
+        </testcase>
+        <testcase classname="src/Identity.test.tsx" name="没有真实默认公司时可保存独立待确认项目，不将占位名称转换为确认主体ID" time="0.1673429">
+        </testcase>
+        <testcase classname="src/Identity.test.tsx" name="有据纠正412保留选择和理由，读取影响并明确新基准后才重试；不重写旧记录" time="0.6226819">
+        </testcase>
+        <testcase classname="src/Identity.test.tsx" name="目录加载后续轮次时保留工程绑定，已有轮次创建不误建新轮或要求手填编号" time="0.511782">
+        </testcase>
+        <testcase classname="src/Identity.test.tsx" name="旧筛选的后续页迟到不混入新主体查询，也不覆盖当前加载状态" time="0.1772425">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/Knowledge.test.tsx" timestamp="2026-10-19T06:13:44.746Z" hostname="zhangyansong" tests="7" failures="0" errors="0" skipped="0" time="3.1033869">
+        <testcase classname="src/Knowledge.test.tsx" name="收起、离开后保留成员自己的候选输入，恢复本地输入不发创建请求" time="0.6279189">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="原页与失败重试按钮不会提交版本；412后保留正文及旧令牌，明确比较才用新令牌" time="0.7105939">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="创建请求尚未返回时离开页面，迟到ACK不把用户导航回知识对象" time="0.4503068">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="最新候选与旧发布版分别可读，影响清单能跨会话追溯旧引用和当前失效原因" time="0.2650591">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="引用上下文409后不普通重试，明确重读主体与原知识版本才以新命令继续，摘录不丢且不创建事实" time="0.6308365">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="明确历史版本写入URL并保留查证上下文；返回/前进及刷新恢复原版本身份" time="0.3761411">
+        </testcase>
+        <testcase classname="src/Knowledge.test.tsx" name="固定历史版本不可读或身份错配时不回退到当前维护正文" time="0.0412944">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/KnowledgeRetrieval.test.tsx" timestamp="2026-10-19T06:13:44.747Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="0.9443558">
+        <testcase classname="src/KnowledgeRetrieval.test.tsx" name="只在明确查证后执行，实际unit登记参考且固定链接恢复，不创建事实" time="0.7085631">
+        </testcase>
+        <testcase classname="src/KnowledgeRetrieval.test.tsx" name="历史资格改变保留原内容和原页入口，但不能新增引用" time="0.0281141">
+        </testcase>
+        <testcase classname="src/KnowledgeRetrieval.test.tsx" name="未知响应恢复严格复用query与幂等键，跨成员清理恢复记录" time="0.2066552">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/Metrics.test.tsx" timestamp="2026-10-19T06:13:44.748Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="0.3472006">
+        <testcase classname="src/Metrics.test.tsx" name="零分母与未知风险不补零；少于20对隐藏误差；筛选只读且按明确提交应用" time="0.3462562">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/NavigationGuard.test.tsx" timestamp="2026-10-19T06:13:44.748Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.425085">
+        <testcase classname="src/NavigationGuard.test.tsx" name="顶部或返回导航先等保存确认，失败时章节保持挂载，成功才进入列表" time="0.2751974">
+        </testcase>
+        <testcase classname="src/NavigationGuard.test.tsx" name="未能保存时不退出会话，显式成功退出清理本地章节缓存；会话恢复不混其他成员草稿" time="0.1488997">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/OperationCenter.test.tsx" timestamp="2026-10-19T06:13:44.749Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="0.2184509">
+        <testcase classname="src/OperationCenter.test.tsx" name="只折叠服务端成功处理；运行/失败常驻且UUID仅在详情显示" time="0.2175734">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageCoverageWorkspace.test.tsx" timestamp="2026-10-19T06:13:44.750Z" hostname="zhangyansong" tests="23" failures="0" errors="0" skipped="0" time="3.4834024">
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="requires explicit start and saves exact digest-bound observations without inventing an ETag" time="0.2742281">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="restores a lost ACK with the original path/body/key even after selection and project state change" time="0.2462278">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="keeps an already unknown operation locked on generic rejection 401" time="0.2375491">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="keeps an already unknown operation locked on generic rejection 503" time="0.2314658">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="keeps an already unknown operation locked on generic rejection 422" time="0.2181907">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="keeps an already unknown operation locked on generic rejection 428" time="0.1849651">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="keeps an already unknown operation locked on generic rejection 409" time="0.2337078">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not send when persistence fails" time="0.197247">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="preserves input after an explicit stale inventory rejection and never silently targets the new head" time="0.1602018">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="retains an identity-inconsistent success as unknown instead of accepting another inventory&apos;s ACK" time="0.1802669">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="locks malformed recovery lot without writing a new request" time="0.0174139">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="locks malformed recovery body without writing a new request" time="0.0148961">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="locks malformed recovery key without writing a new request" time="0.004958">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="locks malformed recovery json without writing a new request" time="0.0110779">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="never starts from a historical inventory or a mismatching authority digest" time="0.0060157">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field actor" time="0.1158231">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field coverage-package" time="0.1547235">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field evidence-refs" time="0.1705203">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field completeness" time="0.1551678">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field assessment-package" time="0.1703013">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field assessment-digest" time="0.1708344">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="does not accept a mismatched success field assessment-state" time="0.1556251">
+        </testcase>
+        <testcase classname="src/PackageCoverageWorkspace.test.tsx" name="rejects a response that merges a previous conclusion for a requirement omitted from this attempt" time="0.1705688">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageOriginalVerification.test.tsx" timestamp="2026-10-19T06:13:44.752Z" hostname="zhangyansong" tests="10" failures="0" errors="0" skipped="0" time="0.7062608">
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="显式核验全部明确成员，只显示本次观察且仍不可正式评审" time="0.1661773">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：missing" time="0.0595448">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_member" time="0.0616417">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_parse" time="0.0465439">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_digest" time="0.0623915">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：ready" time="0.0610687">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：blockers" time="0.0616699">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：date" time="0.0474315">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="重新预检即使摘要相同也丢弃旧核验响应" time="0.0674775">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="存储未配置时呈现错误，禁用状态不发送" time="0.0709967">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageRequirements.test.tsx" timestamp="2026-10-19T06:13:44.754Z" hostname="zhangyansong" tests="36" failures="0" errors="0" skipped="0" time="12.2498557">
+        <testcase classname="src/PackageRequirements.test.tsx" name="explicitly starts an editable check plan, saves zero with exact original scope and never writes coverage" time="0.9673341">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="restores a v2 lost ACK with original plan, snapshots, key and CAS after refresh and generic pre-command rejection 422" time="1.1915011">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="restores a v2 lost ACK with original plan, snapshots, key and CAS after refresh and generic pre-command rejection 428" time="1.1211922">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="keeps the original plan editable after a definitive conflict and requires exact read plus explicit baseline adoption" time="1.1424906">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="rejects a foreign exact baseline manifest after 412 and preserves the plan without automatic retry" time="0.9811442">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="latches original-rule changes, keeps entered fields and permits cancelling an unsent plan" time="1.089421">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: other-lot" time="0.0850766">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: other-round" time="0.108263">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: other-bidder" time="0.0929696">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: long-reason" time="0.0767609">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: nul-reason" time="0.0920773">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: surrogate-reason" time="0.0924268">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: no-timezone" time="0.0627731">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="locks corrupted v2 context/body recovery without sending a replacement: bad-rule-id" time="0.0802839">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="replays its own valid v2 timestamp, unicode reason and zero quantity without stricter restore changing the key" time="0.1520261">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="allows explicitly abandoning a definitively failed plan without deleting any unknown operation" time="0.847841">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="loads only after opening and reads exact frozen rule, unknown flags and historical scope" time="0.1527006">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="reads mapped history with the original reason, zero, translated checks and exact frozen target pages" time="0.1516023">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="creates an explicit empty mapping from top-level exact rule set with first-version condition" time="0.2736594">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="blocks creation for inconsistent exact rules identity: other-bid" time="0.0773317">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="blocks creation for inconsistent exact rules identity: mixed-set" time="0.0764752">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="blocks creation for inconsistent exact rules identity: missing-id" time="0.0779859">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="keeps RULE_SET_NOT_READY unavailable and never guesses rules from an array" time="0.0623809">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="unknown ACK freezes full scope/body/key/condition and restores identical request after refresh" time="0.4614926">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="subsequent creation uses current head ETag and a known stale rejection releases only this operation" time="0.3002779">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="retains pending operation on unknown/temporary server result 401" time="0.3022249">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="retains pending operation on unknown/temporary server result 503" time="0.279187">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="does not send when complete pending record cannot be persisted" time="0.2937859">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="guards foreign inventory manifest rather than showing another bid&apos;s statement" time="0.1082881">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="reads coverage attempt history by explicit ID with missing requirement states left unknown" time="0.1862133">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="can recover the original lost ACK while the project is now closed" time="0.2931356">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="does not erase an already unknown command on pre-command rejection 422" time="0.3175398">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="does not erase an already unknown command on pre-command rejection 428" time="0.3286912">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="does not silently erase a structured original condition or exception" time="0.132253">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="keeps corruption and another embedded scope locked rather than replacing the pending key" time="0.0800565">
+        </testcase>
+        <testcase classname="src/PackageRequirements.test.tsx" name="appends history pages with the signed cursor and keeps old entries accessible" time="0.1090418">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageReviewInputPreview.test.tsx" timestamp="2026-10-19T06:13:44.757Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="0.517071">
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="显式触发只读预检，StrictMode下仍显示阻断且没有执行入口" time="0.1622804">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="实际证据无法匹配时显示可理解的阻断而不提供执行入口" time="0.0545021">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="未选择清单或所选范围记录仍在加载时不发送" time="0.012027">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：scope" time="0.0669447">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：authority" time="0.044689">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：rule-set" time="0.0608112">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：ready" time="0.0182078">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换清单后隐藏旧结果并忽略迟到响应" time="0.0497948">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换离开又返回同一清单，也不接受上次未完成的旧观察" time="0.0465571">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PricingFormulaEditor.test.tsx" timestamp="2026-10-19T06:13:44.758Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="2.3300236">
+        <testcase classname="src/PricingFormulaEditor.test.tsx" name="原页逐字段选择使用可信身份，一次登记被单位证据拒绝后保留参数/摘录，不声称成功" time="2.3291701">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PricingPanel.test.tsx" timestamp="2026-10-19T06:13:44.758Z" hostname="zhangyansong" tests="7" failures="0" errors="0" skipped="0" time="4.4316663">
+        <testcase classname="src/PricingPanel.test.tsx" name="本地input digest与后端规范JSON SHA一致，重复对手假设不去重" time="0.0080446">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="关闭模块时直接链接不请求公式/结果，历史不删除、不自动执行" time="0.1066174">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="400ms情景更新保持dirty输入，迟到旧响应不替换新情景，未知分数不变零且试算不保存方案" time="1.4491905">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="设置响应缺字段时保留核心页面，不冒充已开启/已关闭，也不读取报价结果" time="0.0102942">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="未知曲线点断开且真实零保留；每点展示自己的基准价与有效数" time="0.011594">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="来源变化409阻止自动重试，保留本方/对手输入，明确核对后才继续" time="1.3974125">
+        </testcase>
+        <testcase classname="src/PricingPanel.test.tsx" name="保存条件412后旧模拟不能再次保存，重读公式后仍须明确重新试算取得新条件" time="1.4472398">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/Project.test.tsx" timestamp="2026-10-19T06:13:44.759Z" hostname="zhangyansong" tests="5" failures="0" errors="0" skipped="0" time="0.8202802">
+        <testcase classname="src/Project.test.tsx" name="先前读取晚到时不覆盖新项目快照和标题" time="0.1449357">
+        </testcase>
+        <testcase classname="src/Project.test.tsx" name="确认请求响应丢失后重试复用幂等键，不创建第二次入库命令" time="0.1625843">
+        </testcase>
+        <testcase classname="src/Project.test.tsx" name="局部核验失败必须明确选择部分入库，不将失败补遗悄悄略过" time="0.1626255">
+        </testcase>
+        <testcase classname="src/Project.test.tsx" name="资料包412冲突保留verified原件，刷新后由人重新确认且不重传" time="0.1788719">
+        </testcase>
+        <testcase classname="src/Project.test.tsx" name="空文件本地拒绝不创建空服务端批次，不留下关闭项目的无效阻断" time="0.1703398">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/ReportPanel.test.tsx" timestamp="2026-10-19T06:13:44.760Z" hostname="zhangyansong" tests="4" failures="0" errors="0" skipped="0" time="0.6998164">
+        <testcase classname="src/ReportPanel.test.tsx" name="同项目的正文版本也不能经报告入口下载，取件前核对实际用途和媒体格式" time="0.1204041">
+        </testcase>
+        <testcase classname="src/ReportPanel.test.tsx" name="先核评审项目身份，跨项目不请求context/历史或提供生成入口" time="0.0346457">
+        </testcase>
+        <testcase classname="src/ReportPanel.test.tsx" name="历史轮次保留指定原稿，PDF批注没有Word近似选项；仅真实副本成功后提供取件" time="0.1887312">
+        </testcase>
+        <testcase classname="src/ReportPanel.test.tsx" name="412不丢用途选择，显式重读后按新展示修订申请；未配置PDF转换可改Word" time="0.3550709">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/RequirementCheckPlan.test.tsx" timestamp="2026-10-19T06:13:44.761Z" hostname="zhangyansong" tests="17" failures="0" errors="0" skipped="0" time="6.6060636">
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="starts with no mappings and never fetches or silently selects evidence for unchecked rules" time="0.0834098">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires explicit target, reason and evidence even after a rule is enabled" time="0.3459203">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="derives multiple categories from frozen shared parts and permits the same exact evidence once" time="0.437955">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="preserves unknown as null and explicit zero as zero with quantity check" time="0.5560155">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects an unsafe or negative explicit quantity -1" time="0.5015083">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects an unsafe or negative explicit quantity 9007199254740992" time="0.7238328">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires a separately chosen not-applicable basis even if the same evidence is already the plan basis" time="0.483406">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="does not truncate an overlong reason into an apparently valid declaration" time="0.385364">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects old parse, wrong document or out-of-range evidence without selecting a newer parse" time="0.2927508">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="blocks withdrawn evidence instead of presenting it as currently usable" time="0.0593905">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="blocks candidate evidence instead of presenting it as currently usable" time="0.0639575">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="disables editing without dropping an already entered mapping" time="0.3945718">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="discards late evidence response after the authority context changes and locks the original draft" time="0.0860343">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="invalidates rather than reusing a draft after original rule conditions change" time="0.393281">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires a real explicit-offset timestamp and retains blank as unknown" time="1.6608381">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="restores an explicitly saved plan including zero, both evidence declarations and its original reason" time="0.1054478">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="keeps an invalid restored category/part binding locked instead of silently assigning a new target" time="0.0306165">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/Research.test.tsx" timestamp="2026-10-19T06:13:44.763Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="0.8079747">
+        <testcase classname="src/Research.test.tsx" name="真实技术零分保留为0，未知不记零；当前冲突不回退旧核验记录" time="0.0609177">
+        </testcase>
+        <testcase classname="src/Research.test.tsx" name="跨项目成绩响应被拒绝展示" time="0.042598">
+        </testcase>
+        <testcase classname="src/Research.test.tsx" name="研究来源分组412保留输入，明确比较后才能按新令牌保存；不会启动收费批次" time="0.7034736">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/RetrievalDrawer.test.tsx" timestamp="2026-10-19T06:13:44.763Z" hostname="zhangyansong" tests="6" failures="0" errors="0" skipped="0" time="1.3833782">
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="未注册查证API保留问题草稿，不用空结果冒充成功" time="0.2123941">
+        </testcase>
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="展示实际索引缺口和摘录，引用先验证原检索后打开精确版本物理页" time="0.168962">
+        </testcase>
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="网络失败后重试原输入与同一命令键，修改中的问题不悄悄替换失败命令" time="0.404475">
+        </testcase>
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="引用来源变化拒绝当作当前依据，明确历史入口保留原版本与页码" time="0.2464336">
+        </testcase>
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="空命中与服务失败均不能显示为已核对无风险" time="0.1880014">
+        </testcase>
+        <testcase classname="src/RetrievalDrawer.test.tsx" name="响应丢失后关闭再打开查证，原问题重试仍复用会话中的命令身份" time="0.1621187">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/SubmissionPanel.test.tsx" timestamp="2026-10-19T06:13:44.764Z" hostname="zhangyansong" tests="4" failures="0" errors="0" skipped="0" time="1.5357227">
+        <testcase classname="src/SubmissionPanel.test.tsx" name="线下补录选择真实原件及自身附件，一次保存并持续标明未完整检查/未核验平台" time="0.8459882">
+        </testcase>
+        <testcase classname="src/SubmissionPanel.test.tsx" name="412保留实际时间与附件，只在明确重读后使用新Gate身份；更正用Bid tag而非原记录tag" time="0.378341">
+        </testcase>
+        <testcase classname="src/SubmissionPanel.test.tsx" name="失响应刷新后重放原body/key/If-Match，迟到卸载ACK不清除恢复身份，其他成员不读取私有请求" time="0.1240632">
+        </testcase>
+        <testcase classname="src/SubmissionPanel.test.tsx" name="多个阻断保持可定位，关闭检测遗留关键风险仍可读原页和发现轮次" time="0.186313">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/TaskPanel.test.tsx" timestamp="2026-10-19T06:13:44.765Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="1.5336838">
+        <testcase classname="src/TaskPanel.test.tsx" name="保存模板默认manual，明确保存只创建模板不运行，也不把补遗语义检查说成已完成" time="0.4020394">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="PUT失响应刷新恢复，仍用同一方法、请求体、ETag与幂等键，不用新头重试" time="0.325238">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="章节和选定来源缺项可见，未输入真实目标不能保存，定时只有明确选择才出现" time="0.2199786">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="不具正式评分资格拒运行；unknown费用不能借当前模板启动第二次" time="0.0302093">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="NL未明确草案不锁死编辑，一次保存按钮串行PUT ACK后原子save，只有一个模板" time="0.1160688">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="仅保存草案失响应后的恢复不能变成保存模板" time="0.1906484">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="补遗本地处理成功仍明确语义未检查，不能把取消请求说成取消终态" time="0.0093112">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="已成功保存的编辑草稿不保留旧CAS基准，下一次编辑按当前暂停修订" time="0.0995086">
+        </testcase>
+        <testcase classname="src/TaskPanel.test.tsx" name="保存ACK后等当前模板快照读取完成，不能使用旧头提前暂停" time="0.1393624">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/UploadBatchDiscovery.test.tsx" timestamp="2026-10-19T06:13:44.766Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.2964229">
+        <testcase classname="src/UploadBatchDiscovery.test.tsx" name="新浏览器只凭项目读取批次，后续页保留状态与签名游标，选回真实批次不新建上传" time="0.2337865">
+        </testcase>
+        <testcase classname="src/UploadBatchDiscovery.test.tsx" name="待上传本地选择不因切批丢失，其他项目的批次不提供接续按钮" time="0.0613652">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/uploadFormats.test.ts" timestamp="2026-10-19T06:13:44.767Z" hostname="zhangyansong" tests="1" failures="0" errors="0" skipped="0" time="0.0032774">
+        <testcase classname="src/uploadFormats.test.ts" name="DOCX固定OOXML媒体，不依赖浏览器空type；Word与PDF不能选为同一逻辑文件版本" time="0.0025022">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/UploadStatus.test.tsx" timestamp="2026-10-19T06:13:44.767Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.2819231">
+        <testcase classname="src/UploadStatus.test.tsx" name="没有本地文件也能查询存储回执，全片已到才可按真实布局提交核验，单纯查询不写入" time="0.2298118">
+        </testcase>
+        <testcase classname="src/UploadStatus.test.tsx" name="有缺片且未选择原文件时只可查询，不伪造完成按钮" time="0.0511164">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/uploadTransport.test.ts" timestamp="2026-10-19T06:13:44.768Z" hostname="zhangyansong" tests="7" failures="0" errors="0" skipped="0" time="0.1950486">
+        <testcase classname="src/uploadTransport.test.ts" name="只补服务端缺片，池最多4并发，完整回执取存储观察而非浏览器PUT头" time="0.0510513">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="分片ACK丢失后重新观察并跳过已被存储接收的片，不重传整批" time="0.0312388">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="完成受理失响应跨刷新原key/If-Match/body重放，且不再次传分片" time="0.0286708">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="页面已离开后迟到的PUT响应不更新新流程或触发完成命令" time="0.044535">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="完成声明明确412后，用户可按真实最新回执与ETag重新核对，已收到片不重传" time="0.0333905">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="新浏览器只依据服务器布局与已有回执完成，412重核不依赖旧浏览器授权缓存" time="0.0031218">
+        </testcase>
+        <testcase classname="src/uploadTransport.test.ts" name="DOCX单传用固定OOXML Content-Type；空浏览器type不发送PDF媒体" time="0.0018982">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/useAssistantContinuation.test.tsx" timestamp="2026-10-19T06:13:44.769Z" hostname="zhangyansong" tests="7" failures="0" errors="0" skipped="0" time="0.3309767">
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="首次快照就绪一次定位输入，后续轮询快照不能重新聚焦或跳底" time="0.0370834">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="仍在输入时迟到卡片改变高度可保持输入可见，不再次调用focus" time="0.005567">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="上滚读历史后，布局和轮询不抢位置；显式回到最新才恢复跟随" time="0.1440275">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="键盘Tab＋Enter的继续入口聚焦输入，触摸读历史仍停止自动移动" time="0.0924124">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="等服务时用户已开始读历史，不在迟到响应后强抢焦点" time="0.0042377">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="显式Action链接保持对象定位，仍可主动继续提问" time="0.0430218">
+        </testcase>
+        <testcase classname="src/useAssistantContinuation.test.tsx" name="第一帧前轮询失效取消定位后，下次有效快照仍能完成首次定位" time="0.0033452">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/useSaveQueue.test.tsx" timestamp="2026-10-19T06:13:44.769Z" hostname="zhangyansong" tests="4" failures="0" errors="0" skipped="0" time="0.0895844">
+        <testcase classname="src/useSaveQueue.test.tsx" name="保存串行且等待期间的新编辑继续排队，首个ACK不能把后续输入显示成已保存" time="0.0149748">
+        </testcase>
+        <testcase classname="src/useSaveQueue.test.tsx" name="失败后的新输入保留，明确重试先重放失败快照，再保存最新文本" time="0.0024957">
+        </testcase>
+        <testcase classname="src/useSaveQueue.test.tsx" name="自动保存防抖后仍需服务端ACK，生成或导航等待同一在途保存" time="0.069132">
+        </testcase>
+        <testcase classname="src/useSaveQueue.test.tsx" name="服务器明确拒绝的内容修正后保存新输入，离开页面的迟到输入不会重新排队" time="0.002111">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/WordOriginals.test.tsx" timestamp="2026-10-19T06:13:44.770Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="0.2694668">
+        <testcase classname="src/WordOriginals.test.tsx" name="处理成功但转换partial仍保留未完成与Word无资格，迟到历史不称当前采用" time="0.1208345">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="补PDF固定原Word、项目、用途和独立file，不把关系称已核验" time="0.052581">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="重试用Word GET实tag，202只受理，原件和未完成提示不冒变成功" time="0.0952249">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/WordUploadBinding.test.tsx" timestamp="2026-10-19T06:13:44.771Z" hostname="zhangyansong" tests="2" failures="0" errors="0" skipped="0" time="0.6705509">
+        <testcase classname="src/WordUploadBinding.test.tsx" name="旧批次画面不是声明判定依据；fresh GET有Word声明时拒旧PDF版本目标并保留原因" time="0.4111321">
+        </testcase>
+        <testcase classname="src/WordUploadBinding.test.tsx" name="旧ACK缺新字段不能解释为无声明；新GET未提供约束就地保留原件" time="0.2583798">
+        </testcase>
+    </testsuite>
+</testsuites>
