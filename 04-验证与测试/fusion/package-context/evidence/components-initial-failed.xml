@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="23" failures="4" errors="0" time="5.309307">
+    <testsuite name="src/PackageOriginalVerification.test.tsx" timestamp="2026-10-19T08:26:23.286Z" hostname="zhangyansong" tests="14" failures="4" errors="0" skipped="0" time="4.8227207">
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="显式核验全部明确成员，只显示本次观察且仍不可正式评审" time="0.1077725">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：missing" time="0.0607125">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_member" time="0.0467707">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_parse" time="0.0451996">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_digest" time="0.0627242">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：ready" time="0.045493">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：blockers" time="0.0621226">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：date" time="0.0622388">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_digest" time="1.0597907">
+            <failure message="Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/PackageOriginalVerification.test.tsx:148:18
+            </failure>
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_scoring" time="1.0524775">
+            <failure message="Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/PackageOriginalVerification.test.tsx:148:18
+            </failure>
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_time" time="1.053741">
+            <failure message="Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/PackageOriginalVerification.test.tsx:148:18
+            </failure>
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_count" time="1.0549799">
+            <failure message="Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;h5&gt;[39m
+        [0m原件字节核验[0m
+      [36m&lt;/h5&gt;[39m
+      [36m&lt;p&gt;[39m
+        [0m读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。[0m
+      [36m&lt;/p&gt;[39m
+      [36m&lt;button[39m
+        [33mtype[39m=[32m&quot;button&quot;[39m
+      [36m&gt;[39m
+        [0m核对所选原件[0m
+      [36m&lt;/button&gt;[39m
+      [36m&lt;div&gt;[39m
+        [36m&lt;p[39m
+          [33mrole[39m=[32m&quot;status&quot;[39m
+        [36m&gt;[39m
+          [0m本次已核对 [0m
+          [0m2[0m
+          [0m [0m
+          [0m个成员原件，正式评审仍未就绪。核验时间：[0m
+          [0m2026/10/19 15:00:00[0m
+          [0m。后续执行需重新核验。[0m
+        [36m&lt;/p&gt;[39m
+        [36m&lt;details&gt;[39m
+          [36m&lt;summary&gt;[39m
+            [0m本次候选执行上下文[0m
+          [36m&lt;/summary&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m用途：标前合规核对。事实[0m
+            [0m [0m
+            [0m0[0m
+            [0m 条，其中人工确认为[0m
+            [0m [0m
+            [0m0[0m
+            [0m [0m
+            [0m条；事实输入资格尚未核验。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。[0m
+          [36m&lt;/p&gt;[39m
+          [36m&lt;p&gt;[39m
+            [0m上下文摘要 [0m
+            [0m1111111111111111111111111111111111111111111111111111111111111111[0m
+          [36m&lt;/p&gt;[39m
+        [36m&lt;/details&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element with the text: 原件核验响应与所选输入不一致，未采用该结果。. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;h5&gt;
+        原件字节核验
+      &lt;/h5&gt;
+      &lt;p&gt;
+        读取所选两份包内的全部原件，核对大小和摘要。核验结果仅为本次观察，不启动正式评审。
+      &lt;/p&gt;
+      &lt;button
+        type=&quot;button&quot;
+      &gt;
+        核对所选原件
+      &lt;/button&gt;
+      &lt;div&gt;
+        &lt;p
+          role=&quot;status&quot;
+        &gt;
+          本次已核对 
+          2
+           
+          个成员原件，正式评审仍未就绪。核验时间：
+          2026/10/19 15:00:00
+          。后续执行需重新核验。
+        &lt;/p&gt;
+        &lt;details&gt;
+          &lt;summary&gt;
+            本次候选执行上下文
+          &lt;/summary&gt;
+          &lt;p&gt;
+            用途：标前合规核对。事实
+             
+            0
+             条，其中人工确认为
+             
+            0
+             
+            条；事实输入资格尚未核验。
+          &lt;/p&gt;
+          &lt;p&gt;
+            方法、事实与来源摘要已纳入本次核对；候选尚未持久化，不能用于正式执行或评分。
+          &lt;/p&gt;
+          &lt;p&gt;
+            上下文摘要 
+            1111111111111111111111111111111111111111111111111111111111111111
+          &lt;/p&gt;
+        &lt;/details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/PackageOriginalVerification.test.tsx:148:18
+            </failure>
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="重新预检即使摘要相同也丢弃旧核验响应" time="0.0483857">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="存储未配置时呈现错误，禁用状态不发送" time="0.0593626">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageReviewInputPreview.test.tsx" timestamp="2026-10-19T08:26:23.294Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="0.4865863">
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="显式触发只读预检，StrictMode下仍显示阻断且没有执行入口" time="0.0886514">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="实际证据无法匹配时显示可理解的阻断而不提供执行入口" time="0.0548284">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="未选择清单或所选范围记录仍在加载时不发送" time="0.0063055">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：scope" time="0.0550619">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：authority" time="0.0468028">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：rule-set" time="0.0456768">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：ready" time="0.0620356">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换清单后隐藏旧结果并忽略迟到响应" time="0.0641361">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换离开又返回同一清单，也不接受上次未完成的旧观察" time="0.0623159">
+        </testcase>
+    </testsuite>
+</testsuites>
