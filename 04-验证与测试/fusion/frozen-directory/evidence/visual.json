@@ -1,0 +1,37 @@
+{
+  "kind": "synthetic-component-fixture",
+  "realBusinessBrowserAcceptance": false,
+  "containerWidthsNotPhoneViewports": true,
+  "observations": [
+    {
+      "container": 390,
+      "viewport": 1265,
+      "pageScrollWidth": 1265,
+      "cardWidth": 356,
+      "cardScrollWidth": 356,
+      "rowWidth": 328,
+      "rowScrollWidth": 328
+    },
+    {
+      "container": 768,
+      "viewport": 1265,
+      "pageScrollWidth": 1265,
+      "cardWidth": 734,
+      "cardScrollWidth": 734,
+      "rowWidth": 706,
+      "rowScrollWidth": 706
+    },
+    {
+      "container": 1200,
+      "viewport": 1265,
+      "pageScrollWidth": 1265,
+      "cardWidth": 1166,
+      "cardScrollWidth": 1166,
+      "rowWidth": 1138,
+      "rowScrollWidth": 1138
+    }
+  ],
+  "interaction": "Open -> 2 synthetic rows -> load more -> 3 rows -> select ID ending 7 -> verified matching full record",
+  "captureScope": "Directory UI before final save/history late-response isolation; layout and CSS unchanged, final race covered by component test.",
+  "cleanup": "Fixture storage reset; returned to real app; production build removed _qa."
+}
