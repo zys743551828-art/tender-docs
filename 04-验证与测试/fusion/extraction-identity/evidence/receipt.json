@@ -1,0 +1,28 @@
+{
+  "scope": "candidate tested against isolated fresh schema; NOT deployed to existing fusion_v2 preview",
+  "base_commit": "4af895f1e2d3d7999a02305395ae496963f8e79c",
+  "source_sha256": {
+    "workbench/apps/web/src/contracts.ts": "2942fc591049e286ab4294b1cfa51d6d4daf12dea1ab045db1de94a3485157d1",
+    "workbench/apps/worker/review_handlers.py": "ba69b12eeed5115269730bf9171df6028b5fee3f5f204d6d7bb4f27c8c3bcdaa",
+    "workbench/deploy/sql/bid-package-requirement-runtime-grants.sql": "4d510b265e9e98355d2794839ab204a9501a9cbcad1b9b82f4ad53c924d9498e",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "2e9a133f3877bbd995a13a8a6d09e27c8f04ca6b447fedd6092df3e6ff976591",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "4220fe5852c8684bd7eef4ccfae47a9ae3a3cc0773e866065d0ae4945ceb4a61",
+    "workbench/packages/contracts/sql/bid-package-requirements.sql": "b25fcf01fc088ab533f3a6af89a78b4a3e97b1696acc98a15b9b8397709a8e15",
+    "workbench/packages/domain/bid_package_requirement_repository.py": "840941c5e68b88e93fcefc2bbbee332aab56373605286cb187a6237f10d18277",
+    "workbench/packages/domain/reviews.py": "d1e2332e525fff7d21831a32c2dec22e5d9af56ae0e3e5b3f94c41866eb30550",
+    "workbench/tests/test_bid_package_requirements_api.py": "a6634cd092e16e15fff3842be38204d2d92db6b60b4637473bf51a7dad0bacb8",
+    "workbench/packages/domain/bid_package_extraction.py": "f7e4a243f04b078a49ce80b1f838f5a2ec526851a8593fae06a6978dc6398856",
+    "workbench/tests/test_bid_package_extraction.py": "5732c64edb83a1d778b04b7ac3529227b3008a8681f084910bfb228bdabf736b"
+  },
+  "artifacts": {
+    "checks.log": "fb273b9998aea84d6a3a34900023b083d7830da7a0dacbf656d72b1818af259a",
+    "cleanup.json": "d948cc2040b82b14341a36296d4af3c9b51f0d14be796f28f2f99ae08ed1b03a",
+    "frontend-276.xml": "531b38dbb6d0f67e7f6d145ec107b1bff0f6467c9d990159964baf80d75dc3e8",
+    "pure-32.xml": "ba70026ba55d05487d506b318c3308a3fa93f92dcf711c25fc26930cd41594f0",
+    "requirements-api.xml": "b7f57feeb9b5b56c22326ed69ced57f3d3ee799c329f5c22a9b56babe4c58096"
+  },
+  "real_model_requests": 0,
+  "compose_project": "tender-fusion",
+  "copilot_task_stopped": true,
+  "application_commit": "0978ba1"
+}
