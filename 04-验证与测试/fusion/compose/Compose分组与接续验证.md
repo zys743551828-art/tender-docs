@@ -4,7 +4,7 @@
 
 ## 实际结果
 
-- 六个侧栏入口各用语义线性SVG，尺寸／线宽一致。TypeScript、受影响ESLint、格式与生产构建通过；浏览器控制连接不可用，没有本次视觉截图。
+- 六个侧栏入口各用语义线性SVG，尺寸／线宽一致。TypeScript、受影响ESLint、格式与生产构建通过；恢复浏览器后实际登录并在默认视口看见六种独立图标，截图见下。1440／手机专项尚未补验。
 - 两个新库初始化入口共享有序SQL计划，先冻结全部UTF-8输入再连接。要求DDL按worker-functions→requirements→roles执行，随后独立撤销四张不可变历史表UPDATE，默认共12项。
 - 固定Compose项目`tender-fusion`，默认postgres、init、api、web，检查为同组checks profile。PG不发布宿主端口；web仅127.0.0.1:5188。核心网络internal，只有web额外连接preview bridge；Docker29的internal-only网页实际不能发布宿主端口，已据实修复。所有服务不自动重启，复用已有镜像，没有零散临时容器。
 - 新鲜预览代际fusion_v2已通过完整12项初始化，使用新库`tender_checks_fusion_v2`及独立init/api配置卷。旧预览库及旧配置卷保留，未隐式迁移、删卷或覆盖旧profile。初始化secret不挂API，API仅有专用配置卷；收费消费者未启动。
@@ -19,7 +19,17 @@
 
 要求记录仍是原rule_items与决定的不可变投影，不新增条款权威。旧规则未冻结完整抽取输入身份时仍为`unproven_legacy_rule_set`，清单完整性和review_ready保持false；人工范围声明不等于独立合规结论。旧清单／证据／包摘要不随当前决定或来源重建。
 
-尚未覆盖要求页面、桌面／手机图标截图、完整抽取身份、完整来源祖先／跨主体及坏历史矩阵、任意直SQL逆序锁死锁零ACK专项、正式整包评审／评分／提交链。不能将限定20项结果扩大成产品全部通过。
+尚未覆盖要求页面、1440／手机图标专项、完整抽取身份、完整来源祖先／跨主体及坏历史矩阵、任意直SQL逆序锁死锁零ACK专项、正式整包评审／评分／提交链。不能将限定20项结果扩大成产品全部通过。
+
+## 内置浏览器恢复
+
+应用26.1013.4894.0今天启动日志显示浏览器后台ready，但当前对话的getInfo失败，明确报`No ChatGPT browser route is available for browser session`；昨天有当前对话的sidebar thread注册记录。此次无法发现浏览器的直接原因是对话路由缺失，不是后台未启动或网页访问失败。为何这次启动没有自动关联该对话，尚未证实。
+
+通过应用工具`navigate_to_codex_page`重新打开当前对话，再请求打开5188预览。重新连接后，日志从同一getInfo路由缺失变为completed，控制接口取得iab浏览器。未重启／升级／重装应用，未修改配置或浏览器存储。
+
+随后真实读取标签页、填写既有管理员凭据、点击登录并读取工作台成功，保存默认视口截图；页面保留为可继续操作的交付标签。若复发，先检查对话是否被桌面应用打开和关联；重开当前对话再连接，不应只反复刷新网页或直接归因项目／Docker。
+
+![浏览器恢复后的真实工作台](evidence/browser-recovered.jpg)
 
 Docker启动最初被残留socket阻塞，用户恢复后引擎29.8.2可用。没有改系统ACL或删除Docker数据。Windows符号链接权限失败未改成skip，相关Linux门已实际通过。初跑发现并修复DDL CASE括号、ON CONFLICT先触发INSERT守卫误拒追加，以及SELECT FROM空tuple误判角色不存在，最终回归覆盖修复后的候选。
 
