@@ -1,0 +1,71 @@
+{
+  "app_commit": "0c39284c27a20889a66c796f3c03a2cacb6d749d",
+  "branch": "fusion/bid-workbench",
+  "source_files_sha256": {
+    "workbench/apps/api/bid_package_review_input_routes.py": "5dc0a046db5c089c93c6e0a08388cd5f528593493939f05a568d4f0a025e1da0",
+    "workbench/apps/web/qa-previews/frozen-inputs/README.md": "0bef6ded0393d6b3c1e88a4f79b03d28786a45757cd2b40a38a31c03acb3666f",
+    "workbench/apps/web/qa-previews/frozen-inputs/fixture.tsx": "f61ecf6f8917078f588041091cedf4081f40f4daefb3b3cad5b1b4ba452ddfea",
+    "workbench/apps/web/scripts/generate-contracts.py": "669831d0bf1582507ca245e52684524a7b8d11ce5970729dcf1e042f966f8416",
+    "workbench/apps/web/src/PackageFrozenInputWorkspace.tsx": "88a6b7f44a7fbb14ef5e8cab3fac6e34d68e40355db32803ba1998c3e3334f0c",
+    "workbench/apps/web/src/PackageReviewEligibility.test.tsx": "ffe4cc1735677e8eb2f5986d32adc6f46d15699d92b6fb39123fe4f6666e678f",
+    "workbench/apps/web/src/PackageReviewEligibility.tsx": "cef681c1912d5b960c212ffe34ad55da4ab32052d98cd6f5203eed86d4cf50ed",
+    "workbench/apps/web/src/PackageReviewInputPreview.tsx": "7bde626131df3cf259f315e87063d2108201f59714132b1c0907a4bc50d0a30b",
+    "workbench/apps/web/src/contracts.ts": "4a525b81bbac5a19625539ceb7982a0dc1b76d4ab796da571a2f5acd94521674",
+    "workbench/apps/web/src/packageEligibilityObservation.ts": "6b91b9f80ef7ecfa475d6a75d95e9b2731b181ded10e7e3f1cd502b6624eac30",
+    "workbench/apps/web/src/packageFrozenInput.css": "ea08aa8617b3e4cb53567fc64d6b1343176ffd98f53b1b69306a513abe8da4d0",
+    "workbench/apps/web/src/packageReviewBlockers.ts": "f178bda255ef57855314812b62ae3ad1230f8ae87891d01caedbeffe1c30085d",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "e611e9e878be15bf2e69b9ad17cff4fb3d4092690db0cd607a86cf9febe76e1a",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "5280a7439df0d2728f0aadada554d1833ddcd2c12d6f74fb7b85515f6b0348e5",
+    "workbench/packages/domain/bid_package_review_eligibility.py": "c4c12b57ac717153ce4ee2bb69d7854efdec5a118f15ee229d385e4e5e9a0f74",
+    "workbench/packages/domain/package_review_eligibility.py": "b216ccfa95c0825fb72f32e2697950005838f737e4be1ea98c268a3cbb6ac8cd",
+    "workbench/packages/domain/package_review_method.py": "9d24f2deaf965c331d386573cb78aafd3b36a26106cdb9fdd84360b8cc2c119a",
+    "workbench/tests/test_bid_package_openapi.py": "d4cf0c184aa5b2cbcc4cb7eb2d2ba8266e46cbd73128d082185d1cec6993c169",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "bed38ad633b02a0d4d2a3298185a8d9ee6496931413e5c98ad7bf7d9dfdc0ed2"
+  },
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 93,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 57,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "frontend.xml": {
+      "tests": 363,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "evidence_sha256": {
+    "api.log": "0be22c658b7f37f43fb513643cc555d75eae1d1a477f408801feceb382f4e2ea",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.log": "83b3735789c2db0f0f717df311626569e7e9620fedb83a65039aedfa7039ca31",
+    "cleanup.json": "88354de4e666812c943e2c264fc89fca99721163777eb6a73dc7a0e156198c19",
+    "database.json": "d189909eaa19c084be48c782744746d3ef87ceab52c1bdd0b1352ff4d5fa35f1",
+    "deployment.json": "715e59306a23865326a3a5ecba3e22884e6f48f2530d92c2534fe3ce3009d3ba",
+    "desktop.png": "ccce1ea1007c2c3ce7b115acdbee7b3ca9bcd4ccb9f866cd89ab1d21492f2cf6",
+    "domain.log": "033ec7facc9709974e4a4a92feb949672760a10604a71b3ab243bfd7af1fad90",
+    "domain.xml": "c9d3d945827c6e5cbfb9e85cf5bb48f67e72fa09868992bfa1b507b78e89c55f",
+    "frontend-format.log": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283",
+    "frontend.log": "45816548d9b514f63c59291de3801ac15eaa9455a20f5d795608ea826beae425",
+    "frontend.xml": "5f6c5e4c312932906a20fc3ef3040544f5d571cc9248eadbcac539a5d82a3f57",
+    "intermediate-failures.json": "82addbe07dea58c2683beda192fb4c889095b7838ca269f23040e5f14e9d4739",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mypy.log": "718df785efbbd4b57e63b5f64aff2c5b5592e433447681f759b307f97a3ec96a",
+    "narrow.png": "444bd30435c3f9fee5f5d36bfddb01a7f65c66cd9835b28d5f009b4c1bb0a3db",
+    "python-format.log": "9fa2e30088122b883ebbf1c300359d4a0c9d09c988b20631e8625a40425a9723",
+    "requirements-api.xml": "a0751ac7767ed3a34b4db3e0d208c48dbab0ecde4c36b24a3bd1712e2ed0a13f",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "c7c5f9000d67af372183c4d9ad7c574e6d0c67973ef41dc0d8b6ac07f6684e41",
+    "runtime-inputs.json": "76cfaa9e430daaf60d7ac89946a64945011858eefcbd56d209e7411890d766b4",
+    "services.txt": "dcfef157c3da52d3cab272feefd0f1a0191de3308d2852ca170628dbc280da81",
+    "types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "visual.json": "d0fca42d96774f28c31e0ee9949b0f27d549097c9fd099a32a31d2863cd55c12"
+  }
+}

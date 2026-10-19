@@ -1,0 +1,133 @@
+
+ RUN  v3.2.3 D:/workspace/tender/tender-app/workbench/apps/web
+
+ ✓ src/RetrievalDrawer.test.tsx (6 tests) 1348ms
+   ✓ 网络失败后重试原输入与同一命令键，修改中的问题不悄悄替换失败命令  373ms
+ ✓ src/SubmissionPanel.test.tsx (4 tests) 1473ms
+   ✓ 线下补录选择真实原件及自身附件，一次保存并持续标明未完整检查/未核验平台  782ms
+   ✓ 412保留实际时间与附件，只在明确重读后使用新Gate身份；更正用Bid tag而非原记录tag  365ms
+ ✓ src/TaskPanel.test.tsx (9 tests) 1509ms
+   ✓ 保存模板默认manual，明确保存只创建模板不运行，也不把补遗语义检查说成已完成  407ms
+   ✓ PUT失响应刷新恢复，仍用同一方法、请求体、ETag与幂等键，不用新头重试  313ms
+ ✓ src/A1Recovery.test.tsx (12 tests) 1333ms
+ ✓ src/Identity.test.tsx (5 tests) 1918ms
+   ✓ 真实默认主体在表单可见，创建一次即绑定所选ID，无第二次确认且不按近似名合并  408ms
+   ✓ 有据纠正412保留选择和理由，读取影响并明确新基准后才重试；不重写旧记录  640ms
+   ✓ 目录加载后续轮次时保留工程绑定，已有轮次创建不误建新轮或要求手填编号  511ms
+ ✓ src/PricingFormulaEditor.test.tsx (1 test) 2141ms
+   ✓ 原页逐字段选择使用可信身份，一次登记被单位证据拒绝后保留参数/摘录，不声称成功  2139ms
+ ✓ src/BidPackages.test.tsx (13 tests) 3087ms
+   ✓ 未明确选解析时保存未知原件，多用途逗号输入保留，未接正式评审  450ms
+   ✓ 用户明确选精确解析后添加物理页范围，失败解析不能选且不推断摘要  368ms
+   ✓ CAS冲突保留本地选择，读取核对最新记录后才允许继续，绝不自动重试  542ms
+ ✓ src/PackageCoverageWorkspace.test.tsx (23 tests) 3488ms
+ ✓ src/Knowledge.test.tsx (7 tests) 3222ms
+   ✓ 收起、离开后保留成员自己的候选输入，恢复本地输入不发创建请求  637ms
+   ✓ 原页与失败重试按钮不会提交版本；412后保留正文及旧令牌，明确比较才用新令牌  756ms
+   ✓ 创建请求尚未返回时离开页面，迟到ACK不把用户导航回知识对象  529ms
+   ✓ 引用上下文409后不普通重试，明确重读主体与原知识版本才以新命令继续，摘录不丢且不创建事实  630ms
+   ✓ 明确历史版本写入URL并保留查证上下文；返回/前进及刷新恢复原版本身份  329ms
+ ✓ src/PackageFrozenInputWorkspace.test.tsx (32 tests) 3364ms
+   ✓ 历史GET不依赖当前候选或可写状态，允许原记录的其他创建人  695ms
+ ✓ src/PricingPanel.test.tsx (7 tests) 4312ms
+   ✓ 400ms情景更新保持dirty输入，迟到旧响应不替换新情景，未知分数不变零且试算不保存方案  1415ms
+   ✓ 来源变化409阻止自动重试，保留本方/对手输入，明确核对后才继续  1379ms
+   ✓ 保存条件412后旧模拟不能再次保存，重读公式后仍须明确重新试算取得新条件  1395ms
+ ✓ src/AssistantWorkspace.test.tsx (9 tests) 1297ms
+   ✓ 只显式创建同一主会话，保存讨论不请求AI，刷新能恢复服务器消息  483ms
+   ✓ 412保留草稿，重新读取真实修订后明确继续，不能用旧ETag重发  315ms
+ ✓ src/PackageFrozenInputDirectory.test.tsx (13 tests) 904ms
+ ✓ src/AssistantIntentRecovery.test.tsx (17 tests) 5521ms
+   ✓ 真实对象及允许用途明确选择，其他项目条款不能成为本项目目标  416ms
+   ✓ 关联原job只读回状态并保留草稿，普通发送仍禁且不自动触发  376ms
+   ✓ 服务端复用原job时保留草稿并明确没有创建新任务  542ms
+   ✓ 新问题受理答复丢失后只恢复同一请求和幂等键，不重选目标  542ms
+   ✓ 选择新对象后出现真实在途任务，硬门立即恢复且不发送  513ms
+   ✓ global明确新项目时保留该项目版本来源，不自动切会话或添加原任务引用  485ms
+   ✓ 关联原job收到其他job回包时保留输入且不宣称已读原处理  370ms
+   ✓ 提交新rule只发送所选对象/用途，服务端不独立拒绝保留草稿且不自动改目标  529ms
+ ✓ src/AuthoringStructure.test.tsx (5 tests) 1176ms
+   ✓ 删除先显示完整影响，不直接写稿；一次明确应用使用原draft tag  387ms
+ ✓ src/BusinessResults.test.tsx (3 tests) 1115ms
+   ✓ 结果一次追加不自动核验；CAS失败保留候选输入并显式重读当前头  937ms
+ ✓ src/App.test.tsx (4 tests) 1182ms
+   ✓ 投标工作区 > 登录失败持续显示，成功后空工作区不展示模拟指标  475ms
+   ✓ 投标工作区 > 会话过期保留未提交名称；重新登录不自动重放写入  604ms
+ ✓ src/A1Workspace.test.tsx (9 tests) 968ms
+   ✓ 批量规则只提交明确勾选的pending项，不覆盖驳回和暂缓  347ms
+ ✓ src/CoverageEditor.test.tsx (20 tests) 6458ms
+   ✓ permits an unmapped missing observation with a reason and no fabricated evidence or range  354ms
+   ✓ requires the complete own range, exact material evidence and an explicit human declaration  808ms
+   ✓ does not turn a partial inspection into verified but preserves it as a negative observation  867ms
+   ✓ rejects zero, negative, fractional and outside-part physical pages rather than dropping the range  898ms
+   ✓ permits already grounded NA with separately explicit confirmation and authority evidence, without a range  589ms
+   ✓ does not offer positive state when frozen confirmation, source, applicability, parsing or quantity gates are missing  332ms
+   ✓ rejects a quote from another parse even if the exact directory entry was valid  407ms
+   ✓ does not promote authority evidence into verified own-material proof  836ms
+   ✓ ignores a late quote after inventory context changes and locks the original input  394ms
+   ✓ emits only newly selected B and leaves omitted A for server-derived unknown  307ms
+ ✓ src/RequirementCheckPlan.test.tsx (17 tests) 6602ms
+   ✓ requires explicit target, reason and evidence even after a rule is enabled  356ms
+   ✓ derives multiple categories from frozen shared parts and permits the same exact evidence once  436ms
+   ✓ preserves unknown as null and explicit zero as zero with quantity check  556ms
+   ✓ rejects an unsafe or negative explicit quantity -1  481ms
+   ✓ rejects an unsafe or negative explicit quantity 9007199254740992  699ms
+   ✓ requires a separately chosen not-applicable basis even if the same evidence is already the plan basis  526ms
+   ✓ does not truncate an overlong reason into an apparently valid declaration  435ms
+   ✓ disables editing without dropping an already entered mapping  442ms
+   ✓ invalidates rather than reusing a draft after original rule conditions change  413ms
+   ✓ requires a real explicit-offset timestamp and retains blank as unknown  1612ms
+ ✓ src/PackageOriginalVerification.test.tsx (15 tests) 1047ms
+ ✓ src/KnowledgeRetrieval.test.tsx (3 tests) 957ms
+   ✓ 只在明确查证后执行，实际unit登记参考且固定链接恢复，不创建事实  727ms
+ ✓ src/Project.test.tsx (5 tests) 900ms
+ ✓ src/PackageReviewEligibility.test.tsx (17 tests) 1210ms
+ ✓ src/PackageReviewInputPreview.test.tsx (10 tests) 832ms
+   ✓ 刷新后未做预检也能恢复所选清单的旧保存，不依赖当前可写状态  352ms
+ ✓ src/Research.test.tsx (3 tests) 780ms
+   ✓ 研究来源分组412保留输入，明确比较后才能按新令牌保存；不会启动收费批次  706ms
+ ✓ src/useAssistantContinuation.test.tsx (7 tests) 377ms
+ ✓ src/AuthoringTemplateEditor.test.tsx (2 tests) 459ms
+ ✓ src/ReportPanel.test.tsx (4 tests) 734ms
+   ✓ 412不丢用途选择，显式重读后按新展示修订申请；未配置PDF转换可改Word  353ms
+ ✓ src/AuthoringFormatBindings.test.tsx (1 test) 742ms
+   ✓ 格式绑定只选已确认要求，用可信原页投影；来源不可新用时不构造ref  741ms
+ ✓ src/NavigationGuard.test.tsx (2 tests) 465ms
+ ✓ src/UploadBatchDiscovery.test.tsx (2 tests) 329ms
+ ✓ src/WordUploadBinding.test.tsx (2 tests) 680ms
+   ✓ 旧批次画面不是声明判定依据；fresh GET有Word声明时拒旧PDF版本目标并保留原因  393ms
+ ✓ src/AuthoringPlan.test.tsx (2 tests) 704ms
+   ✓ 人工预算保存走plan revision 0与draft11，不借section10冒充plan基准；空行不作事实  392ms
+   ✓ 412不清人工目标；异步最新计划不会静默重写用户输入  311ms
+ ✓ src/Metrics.test.tsx (1 test) 291ms
+ ✓ src/AuthoringBuilds.test.tsx (3 tests) 332ms
+ ✓ src/WordOriginals.test.tsx (3 tests) 288ms
+ ✓ src/UploadStatus.test.tsx (2 tests) 274ms
+ ✓ src/HistoryPanel.test.tsx (2 tests) 214ms
+ ✓ src/OperationCenter.test.tsx (1 test) 190ms
+ ✓ src/PackageRequirements.test.tsx (36 tests) 12210ms
+   ✓ explicitly starts an editable check plan, saves zero with exact original scope and never writes coverage  1064ms
+   ✓ restores a v2 lost ACK with original plan, snapshots, key and CAS after refresh and generic pre-command rejection 422  987ms
+   ✓ restores a v2 lost ACK with original plan, snapshots, key and CAS after refresh and generic pre-command rejection 428  1182ms
+   ✓ keeps the original plan editable after a definitive conflict and requires exact read plus explicit baseline adoption  1077ms
+   ✓ rejects a foreign exact baseline manifest after 412 and preserves the plan without automatic retry  990ms
+   ✓ latches original-rule changes, keeps entered fields and permits cancelling an unsent plan  1082ms
+   ✓ allows explicitly abandoning a definitively failed plan without deleting any unknown operation  906ms
+   ✓ unknown ACK freezes full scope/body/key/condition and restores identical request after refresh  435ms
+   ✓ does not send when complete pending record cannot be persisted  310ms
+   ✓ can recover the original lost ACK while the project is now closed  315ms
+   ✓ does not erase an already unknown command on pre-command rejection 428  310ms
+ ✓ src/DocumentRelationNotice.test.tsx (1 test) 45ms
+ ✓ src/uploadFormats.test.ts (1 test) 2ms
+ ✓ src/api.test.ts (5 tests) 8ms
+ ✓ src/editorSchema.test.ts (4 tests) 9ms
+ ✓ src/eventStream.test.tsx (2 tests) 17ms
+ ✓ src/useSaveQueue.test.tsx (4 tests) 88ms
+ ✓ src/uploadTransport.test.ts (7 tests) 190ms
+
+ Test Files  48 passed (48)
+      Tests  363 passed (363)
+   Start at  20:37:18
+   Duration  17.27s (transform 2.87s, setup 32.16s, collect 17.20s, tests 76.79s, environment 94.17s, prepare 10.63s)
+
+JUNIT report written to D:/workspace/tender/tender-app/workbench/.local/eligibility/frontend.xml
