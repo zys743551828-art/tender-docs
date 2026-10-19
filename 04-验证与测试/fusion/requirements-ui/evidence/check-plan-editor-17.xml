@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="17" failures="0" errors="0" time="6.3548803">
+    <testsuite name="src/RequirementCheckPlan.test.tsx" timestamp="2026-10-19T01:45:27.469Z" hostname="zhangyansong" tests="17" failures="0" errors="0" skipped="0" time="6.3548803">
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="starts with no mappings and never fetches or silently selects evidence for unchecked rules" time="0.0475788">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires explicit target, reason and evidence even after a rule is enabled" time="0.313842">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="derives multiple categories from frozen shared parts and permits the same exact evidence once" time="0.403635">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="preserves unknown as null and explicit zero as zero with quantity check" time="0.5724723">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects an unsafe or negative explicit quantity -1" time="0.5106673">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects an unsafe or negative explicit quantity 9007199254740992" time="0.6968935">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires a separately chosen not-applicable basis even if the same evidence is already the plan basis" time="0.5418062">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="does not truncate an overlong reason into an apparently valid declaration" time="0.4336889">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="rejects old parse, wrong document or out-of-range evidence without selecting a newer parse" time="0.1914691">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="blocks withdrawn evidence instead of presenting it as currently usable" time="0.0465505">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="blocks candidate evidence instead of presenting it as currently usable" time="0.0462557">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="disables editing without dropping an already entered mapping" time="0.3752966">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="discards late evidence response after the authority context changes and locks the original draft" time="0.0913289">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="invalidates rather than reusing a draft after original rule conditions change" time="0.3627178">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="requires a real explicit-offset timestamp and retains blank as unknown" time="1.6028048">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="restores an explicitly saved plan including zero, both evidence declarations and its original reason" time="0.092971">
+        </testcase>
+        <testcase classname="src/RequirementCheckPlan.test.tsx" name="keeps an invalid restored category/part binding locked instead of silently assigning a new target" time="0.0239382">
+        </testcase>
+    </testsuite>
+</testsuites>
