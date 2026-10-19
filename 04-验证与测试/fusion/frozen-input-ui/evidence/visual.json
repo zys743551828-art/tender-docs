@@ -1,0 +1,33 @@
+{
+  "kind": "synthetic-component-fixture",
+  "realApiBusinessAcceptance": false,
+  "widthsAreContainersNotPhoneViewports": true,
+  "observations": [
+    {
+      "container": 390,
+      "viewport": 1265,
+      "pageScrollWidth": 1265,
+      "cardClientWidth": 356,
+      "cardScrollWidth": 356,
+      "state": "restored-save-expanded-digest-and-history"
+    },
+    {
+      "container": 768,
+      "viewport": 1265,
+      "pageScrollWidth": 1265,
+      "cardClientWidth": 734,
+      "cardScrollWidth": 734,
+      "state": "saved-history"
+    },
+    {
+      "container": 1200,
+      "viewport": 1280,
+      "pageScrollWidth": 1280,
+      "cardClientWidth": 1166,
+      "cardScrollWidth": 1166,
+      "state": "unknown-save"
+    }
+  ],
+  "fixtureRequests": "page-local fetch only",
+  "cleanup": "fixture record reset; returned tab to real login; final Vite build removed _qa"
+}
