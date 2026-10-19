@@ -1,0 +1,1023 @@
+{
+  "synthetic": true,
+  "inventories": [
+    {
+      "id": "bd6a5c77-c1b0-41b8-89ba-2cee6919a9c1",
+      "revision": 1,
+      "digest": "59cbfc416fa99f1cc7f614fff59d4a12fcb426da55f7a27f7924be69df97057f",
+      "manifest": {
+        "id": "bd6a5c77-c1b0-41b8-89ba-2cee6919a9c1",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "version": "bid-package-requirements/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "revision": 1,
+        "package_id": "6f6e9a5b-9fd2-426b-8c63-609959b9a8b3",
+        "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+        "requirements": [
+          {
+            "rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": null,
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:0c25b8697cf978250de631cb91f3935d7057fe4c20b32e41b2af93495f57183a"
+              ],
+              "source_refs": [
+                "rule:3ef4fc08-01ce-45aa-8e52-f2b13e79a407:06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+                "evidence:583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款二】涉及既有设施保护时，应提交专项保护说明；当前资料不足以判断是否适用，须人工确认，不能默认不适用。",
+              "conditions": [
+                "涉及既有设施保护"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407"
+            },
+            "decision_snapshot": null,
+            "requirement_digest": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc"
+          },
+          {
+            "rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:30e2268418f1775613d6c0a36a93f59f7f2f34a53b9f0ecd1999afef5d9fa2a7"
+              ],
+              "source_refs": [
+                "rule:77b082ec-5316-4abd-b532-71f5e9df0b6a:262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+                "evidence:652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款一】技术文件应完整说明施工组织、质量保证和安全管理措施；若采用专项工艺，应同时说明适用条件及相应依据。",
+              "conditions": [
+                "采用专项工艺时提供适用条件"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a"
+            },
+            "decision_snapshot": {
+              "id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "reason": "仅合成UI演示的人为确认，不是正式审核",
+              "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+              "decision": "confirmed",
+              "object_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "created_at": "2026-10-19T01:19:04.103539+00:00",
+              "object_kind": "rule",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "object_revision": 1
+            },
+            "requirement_digest": "4e3ce45f80db4011fbeaa3f95241a040923c391056cb8cdc5fbba40a67b410b5"
+          }
+        ],
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "identity_digest": "d2cfed403ff63d05705ce616ce970f0f2aa6825049c9927f79b202eca9136d1c",
+        "rule_set_digest": "a008d295eb7106037521fe18a3a7ba2f0bdc1d1b0f2789711baed73a04698d93",
+        "source_snapshot": [
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+          },
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642"
+          }
+        ],
+        "authority_digest": "74409661d4dd57b44f6d48b6a7e400868209b8558a3fbb5513de90694ea91df1",
+        "extraction_binding": "unproven_legacy_rule_set",
+        "inventory_complete": false,
+        "predecessor_digest": null,
+        "target_revision_id": "5588f41f-717f-47a0-83f1-188977af5c10",
+        "authority_revision_id": "b8e52f11-038d-40ad-a6ac-6f10c87eebf5"
+      }
+    },
+    {
+      "id": "4f6aa551-5c8b-4bf5-ba1d-462fb31744db",
+      "revision": 2,
+      "digest": "9e70498a399047160efdbff281abafa776989486fdf9abebad3f104532cd86e3",
+      "manifest": {
+        "id": "4f6aa551-5c8b-4bf5-ba1d-462fb31744db",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "version": "bid-package-requirements/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "revision": 2,
+        "package_id": "6f6e9a5b-9fd2-426b-8c63-609959b9a8b3",
+        "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+        "requirements": [
+          {
+            "rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": null,
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:0c25b8697cf978250de631cb91f3935d7057fe4c20b32e41b2af93495f57183a"
+              ],
+              "source_refs": [
+                "rule:3ef4fc08-01ce-45aa-8e52-f2b13e79a407:06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+                "evidence:583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款二】涉及既有设施保护时，应提交专项保护说明；当前资料不足以判断是否适用，须人工确认，不能默认不适用。",
+              "conditions": [
+                "涉及既有设施保护"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407"
+            },
+            "decision_snapshot": null,
+            "requirement_digest": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc"
+          },
+          {
+            "rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:30e2268418f1775613d6c0a36a93f59f7f2f34a53b9f0ecd1999afef5d9fa2a7"
+              ],
+              "source_refs": [
+                "rule:77b082ec-5316-4abd-b532-71f5e9df0b6a:262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+                "evidence:652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款一】技术文件应完整说明施工组织、质量保证和安全管理措施；若采用专项工艺，应同时说明适用条件及相应依据。",
+              "conditions": [
+                "采用专项工艺时提供适用条件"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a"
+            },
+            "decision_snapshot": {
+              "id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "reason": "仅合成UI演示的人为确认，不是正式审核",
+              "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+              "decision": "confirmed",
+              "object_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "created_at": "2026-10-19T01:19:04.103539+00:00",
+              "object_kind": "rule",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "object_revision": 1
+            },
+            "requirement_digest": "4e3ce45f80db4011fbeaa3f95241a040923c391056cb8cdc5fbba40a67b410b5"
+          }
+        ],
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "identity_digest": "d2cfed403ff63d05705ce616ce970f0f2aa6825049c9927f79b202eca9136d1c",
+        "rule_set_digest": "a008d295eb7106037521fe18a3a7ba2f0bdc1d1b0f2789711baed73a04698d93",
+        "source_snapshot": [
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+          },
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642"
+          }
+        ],
+        "authority_digest": "74409661d4dd57b44f6d48b6a7e400868209b8558a3fbb5513de90694ea91df1",
+        "extraction_binding": "unproven_legacy_rule_set",
+        "inventory_complete": false,
+        "predecessor_digest": "59cbfc416fa99f1cc7f614fff59d4a12fcb426da55f7a27f7924be69df97057f",
+        "target_revision_id": "5588f41f-717f-47a0-83f1-188977af5c10",
+        "authority_revision_id": "b8e52f11-038d-40ad-a6ac-6f10c87eebf5"
+      }
+    },
+    {
+      "id": "e181bcd3-160d-4ab6-ad11-ec2654be7585",
+      "revision": 3,
+      "digest": "5a0346e72ff5fe9835cc9bdb21187723c3d66eabaef43e43a7ce15e8cd616244",
+      "manifest": {
+        "id": "e181bcd3-160d-4ab6-ad11-ec2654be7585",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "version": "bid-package-requirements/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "revision": 3,
+        "package_id": "6f6e9a5b-9fd2-426b-8c63-609959b9a8b3",
+        "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+        "requirements": [
+          {
+            "rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": true,
+              "reason": "合成检查计划：仅验证明确页段、零数量与冻结依据的保存，不代表已核验或真实业务要求。",
+              "basis_evidence_ids": [
+                "583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ]
+            },
+            "decision_id": null,
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [
+                "quantity"
+              ],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "technical"
+              ],
+              "conditions": [
+                "conditions:0:0c25b8697cf978250de631cb91f3935d7057fe4c20b32e41b2af93495f57183a"
+              ],
+              "source_refs": [
+                "rule:3ef4fc08-01ce-45aa-8e52-f2b13e79a407:06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+                "evidence:583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "applicability": "unknown",
+              "minimum_count": 0,
+              "requirement_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "target_part_ids": [
+                "synthetic-body-tech"
+              ],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款二】涉及既有设施保护时，应提交专项保护说明；当前资料不足以判断是否适用，须人工确认，不能默认不适用。",
+              "conditions": [
+                "涉及既有设施保护"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407"
+            },
+            "decision_snapshot": null,
+            "requirement_digest": "1c3e9d124804aa5fb34f359c8c7e1047a31c606556cb120e73b258ab4ec4c9fa"
+          },
+          {
+            "rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:30e2268418f1775613d6c0a36a93f59f7f2f34a53b9f0ecd1999afef5d9fa2a7"
+              ],
+              "source_refs": [
+                "rule:77b082ec-5316-4abd-b532-71f5e9df0b6a:262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+                "evidence:652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款一】技术文件应完整说明施工组织、质量保证和安全管理措施；若采用专项工艺，应同时说明适用条件及相应依据。",
+              "conditions": [
+                "采用专项工艺时提供适用条件"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a"
+            },
+            "decision_snapshot": {
+              "id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "reason": "仅合成UI演示的人为确认，不是正式审核",
+              "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+              "decision": "confirmed",
+              "object_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "created_at": "2026-10-19T01:19:04.103539+00:00",
+              "object_kind": "rule",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "object_revision": 1
+            },
+            "requirement_digest": "4e3ce45f80db4011fbeaa3f95241a040923c391056cb8cdc5fbba40a67b410b5"
+          }
+        ],
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "identity_digest": "d2cfed403ff63d05705ce616ce970f0f2aa6825049c9927f79b202eca9136d1c",
+        "rule_set_digest": "a008d295eb7106037521fe18a3a7ba2f0bdc1d1b0f2789711baed73a04698d93",
+        "source_snapshot": [
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+          },
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642"
+          }
+        ],
+        "authority_digest": "74409661d4dd57b44f6d48b6a7e400868209b8558a3fbb5513de90694ea91df1",
+        "extraction_binding": "unproven_legacy_rule_set",
+        "inventory_complete": false,
+        "predecessor_digest": "9e70498a399047160efdbff281abafa776989486fdf9abebad3f104532cd86e3",
+        "target_revision_id": "5588f41f-717f-47a0-83f1-188977af5c10",
+        "authority_revision_id": "b8e52f11-038d-40ad-a6ac-6f10c87eebf5"
+      }
+    },
+    {
+      "id": "882f8079-fec0-467f-a0dd-2f622c2c64bd",
+      "revision": 4,
+      "digest": "db51fd50bf0a5c9e66325f6f7507b4df7ea4cb54d4fa0309a6949239587cb38d",
+      "manifest": {
+        "id": "882f8079-fec0-467f-a0dd-2f622c2c64bd",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "version": "bid-package-requirements/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "revision": 4,
+        "package_id": "6f6e9a5b-9fd2-426b-8c63-609959b9a8b3",
+        "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+        "requirements": [
+          {
+            "rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": false,
+              "reason": null,
+              "basis_evidence_ids": []
+            },
+            "decision_id": null,
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "未分类"
+              ],
+              "conditions": [
+                "conditions:0:0c25b8697cf978250de631cb91f3935d7057fe4c20b32e41b2af93495f57183a"
+              ],
+              "source_refs": [
+                "rule:3ef4fc08-01ce-45aa-8e52-f2b13e79a407:06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+                "evidence:583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "applicability": "unknown",
+              "minimum_count": null,
+              "requirement_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "target_part_ids": [],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "06b80255623b31210b296760f52bcdbe3eb75991a678f9eab448f827f7a98ae9",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款二】涉及既有设施保护时，应提交专项保护说明；当前资料不足以判断是否适用，须人工确认，不能默认不适用。",
+              "conditions": [
+                "涉及既有设施保护"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "583f2d88-c3e7-4557-84a4-2634578bb41b"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407"
+            },
+            "decision_snapshot": null,
+            "requirement_digest": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc"
+          },
+          {
+            "rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+            "annotation": {
+              "kind": "human_check_plan_declaration",
+              "mapped": true,
+              "reason": "合成范围声明机制夹具：仅供UI核验，不代表真实PDF或实际合规。",
+              "basis_evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ]
+            },
+            "decision_id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+            "requirement": {
+              "scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "lot_id": "1e9c4251-2008-473f-b7e1-cc862fe343ad",
+                "round_id": "35678d48-47ec-43bf-9ecf-4dacf8d92efc",
+                "bidder_id": "1e7de727-28b7-41f2-9de3-c3c70c8d744d",
+                "bidder_status": "confirmed",
+                "engineering_project_id": "6e07ac7c-e57f-4fb6-94a9-bf5f72fe2b3d"
+              },
+              "checks": [
+                "quantity"
+              ],
+              "origin": "manual",
+              "valid_at": null,
+              "categories": [
+                "technical"
+              ],
+              "conditions": [
+                "conditions:0:30e2268418f1775613d6c0a36a93f59f7f2f34a53b9f0ecd1999afef5d9fa2a7"
+              ],
+              "source_refs": [
+                "rule:77b082ec-5316-4abd-b532-71f5e9df0b6a:262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+                "evidence:652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "applicability": "applicable",
+              "minimum_count": 0,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "target_part_ids": [
+                "synthetic-body-tech"
+              ],
+              "identity_version": "bid-requirement/1",
+              "applicability_evidence": []
+            },
+            "rule_digest": "262e3ee459ac983f319c037d7578dd4a0166a9e9494a94b6164e9259baa6b063",
+            "source_bound": true,
+            "rule_snapshot": {
+              "id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "kind": "mandatory",
+              "bands": [],
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "statement": "【合成条款一】技术文件应完整说明施工组织、质量保证和安全管理措施；若采用专项工艺，应同时说明适用条件及相应依据。",
+              "conditions": [
+                "采用专项工艺时提供适用条件"
+              ],
+              "exceptions": [],
+              "max_points": null,
+              "origin_kind": "human_added",
+              "rule_set_id": "d29df275-9cfe-4872-8e42-8d6232ae6c67",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "provenance_status": "effective",
+              "applicability_scope": {
+                "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+                "description": "仅合成UI验证"
+              },
+              "manual_origin_rule_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a"
+            },
+            "decision_snapshot": {
+              "id": "5898a5d3-3084-426a-9cc0-c3ef57446c7f",
+              "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+              "reason": "仅合成UI演示的人为确认，不是正式审核",
+              "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+              "decision": "confirmed",
+              "object_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "created_at": "2026-10-19T01:19:04.103539+00:00",
+              "object_kind": "rule",
+              "evidence_ids": [
+                "652a3550-9d00-49a0-8e70-9ab7b78edaba"
+              ],
+              "object_revision": 1
+            },
+            "requirement_digest": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a"
+          }
+        ],
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "identity_digest": "d2cfed403ff63d05705ce616ce970f0f2aa6825049c9927f79b202eca9136d1c",
+        "rule_set_digest": "a008d295eb7106037521fe18a3a7ba2f0bdc1d1b0f2789711baed73a04698d93",
+        "source_snapshot": [
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "798eb3fe-dcb2-4b21-974d-de0a28e72344",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+          },
+          {
+            "status": "published",
+            "known_at": "2026-10-19T01:12:35.817235+00:00",
+            "revision": 1,
+            "source_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_from": "2026-10-19T01:12:35.817235+00:00",
+            "ancestor_id": "c94a07c4-87d8-4a7e-b2cf-e36d3bb0e21d",
+            "valid_until": null,
+            "policy_class": "prebid_content",
+            "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642"
+          }
+        ],
+        "authority_digest": "74409661d4dd57b44f6d48b6a7e400868209b8558a3fbb5513de90694ea91df1",
+        "extraction_binding": "unproven_legacy_rule_set",
+        "inventory_complete": false,
+        "predecessor_digest": "5a0346e72ff5fe9835cc9bdb21187723c3d66eabaef43e43a7ce15e8cd616244",
+        "target_revision_id": "5588f41f-717f-47a0-83f1-188977af5c10",
+        "authority_revision_id": "b8e52f11-038d-40ad-a6ac-6f10c87eebf5"
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "id": "64de36c1-7853-4f47-9999-013cdcc749fe",
+      "digest": "3826ff0f16d1f1cc9f41f67d951938eac2fa7aed9c3cb2631b7aba68399d9649",
+      "manifest": {
+        "id": "64de36c1-7853-4f47-9999-013cdcc749fe",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "results": [
+          {
+            "coverage": {
+              "state": "missing",
+              "reason": "合成UI观察，仅演示缺项非真实合规",
+              "inspected": [],
+              "evidence_refs": [],
+              "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+              "requirement_id": "3ef4fc08-01ce-45aa-8e52-f2b13e79a407",
+              "requirement_digest": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc"
+            },
+            "basis_type": "human_observation",
+            "evidence_ids": []
+          }
+        ],
+        "version": "bid-package-coverage/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "assessment": {
+          "complete": false,
+          "member_gaps": [],
+          "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+          "inspected_ranges": [],
+          "requirement_states": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "missing",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "unknown"
+          },
+          "requirement_digests": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "4e3ce45f80db4011fbeaa3f95241a040923c391056cb8cdc5fbba40a67b410b5"
+          },
+          "requirement_inventory_complete": false
+        },
+        "inventory_id": "4f6aa551-5c8b-4bf5-ba1d-462fb31744db",
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "inventory_digest": "9e70498a399047160efdbff281abafa776989486fdf9abebad3f104532cd86e3"
+      }
+    },
+    {
+      "id": "db1603d6-a632-430d-9287-eca1aaee8b6e",
+      "digest": "51bc8a7bb0f6dbc1a4eb6f13b89376b4f4577e344015fa5cd604a4d1029b50dd",
+      "manifest": {
+        "id": "db1603d6-a632-430d-9287-eca1aaee8b6e",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "results": [
+          {
+            "coverage": {
+              "state": "parse_gap",
+              "reason": "合成观察：本次只记录物理页1，页2尚未纳入；不代表真实PDF已核验或材料合规。",
+              "inspected": [
+                {
+                  "part_id": "synthetic-body-tech",
+                  "last_page": 1,
+                  "first_page": 1
+                }
+              ],
+              "evidence_refs": [
+                "evidence:b12ac3f6-07e2-4cd3-b09d-7fa349850f82"
+              ],
+              "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "requirement_digest": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a"
+            },
+            "basis_type": "human_observation",
+            "evidence_ids": [
+              "b12ac3f6-07e2-4cd3-b09d-7fa349850f82"
+            ]
+          }
+        ],
+        "version": "bid-package-coverage/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "assessment": {
+          "complete": false,
+          "member_gaps": [],
+          "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+          "inspected_ranges": [
+            {
+              "part_id": "synthetic-body-tech",
+              "last_page": 1,
+              "first_page": 1,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "requirement_digest": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a",
+              "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+            }
+          ],
+          "requirement_states": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "unknown",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "parse_gap"
+          },
+          "requirement_digests": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a"
+          },
+          "requirement_inventory_complete": false
+        },
+        "inventory_id": "882f8079-fec0-467f-a0dd-2f622c2c64bd",
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "inventory_digest": "db51fd50bf0a5c9e66325f6f7507b4df7ea4cb54d4fa0309a6949239587cb38d"
+      }
+    },
+    {
+      "id": "7ce9f0bb-7f78-46ef-9ade-f3f9cfea4404",
+      "digest": "76f0a8c6b45fa7f64c09d3437eb4d9ccdc847eac470e852d0988ebfe13e09772",
+      "manifest": {
+        "id": "7ce9f0bb-7f78-46ef-9ade-f3f9cfea4404",
+        "bid_id": "c44f94b5-6491-4cb5-9e39-063cfa874394",
+        "results": [
+          {
+            "coverage": {
+              "state": "verified",
+              "reason": "合成机制声明：模拟完整页段1—2与冻结本方证据的人工范围记录；无真实PDF，不代表实际合规或正式验收。",
+              "inspected": [
+                {
+                  "part_id": "synthetic-body-tech",
+                  "last_page": 2,
+                  "first_page": 1
+                }
+              ],
+              "evidence_refs": [
+                "evidence:b12ac3f6-07e2-4cd3-b09d-7fa349850f82"
+              ],
+              "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "requirement_digest": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a"
+            },
+            "basis_type": "human_scope_declaration",
+            "evidence_ids": [
+              "b12ac3f6-07e2-4cd3-b09d-7fa349850f82"
+            ]
+          }
+        ],
+        "version": "bid-package-coverage/1",
+        "actor_id": "1daca284-5b7c-429b-9b86-c278a93c6c3b",
+        "assessment": {
+          "complete": false,
+          "member_gaps": [],
+          "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+          "inspected_ranges": [
+            {
+              "part_id": "synthetic-body-tech",
+              "last_page": 2,
+              "first_page": 1,
+              "requirement_id": "77b082ec-5316-4abd-b532-71f5e9df0b6a",
+              "requirement_digest": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a",
+              "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d"
+            }
+          ],
+          "requirement_states": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "unknown",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "verified"
+          },
+          "requirement_digests": {
+            "3ef4fc08-01ce-45aa-8e52-f2b13e79a407": "fc45308b621ca44a1641f4f3dc62c8ccee5bed0e7efbf8cd04f96ffbd244d2fc",
+            "77b082ec-5316-4abd-b532-71f5e9df0b6a": "1a32d8ca57f5ca5c638452470c4fa2f763d8f4edf0809e9cd54475bfccd3b80a"
+          },
+          "requirement_inventory_complete": false
+        },
+        "inventory_id": "882f8079-fec0-467f-a0dd-2f622c2c64bd",
+        "review_ready": false,
+        "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+        "inventory_digest": "db51fd50bf0a5c9e66325f6f7507b4df7ea4cb54d4fa0309a6949239587cb38d"
+      }
+    }
+  ],
+  "frozen_evidence_directories": [
+    {
+      "revision_id": "5588f41f-717f-47a0-83f1-188977af5c10",
+      "package_digest": "496ae1fe0ac7dbfc68e47825ed7f9fa1b15bfb196395b324f98dbf61f531603d",
+      "items": [
+        {
+          "id": "357d37f9-957c-430f-9c5b-9db431a45bf3",
+          "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d",
+          "parse_run_id": "c1d67d46-cd97-466b-8e36-fca809c339db",
+          "physical_page": 2,
+          "part_ids": [
+            "synthetic-body-tech"
+          ]
+        },
+        {
+          "id": "b12ac3f6-07e2-4cd3-b09d-7fa349850f82",
+          "document_version_id": "9ddad884-4eab-4fb4-9520-ed7979d40f9d",
+          "parse_run_id": "c1d67d46-cd97-466b-8e36-fca809c339db",
+          "physical_page": 1,
+          "part_ids": [
+            "synthetic-body-tech"
+          ]
+        }
+      ],
+      "has_more": false,
+      "next_cursor": null
+    },
+    {
+      "revision_id": "b8e52f11-038d-40ad-a6ac-6f10c87eebf5",
+      "package_digest": "74409661d4dd57b44f6d48b6a7e400868209b8558a3fbb5513de90694ea91df1",
+      "items": [
+        {
+          "id": "583f2d88-c3e7-4557-84a4-2634578bb41b",
+          "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642",
+          "parse_run_id": "3e4fb889-b099-4739-bedc-ebe24756c4f7",
+          "physical_page": 2,
+          "part_ids": [
+            "synthetic-tender-tech"
+          ]
+        },
+        {
+          "id": "652a3550-9d00-49a0-8e70-9ab7b78edaba",
+          "document_version_id": "c4a428ff-a0f4-4dae-bbd6-b9583b255642",
+          "parse_run_id": "3e4fb889-b099-4739-bedc-ebe24756c4f7",
+          "physical_page": 1,
+          "part_ids": [
+            "synthetic-tender-tech"
+          ]
+        }
+      ],
+      "has_more": false,
+      "next_cursor": null
+    }
+  ]
+}
