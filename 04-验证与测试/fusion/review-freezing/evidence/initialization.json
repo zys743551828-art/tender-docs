@@ -1,0 +1,77 @@
+{
+  "database": "tender_checks_fusion_v4",
+  "profiles": {
+    "init": ".local/fusion_v4-init.env",
+    "business": ".local/fusion_v4-checks.env"
+  },
+  "ordered_sql": [
+    {
+      "path": "packages/contracts/sql/core.sql",
+      "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"
+    },
+    {
+      "path": "packages/contracts/sql/domain.sql",
+      "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"
+    },
+    {
+      "path": "packages/contracts/sql/bid-packages.sql",
+      "sha256": "f18cbd9a22cdcb3f1d3229d0e43b3ad4b0ff3568f4b160787e0c4572b6f9c319"
+    },
+    {
+      "path": "packages/identity/sql/stable-lot-identity.sql",
+      "sha256": "3d4775a72daa3fd1c813aab72212e9aefdf5e5ef5aa22eb0c83db2cd580b3738"
+    },
+    {
+      "path": "packages/contracts/sql/retrieval.sql",
+      "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"
+    },
+    {
+      "path": "packages/contracts/sql/worker-functions.sql",
+      "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"
+    },
+    {
+      "path": "packages/contracts/sql/bid-package-requirements.sql",
+      "sha256": "b25fcf01fc088ab533f3a6af89a78b4a3e97b1696acc98a15b9b8397709a8e15"
+    },
+    {
+      "path": "packages/contracts/sql/bid-package-review-inputs.sql",
+      "sha256": "5c24754072f2af88b30f90e7dcc404111444e4d496ff2407eade788a7557cc41"
+    },
+    {
+      "path": "packages/contracts/sql/roles.sql",
+      "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"
+    },
+    {
+      "path": "deploy/sql/bid-package-runtime-grants.sql",
+      "sha256": "1667815c514a455b29230753202876c125ce10e34a0c408b4d50f49f118bd14e"
+    },
+    {
+      "path": "deploy/sql/bid-package-requirement-runtime-grants.sql",
+      "sha256": "4d510b265e9e98355d2794839ab204a9501a9cbcad1b9b82f4ad53c924d9498e"
+    },
+    {
+      "path": "deploy/sql/bid-package-review-input-runtime-grants.sql",
+      "sha256": "02d843c95a31adb760166bde751ad081e95cd116eb7e2abeac0217cf8c3ab303"
+    },
+    {
+      "path": "deploy/sql/vector-runtime-grants.sql",
+      "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"
+    },
+    {
+      "path": "deploy/sql/research-source-qualification.sql",
+      "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"
+    }
+  ],
+  "logins": {
+    "api": "twb_checks_fusion_v4_f9434617_api",
+    "worker": "twb_checks_fusion_v4_f9434617_worker",
+    "research_worker": "twb_checks_fusion_v4_f9434617_research_worker",
+    "score_read": "twb_checks_fusion_v4_f9434617_score_read"
+  },
+  "object_store_prefix": "fusion-local-disabled/check-environments/4724cf215faa32c64d141241598c3ee6/",
+  "kafka_bootstrap": "",
+  "compose_project": null,
+  "app_origin": "http://127.0.0.1:5188",
+  "all_created_login_connections_verified_before_business_profiles": true,
+  "no_business_process_started": true
+}
