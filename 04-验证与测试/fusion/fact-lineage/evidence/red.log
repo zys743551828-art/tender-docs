@@ -1,0 +1,66 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_two_audited_carryovers_bind_the_original_decision ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000272A27536E0>
+
+    def test_two_audited_carryovers_bind_the_original_decision(monkeypatch):
+        facts = {
+            uid(n): {
+                "id": uid(n),
+                "bid_id": uid(9),
+                "fact_set_id": uid(20 + n),
+                "subject": "本工程",
+                "scope": "本标段",
+                "name": "工期",
+                "value_jsonb_text": '"180"',
+                "unit": "天",
+                "evidence_ids": [],
+            }
+            for n in range(3)
+        }
+        basis = {
+            "fact_identity": identity({**facts[uid(0)], "value": "180"}),
+            "evidence": {"references": [], "source_closure_digest": sha([])},
+        }
+        edges = {
+            uid(n): {
+                "new_fact_id": uid(n),
+                "from_fact_id": uid(n - 1),
+                "from_decision_id": uid(30),
+                "equivalence_digest": sha(basis),
+                "audit_id": uid(40 + n),
+                "audit_digest": "a" * 64,
+                "fact_set_id": uid(20 + n),
+                "previous_set_id": uid(19 + n),
+                "previous_set_recorded": True,
+            }
+            for n in (1, 2)
+        }
+        monkeypatch.setattr(provenance, "_carryover", lambda c, bid, fact: edges.get(fact["id"]))
+        monkeypatch.setattr(
+            provenance, "_fact", lambda c, bid, fact_id: facts.get(fact_id), raising=False
+        )
+        c = SimpleNamespace(execute=lambda *args: SimpleNamespace(fetchall=lambda: []))
+        item = {
+            "fact": facts[uid(2)],
+            "decision": {
+                "id": uid(30),
+                "bid_id": uid(9),
+                "object_kind": "fact",
+                "object_id": uid(0),
+                "decision": "confirmed",
+            },
+            "decision_basis_jsonb_text": json.dumps(basis),
+            "scope_binding": "unproven",
+        }
+>       assert (
+            provenance.read_proof(c, uid(9), item, "2026-10-20T00:00:00.000000Z")["decision_binding"]
+            is True
+        )
+E       assert False is True
+
+tests\test_fact_decision_lineage.py:67: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_fact_decision_lineage.py::test_two_audited_carryovers_bind_the_original_decision
+1 failed in 0.50s

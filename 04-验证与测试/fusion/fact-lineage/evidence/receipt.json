@@ -1,0 +1,63 @@
+{
+  "app_commit": "0945f6b974bc6769e38a11fd87fbab607b615b6e",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 150,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 242,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pure.xml": {
+      "tests": 70,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/deploy/compose.fusion.yaml": "05ccfcefb205ed4b76ea78fca39bc3d0c6c5cc417f8505f81b5486424ca8932c",
+    "workbench/deploy/fusion_bootstrap.py": "c17845fd41fd15e99f25aabd2b55932bf5d7b03e1516f0976fc459f52701a616",
+    "workbench/packages/contracts/schemas/package-fact-proof-snapshot.schema.json": "5559b1c1175ba7726677f6acfa837928e8a10b26117b202d2852780c330b6fdd",
+    "workbench/packages/contracts/sql/bid-package-fact-scopes.sql": "4a86390f08d9ed4e16277220fe655d28f2d9f8df0310ed1671b44d87c2623a10",
+    "workbench/packages/domain/bid_package_fact_provenance.py": "0f76cdd51b333dc7c3c7b48cf1dad7269c5885f4810fe9002826f013b7fe97bf",
+    "workbench/packages/domain/bid_package_fact_scope_repository.py": "fc9db267260d917ba38581e0d66b0095de413850dc73218a96c44b757a6f4425",
+    "workbench/packages/domain/bid_package_fact_scopes.py": "2cd7a198a60e98ceee10f00a94da3fd0d2e6f2e3fa1142c7b619ff3ba16e5e51",
+    "workbench/packages/domain/fact_decision_lineage.py": "0aa4ee3fb7b1adf2fece2dcf8a567db53ffe6d768229d91d1b1881412ca829ec",
+    "workbench/packages/domain/package_fact_scope_snapshot.py": "d7daff9b040fee7c79f0e9130b69ce0d02491951727d6fe5462bcbf8a844f419",
+    "workbench/packages/domain/package_fact_validation.py": "ea6cd2eb951883664870c76a731b2d465b501a7282e229abdc81798d3c3d2caf",
+    "workbench/packages/domain/package_review_method.py": "e41c9eec977d1952527c0cf71a68116ffd7cb7dbb096d7633b7e8c1e00ced9ba",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "bc4758ee810ab20eae8834228afc09cd30e6b96e1ed5420529eccbfcef1dba14",
+    "workbench/tests/test_fact_decision_lineage.py": "24a90aadf48013e5dee6ad60a2fc85299c9a46b5098bee7ac4fcd7365cbe9d25",
+    "workbench/tests/test_fusion_compose.py": "9d3938d858014b2a78ba89445401fbcbf936567426b994b80f3e15a07e2b61db",
+    "workbench/tests/test_package_fact_scope_snapshot.py": "b3aed27b4010f86e5f6303a8a49454c2c15282a6ec706d5266d3f6810c2c622b"
+  },
+  "evidence_sha256": {
+    "api.log": "73f4cd1e3c706630a9f0d8c43280dc6c40042c889c5ba09f56ac9ad8ca273023",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "dddfa271553ed1a40ab55ba5ceb1ab2dbc467c1155d75f1eca06108f5f200327",
+    "domain.log": "e9260066ad75a06dc24a92e36af256087376073cba29f4c42b81602f458d543d",
+    "domain.xml": "717633a726d1c959b98261d5efd7a24758a497e4c7141235831950fe027d6650",
+    "format.log": "f4df356f54142a2e3c946c1edb9bd298eeb51c147d1b924fc3e1364102cb2c2d",
+    "mypy.log": "e2702f9afc4c0f80ff1e8624f77af7a7d2689ca184512114aae5967a76229ba8",
+    "pure.log": "ecc1bbd933ea08b45c5d37aa948fc55cc878fce4e10c7b8f8ede9df4a40af126",
+    "pure.xml": "1f6217222c9af4294fed82a2e309883e10ecdada7e3b7678500918d840d8a27e",
+    "red.log": "e88b32849079f870338528e4c78d388bc86a30f6d80de9a6468215143ffd1e26",
+    "requirements-api.xml": "d1f768099329aedddaf07dd4a8729670d47f3af49ce11828e5407e589557d3a2",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "820f7da1f06407dfab83c12df75fd9b921f013c9fa136adf1da18f008122bc83",
+    "runtime-inputs.json": "f60ecab6e15486442d5fe5ba1af7330f41c7f104a8609c08f8bbef19b9dd34c0",
+    "services.txt": "69e41898174ccc25956b48639c68406b06bcb9f58fbf62d7205bd40152b08fd4"
+  },
+  "scope": "exact audited fact lineage and literal private proof snapshot; no dispatch/publication grant",
+  "deployed_database": "tender_checks_fusion_v7",
+  "new_visual_acceptance": false
+}
