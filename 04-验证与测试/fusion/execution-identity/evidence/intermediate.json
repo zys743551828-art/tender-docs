@@ -1,0 +1,8 @@
+{
+  "resolved": [
+    "Initial vector generation targeted a missing tests/fixtures directory. Created the explicit fixture directory and regenerated independent standard-library vectors; final pure tests passed.",
+    "After first 108-pass integration run, strengthened digest/UUID exact lengths and added trailing-newline rejection tests. Final full API suite rerun on final contract; earlier run not counted as final.",
+    "Initial read-only runtime probe referenced test vectors not mounted into API. Removed test-fixture dependency and verified module/schema source identities instead; API mounts unchanged."
+  ],
+  "raw_initial_failures_kept_local_only": true
+}
