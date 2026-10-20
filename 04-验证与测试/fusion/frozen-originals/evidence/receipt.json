@@ -1,0 +1,29 @@
+{
+  "app_commit": "ee16eaf39dddb9d895ffa43725328ecfb3bf369e",
+  "branch": "fusion/bid-workbench",
+  "source_files_sha256": {
+    "workbench/packages/domain/bid_package_frozen_originals.py": "2cf83771e5c2f84c57f72bd5803b559ce2777e3f993c15f585e5a836f95fbbc7",
+    "workbench/packages/domain/bid_package_review_eligibility.py": "cac48ed6c885b2480cfc291f985d822300ef9a569da861a316aa6849c3f8fb93",
+    "workbench/packages/domain/package_review_method.py": "1bb94f557cbeefff3884afdb538d3ff15aec28f11ff34f9f3520a18c8a34d6e6",
+    "workbench/tests/test_bid_package_frozen_originals.py": "71b3fa2d2b95c6c14094822e3643e4a71108cedbe7341a1b45055a742ddd7465",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "558e33a8fadce0f8d7637452688394c2203934729964a42c814a174deff88384"
+  },
+  "tests": {
+    "local_pure": 66,
+    "pg_api_collected": 107,
+    "pg_api_executed": false
+  },
+  "deployed": false,
+  "evidence_sha256": {
+    "api-collection.log": "6d8bacf7206e3793ecee2fe15e6838554ffe9bd5266816d8fa03602b4331facf",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compose-checks.log": "2ed017e0b43372859cb60cb341cdd4645ce8db7b2f2e75876c9dbc37d2e37498",
+    "compose-config.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "domain.log": "62718091df7ea879a9499db26afb42bee9e83df581a2b7793ae26ab47d2f2b70",
+    "domain.xml": "841d69282da13a058c184b75132dcc08bce39c18808bb78f312ccceca476cb20",
+    "environment.json": "7588f3f84a4b4c32b10abc21f622aa2fa8b6b7b26e28d0e841963c17c2b9f4ff",
+    "format.log": "c6054335d9571c0c59ef2b8af5223d2f5d56a9db5aba43b6f39217add8928601",
+    "mypy.log": "281a094c39385b4d7b53e5db635f52158036861433c2a4975b9039e77a627a24",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+  }
+}
