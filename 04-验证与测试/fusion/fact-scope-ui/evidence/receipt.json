@@ -1,0 +1,40 @@
+{
+  "app_commit": "0c79df8d75d6b0a8baac096fcb21f77eadebd0ac",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "frontend.xml": {
+      "tests": 422,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/apps/web/qa-previews/frozen-inputs/README.md": "a6c7a3900fbf8aad3310a21914decdf28c535d2086108ad16b14181af4244bbc",
+    "workbench/apps/web/qa-previews/frozen-inputs/factScope.ts": "38d13c04f45d5275df26ad0e984c49e1faa3c3eb10c40806acc0241be830a67b",
+    "workbench/apps/web/qa-previews/frozen-inputs/fixture.tsx": "aa29999669a586f2ed091194eaa27e5c3f11bc9a864f8ae867bc69706e311644",
+    "workbench/apps/web/src/PackageFactCheck.tsx": "c2de93d3a5b4676fd718628463dbb50d4d64fd2182577725e2d83a108719e5d4",
+    "workbench/apps/web/src/PackageFactScopeWorkspace.test.tsx": "605fc3be0453865e35897f8678cf57f97085d4cd26d44289f271ce328bf5d593",
+    "workbench/apps/web/src/PackageFactScopeWorkspace.tsx": "e91ef1a5a319e09ff606b051c55dcfa554d02eb8f3467bf2eaa5c57b0ae3fd5c",
+    "workbench/apps/web/src/factScopeRecovery.ts": "2cb6dbadd7e4e7c3aa52427e46e3bcec0888230ddf53c956276a53d4310dcd4c",
+    "workbench/apps/web/src/factScopeValidation.ts": "13564fcad9f5aec0c46c98572aac30d154578d6ed51cd0ead278ddc89cd35c8a",
+    "workbench/apps/web/src/packageFrozenInput.css": "f4a5f324e5ec5a73367f97f0f9faccb104235a383abae71c62b05afcbad5204d"
+  },
+  "evidence_sha256": {
+    "browser-gap.json": "2c1be3902901d58b555a082d7f6c210e66718da95775bb66f745f0e9da724b6a",
+    "build.log": "262937e7380eb4802631960ef8f26aa175aa5f3be816744ddb83ec6f2a85973b",
+    "database.json": "246ade3f26281589253062ab9f70798f3e1042478b4c4cc81d532d3b55778ade",
+    "deployment.json": "5121e07da134c282a16e46516c76757876cb939169d46d6dcfc9deaadd6c914f",
+    "frontend-format.log": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+    "frontend.log": "f00787b7fe37715de1e41933a4382acf1854a212155de7b8b3b7cf806df4ec74",
+    "frontend.xml": "9e86fd72263bfb6c1c78656e7ef1aa0a457d5180fee7efd35f066d966ab662a8",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime-api.json": "253903e6f278fdd6e88ec3064fde2548ec221c5054af67c2737b5b8d474328cc",
+    "runtime-inputs.json": "e6837a779399943d0338d8228b0fec5f355989acf7892e73dfcc680b9ec5472c",
+    "services.txt": "fb4631157631557d691fc313ecaff829132539b2ee8993b49894372b72ac117b",
+    "types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "explicit applicability UI and durable unknown-result recovery; visual acceptance blocked by automatic browser review",
+  "deployed_database": "tender_checks_fusion_v6",
+  "new_visual_acceptance": false
+}
