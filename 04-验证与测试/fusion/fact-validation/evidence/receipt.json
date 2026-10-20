@@ -1,0 +1,72 @@
+{
+  "app_commit": "ecde4f9b9fc19a993f2fa2ef59d9c5b889295475",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 131,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 133,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "frontend.xml": {
+      "tests": 399,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/apps/api/bid_package_review_input_routes.py": "16852ca4ddb4eb7e9572196ff0733ca1fafe2fab4ff26d10c09bced76e623789",
+    "workbench/apps/web/qa-previews/frozen-inputs/fixture.tsx": "63624408e162aa1b74dc86def281ba7d6b7d0dad71e2a2084f763323005991a1",
+    "workbench/apps/web/scripts/generate-contracts.py": "c44aa40c7586841358f4d99a96652cf4cc8b609a9a6c955b39559210c469659f",
+    "workbench/apps/web/src/PackageExecutionInputWorkspace.tsx": "9eb3556f2d37223a666649fcbb660d65845f37fc0c69846dfcde37699ad54ea8",
+    "workbench/apps/web/src/PackageFactCheck.test.tsx": "5babdc5c03e2c3f8834418e5a8f8a5dee7f6ae853a8159f8cc56390afd99e4d4",
+    "workbench/apps/web/src/PackageFactCheck.tsx": "779dc0ea6f9fd7cd3f8366c065fdc3f6df2d8b3cac40a8adbac71fa08a388858",
+    "workbench/apps/web/src/contracts.ts": "27eb06086e342edb8756c61f64c313958a48f3b04121b0090ebc1d9fad19aef6",
+    "workbench/apps/web/src/packageFactValidation.ts": "268a9ac463b825ed335b5e55dea1063ba2001cb334da409878b7e442fbc3827b",
+    "workbench/apps/web/src/packageFrozenInput.css": "3ac37935c41e4656317a1f2da5e603f3370dd99a54f5d20085765b77d7a91dd8",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "f7db4024241673861401a3c5cc9bfb6f3341c44df663e7de106a5150edf94260",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "e1bd30d22bb2dc537f159cab7d0c4ca7b95edc3a73b473919d7833ff84b69dea",
+    "workbench/packages/domain/bid_package_fact_validation.py": "9707f4ee2f9e70052225d4361064ef1f422e1b155b4e272147c426745c60b5a5",
+    "workbench/packages/domain/package_fact_validation.py": "6949b06d29d4d0b718824edb3c592028bcdde19a39e8d367da60526f86490c02",
+    "workbench/tests/test_bid_package_openapi.py": "be3072804cba3a228c36662224e4c98b6bb0c286a76d24fdab1243c0494becaa",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "b757f7d02629d402e2b38962a76303243d9a4043eed64b830dd34a4135310c9a",
+    "workbench/tests/test_package_fact_validation.py": "47438444c3f5eb9a5c949cebb15d3dc01c8712fbdbc381af73cfc758a26b16ed"
+  },
+  "evidence_sha256": {
+    "api.log": "08b2744656a633249ec9db78ed1e9d934cf6bb9ad31ec2bfa84173e46d8a0102",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.log": "bbd17f116eb08d9f25c5d6531d02afc25a335b330efa941d3f8a5771fdf74458",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "compose-checks.log": "f7e4e6462d418d13c5c05695946e9b85109cd2d0de202ada5600bd35fe3054ab",
+    "database.json": "cf2cb823f7328aa05026cd2a5f4835e80b347ba2f8dfedb822d6e86258ae88b4",
+    "deployment.json": "984af8034727dddf5be0178a69a5bf055fbffd34f3a603be64d590dbb0b07aaa",
+    "dimensions.json": "37ab80852e72498fb0d044036066c26222bb6892fc23b066ed5c38ac645e9c5d",
+    "domain.log": "62723f6beb946ccdb06afae1e1ec18cbdb5205ede39ee5fa34c30d41acbc49c2",
+    "domain.xml": "db482978853a78043f5e46309d0b2c363f79ecb2193ce05d32c07afadbd93900",
+    "facts-1200.jpg": "f89c0826b49a67d6ac6061c74a66c8b10c0fefd7f3e85db6a2ad77ff145f4f80",
+    "facts-390.jpg": "a8d1207e4cc328fe66b45e6cbc5b99c946b5ba0e7184d359c1d3798865f8e62b",
+    "facts-768.jpg": "abd8590a8c2e58890baa4889031025cfc644e83df2e1ecf4c4d21ba59722a01f",
+    "format.log": "0321fffcb91606a42c0a19d8c1121d5c544379d663821fce616c71a7bb62f6b5",
+    "frontend-format.log": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283",
+    "frontend.log": "24616455b6ea7db9cb98218a4314af7f79942ac921c3d3faec722c4e82b98540",
+    "frontend.xml": "2652f92bf5bcda0d49397770e4ae758741a3c0ea78e1f84467209ad48314be32",
+    "intermediate.json": "14d601ec06e0bd193de91f3ed7ed6f4b58bb6fbe1ceff3f469adbca22229a72a",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mypy.log": "d9a5631f7d87a741fbecc3236286d1792d22d349ff13846d71cdc9217307bb76",
+    "requirements-api.xml": "e752f321402bd8e8d47064e44a73fb91bac2b5cc6569a7baa3b5559461f5b7fe",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "runtime-api.json": "fddaf31fc521d2bdc6cbc406a53b3869b7e6175f08ff029855c68b5f53ea6f7d",
+    "runtime-inputs.json": "82e0fff836e9364b0730c87e27732c9b5ddf68db38d262850ba4ca7a4d53402d",
+    "services.txt": "19efc66635e4d0d79f039a3d4d6d6b0e8ddde952a2a5fc9d5a4c2a084eab58d1",
+    "types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "read-only fact provenance diagnostics and explicit UI; no semantic applicability or execution grant",
+  "deployed_database": "tender_checks_fusion_v5"
+}
