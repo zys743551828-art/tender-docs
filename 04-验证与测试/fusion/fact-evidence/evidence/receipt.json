@@ -1,0 +1,47 @@
+{
+  "app_commit": "f5b5dee506c874bdef48c5a1fbc624beccc65e37",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 157,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 201.36
+    },
+    "domain.xml": {
+      "tests": 280,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 3.0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/contracts/schemas/package-fact-evidence.schema.json": "1790f6f95e18a983be59663534663b3df8e53e4ad81fd1dce232f467330eea98",
+    "workbench/packages/domain/bid_package_fact_evidence.py": "45e9bfc103d644eb44f8e14159db56341492bc74859afa393afc807962fa772a",
+    "workbench/packages/domain/package_fact_evidence.py": "20f54504e6237e93c310842a67f8fa2e4b7d11fd887be406c1ee9285f99d63e8",
+    "workbench/tests/test_bid_package_fact_evidence.py": "6bdd73e241cde05f0d72542c216ab4877a830d0e73843b7f9589b365159ba6a9",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "14d5bc99f8bc7b79058819a7d3ef62ed3cce49c841065dd28b752ec899522336",
+    "workbench/tests/test_package_fact_evidence.py": "6717719708ea81fa959d9594849f41888c5e39dde06eedf30aec70d93d66a874"
+  },
+  "evidence_sha256": {
+    "api.log": "13701c0aac2c99a4bd078140d86c0e99c93a7f893f57ac2ced48be00644f9f32",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "e26d9472717240c1555c61d5e9d26e52135923cf0aae3ee2470ba3452a366f99",
+    "domain.log": "42e7605e9dcc03b578c363fd9a1086d9ea65b67b66135f0f1b0038fa282bb48f",
+    "domain.xml": "0ca801cc5210674477b686728991a66bd75807a41bf63569fb4400b62a5fa501",
+    "format.log": "c6054335d9571c0c59ef2b8af5223d2f5d56a9db5aba43b6f39217add8928601",
+    "mypy.log": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+    "requirements-api.xml": "85fef1b72989e4f3dd3b5c19f86fa4a9e63f4a53796a29be67136807e6e77098",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "5f659d1b6dab21c7811e37d979d875817b7dd751e9cc9e5583f86ac0f055bbd0",
+    "runtime-inputs.json": "961e2d3c5cda227dea773dc262606bb8214be5795d72bc656be28dd7f1d25e03",
+    "services.txt": "f71b88b1c8c0d0ec992bf870561e4e1e5bad7533637b8c0bbb11bf2de8c5b594"
+  },
+  "scope": "internal frozen package fact evidence port; no fact write, public route, original byte qualification or dispatch",
+  "deployed_database": "tender_checks_fusion_v7",
+  "new_visual_acceptance": false
+}
