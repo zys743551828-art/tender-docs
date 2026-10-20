@@ -10,20 +10,30 @@
   },
   "tests": {
     "local_pure": 66,
-    "pg_api_collected": 107,
-    "pg_api_executed": false
+    "pg_api_passed": 107,
+    "pg_api_executed": true
   },
-  "deployed": false,
+  "deployed": true,
   "evidence_sha256": {
     "api-collection.log": "6d8bacf7206e3793ecee2fe15e6838554ffe9bd5266816d8fa03602b4331facf",
+    "api.log": "c7ada9268a7f87e3152f3f2d401471f592f7afb8cf9aa9cb805bf8a510720c0a",
     "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "compose-checks.log": "2ed017e0b43372859cb60cb341cdd4645ce8db7b2f2e75876c9dbc37d2e37498",
+    "cleanup.json": "88354de4e666812c943e2c264fc89fca99721163777eb6a73dc7a0e156198c19",
+    "compose-checks.log": "1aa35ccd5cd465d59d71f76f914233533ad3f94c84ee26ccf374fed8e4c53aa4",
     "compose-config.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database.json": "d189909eaa19c084be48c782744746d3ef87ceab52c1bdd0b1352ff4d5fa35f1",
+    "deployment.json": "2026c9248bb329d430dbf2acba0217eb97b853bb9349336572e28b9425ccf5d0",
+    "docker-startup-blocked.log": "2ed017e0b43372859cb60cb341cdd4645ce8db7b2f2e75876c9dbc37d2e37498",
     "domain.log": "62718091df7ea879a9499db26afb42bee9e83df581a2b7793ae26ab47d2f2b70",
     "domain.xml": "841d69282da13a058c184b75132dcc08bce39c18808bb78f312ccceca476cb20",
     "environment.json": "7588f3f84a4b4c32b10abc21f622aa2fa8b6b7b26e28d0e841963c17c2b9f4ff",
     "format.log": "c6054335d9571c0c59ef2b8af5223d2f5d56a9db5aba43b6f39217add8928601",
     "mypy.log": "281a094c39385b4d7b53e5db635f52158036861433c2a4975b9039e77a627a24",
-    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0"
+    "recovery.json": "134c1b3995bf283010193a63a2fac963b0cf1d10c4e8c8c75b53872617cb74c6",
+    "requirements-api.xml": "f54bc0b523daf72fd456e4a69b7413b799d911b0fbc30318c4f87cfc47695e09",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "7ce07af4bbbe6369a62ef998d13a4556fe620e712dda415a4d73bd3d3cc78ba6",
+    "runtime-inputs.json": "c95ca5157cef094caa700442978b3c16370fe35e6c5e216848c98d57ac9f8563",
+    "services.txt": "bbee6734a5b0664772d24d9f7ddbabc1ec0ce6f913515d27055caa3999aa203f"
   }
 }
