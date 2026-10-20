@@ -1,0 +1,50 @@
+{
+  "app_commit": "524972456a25a4dfe826a6a295d532d2bbcf72be",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 172,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 226.3
+    },
+    "domain.xml": {
+      "tests": 305,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 3.41
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/contracts/schemas/package-fact-change.schema.json": "4a055976710396c0354559414eeba5da449e39fb2efcbe89b4579e8224c43353",
+    "workbench/packages/domain/bid_package_fact_changes.py": "eaea6b423c33a97e8c9a54136c86fc66a7e3df51a0040e6fe12a94eae6ce10fc",
+    "workbench/packages/domain/bid_package_fact_evidence.py": "881020b0beb8bc3d948b2d3d6a61f6cbaf9f339f026533f4141260fa9655a242",
+    "workbench/packages/domain/fact_sets.py": "8fee663a45d0921f147277a0c71ea2009dc1018a909d64340698ee01f4e67643",
+    "workbench/packages/domain/package_fact_changes.py": "1516a1e5107d473751d706a99e30837c394f6c872ad3ed9ced69533930e79f0a",
+    "workbench/packages/domain/package_review_context.py": "d5a17f48bc5b2464cffd950e1d34a6d7a5decbbf1270b21a140c4b727292fc22",
+    "workbench/tests/test_bid_package_fact_evidence.py": "212ba1b7bb0ef4424200f9b9977a4147484f0306df1e45b2c446b2259fa612d8",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "5dcdd809bcff0c1e5c3dffc068b04177e957f980f04ba594d01baae3dc98761f",
+    "workbench/tests/test_package_fact_changes.py": "252d2a470588c7f45917f7dadb293a5f7687957ef32f1d229e078d81cccf4b03"
+  },
+  "evidence_sha256": {
+    "api.log": "21a35fea7b10cb9fab83697369d8ec62298252b1d61192eb85a7fb9eb7d85a26",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "1ae2da79a02cde504983c03cdb7a3ea58712c6613d573ff1b04bd75b71ab0c42",
+    "domain.log": "f31ca69a20150a23d180dffd976792844a17e787394121c8240c1dd702b436fb",
+    "domain.xml": "5c4cb2e8080599343018fac967d43092e763710eb6dc483d2b264c7920d64215",
+    "format.log": "3fa62c94b1301255f0c64c429c668a4fabc4cb9d3848edb2790b607266d16092",
+    "mypy.log": "718df785efbbd4b57e63b5f64aff2c5b5592e433447681f759b307f97a3ec96a",
+    "requirements-api.xml": "4346e2e8f26a4bf5bf1fd24b29838462cf4b34f48e01e2e94b910e6a6172bdef",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "9d4172c944082a856d69e681b2b07377cf127f4d40682dcfb3f5038c1374c645",
+    "runtime-inputs.json": "1751b19e980f3ea3d702598a0728967d44af15afda8591ae7b5336ec3fc98ad3",
+    "services.txt": "1fe407dc944adb216499091375b9b1e0da496091247c82e3fda8e98c179be2f3"
+  },
+  "scope": "internal atomic explicit human package fact confirmation/withdrawal and immutable audit/ACK history; no new HTTP or qualification",
+  "deployed_database": "tender_checks_fusion_v7",
+  "new_visual_acceptance": false
+}
