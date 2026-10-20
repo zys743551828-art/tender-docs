@@ -1,0 +1,24 @@
+
+ RUN  v3.2.3 D:/workspace/tender/tender-app/workbench/apps/web
+
+ ✓ src/PackageFactScopeWorkspace.test.tsx (25 tests) 12750ms
+   ✓ 仅显式读取和选择；先保存恢复体，再发送声明，不授执行资格  1032ms
+   ✓ 丢失ACK后重挂载不自动重发，按原键原体恢复已提交声明  1036ms
+   ✓ 来源失效时只允许追加撤回，旧记录不被改写  897ms
+   ✓ 存储失败时不发送写请求  1005ms
+   ✓ 换事实编号后迟到观察不覆盖新选择  697ms
+   ✓ 异常回执digest不清未决请求  957ms
+   ✓ 异常回执scope不清未决请求  1004ms
+   ✓ 异常回执grant不清未决请求  1004ms
+   ✓ 异常回执actor不清未决请求  973ms
+   ✓ 异常回执previous不清未决请求  975ms
+   ✓ 再次保存先清旧成功，断网不能留下当前保存已成功的提示  457ms
+   ✓ 首次明确拒绝释放待确认记录，仍须重读后才能再次保存  988ms
+   ✓ 切换准备记录后旧保存迟到，不改已保留的原请求  991ms
+   ✓ 按原事实名称选择后读取当前范围，不需要手工填写编号  429ms
+
+ Test Files  1 passed (1)
+      Tests  25 passed (25)
+   Start at  19:29:39
+   Duration  14.33s (transform 124ms, setup 282ms, collect 263ms, tests 12.75s, environment 678ms, prepare 140ms)
+
