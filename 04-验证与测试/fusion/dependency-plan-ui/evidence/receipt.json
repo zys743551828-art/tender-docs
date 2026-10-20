@@ -1,0 +1,49 @@
+{
+  "app_commit": "6ec659372570715076c7e9843882df04a6bb174f",
+  "branch": "fusion/bid-workbench",
+  "frontend_tests": {
+    "tests": 516,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "frontend_wall_seconds": 18.63,
+  "source_files_sha256": {
+    "workbench/apps/web/qa-previews/frozen-inputs/build-dependency-plan.mjs": "0f2bc0b382d3c72250ce9c6a8d47603285af81cfdb0af43bcdafef23b1339a7a",
+    "workbench/apps/web/qa-previews/frozen-inputs/dependencyPlan.ts": "53ec05cb3ea9a01131fc07fee28a4819d94ce22d814828c0770c2368fb0164f1",
+    "workbench/apps/web/qa-previews/frozen-inputs/dependencyPlanFixture.tsx": "d967bf44b1da0453040b9b496abcf9b2aa98e07cb78de2d8c35ba8d9f86e11c7",
+    "workbench/apps/web/src/PackageDependencyPlanWorkspace.test.tsx": "21ee5cc6655ac518e75b041a05685a20d23055e92e53781c9f4a8976a47c606d",
+    "workbench/apps/web/src/PackageDependencyPlanWorkspace.tsx": "0c492e63bf36e261ee38d858858fa61f8c5dfbf4214858ffd0317c232fbc5e3c",
+    "workbench/apps/web/src/PackageInputDependencyWorkspace.test.tsx": "b906e200637a300bcac34c35f955d8f7fa1b5098000f811c09e9030142b56913",
+    "workbench/apps/web/src/PackageInputDependencyWorkspace.tsx": "518ce8c30623c18561be622046fd943bcc2ea0ab3870736348d2073fa7d91440",
+    "workbench/apps/web/src/dependencyPlanProtocol.test.ts": "171efb3f6d0d9be96c64a5abe25cf5a3b48978fcbe9cf4c09352bb62b46e796d",
+    "workbench/apps/web/src/dependencyPlanProtocol.ts": "7a739752d489d74cd9d316e1c73a26332159ac1cbae661b13869bbed10c12008",
+    "workbench/apps/web/src/dependencyPlanRecovery.ts": "3adfdd4d1c5d686e733778fdc33be78c1edb343ca94b8285e6918ff91aa3413c",
+    "workbench/apps/web/src/packageDependencyPlans.css": "f5d4b8bf2108173c26ab6b4fc39c99253000a9725636fe129955552f6a344ba2",
+    "workbench/packages/contracts/package-dependency-plans.md": "d54313244ccc15e7718631f04441c0fd343d0f2ee4b777111408191056344066"
+  },
+  "evidence_sha256": {
+    "browser-layout.json": "9266cfd113b4ec9251eb488c2f629f85f79ca9399a48c5269e0bec47d3ac54dc",
+    "database.json": "b546b468e90070c4c5a10ce3ce467feb4fca8df0fdf386b3e21b51f613291de7",
+    "deployment.json": "e9984990f18c625777eba0c74205e4ebe68026d91e7d0d757e33d7b58ab28b45",
+    "protocol-tests.log": "b7ab81135b2efe8a2d239bf1a5b292430667f9d22a7b77f1d9a4c6986af2b33c",
+    "runtime-inputs.json": "6278002b5a0db65151e2c8dec26f555ffd473088d9bcd48bd5199621f8b5eeb3",
+    "services.txt": "f6f75de4b8d7f1f03125376fcaf3ba951d6f1d8adc450ce902551f4af3152c7b",
+    "ui-tests-final.log": "3c3836bd2b45d9d1dfcec3f16f5781c9d8eed3a5922dce185c5b579fa315ae41",
+    "web-build.log": "0d513053944775d485a9daa561fa1002a5b267a21fa2d4283fc934347cc8be18",
+    "web-format.log": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+    "web-lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web-test.log": "ec66e164aebb8070e76757e03a2714cb117f69f1f4e7f585d846061cc46ea86d",
+    "web-types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web.xml": "5b56b704c35bd639f960202778d266c910df25569b0f596a93c56dc9766fc180",
+    "screenshots/plan-1200-draft.png": "7c6f22361726343aa0c05c0624f3dde783830a27803bd7cf8b7ddd5b1dc84101",
+    "screenshots/plan-390-draft.png": "1ce0e7c3399aec17f39088bfc187becddd2e81f59ed2cad97b5da39fc3f40c11",
+    "screenshots/plan-390-history.png": "2151a1f92827d14ec1655d84fdfec626ed71d5b7a1ad08cfe5c097879cbe04dc",
+    "screenshots/plan-768-draft.png": "d6afe67cd2a03d905cc1c95d907bce7cfe9d0ef0de7c0365f32d6690429af178"
+  },
+  "scope": "explicit dependency plan save/history UI and exact pending request recovery; browser page-local synthetic server only, no business IO",
+  "deployed_database": "tender_checks_fusion_v8",
+  "runtime_files_verified": 868,
+  "independent_mobile_viewport_verified": false,
+  "real_business_end_to_end_verified": false
+}
