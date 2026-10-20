@@ -1,0 +1,63 @@
+........................................................................ [ 34%]
+........................F
+=================================== FAILURES ===================================
+_ TestFreezing.test_dependency_plan_http_requires_auth_csrf_and_explicit_key_without_writes[synthetic-original-v1] _
+
+self = <test_bid_package_review_freezing_api.TestFreezing object at 0x70cd80f76e70>
+dependency_plan_case = ({'body': {'context_digest': 'fead1a18016abfc5f56fabc7b54db9525b9fafac0a446184b4aea3a272c04284', 'coverage_attempt_id'...[], 'execution_input_digest': '625964b36c1cada99257be56d3309ae65b8ca11bd1e7dac79ccd7694a9f22a68', 'fact_ids': [], ...})
+
+    def test_dependency_plan_http_requires_auth_csrf_and_explicit_key_without_writes(
+        self, dependency_plan_case
+    ):
+        f, frozen, prepared, _, body = dependency_plan_case
+        target = self.plan_path(f, frozen, prepared)
+        client = f["w"]["client"]
+        c = f["w"]["database"]["owner"]
+        before = counts(f["w"])
+        h = headers(f["w"])
+        assert (
+            client.post(
+                target,
+                json=body,
+                headers={k: v for k, v in h.items() if k.lower() != "idempotency-key"},
+            ).status_code
+            == 428
+        )
+        assert (
+            client.post(
+                target,
+                json=body,
+                headers={k: v for k, v in h.items() if k.lower() != "x-csrf-token"},
+            ).status_code
+            == 403
+        )
+        cookies = dict(client.cookies)
+        client.cookies.clear()
+        try:
+            assert client.post(target, json=body, headers=h).status_code == 401
+            assert client.get(target).status_code == 401
+            assert client.get(target + "/" + str(uid())).status_code == 401
+        finally:
+            client.cookies.update(cookies)
+        assert counts(f["w"]) == before
+>       assert (
+            c.execute("SELECT count(*) AS n FROM design.bid_package_dependency_plans").fetchone()[
+                "n"
+            ]
+            == 0
+        )
+E       assert 8 == 0
+
+tests/test_bid_package_review_freezing_api.py:594: AssertionError
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+  /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------------- generated xml file: /evidence/requirements-api.xml --------------
+=========================== short test summary info ============================
+FAILED tests/test_bid_package_review_freezing_api.py::TestFreezing::test_dependency_plan_http_requires_auth_csrf_and_explicit_key_without_writes[synthetic-original-v1]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 96 passed, 1 warning in 123.01s (0:02:03)
+{"suite": "requirements-api", "exit_code": 1, "real_provider_attempts": 0, "compose_project": "tender-fusion"}
