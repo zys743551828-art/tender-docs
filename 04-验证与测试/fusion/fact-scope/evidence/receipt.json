@@ -1,0 +1,64 @@
+{
+  "app_commit": "2f2749ec857e400fff0dd2a5b839433028d43c1f",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 140,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "bootstrap.xml": {
+      "tests": 70,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/deploy/compose.fusion.yaml": "f14f7012560108daaaafbd4add4d8a64c14770f75b599f175bff0b9c21d7ee0d",
+    "workbench/deploy/fusion_bootstrap.py": "fa747360c30429e26dd113b1663350e95c173dd83ac44d007540df9192cfe77f",
+    "workbench/deploy/schema_plan.py": "2f61a98b51219cbf33ce7555b3d38ab593d5e6aa90be047705992b8fd4c0ac16",
+    "workbench/deploy/sql/bid-package-fact-scope-runtime-grants.sql": "12c23369c1e9a5abbc5beea52b82cdbad0d198e619b2f5d3655cf4db1aa791a7",
+    "workbench/packages/contracts/schemas/package-fact-scope.schema.json": "1a00a829d8ab2f4deb274305f1564e8a4913c1f618e698eca317d4e76b379531",
+    "workbench/packages/contracts/sql/bid-package-fact-scopes.sql": "8524adaf9560a5ee707ec8fc954fe847cbe1412ccb4b75310c38c46c1ed045af",
+    "workbench/packages/domain/bid_package_fact_provenance.py": "6630ee833e4204efc3e374f2c03f952bbb0d2dd5d8770d328d190349b170bd5c",
+    "workbench/packages/domain/bid_package_fact_scope_repository.py": "6ca5ae664e5915b9c87a8a1937715480edac62c61ef32e4fb18485be7a8d557c",
+    "workbench/packages/domain/bid_package_fact_scopes.py": "ef3944456d4c0c7e13e9d9ee24515e3e2c561ed8f4db99322d355f17aaac603b",
+    "workbench/packages/domain/bid_package_fact_validation.py": "64422766724ea510eb520925b018eba132fdc82cce9d1c73e331a8f88c9b06d4",
+    "workbench/packages/domain/package_fact_scope.py": "b65c942c61f4efb0fbc73484999bd2b7f766cd66f2c3bf2faed57393127d6486",
+    "workbench/tests/fixtures/package-fact-scope-vectors.json": "96af18631858978e0ddca0cfa514290a187d4e0d0e0f50dd3788a2853c26e5fd",
+    "workbench/tests/fixtures/verify-package-fact-scope.mjs": "6233e96324b2c0b25ab056edf05ff61165bd988286587957ecc4c09fcd4f0b0b",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "960f3dece3b01ebee863dddaa975fe7897697a7c898a2c4dcb39488a56324555",
+    "workbench/tests/test_fusion_compose.py": "cca71d7254b364572eb8299ac81150c0a3789c7cc9a77654f5bb3f443fba6b3e",
+    "workbench/tests/test_package_fact_scope.py": "13f58e3cd859209e71ec96328ef022f42f65fab91327058072680ede12747ddd"
+  },
+  "evidence_sha256": {
+    "api.log": "82f6165bef07dbbb418c70068898ed29f83f058a257e50e04833cd8257a863a4",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bootstrap.log": "f1bcbc029630e8e7b70da7ad4e8a0e48823b8d11c4451a4af43a235eff01bb59",
+    "bootstrap.xml": "e27e05e1db4292dddc8276fbedc8adb843db1d80ab7f62159d98b791fc507ad4",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "compose-boundaries.json": "88caf0c28539c89534bee56de9a9f27b1fc8accce776275993c023cc3adfc8eb",
+    "database.json": "246ade3f26281589253062ab9f70798f3e1042478b4c4cc81d532d3b55778ade",
+    "deployment.json": "1968ab9554efdd897589e756f8faabcbe1507d101868fc7fe976c814861ca58e",
+    "domain.log": "2e03ea9bc721105010419ff4b973af48ab0ba3aa6936764fa443e01edc251403",
+    "domain.xml": "5fb864ce453c0dc565469e87eb19cd288fc55fdc06317071a37f86d31b535472",
+    "format.log": "a69837e5076ef12241581591171de529fd26d5157fc32761175f83b0501cd41d",
+    "mypy.log": "e2702f9afc4c0f80ff1e8624f77af7a7d2689ca184512114aae5967a76229ba8",
+    "node.log": "049f11650a724d68ed3c04e4c591fe3d7aeaee8756dc6a8c8a093fc4d0302f7e",
+    "requirements-api.xml": "52f828e4cb8510985bf3ca988e95380a940e4a3dee2ddb90d5976a1e925c1628",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "fddaf31fc521d2bdc6cbc406a53b3869b7e6175f08ff029855c68b5f53ea6f7d",
+    "runtime-inputs.json": "6430534aa5df831bd846a73b48c50f8d578e7cb136c886df6b7833b6c9c97565",
+    "services.txt": "34f7c5f4f852917d3b8c3f94f9fb0264f6b495d32b8ac7683104ecaebe76ef2b"
+  },
+  "scope": "internal explicit human applicability declarations and append-only ledger; no public API/UI or qualification grant",
+  "deployed_database": "tender_checks_fusion_v6"
+}
