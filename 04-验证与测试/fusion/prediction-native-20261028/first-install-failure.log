@@ -1,0 +1,62 @@
+E                                                                        [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_native_prediction_install_and_worker_cannot_read_results _
+
+    @pytest.fixture(scope="module")
+    def database():
+        source = history.database.__wrapped__()
+        value = next(source)
+        try:
+            for name in EXTENSIONS:
+                try:
+>                   value["owner"].execute((ROOT / name).read_text())
+
+tests/test_package_prediction_native_pg.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <psycopg.Connection [BAD] at 0x7fcd21206d50>
+query = '-- Optional fresh internal /3 route exercise. No business route/certification writes.\n-- Requires package-model-obse...age_model_route.prepare(uuid,jsonb),package_model_route.commit_action(uuid,jsonb,text,jsonb) TO tender_api;\nCOMMIT;\n'
+params = None
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -> Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+>           raise ex.with_traceback(None)
+E           psycopg.errors.SyntaxError: syntax error at end of input
+E           LINE 67:  CASE WHEN action_name='activate' THEN ARRAY['action','comma...
+E                                                     ^
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: SyntaxError
+
+The above exception was the direct cause of the following exception:
+
+    @pytest.fixture(scope="module")
+    def database():
+        source = history.database.__wrapped__()
+        value = next(source)
+        try:
+            for name in EXTENSIONS:
+                try:
+                    value["owner"].execute((ROOT / name).read_text())
+                except Exception as error:
+>                   raise AssertionError(f"Native prediction installation failed: {name}") from error
+E                   AssertionError: Native prediction installation failed: deploy/sql/package-model-route.sql
+
+tests/test_package_prediction_native_pg.py:46: AssertionError
+- generated xml file: /workspace/scratch/tender-prediction-native-validation/native-preflight.xml -
+=========================== short test summary info ============================
+ERROR tests/test_package_prediction_native_pg.py::test_native_prediction_install_and_worker_cannot_read_results
+1 error in 1.52s

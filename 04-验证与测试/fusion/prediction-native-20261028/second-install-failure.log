@@ -1,0 +1,62 @@
+E                                                                        [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_native_prediction_install_and_worker_cannot_read_results _
+
+    @pytest.fixture(scope="module")
+    def database():
+        source = history.database.__wrapped__()
+        value = next(source)
+        try:
+            for name in EXTENSIONS:
+                try:
+>                   value["owner"].execute((ROOT / name).read_text())
+
+tests/test_package_prediction_native_pg.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <psycopg.Connection [BAD] at 0x7f244d695f10>
+query = '-- Native installer /2: parenthesized CASE expression; /1 bytes retained.\n-- Optional fresh internal /3 route exerci...age_model_route.prepare(uuid,jsonb),package_model_route.commit_action(uuid,jsonb,text,jsonb) TO tender_api;\nCOMMIT;\n'
+params = None
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -> Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+>           raise ex.with_traceback(None)
+E           psycopg.errors.SyntaxError: syntax error at end of input
+E           LINE 109: ... WHEN target=(config->>'candidate_model_id')::uuid THEN conf...
+E                                                                          ^
+
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: SyntaxError
+
+The above exception was the direct cause of the following exception:
+
+    @pytest.fixture(scope="module")
+    def database():
+        source = history.database.__wrapped__()
+        value = next(source)
+        try:
+            for name in EXTENSIONS:
+                try:
+                    value["owner"].execute((ROOT / name).read_text())
+                except Exception as error:
+>                   raise AssertionError(f"Native prediction installation failed: {name}") from error
+E                   AssertionError: Native prediction installation failed: deploy/sql/package-model-route-v2.sql
+
+tests/test_package_prediction_native_pg.py:46: AssertionError
+- generated xml file: /workspace/scratch/tender-prediction-native-validation/native-preflight.xml -
+=========================== short test summary info ============================
+ERROR tests/test_package_prediction_native_pg.py::test_native_prediction_install_and_worker_cannot_read_results
+1 error in 1.46s

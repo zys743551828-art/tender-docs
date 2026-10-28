@@ -1,6 +1,6 @@
 {
-  "code_revision": "50657762cb2eaa08f81db87e188eba8e629dd131",
-  "scope": "FR001–013已核源码；不代表融合FR014–040完成或真实验收",
+  "code_revision": "6570ca99c333387e5f8da88b8d9e319426a3b837",
+  "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
       "id": "FR-001",
@@ -118,6 +118,249 @@
       "acceptance": "not_accepted",
       "code_sha256": "64d7bab4c69d9524161692fad64cea8780bedd9191b69670655be8903642a5eb",
       "test_sha256": "a58c91e966def6103d8ccca083901c1de50a6b0d4009e26bac7e0af9feb67839"
+    },
+    {
+      "id": "FR-014",
+      "code": "apps/web/src/App.tsx",
+      "test": "apps/web/src/App.test.tsx",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "b07fb4f053119d3afe0b8737f78668bb93a5d2456d340925cef527879897df94",
+      "test_sha256": "6c916069e20395362aec90dcdc1d279821c83429e8136617305a07cd0010796e"
+    },
+    {
+      "id": "FR-015",
+      "code": "apps/api/lifecycle_routes.py",
+      "test": "tests/test_project_lifecycle.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "c711b9a6e4ba35c7f968036af5c0f9e4917c4b5d9e29c5be8a08d72f725497ba",
+      "test_sha256": "e778384ff885e6d6e40f86ed5234fa1c993a076236f58f1cb94eb454d8a31314"
+    },
+    {
+      "id": "FR-016",
+      "code": "packages/assistant",
+      "test": "tests/test_assistant_integration.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "d4174b858b154fc5221ed4f9e1867d9a0734ce0da86ff7cb673bba53ec68081b",
+      "test_sha256": "94c48acc7170b5807bf520634dbbf1baf48146ea973c312742f8e7b00ef24c80"
+    },
+    {
+      "id": "FR-017",
+      "code": "packages/assistant/actions.py",
+      "test": "tests/test_assistant.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5c23c89e79ea731a8571b6b5f7c84a0ecf74a70a226b6495d88d03b22aec927d",
+      "test_sha256": "e0ace9b1930ee0c50cb96368497e540ba8360d96d1e57cd1da2c35ea25bb6351"
+    },
+    {
+      "id": "FR-018",
+      "code": "apps/web/src/AssistantActionCard.tsx",
+      "test": "apps/web/src/AssistantDrawer.test.tsx",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5454a8c1d0a266b23f6ab091d993c11e02fbbdadc0e2b3dc517ddefd640479e8",
+      "test_sha256": "347ce6f3dc1b3f349dfc20427d910ce84380bc047ff45da8986a9e27fbaf056f"
+    },
+    {
+      "id": "FR-019",
+      "code": "packages/assistant/context.py",
+      "test": "tests/test_assistant.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "73cbd00492f00f404e80bc6e51d20554ea2e37639a805c1d4f651182f306e6a8",
+      "test_sha256": "e0ace9b1930ee0c50cb96368497e540ba8360d96d1e57cd1da2c35ea25bb6351"
+    },
+    {
+      "id": "FR-020",
+      "code": "apps/api/bid_package_review_comparison_routes.py",
+      "test": "tests/test_bid_package_review_comparisons.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "59752dc9aec2afcf6d6b3e29389d36e2ce24cbdd89c532bf1162ee4483f6521e",
+      "test_sha256": "e49db768684d9413ae0e1fba930fe1503e322cd297fd2ebd4a9ca1c760ada949"
+    },
+    {
+      "id": "FR-021",
+      "code": "packages/model_governance/package_history_directory.py",
+      "test": "tests/test_package_history_directory.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "ec42ddb2deeb0171242ed1e2eb609d641791cc617a7261fedd622216204c275b",
+      "test_sha256": "8f0285847d721ce6cebdd4cf44c4bac7c91c2ebf3c5bc42c0406ec9f4c3652d0"
+    },
+    {
+      "id": "FR-022",
+      "code": "apps/web/src/HistoricalImports.tsx",
+      "test": "apps/web/src/HistoricalImports.test.tsx",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "049b5a5fbcf70d2a4827011698b001b0fbc6ffbeac7749e1b265a66eb9e29ad6",
+      "test_sha256": "fa0a4b611f6e941cc5dabca41b1d6db440e9f335740b7c770b6073d0f62a9c6d"
+    },
+    {
+      "id": "FR-023",
+      "code": "packages/authoring_history",
+      "test": "tests/test_authoring_history.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "66479d9862ee77f4bd5a751962be2969620751c041c92f347f4bbde4903260b5",
+      "test_sha256": "122383afb6da9cfbd6db85d4a6f7496b844bc3bbe2d9aba82d2d073c1ad2689e"
+    },
+    {
+      "id": "FR-024",
+      "code": "packages/knowledge/repository.py",
+      "test": "tests/test_knowledge.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "cd77bf3869f942ca578a2578bdd428c4ab68671a99c00b4971ac656c599c03b5",
+      "test_sha256": "7167116e65b022c59cff9aa7665d89ec9f1e40c5eac9797b3730a142220efcf0"
+    },
+    {
+      "id": "FR-025",
+      "code": "apps/api/knowledge_routes.py",
+      "test": "tests/test_knowledge_integration.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "350b73fa17d75fe8469ae8555d7b8cc1591faf93747ddfba796263e2bba513ea",
+      "test_sha256": "b3c9a596faea5546a3b125aeaff0d80078ccc0c3904fc27d442d17a2768ffca4"
+    },
+    {
+      "id": "FR-026",
+      "code": "packages/knowledge/rag_search.py",
+      "test": "tests/test_knowledge_rag.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5d13feca0431e85194e1a1789e263df103f326e37d5affaf720a547874672130",
+      "test_sha256": "74117cd2cb71abd7f5a360f24af806a176d16884c27340304f24fc3271e3e65e"
+    },
+    {
+      "id": "FR-027",
+      "code": "packages/knowledge/sources.py",
+      "test": "tests/test_knowledge_package_targets.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "42f8b23971ce76015823267d6879c1add5bf8050af01d142ed8b5c529d7837ba",
+      "test_sha256": "85d1cc846e791c8657bdcc35ea039927b0c15e951942c3c2f57fbfe90524eb15"
+    },
+    {
+      "id": "FR-028",
+      "code": "packages/model_governance/package_history_proofs.py",
+      "test": "tests/test_package_history.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "87e309883c9d71347c0318e1f45705e31b49f9dc7c57d39ef8962904796e3bd2",
+      "test_sha256": "2e7f673953b96b6102dc761ad67d0e93513571598dc4e9286520ce99960f0d07"
+    },
+    {
+      "id": "FR-029",
+      "code": "packages/package_model_route",
+      "test": "tests/test_package_model_certification.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "b9e05a65dd1dcfe89aea827f0d8d9308d64c046367aeb12e6e57105de9d83b8a",
+      "test_sha256": "34f7d35038cd5a3c7f08301b8d982a4fa75fb565fc953e29c3160dc23ca5fb2d"
+    },
+    {
+      "id": "FR-030",
+      "code": "apps/api/bid_package_rule_correction_routes.py",
+      "test": "tests/test_package_rule_corrections.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "127b6ab9a3be5ce9865eae9904a80e2b47c8def88b3048fba45690026467689a",
+      "test_sha256": "045d783e3722f6e7d7518e440214f53539204275b849a5ac4ddb57faf2835924"
+    },
+    {
+      "id": "FR-031",
+      "code": "packages/lifecycle/service.py",
+      "test": "tests/test_lifecycle_batch_closure_integration.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "b767ae2a25e06af3cc5d2ff497fd220c76d647d885b76169f8b919c28696e671",
+      "test_sha256": "924ae42a422184f487fa73b6f7fb6e1485b80ce6677311c065b8be8e6cdf7139"
+    },
+    {
+      "id": "FR-032",
+      "code": "deploy",
+      "test": "tests/test_extended_recovery.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5056b6a28b86f8a3d0c2c837ff9c9d5f1548e335b5f4302d007ee747ed4bdb0c",
+      "test_sha256": "408a7ca090f6b19db6b7bc6cfd3f12d9a0e73dab312cd9c196c97c6fffaefb29"
+    },
+    {
+      "id": "FR-033",
+      "code": "apps/api/event_routes.py",
+      "test": "tests/test_event_stream.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5c25826e73bdc991c1716f05391c32701d068150e1ead1f34005fa28a28ba7d9",
+      "test_sha256": "7d6e9573499ab0efe834851cfe82365a13f759b1ce9b13deaab12fd449b400ae"
+    },
+    {
+      "id": "FR-034",
+      "code": "apps/api/identity_routes.py",
+      "test": "tests/test_stable_lot_identity.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "0b0a926a2c7f1f0fe5bf2fe926d2592bcccdd8b86d8d9d0a3e07061a21bb3f31",
+      "test_sha256": "fee1d0b9818accaf047df89a2ef6b35e73984ca810ae8b93446bfe46a8a21c21"
+    },
+    {
+      "id": "FR-035",
+      "code": "apps/api/bid_package_submission_routes.py",
+      "test": "tests/test_bid_package_submissions_pg.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "8dc90018867be45b4c1be45d3199d4662f8a1c3d62fbdd5d61b9358a7f8e163d",
+      "test_sha256": "d346899692a1d0544c7912174a21a26610679be49266bfc0e89ef060f19e298d"
+    },
+    {
+      "id": "FR-036",
+      "code": "packages/model_governance/package_history_cpu.py",
+      "test": "tests/test_package_history_exposure_bridge_pg.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "60eb9f5de83fa1d64951a7e1186ebc2f24dd5418bf6612f877e31d253f4ca84f",
+      "test_sha256": "808d06423b7894e0d86d4c890d6893ad79bf5e2ff9141b0061165ac57edda355"
+    },
+    {
+      "id": "FR-037",
+      "code": "packages/authoring",
+      "test": "tests/test_authoring_exact_revisions_pg.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "dbf9aa761b86691a6358c6d0cd95a999e696eb970e0c752e18b132ef881ea2c9",
+      "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
+    },
+    {
+      "id": "FR-038",
+      "code": "apps/api/bid_package_dependency_plan_routes.py",
+      "test": "tests/test_package_rule_corrections.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5e7abf2d96d610c53bbab6f07f9978612117b2c6e081a597c99d9933f3d5bce5",
+      "test_sha256": "045d783e3722f6e7d7518e440214f53539204275b849a5ac4ddb57faf2835924"
+    },
+    {
+      "id": "FR-039",
+      "code": "packages/authoring",
+      "test": "tests/test_authoring_rich_table_continuations.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "dbf9aa761b86691a6358c6d0cd95a999e696eb970e0c752e18b132ef881ea2c9",
+      "test_sha256": "8d1feaf40aea9ba49935572d4efad9ba3a5d8677f2d0db51a8367e2ea7a5009d"
+    },
+    {
+      "id": "FR-040",
+      "code": "packages/tasks",
+      "test": "tests/test_task_package_triggers_pg.py",
+      "document": "02-业务与产品/融合扩展实现核对.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "766a014df58423699d6b4e7fbdd53d01198e8891bd09c1a5fbfcb929b20735a4",
+      "test_sha256": "f48aa19e4d7113917b6e976eeb107bf4a0f91d18ed51164ad744ea30f07765bf"
     }
   ]
 }

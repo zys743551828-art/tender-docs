@@ -1,0 +1,117 @@
+.F..F                                                                    [100%]
+=================================== FAILURES ===================================
+______________ test_native_http_missing_certificate_never_queues _______________
+
+api = {'actor': '2d0932e7-b9fe-4b81-84af-61d953775037', 'app': <apps.api.main.WorkbenchAPI object at 0x7f981891e3f0>, 'clien....TestClient object at 0x7f9818a02cc0>, 'csrf': '13702319b821e973a5fce1d4a0de1909915fc2d5dfcee3630d87ea3fcd30f4f9', ...}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f98171aec00>
+
+    def test_native_http_missing_certificate_never_queues(api, monkeypatch):
+        from uuid import uuid4
+    
+        from test_stable_lot_identity import headers
+    
+        from packages.domain.runtime import connection
+        from packages.package_prediction_tasks.application import Jobs
+        from packages.package_prediction_tasks.native import Transactions
+        from packages.package_prediction_tasks.storage import Objects
+    
+        monkeypatch.setattr(
+            api["app"].state,
+            "package_prediction_jobs",
+            Jobs(Transactions(connection), Objects()),
+            raising=False,
+        )
+        bid, scope, certificate, command = [str(uuid4()) for _ in range(4)]
+        with connection() as c:
+            before = c.execute("SELECT count(*) AS n FROM design.operations").fetchone()["n"]
+        path = f"/api/v1/bids/{bid}/technical-scopes/{scope}/prediction-tasks"
+        body = {"certificate_id": certificate, "command_id": command}
+        for _ in range(2):
+            response = api["client"].post(path, json=body, headers=headers(api))
+>           assert response.status_code in {403, 409}, response.text
+E           AssertionError: {"code":"NOT_FOUND","message":"未找到指定对象","request_id":"90802383-95fe-4108-b4b9-2d4e7872118e","retryable":false,"details":{}}
+E           assert 404 in {403, 409}
+E            +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_package_prediction_native_pg.py:92: AssertionError
+________ test_real_outbox_kafka_worker_rejects_unconfigured_prediction _________
+
+api = {'actor': '705f4f33-578d-4700-b7d7-6774fb970513', 'app': <apps.api.main.WorkbenchAPI object at 0x7f981891e3f0>, 'clien....TestClient object at 0x7f981564d400>, 'csrf': 'cbc80e4aabfb0a5699879009099c9dfb4e50aeb7ea3560b0fcf499d863e1f2e1', ...}
+database = {'api_dsn': 'user=fusion_package_requirements_service password=[REDACTED_TEMPORARY] dbname...] (host=127.0.0.1 port=32774 user=postgres database=fusion_package_history_mechanism_92765252) at 0x7f98188fb350>, ...}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f981564c260>
+
+    def test_real_outbox_kafka_worker_rejects_unconfigured_prediction(api, database, monkeypatch):
+        """Transport injection is explicit; this is NOT an approved prediction submission."""
+        if os.environ.get("FUSION_PREDICTION_NATIVE_TRANSPORT") != "1":
+            pytest.skip("real isolated S3/Kafka required")
+        import json
+        import time
+        from uuid import uuid4
+    
+        from confluent_kafka import Consumer
+    
+        from apps.worker import engine
+        from packages.domain.runtime import connection
+        from packages.package_prediction_tasks import worker
+        from packages.package_prediction_tasks.native import Transaction
+        from packages.package_prediction_tasks.storage import Objects
+    
+        monkeypatch.setenv("WORKER_DATABASE_DSN", database["worker_dsn"])
+        monkeypatch.setattr(worker, "_executor", None)
+        monkeypatch.setattr(worker, "_store", None)
+        body = {k: str(uuid4()) for k in ("bid", "scope", "certificate", "command")}
+        body["actor"] = api["actor"]
+        reference = Objects().put({"schema": "synthetic-transport-only/1"})
+        with connection() as c:
+            c.execute(
+                "INSERT INTO design.bids(id,title,settings,created_by) VALUES(%s,'Synthetic transport only','{}',%s)",
+                (body["bid"], body["actor"]),
+            )
+            # Exercise native enqueue/outbox without claiming an absent certificate is valid.
+>           queued = Transaction(c).enqueue(body, reference, "a" * 64)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_package_prediction_native_pg.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+packages/package_prediction_tasks/native.py:35: in enqueue
+    assert_work_writable(self.c, body["bid"])
+packages/lifecycle/service.py:203: in assert_work_writable
+    row = profile(c, bid)
+          ^^^^^^^^^^^^^^^
+packages/lifecycle/service.py:27: in profile
+    return fetch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+c = <psycopg.Connection [BAD] at 0x7f98170636e0>
+sql = 'SELECT p.bid_id,p.phase,p.archived_at,b.revision FROM bid_profiles p JOIN bids b ON b.id=p.bid_id WHERE p.bid_id=%s'
+params = ('9b86777c-bd3c-4c53-b9c3-d4cb12e103c0',)
+
+    def fetch(c, sql, params=()):
+        r = c.execute(sql, params).fetchone()
+        if r is None:
+>           raise DomainError("NOT_FOUND", "未找到指定对象", 404)
+E           packages.domain.errors.DomainError: ('NOT_FOUND', '未找到指定对象', 404)
+
+packages/domain/runtime.py:121: DomainError
+=============================== warnings summary ===============================
+tests/test_package_prediction_native_pg.py::test_native_http_missing_certificate_never_queues
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/scratch/tender-prediction-native-validation/joint.xml -
+=========================== short test summary info ============================
+FAILED tests/test_package_prediction_native_pg.py::test_native_http_missing_certificate_never_queues
+FAILED tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+2 failed, 3 passed, 9 warnings in 3.38s

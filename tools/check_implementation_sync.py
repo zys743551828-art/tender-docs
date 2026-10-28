@@ -26,12 +26,8 @@ def fingerprint(root, path):
 
 def check(root, docs, manifest):
     rows = manifest["requirements"]
-    if {r["id"] for r in rows} != {f"FR-{n:03}" for n in range(1, 14)} or len(
-        rows
-    ) != 13:
-        raise ValueError(
-            "Expected unique FR001–013 mapping; extended PRD remains separate"
-        )
+    if {r["id"] for r in rows} != {f"FR-{n:03}" for n in range(1, 41)} or len(rows) != 40:
+        raise ValueError("Expected unique FR001–040 mapping")
     for row in rows:
         for field in ("code", "test"):
             path = row[field]
@@ -52,10 +48,6 @@ if __name__ == "__main__":
     parser.add_argument("--app", type=Path, required=True)
     args = parser.parse_args()
     docs = Path(__file__).resolve().parents[1]
-    manifest = json.loads(
-        (docs / "05-技术与设计/implementation-trace.json").read_text()
-    )
+    manifest = json.loads((docs / "05-技术与设计/implementation-trace.json").read_text())
     check(args.app.resolve(), docs, manifest)
-    print(
-        "PASS: 13 requirement mappings, tracked source/test fingerprints and document anchors"
-    )
+    print("PASS: 40 requirement mappings, tracked source/test fingerprints and document anchors")

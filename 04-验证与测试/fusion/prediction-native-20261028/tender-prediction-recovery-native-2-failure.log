@@ -1,0 +1,26 @@
+......F                                                                  [100%]
+=================================== FAILURES ===================================
+_________ test_native_prediction_offline_restore_includes_private_refs _________
+tests/test_package_prediction_native_pg.py:324: in test_native_prediction_offline_restore_includes_private_refs
+    manifest = extended_recovery.snapshot(
+deploy/extended_recovery.py:223: in snapshot
+    private_refs = prediction_recovery_profile.private_references(c) if prediction else []
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deploy/prediction_recovery_profile.py:52: in private_references
+    refs = [r[0] for r in rows]
+           ^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: '<' not supported between instances of 'str' and 'NoneType'
+=============================== warnings summary ===============================
+tests/test_package_prediction_native_pg.py::test_native_http_missing_certificate_never_queues
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_package_prediction_native_pg.py: 12 warnings
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/scratch/tender-prediction-recovery-native-2/tests.xml -
+=========================== short test summary info ============================
+FAILED tests/test_package_prediction_native_pg.py::test_native_prediction_offline_restore_includes_private_refs
+1 failed, 6 passed, 13 warnings in 18.12s
