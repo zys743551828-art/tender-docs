@@ -1,0 +1,123 @@
+{
+  "code_revision": "50657762cb2eaa08f81db87e188eba8e629dd131",
+  "scope": "FR001–013已核源码；不代表融合FR014–040完成或真实验收",
+  "requirements": [
+    {
+      "id": "FR-001",
+      "code": "packages/domain",
+      "test": "tests/test_package_submission_preflight.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e230de9c96a24ed3e59f0febb1b79bb1a4df8cfd2d5e9ac56117fe146f552e6c",
+      "test_sha256": "c51cdd28b37463f1de8e9054e719c47c2dc04e9e4da51a83166ac203bf726f09"
+    },
+    {
+      "id": "FR-002",
+      "code": "packages/package_prediction",
+      "test": "tests/test_package_prediction.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "a10265abb7bed16a200ec93c3ecc901ce4c79a130a1fe7252432d2b7ff2e5ef3",
+      "test_sha256": "cfa311bdaf3097379feb416484f2e92ca7840c1692baae3fa399d54c65d1c126"
+    },
+    {
+      "id": "FR-003",
+      "code": "packages/package_unified_reports",
+      "test": "tests/test_package_unified_reports.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "64d7bab4c69d9524161692fad64cea8780bedd9191b69670655be8903642a5eb",
+      "test_sha256": "a58c91e966def6103d8ccca083901c1de50a6b0d4009e26bac7e0af9feb67839"
+    },
+    {
+      "id": "FR-004",
+      "code": "packages/domain",
+      "test": "tests/test_package_material_scope_findings.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e230de9c96a24ed3e59f0febb1b79bb1a4df8cfd2d5e9ac56117fe146f552e6c",
+      "test_sha256": "705d25f5002c8ccd79ad02404e62dad4ca85775fc4946adcbaa6508d6b107706"
+    },
+    {
+      "id": "FR-005",
+      "code": "packages/domain",
+      "test": "tests/test_package_scope_review.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e230de9c96a24ed3e59f0febb1b79bb1a4df8cfd2d5e9ac56117fe146f552e6c",
+      "test_sha256": "a06a057be9d1bb0ad2e80a692dd81b812ca12381f06d482478f54d2776d69724"
+    },
+    {
+      "id": "FR-006",
+      "code": "packages/pricing",
+      "test": "tests/test_pricing_calculator.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "3eb49fdcbe6413f327fb34200bc76619e2ac3b102a46253eab48570d05b81e3d",
+      "test_sha256": "6a8c14aa9b3c568e4bdf3721448d8e1fdee5438f084c9c0e3792141dcb92900a"
+    },
+    {
+      "id": "FR-007",
+      "code": "packages/package_unified_reports",
+      "test": "tests/test_package_unified_reports.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "64d7bab4c69d9524161692fad64cea8780bedd9191b69670655be8903642a5eb",
+      "test_sha256": "a58c91e966def6103d8ccca083901c1de50a6b0d4009e26bac7e0af9feb67839"
+    },
+    {
+      "id": "FR-008",
+      "code": "packages/domain",
+      "test": "tests/test_package_rule_corrections.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e230de9c96a24ed3e59f0febb1b79bb1a4df8cfd2d5e9ac56117fe146f552e6c",
+      "test_sha256": "045d783e3722f6e7d7518e440214f53539204275b849a5ac4ddb57faf2835924"
+    },
+    {
+      "id": "FR-009",
+      "code": "packages/retrospectives",
+      "test": "tests/test_package_outcomes.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "18dd15d7d328056795758a8eaa1cdec59036f12af5329d0a2db1bc4ba63cad6b",
+      "test_sha256": "66302f5414dcfc58e86ca2db1cb8520a642cfdf5806e9d8ff123808f62329fcf"
+    },
+    {
+      "id": "FR-010",
+      "code": "packages/authoring",
+      "test": "tests/test_authoring_exact_revisions_pg.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "dbf9aa761b86691a6358c6d0cd95a999e696eb970e0c752e18b132ef881ea2c9",
+      "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
+    },
+    {
+      "id": "FR-011",
+      "code": "packages/metrics",
+      "test": "tests/test_metrics.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "af5e6d49947cc2f751f3714e1c860bfddef54f12d53ea1c3c69fc7e00cd9651b",
+      "test_sha256": "f792333466a7abe7cfceda67e749db146a5207986f6b9e50156a854ddc9e575c"
+    },
+    {
+      "id": "FR-012",
+      "code": "packages/package_prediction_pipeline",
+      "test": "tests/test_package_prediction_pipeline.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "0d9fc41696f111165be0fda14b7e402b69b659840f67727bb56f4eb72425421c",
+      "test_sha256": "712bfacd0914818af0fde7136162c7f8caa81d602c81e65c5d428b10e328ef0b"
+    },
+    {
+      "id": "FR-013",
+      "code": "packages/package_unified_reports",
+      "test": "tests/test_package_unified_reports.py",
+      "document": "02-业务与产品/实现追溯矩阵.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "64d7bab4c69d9524161692fad64cea8780bedd9191b69670655be8903642a5eb",
+      "test_sha256": "a58c91e966def6103d8ccca083901c1de50a6b0d4009e26bac7e0af9feb67839"
+    }
+  ]
+}
