@@ -1,0 +1,69 @@
+{
+  "app_commit": "4cdbfa977617e0806d7275d96ed0adebcd71b650",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 209,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 278.21
+    },
+    "domain.xml": {
+      "tests": 369,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 3.82
+    },
+    "web.xml": {
+      "tests": 487,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 102.85
+    }
+  },
+  "frontend_wall_seconds": 19.3,
+  "source_files_sha256": {
+    "workbench/apps/api/bid_package_dependency_plan_routes.py": "1c9f88e3cd6b75097f8ef8ab8604a85097dfff0cc83325c9dbe0153c6a7fdbe5",
+    "workbench/apps/api/bid_package_requirement_routes.py": "2053205f81b6a5c2c4d206784738979d9e06d5603dceea6a07555f247c131408",
+    "workbench/apps/web/scripts/generate-contracts.py": "f0bfed1fff4db33eed0ee7b6adc42589af0d32a3f1f7c098547884ee0c5b0d2d",
+    "workbench/apps/web/src/contracts.ts": "98513b0ba03ff2e7052d39456700728064361e4b21f39427dcbb64cbbcba40dd",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "672b10581a9f917b276adfbb5f7b7465bfda34696a472839d218599947fc4d29",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "ecf4a557a7d7d0a249e3a50c47ac4b8517c0b1e9d053f5069588a94c4c2a87a7",
+    "workbench/packages/contracts/package-dependency-plans.md": "74706d2e009dac154faaeb5eda9399adc9a1c25f2ce5b077456111fdffbda635",
+    "workbench/packages/domain/bid_package_dependency_plan_directory.py": "f655d87fbdaa8dc9c5067c2c0da4a1a5c1abda1102d64f0a2eab637d5957e1fa",
+    "workbench/tests/test_bid_package_openapi.py": "2b57e12f1c292bdf46f6e12f44dcc246edecbdcb770081fc5ebe4d006878f845",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "71413a136fba941ddc907b94252e33e37ff3c4980cfc15af7a7ae6db64d2e512"
+  },
+  "evidence_sha256": {
+    "api-initial.log": "15a308b67454bf166ef172a5f8907e9b13c94fd812cb024f95ff0b561aa65fc9",
+    "api-initial.xml": "ae26d661c4b5678dfd49a3db19302aeb1381fa396cb6d47ad94c15d4c459f0ee",
+    "api.log": "80c25a677926b0f704ea92aba9fdc3f6b28d85e7478f3cc2a992afb8837d82c0",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "b546b468e90070c4c5a10ce3ce467feb4fca8df0fdf386b3e21b51f613291de7",
+    "deployment.json": "6d3426a0648b8c5d45c9e19d03c819f745a2674a1bc59bfe2c1645d4e6a96bb0",
+    "domain.log": "4ad307871eb4c9c4cc7715b1667d77ff481fea3f72be1817a8981e76f8944815",
+    "domain.xml": "e6a83423111b812c75bce3e3044746e9dedbb26dc2ddc015026953713b96bc7d",
+    "format.log": "9fa2e30088122b883ebbf1c300359d4a0c9d09c988b20631e8625a40425a9723",
+    "mypy.log": "d9a5631f7d87a741fbecc3236286d1792d22d349ff13846d71cdc9217307bb76",
+    "requirements-api.xml": "e11d04655a5801209d94b34715ecdb2f35abd49b4c99cfe438d7a626947e27d2",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "de90db09b6241677ef76112936b128d9b38bad487c06680e5ccba12172a12212",
+    "runtime-inputs.json": "cf33ab1d8df9fbb605478145687d8105ac0cb0b2ce9f0ed9b5f060a41aa3082a",
+    "services.txt": "8ce1e523ce5689192eb6a1f1b9a6e8019f8a924582eb846155c691ac7a9beb66",
+    "web-build.log": "9bd4a3ed9589df55a7990d05cdb8368dd5eac80ce88fcd7db54f0fd005cc1a54",
+    "web-format.log": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+    "web-lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web-test.log": "76aeb5f1729dfa486f50f9126502d13c63e1737ebbc7ec54e60a19899e78fc0e",
+    "web-types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web.xml": "cc5f784008cf4b9b6f6d5cc64603c1ae5c79d6f8e65e6dcf2ca49182f0b45672"
+  },
+  "scope": "three explicit authenticated dependency plan save/list/read endpoints and generated UI types; no new UI or DDL, no qualification or task",
+  "deployed_database": "tender_checks_fusion_v8",
+  "runtime_files_verified": 866,
+  "visual_changed": false,
+  "real_business_end_to_end_verified": false
+}

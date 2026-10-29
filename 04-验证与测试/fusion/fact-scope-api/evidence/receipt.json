@@ -1,0 +1,60 @@
+{
+  "app_commit": "a2c1a2c4473d333287762d668fd2dbce972eca19",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 142,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "frontend.xml": {
+      "tests": 399,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/apps/api/bid_package_fact_scope_routes.py": "0bb081afa58a59c4454e158241050b741151397afcba922ea13367713b933589",
+    "workbench/apps/api/bid_package_requirement_routes.py": "0bdae06f11e7a361581c862c0a50df9ca7d3a9f860244fbc3a0eae1790dd76ff",
+    "workbench/apps/web/scripts/generate-contracts.py": "373a3ed675121c505b41893e3f69044175cbfbce724f58488607cc1b05f303dd",
+    "workbench/apps/web/src/contracts.ts": "6d2097d0f82fa30bf1e40dc964468634b11b22d5a2a506fb68c0ab846f1517d4",
+    "workbench/apps/web/vite.config.ts": "2b473e37b39b9732c90042046539bd3b9aea001930d7afeb6a57c572cc7a1e5f",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "1897ce5990d9d9c5b743c8a0378fb3dadec52e467cb7f226a03dbacf63774e76",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "1bf39bd197a3ee58e11b08e52b47931a35d78f34aef0b694861d8a9bd23b164b",
+    "workbench/packages/domain/bid_package_fact_scope_observation.py": "ad4f77fb0c6deeeda1d982fea09b2568cf92af4cda6f6fdc52ef6807dcebcc0b",
+    "workbench/tests/test_bid_package_openapi.py": "7ae3926408af6b71787cd79e5a914b4d6bebf5e80b97f49b637b37d657e8c8ee",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "038c895af2b3e9ae8c3878a2ca679a400a159dc33b2c4ad491faaa04464ea6ad"
+  },
+  "evidence_sha256": {
+    "api.log": "6b8958bb9a04517c6b438e7e9f1c986875ab7d3c7d9e0254091a3b50b7ca95e4",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.log": "80b9682c5ecd483e5eb2ef0b954b48b07265b0b587be6737265c962e0bc587cc",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "246ade3f26281589253062ab9f70798f3e1042478b4c4cc81d532d3b55778ade",
+    "deployment.json": "b2408cdb5504c52f1b137766f12fe66c1b92362cd192ccc74859d69a51704824",
+    "domain.log": "7c3eacc342dbfb6463e055e173df9413dd5f15093f7d59c01df0663272aff672",
+    "domain.xml": "257cb94bc0aad3037315679855b3b99e090ecdac5dd6218265da50c70e40db47",
+    "format.log": "f57152af69ed696672a20f7a07dc500ce85005053092505a680768f611957e48",
+    "frontend-format.log": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+    "frontend.log": "4b64fe3c19d9e3b668dc774e40513214c20d1cce2f2be6f5ab7e10ec5619f629",
+    "frontend.xml": "48a8b24114681f2006b7b008c6bc5f3d6bdfa0d14f98091018d559126a831ffc",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mypy.log": "d9a5631f7d87a741fbecc3236286d1792d22d349ff13846d71cdc9217307bb76",
+    "requirements-api.xml": "a4b3d80455b65b9049d65156e62f98adbfb71474e5ab513bbe44edbd4f8789e9",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "253903e6f278fdd6e88ec3064fde2548ec221c5054af67c2737b5b8d474328cc",
+    "runtime-inputs.json": "c4d32c68262aa71276a734178fa1317fe4adff0632e858fd42ee2ade724a74af",
+    "services.txt": "12597e59b39ee511bffae2ce8569c482a30eff21de06e25118d8c9abf6da2e3a",
+    "types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "three fact scope APIs and generated capability chunk; no new form or qualification grant",
+  "deployed_database": "tender_checks_fusion_v6"
+}

@@ -1,0 +1,28 @@
+{
+  "source_commit": "e08813fb31c4fc2b0213af2cd8a46e0f9be90053",
+  "method": "fixed Git archive regular allowlist members, excluded contents never read or copied",
+  "file_count": 7675,
+  "source_bytes": 164353378,
+  "safe_tar_sha256": "db442a4c0a3483308767c54c1e73e33eae80c8b7c46132e7e37f15ab19dec14f",
+  "safe_tar_bytes": 178227200,
+  "excluded": [
+    {
+      "path": "workbench/apps/web/.env.delivery06.local",
+      "reason": "private/env/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/.env.external.local",
+      "reason": "private/env/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/qa-previews/a2-integration-04/frozen-inputs/.env.external.local",
+      "reason": "private/env/dependency path"
+    },
+    {
+      "path": "workbench/apps/web/qa-previews/multipart-knowledge-05/frozen-inputs/.env.external.local",
+      "reason": "private/env/dependency path"
+    }
+  ],
+  "full_source_receipt_sha256": "3c261749f6a415c0b389c9bfc3f3c797ccf268ee643ee4f6c75c7437a2b1cb91",
+  "checks_image_id": "sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be"
+}

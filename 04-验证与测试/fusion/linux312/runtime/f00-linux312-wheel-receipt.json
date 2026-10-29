@@ -1,0 +1,326 @@
+{
+  "base": "python@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258",
+  "python": "3.12.15",
+  "glibc": "2.36",
+  "requirements_source_commit": "0571875a3e6fbd14e41929082296a712e3eeec08",
+  "reused_wheels": 8,
+  "wheels": [
+    {
+      "filename": "aliyun_python_sdk_core-2.16.1-py3-none-any.whl",
+      "sha256": "0f25a6e8ec1ea29c76610278cff81cbff85149a6e692bf2398a6f9b77e5e7424",
+      "bytes": 521331
+    },
+    {
+      "filename": "aliyun_python_sdk_kms-2.16.5-py2.py3-none-any.whl",
+      "sha256": "24b6cdc4fd161d2942619479c8d050c63ea9cd22b044fe33b60bbb60153786f0",
+      "bytes": 99495
+    },
+    {
+      "filename": "annotated_types-0.8.0-py3-none-any.whl",
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "bytes": 13427
+    },
+    {
+      "filename": "anyio-4.15.1-py3-none-any.whl",
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "bytes": 132079
+    },
+    {
+      "filename": "attrs-26.1.0-py3-none-any.whl",
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "bytes": 67548
+    },
+    {
+      "filename": "bandit-1.8.5-py3-none-any.whl",
+      "sha256": "cb2e57524e99e33ced48833c6cc9c12ac78ae970bb6a450a83c4b506ecc1e2f9",
+      "bytes": 131759
+    },
+    {
+      "filename": "boto3-1.38.46-py3-none-any.whl",
+      "sha256": "9c8e88a32a6465e5905308708cff5b17547117f06982908bdfdb0108b4a65079",
+      "bytes": 139925
+    },
+    {
+      "filename": "botocore-1.38.46-py3-none-any.whl",
+      "sha256": "89ca782ffbf2e8769ca9c89234cfa5ca577f1987d07d913ee3c68c4776b1eb5b",
+      "bytes": 13736872
+    },
+    {
+      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "bytes": 136983
+    },
+    {
+      "filename": "cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf",
+      "bytes": 221822
+    },
+    {
+      "filename": "charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649",
+      "bytes": 257601
+    },
+    {
+      "filename": "click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "bytes": 125251
+    },
+    {
+      "filename": "confluent_kafka-2.16.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "sha256": "5b3adb61cfbde5eab27e0a46bdda6913ed70fb5bb716e7f78b8bf664e10781da",
+      "bytes": 4962560
+    },
+    {
+      "filename": "crcmod-1.7-py3-none-any.whl",
+      "sha256": "d465d0697b196c2a34dd1faf843b539b1981cef2675bc6826870bde0cfc41c1e",
+      "bytes": 18948
+    },
+    {
+      "filename": "cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl",
+      "sha256": "9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079",
+      "bytes": 4752576
+    },
+    {
+      "filename": "fastapi-0.115.14-py3-none-any.whl",
+      "sha256": "6c0c8bf9420bd58f565e585036d971872472b4f7d3f6c73b698e10cffdefb3ca",
+      "bytes": 95514
+    },
+    {
+      "filename": "h11-0.16.0-py3-none-any.whl",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "bytes": 37515
+    },
+    {
+      "filename": "httpcore-1.0.9-py3-none-any.whl",
+      "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "bytes": 78784
+    },
+    {
+      "filename": "httpx-0.28.1-py3-none-any.whl",
+      "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "bytes": 73517
+    },
+    {
+      "filename": "idna-3.20-py3-none-any.whl",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "bytes": 69583
+    },
+    {
+      "filename": "iniconfig-2.3.1-py3-none-any.whl",
+      "sha256": "9121e2c1fdb355232495be3194c8dfe87ccc2d5dee45947b78e68f499790d7a7",
+      "bytes": 7552
+    },
+    {
+      "filename": "jmespath-1.1.0-py3-none-any.whl",
+      "sha256": "a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64",
+      "bytes": 20419
+    },
+    {
+      "filename": "jsonschema-4.24.0-py3-none-any.whl",
+      "sha256": "a462455f19f5faf404a7902952b6f0e3ce868f3ee09a359b05eca6673bd8412d",
+      "bytes": 88709
+    },
+    {
+      "filename": "jsonschema_specifications-2025.9.1-py3-none-any.whl",
+      "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+      "bytes": 18437
+    },
+    {
+      "filename": "markdown_it_py-4.2.0-py3-none-any.whl",
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
+      "bytes": 91687
+    },
+    {
+      "filename": "mdurl-0.1.2-py3-none-any.whl",
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "bytes": 9979
+    },
+    {
+      "filename": "mypy-1.16.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "0ab5eca37b50188163fa7c1b73c685ac66c4e9bdee4a85c9adac0e91d8895e15",
+      "bytes": 12722980
+    },
+    {
+      "filename": "mypy_extensions-1.1.0-py3-none-any.whl",
+      "sha256": "1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505",
+      "bytes": 4963
+    },
+    {
+      "filename": "oss2-2.19.1-py3-none-any.whl",
+      "sha256": "3fe62fa5748fce7795ecbbf4146140ebe2b82d8786154a3e677b5b38aa4939d4",
+      "bytes": 124053
+    },
+    {
+      "filename": "packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "bytes": 129956
+    },
+    {
+      "filename": "pathspec-1.1.1-py3-none-any.whl",
+      "sha256": "a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189",
+      "bytes": 57328
+    },
+    {
+      "filename": "pdfminer_six-20251230-py3-none-any.whl",
+      "sha256": "9ff2e3466a7dfc6de6fd779478850b6b7c2d9e9405aa2a5869376a822771f485",
+      "bytes": 6591909
+    },
+    {
+      "filename": "pdfplumber-0.11.9-py3-none-any.whl",
+      "sha256": "33ec5580959ba524e9100138746e090879504c42955df1b8a997604dd326c443",
+      "bytes": 60045
+    },
+    {
+      "filename": "pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "78cb2c6865a35ab8ff8b75fd122f6033b92a62c82801110e48ddd6c936a45d91",
+      "bytes": 6940830
+    },
+    {
+      "filename": "pluggy-1.7.0-py3-none-any.whl",
+      "sha256": "7dd7b0d8832ba3cb632c306926ded123429211b83641b35dc5c41ad2d34f9bec",
+      "bytes": 27082
+    },
+    {
+      "filename": "psycopg-3.2.9-py3-none-any.whl",
+      "sha256": "01a8dadccdaac2123c916208c96e06631641c0566b22005493f09663c7a8d3b6",
+      "bytes": 202705
+    },
+    {
+      "filename": "psycopg_binary-3.2.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "76eddaf7fef1d0994e3d536ad48aa75034663d3a07f6f7e3e601105ae73aeff6",
+      "bytes": 4436160
+    },
+    {
+      "filename": "pycparser-3.11-py3-none-any.whl",
+      "sha256": "51d5a8ba2be0bbe440b99d2112604c95bbbc3c2748a64260186c541e1729cd80",
+      "bytes": 51178
+    },
+    {
+      "filename": "pycryptodome-4.0.0-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "73767e06cf75fb8ff86fd3cf77eba8e7614914d0c970fe1d41c216bf7b4b89c1",
+      "bytes": 2520237
+    },
+    {
+      "filename": "pydantic-2.14.1-py3-none-any.whl",
+      "sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454",
+      "bytes": 488106
+    },
+    {
+      "filename": "pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "93ba4e9d8210d941c200431a56b2c0400b131865947903937ed3ec5404307d2e",
+      "bytes": 2160157
+    },
+    {
+      "filename": "pygments-2.21.0-py3-none-any.whl",
+      "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+      "bytes": 1250147
+    },
+    {
+      "filename": "pypdfium2-4.30.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "f454032a0bc7681900170f67d8711b3942824531e765f91c2f5ce7937f999794",
+      "bytes": 2866119
+    },
+    {
+      "filename": "pytest-8.4.1-py3-none-any.whl",
+      "sha256": "539c70ba6fcead8e78eebbf1115e8b589e7565830d7d006a8723f19ac8a0afb7",
+      "bytes": 365474
+    },
+    {
+      "filename": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+      "bytes": 229892
+    },
+    {
+      "filename": "pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc",
+      "bytes": 807870
+    },
+    {
+      "filename": "referencing-0.37.0-py3-none-any.whl",
+      "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+      "bytes": 26766
+    },
+    {
+      "filename": "reportlab-5.0.1-py3-none-any.whl",
+      "sha256": "1c36e6bb0e71780c72331eba60da7f602e8d4389a8723825af71342e49d791e8",
+      "bytes": 1957258
+    },
+    {
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "bytes": 73075
+    },
+    {
+      "filename": "rfc3339_validator-0.1.4-py2.py3-none-any.whl",
+      "sha256": "24f6ec1eda14ef823da9e36ec7113124b39c04d50a4d3d3a3c2859577e7791fa",
+      "bytes": 3490
+    },
+    {
+      "filename": "rfc3986_validator-0.1.1-py2.py3-none-any.whl",
+      "sha256": "2f235c432ef459970b4306369336b9d5dbdda31b510ca1e327636e01f528bfa9",
+      "bytes": 4242
+    },
+    {
+      "filename": "rich-15.0.0-py3-none-any.whl",
+      "sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb",
+      "bytes": 310654
+    },
+    {
+      "filename": "rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "addeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab",
+      "bytes": 371261
+    },
+    {
+      "filename": "ruff-0.12.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "7fd49a4619f90d5afc65cf42e07b6ae98bb454fd5029d03b306bd9e2273d44cc",
+      "bytes": 11602887
+    },
+    {
+      "filename": "s3transfer-0.13.1-py3-none-any.whl",
+      "sha256": "a981aa7429be23fe6dfc13e80e4020057cbab622b08c0315288758d67cabc724",
+      "bytes": 85308
+    },
+    {
+      "filename": "six-1.17.0-py2.py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050
+    },
+    {
+      "filename": "starlette-0.46.2-py3-none-any.whl",
+      "sha256": "595633ce89f8ffa71a015caed34a5b2dc1c0cdb3f0f1fbd1e69339cf2abeec35",
+      "bytes": 72037
+    },
+    {
+      "filename": "stevedore-5.9.1-py3-none-any.whl",
+      "sha256": "5c8ff3a9f336cc1a06ac0f597bc79d11a2f950bfd32e290ca56b5a301fafafbf",
+      "bytes": 54931
+    },
+    {
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "bytes": 45571
+    },
+    {
+      "filename": "typing_inspection-0.4.4-py3-none-any.whl",
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+      "bytes": 14750
+    },
+    {
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "bytes": 135717
+    },
+    {
+      "filename": "uvicorn-0.34.3-py3-none-any.whl",
+      "sha256": "16246631db62bdfbf069b0645177d6e8a77ba950cfedbfd093acef9444e4d885",
+      "bytes": 62431
+    }
+  ],
+  "requirements": {
+    "requirements-fusion-checks.txt": "570baf6153ec9b96de50179fa5bcf99f111694d1c60d98273adb29452d81de7a",
+    "requirements.lock.txt": "8f36855479ddf5dae63e1f69f65d4a2665ee6ada01c22a2673f95b52b7db6923"
+  },
+  "known_locked_warning": "pypdfium2==4.30.1 yanked for PDFium text extraction regression crbug.com/387277993; pins preserved; no upgrade claimed",
+  "official_yanked_metadata": "f00-pypdfium2-4.30.1-pypi-metadata.json",
+  "checks_image_id": "sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be"
+}

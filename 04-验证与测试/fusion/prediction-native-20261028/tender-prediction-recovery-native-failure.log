@@ -1,0 +1,64 @@
+EEE.EEE                                                                  [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_native_prediction_install_and_worker_cannot_read_results _
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+_____ ERROR at setup of test_native_http_missing_certificate_never_queues ______
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+_________ ERROR at setup of test_native_selection_denies_unknown_actor _________
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+_ ERROR at setup of test_real_outbox_kafka_worker_rejects_unconfigured_prediction _
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+_ ERROR at setup of test_native_route_v2_valid_actor_rejects_malformed_command _
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+_ ERROR at setup of test_native_prediction_offline_restore_includes_private_refs _
+tests/test_package_prediction_native_pg.py:53: in database
+    value["owner"].execute(item.content.decode())
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.ObjectNotInPrerequisiteState: package_history_feature_dispatch_fresh_install_required
+E   CONTEXT:  PL/pgSQL function inline_code_block line 3 at RAISE
+=============================== warnings summary ===============================
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/scratch/tender-prediction-recovery-native/tests.xml -
+=========================== short test summary info ============================
+ERROR tests/test_package_prediction_native_pg.py::test_native_prediction_install_and_worker_cannot_read_results
+ERROR tests/test_package_prediction_native_pg.py::test_native_http_missing_certificate_never_queues
+ERROR tests/test_package_prediction_native_pg.py::test_native_selection_denies_unknown_actor
+ERROR tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+ERROR tests/test_package_prediction_native_pg.py::test_native_route_v2_valid_actor_rejects_malformed_command
+ERROR tests/test_package_prediction_native_pg.py::test_native_prediction_offline_restore_includes_private_refs
+1 passed, 6 warnings, 6 errors in 2.19s

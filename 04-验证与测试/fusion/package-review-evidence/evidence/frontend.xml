@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="9" failures="0" errors="0" time="0.4577688">
+    <testsuite name="src/PackageReviewInputPreview.test.tsx" timestamp="2026-10-19T05:58:45.408Z" hostname="zhangyansong" tests="9" failures="0" errors="0" skipped="0" time="0.4577688">
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="显式触发只读预检，StrictMode下仍显示阻断且没有执行入口" time="0.0839449">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="实际证据无法匹配时显示可理解的阻断而不提供执行入口" time="0.0297556">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="未选择清单或所选范围记录仍在加载时不发送" time="0.0056852">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：scope" time="0.0559018">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：authority" time="0.0470083">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：rule-set" time="0.0770914">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：ready" time="0.0313155">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换清单后隐藏旧结果并忽略迟到响应" time="0.0647693">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换离开又返回同一清单，也不接受上次未完成的旧观察" time="0.0614617">
+        </testcase>
+    </testsuite>
+</testsuites>

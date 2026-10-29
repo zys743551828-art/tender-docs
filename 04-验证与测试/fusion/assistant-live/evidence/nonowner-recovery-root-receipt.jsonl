@@ -1,0 +1,204 @@
+{"event": "fresh_sql_and_roles", "value": {"ordered_sql": [{"path": "packages/contracts/sql/core.sql", "sha256": "27f249ff5110c914404846d2e14f6d4fd8b85ae51e9f6a3b9caa7c1b9595e5cd"}, {"path": "packages/contracts/sql/domain.sql", "sha256": "b279c9b1c3477feeb28eaa5f6a45adb4493585a1d112d7d7a637cefac1404d96"}, {"path": "packages/contracts/sql/bid-packages.sql", "sha256": "f18cbd9a22cdcb3f1d3229d0e43b3ad4b0ff3568f4b160787e0c4572b6f9c319"}, {"path": "packages/identity/sql/stable-lot-identity.sql", "sha256": "3d4775a72daa3fd1c813aab72212e9aefdf5e5ef5aa22eb0c83db2cd580b3738"}, {"path": "packages/contracts/sql/retrieval.sql", "sha256": "afdfb3d81bc049cedaa45777af3c8aa622b8c3eb465cd6b35e3a37c992991876"}, {"path": "packages/contracts/sql/worker-functions.sql", "sha256": "8f18a20578c010144ed851d0e96753894c86a4147deff95c49aa19ec5faaea4b"}, {"path": "packages/contracts/sql/roles.sql", "sha256": "b1b77fc0d65a95da41b8071475c28d8918f958e3cc479b65ce099e0563fb7ec1"}, {"path": "deploy/sql/bid-package-runtime-grants.sql", "sha256": "1667815c514a455b29230753202876c125ce10e34a0c408b4d50f49f118bd14e"}, {"path": "deploy/sql/vector-runtime-grants.sql", "sha256": "c66ce4615b007706ad690166233aad58053ff38b53eab5f7549583fc7c400619"}, {"path": "deploy/sql/research-source-qualification.sql", "sha256": "0b04ba8dd0ae471d06c45b4c6d36b8570211d248fd60410e15362a2b373ba027"}, {"path": "packages/assistant/sql/assistant.sql", "sha256": "4030b5e6a749aa060956c4039aa0cdd34e057508ea6a4ce9c58100f5a6ca81b0"}, {"path": "packages/assistant/sql/live-facts.sql", "sha256": "42fc9646225a67a8d209822ac9d0e3573e6903b3f5681042e9cb49fa6eeb11a2"}, {"path": "packages/assistant/sql/intent-budget.sql", "sha256": "173078b95a5cd58db9f8f8aa09ff2728bae2c4a1e1b3817a4b593e719b04a6b0"}], "five_nonowner_logins_verified": true, "business_admin_owner_dsn_isolation": true}}
+{"event": "api:probe", "value": {"superuser": false, "owns": false, "direct_job_authority": false, "direct_live_fact": false, "write_prices": false, "write_limits": false, "one_business_dsn": true}}
+{"event": "worker:probe", "value": {"superuser": false, "owns": false, "direct_job_authority": false, "direct_live_fact": false, "write_prices": false, "write_limits": false, "one_business_dsn": true}}
+{"event": "admin:configured", "value": {"kind": "price", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:publish", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 32, "dispatch_events": 1, "native_calls": 1, "call_id": "b171403d-9a7a-4d0e-95b5-68b1b5c9520c", "call_state": "succeeded", "billing_state": "usage_reported", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "usage": 1, "usage_observed": 1}, "obligations": {"global": 32, "member": 32, "project": 32}, "published": true, "history_count": 2}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:publish", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 32, "dispatch_events": 1, "native_calls": 1, "call_id": "5cde2dfc-5616-4eb0-8487-d33d8c75aa9c", "call_state": "succeeded", "billing_state": "usage_reported", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "usage": 1, "usage_observed": 1}, "obligations": {"global": 64, "member": 32}, "published": true, "history_count": 2}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "held", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 0, "native_calls": 0, "call_id": null, "call_state": null, "billing_state": null, "manual_reconciliation": false, "event_counts": {"reserved": 1}, "obligations": {"global": 2099264, "member": 2099200, "project": 2099200}}}
+{"event": "api:tick", "value": {"budget_state": "released", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 0, "native_calls": 0, "call_id": null, "call_state": null, "billing_state": null, "manual_reconciliation": false, "event_counts": {"not_sent": 1, "reserved": 1}, "obligations": {"global": 64, "member": 0, "project": 0}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "0ebebd82-0489-4938-96e8-c0e5b50e91db", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 2099264, "member": 2099200}}}
+{"event": "api:tick", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "0ebebd82-0489-4938-96e8-c0e5b50e91db", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 2099264, "member": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "e06a3f9b-ef80-4836-a642-9d2a84e7691d", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 4198464, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "e06a3f9b-ef80-4836-a642-9d2a84e7691d", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 4198464, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "89ed2cd9-207b-48d7-9cbd-a6a9fe5aaf4d", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 6297664, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "89ed2cd9-207b-48d7-9cbd-a6a9fe5aaf4d", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 6297664, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "b3b4ef15-5ea5-43f5-ac4c-854e87c86bb4", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 8396864, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "b3b4ef15-5ea5-43f5-ac4c-854e87c86bb4", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 8396864, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "0ff169fb-7d6f-4ca7-a08f-bee160f1e58f", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 10496064, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "0ff169fb-7d6f-4ca7-a08f-bee160f1e58f", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 10496064, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "32bfb99b-1392-4c71-9cd0-d0c04ea80843", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 12595264, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "32bfb99b-1392-4c71-9cd0-d0c04ea80843", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 12595264, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "a103b33e-df18-46dd-a600-9d8b331a17ce", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 14694464, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "a103b33e-df18-46dd-a600-9d8b331a17ce", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 14694464, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "c330c168-e417-492c-ad24-ef11205fa9c2", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 16793664, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "c330c168-e417-492c-ad24-ef11205fa9c2", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 16793664, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "63fde646-8420-4fae-90eb-fd264964ae24", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 18892864, "member": 2099200, "project": 2099200}}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "63fde646-8420-4fae-90eb-fd264964ae24", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 18892864, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "4963a3c9-949f-4ee0-bc5c-02cfc0c5a7d2", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 20992064, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "4963a3c9-949f-4ee0-bc5c-02cfc0c5a7d2", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 20992096, "member": 2099232, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "ef8a5a66-8261-46d9-afce-0849b637aa8f", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 23091296, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "ef8a5a66-8261-46d9-afce-0849b637aa8f", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 23091328, "member": 2099232, "project": 2099232}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "154b1f30-86e7-4011-a610-a6454b4774d1", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 25190528, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "154b1f30-86e7-4011-a610-a6454b4774d1", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 25190528, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "379fc4b1-f237-4843-80a9-467ae0da391c", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 27289728, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "379fc4b1-f237-4843-80a9-467ae0da391c", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 27289728, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "1f357e90-3a70-4738-b206-fc7a368b3b74", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "1f357e90-3a70-4738-b206-fc7a368b3b74", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "7e9d6845-f6df-4e11-8c0f-5a1c7c5eec66", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488128, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "released", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "7e9d6845-f6df-4e11-8c0f-5a1c7c5eec66", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0, "project": 0}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "released", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "7e9d6845-f6df-4e11-8c0f-5a1c7c5eec66", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0, "project": 0}}}
+{"event": "api:view", "value": {"id": "e55091cd-5a77-433d-8563-8f0b25c0ae3a", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "released"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "3d9546ab-6c73-434d-94f4-d47ab9bffbbe", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488128, "member": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "released", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "3d9546ab-6c73-434d-94f4-d47ab9bffbbe", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "released", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "3d9546ab-6c73-434d-94f4-d47ab9bffbbe", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0}}}
+{"event": "api:view", "value": {"id": "90b92bf7-08fe-4fb7-8051-fdfef04379a0", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "released"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "2abe59a7-acd5-4804-aa19-c855fb8fceba", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488128, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "2abe59a7-acd5-4804-aa19-c855fb8fceba", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0, "project": 0}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "2abe59a7-acd5-4804-aa19-c855fb8fceba", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0, "project": 0}}}
+{"event": "api:view", "value": {"id": "c15052a3-ea2a-4934-9f49-27229dac9c1e", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "settled"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "8f3f007a-67b2-4bdb-bf4f-77e559583b58", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488128, "member": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "8f3f007a-67b2-4bdb-bf4f-77e559583b58", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 0, "dispatch_events": 1, "native_calls": 1, "call_id": "8f3f007a-67b2-4bdb-bf4f-77e559583b58", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388928, "member": 0}}}
+{"event": "api:view", "value": {"id": "c6e91698-c239-4cca-ac3c-7540374d600d", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "settled"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "792d6c1d-eec7-40b7-a618-2afdf0c94e09", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488128, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 17, "dispatch_events": 1, "native_calls": 1, "call_id": "792d6c1d-eec7-40b7-a618-2afdf0c94e09", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388945, "member": 17, "project": 17}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 17, "dispatch_events": 1, "native_calls": 1, "call_id": "792d6c1d-eec7-40b7-a618-2afdf0c94e09", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388945, "member": 17, "project": 17}}}
+{"event": "api:view", "value": {"id": "69b980fa-4fcf-42bd-8aeb-62c491f6fdf5", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "settled"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "9595d710-7860-47a1-b331-ef344819f830", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488145, "member": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 17, "dispatch_events": 1, "native_calls": 1, "call_id": "9595d710-7860-47a1-b331-ef344819f830", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388962, "member": 17}}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "admin:rejected", "value": {"kind": "reconcile", "code": "ASSISTANT_RECONCILIATION_INVALID"}}
+{"event": "api:inspect", "value": {"budget_state": "settled", "held_minor": 2099200, "settled_minor": 17, "dispatch_events": 1, "native_calls": 1, "call_id": "9595d710-7860-47a1-b331-ef344819f830", "call_state": "failed", "billing_state": "trusted_reconciled", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reconciled": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 29388962, "member": 17}}}
+{"event": "api:view", "value": {"id": "56f8cf77-52e4-4ffe-be24-b40873c3d5b7", "operation_state": "failed", "requires_billing_reconciliation": false, "automatic_retry_authorized": false, "candidate": null, "budget_state": "settled"}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "admin:configured", "value": {"kind": "limit", "real_provider_attempts": 0}}
+{"event": "worker:execute", "value": {"calls": 1, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "aa034024-ad2a-491d-a0b6-64b5be5e0035", "call_state": "unknown", "billing_state": "unknown", "manual_reconciliation": false, "event_counts": {"dispatched": 1, "reserved": 1, "unknown": 1}, "obligations": {"global": 31488162, "member": 2099200, "project": 2099200}}}
+{"event": "admin:configured", "value": {"kind": "reconcile", "real_provider_attempts": 0}}
+{"event": "worker:observe", "value": {"observed": true, "real_provider_attempts": 0}}
+{"event": "api:inspect", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "aa034024-ad2a-491d-a0b6-64b5be5e0035", "call_state": "failed", "billing_state": "usage_reported", "manual_reconciliation": true, "event_counts": {"dispatched": 1, "reconciled": 1, "reconciliation_conflict": 1, "reserved": 1, "unknown": 1, "usage_observed": 1}, "obligations": {"global": 31488162, "member": 2099200, "project": 2099200}}}
+{"event": "api:tick", "value": {"budget_state": "unknown", "held_minor": 2099200, "settled_minor": null, "dispatch_events": 1, "native_calls": 1, "call_id": "aa034024-ad2a-491d-a0b6-64b5be5e0035", "call_state": "failed", "billing_state": "usage_reported", "manual_reconciliation": true, "event_counts": {"dispatched": 1, "reconciled": 1, "reconciliation_conflict": 1, "reserved": 1, "unknown": 1, "usage_observed": 1}, "obligations": {"global": 31488162, "member": 2099200, "project": 2099200}}}
+{"event": "worker:execute", "value": {"calls": 0, "second_calls": 0, "real_provider_attempts": 0}}
+{"event": "api:view", "value": {"id": "bb9336d5-ba7d-405d-8065-ecf925fdc9ef", "operation_state": "failed", "requires_billing_reconciliation": true, "automatic_retry_authorized": false, "candidate": null, "budget_state": "unknown"}}
+{"event": "cleanup", "value": {"nonce_database_absent": true, "nonce_logins_absent": true, "private_profiles_absent": true, "capability_groups_unchanged": true}}

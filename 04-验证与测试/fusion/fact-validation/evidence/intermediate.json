@@ -1,0 +1,12 @@
+{
+  "resolved": [
+    "Positive PG setup initially used the authoring evidence port, whose current-material/latest semantics correctly rejected an explicit package-only fixture. Setup now uses nonowner exact parse source registration and a real human decision/audit basis; authoring policy not relaxed.",
+    "Second setup run passed UUID to existing source_closure, whose closure-set comparison requires string IDs. Corrected setup to canonical string; production reader already uses strings.",
+    "Windows case-insensitive TypeScript resolution rejected PackageFactCheck.tsx alongside packageFactCheck.ts. Renamed validation helper to packageFactValidation.ts.",
+    "New UI test initially had a missing closing brace and a Testing Library exact option unsupported by its installed types; fixed both before final gates.",
+    "New actual OpenAPI export initially reordered existing routes/types. Preserved original object order and formatted generated types; final contract diff is additive."
+  ],
+  "final_validation_only": true,
+  "raw_failed_runs_local_only": true,
+  "no_fact_qualification_or_launch_grant": true
+}

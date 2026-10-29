@@ -1,0 +1,22 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_duplicate_decision_basis_does_not_pick_the_newest ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001DE7CA8A1B0>
+
+    def test_duplicate_decision_basis_does_not_pick_the_newest(monkeypatch):
+        decision = dict(id=uid(1),bid_id=uid(2),object_kind="fact",object_id=uid(3),actor_id=uid(4),decision="confirmed",created_at=datetime(2026,10,18,tzinfo=timezone.utc))
+        fact = dict(id=uid(3),bid_id=uid(2),fact_set_id=uid(5),evidence_ids=[])
+        basis = dict(basis_jsonb_text='{"fact_identity":"synthetic"}',actor_id=uid(4),payload=dict(decision_id=uid(1),object_kind="fact",object_id=uid(3),decision="confirmed"),created_at=datetime(2026,10,19,tzinfo=timezone.utc))
+        monkeypatch.setattr(context,"current_decision",lambda *args:decision)
+        def execute(query,params=None):
+            rows= [dict(fact_set_id=uid(5),revision=1,fact_set_digest="a"*64)] if "FROM design.fact_heads" in query else [fact] if "FROM design.fact_items" in query else [basis,basis] if "FROM design.audit_entries" in query else []
+            return SimpleNamespace(fetchall=lambda:rows,fetchone=lambda:rows[0] if rows else None)
+        c=SimpleNamespace(execute=execute)
+>       assert context.read_facts(c,uid(2),set())["items"][0]["decision_basis_jsonb_text"] is None
+E       assert '{"fact_identity":"synthetic"}' is None
+
+tests\test_package_fact_decision_basis.py:19: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_package_fact_decision_basis.py::test_duplicate_decision_basis_does_not_pick_the_newest
+1 failed in 0.53s

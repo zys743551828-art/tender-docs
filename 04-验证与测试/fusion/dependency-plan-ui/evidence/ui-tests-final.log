@@ -1,0 +1,23 @@
+
+ RUN  v3.2.3 D:/workspace/tender/tender-app/workbench/apps/web
+
+ ✓ src/dependencyPlanProtocol.test.ts (15 tests) 34ms
+ ✓ src/PackageInputDependencyWorkspace.test.tsx (13 tests) 3175ms
+   ✓ required facts without a value produce a known gap, not automatic pool selection  664ms
+   ✓ a requirement dependency does not silently select that fact for actual consumption  789ms
+   ✓ explicit consumption remains unvalidated and omitted requirements stay unknown  852ms
+ ✓ src/PackageDependencyPlanWorkspace.test.tsx (14 tests) 4093ms
+   ✓ saves only after checked candidate, reason and explicit confirmation, preserving unknown status  418ms
+   ✓ cannot save absent or changed candidate even with a reason and prior confirmation  353ms
+   ✓ retains unknown POST and restores exact body and key after reload only on explicit action  449ms
+   ✓ preserves pending on malformed ACK instead of declaring saved  387ms
+   ✓ handles recovered PACKAGE_INPUT_DEPENDENCIES_CHANGED without silently replacing the original request  495ms
+   ✓ handles recovered IDEMPOTENCY_CONFLICT without silently replacing the original request  464ms
+   ✓ does not transmit when local recovery persistence fails  415ms
+   ✓ clears a proven new-request rejection and requests a new dependency check  413ms
+
+ Test Files  3 passed (3)
+      Tests  42 passed (42)
+   Start at  20:57:52
+   Duration  5.87s (transform 239ms, setup 998ms, collect 680ms, tests 7.30s, environment 2.39s, prepare 454ms)
+

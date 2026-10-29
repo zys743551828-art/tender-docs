@@ -1,0 +1,200 @@
+{
+  "scope": "immutable Git source provenance, not software acceptance",
+  "repositories": [
+    {
+      "name": "tender-app",
+      "commit": "27bc63909dd176676ea918beeee745daebdb8f6a",
+      "tree": "9a6d71e226ebfe4ab57ef600f29aef715b1c0351",
+      "tracked_files": 7919,
+      "top_level_file_counts": {
+        ".gitignore": 1,
+        "HANDOFF-20261017.md": 1,
+        "README.md": 1,
+        "backend": 111,
+        "contracts": 3,
+        "deploy": 23,
+        "frontend": 140,
+        "workbench": 7639
+      },
+      "runtime_inventory": {
+        "file": "app-source-inventory.json",
+        "sha256": "00c285b45f49600515170dd68d91d849aea41e21a8f87d6a43785a138ca76f2a",
+        "files": 3794
+      }
+    },
+    {
+      "name": "tender-docs",
+      "commit": "dbbce7098754ae3fc39014c16c9ab3d1ee2665af",
+      "tree": "5c553ad618d4756b30292de7cc8894bfc0303dad",
+      "tracked_files": 27,
+      "top_level_file_counts": {
+        "00-项目管理": 6,
+        "01-背景与市场研究": 1,
+        "02-业务与产品": 2,
+        "03-数据与案例": 1,
+        "04-验证与测试": 1,
+        "05-技术与设计": 14,
+        "CONTRIBUTING.md": 1,
+        "README.md": 1
+      },
+      "runtime_inventory": null
+    },
+    {
+      "name": "tender-research",
+      "commit": "a32229fd13fcce6c075ad04d811df33594df59ce",
+      "tree": "5215da25e57c74fe60607981bee46f37c06b4d90",
+      "tracked_files": 225,
+      "top_level_file_counts": {
+        ".gitignore": 1,
+        "HANDOFF-20261017.md": 1,
+        "README.md": 1,
+        "protocols": 2,
+        "pyproject.toml": 1,
+        "requirements-ocr.txt": 1,
+        "requirements-orchestration.txt": 1,
+        "results": 182,
+        "scripts": 1,
+        "src": 24,
+        "tests": 10
+      },
+      "runtime_inventory": null
+    },
+    {
+      "name": "tender-design",
+      "commit": "eeaabe8925357a9175c5fda3dee23bd9c8eae646",
+      "tree": "437aae6fb7f708fdc6c6d7873263697c90c7ccf8",
+      "tracked_files": 23,
+      "top_level_file_counts": {
+        "HANDOFF-20261017.md": 1,
+        "README.md": 1,
+        "findings.html": 1,
+        "index.html": 1,
+        "materials.html": 1,
+        "metrics.html": 1,
+        "pipeline.html": 1,
+        "price.html": 1,
+        "report.html": 1,
+        "rules.html": 1,
+        "screenshots": 10,
+        "settings.html": 1,
+        "styles.css": 1,
+        "submit.html": 1
+      },
+      "runtime_inventory": null
+    },
+    {
+      "name": "tender-datasets",
+      "commit": "abc657ee594f5ef46f57265d1f65e67e36270f8d",
+      "tree": "fb765f1b32076834b9234f215d0f64bcc2374e0d",
+      "tracked_files": 26,
+      "top_level_file_counts": {
+        ".gitignore": 1,
+        "CASE-001_广德_污水管网改造及新建": 5,
+        "HANDOFF-20261017.md": 1,
+        "README.md": 1,
+        "入库模板": 3,
+        "公开规则资料": 14,
+        "评测集": 1
+      },
+      "runtime_inventory": null
+    }
+  ],
+  "references": [
+    {
+      "name": "tender-docs",
+      "commit": "f1e5c36c1a818668c3f61a111a0443494515bae9",
+      "tree": "24ec80c20e2d8a0071b28c57b0096cd7a0a061fd",
+      "tracked_files": 23012
+    },
+    {
+      "name": "tender-app",
+      "commit": "45a5921011fa22f400482f73710e96a32b916082",
+      "tree": "4f8c019f5dca776b959b2f5470ff75f02946381e",
+      "tracked_files": 372
+    },
+    {
+      "name": "tender-research",
+      "commit": "9ed745c10874819060d792deb1b9e47216f1e60c",
+      "tree": "b25065dc6c872dad6dd9c7406c5da3e9dc2fabf6",
+      "tracked_files": 448
+    }
+  ],
+  "original_handoff_states": [
+    {
+      "id": "HANDOFF-VERIFY",
+      "status": "not_started"
+    },
+    {
+      "id": "OPS-QA-LIMITED",
+      "status": "pending_review"
+    },
+    {
+      "id": "WORD03-FINAL",
+      "status": "see_development_handoff"
+    },
+    {
+      "id": "UNIFIED-NATIVE03",
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "RICH02-RP01",
+      "status": "see_authoring_handoff"
+    },
+    {
+      "id": "A2-M1-FULL",
+      "status": "in_progress"
+    },
+    {
+      "id": "ASSISTANT-SQL03",
+      "status": "wip_not_executed"
+    },
+    {
+      "id": "FRESH-HELPER05",
+      "status": "not_implemented"
+    },
+    {
+      "id": "ASSISTANT-BUDGET-FULL",
+      "status": "in_progress"
+    },
+    {
+      "id": "DENOMINATOR-C",
+      "status": "prepared_not_executed"
+    },
+    {
+      "id": "RESEARCH-RETROSPECTIVE",
+      "status": "wip_unreviewed_sql"
+    },
+    {
+      "id": "TASK-RUNNER-SEMANTICS",
+      "status": "partial"
+    },
+    {
+      "id": "A2-M2-AI",
+      "status": "pending"
+    },
+    {
+      "id": "LATEST-APP-RECOVERY",
+      "status": "pending"
+    },
+    {
+      "id": "FULL-ACCEPTANCE",
+      "status": "pending"
+    },
+    {
+      "id": "EXTERNAL-REAL-DATA",
+      "status": "blocked"
+    },
+    {
+      "id": "EXTERNAL-PAID-BOUND",
+      "status": "blocked"
+    }
+  ],
+  "excluded": [
+    "untracked files",
+    "ignored runtime configuration",
+    "credentials",
+    "running databases",
+    "object-store originals",
+    "dependency environments"
+  ]
+}

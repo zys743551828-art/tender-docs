@@ -1,0 +1,50 @@
+{
+  "app_commit": "65c3690eebbdb39b87f5913fb7129028097d3784",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 214,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 284.69
+    },
+    "domain.xml": {
+      "tests": 395,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 4.04
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/contracts/package-inventory-proof.md": "4b9fceaeb8d250d86ecfd51e1aecd43e746585bc74b13ec29f63e8260ee90647",
+    "workbench/packages/contracts/schemas/package-inventory-proof.schema.json": "42076c233618f8895d573568123d35c21a55407d8b7869678855c766c5a99e23",
+    "workbench/packages/domain/bid_package_inventory_proof.py": "d3d71700da28e25cd0f5e0f816d4b7c12ab8c88e502250ebaa080db74e856bbf",
+    "workbench/packages/domain/package_inventory_proof.py": "22a8e600f7a1796ba39e8498734fa5444c90c851da250a921f5cf8e7dfd08b55",
+    "workbench/tests/inventory_proof_support.py": "67bf387a75e129657371f88152411467314ec681c510d29da42c82a61a0cac91",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "22fdbd5f4062b51ee203c6f40b8953a6c90e1813742bc98bb5159900643851e7",
+    "workbench/tests/test_package_inventory_proof.py": "7406248c20a87653b0c905393cb8c77589d2465138db96ba356b7803c279cacc"
+  },
+  "evidence_sha256": {
+    "api.log": "ce8523790ea6360b7e15e59155ebe75d0db1ef0f4f443f62b758cdc3b8c6aa26",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "b546b468e90070c4c5a10ce3ce467feb4fca8df0fdf386b3e21b51f613291de7",
+    "deployment.json": "ec18d47cd1b449b31eb939b2855aa57af6837f7473a01bc5d96e30504c0d9c92",
+    "domain.log": "27d10d0b22a4281900a515619b59256021fcc22518494f936ebd6ab929468b97",
+    "domain.xml": "faaa9591f684c5ab693a83be6c54212ed13b13b259c673d9a02b3ea7de3edf7c",
+    "format.log": "c6054335d9571c0c59ef2b8af5223d2f5d56a9db5aba43b6f39217add8928601",
+    "mypy.log": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+    "requirements-api.xml": "5f9e399aa1582ae8049ae7c1868c86e318beafdbeaf9719eceb91444bcc17f9f",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-inputs.json": "c661f6467f957cdcf91fe5f89bca2eca9f0456cbd53205600e60af051bb132c5",
+    "runtime-smoke.json": "3051259691a623daaa7955831559171d8db538e92f8bf35116179463c709dafd",
+    "services.txt": "8a9f9562abbc7f643683cd5d2ae5efdc3776465a0dac024a91b26014d1a1808e"
+  },
+  "scope": "internal frozen authority declared-page and exact archived extraction receipt observation; never semantic inventory completeness or current admission",
+  "deployed_database": "tender_checks_fusion_v8",
+  "runtime_files_verified": 872,
+  "frontend_changed": false,
+  "real_business_end_to_end_verified": false
+}

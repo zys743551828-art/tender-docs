@@ -1,0 +1,804 @@
+.......sssssss.......................................................... [  3%]
+..........................................................ssssssssssssss [  7%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 11%]
+ssssssssssssssssss.sssssssssssssssssssssssssssssssssssssssssssssssssssss [ 15%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss........s..... [ 19%]
+.....................sssssssssssssssssssssssssss........................ [ 23%]
+......................ssssssssssssssssssss.............................. [ 27%]
+..ssssssssssssss....s....sssssssssssssssssssssssssssssssssssssssssssssss [ 30%]
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss....... [ 34%]
+........................................................................ [ 38%]
+.................................sssssssssssssssssssssss.........sssssss [ 42%]
+ssssssssssssssss...........................................sssss.sssssss [ 46%]
+...................sssssssssssssssssssss.............sssssssssssssssssss [ 50%]
+ssssssssssssssssssssss...............sssssssssssssssssssssssssssssssssss [ 54%]
+ssssss.......ssssssssssssssssssssssssssssssss........................... [ 58%]
+.........ssssssssss....................ssssssssssssss................... [ 61%]
+...ssss...................sssssssssssssssss...ssssss.................... [ 65%]
+.....................................................sssssEE.FEEEEFEEEEE [ 69%]
+EE..............sssssssssssssssssssssssssssssss......................sss [ 73%]
+ss......................................sssssssssssss.............ssssss [ 77%]
+sssssssssssssssssss...................s.....................sss......... [ 81%]
+....................................sssssssssss......................... [ 85%]
+.....................sssssssssssssssss..........ssssssssssssssssssssssss [ 89%]
+ssssssFFFss.............................................ssssssssssssssss [ 92%]
+sssssssssssss..................sssssss.................................. [ 96%]
+..............sssssssssssssssssssssssssssssssssssssssssssss              [100%]
+==================================== ERRORS ====================================
+________ ERROR at setup of test_real_parser_http_auth_digest_and_bytes _________
+tests/test_parsing_http.py:16: in client
+    with TestClient(server.app) as client:
+         ^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:680: in __enter__
+    portal.call(self.wait_startup)
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:715: in wait_startup
+    await receive()
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:706: in receive
+    self.task.result()
+/usr/local/lib/python3.12/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:696: in lifespan
+    await self.app(scope, self.stream_receive.receive, self.stream_send.send)
+/usr/local/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py:152: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py:100: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py:48: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:723: in app
+    await self.lifespan(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:692: in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/contextlib.py:210: in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+packages/parsing/server.py:26: in lifespan
+    parser = LocalParser()
+             ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+____ ERROR at setup of test_runtime_busy_never_runs_parallel_native_parsers ____
+tests/test_parsing_http.py:16: in client
+    with TestClient(server.app) as client:
+         ^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:680: in __enter__
+    portal.call(self.wait_startup)
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:340: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:715: in wait_startup
+    await receive()
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:706: in receive
+    self.task.result()
+/usr/local/lib/python3.12/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/usr/local/lib/python3.12/site-packages/anyio/from_thread.py:265: in _call_func
+    retval = await retval_or_awaitable
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/site-packages/starlette/testclient.py:696: in lifespan
+    await self.app(scope, self.stream_receive.receive, self.stream_send.send)
+/usr/local/lib/python3.12/site-packages/fastapi/applications.py:1054: in __call__
+    await super().__call__(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/applications.py:112: in __call__
+    await self.middleware_stack(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py:152: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py:100: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py:48: in __call__
+    await self.app(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:714: in __call__
+    await self.middleware_stack(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:723: in app
+    await self.lifespan(scope, receive, send)
+/usr/local/lib/python3.12/site-packages/starlette/routing.py:692: in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/contextlib.py:210: in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+packages/parsing/server.py:26: in lifespan
+    parser = LocalParser()
+             ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_______ ERROR at setup of test_actual_bytes_page_rotation_text_and_blank _______
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_ ERROR at setup of test_chinese_scanned_page_real_ocr_and_explicit_visual_gaps _
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_____________ ERROR at setup of test_ruled_grid_has_cells_and_bbox _____________
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_______ ERROR at setup of test_vector_diagram_is_not_complete_text_read ________
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+___________ ERROR at setup of test_broken_pdf_and_bbox_are_rejected ____________
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+___ ERROR at setup of test_invisible_text_layer_does_not_claim_complete_read ___
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_________ ERROR at setup of test_table_does_not_hide_unrelated_diagram _________
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_ ERROR at setup of test_mixed_visible_and_hidden_text_never_cites_hidden_rule _
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+________ ERROR at setup of test_fully_transparent_text_is_not_evidence _________
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_ ERROR at setup of test_white_text_routes_rendering_without_hiding_visible_white_text _
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_ ERROR at setup of test_occluded_or_clipped_text_never_becomes_reliable_evidence _
+tests/test_parsing_local.py:17: in parser
+    return LocalParser()
+           ^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+=================================== FAILURES ===================================
+_________________ test_port_validates_result_geometry_and_text _________________
+tests/test_parsing_http.py:68: in test_port_validates_result_geometry_and_text
+    parser = server.LocalParser()
+             ^^^^^^^^^^^^^^^^^^^^
+packages/parsing/core.py:71: in __init__
+    raise ParseError("PARSING_ASSET_DIGEST_MISMATCH")
+E   packages.parsing.core.ParseError: PARSING_ASSET_DIGEST_MISMATCH
+_______________________ test_model_asset_tamper_rejected _______________________
+tests/test_parsing_local.py:111: in test_model_asset_tamper_rejected
+    (source / (name + ".traineddata")).read_bytes()
+/usr/local/lib/python3.12/pathlib.py:1019: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.12/pathlib.py:1013: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/workbench/.local/parsing-models/eng.traineddata'
+_ test_actual_directory_request_response_and_read_projections_override_old_target _
+tests/test_task_actual_contracts.py:16: in test_actual_directory_request_response_and_read_projections_override_old_target
+    actual = implemented_openapi(app)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+apps/api/export_openapi.py:116: in implemented_openapi
+    extend_bid_packages(actual)
+packages/contracts/bid_package_api.py:99: in extend_openapi
+    op = actual["paths"][base + suffix][method]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: '/api/v1/bids/{bid_id}/packages'
+____ test_draft_contracts_are_mounted_only_when_actual_router_is_registered ____
+tests/test_task_actual_contracts.py:48: in test_draft_contracts_are_mounted_only_when_actual_router_is_registered
+    actual = implemented_openapi(app)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+apps/api/export_openapi.py:116: in implemented_openapi
+    extend_bid_packages(actual)
+packages/contracts/bid_package_api.py:99: in extend_openapi
+    op = actual["paths"][base + suffix][method]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: '/api/v1/bids/{bid_id}/packages'
+__ test_task_drafts_do_not_replace_authoring_draft_contracts_in_combined_main __
+tests/test_task_actual_contracts.py:68: in test_task_drafts_do_not_replace_authoring_draft_contracts_in_combined_main
+    actual = implemented_openapi(app)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+apps/api/export_openapi.py:116: in implemented_openapi
+    extend_bid_packages(actual)
+packages/contracts/bid_package_api.py:99: in extend_openapi
+    op = actual["paths"][base + suffix][method]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: '/api/v1/bids/{bid_id}/packages'
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+  /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_providers.py::test_native_oss_signing_and_strict_grants
+  /usr/local/lib/python3.12/site-packages/oss2/auth.py:579: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now_datetime = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----------- generated xml file: /evidence/f00-linux312-baseline.xml ------------
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_application_composition_integration.py:65: Explicit fresh reviewed application DB only
+SKIPPED [1] tests/test_application_composition_integration.py:88: Explicit fresh reviewed application DB only
+SKIPPED [1] tests/test_application_composition_integration.py:142: Explicit fresh reviewed application DB only
+SKIPPED [1] tests/test_application_composition_integration.py:193: Explicit fresh reviewed application DB only
+SKIPPED [1] tests/test_application_new_modules_integration.py:17: Old 17SQL explicit profile only
+SKIPPED [1] tests/test_application_new_modules_integration.py:31: New reviewed 19SQL explicit profile only
+SKIPPED [1] tests/test_application_new_modules_integration.py:138: New reviewed 19SQL explicit profile only
+SKIPPED [3] tests/test_assistant_budget_aggregate.py:204: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [1] tests/test_assistant_budget_aggregate.py:232: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [1] tests/test_assistant_budget_aggregate.py:243: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [2] tests/test_assistant_budget_aggregate.py:254: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [1] tests/test_assistant_budget_aggregate.py:271: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [2] tests/test_assistant_budget_aggregate.py:296: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [1] tests/test_assistant_budget_aggregate.py:307: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [4] tests/test_assistant_budget_aggregate.py:322: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [1] tests/test_assistant_budget_aggregate.py:351: Explicit disposable fusion_budget_aggregate database required
+SKIPPED [3] tests/test_assistant_budget_dispatch.py:182: Explicit disposable reconciliation PG17 DSN required
+SKIPPED [28] tests/test_assistant_budget_dispatch.py:200: Explicit disposable reconciliation PG17 DSN required
+SKIPPED [9] tests/test_assistant_budget_dispatch.py:228: Explicit disposable reconciliation PG17 DSN required
+SKIPPED [14] tests/test_assistant_budget_dispatch.py:248: Explicit disposable reconciliation PG17 DSN required
+SKIPPED [1] tests/test_assistant_budget_dispatch.py:273: Explicit disposable reconciliation PG17 DSN required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:181: Explicit disposable fusion_budget_live database required
+SKIPPED [2] tests/test_assistant_budget_live_facts.py:190: Explicit disposable fusion_budget_live database required
+SKIPPED [10] tests/test_assistant_budget_live_facts.py:274: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:312: Explicit disposable fusion_budget_live database required
+SKIPPED [4] tests/test_assistant_budget_live_facts.py:323: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:382: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:395: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:411: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:471: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:496: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:527: Explicit disposable fusion_budget_live database required
+SKIPPED [1] tests/test_assistant_budget_live_facts.py:544: Explicit disposable fusion_budget_live database required
+SKIPPED [2] tests/test_assistant_budget_lock_order.py:110: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_budget_lock_order.py:137: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_budget_lock_order.py:175: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_budget_lock_order.py:213: Dedicated disposable fusion_budget_lock database required
+SKIPPED [3] tests/test_assistant_budget_lock_order.py:232: Dedicated disposable fusion_budget_lock database required
+SKIPPED [28] tests/test_assistant_budget_reconciliation.py:116: Explicit disposable reconciliation PG17 DSN required; no production access
+SKIPPED [18] tests/test_assistant_budget_reconciliation.py:140: Explicit disposable reconciliation PG17 DSN required; no production access
+SKIPPED [10] tests/test_assistant_budget_reconciliation.py:164: Explicit disposable reconciliation PG17 DSN required; no production access
+SKIPPED [8] tests/test_assistant_budget_reconciliation.py:170: Explicit disposable reconciliation PG17 DSN required; no production access
+SKIPPED [2] tests/test_assistant_budget_reconciliation.py:176: Explicit disposable reconciliation PG17 DSN required; no production access
+SKIPPED [1] tests/test_assistant_budget_target_identity.py:145: Explicit disposable fusion_budget_target database required
+SKIPPED [12] tests/test_assistant_budget_target_identity.py:150: Explicit disposable fusion_budget_target database required
+SKIPPED [1] tests/test_assistant_budget_target_identity.py:178: Explicit disposable fusion_budget_target database required
+SKIPPED [1] tests/test_assistant_generation_lock_order.py:43: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_generation_lock_order.py:64: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_generation_lock_order.py:106: Dedicated disposable fusion_budget_lock database required
+SKIPPED [1] tests/test_assistant_integration.py:131: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:208: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:247: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:289: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:317: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [2] tests/test_assistant_integration.py:412: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:454: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:498: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:518: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:594: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:640: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:677: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:778: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [2] tests/test_assistant_integration.py:875: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:930: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:986: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1042: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1100: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1148: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1204: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1234: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1269: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1289: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1339: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1378: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_assistant_integration.py:1404: Explicit fresh assistant01 real PG opt-in; zero paid calls
+SKIPPED [1] tests/test_authoring.py:87: 需真实LibreOffice及中文字体
+SKIPPED [1] tests/test_authoring_generated_integration.py:134: Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls
+SKIPPED [1] tests/test_authoring_generated_integration.py:193: Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls
+SKIPPED [1] tests/test_authoring_generated_integration.py:241: Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls
+SKIPPED [1] tests/test_authoring_generated_integration.py:290: Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls
+SKIPPED [1] tests/test_authoring_integration.py:65: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:96: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:116: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:140: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:209: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:236: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:319: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:343: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:421: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:455: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:506: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:547: 需独立真实PG非owner API账号
+SKIPPED [1] tests/test_authoring_integration.py:593: 需独立真实PG非owner API账号
+SKIPPED [5] tests/test_authoring_integration.py:655: 需独立真实PG非owner API账号
+SKIPPED [3] tests/test_authoring_knowledge_lifecycle.py:54: Isolated nonowner PG only
+SKIPPED [1] tests/test_authoring_knowledge_lifecycle.py:123: Isolated nonowner PG only
+SKIPPED [1] tests/test_authoring_knowledge_lifecycle.py:156: Isolated nonowner PG only
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:91: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:149: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:174: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:194: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:210: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:235: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_build_integration.py:271: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:106: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:124: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:153: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:185: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:206: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:221: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:245: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:253: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:338: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:380: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:452: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:517: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_rich_integration.py:555: Explicit fresh reviewed RICH nonowner profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:34: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:59: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:102: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:176: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:276: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:410: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:495: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:592: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:668: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:723: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:774: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:828: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:913: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_authoring_structure_integration.py:1032: Explicit fresh complete-A2 restricted PG profile required
+SKIPPED [1] tests/test_backup.py:81: explicit isolated real backup/restore profile required
+SKIPPED [1] tests/test_backup_generic.py:77: explicit local PG profile required; no remote object calls
+SKIPPED [1] tests/test_backup_generic_native.py:24: explicit isolated native OSS profile required; creates only synthetic own keys
+SKIPPED [1] tests/test_bid_list_integration.py:18: 需独立非owner PG
+SKIPPED [1] tests/test_bid_package_acl.py:58: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_acl.py:70: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_acl.py:93: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_acl.py:116: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_acl.py:127: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_acl.py:142: requires explicit fusion_package_acl database
+SKIPPED [1] tests/test_bid_package_api.py:158: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:181: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:206: requires explicit isolated package API PG17
+SKIPPED [5] tests/test_bid_package_api.py:219: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:234: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:249: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:271: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:288: requires explicit isolated package API PG17
+SKIPPED [3] tests/test_bid_package_api.py:307: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:342: requires explicit isolated package API PG17
+SKIPPED [7] tests/test_bid_package_api.py:372: requires explicit isolated package API PG17
+SKIPPED [3] tests/test_bid_package_api.py:414: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:424: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:448: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:471: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:509: requires explicit isolated package API PG17
+SKIPPED [15] tests/test_bid_package_api.py:541: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:583: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_api.py:632: requires explicit isolated package API PG17
+SKIPPED [1] tests/test_bid_package_repository.py:151: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:182: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:200: requires explicit isolated fusion_package_repo DB
+SKIPPED [4] tests/test_bid_package_repository.py:214: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:223: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:236: requires explicit isolated fusion_package_repo DB
+SKIPPED [5] tests/test_bid_package_repository.py:251: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:269: requires explicit isolated fusion_package_repo DB
+SKIPPED [7] tests/test_bid_package_repository.py:284: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:324: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:351: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:361: requires explicit isolated fusion_package_repo DB
+SKIPPED [3] tests/test_bid_package_repository.py:376: requires explicit isolated fusion_package_repo DB
+SKIPPED [5] tests/test_bid_package_repository.py:403: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:436: requires explicit isolated fusion_package_repo DB
+SKIPPED [10] tests/test_bid_package_repository.py:456: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:488: requires explicit isolated fusion_package_repo DB
+SKIPPED [5] tests/test_bid_package_repository.py:497: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:523: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:558: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:570: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:602: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:617: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bid_package_repository.py:631: requires explicit isolated fusion_package_repo DB
+SKIPPED [1] tests/test_bootstrap_role_isolation_pg.py:69: requires an explicitly isolated ACL database
+SKIPPED [13] tests/test_bootstrap_role_isolation_pg.py:161: requires an explicitly isolated ACL database
+SKIPPED [1] tests/test_build_followups_integration.py:124: 需隔离PG/S3/本地转换器
+SKIPPED [3] tests/test_build_followups_integration.py:164: 需隔离PG/S3/本地转换器
+SKIPPED [1] tests/test_build_followups_integration.py:202: 需隔离PG/S3/本地转换器
+SKIPPED [1] tests/test_build_followups_integration.py:212: 需隔离PG/S3/本地转换器
+SKIPPED [1] tests/test_build_history_integration.py:19: 需独立PG
+SKIPPED [1] tests/test_cancel_integration.py:49: 需要独立真实PG机制库
+SKIPPED [1] tests/test_cancel_integration.py:117: 需要独立真实PG机制库
+SKIPPED [6] tests/test_content_decision_applicability_integration.py:29: 需要专用真实PG
+SKIPPED [2] tests/test_content_findings_integration.py:23: 需要专用真实PG
+SKIPPED [10] tests/test_core_recheck_scope_integration.py:74: 需专用真实PG
+SKIPPED [1] tests/test_denominator_integration.py:149: Requires new reviewed B database; no patch/DDL/Docker
+SKIPPED [1] tests/test_denominator_integration.py:188: Requires new reviewed B database; no patch/DDL/Docker
+SKIPPED [1] tests/test_denominator_integration.py:204: Requires new reviewed B database; no patch/DDL/Docker
+SKIPPED [1] tests/test_denominator_integration.py:214: Requires new reviewed B database; no patch/DDL/Docker
+SKIPPED [1] tests/test_denominator_integration.py:245: Requires new reviewed B database; no patch/DDL/Docker
+SKIPPED [1] tests/test_event_stream.py:66: Requires explicit isolated PG fixture database
+SKIPPED [1] tests/test_event_stream.py:83: Requires explicit isolated PG fixture database
+SKIPPED [1] tests/test_event_stream.py:107: Requires explicit isolated PG fixture database
+SKIPPED [1] tests/test_event_stream.py:116: Requires explicit isolated PG fixture database
+SKIPPED [1] tests/test_event_stream.py:137: Requires explicit isolated PG fixture database
+SKIPPED [1] tests/test_fact_sets_integration.py:85: 需独立非owner PG
+SKIPPED [1] tests/test_fact_sets_integration.py:122: 需独立非owner PG
+SKIPPED [1] tests/test_fact_sets_integration.py:146: 需独立非owner PG
+SKIPPED [3] tests/test_historical_context_isolation.py:34: Explicit isolated nonowner PG test only
+SKIPPED [1] tests/test_historical_context_isolation.py:45: Explicit isolated nonowner PG test only
+SKIPPED [1] tests/test_historical_input_integration.py:125: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [1] tests/test_historical_input_integration.py:177: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [1] tests/test_historical_input_integration.py:196: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [1] tests/test_historical_input_integration.py:241: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [1] tests/test_historical_input_integration.py:257: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [3] tests/test_historical_input_integration.py:279: Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB
+SKIPPED [1] tests/test_historical_input_unconfigured.py:20: Read-only old-schema API-role probe, no fixtures/DDL
+SKIPPED [1] tests/test_historical_input_upload_path.py:64: Needs NEW reviewed fresh input DB and local parser environment
+SKIPPED [3] tests/test_identity.py:16: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:72: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:83: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:95: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:129: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:153: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:174: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:206: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_identity.py:320: Explicit nonowner PG integration profile required
+SKIPPED [1] tests/test_knowledge_integration.py:188: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:200: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:257: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:300: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:320: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:370: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:403: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:430: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:551: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:588: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:611: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:648: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:667: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [2] tests/test_knowledge_integration.py:805: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:834: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [3] tests/test_knowledge_integration.py:865: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [4] tests/test_knowledge_integration.py:902: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [2] tests/test_knowledge_integration.py:912: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [4] tests/test_knowledge_integration.py:933: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:975: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [3] tests/test_knowledge_integration.py:1030: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [2] tests/test_knowledge_integration.py:1052: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:1059: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [3] tests/test_knowledge_integration.py:1098: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:1142: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_integration.py:1245: 需要独立真实PG/S3受限API/Worker环境
+SKIPPED [1] tests/test_knowledge_rag_integration.py:75: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:143: 需要知识RAG独立新库
+SKIPPED [5] tests/test_knowledge_rag_integration.py:177: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:230: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:319: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:418: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:465: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:503: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:543: 需要实际本地BGE/重排运行时
+SKIPPED [1] tests/test_knowledge_rag_integration.py:700: 仅PM授权专用topic/group后运行
+SKIPPED [1] tests/test_knowledge_rag_integration.py:834: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:886: 需要知识RAG独立新库
+SKIPPED [3] tests/test_knowledge_rag_integration.py:931: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:974: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:1024: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:1042: 仅精确自有合成原件的原生OSS验收
+SKIPPED [1] tests/test_knowledge_rag_integration.py:1132: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:1177: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_integration.py:1212: 需要知识RAG独立新库
+SKIPPED [5] tests/test_knowledge_rag_integration.py:1224: 需要知识RAG独立新库
+SKIPPED [1] tests/test_knowledge_rag_schema_unavailable.py:16: 只读连接明确缺少知识RAG表的受限API库
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:77: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:129: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:168: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:185: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:210: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:229: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:255: Explicit fresh closure schema opt-in
+SKIPPED [1] tests/test_lifecycle_batch_closure_integration.py:283: Separate actual old-schema probe
+SKIPPED [1] tests/test_lifecycle_resource_etag.py:18: Explicit isolated nonowner DB
+SKIPPED [1] tests/test_lifecycle_resource_etag.py:79: Explicit isolated nonowner DB
+SKIPPED [1] tests/test_metrics_integration.py:247: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:314: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:354: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:397: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:431: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:563: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:647: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:677: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:711: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:731: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:775: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:802: 需显式本地非owner PG环境；不发远端
+SKIPPED [11] tests/test_metrics_integration.py:841: 需显式本地非owner PG环境；不发远端
+SKIPPED [3] tests/test_metrics_integration.py:946: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1000: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1035: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1099: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1133: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1170: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_metrics_integration.py:1216: 需显式本地非owner PG环境；不发远端
+SKIPPED [1] tests/test_model_governance_historical_integration.py:100: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [3] tests/test_model_governance_historical_integration.py:199: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:226: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:266: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:342: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:417: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:459: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_integration.py:518: Requires PM fresh historical E; no DDL or external calls
+SKIPPED [1] tests/test_model_governance_historical_unconfigured.py:20: Read-only nonowner old schema; never writes session/fixtures or applies SQL
+SKIPPED [1] tests/test_model_governance_integration.py:228: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:276: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [4] tests/test_model_governance_integration.py:312: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:367: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:412: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:490: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:545: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:553: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:613: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_integration.py:788: Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business
+SKIPPED [1] tests/test_model_governance_registry_integration.py:52: Requires NEW reviewed complete release-extension DB; never applies DDL
+SKIPPED [1] tests/test_model_governance_registry_integration.py:235: Requires NEW reviewed complete release-extension DB; never applies DDL
+SKIPPED [1] tests/test_model_governance_registry_integration.py:323: Requires NEW reviewed complete release-extension DB; never applies DDL
+SKIPPED [1] tests/test_model_governance_registry_unconfigured.py:21: Explicit nonowner profile without release extension only
+SKIPPED [1] tests/test_model_governance_unconfigured.py:22: Needs independent nonowner API LOGIN on a schema without new model governance SQL
+SKIPPED [1] tests/test_model_ledger_integration.py:78: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:111: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:133: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:166: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:209: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:236: 需要独立实际PG机制库
+SKIPPED [1] tests/test_model_ledger_integration.py:298: 需要独立实际PG机制库
+SKIPPED [6] tests/test_model_purpose_integration.py:28: 需要专用真实PG
+SKIPPED [1] tests/test_model_purpose_integration.py:40: 需要专用真实PG
+SKIPPED [2] tests/test_model_purpose_integration.py:97: 需要专用真实PG
+SKIPPED [1] tests/test_multipart_integration.py:187: 需显式真实隔离PG/原生OSS环境
+SKIPPED [1] tests/test_multipart_integration.py:259: 需显式真实隔离PG/原生OSS环境
+SKIPPED [1] tests/test_multipart_integration.py:306: 需显式真实隔离PG/原生OSS环境
+SKIPPED [1] tests/test_multipart_integration.py:333: 需显式真实隔离PG/原生OSS环境
+SKIPPED [1] tests/test_multipart_integration.py:347: 需显式真实隔离PG/原生OSS环境
+SKIPPED [1] tests/test_multipart_integration.py:392: 需显式真实隔离PG/原生OSS环境
+SKIPPED [2] tests/test_optional_stage_integration.py:43: 需要专用真实PG
+SKIPPED [1] tests/test_parse_readable_integration.py:75: 需隔离非owner PG
+SKIPPED [2] tests/test_parse_readable_integration.py:170: 需隔离非owner PG
+SKIPPED [1] tests/test_pricing_integration.py:197: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:275: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:324: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:356: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:394: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:443: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:488: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:514: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:560: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:599: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:638: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:665: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [8] tests/test_pricing_integration.py:705: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_integration.py:754: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [3] tests/test_pricing_integration.py:782: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [3] tests/test_pricing_integration.py:861: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [4] tests/test_pricing_integration.py:887: 需要独立真实PG报价机制库；不使用owner跑业务
+SKIPPED [1] tests/test_pricing_native_oss.py:20: 仅显式授权的独立命名空间原生OSS探针
+SKIPPED [1] tests/test_pricing_ratio_no_coeff_integration.py:23: Explicit nonowner PG only
+SKIPPED [1] tests/test_project_lifecycle.py:47: Explicit isolated PG opt-in
+SKIPPED [1] tests/test_project_lifecycle.py:117: Explicit isolated PG opt-in
+SKIPPED [1] tests/test_project_lifecycle.py:199: Explicit isolated PG opt-in
+SKIPPED [1] tests/test_rag_real_integration.py:142: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_real_integration.py:161: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_real_integration.py:197: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_real_integration.py:218: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_real_integration.py:237: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_replay_guard.py:23: Explicit real model/PG opt-in
+SKIPPED [1] tests/test_rag_staged_api.py:28: Explicit real local model/PG opt-in
+SKIPPED [2] tests/test_rag_staged_indexing.py:21: Explicit real local model/PG opt-in
+SKIPPED [1] tests/test_recovery_integration.py:60: 需要专用真实PG
+SKIPPED [1] tests/test_recovery_integration.py:104: 需要专用真实PG
+SKIPPED [1] tests/test_recovery_integration.py:135: 需要专用真实PG
+SKIPPED [1] tests/test_recovery_integration.py:148: 需要专用真实PG
+SKIPPED [1] tests/test_research_integration.py:323: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:346: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:359: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:473: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:540: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:643: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:663: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:684: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:717: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:820: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:849: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:894: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:934: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:988: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1010: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1072: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1123: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1146: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1165: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1222: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1240: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1276: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1313: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1349: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_research_integration.py:1392: 需要独立真实PG研究机制库；不使用owner跑业务
+SKIPPED [1] tests/test_review_acceptance.py:98: Explicit restricted PG opt-in
+SKIPPED [3] tests/test_review_integration.py:74: 需要独立真实PG/S3机制环境
+SKIPPED [1] tests/test_scale_integration.py:142: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:180: Requires separately fresh reviewed C
+SKIPPED [3] tests/test_scale_integration.py:208: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:228: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:263: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:393: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:408: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:428: Requires separately fresh reviewed C
+SKIPPED [1] tests/test_scale_integration.py:450: Requires separately fresh reviewed C
+SKIPPED [2] tests/test_scoring_integration.py:117: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:154: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:179: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:184: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:216: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:244: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:269: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:301: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:364: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:400: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [2] tests/test_scoring_integration.py:462: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:589: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:689: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:743: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_scoring_integration.py:752: Requires PM NEW statically approved fresh score DB + purpose-only score profile
+SKIPPED [1] tests/test_slice_integration.py:58: 需要专用真实PG/Kafka/S3开发环境
+SKIPPED [1] tests/test_source_effectivity_integration.py:181: 需独立非owner PG
+SKIPPED [1] tests/test_source_effectivity_integration.py:244: 需独立非owner PG
+SKIPPED [1] tests/test_source_effectivity_integration.py:278: 需独立非owner PG
+SKIPPED [1] tests/test_source_effectivity_integration.py:304: 需独立非owner PG
+SKIPPED [2] tests/test_source_effectivity_integration.py:310: 需独立非owner PG
+SKIPPED [1] tests/test_source_effectivity_integration.py:323: 需真实本地S3验证合成原件字节身份
+SKIPPED [1] tests/test_source_effectivity_integration.py:392: 需独立非owner PG
+SKIPPED [1] tests/test_stable_lot_identity.py:169: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:205: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:255: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:319: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:353: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:398: requires explicit local disposable PG17 admin
+SKIPPED [8] tests/test_stable_lot_identity.py:486: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_stable_lot_identity.py:523: requires explicit local disposable PG17 admin
+SKIPPED [1] tests/test_submission_gate_integration.py:19: 需专用真实PG
+SKIPPED [5] tests/test_submission_lifecycle_integration.py:17: 需要专用真实PG
+SKIPPED [2] tests/test_task_backend_hooks_integration.py:15: 专用PG无费执行
+SKIPPED [1] tests/test_task_drafts_integration.py:73: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:94: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:134: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:167: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:190: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:212: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:264: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:289: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_drafts_integration.py:314: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_task_runs_integration.py:68: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:98: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:115: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:153: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:175: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:233: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:286: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:311: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:336: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:384: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:409: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:426: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:450: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:480: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [4] tests/test_task_runs_integration.py:506: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:606: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_runs_integration.py:632: Explicit nonowner PG opt-in; no model/OSS calls
+SKIPPED [1] tests/test_task_templates_integration.py:100: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_task_templates_integration.py:139: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_task_templates_integration.py:196: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_task_templates_integration.py:224: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_task_templates_integration.py:256: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_task_templates_integration.py:275: Explicit nonowner isolated PG opt-in
+SKIPPED [1] tests/test_upload_layout_integration.py:20: 需独立PG
+SKIPPED [1] tests/test_word_intake_integration.py:187: 需要精确Word SQL的全新独立PG账号；不补运行库
+SKIPPED [1] tests/test_word_intake_integration.py:233: 需要精确Word SQL的全新独立PG账号；不补运行库
+SKIPPED [1] tests/test_word_intake_integration.py:264: 需要精确Word SQL的全新独立PG账号；不补运行库
+SKIPPED [1] tests/test_word_intake_integration.py:275: 需要精确Word SQL的全新独立PG账号；不补运行库
+SKIPPED [1] tests/test_word_intake_integration.py:310: 可选真实Docker转换，未配置不冒充已执行
+SKIPPED [1] tests/test_word_intake_integration.py:354: 需要精确Word SQL的全新独立PG账号；不补运行库
+SKIPPED [1] tests/test_word_mainflow_integration.py:143: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:177: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:216: Word fresh非owner角色库
+SKIPPED [2] tests/test_word_mainflow_integration.py:261: 实际固定Docker与Parser03本地端口
+SKIPPED [1] tests/test_word_mainflow_integration.py:360: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:404: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:463: 实际隔离Docker转换
+SKIPPED [1] tests/test_word_mainflow_integration.py:506: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:520: Word fresh非owner角色库
+SKIPPED [1] tests/test_word_mainflow_integration.py:629: 全新独立Word数据库+OSS前缀
+SKIPPED [1] tests/test_word_materials_integration.py:55: Word fresh库的受限PG机制
+SKIPPED [1] tests/test_word_materials_integration.py:68: Word fresh库的受限PG机制
+SKIPPED [1] tests/test_word_pdf_declaration_bindings.py:68: Isolated reviewed nonowner Word/application DB only
+SKIPPED [1] tests/test_word_pdf_declaration_bindings.py:107: Isolated reviewed nonowner Word/application DB only
+SKIPPED [1] tests/test_word_pdf_declaration_bindings.py:159: Isolated reviewed nonowner Word/application DB only
+SKIPPED [1] tests/test_word_pdf_declaration_bindings.py:225: Isolated reviewed nonowner Word/application DB only
+SKIPPED [1] tests/test_word_pdf_declaration_bindings.py:339: Isolated reviewed nonowner Word/application DB only
+SKIPPED [2] tests/test_word_pdf_declaration_bindings.py:469: Isolated reviewed nonowner Word/application DB only
+SKIPPED [2] tests/test_word_pdf_declaration_bindings.py:505: Isolated reviewed nonowner Word/application DB only
+SKIPPED [1] tests/test_word_request_order_counterexample.py:21: 仅fresh合成PG反例
+SKIPPED [1] tests/test_word_request_order_counterexample.py:84: 仅fresh合成PG反例
+SKIPPED [1] tests/test_word_request_order_counterexample.py:106: 原生固定Docker旧成功PDF与新失败机制
+SKIPPED [1] tests/test_work_access_integration.py:18: 专用PG显式执行
+SKIPPED [2] tests/test_work_access_integration.py:40: 专用PG显式执行
+SKIPPED [1] tests/test_work_access_integration.py:50: 专用PG显式执行
+SKIPPED [2] tests/test_work_access_integration.py:75: 专用PG显式执行
+SKIPPED [1] tests/test_work_access_integration.py:113: 专用PG显式执行
+SKIPPED [1] tests/test_work_access_integration.py:127: 专用PG显式执行
+SKIPPED [1] tests/test_work_access_integration.py:146: 专用PG显式执行
+SKIPPED [1] tests/test_work_conversations.py:73: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_work_conversations.py:108: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_work_conversations.py:177: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_work_conversations.py:227: Explicit isolated nonowner PG opt-in
+SKIPPED [1] tests/test_work_conversations.py:278: Explicit isolated nonowner PG opt-in
+5 failed, 976 passed, 865 skipped, 2 warnings, 13 errors in 40.20s

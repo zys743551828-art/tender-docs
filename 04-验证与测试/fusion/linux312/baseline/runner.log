@@ -1,0 +1,10 @@
+CHECK pytest
+RESULT pytest 1
+CHECK mypy
+RESULT mypy 0
+CHECK ruff
+RESULT ruff 0
+CHECK format
+RESULT format 0
+CHECK bandit
+RESULT bandit 0

@@ -1,0 +1,7 @@
+NAME                              IMAGE                                                                                       COMMAND                  SERVICE           CREATED        STATUS                     PORTS
+tender-fusion-api-1               tender-fusion-checks:py312                                                                  "python -m deploy.fu…"   api               2 hours ago    Up 2 hours (healthy)       
+tender-fusion-checks-1            tender-fusion-checks:py312                                                                  "python -m deploy.fu…"   checks            2 hours ago    Exited (0) 2 hours ago     
+tender-fusion-checks-postgres-1   pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d   "docker-entrypoint.s…"   checks-postgres   10 hours ago   Exited (0) 2 hours ago     
+tender-fusion-init-1              tender-fusion-checks:py312                                                                  "python -m deploy.fu…"   init              2 hours ago    Exited (0) 3 minutes ago   
+tender-fusion-postgres-1          pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d   "docker-entrypoint.s…"   postgres          10 hours ago   Up 10 hours (healthy)      5432/tcp
+tender-fusion-web-1               bidwb-web:0.1.0                                                                             "nginx -g 'daemon of…"   web               10 hours ago   Up 10 hours (healthy)      127.0.0.1:5188->8080/tcp

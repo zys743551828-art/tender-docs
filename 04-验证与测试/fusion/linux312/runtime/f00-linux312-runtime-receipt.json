@@ -1,0 +1,25 @@
+{
+  "checks_image_id": "sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be",
+  "base": "python@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258",
+  "python": "3.12.15",
+  "libc": "2.36",
+  "architecture": "linux/amd64",
+  "wheel_count": 62,
+  "wheel_bytes": 82778492,
+  "wheel_receipt_sha256": "a2779d2ab65265beddc2909ad556cc180c90fdf3bbbafe485ae2e37dc61396da",
+  "freeze_sha256": "148e96a4499c47ecfda2a9afdc26a685fc494bd8b8159cd660a9733353272132",
+  "pip_check": "No broken requirements found.",
+  "offline_smoke": [
+    "psycopg",
+    "Crypto.Cipher.AES",
+    "pypdfium2",
+    "pdfplumber",
+    "reportlab",
+    "jsonschema",
+    "oss2"
+  ],
+  "build_context_source_content": "none; requirements and exact wheelhouse only",
+  "compiler_installed": false,
+  "known_locked_warning": "pypdfium2==4.30.1 yanked for PDFium text extraction regression crbug.com/387277993; pins preserved; no upgrade claimed",
+  "official_pypi_file_hash_matches": true
+}

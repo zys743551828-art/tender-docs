@@ -1,0 +1,15 @@
+
+ RUN  v3.2.3 D:/workspace/tender/tender-app/workbench/apps/web
+
+ ✓ src/PackageReviewInputPreview.test.tsx (10 tests) 779ms
+   ✓ 刷新后未做预检也能恢复所选清单的旧保存，不依赖当前可写状态  325ms
+ ✓ src/PackageOriginalVerification.test.tsx (15 tests) 948ms
+ ✓ src/PackageFrozenInputWorkspace.test.tsx (25 tests) 2524ms
+   ✓ 历史GET不依赖当前候选或可写状态，允许原记录的其他创建人  725ms
+
+ Test Files  3 passed (3)
+      Tests  50 passed (50)
+   Start at  18:34:17
+   Duration  4.40s (transform 139ms, setup 1.06s, collect 586ms, tests 4.25s, environment 2.65s, prepare 510ms)
+
+JUNIT report written to D:/workspace/tender/tender-app/workbench/.local/freeze-ui/final-affected.xml

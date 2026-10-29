@@ -1,0 +1,53 @@
+ssss......ssssssssssssssssssssssssssss.......ssss..sssssssssssssssss.sss [ 23%]
+ssss....................s.....ssssssss.......ssssssssssssssssssss....... [ 46%]
+...............ssssssssssssssssssssssssssssss................sssssssssss [ 70%]
+sss.......ssssssssss....ssssssssssssssssss.............................. [ 93%]
+sssssssssssssssssss                                                      [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /workspace/tender-render/backend/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [4] tests/test_ai_pipeline.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [8] tests/test_api_projects.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [4] tests/test_assistant.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [13] tests/test_auto_pipeline.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_batch_predict.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_evidence_order_and_uploads.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_facts_and_confirmations.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [17] tests/test_files_and_parse.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_model_registry.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [4] tests/test_outcome_identity.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_pipeline_status_race.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:126: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:231: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:254: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:275: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:303: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_predict.py:337: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_predict.py:370: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [12] tests/test_product_logic.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_recognition_reviews.py:49: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [5] tests/test_recognition_reviews.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [15] tests/test_review_fixes.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [8] tests/test_review_fixes.py:270: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_rule_carry_over.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [5] tests/test_rule_parse_identity.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_score_pairs.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_snapshot_parse_identity.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [6] tests/test_source_effectivity.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [4] tests/test_source_effectivity.py:162: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [1] tests/test_source_effectivity.py:219: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [10] tests/test_tasks_protocol.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_term_resolution.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [3] tests/test_upload_parts.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [5] tests/test_vector_index.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [5] tests/test_vector_index.py:119: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_vector_index.py:159: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [11] tests/test_word_materials.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_word_materials.py:216: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [2] tests/test_worker_failure_receipts.py: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+SKIPPED [4] tests/test_worker_failure_receipts.py:59: 没有可用的 PostgreSQL（设置 BIDWB_TEST_ADMIN_DSN）
+127 passed, 180 skipped, 1 warning in 5.35s

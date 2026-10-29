@@ -1,0 +1,46 @@
+{
+  "app_commit": "70bc2c40cca2116d178b0032e9df3211bcd6bf3b",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 151,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 192.85
+    },
+    "domain.xml": {
+      "tests": 253,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 2.98
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/domain/bid_package_fact_admission.py": "392755b238e258e04aab5e5a039fccc77632df1780a389489863f446058443a9",
+    "workbench/packages/domain/package_review_context.py": "1030794c1b09873ca03296e25f37b57d2237cedf8f3047b45f4b578c0e255f2b",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "86e03535bfc388bdac62808c5cef71ac2654589e40acc4b73859dd296624d5ee",
+    "workbench/tests/test_package_fact_decision_basis.py": "a5cc23ecfb2f52311583e879e0f7ea6beaccb338f7c7183191d9ea9d6502ee37"
+  },
+  "evidence_sha256": {
+    "api.log": "2e93806906cd100168eacac16399fe81d4024d4d675c007654a750c232a53128",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "dddfa271553ed1a40ab55ba5ceb1ab2dbc467c1155d75f1eca06108f5f200327",
+    "domain.log": "e809db12a412611c615de2519831930b815b1ee1c4ed8789ee6257c68c6ad3fd",
+    "domain.xml": "8c31ac3b7f18dd7afc0b84be07467ba9234dc62ccfac4c37728f8f8e4200c0cb",
+    "format.log": "55b5a2cb0bdd55641f1b6dad60805a4c29520e41d507781e75aa8ec8d6ed9a10",
+    "mypy.log": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+    "red.log": "5f03284e57860e28a1a7514baf4f72d355ab998a1ce4e476fd699b36d7eb0272",
+    "requirements-api.xml": "0ece4b4d86eb02408b936e416e179b200c17b0a335c32644ebf7e1c2dc010dff",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "820f7da1f06407dfab83c12df75fd9b921f013c9fa136adf1da18f008122bc83",
+    "runtime-inputs.json": "2324f9c144fc3a3aea644a040372fa53b5dfa6b38fed608e8d9e0b2433a287aa",
+    "services.txt": "7c5e57cd0db0eefd154b4f389e7a4833a5b437af0873db9defe957d6565af99d"
+  },
+  "scope": "unique exact root decision audit basis; ambiguity blocks new use, immutable history preserved",
+  "deployed_database": "tender_checks_fusion_v7",
+  "new_visual_acceptance": false
+}

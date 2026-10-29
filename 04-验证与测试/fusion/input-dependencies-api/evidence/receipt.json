@@ -1,0 +1,81 @@
+{
+  "app_commit": "0afd7b3aa32d035bbe950bb5ef5bd9c11e9b3ae2",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 189,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "summed_test_seconds": 250.59
+    },
+    "domain.xml": {
+      "tests": 352,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "summed_test_seconds": 3.58
+    },
+    "web.xml": {
+      "tests": 487,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "summed_test_seconds": 102.03
+    }
+  },
+  "frontend_wall_seconds": 18.82,
+  "source_files_sha256": {
+    "workbench/apps/api/bid_package_dependency_routes.py": "f825e050ef75035508be766b08f1106caf471cb6733a3345a72639b25231b720",
+    "workbench/apps/api/bid_package_requirement_routes.py": "38a222e1c282940c4f75ddb65f90169ff295d1d62e53276d3323a9c0b9e4cabc",
+    "workbench/apps/web/qa-previews/frozen-inputs/build-fixture.mjs": "82c4b92bd00aa0c0aa5656656f50e98926f7054342dc172fa03c0c77f8513629",
+    "workbench/apps/web/qa-previews/frozen-inputs/build-input-dependencies.mjs": "41269770d3706cd94b2663aca70ef32940f067521c7f5c0d9db0f10e549e6fb8",
+    "workbench/apps/web/qa-previews/frozen-inputs/inputDependencies.ts": "0480f63c72725ceaed2ed5da172e12ef3cfac385f1bbe8e8bd9b75ef6a3aab20",
+    "workbench/apps/web/qa-previews/frozen-inputs/inputDependenciesFixture.tsx": "9adf524ec6175a22fb9aa4df2b9e467696de06b67138cb708cc7a1b88fd6995e",
+    "workbench/apps/web/scripts/generate-contracts.py": "97d693a7dc1a38cab0f3aa4a778af8d9f8d282017fbc0fe572ff538732d3d048",
+    "workbench/apps/web/src/PackageExecutionInputWorkspace.tsx": "35108c3262754831773c61b5be3183a913f6f7beab4881309b287da260cfacd7",
+    "workbench/apps/web/src/PackageInputDependencyWorkspace.test.tsx": "c80bc69b84e58f6b71140cdd622577c3f32f8b37910d87083b61e5b644e34be2",
+    "workbench/apps/web/src/PackageInputDependencyWorkspace.tsx": "ab4a44d4002cb33ce0aa13e19c07bf7e161406c67ec8d6c0d2ddc71c0e7d7883",
+    "workbench/apps/web/src/PackagePreparedFactPicker.tsx": "82364860e8d6300232a10dc29d7ed0b3092390760a445931bcb16cfa152c78f1",
+    "workbench/apps/web/src/contracts.ts": "9cf51ba9aae8f404569c1395902048c7bde38290812f5945451bdec3066b940e",
+    "workbench/apps/web/src/inputDependencyProtocol.ts": "a4fb86aade8808d700805941266cf806be984574b263e05be67af8133d896822",
+    "workbench/apps/web/src/packageInputDependencies.css": "586f8f9e2fb31cf0df5c8308832a750fae9f48f4e5a7d96848b3ef8ad70b8ad5",
+    "workbench/packages/contracts/bid_package_requirements_api.py": "f67270e8c8914fd135f0944012254ed00bcb56e67f76cf94eb31d970112924e6",
+    "workbench/packages/contracts/fusion-implemented.openapi.json": "372978ebf78f9080769f1637209fd3c3f048f3ca2e0a09e1b3ab45aac1f654c2",
+    "workbench/packages/contracts/package-input-dependencies.md": "7a1622d1191e98450454bd8b7e0f4e286d919684dd09d18288cb6ddd3cf435fb",
+    "workbench/packages/domain/bid_package_input_dependencies.py": "57f5e442b8a02ae306344bc9c10a1bb232cd63d23eddb208356814d375e0dbb9",
+    "workbench/tests/test_bid_package_openapi.py": "f9a81a467f683a01514323de9e93dfc2cccfb89da90c2c2455a21cbfb786fb78",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "9857d2e7ae683333234edc228a8ae8b94af685543c16690e10521a8ceabd5c23"
+  },
+  "evidence_sha256": {
+    "api.log": "02447a0a453ea787ca8d89e9186a64065bef998e75dbc09450413a86cac9bed8",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "browser-layout.json": "eee0c988f5ee87e86f6fb46af1345a1970f18f764ab579a35247e86dd85f88ab",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "d91ec9f2d715d4a003949b986fab33dcb956e4430225176d49933c0f2486de2d",
+    "domain.log": "9f635d350aba1d7d2e5956820ed980c6662fa27d520f0888078126090b547cf8",
+    "domain.xml": "e0e77b2dbad3692fee75593185a5be0cac16eed93c4ed67e69f2a4bb590b3924",
+    "format.log": "9fa2e30088122b883ebbf1c300359d4a0c9d09c988b20631e8625a40425a9723",
+    "mypy.log": "718df785efbbd4b57e63b5f64aff2c5b5592e433447681f759b307f97a3ec96a",
+    "requirements-api.xml": "cd59998496ba020a8d8227a5311cf42c5ba0d6a54308394a10fe626db437f1c7",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-api.json": "1a06f7617d465feee2310f0182c47a376742976225487af314c4ff54185d8f8a",
+    "runtime-inputs.json": "1cf5406cc3a56f4eb9010ef5416c7f51b8b3e276b248c3546cd99ec373fc914f",
+    "services.txt": "dd8273f3043f6b6de0c25c608cdbac1d3e9bd6fccc47c8b8173f719d5ad51ed1",
+    "web-build.log": "27d3903aa5f1b5ddcc7bd1d1b860283556ce8f2545ff62291298da96e6377276",
+    "web-format.log": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283",
+    "web-lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web-test.log": "3198f18d6ae794e8bd9d315e18a90ab652933822f19f55abd4916cd59f78d707",
+    "web-types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "web.xml": "c29010c8500781a9f394b4b79974ba46220188fb0739dcadf90f81d47dbd3255",
+    "screenshots/dependency-1200-draft.png": "1a806fd6c961542db37f492d9bc3295bded896beb974fc4f567e2f98e3103c4a",
+    "screenshots/dependency-390-draft.png": "c464016be7dc0568c37566399ddbb22700976b31ba38fc3cd33e5a697ead80cb",
+    "screenshots/dependency-390-result.png": "16cdfb394d346e71d56e6ed14ee9183c32ef54cb35f6ba3762f78b5c7eaf871a",
+    "screenshots/dependency-768-draft.png": "e2131adb0e507edfb880116da10227eb5f15a2fb32c37c7e8775536cc97b89d1"
+  },
+  "scope": "one authenticated readonly dependency-check POST with server-bound private usage digest; explicit per-rule temporary draft and actual fact selection UI; no saved declaration or task",
+  "deployed_database": "tender_checks_fusion_v7",
+  "independent_mobile_viewport_verified": false,
+  "real_business_end_to_end_verified": false
+}

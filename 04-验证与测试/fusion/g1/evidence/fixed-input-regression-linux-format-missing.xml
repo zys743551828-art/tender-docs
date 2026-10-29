@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="1.038" timestamp="2026-10-18T13:02:46.704423+00:00" hostname="37a439280c32"><testcase classname="" name="tests.test_authoring_generated" time="0.000"><error message="collection failure">tests/test_authoring_generated.py:12: in &lt;module&gt;
+    from packages.authoring import generated_docx, generated_verification, templates
+packages/authoring/generated_docx.py:8: in &lt;module&gt;
+    from packages.authoring import build, content, snapshot_structure, structure_schema, structured_docx
+packages/authoring/build.py:23: in &lt;module&gt;
+    from packages.authoring.content import validate_content
+packages/authoring/content.py:8: in &lt;module&gt;
+    from packages.domain.runtime import DomainError, sha
+packages/domain/runtime.py:23: in &lt;module&gt;
+    raise RuntimeError("协议format检查器不完整，请安装锁定后端依赖")
+E   RuntimeError: 协议format检查器不完整，请安装锁定后端依赖</error></testcase><testcase classname="" name="tests.test_authoring_rich_renderer" time="0.000"><error message="collection failure">tests/test_authoring_rich_renderer.py:11: in &lt;module&gt;
+    import test_authoring_generated as generated_cases
+&lt;frozen importlib._bootstrap&gt;:1176: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1147: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:690: in _load_unlocked
+    ???
+/harness/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/test_authoring_generated.py:12: in &lt;module&gt;
+    from packages.authoring import generated_docx, generated_verification, templates
+packages/authoring/generated_docx.py:8: in &lt;module&gt;
+    from packages.authoring import build, content, snapshot_structure, structure_schema, structured_docx
+packages/authoring/build.py:23: in &lt;module&gt;
+    from packages.authoring.content import validate_content
+packages/authoring/content.py:8: in &lt;module&gt;
+    from packages.domain.runtime import DomainError, sha
+packages/domain/runtime.py:23: in &lt;module&gt;
+    raise RuntimeError("协议format检查器不完整，请安装锁定后端依赖")
+E   RuntimeError: 协议format检查器不完整，请安装锁定后端依赖</error></testcase></testsuite></testsuites>

@@ -1,0 +1,63 @@
+...................................FF                                    [100%]
+================================== FAILURES ===================================
+___ test_requirements_only_app_does_not_require_unregistered_package_routes ___
+
+    def test_requirements_only_app_does_not_require_unregistered_package_routes():
+        app = FastAPI()
+        app.include_router(requirements_router)
+        actual = implemented_openapi(app)
+        operations = {
+            operation["operationId"]
+            for methods in actual["paths"].values()
+            for operation in methods.values()
+        }
+>       assert operations == {
+            "createPackageRequirementInventory",
+            "listPackageRequirementInventories",
+            "getPackageRequirementInventory",
+            "createPackageCoverageAttempt",
+            "listPackageCoverageAttempts",
+            "getPackageCoverageAttempt",
+        }
+E       AssertionError: assert {'createPacka...ntories', ...} == {'createPacka...tInventories'}
+E         
+E         Extra items in the left set:
+E         'previewPackageReviewInput'
+E         Use -v to get more diff
+
+tests\test_bid_package_openapi.py:26: AssertionError
+_____ test_package_only_app_exports_all_registered_operations_and_schemas _____
+
+    def test_package_only_app_exports_all_registered_operations_and_schemas():
+        app = FastAPI()
+        app.include_router(router)
+        app.include_router(discovery_router)
+        actual = implemented_openapi(app)
+        operations = {
+            operation["operationId"]
+            for methods in actual["paths"].values()
+            for operation in methods.values()
+        }
+>       assert operations == {
+            "createBidPackage",
+            "appendBidPackageRevision",
+            "getBidPackageHead",
+            "getBidPackageRevision",
+            "getBidPackageManifest",
+            "listBidPackages",
+            "listBidPackageRevisions",
+            "listBidPackageDocuments",
+            "listBidPackageParses",
+        }
+E       AssertionError: assert {'appendBidPa...cuments', ...} == {'appendBidPa...cuments', ...}
+E         
+E         Extra items in the left set:
+E         'listBidPackageFrozenEvidence'
+E         Use -v to get more diff
+
+tests\test_bid_package_openapi.py:46: AssertionError
+- generated xml file: D:\workspace\tender\tender-app\workbench\.local\review-boundaries\pure.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_bid_package_openapi.py::test_requirements_only_app_does_not_require_unregistered_package_routes
+FAILED tests/test_bid_package_openapi.py::test_package_only_app_exports_all_registered_operations_and_schemas
+2 failed, 35 passed in 2.15s

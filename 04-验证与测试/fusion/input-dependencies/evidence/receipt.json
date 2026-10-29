@@ -1,0 +1,47 @@
+{
+  "app_commit": "3e579bdcd679a083c206b9c85c74303b49a72069",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 184,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 243.13
+    },
+    "domain.xml": {
+      "tests": 351,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 3.48
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/contracts/package-input-dependencies.md": "19735529674bc048c54b77665c14102f61fb3c329513afbcdc07fcd8d554a76a",
+    "workbench/packages/contracts/schemas/package-input-dependencies.schema.json": "93ad5dcaac7421711029e2d253d0c4c1f3be68d4e0702ce7f5692e1d94c4a69d",
+    "workbench/packages/domain/bid_package_input_dependencies.py": "250357f9cd5bbaba01f25f317a344802a82dbfa7b696234d7624e1cd14b227d8",
+    "workbench/packages/domain/package_input_dependencies.py": "a694cc511f5c13839cffdfcbfb3ac13191054ac131ab9f48bc53f53f4fb5635a",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "97ba204d6450cb7078058a78540b10edabfdaeda48fa893a58bbc64784df38ce",
+    "workbench/tests/test_package_input_dependencies.py": "b0ed5e482d7a275b6fb831497fd7f34d00dcc3c93980797f128fa88c53a7d2f7"
+  },
+  "evidence_sha256": {
+    "api.log": "7887d9534abb2c210e17e75b8463d4bcbd03f0b33c4d30c78d00d66b6ce7bb9e",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "database.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "deployment.json": "3815797f566ecbfcdd0f2f208d961bc4b7c403b52e2c44365a08505a669bf284",
+    "domain.log": "92d334b00a94f858b14a8050b78c472c7d84915d9550fc2cb4b19920396c8f83",
+    "domain.xml": "8a57f92ea9a177d5a93f3843f235cb5df9fd954b03902268d09cfa2b4897336f",
+    "format.log": "55b5a2cb0bdd55641f1b6dad60805a4c29520e41d507781e75aa8ec8d6ed9a10",
+    "mypy.log": "0c37c4158c91ef55c724ba017bf6465f26018199badb08e3ff13f98acdf056c2",
+    "requirements-api.xml": "409cf1683b870dbbe2d717066fb4b0fd676b9f36f75605af0cfa3f1bcd0b793b",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-inputs.json": "03defa182fb1e297be2ece9cf7a87b45ab57de7f5b525b47bfe6f7354217bcf9",
+    "runtime-internal.json": "a58c4a7181ddfee2015fbe33a33c7b460f373c76c175ac1f8252410f29fdb2e6",
+    "services.txt": "97b74f15bdf8e9bf12e1476c731bcb7db40d07e4841b12cc4e9078de721397a5"
+  },
+  "scope": "internal readonly per-requirement dependency annotation and exact missing selection; no HTTP/UI, persistence, current fact admission or semantic completeness certification",
+  "deployed_database": "tender_checks_fusion_v7",
+  "new_visual_acceptance": false
+}

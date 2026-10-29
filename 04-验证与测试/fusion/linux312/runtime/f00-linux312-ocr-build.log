@@ -1,0 +1,30 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 307B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be
+#2 ...
+
+#3 [auth] library/tender-fusion-checks:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be
+#2 ...
+
+#4 [auth] library/tender-fusion-checks:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be
+#2 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+------
+ > [internal] load metadata for docker.io/library/tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be:
+------
+Dockerfile:1
+--------------------
+   1 | >>> FROM tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be
+   2 |     RUN apt-get update && apt-get install --no-install-recommends -y tesseract-ocr fonts-noto-cjk && rm -rf /var/lib/apt/lists/*
+   3 |     COPY models /opt/fusion-checks-ocr-models
+--------------------
+ERROR: failed to build: failed to solve: tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be: failed to resolve source metadata for docker.io/library/tender-fusion-checks@sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed

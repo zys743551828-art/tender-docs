@@ -1,0 +1,8 @@
+{
+  "resolved": [
+    "Initial PG run stopped with 81 passes and one test setup failure: runtime.connection starts a transaction for SET LOCAL search_path, so assigning autocommit=True directly raised psycopg ProgrammingError. Test now rolls back setup transaction before switching mode; production guard unchanged. Complete PG suite rerun required."
+  ],
+  "raw_failure_logs_local_only": true,
+  "no_frontend_or_css_or_public_contract_change": true,
+  "no_formal_launch_or_outbox_created": true
+}

@@ -1,0 +1,9 @@
+{
+  "resolved": [
+    "Initial component error-response fixture used a nested error object unlike api.ts; aligned it with actual flat API envelope.",
+    "Initial response validator incorrectly equated private prepared snapshot digest with context snapshot digest. Checked backend source and removed that comparison; final successful fixture uses different digests.",
+    "Removed an unnecessary effect cleanup ref increment to satisfy zero-warning lint.",
+    "Local database probe cannot read container-only profile; final read-only probe ran through existing API service, without exporting secrets."
+  ],
+  "browser_gap": "No connected browser; fixture built but not opened; no visual or screenshot claim."
+}

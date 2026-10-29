@@ -1,0 +1,71 @@
+{
+  "app_commit": "b7f6acecdc02c23f3c1e9d8fb6399bb1ede72479",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 199,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 263.77
+    },
+    "domain.xml": {
+      "tests": 368,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 3.82
+    },
+    "linux-pure.xml": {
+      "tests": 70,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "summed_test_seconds": 0.83
+    }
+  },
+  "source_files_sha256": {
+    "workbench/deploy/compose.fusion.yaml": "b629b49e1f4785d94229ee0b97cedb623e98819dcec5171615b3aa6c0e202411",
+    "workbench/deploy/fusion_bootstrap.py": "ed10f735f7989eefce270423af66e1791c24da8d8c1acc441bec82ff6fa2cc4d",
+    "workbench/deploy/schema_plan.py": "2695cd90c4a09f3f5f0c4a0a36d3a6063fe611e5bbd24626dfd8fc3164ce1da8",
+    "workbench/deploy/sql/bid-package-dependency-plan-runtime-grants.sql": "2c7170ac325fa3027aa137ad0934456c0b4a0a4298980caaaa672dc128da9a1c",
+    "workbench/packages/contracts/package-dependency-plans.md": "b7c0fca84ac232d03dfd0b945f055db2d2ef57066952b39e7ad95b58c740b229",
+    "workbench/packages/contracts/schemas/package-dependency-plan.schema.json": "4d20b264f1db9dd11e61a27ed7570e63efa298af2a6968cc949e1e1e82409bf8",
+    "workbench/packages/contracts/sql/bid-package-dependency-plans.sql": "443a3f1a82ef60120ffadfbd073623c2e98308792f2f6bdc5cf47715a5e41260",
+    "workbench/packages/domain/bid_package_dependency_plan_repository.py": "9afce15fb003b806bd589b27b0b773d9d7af3473570bb720b311d640e67016ed",
+    "workbench/packages/domain/bid_package_dependency_plans.py": "04b74f8554e67546547d839721b6a6720dcfcd2f3a20304ea26461dea3ac066b",
+    "workbench/packages/domain/package_dependency_plan.py": "cff98bb774d041fb589688b9fb60d77f4863bb18f93de0eecdba16ddefd57ca3",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "9e78887dcad1d1d47fb32ee23386477462cb7b8a45d2c07265b7e167de533c0c",
+    "workbench/tests/test_fusion_compose.py": "b04d4e2a2c022b722a348ed680b236c9c7c1f67732d9357871f1fb46c2a3d5fa",
+    "workbench/tests/test_initialize_database.py": "cbcaf97d7979ba7abb5cd4d5915f1f51c3f079ccebcd025aca0a93d426884ece",
+    "workbench/tests/test_package_dependency_plan.py": "d14e1fa8b3bb9b9f93fc4065fb668450c6e43a84f293636c55bc5f31aea8775d"
+  },
+  "evidence_sha256": {
+    "api-initial.log": "4858420b55cc04bc86b904c496e9e7182a5b9000cd3dd9e589352ecf6864a10b",
+    "api-initial.xml": "dcc0b1ca9b15c16d9c91a5d9d1666b0dd31145ac84e0a80bbec6395bdde02311",
+    "api.log": "deaf89d85603341df682d38854f15f672af1cc2c62238b546f7d062a4e1e242f",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "base-compose.log": "23cf327022b87d804ee5ae5babe04e2ae9dddb6646e202b501f856dddca72832",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "compose-pure.xml": "6000d317a5c4803d87ffffc5c785845933f5495835a417a08d7a0b2bca0cae25",
+    "database.json": "b546b468e90070c4c5a10ce3ce467feb4fca8df0fdf386b3e21b51f613291de7",
+    "deployment.json": "7c57a4af6819ea44cb3c416fbb30e844323610056f47e6f0ec8bf9908677e590",
+    "domain.log": "be886f156fd905ba5f1a86fd2a6928671dba9af5d6aaad50eaabad05bce6719f",
+    "domain.xml": "8dd0b2d3f062e761976cc2d3b19c4bcb6530fc9c66c292369afde66a011a0593",
+    "format.log": "38e84e0948ed804ef5b17840dd465124bf6e79a3716b4cdf09673cd6837f2df5",
+    "linux-pure.log": "34013ababfd681491f49b356ca9bdac0a27eefd0fec0147ca4135cf0674c176d",
+    "linux-pure.xml": "a8520b2d65a4b2b607e5674b7c842a59c670a441d6c371b0290ccc70e7f0edba",
+    "mypy.log": "718df785efbbd4b57e63b5f64aff2c5b5592e433447681f759b307f97a3ec96a",
+    "pre-deploy-v7.json": "57c799be8a7e575a6df15684416f0a57556eea23ad12305e7469dc9b309adb1c",
+    "requirements-api.xml": "ead3c4730167e1a7db7a71250726719ed2b2f0aa7c5ada3b13d9e0adda3a4e67",
+    "ruff.log": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+    "runtime-inputs.json": "7f5150057523ddc096ddec5ae6b4cc1c87ea0b72d4611e023d8f329f2c31beec",
+    "runtime-smoke.json": "6f4172ce09b81cf884668a904fc07734f7626e3f4916b09e6264e5e61ba9c8bf",
+    "services.txt": "8be487fc000b16677f0e83364463888b053792517ee3f45716d299ba31c00145"
+  },
+  "scope": "internal immutable dependency plan save/read and exact original ACK/audit; no new HTTP/UI, no current qualification or dispatch",
+  "deployed_database": "tender_checks_fusion_v8",
+  "runtime_files_verified": 864,
+  "frontend_changed": false,
+  "real_business_end_to_end_verified": false
+}

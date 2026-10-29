@@ -1,0 +1,17 @@
+{
+  "docker_engine": "unavailable",
+  "failure": "Secrets Engine cannot rename <HOME>/AppData/Local/docker-secrets-engine/engine.sock to engine.sock.stale; Windows error 1920",
+  "desktop_installation_reused": true,
+  "repair_attempts": [
+    "Started existing Desktop hidden; engine did not become available.",
+    "Stopped failed Desktop/backend processes and tried renaming runtime socket; OS rejected.",
+    "Tried removing same zero-byte reparse socket; OS rejected.",
+    "Verified runtime directory contains only engine.sock; atomic directory backup rename was denied. No successful deletion, move, ACL change or data reset."
+  ],
+  "existing_containers_or_volumes_deleted": false,
+  "api_suite_collected": 107,
+  "api_suite_executed": false,
+  "deployed": false,
+  "last_validated_app": "0c39284",
+  "needed": "Restore Docker Desktop engine, rerun fixed Compose requirements-api suite and verify cleanup before deployment."
+}

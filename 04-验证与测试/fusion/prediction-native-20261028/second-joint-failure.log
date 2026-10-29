@@ -1,0 +1,33 @@
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+________ test_real_outbox_kafka_worker_rejects_unconfigured_prediction _________
+tests/test_package_prediction_native_pg.py:201: in test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+    row = c.execute(
+.venv/lib/python3.12/site-packages/psycopg/connection.py:257: in execute
+    raise ex.with_traceback(None)
+E   psycopg.errors.UndefinedColumn: column "error_code" does not exist
+E   LINE 1: SELECT state,error_code FROM design.operations WHERE id=$1
+E                        ^
+----------------------------- Captured stderr call -----------------------------
+%4|1793175049.247|GETPID|rdkafka#producer-2| [thrd:main]: Failed to acquire idempotence PID from broker 127.0.0.1:33021/1: Broker: Coordinator load in progress: retrying
+=============================== warnings summary ===============================
+tests/test_package_prediction_native_pg.py::test_native_http_missing_certificate_never_queues
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_private_objects_roundtrip_and_corruption
+tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /workspace/scratch/tender-prediction-native-validation/joint.xml -
+=========================== short test summary info ============================
+FAILED tests/test_package_prediction_native_pg.py::test_real_outbox_kafka_worker_rejects_unconfigured_prediction
+1 failed, 4 passed, 9 warnings in 14.35s

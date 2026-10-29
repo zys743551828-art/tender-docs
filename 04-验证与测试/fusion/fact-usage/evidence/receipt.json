@@ -1,0 +1,32 @@
+{
+  "app_commit": "a449fe52425131f022f6f4558caee69aec3ea10e",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "domain.xml": {
+      "tests": 203,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/contracts/schemas/package-fact-usage.schema.json": "4d47ea42cb2c2884c22bf84a7fdb07fe1cfddf4678202e6443ad51b868579a2b",
+    "workbench/packages/domain/package_fact_usage.py": "8a3ef0bbf29a3bdf7c32e15144fb866f80cfaa26fbae0630e024d30e6c045c5f",
+    "workbench/tests/test_package_fact_usage.py": "ad62192ef4e2fbaaa25cc88342888240f2efe1e855c2b4ec9ab293032bc8abfe"
+  },
+  "evidence_sha256": {
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database.json": "246ade3f26281589253062ab9f70798f3e1042478b4c4cc81d532d3b55778ade",
+    "deployment.json": "2608fb628f441b4e44afd7bc58fd9b3a491427d41d2095fd26568096a6b914fe",
+    "domain.log": "5c537bc5aa79e964028564f7ca9238f1481dc2d13dfc449c870ae7d7cdb4fc67",
+    "domain.xml": "dcd994c53cbb00bcdf953af8428840a93aaa92fc39a4b24e9d5b9e3ad39c7260",
+    "format.log": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938",
+    "mypy.log": "8e63ae22e8213e327a5e9cbd584067681681bd8ef7f25c869877887ccdcfc4ff",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "runtime-inputs.json": "2ea96fb551de4c5d676a0d56ae0d07fdff3de19ad4c7604776ad58ed31905211",
+    "services.txt": "215dff7725189413c1ff136ff5c9730fe699c643dc2b7b4d0af6044d45e74f08"
+  },
+  "scope": "internal explicit selected-fact projection; required-fact assessment and worker admission not implemented",
+  "deployed_database": "tender_checks_fusion_v6",
+  "new_visual_acceptance": false
+}

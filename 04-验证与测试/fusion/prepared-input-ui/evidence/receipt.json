@@ -1,0 +1,36 @@
+{
+  "app_commit": "6765a8d4a962acce5bc951053de4be507eaef771",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "tests": 382,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_files_sha256": {
+    "workbench/apps/web/qa-previews/frozen-inputs/fixture.tsx": "8d30f7155aa39f666a30eb59e0cc22d885834502f65c98e8b0c2fb3bab39886f",
+    "workbench/apps/web/qa-previews/frozen-inputs/prepared.ts": "00ccb1e63bde9b0debfecfb601739e379eb473fac9c4a1b1d5af850938658b90",
+    "workbench/apps/web/src/PackageExecutionInputWorkspace.test.tsx": "9a36f2d74ef03901d79580bb1af49df1a7fa7d26a4debc855e15f060c467cd0f",
+    "workbench/apps/web/src/PackageExecutionInputWorkspace.tsx": "46fe808bd57daffb780a0b271af0a974ca998c17e3ecabfd2fbe1508c0c8b6ad",
+    "workbench/apps/web/src/PackageReviewEligibility.tsx": "8a5e9e1038bf4f73301eb48a42eaf9f7800643f87a385a8e6c49c53e38098089",
+    "workbench/apps/web/src/executionInputRecovery.ts": "0c97c0fae3b0fc797fbc1f038cc45508e5f8700afb17486666f820b763a46b51",
+    "workbench/apps/web/src/executionInputValidation.ts": "a1c71c7ff0f2cde5fb311cdd15f5ffccb6edcf8c296cafb59dfd06582635b2da",
+    "workbench/apps/web/src/packageFrozenInput.css": "b66e9190753280efdd90f942bba432cc4b4d9b7bdcfdedfdf1e27ad52b7b0542"
+  },
+  "evidence_sha256": {
+    "browser.json": "5631f8400d2ae6a47e6f9d630d2bb697db69ac0a6b58ea353fe2991e8a4ab34a",
+    "build.log": "e447285c45c2bd6085b2a5364f1ddd731f177e72d3e1ca186739e98eff7893bb",
+    "database.json": "cf2cb823f7328aa05026cd2a5f4835e80b347ba2f8dfedb822d6e86258ae88b4",
+    "deployment.json": "76a1085353c9f9c8b138ac6bacfeaeab6b0fd158be51f93cbe88273085cc05fe",
+    "format.log": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283",
+    "frontend.log": "06387c90d5a4bbcbc3b34b4551f7c1a9d7c2c0bcde57ea818b048f32f315d5b8",
+    "frontend.xml": "90443ec5288942831cd6728e0712af06103559161f21ba6954be8f84c46da0db",
+    "intermediate.json": "6129a9a896e4c562ef650a5c2d0f042ba33282a43b8263487c2cce25912d5133",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime-inputs.json": "bbb5fd95c6b934feb87b97a15b2e5d3e794479185ae07c680b1d096a92669212",
+    "services.txt": "7d3b92ad906bc6460c395be219aab90e8dccfb92dfcb0434a93a6cad3e4b90c0",
+    "typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "frontend prepared-input save/recovery/history; no backend or schema changes",
+  "visual_qa_pass": false
+}

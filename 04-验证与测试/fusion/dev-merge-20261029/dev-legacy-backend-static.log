@@ -1,0 +1,1010 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/batch/build_anchor_pack.py:27:1
+   |
+25 |       sys.path.insert(0, str(BACKEND / "src"))
+26 |
+27 | / from bidwb import parsing  # noqa: E402
+28 | | from bidwb.ai import anchors  # noqa: E402
+29 | | from bidwb.ai.sections import build_sections  # noqa: E402
+30 | | from bidwb.checks import Passage  # noqa: E402
+31 | |
+32 | | from tools.batch.predict_dataset import Sample, SampleError, load_dataset  # noqa: E402
+   | |_________________________________________________________________________^
+help: Organize imports
+   |
+26 |
+27 + from tools.batch.predict_dataset import Sample, SampleError, load_dataset  # noqa: E402
+28 +
+29 | from bidwb import parsing  # noqa: E402
+30 | from bidwb.ai import anchors  # noqa: E402
+31 | from bidwb.ai.sections import build_sections  # noqa: E402
+32 | from bidwb.checks import Passage  # noqa: E402
+   -
+   - from tools.batch.predict_dataset import Sample, SampleError, load_dataset  # noqa: E402
+33 |
+   |
+
+T201 `print` found
+  --> tools/batch/build_anchor_pack.py:75:9
+   |
+73 |         sections = sections_of(sample.body.path.read_bytes())
+74 |     except (SampleError, parsing.ParseError) as exc:
+75 |         print(f"  跳过 {sample.sample_id}：{exc}", file=sys.stderr)
+   |         ^^^^^
+76 |         return None
+77 |     if not sections:
+   |
+help: Remove `print`
+   |
+74 |     except (SampleError, parsing.ParseError) as exc:
+   -         print(f"  跳过 {sample.sample_id}：{exc}", file=sys.stderr)
+75 |         return None
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+  --> tools/batch/build_anchor_pack.py:78:9
+   |
+76 |         return None
+77 |     if not sections:
+78 |         print(f"  跳过 {sample.sample_id}：正文没有可用文字", file=sys.stderr)
+   |         ^^^^^
+79 |         return None
+80 |     raw = sample.raw
+   |
+help: Remove `print`
+   |
+77 |     if not sections:
+   -         print(f"  跳过 {sample.sample_id}：正文没有可用文字", file=sys.stderr)
+78 |         return None
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/batch/build_anchor_pack.py:119:5
+    |
+117 |     a.out.parent.mkdir(parents=True, exist_ok=True)
+118 |     a.out.write_text(json.dumps(pack, ensure_ascii=False) + "\n", encoding="utf-8")
+119 |     print(f"锚点 {len(pack['anchors'])} 份，pack_id {pack['pack_id'][:12]}，写入 {a.out}")
+    |     ^^^^^
+120 |     return 0
+    |
+help: Remove `print`
+    |
+118 |     a.out.write_text(json.dumps(pack, ensure_ascii=False) + "\n", encoding="utf-8")
+    -     print(f"锚点 {len(pack['anchors'])} 份，pack_id {pack['pack_id'][:12]}，写入 {a.out}")
+119 |     return 0
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/batch/predict_dataset.py:41:1
+   |
+39 |       sys.path.insert(0, str(BACKEND / "src"))
+40 |
+41 | / from fastapi.testclient import TestClient  # noqa: E402
+42 | | from sqlalchemy import create_engine, text  # noqa: E402
+43 | | from sqlalchemy.engine import make_url  # noqa: E402
+44 | |
+45 | | from bidwb import db, parsing  # noqa: E402
+46 | | from bidwb.ai import anchors, predict, prompts  # noqa: E402
+47 | | from bidwb.ai.handlers import RULES_BATCH, build_handlers  # noqa: E402
+48 | | from bidwb.ai.llm import LlmClient, LlmResult, Usage, build_llm  # noqa: E402
+49 | | from bidwb.ai.sections import build_sections  # noqa: E402
+50 | | from bidwb.api.app import create_app  # noqa: E402
+51 | | from bidwb.checks import Passage  # noqa: E402
+52 | | from bidwb.config import Settings  # noqa: E402
+53 | | from bidwb.messaging import InMemoryBus  # noqa: E402
+54 | | from bidwb.runtime import Container  # noqa: E402
+55 | | from bidwb.ai.anchors import Anchor, AnchorPack, LoadedPack, parse_pack  # noqa: E402
+56 | | from bidwb.services import auth as auth_service  # noqa: E402
+57 | | from bidwb.services import score_pairs  # noqa: E402
+58 | | from bidwb.storage import MemoryObjectStore, ObjectInfo, content_key  # noqa: E402
+59 | | from bidwb.workers.handlers import Handler, HandlerFailure, HandlerOutput, JobContext  # noqa: E402
+60 | | from bidwb.workers.loops import reap_forever, relay_forever  # noqa: E402
+61 | | from bidwb.workers.runner import WorkerRunner  # noqa: E402
+   | |_____________________________________________^
+62 |
+63 |   SCHEMA_IN = "score-pairs/1"
+   |
+help: Organize imports
+   |
+46 | from bidwb.ai import anchors, predict, prompts  # noqa: E402
+47 + from bidwb.ai.anchors import Anchor, AnchorPack, LoadedPack, parse_pack  # noqa: E402
+48 | from bidwb.ai.handlers import RULES_BATCH, build_handlers  # noqa: E402
+--------------------------------------------------------------------------------
+55 | from bidwb.runtime import Container  # noqa: E402
+   - from bidwb.ai.anchors import Anchor, AnchorPack, LoadedPack, parse_pack  # noqa: E402
+56 | from bidwb.services import auth as auth_service  # noqa: E402
+   |
+
+S608 Possible SQL injection vector through string-based query construction
+   --> tools/batch/predict_dataset.py:409:21
+    |
+407 |               conn.execute(
+408 |                   text(
+409 | /                     f"DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname='{self.WORKER_ROLE}') "
+410 | |                     f"THEN CREATE ROLE {self.WORKER_ROLE} LOGIN IN ROLE app_worker; END IF; END $$"
+    | |___________________________________________________________________________________________________^
+411 |                   )
+412 |               )
+    |
+
+T201 `print` found
+   --> tools/batch/predict_dataset.py:476:17
+    |
+474 |                     self.stop.wait(0.2)
+475 |             except Exception as exc:
+476 |                 print(f"worker 循环异常：{exc!r}", file=sys.stderr, flush=True)
+    |                 ^^^^^
+477 |                 self.stop.wait(1.0)
+    |
+help: Remove `print`
+    |
+475 |             except Exception as exc:
+    -                 print(f"worker 循环异常：{exc!r}", file=sys.stderr, flush=True)
+476 |                 self.stop.wait(1.0)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+S608 Possible SQL injection vector through string-based query construction
+   --> tools/batch/predict_dataset.py:511:21
+    |
+509 |                   rows = db.all_(
+510 |                       conn,
+511 | /                     f'SELECT a.object_key, a.sha256 FROM artifacts a JOIN "{col["table_name"]}" t ON a.id=t."{col["column_name"]}" '
+512 | |                     "WHERE t.project_id=:p",
+    | |___________________________________________^
+513 |                       {"p": project_id},
+514 |                   )
+    |
+
+T201 `print` found
+   --> tools/batch/predict_dataset.py:798:13
+    |
+796 |             rt.release_project(sample.sample_id, project_id)
+797 |         except Exception as exc:
+798 |             print(f"{sample.sample_id} 回收内存对象失败：{exc!r}", file=sys.stderr, flush=True)
+    |             ^^^^^
+799 |         record["finished_at"] = _now()
+800 |         record["failure_kind"] = failure_kind(record["error"]) if record["status"] != "succeeded" else None
+    |
+help: Remove `print`
+    |
+797 |         except Exception as exc:
+    -             print(f"{sample.sample_id} 回收内存对象失败：{exc!r}", file=sys.stderr, flush=True)
+798 +             pass
+799 |         record["finished_at"] = _now()
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+PLR0915 Too many statements (56 > 50)
+   --> tools/batch/predict_dataset.py:847:5
+    |
+847 | def estimate(samples: list[Sample], opts: Options, skipped: set[str], pack: AnchorPack | None = None) -> dict[str, Any]:
+    |     ^^^^^^^^
+848 |     docs: dict[str, _Doc] = {}
+849 |     seen_tender_sets: set[tuple[str, ...]] = set()
+    |
+
+T201 `print` found
+   --> tools/batch/predict_dataset.py:862:13
+    |
+860 |             sample.resolve_shas()
+861 |         except SampleError as exc:
+862 |             print(f"  {sample.sample_id}: 无法估算（{exc}）", flush=True)
+    |             ^^^^^
+863 |             continue
+864 |         if sample.body is None:
+    |
+help: Remove `print`
+    |
+861 |         except SampleError as exc:
+    -             print(f"  {sample.sample_id}: 无法估算（{exc}）", flush=True)
+862 |             continue
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+PLR0915 Too many statements (79 > 50)
+   --> tools/batch/predict_dataset.py:955:5
+    |
+955 | def run_batch(opts: Options, llm: LlmClient | None = None) -> Summary:
+    |     ^^^^^^^^^
+956 |     """批量运行；``llm`` 为空时按 ``BIDWB_LLM_*`` 构建真实模型客户端（测试注入脚本化模型）。"""
+957 |     started = time.monotonic()
+    |
+
+PLR0912 Too many branches (14 > 12)
+   --> tools/batch/predict_dataset.py:955:5
+    |
+955 | def run_batch(opts: Options, llm: LlmClient | None = None) -> Summary:
+    |     ^^^^^^^^^
+956 |     """批量运行；``llm`` 为空时按 ``BIDWB_LLM_*`` 构建真实模型客户端（测试注入脚本化模型）。"""
+957 |     started = time.monotonic()
+    |
+
+T201 `print` found
+    --> tools/batch/predict_dataset.py:1023:13
+     |
+1021 |             shown = f"{p.get('estimate')}/{p.get('maximum')}" if p.get("estimate") is not None else (record["error"] or "")[:160]
+1022 |             u = record["usage"]
+1023 |             print(
+     |             ^^^^^
+1024 |                 f"[{done[0]}/{len(todo)}] {sample.sample_id} {record['status']} {shown}"
+1025 |                 f"（调用 {u['calls']}，命中 {u['cache_hits']}；内存对象 {rt.store.bytes_held() / 1e6 if rt else 0:.1f} MB）",
+     |
+help: Remove `print`
+     |
+1022 |             u = record["usage"]
+     -             print(
+     -                 f"[{done[0]}/{len(todo)}] {sample.sample_id} {record['status']} {shown}"
+     -                 f"（调用 {u['calls']}，命中 {u['cache_hits']}；内存对象 {rt.store.bytes_held() / 1e6 if rt else 0:.1f} MB）",
+     -                 flush=True,
+     -             )
+1023 |
+     |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+    --> tools/batch/predict_dataset.py:1108:9
+     |
+1106 |     summary = run_batch(parse_args(argv), llm)
+1107 |     for line in summary.lines():
+1108 |         print(line, flush=True)
+     |         ^^^^^
+1109 |     return 1 if summary.failed else 0
+     |
+help: Remove `print`
+     |
+1107 |     for line in summary.lines():
+     -         print(line, flush=True)
+1108 +         pass
+1109 |     return 1 if summary.failed else 0
+     |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/export_contracts.py:116:13
+    |
+114 |     if args.check:
+115 |         for p in stale:
+116 |             print(f"与代码不一致：{p.relative_to(ROOT)}", file=sys.stderr)
+    |             ^^^^^
+117 |         return 1 if stale else 0
+118 |     for p in stale:
+    |
+help: Remove `print`
+    |
+115 |         for p in stale:
+    -             print(f"与代码不一致：{p.relative_to(ROOT)}", file=sys.stderr)
+116 +             pass
+117 |         return 1 if stale else 0
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/export_contracts.py:120:9
+    |
+118 |     for p in stale:
+119 |         p.write_text(outputs[p], encoding="utf-8")
+120 |         print(f"已更新 {p.relative_to(ROOT)}")
+    |         ^^^^^
+121 |     return 0
+    |
+help: Remove `print`
+    |
+119 |         p.write_text(outputs[p], encoding="utf-8")
+    -         print(f"已更新 {p.relative_to(ROOT)}")
+120 |     return 0
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/smoke/deployed_stack.py:7:1
+   |
+ 5 |   """
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import argparse
+10 | | import hashlib
+11 | | import io
+12 | | import json
+13 | | import time
+14 | | import uuid
+15 | | import zipfile
+16 | | from pathlib import Path
+17 | |
+18 | | import httpx
+19 | | import pypdfium2 as pdfium
+20 | |
+21 | | from tests.pdfs import make_pdf
+   | |_______________________________^
+help: Organize imports
+   |
+19 | import pypdfium2 as pdfium
+   -
+20 | from tests.pdfs import make_pdf
+   |
+
+PLR0912 Too many branches (18 > 12)
+  --> tools/smoke/deployed_stack.py:28:5
+   |
+28 | def run(args: argparse.Namespace) -> int:
+   |     ^^^
+29 |     args.out.mkdir(parents=True, exist_ok=True)
+30 |     with httpx.Client(base_url=args.base_url, timeout=180, trust_env=False) as api:
+   |
+
+PLR0915 Too many statements (79 > 50)
+  --> tools/smoke/deployed_stack.py:28:5
+   |
+28 | def run(args: argparse.Namespace) -> int:
+   |     ^^^
+29 |     args.out.mkdir(parents=True, exist_ok=True)
+30 |     with httpx.Client(base_url=args.base_url, timeout=180, trust_env=False) as api:
+   |
+
+T201 `print` found
+  --> tools/smoke/deployed_stack.py:53:9
+   |
+51 |         api.headers["X-CSRF-Token"] = login["csrf_token"]
+52 |         assert request("GET", "/me").json()["member_id"] == login["member_id"]
+53 |         print("登录与会话验证通过", flush=True)
+   |         ^^^^^
+54 |         if args.project_id:
+55 |             pid = args.project_id
+   |
+help: Remove `print`
+   |
+52 |         assert request("GET", "/me").json()["member_id"] == login["member_id"]
+   -         print("登录与会话验证通过", flush=True)
+53 |         if args.project_id:
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/deployed_stack.py:117:13
+    |
+115 |                 parts.append({"part_number": n, "etag": response.headers["ETag"]})
+116 |             request("POST", f"/uploads/{upload['upload_id']}/complete", {"sha256": digest, "parts": parts})
+117 |             print(f"{role} 真实 OSS 分片上传与提交通过", flush=True)
+    |             ^^^^^
+118 |         print(f"项目 {pid}", flush=True)
+119 |         if args.restart:
+    |
+help: Remove `print`
+    |
+116 |             request("POST", f"/uploads/{upload['upload_id']}/complete", {"sha256": digest, "parts": parts})
+    -             print(f"{role} 真实 OSS 分片上传与提交通过", flush=True)
+117 |         print(f"项目 {pid}", flush=True)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/deployed_stack.py:118:9
+    |
+116 |             request("POST", f"/uploads/{upload['upload_id']}/complete", {"sha256": digest, "parts": parts})
+117 |             print(f"{role} 真实 OSS 分片上传与提交通过", flush=True)
+118 |         print(f"项目 {pid}", flush=True)
+    |         ^^^^^
+119 |         if args.restart:
+120 |             request("POST", f"/projects/{pid}/analysis", {})
+    |
+help: Remove `print`
+    |
+117 |             print(f"{role} 真实 OSS 分片上传与提交通过", flush=True)
+    -         print(f"项目 {pid}", flush=True)
+118 |         if args.restart:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/deployed_stack.py:128:17
+    |
+126 |             state = [(step["key"], step["state"]) for step in pipeline["steps"]]
+127 |             if state != previous:
+128 |                 print(json.dumps({"stage": pipeline["stage"], "steps": state}, ensure_ascii=False), flush=True)
+    |                 ^^^^^
+129 |                 previous = state
+130 |             if any(step["state"] == "failed" for step in pipeline["steps"]):
+    |
+help: Remove `print`
+    |
+127 |             if state != previous:
+    -                 print(json.dumps({"stage": pipeline["stage"], "steps": state}, ensure_ascii=False), flush=True)
+128 |                 previous = state
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/deployed_stack.py:155:9
+    |
+153 |             assert len(document) == 3
+154 |         (args.out / "body.annotated.pdf").write_bytes(pdf)
+155 |         print(
+    |         ^^^^^
+156 |             json.dumps(
+157 |                 {
+    |
+help: Remove `print`
+    |
+154 |         (args.out / "body.annotated.pdf").write_bytes(pdf)
+    -         print(
+    -             json.dumps(
+    -                 {
+    -                     "result": "passed",
+    -                     "project_id": pid,
+    -                     "prediction_status": report["prediction"]["status"],
+    -                     "categories": report["categories"],
+    -                     "exports": ["docx", "pdf"],
+    -                 },
+    -                 ensure_ascii=False,
+    -             ),
+    -             flush=True,
+    -         )
+155 |         request("POST", "/auth/logout")
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/e2e.py:101:5
+    |
+100 | if errors:
+101 |     print("ERRORS:\n" + "\n".join(errors))
+    |     ^^^^^
+102 |     sys.exit(1)
+103 | print("E2E OK")
+    |
+help: Remove `print`
+    |
+100 | if errors:
+    -     print("ERRORS:\n" + "\n".join(errors))
+101 |     sys.exit(1)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+   --> tools/smoke/e2e.py:103:1
+    |
+101 |     print("ERRORS:\n" + "\n".join(errors))
+102 |     sys.exit(1)
+103 | print("E2E OK")
+    | ^^^^^
+help: Remove `print`
+    |
+102 |     sys.exit(1)
+    - print("E2E OK")
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+E401 [*] Multiple imports on one line
+ --> tools/smoke/smoke_server.py:5:1
+  |
+3 | 播种项目与两份资料后，自动评审流水线在进程内跑完，浏览器直接从评审报告开始操作。
+4 | """
+5 | import os, subprocess, sys, threading, time, uuid
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6 | from pathlib import Path
+  |
+help: Split imports
+   |
+4  | """
+   - import os, subprocess, sys, threading, time, uuid
+5  + import os
+6  + import subprocess
+7  + import sys
+8  + import threading
+9  + import time
+10 + import uuid
+11 | from pathlib import Path
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> tools/smoke/smoke_server.py:5:1
+  |
+3 |   播种项目与两份资料后，自动评审流水线在进程内跑完，浏览器直接从评审报告开始操作。
+4 |   """
+5 | / import os, subprocess, sys, threading, time, uuid
+6 | | from pathlib import Path
+  | |________________________^
+7 |
+8 |   BACKEND = Path(__file__).resolve().parents[2]
+  |
+help: Organize imports
+   |
+4  | """
+   - import os, subprocess, sys, threading, time, uuid
+5  + import os
+6  + import subprocess
+7  + import sys
+8  + import threading
+9  + import time
+10 + import uuid
+11 | from pathlib import Path
+   |
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:11:1
+   |
+ 9 | sys.path.insert(0, str(BACKEND))
+10 | os.chdir(BACKEND)
+11 | import uvicorn
+   | ^^^^^^^^^^^^^^
+12 | from fastapi.testclient import TestClient
+13 | from sqlalchemy import create_engine, text
+   |
+help: Move module level imports to top of file
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/smoke/smoke_server.py:11:1
+   |
+ 9 |   sys.path.insert(0, str(BACKEND))
+10 |   os.chdir(BACKEND)
+11 | / import uvicorn
+12 | | from fastapi.testclient import TestClient
+13 | | from sqlalchemy import create_engine, text
+14 | | from sqlalchemy.engine import make_url
+15 | |
+16 | | from bidwb import db, tasks
+17 | | from bidwb.ai.handlers import build_handlers
+18 | | from bidwb.api.app import create_app
+19 | | from bidwb.config import Settings
+20 | | from bidwb.messaging import InMemoryBus
+21 | | from bidwb.runtime import Container
+22 | | from bidwb.services import auth as auth_service
+23 | | from bidwb.storage import MemoryObjectStore
+24 | | from bidwb.workers.runner import WorkerRunner
+25 | | from tests.conftest import ADMIN_DSN, PASSWORD
+26 | | from tests.fakes import ScriptedLlm
+27 | | from tests.pdfs import make_pdf
+28 | | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+29 | | from tests.test_files_and_parse import PROJECT, _upload
+   | |_______________________________________________________^
+30 |
+31 |   admin = create_engine(ADMIN_DSN, isolation_level="AUTOCOMMIT")
+   |
+help: Organize imports
+   |
+14 | from sqlalchemy.engine import make_url
+15 + from tests.conftest import ADMIN_DSN, PASSWORD
+16 + from tests.fakes import ScriptedLlm
+17 + from tests.pdfs import make_pdf
+18 + from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+19 + from tests.test_files_and_parse import PROJECT, _upload
+20 |
+--------------------------------------------------------------------------------
+29 | from bidwb.workers.runner import WorkerRunner
+   - from tests.conftest import ADMIN_DSN, PASSWORD
+   - from tests.fakes import ScriptedLlm
+   - from tests.pdfs import make_pdf
+   - from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+   - from tests.test_files_and_parse import PROJECT, _upload
+30 |
+   |
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:12:1
+   |
+10 | os.chdir(BACKEND)
+11 | import uvicorn
+12 | from fastapi.testclient import TestClient
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+13 | from sqlalchemy import create_engine, text
+14 | from sqlalchemy.engine import make_url
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:13:1
+   |
+11 | import uvicorn
+12 | from fastapi.testclient import TestClient
+13 | from sqlalchemy import create_engine, text
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+14 | from sqlalchemy.engine import make_url
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:14:1
+   |
+12 | from fastapi.testclient import TestClient
+13 | from sqlalchemy import create_engine, text
+14 | from sqlalchemy.engine import make_url
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+15 |
+16 | from bidwb import db, tasks
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:16:1
+   |
+14 | from sqlalchemy.engine import make_url
+15 |
+16 | from bidwb import db, tasks
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+17 | from bidwb.ai.handlers import build_handlers
+18 | from bidwb.api.app import create_app
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:17:1
+   |
+16 | from bidwb import db, tasks
+17 | from bidwb.ai.handlers import build_handlers
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18 | from bidwb.api.app import create_app
+19 | from bidwb.config import Settings
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:18:1
+   |
+16 | from bidwb import db, tasks
+17 | from bidwb.ai.handlers import build_handlers
+18 | from bidwb.api.app import create_app
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+19 | from bidwb.config import Settings
+20 | from bidwb.messaging import InMemoryBus
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:19:1
+   |
+17 | from bidwb.ai.handlers import build_handlers
+18 | from bidwb.api.app import create_app
+19 | from bidwb.config import Settings
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+20 | from bidwb.messaging import InMemoryBus
+21 | from bidwb.runtime import Container
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:20:1
+   |
+18 | from bidwb.api.app import create_app
+19 | from bidwb.config import Settings
+20 | from bidwb.messaging import InMemoryBus
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+21 | from bidwb.runtime import Container
+22 | from bidwb.services import auth as auth_service
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:21:1
+   |
+19 | from bidwb.config import Settings
+20 | from bidwb.messaging import InMemoryBus
+21 | from bidwb.runtime import Container
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+22 | from bidwb.services import auth as auth_service
+23 | from bidwb.storage import MemoryObjectStore
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:22:1
+   |
+20 | from bidwb.messaging import InMemoryBus
+21 | from bidwb.runtime import Container
+22 | from bidwb.services import auth as auth_service
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+23 | from bidwb.storage import MemoryObjectStore
+24 | from bidwb.workers.runner import WorkerRunner
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:23:1
+   |
+21 | from bidwb.runtime import Container
+22 | from bidwb.services import auth as auth_service
+23 | from bidwb.storage import MemoryObjectStore
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+24 | from bidwb.workers.runner import WorkerRunner
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:24:1
+   |
+22 | from bidwb.services import auth as auth_service
+23 | from bidwb.storage import MemoryObjectStore
+24 | from bidwb.workers.runner import WorkerRunner
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+26 | from tests.fakes import ScriptedLlm
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:25:1
+   |
+23 | from bidwb.storage import MemoryObjectStore
+24 | from bidwb.workers.runner import WorkerRunner
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+26 | from tests.fakes import ScriptedLlm
+27 | from tests.pdfs import make_pdf
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:26:1
+   |
+24 | from bidwb.workers.runner import WorkerRunner
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+26 | from tests.fakes import ScriptedLlm
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+27 | from tests.pdfs import make_pdf
+28 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:27:1
+   |
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+26 | from tests.fakes import ScriptedLlm
+27 | from tests.pdfs import make_pdf
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+28 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+29 | from tests.test_files_and_parse import PROJECT, _upload
+   |
+help: Move module level imports to top of file
+
+F401 [*] `tests.pdfs.make_pdf` imported but unused
+  --> tools/smoke/smoke_server.py:27:24
+   |
+25 | from tests.conftest import ADMIN_DSN, PASSWORD
+26 | from tests.fakes import ScriptedLlm
+27 | from tests.pdfs import make_pdf
+   |                        ^^^^^^^^
+28 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+29 | from tests.test_files_and_parse import PROJECT, _upload
+   |
+help: Remove unused import: `tests.pdfs.make_pdf`
+   |
+26 | from tests.fakes import ScriptedLlm
+   - from tests.pdfs import make_pdf
+27 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+   |
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:28:1
+   |
+26 | from tests.fakes import ScriptedLlm
+27 | from tests.pdfs import make_pdf
+28 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+29 | from tests.test_files_and_parse import PROJECT, _upload
+   |
+help: Move module level imports to top of file
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:29:1
+   |
+27 | from tests.pdfs import make_pdf
+28 | from tests.test_auto_pipeline import BODY, LATE, TENDER, _respond
+29 | from tests.test_files_and_parse import PROJECT, _upload
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+30 |
+31 | admin = create_engine(ADMIN_DSN, isolation_level="AUTOCOMMIT")
+   |
+help: Move module level imports to top of file
+
+S106 Possible hardcoded password assigned to argument: "password"
+  --> tools/smoke/smoke_server.py:40:57
+   |
+38 | with create_engine(url, isolation_level="AUTOCOMMIT").connect() as c:
+39 |     c.execute(text("DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname='smoke_worker') THEN CREATE ROLE smoke_worker LOGI…
+40 | worker_url = make_url(url).set(username="smoke_worker", password="w").render_as_string(hide_password=False)
+   |                                                         ^^^^^^^^^^^^
+41 |
+42 | settings = Settings(
+   |
+
+E402 Module level import not at top of file
+  --> tools/smoke/smoke_server.py:54:1
+   |
+53 | # 播种：项目 + 招标文件 + 正文（走真实上传接口）
+54 | from tests.conftest import Api
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+55 | lead = Api(TestClient(app, base_url="http://x")).login("demo")
+56 | pid = lead.post("/projects", PROJECT).json()["project_id"]
+   |
+help: Move module level imports to top of file
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tools/smoke/smoke_server.py:54:1
+   |
+53 | # 播种：项目 + 招标文件 + 正文（走真实上传接口）
+54 | from tests.conftest import Api
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+55 | lead = Api(TestClient(app, base_url="http://x")).login("demo")
+56 | pid = lead.post("/projects", PROJECT).json()["project_id"]
+   |
+help: Organize imports
+   |
+54 | from tests.conftest import Api
+55 +
+56 | lead = Api(TestClient(app, base_url="http://x")).login("demo")
+   |
+
+PLC0415 `import` should be at the top-level of a file
+  --> tools/smoke/smoke_server.py:64:5
+   |
+62 | def _revise(system, user):
+63 |     """改稿建议：把超期的总工期改成满足要求的写法。"""
+64 |     from tests.fakes import docs
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+65 |
+66 |     finding = user.split("[")[1].split("]", maxsplit=1)[0]
+   |
+
+T201 `print` found
+  --> tools/smoke/smoke_server.py:84:13
+   |
+82 |                     pass
+83 |         except Exception as e:
+84 |             print("pump error", repr(e), flush=True)
+   |             ^^^^^
+85 |         time.sleep(0.3)
+86 | threading.Thread(target=pump, daemon=True).start()
+   |
+help: Remove `print`
+   |
+83 |         except Exception as e:
+   -             print("pump error", repr(e), flush=True)
+84 +             pass
+85 |         time.sleep(0.3)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+T201 `print` found
+  --> tools/smoke/smoke_server.py:87:1
+   |
+85 |         time.sleep(0.3)
+86 | threading.Thread(target=pump, daemon=True).start()
+87 | print("READY project", pid, flush=True)
+   | ^^^^^
+88 | uvicorn.run(app, host="127.0.0.1", port=8000, log_level="warning")
+   |
+help: Remove `print`
+   |
+86 | threading.Thread(target=pump, daemon=True).start()
+   - print("READY project", pid, flush=True)
+87 | uvicorn.run(app, host="127.0.0.1", port=8000, log_level="warning")
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 55 errors.
+[*] 8 fixable with `--fix` (19 unsafe fixes available with `--fix --unsafe-fixes`).
+unformatted: File would be reformatted
+    --> tools/batch/predict_dataset.py:715:27
+     |
+714  | _INPUT_ERRORS = ("missing_file", "sha256_mismatch", "parse_unreadable", "parse_unsupported", "body_has_no_evidence", "no_evidence")
+     - _INFRASTRUCTURE_ERRORS = ("timeout", "tool_error", "worker_error", "llm_not_configured", "unavailable", "provider_", "lease", "GET ", "POST ")
+715  + _INFRASTRUCTURE_ERRORS = (
+716  +     "timeout",
+717  +     "tool_error",
+718  +     "worker_error",
+719  +     "llm_not_configured",
+720  +     "unavailable",
+721  +     "provider_",
+722  +     "lease",
+723  +     "GET ",
+724  +     "POST ",
+725  + )
+726  |
+--------------------------------------------------------------------------------
+901  |             calls["prediction"] += mapping_calls + scoring * repeats * (1 + reading_calls)
+     -             tokens_in += (mapping_in + scoring * repeats * (judge_in + reading_calls * TEMPLATE_CHARS + (predict.SYNTHESIS_CHARS if reading_calls else 0))) * TOKENS_PER_CHAR
+902  +             tokens_in += (
+903  +                 mapping_in
+904  +                 + scoring * repeats * (judge_in + reading_calls * TEMPLATE_CHARS + (predict.SYNTHESIS_CHARS if reading_calls else 0))
+905  +             ) * TOKENS_PER_CHAR
+906  |             tokens_out += mapping_calls * OUT_MAPPING + scoring * repeats * (1 + reading_calls) * OUT_JUDGEMENT
+--------------------------------------------------------------------------------
+1046 |     if any(s.sample_id not in errors for s, _ in todo):  # 只有预检失败的样本时不必建库
+     -         rt = Runtime(
+     -             opts.admin_dsn, cached, concurrency=opts.concurrency, keep_db=opts.keep_db, log_level=opts.log_level, anchor_pack=pack
+     -         )
+1047 +         rt = Runtime(opts.admin_dsn, cached, concurrency=opts.concurrency, keep_db=opts.keep_db, log_level=opts.log_level, anchor_pack=pack)
+1048 |         summary.db_name = rt.db_name
+--------------------------------------------------------------------------------
+1082 |     p.add_argument("--price-per-mtok-out", type=float, help="每百万输出 token 价格")
+     -     p.add_argument(
+     -         "--repeat-index", type=int, default=0, help="运行序号（默认 0）：换一个序号即整批重跑、互不命中缓存，用于测量稳定性"
+     -     )
+     -     p.add_argument(
+     -         "--anchor-pack", type=Path, help="比较锚点包（anchor-pack/1）：直接使用，不经登记与路由；与样本同一模板组的锚点一律不用"
+     -     )
+1083 +     p.add_argument("--repeat-index", type=int, default=0, help="运行序号（默认 0）：换一个序号即整批重跑、互不命中缓存，用于测量稳定性")
+1084 +     p.add_argument("--anchor-pack", type=Path, help="比较锚点包（anchor-pack/1）：直接使用，不经登记与路由；与样本同一模板组的锚点一律不用")
+1085 |     a = p.parse_args(argv)
+     |
+
+unformatted: File would be reformatted
+   --> tools/smoke/e2e.py:93:34
+   |
+92 |     # 窄屏：逐条响应变成卡片，没有横向滚动
+   -     mobile = browser.new_context(viewport={"width": 390, "height": 844}, locale="zh-CN", storage_state=page.context.storage_state()).new_page()
+93 +     mobile = browser.new_context(
+94 +         viewport={"width": 390, "height": 844}, locale="zh-CN", storage_state=page.context.storage_state()
+95 +     ).new_page()
+96 |     mobile.goto(f"{BASE}/projects/{PID}")
+   |
+
+unformatted: File would be reformatted
+   --> tools/smoke/smoke_server.py:5:1
+    |
+4   | """
+5   +
+6   | import os, subprocess, sys, threading, time, uuid
+--------------------------------------------------------------------------------
+39  | with create_engine(url, isolation_level="AUTOCOMMIT").connect() as c:
+    -     c.execute(text("DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname='smoke_worker') THEN CREATE ROLE smoke_worker LOGIN PASSWORD 'w' IN ROLE app_worker; END IF; END $$"))
+40  +     c.execute(
+41  +         text(
+42  +             "DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname='smoke_worker') THEN CREATE ROLE smoke_worker LOGIN PASSWORD 'w' IN ROLE app_worker; END IF; END $$"
+43  +         )
+44  +     )
+45  | worker_url = make_url(url).set(username="smoke_worker", password="w").render_as_string(hide_password=False)
+--------------------------------------------------------------------------------
+59  | from tests.conftest import Api
+60  +
+61  | lead = Api(TestClient(app, base_url="http://x")).login("demo")
+62  | pid = lead.post("/projects", PROJECT).json()["project_id"]
+63  | _upload(lead, store, pid, TENDER)
+64  | _upload(lead, store, pid, BODY, name="施工组织设计.pdf", role="body", key="body-upload-0001")
+    -
+65  |
+--------------------------------------------------------------------------------
+72  |     evidence = next(i for i in docs(user) if LATE in i[1])[0]
+    -     return {"edits": [{"evidence_id": evidence, "original": LATE, "replacement": "计划总工期为一百七十日历天", "finding_id": finding, "facts_used": [], "note": ""}]}
+73  +     return {
+74  +         "edits": [
+75  +             {
+76  +                 "evidence_id": evidence,
+77  +                 "original": LATE,
+78  +                 "replacement": "计划总工期为一百七十日历天",
+79  +                 "finding_id": finding,
+80  +                 "facts_used": [],
+81  +                 "note": "",
+82  +             }
+83  +         ]
+84  +     }
+85  |
+86  |
+    - llm = ScriptedLlm(lambda s, u: _respond(s, u) if ("合规检查员" in s or "抽取员" in s or "评标专家" in s or "目录分析员" in s) else _revise(s, u))
+87  + llm = ScriptedLlm(
+88  +     lambda s, u: _respond(s, u) if ("合规检查员" in s or "抽取员" in s or "评标专家" in s or "目录分析员" in s) else _revise(s, u)
+89  + )
+90  | bus = InMemoryBus()
+    - runners = [WorkerRunner(w_ctr, "parse", bus.consumer(["job.parse"]), build_handlers(llm), consumer_name="smoke-parse"),
+    -            WorkerRunner(w_ctr, "ai", bus.consumer(["job.ai"]), build_handlers(llm), consumer_name="smoke-ai")]
+91  + runners = [
+92  +     WorkerRunner(w_ctr, "parse", bus.consumer(["job.parse"]), build_handlers(llm), consumer_name="smoke-parse"),
+93  +     WorkerRunner(w_ctr, "ai", bus.consumer(["job.ai"]), build_handlers(llm), consumer_name="smoke-ai"),
+94  + ]
+95  +
+96  +
+97  | def pump():
+--------------------------------------------------------------------------------
+107 |         time.sleep(0.3)
+108 +
+109 +
+110 | threading.Thread(target=pump, daemon=True).start()
+    |
+
+3 files would be reformatted, 134 files already formatted
+Success: no issues found in 82 source files

@@ -1,0 +1,759 @@
+{
+  "tests": 7086,
+  "passed": 4656,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 2430,
+  "skip_reasons": [
+    {
+      "reason": "Dedicated disposable fusion_budget_lock database required",
+      "count": 11
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_aggregate database required",
+      "count": 16
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_live database required",
+      "count": 25
+    },
+    {
+      "reason": "Explicit disposable fusion_budget_target database required",
+      "count": 14
+    },
+    {
+      "reason": "Explicit disposable reconciliation PG17 DSN required",
+      "count": 55
+    },
+    {
+      "reason": "Explicit disposable reconciliation PG17 DSN required; no production access",
+      "count": 66
+    },
+    {
+      "reason": "Explicit fresh assistant01 real PG opt-in; zero paid calls",
+      "count": 28
+    },
+    {
+      "reason": "Explicit fresh closure schema opt-in",
+      "count": 7
+    },
+    {
+      "reason": "Explicit fresh complete-A2 restricted PG profile required",
+      "count": 14
+    },
+    {
+      "reason": "Explicit fresh reviewed RICH nonowner profile required",
+      "count": 20
+    },
+    {
+      "reason": "Explicit fresh reviewed application DB only",
+      "count": 4
+    },
+    {
+      "reason": "Explicit isolated PG opt-in",
+      "count": 3
+    },
+    {
+      "reason": "Explicit isolated PG17 owner bootstrap URI required",
+      "count": 25
+    },
+    {
+      "reason": "Explicit isolated fresh PG and approved PAGE sandbox required; no paid calls",
+      "count": 4
+    },
+    {
+      "reason": "Explicit isolated nonowner DB",
+      "count": 2
+    },
+    {
+      "reason": "Explicit isolated nonowner PG opt-in",
+      "count": 14
+    },
+    {
+      "reason": "Explicit isolated nonowner PG test only",
+      "count": 4
+    },
+    {
+      "reason": "Explicit nonowner PG integration profile required",
+      "count": 11
+    },
+    {
+      "reason": "Explicit nonowner PG only",
+      "count": 1
+    },
+    {
+      "reason": "Explicit nonowner PG opt-in; no model/OSS calls",
+      "count": 20
+    },
+    {
+      "reason": "Explicit nonowner isolated PG opt-in",
+      "count": 6
+    },
+    {
+      "reason": "Explicit nonowner profile without release extension only",
+      "count": 1
+    },
+    {
+      "reason": "Explicit real local LibreOffice and frozen CJK font required",
+      "count": 1
+    },
+    {
+      "reason": "Explicit real local model/PG opt-in",
+      "count": 3
+    },
+    {
+      "reason": "Explicit real model/PG opt-in",
+      "count": 6
+    },
+    {
+      "reason": "Explicit restricted PG opt-in",
+      "count": 1
+    },
+    {
+      "reason": "Historical recovery archive is external to this checkout; set RUN_ARCHIVED_RECOVERY=1 with the original verified archive mounted. This is not a passed archive-recovery acceptance.",
+      "count": 6
+    },
+    {
+      "reason": "Isolated PG opt-in",
+      "count": 10
+    },
+    {
+      "reason": "Isolated nonowner PG only",
+      "count": 5
+    },
+    {
+      "reason": "Isolated reviewed nonowner Word/application DB only",
+      "count": 9
+    },
+    {
+      "reason": "Needs NEW reviewed fresh input DB and local parser environment",
+      "count": 1
+    },
+    {
+      "reason": "Needs fresh reviewed FR029 SQL and independent API/research/train/evaluate LOGINs; never owner business",
+      "count": 13
+    },
+    {
+      "reason": "Needs independent nonowner API LOGIN on a schema without new model governance SQL",
+      "count": 1
+    },
+    {
+      "reason": "New reviewed 19SQL explicit profile only",
+      "count": 2
+    },
+    {
+      "reason": "Old 17SQL explicit profile only",
+      "count": 1
+    },
+    {
+      "reason": "Read-only nonowner old schema; never writes session/fixtures or applies SQL",
+      "count": 1
+    },
+    {
+      "reason": "Read-only old-schema API-role probe, no fixtures/DDL",
+      "count": 1
+    },
+    {
+      "reason": "Real local BGE/PG opt-in",
+      "count": 1
+    },
+    {
+      "reason": "Requires NEW reviewed complete release-extension DB; never applies DDL",
+      "count": 3
+    },
+    {
+      "reason": "Requires PM NEW fresh reviewed historical input SQL; never patches an existing DB",
+      "count": 8
+    },
+    {
+      "reason": "Requires PM NEW statically approved fresh score DB + purpose-only score profile",
+      "count": 17
+    },
+    {
+      "reason": "Requires PM fresh historical E; no DDL or external calls",
+      "count": 10
+    },
+    {
+      "reason": "Requires explicit isolated PG fixture database",
+      "count": 5
+    },
+    {
+      "reason": "Requires new reviewed B database; no patch/DDL/Docker",
+      "count": 5
+    },
+    {
+      "reason": "Requires separately fresh reviewed C",
+      "count": 11
+    },
+    {
+      "reason": "Separate actual old-schema probe",
+      "count": 1
+    },
+    {
+      "reason": "Word fresh库的受限PG机制",
+      "count": 2
+    },
+    {
+      "reason": "Word fresh非owner角色库",
+      "count": 7
+    },
+    {
+      "reason": "explicit actual trusted-host program execution required",
+      "count": 1
+    },
+    {
+      "reason": "explicit disposable extended recovery PG/S3 required",
+      "count": 6
+    },
+    {
+      "reason": "explicit disposable native PG17 and synthetic loopback S3 profile required",
+      "count": 1
+    },
+    {
+      "reason": "explicit disposable prediction PG17 cluster required",
+      "count": 6
+    },
+    {
+      "reason": "explicit fresh PG17 public history UI acceptance required",
+      "count": 5
+    },
+    {
+      "reason": "explicit fresh native judgment-job fixture required",
+      "count": 22
+    },
+    {
+      "reason": "explicit fresh synthetic transport-faults native launcher required",
+      "count": 4
+    },
+    {
+      "reason": "explicit grouped complete model material required",
+      "count": 2
+    },
+    {
+      "reason": "explicit grouped current material required",
+      "count": 17
+    },
+    {
+      "reason": "explicit grouped evidence findings required",
+      "count": 1
+    },
+    {
+      "reason": "explicit grouped independent source PG required",
+      "count": 37
+    },
+    {
+      "reason": "explicit grouped isolated original locator check required",
+      "count": 28
+    },
+    {
+      "reason": "explicit grouped joint scope review required",
+      "count": 13
+    },
+    {
+      "reason": "explicit grouped live context derivation required",
+      "count": 3
+    },
+    {
+      "reason": "explicit grouped native cost preview required",
+      "count": 1
+    },
+    {
+      "reason": "explicit grouped native current material and issuer verification required",
+      "count": 22
+    },
+    {
+      "reason": "explicit grouped native current scope required",
+      "count": 21
+    },
+    {
+      "reason": "explicit grouped native evidence recovery required",
+      "count": 13
+    },
+    {
+      "reason": "explicit grouped native recovery required",
+      "count": 9
+    },
+    {
+      "reason": "explicit grouped native scope review required",
+      "count": 3
+    },
+    {
+      "reason": "explicit grouped native-evidence issuer verification required",
+      "count": 30
+    },
+    {
+      "reason": "explicit grouped pending registration required",
+      "count": 26
+    },
+    {
+      "reason": "explicit grouped private native material store required",
+      "count": 27
+    },
+    {
+      "reason": "explicit grouped synthetic issuer checks required",
+      "count": 31
+    },
+    {
+      "reason": "explicit grouped v2 native evidence registration required",
+      "count": 23
+    },
+    {
+      "reason": "explicit grouped verification command checks required",
+      "count": 25
+    },
+    {
+      "reason": "explicit isolated Compose history dispatcher acceptance required",
+      "count": 4
+    },
+    {
+      "reason": "explicit isolated PG17 and real S3 required",
+      "count": 24
+    },
+    {
+      "reason": "explicit isolated PG17 technical-scope fixture required",
+      "count": 1
+    },
+    {
+      "reason": "explicit isolated PG17/nonowner history acceptance required",
+      "count": 22
+    },
+    {
+      "reason": "explicit isolated material dispatch native fixture required",
+      "count": 11
+    },
+    {
+      "reason": "explicit isolated material execution native fixture required",
+      "count": 16
+    },
+    {
+      "reason": "explicit isolated native OSS profile required; creates only synthetic own keys",
+      "count": 1
+    },
+    {
+      "reason": "explicit isolated native original set required",
+      "count": 9
+    },
+    {
+      "reason": "explicit isolated native qualification/job/budget PG17 fixture required",
+      "count": 11
+    },
+    {
+      "reason": "explicit isolated real Kafka bootstrap required",
+      "count": 2
+    },
+    {
+      "reason": "explicit isolated real backup/restore profile required",
+      "count": 1
+    },
+    {
+      "reason": "explicit local PG profile required; no remote object calls",
+      "count": 1
+    },
+    {
+      "reason": "explicit local nginx/setpriv platform acceptance required",
+      "count": 3
+    },
+    {
+      "reason": "explicit native authority fixture required",
+      "count": 38
+    },
+    {
+      "reason": "explicit native input seal fixture required",
+      "count": 30
+    },
+    {
+      "reason": "explicit native material request preflight fixture required",
+      "count": 4
+    },
+    {
+      "reason": "explicit native quote fixture required",
+      "count": 36
+    },
+    {
+      "reason": "explicit native renewal fixture required",
+      "count": 19
+    },
+    {
+      "reason": "explicit native verification program fixture required",
+      "count": 32
+    },
+    {
+      "reason": "explicit new native full-runtime launcher required",
+      "count": 5
+    },
+    {
+      "reason": "explicit owned preparation native fixture required",
+      "count": 21
+    },
+    {
+      "reason": "explicit separate F06 native PG17 required",
+      "count": 29
+    },
+    {
+      "reason": "explicit trusted host and grouped isolated PG checks required",
+      "count": 7
+    },
+    {
+      "reason": "explicit trusted host native private store integration required",
+      "count": 1
+    },
+    {
+      "reason": "fresh F06 BASE-only database explicitly required",
+      "count": 2
+    },
+    {
+      "reason": "fresh disposable PG17 complete-material history reader opt-in required",
+      "count": 3
+    },
+    {
+      "reason": "fresh disposable PG17 feature evaluation opt-in required",
+      "count": 3
+    },
+    {
+      "reason": "fresh disposable PG17 final prediction extension opt-in required",
+      "count": 2
+    },
+    {
+      "reason": "fresh disposable PG17 fixed feature dispatcher opt-in required",
+      "count": 3
+    },
+    {
+      "reason": "fresh isolated metadata directory database required",
+      "count": 5
+    },
+    {
+      "reason": "fresh isolated optional F06 authority PG required",
+      "count": 5
+    },
+    {
+      "reason": "fresh isolated package history cluster required",
+      "count": 17
+    },
+    {
+      "reason": "fresh isolated reconciliation database explicitly required",
+      "count": 17
+    },
+    {
+      "reason": "fresh reviewed optional exposure bridge database required",
+      "count": 13
+    },
+    {
+      "reason": "grouped isolated PostgreSQL required",
+      "count": 5
+    },
+    {
+      "reason": "isolated PG17 nonowner adoption fixture required",
+      "count": 5
+    },
+    {
+      "reason": "isolated PG17 standalone parse fixture required",
+      "count": 14
+    },
+    {
+      "reason": "isolated actual nonowner F04 PG17",
+      "count": 15
+    },
+    {
+      "reason": "isolated nonowner F05 PG17 required",
+      "count": 15
+    },
+    {
+      "reason": "isolated nonowner PostgreSQL required for exact native decimal ACK",
+      "count": 1
+    },
+    {
+      "reason": "isolated nonowner exact package task PG17 required",
+      "count": 23
+    },
+    {
+      "reason": "isolated nonowner package outcome PG17 required",
+      "count": 21
+    },
+    {
+      "reason": "isolated nonowner package pricing PG required",
+      "count": 9
+    },
+    {
+      "reason": "isolated nonowner package shared-consumer PG17 required",
+      "count": 5
+    },
+    {
+      "reason": "isolated nonowner retrospective PG17 required",
+      "count": 20
+    },
+    {
+      "reason": "isolated nonowner submission preflight PG17 required",
+      "count": 12
+    },
+    {
+      "reason": "isolated nonowner work-context PostgreSQL 17 required",
+      "count": 21
+    },
+    {
+      "reason": "isolated nonowner work-context catalog PostgreSQL 17 required",
+      "count": 21
+    },
+    {
+      "reason": "isolated synthetic native response bundle PostgreSQL 17 required",
+      "count": 2
+    },
+    {
+      "reason": "isolated task chapter PG17 required",
+      "count": 19
+    },
+    {
+      "reason": "new isolated nonowner package trigger PG17 required",
+      "count": 14
+    },
+    {
+      "reason": "requires an explicitly isolated ACL database",
+      "count": 14
+    },
+    {
+      "reason": "requires an explicitly isolated non-owner PG17 import test database",
+      "count": 8
+    },
+    {
+      "reason": "requires dedicated disposable PG17 nonowner Word import fixture",
+      "count": 13
+    },
+    {
+      "reason": "requires explicit disposable authoring-candidate PG17 with SCRAM logins",
+      "count": 14
+    },
+    {
+      "reason": "requires explicit fresh isolated loopback Kafka/S3/PG technical fixture",
+      "count": 1
+    },
+    {
+      "reason": "requires explicit fusion_package_acl database",
+      "count": 6
+    },
+    {
+      "reason": "requires explicit isolated fusion_package_repo DB",
+      "count": 56
+    },
+    {
+      "reason": "requires explicit isolated loopback parser/OCR/PG technical fixture",
+      "count": 6
+    },
+    {
+      "reason": "requires explicit isolated package API PG17",
+      "count": 49
+    },
+    {
+      "reason": "requires explicit local disposable PG17 admin",
+      "count": 15
+    },
+    {
+      "reason": "requires explicitly isolated non-owner PG17 package reference test",
+      "count": 1
+    },
+    {
+      "reason": "requires grouped independent PostgreSQL",
+      "count": 5
+    },
+    {
+      "reason": "requires grouped isolated PG",
+      "count": 179
+    },
+    {
+      "reason": "requires grouped isolated PG17 comparison checks",
+      "count": 4
+    },
+    {
+      "reason": "requires grouped isolated PG17 human decision checks",
+      "count": 8
+    },
+    {
+      "reason": "requires grouped isolated PG17 selected-fact execution identity checks",
+      "count": 1
+    },
+    {
+      "reason": "requires grouped isolated requirements PG17",
+      "count": 36
+    },
+    {
+      "reason": "requires isolated B1 PG17 and real S3",
+      "count": 30
+    },
+    {
+      "reason": "requires isolated B2 PG17 and real S3",
+      "count": 60
+    },
+    {
+      "reason": "requires isolated B3 PG17 and real S3",
+      "count": 41
+    },
+    {
+      "reason": "requires isolated B4 PG17 and real S3",
+      "count": 14
+    },
+    {
+      "reason": "requires isolated B5 PG17 and real S3",
+      "count": 21
+    },
+    {
+      "reason": "requires isolated B6 PG17 and real S3",
+      "count": 10
+    },
+    {
+      "reason": "requires isolated PG17 report-copy checks",
+      "count": 8
+    },
+    {
+      "reason": "requires isolated PG17 scope review checks",
+      "count": 24
+    },
+    {
+      "reason": "requires isolated generation batch PG17",
+      "count": 13
+    },
+    {
+      "reason": "requires serial isolated PG17 generated-output qualification fixture",
+      "count": 2
+    },
+    {
+      "reason": "separate disposable package-score DB explicitly required",
+      "count": 21
+    },
+    {
+      "reason": "separate explicit F06 BASE-only PostgreSQL required",
+      "count": 5
+    },
+    {
+      "reason": "专用PG无费执行",
+      "count": 2
+    },
+    {
+      "reason": "专用PG显式执行",
+      "count": 9
+    },
+    {
+      "reason": "仅PM授权专用topic/group后运行",
+      "count": 1
+    },
+    {
+      "reason": "仅fresh合成PG反例",
+      "count": 2
+    },
+    {
+      "reason": "仅显式授权的独立命名空间原生OSS探针",
+      "count": 1
+    },
+    {
+      "reason": "仅精确自有合成原件的原生OSS验收",
+      "count": 1
+    },
+    {
+      "reason": "全新独立Word数据库+OSS前缀",
+      "count": 1
+    },
+    {
+      "reason": "原生固定Docker旧成功PDF与新失败机制",
+      "count": 1
+    },
+    {
+      "reason": "只读连接明确缺少知识RAG表的受限API库",
+      "count": 1
+    },
+    {
+      "reason": "可选真实Docker转换，未配置不冒充已执行",
+      "count": 1
+    },
+    {
+      "reason": "实际固定Docker与Parser03本地端口",
+      "count": 2
+    },
+    {
+      "reason": "实际隔离Docker转换",
+      "count": 1
+    },
+    {
+      "reason": "需专用真实PG",
+      "count": 11
+    },
+    {
+      "reason": "需显式本地非owner PG环境；不发远端",
+      "count": 32
+    },
+    {
+      "reason": "需显式真实隔离PG/原生OSS环境",
+      "count": 6
+    },
+    {
+      "reason": "需独立PG",
+      "count": 2
+    },
+    {
+      "reason": "需独立真实PG非owner API账号",
+      "count": 18
+    },
+    {
+      "reason": "需独立非owner PG",
+      "count": 11
+    },
+    {
+      "reason": "需真实LibreOffice及中文字体",
+      "count": 2
+    },
+    {
+      "reason": "需真实本地S3验证合成原件字节身份",
+      "count": 1
+    },
+    {
+      "reason": "需要专用真实PG",
+      "count": 28
+    },
+    {
+      "reason": "需要专用真实PG/Kafka/S3开发环境",
+      "count": 1
+    },
+    {
+      "reason": "需要实际本地BGE/重排运行时",
+      "count": 1
+    },
+    {
+      "reason": "需要独立实际PG机制库",
+      "count": 7
+    },
+    {
+      "reason": "需要独立真实PG/S3受限API/Worker环境",
+      "count": 41
+    },
+    {
+      "reason": "需要独立真实PG/S3机制环境",
+      "count": 3
+    },
+    {
+      "reason": "需要独立真实PG报价机制库；不使用owner跑业务",
+      "count": 31
+    },
+    {
+      "reason": "需要独立真实PG机制库",
+      "count": 2
+    },
+    {
+      "reason": "需要独立真实PG研究机制库；不使用owner跑业务",
+      "count": 25
+    },
+    {
+      "reason": "需要知识RAG独立新库",
+      "count": 27
+    },
+    {
+      "reason": "需要精确Word SQL的全新独立PG账号；不补运行库",
+      "count": 5
+    },
+    {
+      "reason": "需隔离PG/S3/本地转换器",
+      "count": 6
+    },
+    {
+      "reason": "需隔离非owner PG",
+      "count": 3
+    }
+  ],
+  "suite": "unit",
+  "runner_exit_code": 0
+}

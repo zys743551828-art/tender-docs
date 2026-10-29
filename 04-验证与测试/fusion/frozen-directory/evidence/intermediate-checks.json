@@ -1,0 +1,17 @@
+{
+  "intermediateChecksNotFinalAcceptance": [
+    {
+      "check": "legacy history component fixture",
+      "result": "A single cached Response was consumed by the new directory GET, so the subsequent detail GET failed in the fixture. Replaced with fresh, path-specific directory/detail responses."
+    },
+    {
+      "check": "ESLint",
+      "result": "Cleanup ref increment warning. Factored the stable invalidation callback; final zero-warning check passed."
+    },
+    {
+      "check": "Vite cleanup invocation",
+      "result": "One CLI invocation used unsupported --root and exited before build. Repeated the known build command from apps/web; final build passed and removed QA artifacts."
+    }
+  ],
+  "productRaceFoundInReview": "New save ACK could auto-fill the new ID while an earlier history read arrived later. New save completion now invalidates and clears the older history request; explicit regression and final full frontend suite passed."
+}

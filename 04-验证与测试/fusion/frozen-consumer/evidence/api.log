@@ -1,0 +1,22 @@
+checks-1  | ........................................................................ [ 82%]
+checks-1  | ...............                                                          [100%]
+checks-1  | =============================== warnings summary ===============================
+checks-1  | ../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+checks-1  |   /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+checks-1  |     _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+checks-1  | 
+checks-1  | -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+checks-1  | -------------- generated xml file: /evidence/requirements-api.xml --------------
+checks-1  | 87 passed, 1 warning in 104.44s (0:01:44)
+checks-1  | {"suite": "requirements-api", "exit_code": 0, "real_provider_attempts": 0, "compose_project": "tender-fusion"}
+checks-1  | ........................................................................ [ 80%]
+checks-1  | .................                                                        [100%]
+checks-1  | =============================== warnings summary ===============================
+checks-1  | ../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+checks-1  |   /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+checks-1  |     _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+checks-1  | 
+checks-1  | -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+checks-1  | -------------- generated xml file: /evidence/requirements-api.xml --------------
+checks-1  | 89 passed, 1 warning in 105.35s (0:01:45)
+checks-1  | {"suite": "requirements-api", "exit_code": 0, "real_provider_attempts": 0, "compose_project": "tender-fusion"}

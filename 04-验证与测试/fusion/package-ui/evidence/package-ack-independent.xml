@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="16" failures="0" errors="0" time="3.1512224">
+    <testsuite name=".local/review-package-ack.test.tsx" timestamp="2026-10-18T14:16:40.053Z" hostname="zhangyansong" tests="3" failures="0" errors="0" skipped="0" time="0.1967412">
+        <testcase classname=".local/review-package-ack.test.tsx" name="review corrupt JSON pending fails closed without a write" time="0.0572892">
+        </testcase>
+        <testcase classname=".local/review-package-ack.test.tsx" name="review pending embedded scope mismatch fails closed" time="0.0096891">
+        </testcase>
+        <testcase classname=".local/review-package-ack.test.tsx" name="review unknown original command is isolated by bid and restored only on return" time="0.1288511">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/BidPackages.test.tsx" timestamp="2026-10-18T14:16:40.055Z" hostname="zhangyansong" tests="13" failures="0" errors="0" skipped="0" time="2.9544812">
+        <testcase classname="src/BidPackages.test.tsx" name="未明确选解析时保存未知原件，多用途逗号输入保留，未接正式评审" time="0.3696103">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="用户明确选精确解析后添加物理页范围，失败解析不能选且不推断摘要" time="0.3407208">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="分页查找包、文件和解析记录，不把当前资料当作全部版本" time="0.1997735">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="历史查看不写入，编辑明确重读当前head并带If-Match" time="0.2328556">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="CAS冲突保留本地选择，读取核对最新记录后才允许继续，绝不自动重试" time="0.5416764">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="切换类型使用独立目录，跨项目文档不显示，项目切换清空本地草稿" time="0.1143673">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="网络结果不明时保留选择，用户重试沿用原幂等键" time="0.146591">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="切项目后旧保存响应不写进新项目工作区，旧资料仍由服务端目录可发现" time="0.1164228">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未决A操作冻结body和key，无法编辑B覆盖；刷新恢复A原操作再核对" time="0.240609">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="追加修订丢ACK后刷新保留原If-Match，新head不自动覆盖未决基线" time="0.2069125">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未决操作按成员隔离，503不能假装原操作未提交" time="0.1277848">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="未知结果重试遇登录失效仍保留原命令，不解除编辑锁" time="0.1931032">
+        </testcase>
+        <testcase classname="src/BidPackages.test.tsx" name="不能持久化原命令时不发送请求，避免刷新丢失未决身份" time="0.1232178">
+        </testcase>
+    </testsuite>
+</testsuites>

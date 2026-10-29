@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="50" failures="0" errors="0" time="4.2509755">
+    <testsuite name="src/PackageFrozenInputWorkspace.test.tsx" timestamp="2026-10-19T10:34:22.172Z" hostname="zhangyansong" tests="25" failures="0" errors="0" skipped="0" time="2.5243677">
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="规范摘要与Python固定向量一致，保留中文和非BMP值" time="0.002333">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="切换到另一成员，迟到响应不能改新成员的记录" time="0.1023713">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="显式保存，先持久化原请求，再核对完整回执后解锁" time="0.0704844">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="丢失ACK并刷新，即使候选消失也以相同body和key恢复" time="0.1212855">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到400仍保留，不换成当前候选" time="0.1102695">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到401仍保留，不换成当前候选" time="0.1095896">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到403仍保留，不换成当前候选" time="0.1061613">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到404仍保留，不换成当前候选" time="0.1096689">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到409仍保留，不换成当前候选" time="0.1076971">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到422仍保留，不换成当前候选" time="0.0922541">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到428仍保留，不换成当前候选" time="0.1087664">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="未知请求后重试收到500仍保留，不换成当前候选" time="0.1074558">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝actor错误回执，保留原请求" time="0.0595376">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝scope错误回执，保留原请求" time="0.0620307">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝input错误回执，保留原请求" time="0.062101">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝context错误回执，保留原请求" time="0.0461809">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝executor错误回执，保留原请求" time="0.0460697">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝digest错误回执，保留原请求" time="0.0614513">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="拒绝blockers错误回执，保留原请求" time="0.0618056">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="存储失败时不发POST，保留候选供重试" time="0.079251">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="首次明确拒绝可重新核验；已未知后的同类拒绝不能清除" time="0.0604051">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="恢复记录损坏则阻止保存，不静默删除" time="0.0465812">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="不同成员或清单的伪装恢复记录不被采用，退出清理仅清相应成员" time="0.0011125">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="历史GET不依赖当前候选或可写状态，允许原记录的其他创建人" time="0.7252303">
+        </testcase>
+        <testcase classname="src/PackageFrozenInputWorkspace.test.tsx" name="离开页面后晚到ACK不清理未决请求，不覆盖下一页面" time="0.0632154">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageOriginalVerification.test.tsx" timestamp="2026-10-19T10:34:22.177Z" hostname="zhangyansong" tests="15" failures="0" errors="0" skipped="0" time="0.9479531">
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="仅完整核验响应可交给保存入口，重新核验先撤销候选" time="0.1452915">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="显式核验全部明确成员，只显示本次观察且仍不可正式评审" time="0.0616858">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：missing" time="0.0456047">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_member" time="0.0617437">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_parse" time="0.0455024">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：cross_digest" time="0.0623723">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：ready" time="0.0766486">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：blockers" time="0.0617753">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：date" time="0.0772412">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_digest" time="0.0462872">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_scoring" time="0.0459431">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_time" time="0.0465757">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="拒绝不一致响应：context_count" time="0.0621737">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="重新预检即使摘要相同也丢弃旧核验响应" time="0.0493871">
+        </testcase>
+        <testcase classname="src/PackageOriginalVerification.test.tsx" name="存储未配置时呈现错误，禁用状态不发送" time="0.0587708">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/PackageReviewInputPreview.test.tsx" timestamp="2026-10-19T10:34:22.179Z" hostname="zhangyansong" tests="10" failures="0" errors="0" skipped="0" time="0.7786547">
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="刷新后未做预检也能恢复所选清单的旧保存，不依赖当前可写状态" time="0.3250702">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="显式触发只读预检，StrictMode下仍显示阻断且没有执行入口" time="0.0474078">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="实际证据无法匹配时显示可理解的阻断而不提供执行入口" time="0.0628982">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="未选择清单或所选范围记录仍在加载时不发送" time="0.00458">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：scope" time="0.0259671">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：authority" time="0.0613546">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：rule-set" time="0.0611527">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="拒绝错误的嵌套身份或就绪声明：ready" time="0.0623011">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换清单后隐藏旧结果并忽略迟到响应" time="0.0647832">
+        </testcase>
+        <testcase classname="src/PackageReviewInputPreview.test.tsx" name="切换离开又返回同一清单，也不接受上次未完成的旧观察" time="0.0619772">
+        </testcase>
+    </testsuite>
+</testsuites>

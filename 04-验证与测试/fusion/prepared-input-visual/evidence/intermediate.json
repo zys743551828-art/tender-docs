@@ -1,0 +1,8 @@
+{
+  "resolved": [
+    "Live browser showed previous successful prepared record alongside a new unknown save. Save now clears presentation and invalidates earlier pending history reads; two meaningful regression tests added."
+  ],
+  "screenshot_limitation": "Initial full-page screenshot failed; documented viewport screenshots succeeded. No unsupported capture mechanism used.",
+  "browser_scope": "Synthetic UI only. Offline blocks before mock commit; not a live server committed-but-lost-ACK test. Refresh recovery tested by explicitly reopening original frozen record without a current candidate.",
+  "viewport": "1280x720 CSS pixels with 390/768/1200 containers. No mobile viewport or device emulation claim."
+}

@@ -1,0 +1,47 @@
+{
+  "app_commit": "48895cf79019047f166b7250afcf6f14e4ea2e3c",
+  "branch": "fusion/bid-workbench",
+  "tests": {
+    "requirements-api.xml": {
+      "tests": 126,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "domain.xml": {
+      "tests": 113,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_files_sha256": {
+    "workbench/packages/domain/bid_package_execution_input_repository.py": "18b8374ba4284efb64422060b4e1a26993b87751e5cc3ee5f6346dbd32d16510",
+    "workbench/packages/domain/bid_package_frozen_originals.py": "7ca57d801bc6c834acee260cc82c9516ccab2f56cfcef36c5f5d11ff060d7233",
+    "workbench/packages/domain/bid_package_prepared_originals.py": "041697dfee7ecafd1aa542ea4f05b5072f5ec89a6f9b296dea9eb48f0b9b8a92",
+    "workbench/packages/domain/package_execution_input.py": "2125485bcb79c6f02b1345e701a42ad7c466f8141f454e3daec5a0ef5d914e36",
+    "workbench/packages/domain/package_review_method.py": "0aeb60ea4ad1fd0132d69a82d9f8aea9ce3bb09018413c60bec7fb189f67763e",
+    "workbench/tests/test_bid_package_prepared_originals.py": "6dc381c175f76752202043930355e2c6bd9d2e8ab328ff4928df4ec573eb6a34",
+    "workbench/tests/test_bid_package_review_freezing_api.py": "9d10576c8c6c9b8c049122e5984ce420245ebe503a1ccfe4f4bed61f665af002"
+  },
+  "evidence_sha256": {
+    "api.log": "a97e4e6948628cfce58e6a5bdb581060c83b6b3f37835326d56fcb9b359627fd",
+    "bandit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cleanup.json": "0b01ed23f9303d3b02cba8b85a3ae9e1069ae0a5a7762e7f5a7eb21521c903f6",
+    "compose-checks.log": "f7e4e6462d418d13c5c05695946e9b85109cd2d0de202ada5600bd35fe3054ab",
+    "database.json": "cf2cb823f7328aa05026cd2a5f4835e80b347ba2f8dfedb822d6e86258ae88b4",
+    "deployment.json": "cca51eb12971ebd34cb04e862226e93c733f042c11d05f1549b21dcb44d33b5a",
+    "domain.log": "9d2ad023ebff736fcbb7911d4b6d2a6f1d1511e72806429f046d13186482e859",
+    "domain.xml": "5dc9f30f1732471645c2ffa39475d543365dc26a63c459883ff85be454927f1f",
+    "format.log": "0321fffcb91606a42c0a19d8c1121d5c544379d663821fce616c71a7bb62f6b5",
+    "intermediate.json": "f2fff08d3a6869161d75d5f6052f3d5a70518772458071e8ba5c19c2da49c078",
+    "mypy.log": "718df785efbbd4b57e63b5f64aff2c5b5592e433447681f759b307f97a3ec96a",
+    "requirements-api.xml": "96f141a67187133ff305b17f86b4d83e2eadcc3a9845160ac5c70882501d18d1",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "runtime-inputs.json": "d5f366d82e3f401bf9c73e1e043f8e2c502abee46a700197a030c46932f1ff50",
+    "runtime-module.json": "2356cbaafb4965efcf28319e33d486191943e69f31f2442f6d010f7877285d84",
+    "services.txt": "fd1fc94a8a097af37d46dfc1e052a2253838e3387615e808e20f48d3498c6a1d"
+  },
+  "scope": "internal immutable prepared consumer and publication recheck; no startup endpoint/task/outbox",
+  "deployed_database": "tender_checks_fusion_v5"
+}
