@@ -1,0 +1,45 @@
+F
+=================================== FAILURES ===================================
+_ test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery _
+packages/model_governance/material_execution_dispatch.py:268: in _audit
+    audit.audit(
+packages/model_governance/native_rpc_audit.py:88: in audit
+    raise NativeMethodMismatch("NATIVE_METHOD_MISMATCH")
+E   packages.model_governance.native_rpc_audit.NativeMethodMismatch: NATIVE_METHOD_MISMATCH
+
+During handling of the above exception, another exception occurred:
+tests/test_extended_recovery_material_pg.py:54: in test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery
+    publication = relay_claim(lane)
+                  ^^^^^^^^^^^^^^^^^
+tests/test_material_execution_dispatch_pg.py:252: in relay_claim
+    return dispatch.claim_publication(
+packages/model_governance/material_execution_dispatch.py:464: in claim_publication
+    return _execute(
+packages/model_governance/material_execution_dispatch.py:430: in _execute
+    _audit(c, purpose)
+packages/model_governance/material_execution_dispatch.py:277: in _audit
+    fail("NATIVE_METHOD_MISMATCH")
+packages/model_governance/material_execution_dispatch.py:144: in fail
+    raise MaterialDispatchError("MATERIAL_DISPATCH_" + code)
+E   packages.model_governance.material_execution_dispatch.MaterialDispatchError: MATERIAL_DISPATCH_NATIVE_METHOD_MISMATCH
+----------------------------- Captured stdout call -----------------------------
+NATIVE_AUDIT_DIAGNOSTIC material_execution live_send_current {'caller_execute': {'expected': False, 'actual': True}}
+=============================== warnings summary ===============================
+tests/test_extended_recovery_material_pg.py::test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:429: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/lastfailed: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/lastfailed'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------- generated xml file: /evidence/material-junit.xml ---------------
+=========================== short test summary info ============================
+FAILED tests/test_extended_recovery_material_pg.py::test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 3 warnings in 36.76s

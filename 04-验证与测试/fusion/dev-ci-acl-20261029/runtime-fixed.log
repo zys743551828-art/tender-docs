@@ -1,0 +1,71 @@
+....                                                                     [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+---------------- generated xml file: /evidence/schema-junit.xml ----------------
+4 passed, 1 warning in 6.33s
+.                                                                        [100%]
+=============================== warnings summary ===============================
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID capabilities_api_v1_authoring_package_input_capabilities_get for function capabilities at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID create_api_v1_bids__bid_id__authoring_package_inputs_post for function create at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID directory_api_v1_bids__bid_id__authoring_package_inputs_get for function directory at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID get_api_v1_bids__bid_id__authoring_package_inputs__input_id__get for function get at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID context_api_v1_bids__bid_id__authoring_package_inputs__input_id__context_get for function context at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID check_api_v1_bids__bid_id__authoring_package_inputs__input_id__check_post for function check at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py::test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/fastapi/openapi/utils.py:246: UserWarning: Duplicate Operation ID withdraw_api_v1_bids__bid_id__authoring_package_inputs__input_id__fact_withdrawals_post for function withdraw at /workspace/tender-render/workbench/apps/api/authoring_package_inputs.py
+    warnings.warn(message, stacklevel=1)
+
+tests/test_extended_recovery_authoring_pg.py: 44 warnings
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------------- generated xml file: /evidence/authoring-junit.xml ---------------
+1 passed, 53 warnings in 15.61s
+.                                                                        [100%]
+=============================== warnings summary ===============================
+tests/test_extended_recovery_material_pg.py::test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_extended_recovery_material_pg.py: 12 warnings
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------- generated xml file: /evidence/material-junit.xml ---------------
+1 passed, 14 warnings in 43.60s

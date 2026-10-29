@@ -1,0 +1,22 @@
+.....................                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_material_request_preflight_pg.py::test_native_owned_preflight_and_exact_three_slot_request_bytes
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /workspace/tender-render/workbench/.venv/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: cache could not write path /workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/workspace/tender-render/workbench/.pytest_cache/v/cache/nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------- generated xml file: /evidence/scoring/junit.xml ----------------
+21 passed, 2 warnings in 305.91s (0:05:05)
+## Backend scoring
+
+| Passed | Failed | Errors | Skipped |
+| ---: | ---: | ---: | ---: |
+| 21 | 0 | 0 | 0 |
+
+Skipped tests are unverified coverage, not successful acceptance. See summary.json for the exact skip reasons.
+
+temporary_pg_cleanup [{'postgres_stopped': True, 'listener_closed': True, 'private_cluster_and_password_removed': True}]
