@@ -20,4 +20,24 @@
 
 修复后原完整恢复入口6通过/0失败/0跳过（schema4、authoring1、material1），原scoring入口21通过/0失败/0跳过，包含新增私有helper断言；归档兼容切片22通过，执行/恢复定向切片49通过。全仓Ruff/format/mypy/Bandit通过。容器只运行临时PG与S3，schema和原件为显式合成，未连生产、未调用真实模型；本地PostgreSQL来自仓库固定镜像，与CI恢复任务的Ubuntu17.11包环境有差异，远端终态必须另外确认。
 
-预测原生最终8通过/0失败/0跳过（42.15秒），含当前/4恢复及Worker/API重启拒绝保护。默认全量仍运行；修复提交a703f35f75013cb238a36c6235a8aac858f42da3已普通推送dev，新CI将跟踪至终态，当前不声明已全绿。详见本页证据目录dev-ci-acl-20261029。
+预测原生最终8通过/0失败/0跳过（42.15秒），含当前/4恢复及Worker/API重启拒绝保护。本地默认全量4663通过、2433跳过、0失败/错误（969.86秒）。其收集后新增的4个归档兼容用例由22项切片独立覆盖；远端最终提交的默认全量亦成功，覆盖最终文件状态。修复提交a703f35f75013cb238a36c6235a8aac858f42da3已普通推送dev，新CI终态success，8项全部通过。详见本页证据目录dev-ci-acl-20261029。
+
+
+## 最终远程终态
+
+应用dev远端核验为a703f35f75013cb238a36c6235a8aac858f42da3，工作区干净；[最终CI 40913317582](https://github.com/zys743551828-art/tender-app/actions/runs/40913317582)已completed/success，与该准确SHA绑定。未手动重试旧任务，正常修复提交自动触发新运行。旧首轮失败及取消记录保留。
+
+| CI任务 | 最终状态 |
+|---|---|
+| Backend quality and default tests | success |
+| PostgreSQL 17 non-owner API tests | success |
+| Material request preflight and execution ledger on PostgreSQL 17 | success |
+| Material outbox dispatch on PostgreSQL 17 and Kafka 4.1.2 | success |
+| Fresh authoring schema and independent SCRAM role permissions | success |
+| Fixed-source editing and Word export on PostgreSQL and S3 | success |
+| Extended-schema backup and quarantine restore on PostgreSQL 17 and S3 | success |
+| Frontend quality, tests and build | success |
+
+原始终态元数据见[final-run.json](fusion/dev-ci-acl-20261029/final-run.json)，本地分母见[local-full-summary.json](fusion/dev-ci-acl-20261029/local-full-summary.json)。原生恢复6、scoring21、预测原生8均零失败零跳过；这些是隔离合成机制验收，不是实际付费模型、指定Word03转换、生产恢复或真实模型准确性验收。默认跳过项继续未验收，不能用总CI通过替代它们。
+
+现有tools lint及研究格式问题不在本工作流扫描范围内；本次没有改动这些无关文件。远端日志存储下载Forbidden的限制仍存在，未扩权或绕过，但不再阻塞本轮终态核验。Webhook403未重试；未部署、改保护、创建PR或运行付费模型。

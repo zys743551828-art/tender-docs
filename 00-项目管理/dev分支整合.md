@@ -45,3 +45,5 @@ workbench前端196文件/1980测试及格式、lint、typecheck通过。相对�
 应用推送已实际触发[Workbench CI 40908765787](https://github.com/zys743551828-art/tender-app/actions/runs/40908765787)，记录时queued，不提前声明通过。其它四仓没有可见Actions工作流。日志位于本轮执行环境/workspace/scratch/dev-*；机器汇总见本页附带的dev证据目录。
 
 整合后首轮远程CI终态为failure，原生helper的安装权限遗漏和后端20分钟超时已定位；后续版本化修复a703f35见[正式修复记录](../04-验证与测试/dev-CI原生权限修复.md)。整合提交288b458与当时本地通过记录保留，不再代表当前远程CI已通过。
+
+后续修复提交a703f35的CI 40913317582已终态8/8 success；正式定位、版本与证据见《dev CI原生权限修复》。整合首轮288b458的失败不改写，旧记录不作为新提交结果。五仓dev策略保持不变。
