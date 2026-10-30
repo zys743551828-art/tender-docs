@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-30T02:17:55.114065+00:00",
+  "app_revision": "283e334186cec0bfedce91585846470cea700474",
+  "image_id": "sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c",
+  "image_inspection": {
+    "available": false,
+    "exit_code": 1,
+    "stderr": "Error response from daemon: No such image: sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c"
+  },
+  "recorded_registry_reference": null,
+  "base_profile_self_hash_valid": true,
+  "assets": [
+    {
+      "path": "/usr/local/bin/docker",
+      "sha256": "bab79bfe6e2f1611599390ea221c13c767f129686b802058e0b09bece79ab2d4",
+      "recorded_path": "/usr/local/bin/docker",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/bin/fc-match",
+      "sha256": "87b1a590e9199229add8438d4fcf54a77630b38559769e4068fe11c2b42f4c90",
+      "recorded_path": "/usr/bin/fc-match",
+      "matches_recorded": true
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice",
+      "sha256": "ca564d637524bb5f0acef04f235bb550327d42568867a54fb5b1773550c4d7d9",
+      "recorded_path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/lib/x86_64-linux-gnu",
+      "sha256": "81c7b3f1ea463e41fc6dfbcfbfa2720e9ed016f237f86be8e88fd073a2821230",
+      "recorded_path": "/usr/lib/x86_64-linux-gnu",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/share/fonts",
+      "sha256": "f1e97419d3ab60bd8842c5e901438eda7ffd3077050a084ca3fdd43d63ce7f6d",
+      "recorded_path": "/usr/share/fonts",
+      "matches_recorded": true
+    },
+    {
+      "path": "/etc/fonts",
+      "sha256": "7d62cbf2b3d7d77103b462ec5ce31ae7ac4ca954367bc22a3e40f63815eb741d",
+      "recorded_path": "/etc/fonts",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/share/fontconfig",
+      "sha256": "18625b0c1389c48e6e347a193108cf90527e6e58d3b9570f5eb917000375dfbb",
+      "recorded_path": "/usr/share/fontconfig",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/bin/python3.13",
+      "sha256": "963d2888870a93eeef837fbd0fc174179ee4e92e7ccf25634f4b41841de02b48",
+      "recorded_path": "/usr/bin/python3.13",
+      "matches_recorded": true
+    },
+    {
+      "path": "/usr/lib/python3.13",
+      "sha256": "2292f26f3eec7c770c9121fe9c9ddcc4d441be82a80099a2a6a79f12d4ee7749",
+      "recorded_path": "/usr/lib/python3.13",
+      "matches_recorded": true
+    },
+    {
+      "path": "/workspace/tender-render/workbench/packages/word_intake/sandbox_runner.py",
+      "sha256": "d4ef7ee9ef096e3f741d2e25991295287bd2f928044380aee7bbca2d9894d5fa",
+      "recorded_path": "/workspace/tender-workbench/packages/word_intake/sandbox_runner.py",
+      "matches_recorded": true
+    }
+  ],
+  "all_assets_match_after_runner_path_relocation": true,
+  "word03_source_sha256": {
+    "renderer.py": "547b94cb6f194bd011a9606e5d2b1f54b6c27a2ee6567da3a50e3083e417760e",
+    "inspection.py": "76032305050a35450cf96272708ac0db3ad3d1eafddf78ff80e74b7f84339792",
+    "sandbox_runner.py": "ec7069c4086fdfc6805ae34742b980d64484e8f37029833f5fdb9399763f9289"
+  },
+  "libreoffice_version": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "python_version": "Python 3.13.5",
+  "conversion_attempted": false,
+  "replacement_built": false,
+  "remote_pull_attempted": false,
+  "blocker": "Original image archive or immutable registry reference mapping to this exact image ID is not recorded or available locally; existing root Dockerfile is a different implementation."
+}
