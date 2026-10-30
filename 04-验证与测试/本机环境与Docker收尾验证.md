@@ -38,4 +38,8 @@ Windows默认GBK与沙箱临时目录限制分别导致过收集/夹具失败，
 
 应用代码固定提交 `b21cb8c6c7637ad5fcdec8e8c7169b89c9de6f41`。完整静态、27项机制、PG1项、真实Docker3项与Kafka场景分别记录；新提交远程CI状态单独跟踪，不用原提交11/11替代。
 
-新提交CI为[41037957952](https://github.com/zys743551828-art/tender-app/actions/runs/41037957952)，[时点元数据](fusion/local-docker-20261030/current-ci-snapshot.json)记录in_progress，不能报告为全部通过。
+当前提交[CI41037957952](https://github.com/zys743551828-art/tender-app/actions/runs/41037957952)已completed/success，11项全部成功，见[终态元数据](fusion/local-docker-20261030/current-ci-final.json)。初始in_progress时点元数据保留，不能用其旧状态描述当前结果。
+
+## 九项旧快照删除
+
+用户对九个精确路径及不可恢复后果确认后，九项全部删除、剩余0。删除文件逻辑大小624935810字节（约596MiB），包含原盘点排除的402个旧Python缓存文件；该差异经非缓存文件数/字节及旧写入时间复核，不是新增内容。原项目私有配置摘要前后一致、原工作树和活动dev克隆完整。未删除.local父目录或其他文件。[精确审计](fusion/local-docker-20261030/snapshot-cleanup-final.json)保留路径和结果。并行运行时磁盘空闲变化不能准确归因于单项删除，本数字为文件逻辑大小。
