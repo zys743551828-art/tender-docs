@@ -38,7 +38,7 @@ Windows默认GBK与沙箱临时目录限制分别导致过收集/夹具失败，
 
 应用代码固定提交 `b21cb8c6c7637ad5fcdec8e8c7169b89c9de6f41`。完整静态、27项机制、PG1项、真实Docker3项与Kafka场景分别记录；新提交远程CI状态单独跟踪，不用原提交11/11替代。
 
-当前提交[CI41037957952](https://github.com/zys743551828-art/tender-app/actions/runs/41037957952)已completed/success，11项全部成功，见[终态元数据](fusion/local-docker-20261030/current-ci-final.json)。初始in_progress时点元数据保留，不能用其旧状态描述当前结果。
+该b21cb8c记录对应的[CI41037957952](https://github.com/zys743551828-art/tender-app/actions/runs/41037957952)已completed/success，11项全部成功，见[终态元数据](fusion/local-docker-20261030/current-ci-final.json)。初始in_progress时点元数据保留，不能用其旧状态描述当前结果。
 
 ## 九项旧快照删除
 
