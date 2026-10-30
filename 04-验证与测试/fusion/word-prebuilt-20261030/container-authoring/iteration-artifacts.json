@@ -1,0 +1,49 @@
+{
+  "deduplication": "Exact SHA-256 byte identity only; final pass reuses final artifact files. No iteration proof or unique bytes omitted.",
+  "iterations": [
+    {
+      "iteration": 1,
+      "entries": [
+        {
+          "node_id": "bd9f9ba2-a985-410b-a9ca-0a1216e0d39d",
+          "parent_id": null,
+          "anchor": "sec_bd9f9ba2a985410ba9ca0a1216e0d39d",
+          "title": "1 Alpha",
+          "expected_start_page": null
+        }
+      ],
+      "docx_bytes": {
+        "file": "iterations/rich-pass-1.docx",
+        "byte_size": 3806,
+        "sha256": "c3b0cd53a507034a631a3e6bc0b58785f4069db132b7ea06c96415ac49c68eb9"
+      },
+      "pdf_bytes": {
+        "file": "iterations/rich-pass-1.pdf",
+        "byte_size": 20006,
+        "sha256": "ad1b8b105503fc53ef51a92c43be61ea5daeec5345d1860c7b56da0711aeaadf"
+      }
+    },
+    {
+      "iteration": 2,
+      "entries": [
+        {
+          "node_id": "bd9f9ba2-a985-410b-a9ca-0a1216e0d39d",
+          "parent_id": null,
+          "anchor": "sec_bd9f9ba2a985410ba9ca0a1216e0d39d",
+          "title": "1 Alpha",
+          "expected_start_page": 2
+        }
+      ],
+      "docx_bytes": {
+        "file": "artifacts/rich.docx",
+        "byte_size": 3800,
+        "sha256": "a02f7a86745332eb9d50f49aa8dc0ab0c2b0568eaebe4339dcfa3998ccdf341b"
+      },
+      "pdf_bytes": {
+        "file": "artifacts/rich.pdf",
+        "byte_size": 20077,
+        "sha256": "2c247339e3b57fcd1b5d144028816aecc4d34c52bd0bdc307f55da68a3ec0726"
+      }
+    }
+  ]
+}

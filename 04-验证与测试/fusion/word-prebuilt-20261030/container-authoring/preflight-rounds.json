@@ -1,0 +1,127 @@
+{
+  "not_successful_conversion_evidence": true,
+  "rounds": [
+    {
+      "round": "authoring-word-transport-20261031-002538",
+      "reason": "prepare: default sandbox temporary Docker-config directory cleanup denied; no client or conversion container.",
+      "summary": {
+        "state": "failed",
+        "stage": "prepare",
+        "model_calls": 0,
+        "database_connections": 0,
+        "client_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+        "evidence": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-002538",
+        "error_type": "PermissionError",
+        "error_code": "ASSERTION_OR_EXECUTION_FAILED",
+        "client_cleanup_closed": true
+      },
+      "resource_receipts": {
+        "client-resources.json": {
+          "run_id": "3be2e0897c7b4da69ba67b4d95c428a6",
+          "closed": true,
+          "resources": []
+        },
+        "profile-resources.json": {
+          "run_id": "dac0d3e8e7804c7d841132fd56a8f726",
+          "closed": true,
+          "resources": []
+        }
+      }
+    },
+    {
+      "round": "authoring-word-transport-20261031-002612",
+      "reason": "prepare: sandbox denied Docker Desktop npipe; no client or conversion container.",
+      "summary": {
+        "state": "failed",
+        "stage": "prepare",
+        "model_calls": 0,
+        "database_connections": 0,
+        "client_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+        "evidence": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-002612",
+        "error_type": "PrebuiltError",
+        "error_code": "WORD_PREBUILT_COMMAND_FAILED",
+        "client_cleanup_closed": true
+      },
+      "resource_receipts": {
+        "client-resources.json": {
+          "run_id": "b449032b19684d8bac81ae4bd7d18d64",
+          "closed": true,
+          "resources": []
+        },
+        "profile-resources.json": {
+          "run_id": "a3c6f58b931f4b17b6b645a98175b3f2",
+          "closed": true,
+          "resources": []
+        }
+      }
+    },
+    {
+      "round": "authoring-word-transport-20261031-002634",
+      "reason": "host-start: Docker Desktop Mounts omitted tmpfs and strict peer check rejected; zero conversions, client precisely removed. Compatibility fix retained configured and kernel tmpfs checks.",
+      "summary": {
+        "state": "failed",
+        "stage": "host-start",
+        "model_calls": 0,
+        "database_connections": 0,
+        "client_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+        "evidence": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-002634",
+        "client_image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+        "client": {
+          "id": "b64a33c21a9b5bc5cc7ae91359facca589d6ef8d4d84e460060f8621b18883cc",
+          "run_id": "155de4c6b212472682e065da864e490e",
+          "user": "65532:65532",
+          "image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+          "network_mode": "none",
+          "read_only_root": true,
+          "ipc_mode": "none",
+          "mounts": [
+            {
+              "Type": "bind",
+              "Source": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-002634/fixtures",
+              "Destination": "/fixtures",
+              "Mode": "",
+              "RW": false,
+              "Propagation": "rprivate"
+            },
+            {
+              "Type": "bind",
+              "Source": "${TASK_ROOT}/tender-app-dev/workbench/packages",
+              "Destination": "/workspace/packages",
+              "Mode": "",
+              "RW": false,
+              "Propagation": "rprivate"
+            }
+          ],
+          "cap_drop": [
+            "ALL"
+          ],
+          "security_opt": [
+            "no-new-privileges"
+          ]
+        },
+        "error_type": "RuntimeError",
+        "error_code": "HOST_EXECUTOR_NOT_READY",
+        "client_cleanup_closed": true
+      },
+      "resource_receipts": {
+        "client-resources.json": {
+          "run_id": "155de4c6b212472682e065da864e490e",
+          "closed": true,
+          "resources": [
+            {
+              "kind": "container",
+              "name": "tender-test-155de4c6b212-1",
+              "id": "b64a33c21a9b5bc5cc7ae91359facca589d6ef8d4d84e460060f8621b18883cc",
+              "state": "removed"
+            }
+          ]
+        },
+        "profile-resources.json": {
+          "run_id": "ebd1e33d744d4dfba2a5b2e7c1bab457",
+          "closed": true,
+          "resources": []
+        }
+      }
+    }
+  ]
+}

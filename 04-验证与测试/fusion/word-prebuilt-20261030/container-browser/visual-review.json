@@ -1,0 +1,28 @@
+{
+  "reviewed_images": [
+    "word-timeout-390-viewport.png",
+    "word-retry-keyboard-focus-390.png",
+    "word-retry-loading-390-viewport.png",
+    "word-390-refresh-viewport.png",
+    "word-desktop-parse-partial.png"
+  ],
+  "reviewers": [
+    "local_config_audit: all five listed PNGs",
+    "root: all five listed PNGs"
+  ],
+  "observed": "friendly missing-result explanation with technical details collapsed; retry has visible keyboard focus; pending state does not present repeat retry; narrow download controls readable and visible; no observed horizontal overflow or occlusion",
+  "asserted_layout": "390 viewport / 390 scroll width",
+  "unverified": [
+    "complete keyboard/modal flow",
+    "Word-specific cancel UI (not present)",
+    "all application business pages",
+    "full Compose Word deployment",
+    "Kafka",
+    "models"
+  ],
+  "initial_attempt": {
+    "evidence": "word-container-browser-20261031-003238",
+    "passed": false,
+    "reason": "runner docker cp telemetry read failed before host startup; real timeout telemetry not retained; all resources closed"
+  }
+}

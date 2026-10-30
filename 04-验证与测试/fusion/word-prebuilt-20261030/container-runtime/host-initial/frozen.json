@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "path": "deploy/word_execution_host.py",
+      "sha256": "f0fcfcdfa6f73f8664f181ba5506b0ca7f49df647f1117ed5ba0e46453567514"
+    },
+    {
+      "path": "tests/test_word_execution_host.py",
+      "sha256": "073a4b739a47d0216dc3551f1a51b180310a5d114b37b27d8a6da0105a4bdecf"
+    }
+  ],
+  "linux_tests": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "28",
+      "time": "2.809",
+      "timestamp": "2026-10-30T16:24:52.222985+00:00",
+      "hostname": "fc2e912e8836"
+    }
+  ],
+  "quality": [
+    {
+      "check": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "mypy",
+        "--cache-dir=/tmp/mypy-host",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "ruff",
+        "check",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "ruff",
+        "format",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "bandit",
+        "-q",
+        "-ll"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "resources_closed": true,
+  "cli": "python -B deploy/word_execution_host.py --container-id <64hex> --run-id <32hex> --report-dir <new-directory> [--stop-file <operator-path>] [--poll-seconds 0.1]",
+  "startup": "ready.json after strict peer inspect; exact state/container_id/run_id",
+  "known_scope": "Host component; cancellation revokes response, bounded provider finishes then cleans. Cancelled peer request directory remains in Worker tmpfs until Worker exits. Real Word/PG and complete containerized chain are separate runner acceptance."
+}

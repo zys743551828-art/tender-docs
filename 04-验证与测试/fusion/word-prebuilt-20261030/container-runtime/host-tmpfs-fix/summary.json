@@ -1,0 +1,42 @@
+[
+  {
+    "check": [
+      "/usr/local/bin/python",
+      "-B",
+      "-m"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": [
+      "mypy",
+      "--cache-dir=/tmp/mypy-host",
+      "deploy/word_execution_host.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": [
+      "ruff",
+      "check",
+      "deploy/word_execution_host.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": [
+      "ruff",
+      "format",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": [
+      "bandit",
+      "-q",
+      "-ll"
+    ],
+    "exit_code": 0
+  }
+]

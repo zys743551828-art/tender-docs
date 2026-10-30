@@ -1,0 +1,43 @@
+[
+  {
+    "operation_id": "1f6d9a53-b493-497e-95fd-6a770b73e022",
+    "generation": 1,
+    "handler_version": "document/1",
+    "state": "succeeded",
+    "seconds": 0.1747787229999176,
+    "output": {
+      "result_ref": "/api/v1/uploads/e582d991-f46e-483d-8b5b-f1cd1d2fceed",
+      "word_intake_url": "/api/v1/bids/bb1221d8-699c-4c63-a87a-e3893fe8c73a/word-originals/dfb2bbf9-5003-4aee-a026-69768495d9df",
+      "document_version_id": "dfb2bbf9-5003-4aee-a026-69768495d9df",
+      "word_original_saved": true,
+      "conversion_operation_id": "4d14f5d6-e0d9-4092-9a5c-1612a6889417"
+    },
+    "external_client_timeout_seconds": 120
+  },
+  {
+    "operation_id": "4d14f5d6-e0d9-4092-9a5c-1612a6889417",
+    "generation": 1,
+    "handler_version": "word-render/1",
+    "state": "failed",
+    "seconds": 120.05388703100016,
+    "output": {
+      "error_code": "WORD_EXECUTION_TIMEOUT",
+      "result_ref": null
+    },
+    "external_client_timeout_seconds": 120
+  },
+  {
+    "operation_id": "0ae8012d-b6ab-4d05-8b48-887ae8bca9ea",
+    "generation": 1,
+    "handler_version": "document/1",
+    "state": "succeeded",
+    "seconds": 0.05799990600007732,
+    "output": {
+      "coverage": "failed",
+      "result_ref": "/api/v1/bids/bb1221d8-699c-4c63-a87a-e3893fe8c73a/materials",
+      "evidence_ids": [],
+      "model_review": "not_run"
+    },
+    "external_client_timeout_seconds": 120
+  }
+]

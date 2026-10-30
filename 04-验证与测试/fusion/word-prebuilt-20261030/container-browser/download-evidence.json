@@ -1,0 +1,16 @@
+{
+  "samples": {
+    "download-original.docx": {
+      "sha256": "18a79c1e9d28d493acc29967c079e07eb820c3f3f8e0905cb65635e83c73b77f",
+      "bytes": 910,
+      "download_matches_actual_s3": true
+    },
+    "download-converted.pdf": {
+      "sha256": "0d2c50af596d70b151ef3941355acbccd5ae3f71671f98ed7c8b519c975a5815",
+      "bytes": 17306,
+      "download_matches_actual_s3": true
+    }
+  },
+  "older_browser_samples_reused": false,
+  "reason": "new synthetic content and PDF bytes differ from previous run"
+}

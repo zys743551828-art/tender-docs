@@ -1,0 +1,68 @@
+{
+  "host": {
+    "state": "stopped",
+    "cleanup_closed": true,
+    "processed": 2
+  },
+  "client": {
+    "run_id": "41e09ca7f9784beca798f151bf8b5ee4",
+    "closed": true,
+    "resources": [
+      {
+        "kind": "container",
+        "name": "tender-test-41e09ca7f978-1",
+        "id": "1efa823e790e6acaf955751ef1221d47883d4a79db592e55467e0c07757d8237",
+        "state": "removed"
+      }
+    ]
+  },
+  "conversion_receipts": [
+    {
+      "file": "host/receipts/6abd428fde26425c9e69b2dee85e43c0/conversion-6abd428fde26425c9e69b2dee85e43c0.json",
+      "receipt": {
+        "run_id": "6d75b7eb71774385bd64b23c281613c2",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-6d75b7eb7177-1",
+            "id": "3e5ac50e7f16be866d286910e9b8b614570dfb0b83652683f43fddcb212ad874",
+            "state": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "file": "host/receipts/e9c13aa2632e425ea898a55252fe51b6/conversion-e9c13aa2632e425ea898a55252fe51b6-pass-1.json",
+      "receipt": {
+        "run_id": "357f9b19f1294b3ea976c63fd5153ce8",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-357f9b19f129-1",
+            "id": "ff4bed048e5f67247743fea6763c9abb16e6674248fc00a4e1964660b97267fd",
+            "state": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "file": "host/receipts/e9c13aa2632e425ea898a55252fe51b6/conversion-e9c13aa2632e425ea898a55252fe51b6-pass-2.json",
+      "receipt": {
+        "run_id": "ba1c469794ea46199b73925695b7fb53",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-ba1c469794ea-1",
+            "id": "ea3fbda50021489ba3cd9033748f5623f328c397c69132073c5820771dec24a8",
+            "state": "removed"
+          }
+        ]
+      }
+    }
+  ],
+  "conversion_count": 3,
+  "no_global_cleanup_or_inventory_claim": true
+}

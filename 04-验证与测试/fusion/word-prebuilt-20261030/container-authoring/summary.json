@@ -1,0 +1,76 @@
+{
+  "state": "passed",
+  "stage": "complete",
+  "model_calls": 0,
+  "database_connections": 0,
+  "client_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+  "evidence": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-003128",
+  "started_at_utc": "2026-10-30T16:31:28.096366+00:00",
+  "client_image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+  "client": {
+    "id": "1efa823e790e6acaf955751ef1221d47883d4a79db592e55467e0c07757d8237",
+    "run_id": "41e09ca7f9784beca798f151bf8b5ee4",
+    "user": "65532:65532",
+    "image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+    "network_mode": "none",
+    "read_only_root": true,
+    "ipc_mode": "none",
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-003128/fixtures",
+        "Destination": "/fixtures",
+        "Mode": "",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "${TASK_ROOT}/tender-app-dev/workbench/packages",
+        "Destination": "/workspace/packages",
+        "Mode": "",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ],
+    "configured_tmpfs": {
+      "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+    },
+    "kernel": {
+      "uid": 65532,
+      "tmp_mounts": [
+        {
+          "mount_point": "/tmp",
+          "filesystem": "tmpfs",
+          "options": "rw,nosuid,nodev,noexec,relatime"
+        }
+      ]
+    },
+    "cap_drop": [
+      "ALL"
+    ],
+    "security_opt": [
+      "no-new-privileges"
+    ]
+  },
+  "page": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "gaps": [],
+    "error_code": null
+  },
+  "rich": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "gaps": [],
+    "error_code": null
+  },
+  "host_exit_code": 0,
+  "host": {
+    "state": "stopped",
+    "cleanup_closed": true,
+    "processed": 2
+  },
+  "client_cleanup_closed": true,
+  "finished_at_utc": "2026-10-30T16:31:39.894824+00:00"
+}

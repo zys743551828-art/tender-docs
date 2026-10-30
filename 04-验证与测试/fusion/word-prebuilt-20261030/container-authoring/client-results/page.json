@@ -1,0 +1,128 @@
+{
+  "state": "succeeded",
+  "coverage": "complete",
+  "conversion_attempted": true,
+  "error_code": null,
+  "retryable": false,
+  "gaps": [],
+  "pdf": {
+    "byte_size": 19774,
+    "sha256": "73dba9cfcd8001ba1f50a30a2396093d8328c0b26940bf31b81c5789f26aefd9"
+  },
+  "protocol": "authoring-prebuilt-generated/1",
+  "isolation": {
+    "NetworkMode": "none",
+    "IpcMode": "none",
+    "ReadonlyRootfs": true,
+    "Memory": 536870912,
+    "MemorySwap": 536870912,
+    "NanoCpus": 1000000000,
+    "PidsLimit": 64,
+    "image_id": "sha256:e3d196d893aa14a70057f9b6e33c11f6120cb2f721fc6ee4f85150a48686060e",
+    "user": "65534:65534",
+    "cap_drop": "ALL",
+    "no_new_privileges": true,
+    "tmpfs": {
+      "/tmp": "rw,noexec,nosuid,nodev,size=134217728,mode=1777",
+      "/input": "rw,noexec,nosuid,nodev,size=104857600,mode=1777",
+      "/output": "rw,noexec,nosuid,nodev,size=67108864,mode=1777"
+    },
+    "checks": {
+      "immutable_image": true,
+      "ipc_none": true,
+      "pid_private": true,
+      "cpu_limited": true,
+      "bounded_tmpfs_output": true,
+      "pids_limited": true,
+      "own_job_cleanup_confirmed": true,
+      "no_host_binds_or_ports": true,
+      "capabilities_dropped": true,
+      "not_privileged": true,
+      "network_none": true,
+      "memory_limited": true,
+      "no_anonymous_persistent_volumes": true,
+      "nonroot": true,
+      "uts_private": true,
+      "no_daemon_document_logs": true,
+      "no_new_privileges": true,
+      "read_only": true,
+      "clean_environment": true
+    },
+    "own_job_cleanup_confirmed": true
+  },
+  "measurements": {
+    "page_count": 2,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 9
+      },
+      {
+        "physical_page": 2,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 34
+      }
+    ],
+    "expected_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4",
+    "actual_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4"
+  },
+  "chain": {
+    "source_docx_digest": "e2f4fe2797686f05e1c679bd68945ff5c9b7f12486006c9c925f6ef41a99cbb4",
+    "producer_manifest_digest": "c9423d5366550c31b0f112fcff53f6aef74d78dc07cbd2efcb19bf0ccfc99aea",
+    "validator_digest": "ba1251007aa7ecc4d609d33881c502666fc738ae6f71de820c73310afc6bdfcd",
+    "generator_digest": "0e61891743580e060bc31a6d606f4351730749b16b092de298ee92c7ff26ab1d",
+    "parts": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "word/_rels/document.xml.rels",
+      "word/document.xml",
+      "word/footer.xml",
+      "word/numbering.xml",
+      "word/styles.xml"
+    ],
+    "page_number": true,
+    "pdf_digest": "73dba9cfcd8001ba1f50a30a2396093d8328c0b26940bf31b81c5789f26aefd9",
+    "profile_digest": "1c09fe22682ede529b1acef2e20ba705cde937b282822480923b7d380c061bc8",
+    "page_count": 2,
+    "renderer_digest": "3943b543065e2e3a876f0ed331706943e22e301d3141616e559980c79a74c624",
+    "fontset_digest": "ed2c82bf0f5b8afa428098af2bb30f73aadffec0a2510f430dc221fa0c51cbfa",
+    "options_digest": "5a87cb34abd8adeef9259d9ac02bae20f4420aea71e461bad3986b30f0061a99",
+    "image_reference": "gotenberg/gotenberg:8.39.0-libreoffice@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161",
+    "provider_profile_digest": "c96dab5af24a9cfbcf4d46d665de97df0e3ea7c5a342c4d92a36d652d97eec84",
+    "render_protocol": "authoring-prebuilt-generated/1"
+  },
+  "correspondence": {
+    "page_count": 2,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 9
+      },
+      {
+        "physical_page": 2,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 34
+      }
+    ],
+    "expected_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4",
+    "actual_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4"
+  },
+  "resource_receipt": {
+    "closed": true,
+    "receipts": [
+      {
+        "receipt": "conversion-6abd428fde26425c9e69b2dee85e43c0.json",
+        "closed": true,
+        "run_id": "6d75b7eb71774385bd64b23c281613c2"
+      }
+    ]
+  }
+}

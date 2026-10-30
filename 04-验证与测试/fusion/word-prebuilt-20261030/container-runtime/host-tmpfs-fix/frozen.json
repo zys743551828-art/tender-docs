@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "deploy/word_execution_host.py",
+      "sha256": "33e9b8efecf61c2f32291aa93f34e52e0dbcd3f2ffe21f38f03da0c24d38c8fa"
+    },
+    {
+      "path": "tests/test_word_execution_host.py",
+      "sha256": "dea9c6fec30cb4e45fd44c7a546aff56af9e09a1d349cf719d2c3bbfca3f5630"
+    }
+  ],
+  "targeted_tests": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "3",
+      "time": "2.415",
+      "timestamp": "2026-10-30T16:30:59.211111+00:00",
+      "hostname": "936f06d2dc66"
+    }
+  ],
+  "quality": [
+    {
+      "check": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "mypy",
+        "--cache-dir=/tmp/mypy-host",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "ruff",
+        "check",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "ruff",
+        "format",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "check": [
+        "bandit",
+        "-q",
+        "-ll"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "resources_closed": true,
+  "change": "Docker Desktop HostConfig.Tmpfs representation accepted only with actual fixed peer helper UID/GID and mountinfo tmpfs verification; prior readonly/nonprivileged/no-socket checks retained."
+}

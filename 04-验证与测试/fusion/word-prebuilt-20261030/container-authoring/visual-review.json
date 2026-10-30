@@ -1,0 +1,19 @@
+{
+  "reviewer": "primary/root agent",
+  "method": "Actual visual inspection of four final PNGs, reported by the primary agent after the run.",
+  "files": [
+    "artifacts/page-1.png",
+    "artifacts/page-2.png",
+    "artifacts/rich-1.png",
+    "artifacts/rich-2.png"
+  ],
+  "result": "passed_for_this_sparse_controlled_synthetic_case",
+  "observations": [
+    "Synthetic TOC/body/page numbers readable; Chinese cells/table borders and image/captions clear.",
+    "No obvious overlap or clipping in these four PNGs.",
+    "RICH TOC points to page 2; physical page 2 visibly has page number 2."
+  ],
+  "limitations": [
+    "No claim of arbitrary complex tender layout quality, complex multipage tables, or byte-for-byte equivalence with legacy Word03."
+  ]
+}

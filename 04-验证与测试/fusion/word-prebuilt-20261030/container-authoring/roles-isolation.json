@@ -1,0 +1,145 @@
+{
+  "scope": "independent local synthetic PAGE/RICH transport validation; production full configuration not assembled",
+  "client": {
+    "id": "1efa823e790e6acaf955751ef1221d47883d4a79db592e55467e0c07757d8237",
+    "run_id": "41e09ca7f9784beca798f151bf8b5ee4",
+    "user": "65532:65532",
+    "image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+    "network_mode": "none",
+    "read_only_root": true,
+    "ipc_mode": "none",
+    "mounts": [
+      {
+        "Type": "bind",
+        "Source": "${TASK_ROOT}/evidence-local-20261030/authoring-word-transport-20261031-003128/fixtures",
+        "Destination": "/fixtures",
+        "Mode": "",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "${TASK_ROOT}/tender-app-dev/workbench/packages",
+        "Destination": "/workspace/packages",
+        "Mode": "",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ],
+    "configured_tmpfs": {
+      "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+    },
+    "kernel": {
+      "uid": 65532,
+      "tmp_mounts": [
+        {
+          "mount_point": "/tmp",
+          "filesystem": "tmpfs",
+          "options": "rw,nosuid,nodev,noexec,relatime"
+        }
+      ]
+    },
+    "cap_drop": [
+      "ALL"
+    ],
+    "security_opt": [
+      "no-new-privileges"
+    ]
+  },
+  "runtime_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+  "observed_local_image_inspect_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+  "runtime_identity_note": "Observed local Docker inspect identity, not a published repository manifest digest.",
+  "executor": {
+    "location": "trusted operator Windows host",
+    "python": "existing operator CPython 3.12, -B",
+    "listener": false,
+    "database_connections": 0,
+    "model_calls": 0,
+    "business_container_docker_socket": false,
+    "host_source_sha256": "33e9b8efecf61c2f32291aa93f34e52e0dbcd3f2ffe21f38f03da0c24d38c8fa"
+  },
+  "conversion_provider": {
+    "image_reference": "gotenberg/gotenberg:8.39.0-libreoffice@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161",
+    "page_isolation": {
+      "NetworkMode": "none",
+      "IpcMode": "none",
+      "ReadonlyRootfs": true,
+      "Memory": 536870912,
+      "MemorySwap": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": 64,
+      "image_id": "sha256:e3d196d893aa14a70057f9b6e33c11f6120cb2f721fc6ee4f85150a48686060e",
+      "user": "65534:65534",
+      "cap_drop": "ALL",
+      "no_new_privileges": true,
+      "tmpfs": {
+        "/tmp": "rw,noexec,nosuid,nodev,size=134217728,mode=1777",
+        "/input": "rw,noexec,nosuid,nodev,size=104857600,mode=1777",
+        "/output": "rw,noexec,nosuid,nodev,size=67108864,mode=1777"
+      },
+      "checks": {
+        "immutable_image": true,
+        "ipc_none": true,
+        "pid_private": true,
+        "cpu_limited": true,
+        "bounded_tmpfs_output": true,
+        "pids_limited": true,
+        "own_job_cleanup_confirmed": true,
+        "no_host_binds_or_ports": true,
+        "capabilities_dropped": true,
+        "not_privileged": true,
+        "network_none": true,
+        "memory_limited": true,
+        "no_anonymous_persistent_volumes": true,
+        "nonroot": true,
+        "uts_private": true,
+        "no_daemon_document_logs": true,
+        "no_new_privileges": true,
+        "read_only": true,
+        "clean_environment": true
+      },
+      "own_job_cleanup_confirmed": true
+    },
+    "rich_final_isolation": {
+      "NetworkMode": "none",
+      "IpcMode": "none",
+      "ReadonlyRootfs": true,
+      "Memory": 536870912,
+      "MemorySwap": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": 64,
+      "image_id": "sha256:e3d196d893aa14a70057f9b6e33c11f6120cb2f721fc6ee4f85150a48686060e",
+      "user": "65534:65534",
+      "cap_drop": "ALL",
+      "no_new_privileges": true,
+      "tmpfs": {
+        "/tmp": "rw,noexec,nosuid,nodev,size=134217728,mode=1777",
+        "/input": "rw,noexec,nosuid,nodev,size=104857600,mode=1777",
+        "/output": "rw,noexec,nosuid,nodev,size=67108864,mode=1777"
+      },
+      "checks": {
+        "immutable_image": true,
+        "ipc_none": true,
+        "pid_private": true,
+        "cpu_limited": true,
+        "bounded_tmpfs_output": true,
+        "pids_limited": true,
+        "own_job_cleanup_confirmed": true,
+        "no_host_binds_or_ports": true,
+        "capabilities_dropped": true,
+        "not_privileged": true,
+        "network_none": true,
+        "memory_limited": true,
+        "no_anonymous_persistent_volumes": true,
+        "nonroot": true,
+        "uts_private": true,
+        "no_daemon_document_logs": true,
+        "no_new_privileges": true,
+        "read_only": true,
+        "clean_environment": true
+      },
+      "own_job_cleanup_confirmed": true
+    },
+    "independent_per_document_container": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "failed_operation_id": "4d14f5d6-e0d9-4092-9a5c-1612a6889417",
+  "retry_operation_id": "8e0acc6b-6628-4a86-85a2-7eca7e6f1272",
+  "timeout_failed_view": {
+    "id": "dfb2bbf9-5003-4aee-a026-69768495d9df",
+    "bid_id": "bb1221d8-699c-4c63-a87a-e3893fe8c73a",
+    "file_id": "b8f14276-84c4-4fe0-bdf9-6a050166a7df",
+    "original_name": "合成施工方案.docx",
+    "role": "body",
+    "original_saved": true,
+    "source_sha256": "18a79c1e9d28d493acc29967c079e07eb820c3f3f8e0905cb65635e83c73b77f",
+    "byte_size": 910,
+    "inspection": {
+      "schema": "word-intake-inspection/1",
+      "entry_count": 3,
+      "text_digest": "a505b6ad202ebdc447511a4283bbbf40a301aa8869095038513079917a6455ba",
+      "expanded_bytes": 915,
+      "xml_part_count": 3,
+      "requested_fonts": [
+        "Noto Sans CJK SC"
+      ],
+      "active_content_gaps": [],
+      "container_validated": true,
+      "conversion_eligible": true,
+      "unsupported_layout_features": []
+    },
+    "conversion": {
+      "state": "failed",
+      "operation_id": "4d14f5d6-e0d9-4092-9a5c-1612a6889417",
+      "conversion_attempted": false,
+      "coverage": "pending",
+      "error_code": null,
+      "retryable": true,
+      "gaps": [
+        "WORD_CONVERSION_RESULT_MISSING"
+      ],
+      "pdf_document_version_id": null,
+      "controlled_render_verified": false
+    },
+    "message": "Word原件已保存／本次对应检查未完成",
+    "delivery_check_message": "Word交付未获对应检查资格",
+    "review_qualification": "not_established_by_conversion",
+    "primary_action": {
+      "action": "upload_modified_pdf",
+      "label": "上传此修改稿的PDF",
+      "context": {
+        "bid_id": "bb1221d8-699c-4c63-a87a-e3893fe8c73a",
+        "role": "body",
+        "declared_source_document_version_id": "dfb2bbf9-5003-4aee-a026-69768495d9df",
+        "target": {
+          "kind": "new_file"
+        }
+      }
+    },
+    "converted_pdf_action": null
+  },
+  "retry_posts": [
+    {
+      "path": "/api/v1/bids/bb1221d8-699c-4c63-a87a-e3893fe8c73a/word-originals/dfb2bbf9-5003-4aee-a026-69768495d9df/retry-conversion",
+      "status": 202,
+      "method": "POST"
+    }
+  ],
+  "transitions": [
+    {
+      "disabled": false,
+      "text": "重试此原件的转换",
+      "connected": true
+    },
+    {
+      "disabled": true,
+      "text": "重试此原件的转换",
+      "connected": true
+    },
+    {
+      "disabled": false,
+      "text": "重试此原件的转换",
+      "connected": true
+    }
+  ],
+  "narrow_failed_layout": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "keyboard_retry_focus": true
+}

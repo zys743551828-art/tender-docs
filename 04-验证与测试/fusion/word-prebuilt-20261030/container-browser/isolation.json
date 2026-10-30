@@ -1,0 +1,28 @@
+{
+  "application_image": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+  "api_worker_uid": 65532,
+  "api_worker_readonly_rootfs": true,
+  "configured_cap_drop": [
+    "ALL"
+  ],
+  "configured_no_new_privileges": true,
+  "source_bind_mode": "separate readonly packages/apps-api/apps-worker/deploy/requirements/pyproject",
+  "tmpfs_tmp_mb": 512,
+  "api_local_tmpfs_mb": 16,
+  "docker_socket_mounted": false,
+  "worker_guard_evidence": "host-executor-report/ready.json: strict inspect and actual uid/tmpfs probe precede ready",
+  "api_worker_uid_source_evidence": [
+    "api-source-profile.json",
+    "worker-source-profile.json"
+  ],
+  "api_worker_role_evidence": [
+    "api-role.json",
+    "worker-role.json"
+  ],
+  "configuration_evidence": "run_word_container_browser.py snapshot; no complete live inspect snapshot was retained",
+  "network": "single run-owned bridge; PG and S3 publish ephemeral 127.0.0.1 only for bootstrap/verification",
+  "converter_network": "none",
+  "host_executor_containerized": false,
+  "host_executor_environment_has_db_or_model_keys": false,
+  "full_compose_word_profile_installed": false
+}
