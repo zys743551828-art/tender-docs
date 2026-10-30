@@ -1,0 +1,23 @@
+{
+  "frozen_at_utc": "2026-10-30T15:48:46.056955+00:00",
+  "purpose": "Acceptance source snapshot only; not product deployment or dependency registry",
+  "scripts": [
+    {
+      "name": "run_word_browser_once.py",
+      "source_path": "[local-task]\\run_word_browser_once.py",
+      "snapshot_path": "[local-task]\\evidence-local-20261030\\word-browser-20261030-234339\\run_word_browser_once.py",
+      "sha256": "8cec1f354c51243ebfb5ec1fd6c93e86a123c7a655afe4686a299311d62cb7b2",
+      "snapshot_bytes_equal": true
+    },
+    {
+      "name": "word-browser-once.mjs",
+      "source_path": "[local-task]\\word-browser-once.mjs",
+      "snapshot_path": "[local-task]\\evidence-local-20261030\\word-browser-20261030-234339\\word-browser-once.mjs",
+      "sha256": "307edad2058decbea7e9806bed834ee89019b627f74a5f435e0e7b511e4b67bd",
+      "snapshot_bytes_equal": true
+    }
+  ],
+  "runtime_browser_script_sha256_observed": true,
+  "runtime_browser_script_sha256": "307edad2058decbea7e9806bed834ee89019b627f74a5f435e0e7b511e4b67bd",
+  "runtime_and_task_browser_bytes_equal": true
+}

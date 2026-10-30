@@ -1,0 +1,134 @@
+{
+  "started_utc": "2026-10-30T15:43:39.360492+00:00",
+  "started_local": "2026-10-30T23:43:39.360492+08:00",
+  "network": "run-owned bridge; only PG/S3 published on random 127.0.0.1 ports; not Docker --internal",
+  "full_compose_word_installed": false,
+  "kafka_tested": false,
+  "models_called": false,
+  "passed": true,
+  "parse_coverage": "partial",
+  "page_count": 1,
+  "parse_api_and_ui_partial": true,
+  "narrow_word_390_verified": true,
+  "refresh_restored": true,
+  "controlled_render_qualified": true,
+  "controlled_relation_verified": true,
+  "downloads_match_real_storage": true,
+  "api_nonowner": true,
+  "worker_nonowner": true,
+  "source_profile_match": true,
+  "browser_url": "http://127.0.0.1:5179/bids/824df861-f2d8-4765-9d77-ff383be41cda/materials",
+  "worker_stop_fallback_triggered": false,
+  "worker_exit_code": 0,
+  "worker_stopped": true,
+  "conversion_cleanup": [
+    {
+      "receipt": "conversion-f0d5509a1c774e029e5d52e03adc8b4d.json",
+      "closed": true,
+      "run_id": "86bb688ffd304f6fa87dc09df761abd2"
+    }
+  ],
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-30T15:46:20.524962+00:00",
+  "finished_local": "2026-10-30T23:46:20.524962+08:00",
+  "post_run_official_cleanup_verification": true,
+  "resource_observations": [
+    {
+      "receipt": "resources.json",
+      "kind": "network",
+      "id": "427ddb54aabb4893d3235d9b9837c8f94ad256c8cc3462a6ee17d4158d824d6d",
+      "name": "tender-test-4542d32d6b59-1",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "48cedf40cb1d6417df54479a06d5be36d113ce1dc0e9f725e65de48cdc4f1ed3",
+      "name": "tender-test-4542d32d6b59-2",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "b707653cee0420ef7231700c56bc862c693fbebe3d44ec5ee7b914c538c563cb",
+      "name": "tender-test-4542d32d6b59-3",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "8dd8d6b3645fc014a0907d40e4fcdebe0aae0c0f6c55da31b98e0cadb389456d",
+      "name": "tender-test-4542d32d6b59-4",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "conversion-resources\\conversion-f0d5509a1c774e029e5d52e03adc8b4d.json",
+      "kind": "container",
+      "id": "6df04669b93388a48c145a8084baed77623138cbf8c7858fb6048b6556f259db",
+      "name": "tender-test-86bb688ffd30-1",
+      "still_exists": false,
+      "recorded_state": "removed"
+    }
+  ],
+  "visual_scope": {
+    "desktop": "1440x1100",
+    "Word_current_state_390_tested": true,
+    "narrow_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "narrow_layout": {
+      "viewport": 390,
+      "scroll": 390
+    },
+    "narrow_refreshed_layout": {
+      "viewport": 390,
+      "scroll": 390
+    },
+    "narrow_download_bounds": {
+      "original": {
+        "left": 19,
+        "right": 170,
+        "top": 402.375,
+        "bottom": 442.375,
+        "width": 390,
+        "height": 844
+      },
+      "pdf": {
+        "left": 19,
+        "right": 197,
+        "top": 478.375,
+        "bottom": 518.375,
+        "width": 390,
+        "height": 844
+      }
+    },
+    "actual_viewport_screenshots_viewed": [
+      "word-390-pdf-download-viewport.png"
+    ]
+  },
+  "actual_roles": {
+    "api": {
+      "current_user": "word_browser_api",
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "bypassrls": false,
+      "database_owner": false
+    },
+    "worker": {
+      "current_user": "word_browser_worker",
+      "superuser": false,
+      "createdb": false,
+      "createrole": false,
+      "bypassrls": false,
+      "database_owner": false
+    }
+  },
+  "runtime_browser_script_bytes_equal": true,
+  "acceptance_scripts_frozen": true
+}
