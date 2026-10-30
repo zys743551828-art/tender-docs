@@ -1,0 +1,23 @@
+{
+  "reviewer": "local_config_audit",
+  "actual_view_images": [
+    "word-timeout-390-viewport.png",
+    "word-retry-keyboard-focus-390.png",
+    "word-retry-loading-390-viewport.png",
+    "word-390-refresh-viewport.png",
+    "word-desktop-parse-partial.png"
+  ],
+  "observations": "Friendly failure explanation with details collapsed; visible keyboard focus; pending view no active duplicate retry; readable original/PDF downloads; desktop current PDF partial. No observed horizontal overflow or occlusion.",
+  "asserted_narrow_width": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "not_tested": [
+    "complete keyboard/modal navigation",
+    "Word-specific cancel UI (not present)",
+    "all business pages",
+    "full Compose installation",
+    "Kafka",
+    "models"
+  ]
+}

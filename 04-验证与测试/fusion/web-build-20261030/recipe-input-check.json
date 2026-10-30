@@ -1,0 +1,31 @@
+{
+  "scope": "Static recipe/input/lock inspection only; no build, pull, install or runtime compatibility claim",
+  "dockerfile": "workbench/deploy/Dockerfile.web-build",
+  "dockerignore": "workbench/deploy/Dockerfile.web-build.dockerignore",
+  "context": "workbench/apps/web",
+  "platform": "linux/amd64",
+  "inputs_exist": [
+    "package.json",
+    "package-lock.json",
+    "scripts/copy-pdf-resources.mjs",
+    "src",
+    "public/fonts",
+    "public/theme.js",
+    "index.html",
+    "vite.config.ts",
+    "tsconfig.json"
+  ],
+  "postinstall_script_copied_before_npm_ci": true,
+  "only_dist_exported": true,
+  "existing_package_lock_unchanged": true,
+  "local_generated_pdfjs_excluded": "No public/pdfjs allow rule; copied from locked pdfjs-dist during npm ci/prebuild",
+  "private_environment_excluded": "Default deny plus terminal **/.env*; no npmrc, local node_modules, dist or qa preview allow rule",
+  "checks": "passed",
+  "nginx_candidate": "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+  "runtime_checks_pending": [
+    "actual node/npm build and clean local dist export",
+    "nginx -v and wget availability",
+    "UID65532 readonly/tmpfs start using existing mounted configs",
+    "API readiness proxy and SPA/static/PDF asset response checks"
+  ]
+}

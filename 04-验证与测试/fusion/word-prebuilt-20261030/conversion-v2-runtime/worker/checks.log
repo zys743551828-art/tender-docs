@@ -1,0 +1,43 @@
+ruff 0
+All checks passed!
+
+
+ruff 0
+4 files already formatted
+
+
+mypy 0
+Success: no issues found in 2 source files
+
+
+bandit 0
+
+st in comment: tmpfs is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: key is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: exact is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: required is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: tmpfs is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: identity is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: reject is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shadow is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: mounts is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: reject is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shadow is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: mounts is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: under is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: tmpfs is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 237
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 237
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 237
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 248
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 248
+
+/usr/local/bin/python 0
+........................................................................ [ 69%]
+...............................                                          [100%]
+------------------- generated xml file: /evidence/junit.xml --------------------
+103 passed in 4.67s
+
+
+

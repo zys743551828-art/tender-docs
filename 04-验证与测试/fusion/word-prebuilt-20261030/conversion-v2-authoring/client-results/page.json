@@ -1,0 +1,128 @@
+{
+  "state": "succeeded",
+  "coverage": "complete",
+  "conversion_attempted": true,
+  "error_code": null,
+  "retryable": false,
+  "gaps": [],
+  "pdf": {
+    "byte_size": 19774,
+    "sha256": "fd6e4a3e5ddf71ec71246a00606d8d20d1c7d80dfe279fdbf98235ed5e776f13"
+  },
+  "protocol": "authoring-prebuilt-generated/1",
+  "isolation": {
+    "NetworkMode": "none",
+    "IpcMode": "none",
+    "ReadonlyRootfs": true,
+    "Memory": 536870912,
+    "MemorySwap": 536870912,
+    "NanoCpus": 1000000000,
+    "PidsLimit": 64,
+    "image_id": "sha256:e3d196d893aa14a70057f9b6e33c11f6120cb2f721fc6ee4f85150a48686060e",
+    "user": "65534:65534",
+    "cap_drop": "ALL",
+    "no_new_privileges": true,
+    "tmpfs": {
+      "/tmp": "rw,noexec,nosuid,nodev,size=134217728,mode=1777",
+      "/input": "rw,noexec,nosuid,nodev,size=104857600,mode=1777",
+      "/output": "rw,noexec,nosuid,nodev,size=67108864,mode=1777"
+    },
+    "checks": {
+      "nonroot": true,
+      "pid_private": true,
+      "immutable_image": true,
+      "cpu_limited": true,
+      "no_daemon_document_logs": true,
+      "not_privileged": true,
+      "no_new_privileges": true,
+      "pids_limited": true,
+      "capabilities_dropped": true,
+      "read_only": true,
+      "no_host_binds_or_ports": true,
+      "no_anonymous_persistent_volumes": true,
+      "clean_environment": true,
+      "bounded_tmpfs_output": true,
+      "uts_private": true,
+      "memory_limited": true,
+      "network_none": true,
+      "ipc_none": true,
+      "own_job_cleanup_confirmed": true
+    },
+    "own_job_cleanup_confirmed": true
+  },
+  "measurements": {
+    "page_count": 2,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 9
+      },
+      {
+        "physical_page": 2,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 34
+      }
+    ],
+    "expected_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4",
+    "actual_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4"
+  },
+  "chain": {
+    "source_docx_digest": "c879216375ad22b88a85a5cad7b0695b2b2de0a6bb0c64b040575a037502f102",
+    "producer_manifest_digest": "1ce180074f5381018db5bbe8d58c052fe9da4f156647c5dcc7669404dad0693a",
+    "validator_digest": "ba1251007aa7ecc4d609d33881c502666fc738ae6f71de820c73310afc6bdfcd",
+    "generator_digest": "0e61891743580e060bc31a6d606f4351730749b16b092de298ee92c7ff26ab1d",
+    "parts": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "word/_rels/document.xml.rels",
+      "word/document.xml",
+      "word/footer.xml",
+      "word/numbering.xml",
+      "word/styles.xml"
+    ],
+    "page_number": true,
+    "pdf_digest": "fd6e4a3e5ddf71ec71246a00606d8d20d1c7d80dfe279fdbf98235ed5e776f13",
+    "profile_digest": "b282c844a2825aaed896d60dc16b552323f9e876ca3f9dbc24da41bdab5058c5",
+    "page_count": 2,
+    "renderer_digest": "a365f34f09971148955daa09523ddc0663a52f95f2d66208648fcd5822807961",
+    "fontset_digest": "ed2c82bf0f5b8afa428098af2bb30f73aadffec0a2510f430dc221fa0c51cbfa",
+    "options_digest": "5a87cb34abd8adeef9259d9ac02bae20f4420aea71e461bad3986b30f0061a99",
+    "image_reference": "gotenberg/gotenberg:8.39.0-libreoffice@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161",
+    "provider_profile_digest": "de7fc0903d2cd85678f1c5705af8249e36bef064d5d137784db13ba57b9b1747",
+    "render_protocol": "authoring-prebuilt-generated/1"
+  },
+  "resource_receipt": {
+    "closed": true,
+    "receipts": [
+      {
+        "receipt": "conversion-dd7b053da78c4361a06f2b062f895002.json",
+        "closed": true,
+        "run_id": "7366ec9eff574b409c3995f847c98588"
+      }
+    ]
+  },
+  "correspondence": {
+    "page_count": 2,
+    "gaps": [],
+    "pages": [
+      {
+        "physical_page": 1,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 9
+      },
+      {
+        "physical_page": 2,
+        "footer_matches": true,
+        "header_matches": true,
+        "body_character_count": 34
+      }
+    ],
+    "expected_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4",
+    "actual_body_digest": "24fd5342edbe98b974afe8267fc40cd34fe4723a6452c84e70f75a94003388f4"
+  }
+}

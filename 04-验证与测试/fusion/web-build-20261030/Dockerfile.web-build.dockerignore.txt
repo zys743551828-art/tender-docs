@@ -1,0 +1,23 @@
+# Relative to the apps/web build context; allow only the existing build inputs.
+**
+!package.json
+!package-lock.json
+!scripts/
+!scripts/copy-pdf-resources.mjs
+!src/
+!src/**
+!qa-previews/
+!qa-previews/frozen-inputs/
+!qa-previews/frozen-inputs/*.ts
+!public/
+!public/fonts/
+!public/fonts/**
+!public/theme.js
+!index.html
+!vite.config.ts
+!tsconfig.json
+# Never send environment files or local/generated material, even under allowed trees.
+**/.env*
+**/node_modules
+**/*.tsbuildinfo
+**/__pycache__

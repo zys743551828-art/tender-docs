@@ -1,0 +1,52 @@
+{
+  "started_utc": "2026-10-30T17:25:27.320989+00:00",
+  "started_local": "2026-10-31T01:25:27.320989+08:00",
+  "topology": {
+    "mode": "local isolated acceptance only",
+    "application_image": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+    "containers": [
+      "PG17",
+      "private S3",
+      "browser QA tooling only",
+      "API uid65532 readonly",
+      "Worker uid65532 readonly"
+    ],
+    "networks": 1,
+    "host_executor": "separate bounded host process; not containerized",
+    "application_sources": "packages, apps/api, apps/worker, deploy, pyproject and requirements all readonly",
+    "api_generated_state": "/workspace/.local tmpfs16m uid/gid65532 mode0700",
+    "application_tmpfs": "/tmp512m",
+    "worker_mailbox": "/tmp/word-execution",
+    "protocol": "word-conversion-execution/2; rawconvert only",
+    "first_failure": "original external client 120s, executor absent",
+    "retry": "start pinned executor only after real timeout; UI double click must create 1 POST/new operation",
+    "guards": "no docker.sock; no DB/model env in QA or host executor; no model calls; per-job Gotenberg networknone",
+    "cleanup": "stop executor and application services before PG/S3; official process and conversion recovery helpers"
+  },
+  "host_executor_containerized": false,
+  "models_called": false,
+  "full_compose_installed": false,
+  "kafka_tested": false,
+  "worker_local_qualification_proved": true,
+  "narrow_conversion_v2_proved": true,
+  "working_bytes_uncommitted_at_start": true,
+  "passed": true,
+  "first_real_client_timeout": true,
+  "retry_single_post_and_new_run": true,
+  "downloads_match_s3": true,
+  "parse_coverage": "partial",
+  "api_worker_candidate_image": true,
+  "browser_url": "http://127.0.0.1:5179/bids/32b6f185-657b-4dbb-8eb0-2c58be4eff07/materials",
+  "host_executor_stopped": true,
+  "host_executor_exit_code": 0,
+  "conversion_cleanup": [
+    {
+      "receipt": "conversion-d7dc881bdb004c45935bc8dbaaca23bb.json",
+      "closed": true,
+      "run_id": "3cd350c5ee7d4973b6e929f3eab4589d"
+    }
+  ],
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-30T17:29:28.137924+00:00",
+  "finished_local": "2026-10-31T01:29:28.137924+08:00"
+}

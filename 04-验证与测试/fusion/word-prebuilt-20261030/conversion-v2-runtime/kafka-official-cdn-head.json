@@ -1,0 +1,28 @@
+{
+  "method": "HEAD requests from the user Windows computer using Python urllib; public official endpoints only, no authentication or configuration changes",
+  "responses": [
+    {
+      "source": "https://downloads.apache.org/kafka/4.1.2/kafka_2.13-4.1.2.tgz",
+      "http_status": 200,
+      "content_length": 133586323,
+      "last_modified": "Mon, 16 Mar 2026 21:26:46 GMT",
+      "redirected": false,
+      "body_read": false
+    },
+    {
+      "source": "https://dlcdn.apache.org/kafka/4.1.2/kafka_2.13-4.1.2.tgz",
+      "http_status": 200,
+      "content_length": 133586323,
+      "last_modified": "Mon, 16 Mar 2026 21:26:46 GMT",
+      "redirected": false,
+      "body_read": false
+    }
+  ],
+  "ci_download_order": [
+    "https://downloads.apache.org/kafka/4.1.2/kafka_2.13-4.1.2.tgz",
+    "https://archive.apache.org/dist/kafka/4.1.2/kafka_2.13-4.1.2.tgz"
+  ],
+  "fallback": "Only a nonzero curl HTTP/transfer result triggers archive fallback; a checksum mismatch fails without fallback",
+  "required_original_sha512": "78ac6e488b1071122f9608dfdb363f6fe50e1dbbc492347002c0398dfbf77e0d8caa5bf794c5937379721004dfe92025937d238b0faf4eb715529417fd43b491",
+  "limits": "HEAD availability and matching size do not prove content identity or actual CI download speed. Every CDN/archive/cache result must pass the original fixed SHA512 check. No Kafka response body was downloaded and no CI run was triggered."
+}

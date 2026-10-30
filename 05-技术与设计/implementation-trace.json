@@ -1,5 +1,5 @@
 {
-  "code_revision": "2db73a29f6a48ef737f1a299d60619c408f9be4d",
+  "code_revision": "4108b686c9c5174b6e14ae8f29cfc89c665dd752",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -89,7 +89,7 @@
       "test": "tests/test_authoring_exact_revisions_pg.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e6403a45fa5b8e9ca14b0f84fb9703d983e1768348e5f2a39fa4149df99cdb3a",
+      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
       "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
     },
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "28dfb4fa6e941b9e79584e91c924454ec04cffb9c41ad000239e3c406ca459dd",
+      "code_sha256": "4eb5821de66a18bf7b218ee25add49f7eafe9c42aa0a6833d2276978301e2ceb",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -332,7 +332,7 @@
       "test": "tests/test_authoring_exact_revisions_pg.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e6403a45fa5b8e9ca14b0f84fb9703d983e1768348e5f2a39fa4149df99cdb3a",
+      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
       "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
     },
     {
@@ -350,7 +350,7 @@
       "test": "tests/test_authoring_rich_table_continuations.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e6403a45fa5b8e9ca14b0f84fb9703d983e1768348e5f2a39fa4149df99cdb3a",
+      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
       "test_sha256": "8d1feaf40aea9ba49935572d4efad9ba3a5d8677f2d0db51a8367e2ea7a5009d"
     },
     {
@@ -514,8 +514,8 @@
       "test": "tests/test_word_prebuilt.py",
       "document": "04-验证与测试/Word03来源与复现核查.md",
       "acceptance": "not_accepted",
-      "code_sha256": "54a776f701d7081f22236fb2a6065ef07bd584820b4d76b2628a88d225750ff0",
-      "test_sha256": "508101b16de34e3d00653b258e30cd74988761fc8df2089101a73f85156d2e1c"
+      "code_sha256": "db1d792508708bbb1c4f1c7abffe155a536abc36bc3e644cae89c0c9404c8c39",
+      "test_sha256": "6ab0042c0f9ccb1285d37c6a905b728384609cdbb34e070e4129491042696814"
     },
     {
       "id": "TEST-WORD-RICH-PREBUILT",
@@ -568,8 +568,8 @@
       "test": "tests/test_word_execution_transport.py",
       "document": "05-技术与设计/工作台实现架构.md",
       "acceptance": "not_accepted",
-      "code_sha256": "7b8e6a7a498235932005104b5f399dcf21d38f265ee56203f7b7e37ad95afc67",
-      "test_sha256": "144c47f9083113645ab0c7b1236ba36aafa4a51ecb72b83a8c5a190b9d0ea4ea"
+      "code_sha256": "22cf450445058c11277198f4d0b2a4c180f7a6da61c8cd91533ee5246ed555a3",
+      "test_sha256": "3aeee09d4cb58b4159a83f7070c971ffd96c4cfdc5b612d56b850c58514aad8d"
     },
     {
       "id": "TEST-WORD-EXECUTION-HOST",
@@ -577,8 +577,8 @@
       "test": "tests/test_word_execution_host.py",
       "document": "05-技术与设计/工作台实现架构.md",
       "acceptance": "not_accepted",
-      "code_sha256": "498eaaf9adefd58fb923031d4ba090dd1fadd7cee1c093a4a23ef1e4be6e3832",
-      "test_sha256": "118386e135bad29446d378bcb879da108e1a4fe926cdba57ee8e5a236cd56706"
+      "code_sha256": "3d2114365503b5abde03ebaa2f6f8e2db7c11703ffde07c5b506da29aa48f433",
+      "test_sha256": "a401322d08e620816580718076631b20cd76c6ef4cc73edef85c6ef4af85a878"
     },
     {
       "id": "TEST-WORD-EXECUTION-DISPATCH",
@@ -586,8 +586,8 @@
       "test": "tests/test_word_execution_dispatch.py",
       "document": "05-技术与设计/工作台实现架构.md",
       "acceptance": "not_accepted",
-      "code_sha256": "f7f52ced363245cbd23736ad34e0131d4893a0832e33e38a9a6fdd64f807f3ed",
-      "test_sha256": "8e6e028fb16c6d62ebbc96c2458f0f636366a891194d44a2ec163cd4e4dc993e"
+      "code_sha256": "6aa860c3f2123744691c3d4407a967a62a0451eb1358de77f59ae8c6e357c17e",
+      "test_sha256": "d51ec601423fd70567163857eaba9d36d9b93c74489caf10ae62fb88d24655f0"
     }
   ]
 }

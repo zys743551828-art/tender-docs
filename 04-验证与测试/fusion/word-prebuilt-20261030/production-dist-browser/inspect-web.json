@@ -1,0 +1,40 @@
+{
+  "Id": "360057109b63746eede356880eb6527afd8d5523c31b7373bb0c66b69b179557",
+  "ImageID": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+  "User": "65532:65532",
+  "ReadonlyRootfs": true,
+  "Privileged": false,
+  "CapDrop": [
+    "ALL"
+  ],
+  "SecurityOpt": [
+    "no-new-privileges:true"
+  ],
+  "Tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=64m,mode=1777"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Destination": "/etc/nginx/nginx.conf",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/etc/nginx/conf.d/fusion-full-server.conf",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/usr/share/nginx/html",
+      "RW": false
+    }
+  ],
+  "NetworkMode": "10ac54bad3b80f4f08723b79064acb97eec41be0494ae90a5aefcca85c32dabe",
+  "Labels": {
+    "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>",
+    "tender.test.disposable": "true",
+    "tender.test.run": "67f2e9714cc64c0687a767aa6c9786b0"
+  },
+  "role": "web"
+}

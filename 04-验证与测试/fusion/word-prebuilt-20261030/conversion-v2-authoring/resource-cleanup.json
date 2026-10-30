@@ -1,0 +1,68 @@
+{
+  "host": {
+    "state": "stopped",
+    "cleanup_closed": true,
+    "processed": 3
+  },
+  "client": {
+    "run_id": "b7e4165dc4f947959ae19918135aaee4",
+    "closed": true,
+    "resources": [
+      {
+        "kind": "container",
+        "name": "tender-test-b7e4165dc4f9-1",
+        "id": "5d330527bd0846640663461c716b7b45db6a9ff9fa7bc285389c01183d0f8ab2",
+        "state": "removed"
+      }
+    ]
+  },
+  "conversion_receipts": [
+    {
+      "file": "host/receipts/725c4a30450e496998f06efd8090d2de/conversion-725c4a30450e496998f06efd8090d2de.json",
+      "receipt": {
+        "run_id": "a3f2bf59902449e2bd4a279ad51ee2ad",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-a3f2bf599024-1",
+            "id": "9fd89115abd7a6851aef9f6cf1c0f80dc9600bba0d6731cf09e25915b2af14e2",
+            "state": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "file": "host/receipts/dd7b053da78c4361a06f2b062f895002/conversion-dd7b053da78c4361a06f2b062f895002.json",
+      "receipt": {
+        "run_id": "7366ec9eff574b409c3995f847c98588",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-7366ec9eff57-1",
+            "id": "ffece78952e5b2a1673cbabfa4b8422b2014740c2c72f56de0943cc6309e57a0",
+            "state": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "file": "host/receipts/ee87565627e0407daa5a245a89007576/conversion-ee87565627e0407daa5a245a89007576.json",
+      "receipt": {
+        "run_id": "e6442c166d684b6f92635367a0f771d8",
+        "closed": true,
+        "resources": [
+          {
+            "kind": "container",
+            "name": "tender-test-e6442c166d68-1",
+            "id": "8065ba0c492b0fe97075549bb48cbccc5eeb3b4ec8a64042bddd2cad4e31cf40",
+            "state": "removed"
+          }
+        ]
+      }
+    }
+  ],
+  "conversion_count": 3,
+  "no_global_cleanup_or_inventory_claim": true
+}

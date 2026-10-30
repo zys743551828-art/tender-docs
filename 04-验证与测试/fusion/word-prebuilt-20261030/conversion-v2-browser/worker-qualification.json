@@ -1,0 +1,100 @@
+{
+  "trace": [
+    {
+      "function": "validate_profile",
+      "qualified_name": "validate_profile",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "validate_profile",
+      "qualified_name": "validate_profile",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "admit",
+      "qualified_name": "render.<locals>.admit",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "validate_profile",
+      "qualified_name": "validate_profile",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "admit",
+      "qualified_name": "render.<locals>.admit",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "_font_gaps_from_facts",
+      "qualified_name": "_font_gaps_from_facts",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    },
+    {
+      "function": "inspect_pdf",
+      "qualified_name": "inspect_pdf",
+      "source": "packages/word_intake/prebuilt.py",
+      "pid": 1,
+      "uid": 65532,
+      "platform": "linux"
+    }
+  ],
+  "request_shapes": [
+    {
+      "protocol": "word-conversion-execution/2",
+      "operation": "convert_docx",
+      "top_level_keys": [
+        "arguments",
+        "operation",
+        "protocol",
+        "request_id"
+      ],
+      "argument_keys": [
+        "requested_fonts",
+        "source"
+      ],
+      "source_bytes_present": true,
+      "forbidden_business_fields_present": false,
+      "pid": 1,
+      "uid": 65532
+    },
+    {
+      "protocol": "word-conversion-execution/2",
+      "operation": "convert_docx",
+      "top_level_keys": [
+        "arguments",
+        "operation",
+        "protocol",
+        "request_id"
+      ],
+      "argument_keys": [
+        "requested_fonts",
+        "source"
+      ],
+      "source_bytes_present": true,
+      "forbidden_business_fields_present": false,
+      "pid": 1,
+      "uid": 65532
+    }
+  ],
+  "observer_errors": [],
+  "observer": "sys.setprofile; original functions unmodified; no argument values persisted"
+}

@@ -1,0 +1,90 @@
+{
+  "round": "authoring-word-conversion-v2-20261031-012555",
+  "cause": "PAGE client import failed because only packages were mounted, and prebuilt imports the pure deploy.disposable_docker helper. Task runner then added only that helper file as a read-only mount; product source/qualification unchanged.",
+  "conversion_count": 0,
+  "summary": {
+    "state": "failed",
+    "stage": "page",
+    "model_calls": 0,
+    "database_connections": 0,
+    "client_image_reference": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+    "evidence": "${TASK_ROOT}/evidence-local-20261030/authoring-word-conversion-v2-20261031-012555",
+    "started_at_utc": "2026-10-30T17:25:55.144804+00:00",
+    "protocol": "word-conversion-execution/2",
+    "source_state": "Actual candidate source bytes recorded by SHA256; no Git HEAD equivalence is asserted",
+    "client_image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+    "client": {
+      "id": "e51a4b1dd0a78288f93c555460401dc947f5ea57b3ecc2124330d77e5f720e48",
+      "run_id": "e8c9afdb3ab64a7e805b0a2d787b991a",
+      "user": "65532:65532",
+      "image_id": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "network_mode": "none",
+      "read_only_root": true,
+      "ipc_mode": "none",
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "${TASK_ROOT}/evidence-local-20261030/authoring-word-conversion-v2-20261031-012555/fixtures",
+          "Destination": "/fixtures",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "${TASK_ROOT}/tender-app-dev/workbench/packages",
+          "Destination": "/workspace/packages",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "configured_tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+      },
+      "kernel": {
+        "uid": 65532,
+        "tmp_mounts": [
+          {
+            "mount_point": "/tmp",
+            "filesystem": "tmpfs",
+            "options": "rw,nosuid,nodev,noexec,relatime"
+          }
+        ]
+      },
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges"
+      ]
+    },
+    "error_type": "RuntimeError",
+    "error_code": "PAGE_CLIENT_FAILED",
+    "client_cleanup_closed": true,
+    "finished_at_utc": "2026-10-30T17:25:58.963071+00:00"
+  },
+  "host_summary": {
+    "state": "stopped",
+    "cleanup_closed": true,
+    "processed": 0
+  },
+  "client_receipt": {
+    "run_id": "e8c9afdb3ab64a7e805b0a2d787b991a",
+    "closed": true,
+    "resources": [
+      {
+        "kind": "container",
+        "name": "tender-test-e8c9afdb3ab6-1",
+        "id": "e51a4b1dd0a78288f93c555460401dc947f5ea57b3ecc2124330d77e5f720e48",
+        "state": "removed"
+      }
+    ]
+  },
+  "profile_receipt": {
+    "run_id": "1f52ecf9f2e9482389eea1e782eb1cba",
+    "closed": true,
+    "resources": []
+  },
+  "client_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 4, in <module>\n  File \"/workspace/packages/authoring/prebuilt_dispatch.py\", line 6, in <module>\n    from packages.authoring import generated_renderer, prebuilt_generated, prebuilt_rich, rich_renderer\n  File \"/workspace/packages/authoring/prebuilt_generated.py\", line 15, in <module>\n    from packages.word_intake import prebuilt\n  File \"/workspace/packages/word_intake/prebuilt.py\", line 19, in <module>\n    from deploy.disposable_docker import DockerTestRun\nModuleNotFoundError: No module named 'deploy'\n"
+}

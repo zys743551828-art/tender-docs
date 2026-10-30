@@ -1,0 +1,20 @@
+{
+  "reviewer": "primary/root agent",
+  "method": "Actually viewed page-1.png/page-2.png/rich-1.png/rich-2.png from successful v2 run 012639; primary report after the run.",
+  "result": "passed_for_this_sparse_controlled_synthetic_case",
+  "files": [
+    "artifacts/page-1.png",
+    "artifacts/page-2.png",
+    "artifacts/rich-1.png",
+    "artifacts/rich-2.png"
+  ],
+  "observations": [
+    "TOC, body and page numbers readable and consistent.",
+    "RICH Chinese table borders, green figure and captions have no obvious clipping or overlap.",
+    "TOC points to page 2 and the second page visibly shows page number 2."
+  ],
+  "limitations": [
+    "Does not establish arbitrary complex tender layout quality or complex multipage table coverage.",
+    "Does not establish byte-for-byte equivalence with legacy Word03."
+  ]
+}

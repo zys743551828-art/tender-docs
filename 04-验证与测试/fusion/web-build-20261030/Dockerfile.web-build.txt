@@ -1,0 +1,20 @@
+# syntax=docker/dockerfile:1.7@sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720
+# Build context: workbench/apps/web. Supported platform: linux/amd64 only.
+# From workbench: docker build --platform linux/amd64 -f deploy/Dockerfile.web-build \
+#   --output type=local,dest=apps/web/dist apps/web
+# This exports static files only; the existing full Compose mounts dist readonly.
+FROM node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0 AS build
+WORKDIR /build
+COPY package.json package-lock.json ./
+# npm ci executes postinstall, so its locked PDF resource copier must exist first.
+COPY scripts/copy-pdf-resources.mjs ./scripts/copy-pdf-resources.mjs
+COPY public/ ./public/
+RUN npm ci --no-audit --no-fund
+COPY src/ ./src/
+# tsc includes tests that import these tracked synthetic fixture modules.
+COPY qa-previews/frozen-inputs/*.ts ./qa-previews/frozen-inputs/
+COPY index.html vite.config.ts tsconfig.json ./
+RUN npm run build
+
+FROM scratch AS dist
+COPY --from=build /build/dist/ /

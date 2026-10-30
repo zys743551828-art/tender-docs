@@ -1,0 +1,30 @@
+{
+  "actual_review_local_config_audit": [
+    "word-desktop-parse-partial.png",
+    "word-390-original-download-viewport.png",
+    "word-390-pdf-download-viewport.png",
+    "word-390-refresh-viewport.png"
+  ],
+  "actual_review_root": [
+    "word-selected.png",
+    "word-390-refresh-viewport.png",
+    "word-desktop-parse-partial.png"
+  ],
+  "observations": "Main content not occluded; desktop parse partial visible; 390 download buttons readable/clicked; no horizontal overflow observed.",
+  "narrow_layout": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "capture_limits": "Desktop fullPage capture scroll shifts sticky sidebar/blank regions and may show focused skip-link; do not infer a real layout defect or unpictured viewport state from that capture.",
+  "not_tested": [
+    "prior v2 timeout/retry (not repeated)",
+    "complete keyboard/modal flow",
+    "Word-specific cancel UI",
+    "all business pages",
+    "page/rich complete browser chain",
+    "full Compose installation",
+    "Kafka",
+    "models",
+    "production deployment"
+  ]
+}

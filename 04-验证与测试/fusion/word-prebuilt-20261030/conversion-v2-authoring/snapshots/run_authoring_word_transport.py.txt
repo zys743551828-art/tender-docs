@@ -1,0 +1,378 @@
+"""Run-owned real PAGE/RICH mailbox round trip; no DB, model or business socket."""
+
+from __future__ import annotations
+
+import datetime
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import time
+import traceback
+
+ROOT = Path(__file__).resolve().parent
+APP = ROOT / "tender-app-dev/workbench"
+IMAGE = "tender-workbench-runtime:py3.12.16-candidate-20261030"
+EXPECTED_SOURCE_SHA = {
+    "deploy/word_execution_host.py": "6ec55f7afbd88061d13e9f69178229e0c04d454ed01dc9fba894c839393a49d3",
+    "packages/word_intake/execution_transport.py": "84ca1c67e3129745a9ff97343ce6999586bc83ea5ba12ef7d30359d09750c0dd",
+    "packages/word_intake/prebuilt.py": "be44fcf07b5efee8482f4b3893a3bf99666ae296853c89bda145c90e198c1924",
+}
+os.environ["WORKBENCH_ENV_FILE"] = "explicit-authoring-transport-no-business-env"
+os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
+sys.path[:0] = [str(APP), str(APP / "tests")]
+
+import pypdfium2
+import test_authoring_generated as page_cases
+import test_authoring_rich_renderer as rich_cases
+
+from deploy.disposable_docker import DockerTestRun
+from packages.authoring import generated_docx, prebuilt_generated, prebuilt_rich
+from packages.word_intake import execution_transport as codec
+from packages.word_intake import prebuilt
+
+
+class LocalRun(DockerTestRun):
+    @staticmethod
+    def _call(*args, timeout=60, env=None):
+        value = prebuilt._call(list(args), timeout=timeout)
+        return subprocess.CompletedProcess(
+            value.args, value.returncode, value.stdout.decode("utf-8", errors="replace"),
+            value.stderr.decode("utf-8", errors="replace"),
+        )
+
+
+CLIENT = r'''
+import base64,hashlib,json,os,sys
+from pathlib import Path
+from packages.authoring import generated_docx,prebuilt_dispatch
+from packages.word_intake import execution_transport
+lane=sys.argv[1]
+assert lane in {'page','rich'} and os.geteuid()==65532
+fixture=json.loads(Path('/fixtures',lane+'.json').read_text())
+selected={
+ 'prebuilt_dispatch.py':{'generated','rich'},
+ 'generated_docx.py':{'assemble','producer_manifest'},
+ 'rich_docx.py':{'assemble'},
+ 'generated_verification.py':{'verify','verify_container'},
+ 'rich_verification.py':{'verify','verify_container','manifest'},
+ 'prebuilt_generated.py':{'prepare','render','admit','validate_profile'},
+ 'prebuilt_rich.py':{'prepare','render','render_once','admit','validate_profile','converge_navigation'},
+ 'prebuilt.py':{'_render_generated','_font_gaps_from_facts','_conversion_facts','validate_profile','inspect_pdf','convert_in_isolation'},
+ 'execution_transport.py':{'call_conversion','deadline_budget'},
+ 'generated_renderer.py':{'inspect_pdf'},
+ 'prebuilt_pdf.py':{'inspect_pdf','inspect_leaders'},
+ 'rich_table_pdf.py':{'inspect_tables'},
+ 'rich_caption_pdf.py':{'inspect_captions'},
+ 'rich_pdf.py':{'inspect_images','inspect_image_sections'},
+ 'rich_layout.py':{'inspect_layout'},
+ 'page_navigation.py':{'inspect_navigation','converge'},
+}
+locations={};conversion_inputs=[]
+def observer(frame,event,arg):
+ if event!='call':return
+ code=frame.f_code;file=code.co_filename;name=code.co_name
+ if not file.startswith('/workspace/packages/') or name not in selected.get(file.rsplit('/',1)[-1],set()):return
+ key=(file,code.co_qualname,code.co_firstlineno)
+ if key not in locations:locations[key]={'filename':file,'function':name,'qualname':code.co_qualname,'firstlineno':code.co_firstlineno,'pid':os.getpid(),'uid':os.geteuid(),'count':0}
+ locations[key]['count']+=1
+ if name=='call_conversion':
+  conversion_inputs.append({'source_docx_digest':hashlib.sha256(frame.f_locals['source']).hexdigest(),'requested_fonts':list(frame.f_locals['requested_fonts']),'pid':os.getpid(),'uid':os.geteuid()})
+def binary(value):
+ return {'base64':base64.b64encode(value).decode('ascii'),'byte_size':len(value),'sha256':hashlib.sha256(value).hexdigest()}
+def pack(value):
+ value=dict(value)
+ for key in ['pdf','docx']:
+  if isinstance(value.get(key),bytes):value[key]=binary(value[key])
+ if 'render_iterations' in value:
+  value['render_iterations']=[item|{'pdf_bytes':binary(item['pdf_bytes']),'docx_bytes':binary(item['docx_bytes'])} for item in value['render_iterations']]
+ return value
+sys.setprofile(observer)
+try:
+ if lane=='page':
+  source=generated_docx.assemble(fixture['snapshot'])
+  manifest=generated_docx.producer_manifest(source,fixture['snapshot'])
+  result=prebuilt_dispatch.generated(source,fixture['snapshot'],manifest,fixture['profile'])
+ else:
+  materials=[]
+  for item in fixture['materials']:
+   item=dict(item);item['bytes']=base64.b64decode(item.pop('bytes_base64'),validate=True);materials.append(item)
+  result=prebuilt_dispatch.rich(fixture['snapshot'],materials,fixture['profile'],mode=fixture['mode'])
+  source=result['docx']
+finally:sys.setprofile(None)
+for item in locations.values():item['source_sha256']=hashlib.sha256(Path(item['filename']).read_bytes()).hexdigest()
+assert result['resource_receipt']['closed'] is True
+packet={'lane':lane,'result':pack(result),'source_docx':binary(source),'execution_locations':list(locations.values()),'conversion_inputs':conversion_inputs,'runtime':{'python':sys.version,'pid':os.getpid(),'uid':os.geteuid()},'protocol':execution_transport.PROTOCOL}
+sys.stdout.buffer.write(json.dumps(packet,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode())
+'''
+
+HOST_PROFILE = r'''
+import hashlib,json,os,runpy,sys
+from pathlib import Path
+script,tracefile,*arguments=sys.argv[1:]
+records=[]
+def observer(frame,event,arg):
+ if event!='call':return
+ file=frame.f_code.co_filename.replace('\\','/');name=frame.f_code.co_name
+ if file.endswith('/deploy/word_execution_host.py') and name=='_dispatch':
+  request=frame.f_locals['request'];arguments=request['arguments']
+  records.append({'filename':file,'function':name,'pid':os.getpid(),'request_id':request['request_id'],'operation':request['operation'],'argument_keys':sorted(arguments),'source_docx_digest':hashlib.sha256(arguments['source']).hexdigest(),'requested_fonts':arguments['requested_fonts']})
+ elif file.endswith('/packages/word_intake/prebuilt.py') and name in {'convert_in_isolation','_font_facts','_render_generated','inspect_pdf','_font_gaps_from_facts'}:
+  records.append({'filename':file,'function':name,'pid':os.getpid()})
+ elif '/packages/authoring/' in file and name in {'assemble','prepare','verify','inspect_pdf','inspect_tables','inspect_captions'}:
+  records.append({'filename':file,'function':name,'pid':os.getpid()})
+sys.argv=[script,*arguments]
+sys.setprofile(observer)
+try:runpy.run_path(script,run_name='__main__')
+finally:
+ sys.setprofile(None)
+ Path(tracefile).write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+'''
+
+
+def unpack_binary(value):
+    assert isinstance(value,dict) and set(value)=={'base64','byte_size','sha256'}
+    data=__import__('base64').b64decode(value['base64'],validate=True)
+    assert len(data)==value['byte_size'] and hashlib.sha256(data).hexdigest()==value['sha256']
+    return data
+
+
+def unpack_result(packet):
+    value=dict(packet['result'])
+    for key in ['pdf','docx']:
+        if value.get(key) is not None:value[key]=unpack_binary(value[key])
+    if 'render_iterations' in value:
+        value['render_iterations']=[item|{'pdf_bytes':unpack_binary(item['pdf_bytes']),'docx_bytes':unpack_binary(item['docx_bytes'])} for item in value['render_iterations']]
+    return value
+
+
+
+def safe(value):
+    if isinstance(value, bytes):
+        return {"byte_size": len(value), "sha256": hashlib.sha256(value).hexdigest()}
+    if isinstance(value, dict):
+        return {k: safe(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [safe(v) for v in value]
+    return value
+
+
+def record(out, lane, result, source):
+    (out / f"{lane}.docx").write_bytes(source)
+    (out / f"{lane}.json").write_text(json.dumps(safe(result), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if result.get("pdf"):
+        (out / f"{lane}.pdf").write_bytes(result["pdf"])
+        document = pypdfium2.PdfDocument(result["pdf"])
+        try:
+            for index in range(min(len(document), 6)):
+                page = document[index]
+                bitmap = page.render(scale=1.4)
+                pixels = bitmap.to_pil()
+                try:
+                    pixels.save(out / f"{lane}-{index + 1}.png")
+                finally:
+                    pixels.close()
+                    bitmap.close()
+                    page.close()
+        finally:
+            document.close()
+    for index, iteration in enumerate(result.get("render_iterations", []), 1):
+        (out / f"{lane}-pass-{index}.docx").write_bytes(iteration["docx_bytes"])
+        (out / f"{lane}-pass-{index}.pdf").write_bytes(iteration["pdf_bytes"])
+
+
+def main():
+    out = ROOT / "evidence-local-20261030" / ("authoring-word-conversion-v2-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+    out.mkdir()
+    fixtures = out / "fixtures"
+    fixtures.mkdir()
+    scratch = out / "operator-tmp"
+    scratch.mkdir()
+    os.environ["TEMP"] = os.environ["TMP"] = str(scratch)
+    tempfile.tempdir = str(scratch)
+    status = {"state": "starting", "stage": "prepare", "model_calls": 0, "database_connections": 0,
+              "client_image_reference": IMAGE, "evidence": str(out),
+              "started_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "protocol": codec.PROTOCOL, "source_state": "Actual candidate source bytes recorded by SHA256; no Git HEAD equivalence is asserted"}
+    run = LocalRun(out / "client-resources.json")
+    host = None
+    stop = out / "operator-stop"
+    exit_code = 1
+    try:
+        for name, expected_digest in EXPECTED_SOURCE_SHA.items():
+            assert hashlib.sha256((APP / name).read_bytes()).hexdigest() == expected_digest
+        source_names = [
+            "deploy/word_execution_host.py", "deploy/Dockerfile.runtime", "deploy/fusion_full_requirements.txt",
+            "requirements.lock.txt", "packages/word_intake/execution_transport.py", "packages/word_intake/prebuilt.py",
+            "packages/authoring/prebuilt_generated.py", "packages/authoring/prebuilt_rich.py",
+            "packages/authoring/prebuilt_pdf.py", "packages/authoring/rich_caption_pdf.py",
+            "packages/authoring/rich_table_pdf.py", "packages/authoring/prebuilt_dispatch.py",
+            "packages/authoring/generated_docx.py", "packages/authoring/rich_docx.py",
+            "packages/authoring/generated_verification.py", "packages/authoring/rich_verification.py",
+            "tests/test_authoring_generated.py", "tests/test_authoring_rich_renderer.py", "tests/test_authoring_rich.py",
+        ]
+        (out / "source-correspondence.json").write_text(json.dumps({
+            "files": {name: hashlib.sha256((APP / name).read_bytes()).hexdigest() for name in source_names},
+            "driver_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        }, indent=2) + "\n", encoding="utf-8")
+        provider = prebuilt.build_profile(receipt=out / "profile-resources.json")
+        import base64
+        snapshot = page_cases.snapshot.__wrapped__()
+        fixtures_data = {"page": {"snapshot": snapshot, "profile": prebuilt_generated.profile_for(provider)}}
+        rich_snapshot, materials, _, pagination, _ = rich_cases.rich_input.__wrapped__()
+        fixtures_data["rich"] = {
+            "snapshot": rich_snapshot,
+            "materials": [{k:v for k,v in item.items() if k!="bytes"}|{"bytes_base64":base64.b64encode(item["bytes"]).decode("ascii")} for item in materials],
+            "profile": prebuilt_rich.profile_for(provider), "mode": pagination["mode"],
+        }
+        for lane, fixture in fixtures_data.items():
+            (fixtures / f"{lane}.json").write_text(json.dumps(fixture,ensure_ascii=False,allow_nan=False),encoding="utf-8")
+        (out / "provider-profile.json").write_text(json.dumps(provider, indent=2) + "\n", encoding="utf-8")
+        image = json.loads(prebuilt._successful(["image", "inspect", IMAGE]))[0]
+        status["client_image_id"] = image["Id"]
+        with run:
+            identity = run.container(image["Id"], [
+                "--network", "none", "--ipc", "none", "--user", "65532:65532", "--read-only",
+                "--cap-drop", "ALL", "--security-opt", "no-new-privileges", "--memory", "1g",
+                "--cpus", "1", "--pids-limit", "128", "--tmpfs", "/tmp:rw,nosuid,nodev,size=512m,mode=1777",
+                "--mount", f"type=bind,source={APP / 'packages'},target=/workspace/packages,readonly",
+                "--mount", f"type=bind,source={APP / 'deploy/disposable_docker.py'},target=/workspace/deploy/disposable_docker.py,readonly",
+                "--mount", f"type=bind,source={fixtures},target=/fixtures,readonly",
+                "--env", "PYTHONPATH=/workspace", "--env", "PYTHONDONTWRITEBYTECODE=1",
+                "--env", "WORKBENCH_ENV_FILE=explicit-linux-transport-no-business-env",
+                "--env", "WORD_RENDER_EXECUTION_DIRECTORY=/tmp/word-execution",
+                "--entrypoint", "python",
+            ], ["-B", "-c", "import time;time.sleep(900)"])
+            run.start(identity)
+            observed = json.loads(prebuilt._successful(["container", "inspect", identity]))[0]
+            assert observed["HostConfig"]["NetworkMode"] == "none"
+            assert observed["HostConfig"]["ReadonlyRootfs"] is True
+            assert observed["Config"]["User"] == "65532:65532"
+            assert not observed["HostConfig"]["Privileged"]
+            assert all("docker.sock" not in str(item) and "docker_engine" not in str(item) for item in observed["Mounts"])
+            kernel = json.loads(prebuilt._successful([
+                "exec", identity, "python", "-I", "-c",
+                "import json,os;from pathlib import Path;rows=[]\n"
+                "for line in Path('/proc/self/mountinfo').read_text().splitlines():\n"
+                " before,sep,after=line.partition(' - ');fields=before.split()\n"
+                " if sep and fields[4]=='/tmp':rows.append({'mount_point':fields[4],'filesystem':after.split()[0],'options':fields[5]})\n"
+                "print(json.dumps({'uid':os.geteuid(),'tmp_mounts':rows}))",
+            ]))
+            assert kernel["uid"] == 65532 and len(kernel["tmp_mounts"]) == 1
+            assert kernel["tmp_mounts"][0]["filesystem"] == "tmpfs"
+            status["client"] = {
+                "id": identity, "run_id": run.run_id, "user": observed["Config"]["User"],
+                "image_id": observed["Image"], "network_mode": observed["HostConfig"]["NetworkMode"],
+                "read_only_root": observed["HostConfig"]["ReadonlyRootfs"],
+                "ipc_mode": observed["HostConfig"]["IpcMode"], "mounts": observed["Mounts"],
+                "configured_tmpfs": observed["HostConfig"]["Tmpfs"], "kernel": kernel,
+                "cap_drop": observed["HostConfig"]["CapDrop"], "security_opt": observed["HostConfig"]["SecurityOpt"],
+            }
+            status["stage"] = "host-start"
+            environment = prebuilt._environment() | {
+                "WORKBENCH_ENV_FILE": "explicit-host-transport-no-business-env", "PYTHONDONTWRITEBYTECODE": "1",
+            }
+            with (out / "host.stdout.json").open("wb") as stdout, (out / "host.stderr.log").open("wb") as stderr:
+                host = subprocess.Popen([
+                    sys.executable, "-B", "-c", HOST_PROFILE, str(APP / "deploy/word_execution_host.py"), str(out / "host-execution-locations.json"),
+                    "--container-id", identity, "--run-id", run.run_id,
+                    "--report-dir", str(out / "host-private"), "--stop-file", str(stop),
+                ], cwd=APP, env=environment, stdout=stdout, stderr=stderr,
+                    creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+                try:
+                    ready = out / "host-private/ready.json"
+                    ready_deadline = time.monotonic() + 30
+                    while not ready.exists():
+                        if host.poll() is not None or time.monotonic() >= ready_deadline:
+                            raise RuntimeError("HOST_EXECUTOR_NOT_READY")
+                        time.sleep(0.05)
+                    assert json.loads(ready.read_text(encoding="utf-8")) == {
+                        "state": "ready", "container_id": identity, "run_id": run.run_id,
+                    }
+                    for lane in fixtures_data:
+                        status["stage"] = lane
+                        if host.poll() is not None:
+                            raise RuntimeError("HOST_EXECUTOR_EXITED_BEFORE_CLIENT")
+                        print(json.dumps({"evidence": str(out), "stage": lane}), flush=True)
+                        execution = prebuilt._call([
+                            "exec", "-i", identity, "python", "-B", "-c", CLIENT, lane,
+                        ], timeout=300)
+                        (out / f"{lane}-client.stderr.log").write_bytes(execution.stderr)
+                        if execution.returncode:
+                            raise RuntimeError(f"{lane.upper()}_CLIENT_FAILED")
+                        assert len(execution.stdout)<=200*1024*1024
+                        packet=json.loads(execution.stdout)
+                        assert packet["lane"]==lane and packet["protocol"]==codec.PROTOCOL
+                        result=unpack_result(packet)
+                        source=unpack_binary(packet["source_docx"])
+                        assert hashlib.sha256(source).hexdigest()==result["chain"]["source_docx_digest"]
+                        record(out, lane, result, source)
+                        trace={k:packet[k] for k in ("execution_locations","conversion_inputs","runtime","protocol")}
+                        (out/f"{lane}-execution-locations.json").write_text(json.dumps(trace,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+                        assert all(item["uid"]==65532 and item["pid"]==packet["runtime"]["pid"] for item in trace["execution_locations"])
+                        observed={(item["filename"].rsplit("/",1)[-1],item["function"]):item["count"] for item in trace["execution_locations"]}
+                        assert observed[("prebuilt_dispatch.py","generated" if lane=="page" else "rich")]>=1
+                        assert observed[("prebuilt.py","_font_gaps_from_facts")]>=1
+                        assert observed[("prebuilt.py","_conversion_facts")]>=1
+                        assert ("prebuilt.py","convert_in_isolation") not in observed
+                        assert observed[("execution_transport.py","call_conversion")]==(1 if lane=="page" else 2)
+                        if lane=="page":
+                            assert observed[("generated_docx.py","assemble")]>=1
+                            assert observed[("generated_verification.py","verify")]>=1
+                            assert observed[("generated_renderer.py","inspect_pdf")]>=1
+                        else:
+                            assert observed[("rich_docx.py","assemble")]>=2
+                            assert observed[("rich_verification.py","verify")]>=2
+                            assert observed[("rich_caption_pdf.py","inspect_captions")]>=2
+                            assert observed[("rich_table_pdf.py","inspect_tables")]>=2
+                            assert observed[("prebuilt_rich.py","converge_navigation")]>=1
+                        status[lane] = {key: result.get(key) for key in ("state", "coverage", "gaps", "error_code")}
+                        assert result["state"] == "succeeded" and result["coverage"] == "complete" and result["gaps"] == []
+                        if lane == "rich":
+                            assert result["navigation_proof"]["fixed_point"] is True
+                            assert len(result["render_iterations"]) >= 2
+                finally:
+                    stop.write_text("stop after bounded current job and cleanup\n", encoding="utf-8")
+                    host.wait(timeout=300)
+                status["host_exit_code"] = host.returncode
+                host_summary = json.loads((out / "host-private/summary.json").read_text(encoding="utf-8"))
+                status["host"] = host_summary
+                assert host.returncode == 0 and host_summary["cleanup_closed"] and host_summary["processed"] == 3
+                host_locations=json.loads((out/"host-execution-locations.json").read_text(encoding="utf-8"))
+                dispatched=[item for item in host_locations if item["function"]=="_dispatch"]
+                assert len(dispatched)==3 and all(item["argument_keys"]==["requested_fonts","source"] for item in dispatched)
+                assert sum(item["function"]=="convert_in_isolation" for item in host_locations)==3
+                assert not any(item["function"] in {"_render_generated","inspect_pdf","_font_gaps_from_facts","assemble","prepare","verify","inspect_tables","inspect_captions"} for item in host_locations)
+                all_inputs=[]
+                for lane in fixtures_data:
+                    all_inputs.extend(json.loads((out/f"{lane}-execution-locations.json").read_text(encoding="utf-8"))["conversion_inputs"])
+                assert sorted(item["source_docx_digest"] for item in all_inputs)==sorted(item["source_docx_digest"] for item in dispatched)
+                conversions=list((out/"host-private/receipts").rglob("*.json"))
+                assert len(conversions)==3 and all(json.loads(path.read_text())["closed"] for path in conversions)
+                status["worker_qualification_location"]="Linux client uid65532; source/PDF/font/navigation inspectors actually observed"
+                status["host_request_argument_keys"]=[item["argument_keys"] for item in dispatched]
+                assert run._owned(run.resources[0])["State"]["Running"] is True
+                status["state"] = "passed"
+                status["stage"] = "complete"
+                exit_code = 0
+    except Exception as error:
+        status.update(state="failed", error_type=type(error).__name__, error_code=str(error) if isinstance(error, RuntimeError) else "ASSERTION_OR_EXECUTION_FAILED")
+        (out / "driver-error.log").write_text(traceback.format_exc(), encoding="utf-8")
+    finally:
+        if not run.closed:
+            try:
+                run.cleanup()
+            except Exception:
+                status["client_cleanup_error"] = "CLIENT_CLEANUP_UNCONFIRMED"
+        status["client_cleanup_closed"] = run.closed
+        status["finished_at_utc"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        (out / "summary.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(status, ensure_ascii=False, indent=2), flush=True)
+    return 0 if exit_code == 0 and status["state"] == "passed" and run.closed else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

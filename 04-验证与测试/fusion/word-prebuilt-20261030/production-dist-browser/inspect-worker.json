@@ -1,0 +1,59 @@
+{
+  "Id": "5a7c4036ce24747bd1276278152493db765de9175d7fabc11671ed79de64eace",
+  "ImageID": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+  "User": "65532:65532",
+  "ReadonlyRootfs": true,
+  "Privileged": false,
+  "CapDrop": [
+    "ALL"
+  ],
+  "SecurityOpt": [
+    "no-new-privileges:true"
+  ],
+  "Tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Destination": "/run/word-profile.json",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/deploy",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/packages",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/pyproject.toml",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/requirements.lock.txt",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/apps/api",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Destination": "/workspace/apps/worker",
+      "RW": false
+    }
+  ],
+  "NetworkMode": "10ac54bad3b80f4f08723b79064acb97eec41be0494ae90a5aefcca85c32dabe",
+  "Labels": {
+    "tender.test.disposable": "true",
+    "tender.test.run": "67f2e9714cc64c0687a767aa6c9786b0"
+  },
+  "role": "worker"
+}

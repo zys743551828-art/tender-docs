@@ -1,0 +1,123 @@
+{
+  "checked_utc": "2026-10-30T17:27:10.068974+00:00",
+  "services": [
+    {
+      "Id": "506cd1e3a7179e371f89572a4d25a1d90642d1e516df08217ba67bcd5d84c994",
+      "ImageID": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "User": "65532:65532",
+      "ReadonlyRootfs": true,
+      "Privileged": false,
+      "CapDrop": [
+        "ALL"
+      ],
+      "SecurityOpt": [
+        "no-new-privileges:true"
+      ],
+      "Tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=512m,mode=1777",
+        "/workspace/.local": "rw,nosuid,nodev,size=16m,uid=65532,gid=65532,mode=0700"
+      },
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/run/word-profile.json",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/deploy",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/packages",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/pyproject.toml",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/requirements.lock.txt",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/api",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/worker",
+          "RW": false
+        }
+      ],
+      "Labels": {
+        "tender.test.disposable": "true",
+        "tender.test.run": "1df5198fc2ad4887a335bc330133bdc4"
+      },
+      "role": "api"
+    },
+    {
+      "Id": "0e3f1d12b32f37056fcaae93a6fb79486f1e975ec225334f7c940251a1a8d785",
+      "ImageID": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "User": "65532:65532",
+      "ReadonlyRootfs": true,
+      "Privileged": false,
+      "CapDrop": [
+        "ALL"
+      ],
+      "SecurityOpt": [
+        "no-new-privileges:true"
+      ],
+      "Tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+      },
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/run/word-profile.json",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/deploy",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/packages",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/pyproject.toml",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/requirements.lock.txt",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/api",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/worker",
+          "RW": false
+        }
+      ],
+      "Labels": {
+        "tender.test.disposable": "true",
+        "tender.test.run": "1df5198fc2ad4887a335bc330133bdc4"
+      },
+      "role": "worker"
+    }
+  ],
+  "config_environment_values_not_requested": true
+}

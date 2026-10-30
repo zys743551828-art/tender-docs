@@ -1,0 +1,10 @@
+{
+  "result": "failed_before_export",
+  "source": "local docker build tool receipt; no standalone first-attempt log saved",
+  "npm_ci": "succeeded; 304 packages installed",
+  "command": "npm run build",
+  "failure": "TypeScript module resolution: src tests import qa-previews/frozen-inputs modules omitted from build context",
+  "correction": "Include only the eleven tracked synthetic frozen-inputs TypeScript modules required by the recursive source dependency closure",
+  "unchanged_checks": ["existing tsconfig", "npm ci lock", "npm run build TypeScript validation"],
+  "recheck": "build.log and summary.json record successful corrected build"
+}

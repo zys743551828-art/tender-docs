@@ -1,0 +1,165 @@
+{
+  "scope": "Only archived controlled fixtures/metadata; no private directory scan.",
+  "host_path_redaction": "Known task root recursively replaced by ${TASK_ROOT}; other Windows drive paths rejected.",
+  "rules": [
+    "absolute_windows_path",
+    "personal_unix_path",
+    "private_key",
+    "credential_dsn",
+    "bearer_value",
+    "api_token",
+    "credential_assignment"
+  ],
+  "findings": [],
+  "files": [
+    {
+      "file": "summary.json",
+      "text_parts": 1
+    },
+    {
+      "file": "client-resources.json",
+      "text_parts": 1
+    },
+    {
+      "file": "profile-resources.json",
+      "text_parts": 1
+    },
+    {
+      "file": "provider-profile.json",
+      "text_parts": 1
+    },
+    {
+      "file": "source-correspondence.json",
+      "text_parts": 1
+    },
+    {
+      "file": "client-results/page.json",
+      "text_parts": 1
+    },
+    {
+      "file": "worker/page-execution-locations.json",
+      "text_parts": 1
+    },
+    {
+      "file": "client-results/rich.json",
+      "text_parts": 1
+    },
+    {
+      "file": "worker/rich-execution-locations.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/execution-locations.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/ready.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/receipts/725c4a30450e496998f06efd8090d2de/conversion-725c4a30450e496998f06efd8090d2de.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/receipts/dd7b053da78c4361a06f2b062f895002/conversion-dd7b053da78c4361a06f2b062f895002.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/receipts/ee87565627e0407daa5a245a89007576/conversion-ee87565627e0407daa5a245a89007576.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/requests/725c4a30450e496998f06efd8090d2de.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/requests/dd7b053da78c4361a06f2b062f895002.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/requests/ee87565627e0407daa5a245a89007576.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/summary.json",
+      "text_parts": 1
+    },
+    {
+      "file": "artifacts/page.docx",
+      "text_parts": 7
+    },
+    {
+      "file": "artifacts/page.pdf",
+      "text_parts": 3
+    },
+    {
+      "file": "artifacts/page-1.png",
+      "text_parts": 1
+    },
+    {
+      "file": "artifacts/page-2.png",
+      "text_parts": 1
+    },
+    {
+      "file": "artifacts/rich.docx",
+      "text_parts": 7
+    },
+    {
+      "file": "artifacts/rich.pdf",
+      "text_parts": 3
+    },
+    {
+      "file": "artifacts/rich-1.png",
+      "text_parts": 1
+    },
+    {
+      "file": "artifacts/rich-2.png",
+      "text_parts": 1
+    },
+    {
+      "file": "iterations/rich-pass-1.docx",
+      "text_parts": 7
+    },
+    {
+      "file": "iterations/rich-pass-1.pdf",
+      "text_parts": 3
+    },
+    {
+      "file": "iteration-artifacts.json",
+      "text_parts": 1
+    },
+    {
+      "file": "host/narrow-request-metadata.json",
+      "text_parts": 1
+    },
+    {
+      "file": "resource-cleanup.json",
+      "text_parts": 1
+    },
+    {
+      "file": "snapshots/run_authoring_word_transport.py.txt",
+      "text_parts": 1
+    },
+    {
+      "file": "snapshots/word_execution_host.py.txt",
+      "text_parts": 1
+    },
+    {
+      "file": "roles-isolation.json",
+      "text_parts": 1
+    },
+    {
+      "file": "failed-round.json",
+      "text_parts": 1
+    },
+    {
+      "file": "README.md",
+      "text_parts": 1
+    },
+    {
+      "file": "visual-review.json",
+      "text_parts": 1
+    }
+  ],
+  "binary_note": "DOCX XML/relationships, PDF metadata/extracted text and PNG metadata checked; primary/root agent additionally actually viewed all four final v2 PNGs within the documented sparse synthetic sample scope."
+}

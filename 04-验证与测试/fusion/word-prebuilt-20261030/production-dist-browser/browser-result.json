@@ -1,0 +1,818 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8080/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+  "application_api_worker_containerized": true,
+  "host_executor_containerized": false,
+  "production_dist_nginx": true,
+  "prior_timeout_retry_not_repeated": true,
+  "return_forward_no_reupload": true,
+  "same_origin_upload": true,
+  "word_conversion_complete": true,
+  "current_pdf_adopted": true,
+  "current_pdf_id": "ecc301a1-4319-415f-8ded-3397dc9d6711",
+  "parse_api_partial": true,
+  "parse_ui_partial": true,
+  "desktop_refresh_restored": true,
+  "narrow_refresh_restored": true,
+  "narrow_viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "narrow_layout": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "narrow_refreshed_layout": {
+    "viewport": 390,
+    "scroll": 390
+  },
+  "narrow_download_bounds": {
+    "original": {
+      "left": 19,
+      "right": 170,
+      "top": 402.375,
+      "bottom": 442.375,
+      "width": 390,
+      "height": 844
+    },
+    "pdf": {
+      "left": 19,
+      "right": 197,
+      "top": 478.375,
+      "bottom": 518.375,
+      "width": 390,
+      "height": 844
+    }
+  },
+  "narrow_downloads_clicked": true,
+  "downloaded_original_exact": true,
+  "pdf_downloaded": true,
+  "events": [
+    {
+      "path": "/api/v1/auth/session",
+      "status": 401,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/login",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/identity/bidders",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/streams/0e6a905c-8995-4652-ac51-488cfc1e7054/events",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches",
+      "status": 201,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/uploads",
+      "status": 200,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2/parts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/object-transfers/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2",
+      "status": 200,
+      "method": "PUT"
+    },
+    {
+      "path": "/api/v1/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2/parts",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/uploads/d808f81c-b5a7-4b1d-b997-576226c41bc2/complete",
+      "status": 202,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/operations/f532589e-fb15-47b0-bf2e-d715262613b6",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b/commit",
+      "status": 202,
+      "method": "POST"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/operations/e9fc9404-42de-429e-8bb3-16849b235dca",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/streams/0e6a905c-8995-4652-ac51-488cfc1e7054/events",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/documents/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/artifacts/6488e175-abc7-4559-a5b2-55c72040d99d/download",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/object-transfers/versions/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/documents/ecc301a1-4319-415f-8ded-3397dc9d6711",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/artifacts/ecc301a1-4319-415f-8ded-3397dc9d6711/download",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/object-transfers/versions/ecc301a1-4319-415f-8ded-3397dc9d6711",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/auth/session",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/streams/0e6a905c-8995-4652-ac51-488cfc1e7054/events",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/bidders",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/project-work-summaries",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/streams/0e6a905c-8995-4652-ac51-488cfc1e7054/events",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/bidders",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/upload-batches/cc505225-91f7-4f4a-8d71-48f243d8c24b",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/review-state",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/identity/default-bidder",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/materials",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/streams/0e6a905c-8995-4652-ac51-488cfc1e7054/events",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/settings",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-materials/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "path": "/api/v1/bids/69b2287e-5745-45c2-a623-35562f68b1ec/word-originals/6488e175-abc7-4559-a5b2-55c72040d99d",
+      "status": 200,
+      "method": "GET"
+    }
+  ],
+  "page_errors": []
+}

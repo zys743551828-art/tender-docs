@@ -1,0 +1,82 @@
+{
+  "observed_utc": "2026-10-30T17:52:12.875038+00:00",
+  "scope": "Official Docker Hub index/manifest/config only; no layers, image pulls, builds or installs",
+  "images": [
+    {
+      "tag": "node:24.22.2-bookworm-slim",
+      "index_digest": "sha256:c86ecead9e55a5210ac1727de38a4ca840bf03dcaf34dc9749addbf383b1920c",
+      "manifest_digest": "sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0",
+      "config_digest": "sha256:9564952982df837e05d23c77e319715650fafc77b1abce39a504b920fda46a44",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "manifest_annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:a3bba7dc7dbcc1f37c2856c51fc9a7fac96608f50cb87b1b4e4d8b8c85ae988e",
+        "org.opencontainers.image.base.name": "debian:bookworm-slim",
+        "org.opencontainers.image.created": "2026-10-28T20:55:58Z",
+        "org.opencontainers.image.revision": "e994dfe115899a82684caa7533380aa7d439aae1",
+        "org.opencontainers.image.source": "https://github.com/nodejs/docker-node.git#e994dfe115899a82684caa7533380aa7d439aae1:24/bookworm-slim",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/node",
+        "org.opencontainers.image.version": "24-bookworm-slim"
+      },
+      "descriptor_annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:a3bba7dc7dbcc1f37c2856c51fc9a7fac96608f50cb87b1b4e4d8b8c85ae988e",
+        "org.opencontainers.image.base.name": "debian:bookworm-slim",
+        "org.opencontainers.image.created": "2026-10-28T20:55:58Z",
+        "org.opencontainers.image.revision": "e994dfe115899a82684caa7533380aa7d439aae1",
+        "org.opencontainers.image.source": "https://github.com/nodejs/docker-node.git#e994dfe115899a82684caa7533380aa7d439aae1:24/bookworm-slim",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/node",
+        "org.opencontainers.image.version": "24-bookworm-slim"
+      },
+      "config_env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "NODE_VERSION=24.22.2",
+        "YARN_VERSION=1.22.22"
+      ],
+      "layer_bytes_not_downloaded": 81046868
+    },
+    {
+      "tag": "nginx:1.30.5-alpine",
+      "index_digest": "sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94",
+      "manifest_digest": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "config_digest": "sha256:43d9d8c1f8968f09df8c1aa6c136ecc617e62d64fe4c0b24c97de4eb210bd973",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "manifest_annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:1dcab0ce2a09f2f162804e5d06198736fd064d757e024d64f11d6bd57ee753f0",
+        "org.opencontainers.image.base.name": "nginx:1.30.5-alpine-slim",
+        "org.opencontainers.image.created": "2026-09-22T22:10:28Z",
+        "org.opencontainers.image.revision": "a16f1329e13e7273c4103f75d863ca625b75109e",
+        "org.opencontainers.image.source": "https://github.com/nginx/docker-nginx.git#a16f1329e13e7273c4103f75d863ca625b75109e:stable/alpine",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/nginx",
+        "org.opencontainers.image.version": "1.30.5-alpine"
+      },
+      "descriptor_annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:1dcab0ce2a09f2f162804e5d06198736fd064d757e024d64f11d6bd57ee753f0",
+        "org.opencontainers.image.base.name": "nginx:1.30.5-alpine-slim",
+        "org.opencontainers.image.created": "2026-09-22T22:10:28Z",
+        "org.opencontainers.image.revision": "a16f1329e13e7273c4103f75d863ca625b75109e",
+        "org.opencontainers.image.source": "https://github.com/nginx/docker-nginx.git#a16f1329e13e7273c4103f75d863ca625b75109e:stable/alpine",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/nginx",
+        "org.opencontainers.image.version": "1.30.5-alpine"
+      },
+      "config_env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "NGINX_VERSION=1.30.5",
+        "PKG_RELEASE=1",
+        "DYNPKG_RELEASE=1",
+        "NJS_VERSION=1.0.1",
+        "NJS_RELEASE=1",
+        "ACME_VERSION=0.4.1"
+      ],
+      "layer_bytes_not_downloaded": 26073522
+    }
+  ]
+}

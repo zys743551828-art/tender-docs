@@ -1,0 +1,23 @@
+{
+  "Id": "52a7e162f464acb5cb53ac0b59930969a95ec79a6ba412fc0f0c71f5a8511850",
+  "ImageID": "sha256:9ff5ec8223f3610e515880bfa6db1fc563463afd885920a1e38ee1a8319e3988",
+  "User": "",
+  "ReadonlyRootfs": false,
+  "Privileged": false,
+  "CapDrop": null,
+  "SecurityOpt": null,
+  "Tmpfs": null,
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Destination": "/evidence",
+      "RW": true
+    }
+  ],
+  "NetworkMode": "container:360057109b63746eede356880eb6527afd8d5523c31b7373bb0c66b69b179557",
+  "Labels": {
+    "tender.test.disposable": "true",
+    "tender.test.run": "67f2e9714cc64c0687a767aa6c9786b0"
+  },
+  "role": "qa"
+}

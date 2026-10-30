@@ -1,0 +1,118 @@
+{
+  "protocol": "word-conversion-execution/2",
+  "payload_retained": false,
+  "requests": [
+    {
+      "request_id": "dd7b053da78c4361a06f2b062f895002",
+      "operation": "convert_docx",
+      "argument_keys": [
+        "requested_fonts",
+        "source"
+      ],
+      "source_docx_digest": "c879216375ad22b88a85a5cad7b0695b2b2de0a6bb0c64b040575a037502f102",
+      "source": {
+        "lane": "page",
+        "iteration": 1,
+        "file": "artifacts/page.docx",
+        "byte_size": 2636
+      },
+      "requested_fonts": [
+        "Noto Sans CJK SC"
+      ],
+      "worker": {
+        "pid": 25,
+        "uid": 65532
+      },
+      "font_fact_validation": {
+        "actual_worker_function": {
+          "filename": "/workspace/packages/word_intake/prebuilt.py",
+          "function": "_font_gaps_from_facts",
+          "qualname": "_font_gaps_from_facts",
+          "firstlineno": 372,
+          "pid": 25,
+          "uid": 65532,
+          "count": 1,
+          "source_sha256": "be44fcf07b5efee8482f4b3893a3bf99666ae296853c89bda145c90e198c1924"
+        },
+        "font_gap_codes": [],
+        "raw_families_and_charset_values_retained": false,
+        "note": "Original font facts were consumed and checked by the observed Worker function; fc-match return strings were not separately retained, and are not reconstructed here."
+      }
+    },
+    {
+      "request_id": "725c4a30450e496998f06efd8090d2de",
+      "operation": "convert_docx",
+      "argument_keys": [
+        "requested_fonts",
+        "source"
+      ],
+      "source_docx_digest": "180e601d4d5d04fe07bdd84f6b9246d51bf36b9ccedc7c9473db868e749085f5",
+      "source": {
+        "lane": "rich",
+        "iteration": 1,
+        "file": "iterations/rich-pass-1.docx",
+        "byte_size": 3806
+      },
+      "requested_fonts": [
+        "Noto Sans CJK SC"
+      ],
+      "worker": {
+        "pid": 97,
+        "uid": 65532
+      },
+      "font_fact_validation": {
+        "actual_worker_function": {
+          "filename": "/workspace/packages/word_intake/prebuilt.py",
+          "function": "_font_gaps_from_facts",
+          "qualname": "_font_gaps_from_facts",
+          "firstlineno": 372,
+          "pid": 97,
+          "uid": 65532,
+          "count": 2,
+          "source_sha256": "be44fcf07b5efee8482f4b3893a3bf99666ae296853c89bda145c90e198c1924"
+        },
+        "font_gap_codes": [],
+        "raw_families_and_charset_values_retained": false,
+        "note": "Original font facts were consumed and checked by the observed Worker function; fc-match return strings were not separately retained, and are not reconstructed here."
+      }
+    },
+    {
+      "request_id": "ee87565627e0407daa5a245a89007576",
+      "operation": "convert_docx",
+      "argument_keys": [
+        "requested_fonts",
+        "source"
+      ],
+      "source_docx_digest": "d65c164fa0325fb0139023d4a21da6c088070dd2d0fa5366f40c9372dbd721d0",
+      "source": {
+        "lane": "rich",
+        "iteration": 2,
+        "file": "artifacts/rich.docx",
+        "byte_size": 3800
+      },
+      "requested_fonts": [
+        "Noto Sans CJK SC"
+      ],
+      "worker": {
+        "pid": 97,
+        "uid": 65532
+      },
+      "font_fact_validation": {
+        "actual_worker_function": {
+          "filename": "/workspace/packages/word_intake/prebuilt.py",
+          "function": "_font_gaps_from_facts",
+          "qualname": "_font_gaps_from_facts",
+          "firstlineno": 372,
+          "pid": 97,
+          "uid": 65532,
+          "count": 2,
+          "source_sha256": "be44fcf07b5efee8482f4b3893a3bf99666ae296853c89bda145c90e198c1924"
+        },
+        "font_gap_codes": [],
+        "raw_families_and_charset_values_retained": false,
+        "note": "Original font facts were consumed and checked by the observed Worker function; fc-match return strings were not separately retained, and are not reconstructed here."
+      }
+    }
+  ],
+  "no_snapshot_materials_profile_or_iteration_arguments": true
+}

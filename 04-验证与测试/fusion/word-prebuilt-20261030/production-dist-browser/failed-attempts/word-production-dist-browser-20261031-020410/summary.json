@@ -1,0 +1,45 @@
+{
+  "started_utc": "2026-10-30T18:04:10.940354+00:00",
+  "started_local": "2026-10-31T02:04:10.940354+08:00",
+  "topology": {
+    "mode": "local isolated acceptance only",
+    "application_image": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+    "containers": [
+      "PG17",
+      "private S3",
+      "browser QA tooling only",
+      "API uid65532 readonly",
+      "Worker uid65532 readonly",
+      "official nginx production dist uid65532 readonly"
+    ],
+    "networks": 1,
+    "host_executor": "separate bounded host process; not containerized",
+    "application_sources": "packages, apps/api, apps/worker, deploy, pyproject and requirements all readonly",
+    "api_generated_state": "/workspace/.local tmpfs16m uid/gid65532 mode0700",
+    "application_tmpfs": "/tmp512m",
+    "worker_mailbox": "/tmp/word-execution",
+    "protocol": "word-conversion-execution/2; rawconvert only",
+    "browser_origin": "http://127.0.0.1:8080 in shared web network namespace",
+    "scope": "single real upload/convert/adopt/partial/download/refresh; prior timeout/retry not repeated",
+    "guards": "no docker.sock; no DB/model env in QA or host executor; no model calls; per-job Gotenberg networknone",
+    "cleanup": "stop executor and application services before PG/S3; official process and conversion recovery helpers"
+  },
+  "host_executor_containerized": false,
+  "models_called": false,
+  "full_compose_installed": false,
+  "kafka_tested": false,
+  "passed": false,
+  "stage": "application",
+  "error_type": "AssertionError",
+  "frames": [
+    {
+      "file": "run_word_dist_browser.py",
+      "line": 186,
+      "function": "execute"
+    }
+  ],
+  "conversion_cleanup": [],
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-30T18:05:17.934354+00:00",
+  "finished_local": "2026-10-31T02:05:17.934354+08:00"
+}
