@@ -1,0 +1,64 @@
+[
+  {
+    "command": [
+      "ruff",
+      "check",
+      "apps/api",
+      "apps/worker",
+      "packages",
+      "deploy",
+      "tests"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "ruff",
+      "format",
+      "--check",
+      "apps/api",
+      "apps/worker",
+      "packages",
+      "deploy",
+      "tests"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "mypy",
+      "apps/api",
+      "apps/worker",
+      "packages",
+      "deploy"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "bandit",
+      "-q",
+      "-ll",
+      "-r",
+      "apps/api,apps/worker,packages,deploy",
+      "-x",
+      "packages/parsing/qa"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/usr/local/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-ra",
+      "--tb=short",
+      "tests/test_initialize_topics.py",
+      "tests/test_disposable_docker.py",
+      "tests/test_configuration_check.py",
+      "--junitxml=/evidence/targeted.xml"
+    ],
+    "exit_code": 0
+  }
+]

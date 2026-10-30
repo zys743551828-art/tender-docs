@@ -1,0 +1,815 @@
+{
+  "code_revision": "b21cb8c6c7637ad5fcdec8e8c7169b89c9de6f41",
+  "hostname": "ZHANGYANSONG",
+  "word03": {
+    "id": "sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c",
+    "inspect_exit_code": 1,
+    "present": false,
+    "error": "Error response from daemon: No such image: sha256:327daa8fae7178d61f93142f146b098467b345e10997b9eb79f63bd58e5c8f3c"
+  },
+  "archive_format_checks": [
+    {
+      "path": "D:\\workspace\\tender\\tender-app\\workbench\\.local\\f00-linux312-source-521579ca582d.tar",
+      "docker_save_manifest": false
+    },
+    {
+      "path": "D:\\workspace\\tender\\tender-app\\workbench\\.local\\f00-openapi-source-e08813fb31c4.tar",
+      "docker_save_manifest": false
+    }
+  ],
+  "original_container_identities": [
+    {
+      "id": "16b9189a7162edd168bf8f365012aa38b40d10f7d30613625e9274d2bcda8ca7",
+      "name": "tender-fusion-checks-postgres-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "checks-postgres",
+      "created": "2026-10-24T15:39:30.685479549Z",
+      "state": "exited"
+    },
+    {
+      "id": "72fdb661851350e273b7da2337b620096ca856a8be072e2a8cb261c1670e5802",
+      "name": "tender-fusion-asset-renderer-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "asset-renderer",
+      "created": "2026-10-24T15:39:19.284298032Z",
+      "state": "exited"
+    },
+    {
+      "id": "5ff96935d11e14cfeeb325901b68347de7c710f55217496c946f3dc5bc3a52b3",
+      "name": "tender-fusion-checks-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "checks",
+      "created": "2026-10-24T15:18:00.947152723Z",
+      "state": "exited"
+    },
+    {
+      "id": "a40c9703e5c29c7ded9ef1d30e0158a6151fa6769ab01a96227e3f2b2a934a1e",
+      "name": "tender-fusion-web-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "web",
+      "created": "2026-10-23T14:55:30.7278284Z",
+      "state": "exited"
+    },
+    {
+      "id": "c468ada2e2eb8360dd5dbd837306daa0b86be938ea35fc3386079d4cc3b17954",
+      "name": "tender-fusion-full-84f162c8966d-validation-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "validation",
+      "created": "2026-10-23T10:53:23.446152875Z",
+      "state": "exited"
+    },
+    {
+      "id": "bdf72a5f582527b54ab7c635a0b974d994ec921ffcdc8dc0b0d935ff37a22677",
+      "name": "tender-fusion-full-84f162c8966d-web-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "web",
+      "created": "2026-10-23T10:51:14.608785794Z",
+      "state": "exited"
+    },
+    {
+      "id": "6b5c3b8a35551a29dc1eca511fa0c9d38b62a8ba8f2b43911ace7111dcec968d",
+      "name": "tender-fusion-full-84f162c8966d-worker-document-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "worker-document",
+      "created": "2026-10-23T10:51:14.229182593Z",
+      "state": "exited"
+    },
+    {
+      "id": "2108d2c6786e835daf863eee79ce22407a1feb982edda938ada276e28e95cda3",
+      "name": "tender-fusion-full-84f162c8966d-api-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "api",
+      "created": "2026-10-23T10:51:14.226307613Z",
+      "state": "exited"
+    },
+    {
+      "id": "cf4d109febdbc03c39b2b6cff7c923c2f2661ed79f74302e8c3689ad84a683b0",
+      "name": "tender-fusion-full-84f162c8966d-word-controller-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "word-controller",
+      "created": "2026-10-23T10:51:14.226201883Z",
+      "state": "exited"
+    },
+    {
+      "id": "ba3bd1feb1a12288a5392f69b7d399511e1aac542f4480aff8f2531dc5812fa2",
+      "name": "tender-fusion-full-84f162c8966d-reconcile-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "reconcile",
+      "created": "2026-10-23T10:51:14.225394893Z",
+      "state": "exited"
+    },
+    {
+      "id": "d662643ead45894134875e13e8e821d0793630e46d4bc3ab53385d5352510e1f",
+      "name": "tender-fusion-full-84f162c8966d-worker-comparison-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "worker-comparison",
+      "created": "2026-10-23T10:51:14.224069492Z",
+      "state": "exited"
+    },
+    {
+      "id": "a2b61d3b5a17c881408a4f9859b3025a0d24a1a780ca8c0b0e1de8528cbc2706",
+      "name": "tender-fusion-full-84f162c8966d-build-controller-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "build-controller",
+      "created": "2026-10-23T10:51:14.222834738Z",
+      "state": "exited"
+    },
+    {
+      "id": "8a62f7cf607cc20405027204310f953bd16221c3d2aba5b3e76013ca881647ab",
+      "name": "tender-fusion-full-84f162c8966d-relay-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "relay",
+      "created": "2026-10-23T10:51:14.221783439Z",
+      "state": "exited"
+    },
+    {
+      "id": "6877304b4f3a0860147630aa453e55ccb4018a1171b272ca6acd0c12798caa4b",
+      "name": "tender-fusion-full-84f162c8966d-worker-export-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "worker-export",
+      "created": "2026-10-23T10:51:14.220713078Z",
+      "state": "exited"
+    },
+    {
+      "id": "6084d0e90283053b2b066941aa741557093d80dbd8132ecf1f381107b68816ce",
+      "name": "tender-fusion-full-84f162c8966d-publish-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "publish",
+      "created": "2026-10-23T10:51:14.10127349Z",
+      "state": "exited"
+    },
+    {
+      "id": "40a8af05ef41d2bda32405f428d2ef4bbd0932554469bd88715f136bd3b18a90",
+      "name": "tender-fusion-full-84f162c8966d-init-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "init",
+      "created": "2026-10-23T10:51:13.982058245Z",
+      "state": "exited"
+    },
+    {
+      "id": "b19fb368dc571597c1125696d988f58b1f4e2e8bcfd09c4d5b8653d9fae66d9c",
+      "name": "tender-fusion-full-84f162c8966d-kafka-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "kafka",
+      "created": "2026-10-23T10:51:13.78504942Z",
+      "state": "exited"
+    },
+    {
+      "id": "1bcad334cd15931cd788718a7fe4e252d6a8436a7b65009132ec693f343ebf32",
+      "name": "tender-fusion-full-84f162c8966d-postgres-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "postgres",
+      "created": "2026-10-23T10:51:13.773473443Z",
+      "state": "exited"
+    },
+    {
+      "id": "eabd7079abe3ef7005973f8854ffc4e162ad3e7cfdb160d80bd55de78bdeb346",
+      "name": "tender-fusion-full-84f162c8966d-object-store-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "object-store",
+      "created": "2026-10-23T10:51:13.770925702Z",
+      "state": "exited"
+    },
+    {
+      "id": "806b9038506e6586cedbfd87b3577081d7ceea8abd7a79e2b785aa97aa274e29",
+      "name": "tender-fusion-full-84f162c8966d-configure-1",
+      "compose_project": "tender-fusion-full-84f162c8966d",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:50:57.050101597Z",
+      "state": "exited"
+    },
+    {
+      "id": "ad0d612d4fea603be14f2ecb9e9adf599d74c02d178f2c21c05479897c719eb3",
+      "name": "tender-fusion-full-6c93589ab902-validation-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "validation",
+      "created": "2026-10-23T10:49:37.916237599Z",
+      "state": "exited"
+    },
+    {
+      "id": "179061e23fbd0dc121d50ffac924e1c9a49914640997425467c2012bd71c8fa0",
+      "name": "tender-fusion-full-6c93589ab902-web-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "web",
+      "created": "2026-10-23T10:47:24.305848775Z",
+      "state": "exited"
+    },
+    {
+      "id": "f6b2f6f48be4dc33c48982a4d84dca0920dc83a437f5d69170c50b9f1f729234",
+      "name": "tender-fusion-full-6c93589ab902-relay-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "relay",
+      "created": "2026-10-23T10:47:23.850409072Z",
+      "state": "exited"
+    },
+    {
+      "id": "891119d369ca2165b9905817758699bfd746b0c7ee9e9cf2d3a655d3a5b9158c",
+      "name": "tender-fusion-full-6c93589ab902-word-controller-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "word-controller",
+      "created": "2026-10-23T10:47:23.841831466Z",
+      "state": "exited"
+    },
+    {
+      "id": "e827635b455ccc77c045504789c026c5580e289722e228ef6e287085028093c1",
+      "name": "tender-fusion-full-6c93589ab902-api-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "api",
+      "created": "2026-10-23T10:47:23.838127837Z",
+      "state": "exited"
+    },
+    {
+      "id": "d17c13f7a4db011296b0439289b0acdbdb54e97c31e399883cf925291e57a002",
+      "name": "tender-fusion-full-6c93589ab902-worker-document-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "worker-document",
+      "created": "2026-10-23T10:47:23.836543763Z",
+      "state": "exited"
+    },
+    {
+      "id": "44cdfdaebeb2079ddd7fbc424ed16b912f079b773138dfcbdaecaf27ca3a98ad",
+      "name": "tender-fusion-full-6c93589ab902-worker-comparison-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "worker-comparison",
+      "created": "2026-10-23T10:47:23.835872302Z",
+      "state": "exited"
+    },
+    {
+      "id": "aa34520a0945cd08fc1b4fa444024266f1781e8488f6aa3d57d9e890f47f5081",
+      "name": "tender-fusion-full-6c93589ab902-reconcile-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "reconcile",
+      "created": "2026-10-23T10:47:23.833314044Z",
+      "state": "exited"
+    },
+    {
+      "id": "52aaba6278a7e8c3a4a2263b7426acc287260b27a7b5b3ac68764ab6582b9601",
+      "name": "tender-fusion-full-6c93589ab902-worker-export-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "worker-export",
+      "created": "2026-10-23T10:47:23.832500515Z",
+      "state": "exited"
+    },
+    {
+      "id": "ba32339a72dbfb011aafcc0197a8bc085db2b08ccd20ce440cc7186b8d2671ab",
+      "name": "tender-fusion-full-6c93589ab902-build-controller-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "build-controller",
+      "created": "2026-10-23T10:47:23.832146286Z",
+      "state": "exited"
+    },
+    {
+      "id": "1ae071ca705e99aaffdd6ba8e2d1b404729517227d088ed1671708e10db66653",
+      "name": "tender-fusion-full-6c93589ab902-publish-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "publish",
+      "created": "2026-10-23T10:47:23.723016245Z",
+      "state": "exited"
+    },
+    {
+      "id": "dcab3c26ce73d011271ceae8d2114883f3ace98c6cf4c0e673fe556a37a87069",
+      "name": "tender-fusion-full-6c93589ab902-init-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "init",
+      "created": "2026-10-23T10:47:23.604333585Z",
+      "state": "exited"
+    },
+    {
+      "id": "5b4077b979f7fa70213116ca8073ff1311fbd44e20b06def5a0710c1f43abd69",
+      "name": "tender-fusion-full-6c93589ab902-postgres-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "postgres",
+      "created": "2026-10-23T10:47:23.406423684Z",
+      "state": "exited"
+    },
+    {
+      "id": "fda8542278c6f9a97c5ca0df941114c5772e5a7312297b07e2929a61f7ed9660",
+      "name": "tender-fusion-full-6c93589ab902-kafka-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "kafka",
+      "created": "2026-10-23T10:47:23.405263783Z",
+      "state": "exited"
+    },
+    {
+      "id": "038918bd47b7e755440064458307ee745c0d52f866681e8e38835af1e5ac9bec",
+      "name": "tender-fusion-full-6c93589ab902-object-store-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "object-store",
+      "created": "2026-10-23T10:47:23.378821439Z",
+      "state": "exited"
+    },
+    {
+      "id": "48689fceb9c8cfa8de85e5a9d717997f421bcaab9640a75ef26f0d44622a1b7e",
+      "name": "tender-fusion-full-6c93589ab902-configure-1",
+      "compose_project": "tender-fusion-full-6c93589ab902",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:47:06.679728869Z",
+      "state": "exited"
+    },
+    {
+      "id": "6efe9e535682511c6e6cd03e4a48074b78b8c38d3b045d15384012d46a808849",
+      "name": "tender-fusion-full-bbe11ff8ce20-web-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "web",
+      "created": "2026-10-23T10:42:45.966231258Z",
+      "state": "created"
+    },
+    {
+      "id": "0072d965b0209530f42c06744b6f8bc3cbd62fc6c5c626e5f6e1099b56b74b09",
+      "name": "tender-fusion-full-bbe11ff8ce20-build-controller-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "build-controller",
+      "created": "2026-10-23T10:42:45.595475992Z",
+      "state": "created"
+    },
+    {
+      "id": "83766a6aae9aec14f1317d29477d5904dda278c1df78d3d92decba5e3c0de227",
+      "name": "tender-fusion-full-bbe11ff8ce20-worker-comparison-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "worker-comparison",
+      "created": "2026-10-23T10:42:45.58507676Z",
+      "state": "created"
+    },
+    {
+      "id": "fae2755b491ec40e5b95cd646f0704bb1d8c84dcc1db63e5f01383d7bc4de729",
+      "name": "tender-fusion-full-bbe11ff8ce20-reconcile-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "reconcile",
+      "created": "2026-10-23T10:42:45.573543531Z",
+      "state": "created"
+    },
+    {
+      "id": "61c7b4cba991b0bccf35672af8bccc0dcfa8d4d870054c02edfdc6a0679ef70b",
+      "name": "tender-fusion-full-bbe11ff8ce20-api-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "api",
+      "created": "2026-10-23T10:42:45.565328954Z",
+      "state": "created"
+    },
+    {
+      "id": "4e8f9751b835e7b827e40c74f33778cf9787b1a5b43d2ebacccdfb7a97ac92a3",
+      "name": "tender-fusion-full-bbe11ff8ce20-worker-export-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "worker-export",
+      "created": "2026-10-23T10:42:45.557014894Z",
+      "state": "created"
+    },
+    {
+      "id": "d00da6488e4165db9e1ea78a86085f8c4b39b9b011e4d20923f22845db3f7efb",
+      "name": "tender-fusion-full-bbe11ff8ce20-word-controller-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "word-controller",
+      "created": "2026-10-23T10:42:45.549115713Z",
+      "state": "created"
+    },
+    {
+      "id": "f8538770f3125ce8f38772bb7be270c5ad59020597ee1546ed950e44564d1422",
+      "name": "tender-fusion-full-bbe11ff8ce20-worker-document-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "worker-document",
+      "created": "2026-10-23T10:42:45.548106916Z",
+      "state": "created"
+    },
+    {
+      "id": "bdbcf898f5f0a8e14d7a7753148c7b0740c05d18289d8439e3fac146e281f0b3",
+      "name": "tender-fusion-full-bbe11ff8ce20-relay-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "relay",
+      "created": "2026-10-23T10:42:45.548006792Z",
+      "state": "created"
+    },
+    {
+      "id": "aab33b8fadb8717497e579ddc117d8d262c75f1b60195dcfc6df750a6c79ff1b",
+      "name": "tender-fusion-full-bbe11ff8ce20-publish-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "publish",
+      "created": "2026-10-23T10:42:45.434414167Z",
+      "state": "created"
+    },
+    {
+      "id": "cc806393b257f2a4a5a5885e958e135d883491561da9d8273acd417b922d06b3",
+      "name": "tender-fusion-full-bbe11ff8ce20-init-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "init",
+      "created": "2026-10-23T10:42:45.320304214Z",
+      "state": "exited"
+    },
+    {
+      "id": "b310a36a0bda8c4e661123b6688bf6b1723786c5eeccbe1b4379c1e964fdcc26",
+      "name": "tender-fusion-full-bbe11ff8ce20-postgres-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "postgres",
+      "created": "2026-10-23T10:42:45.146197983Z",
+      "state": "exited"
+    },
+    {
+      "id": "f5186dc8239468586d3aa9bf4888afb7fa5a538913727c758097a5aa19b5a88d",
+      "name": "tender-fusion-full-bbe11ff8ce20-object-store-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "object-store",
+      "created": "2026-10-23T10:42:45.143560705Z",
+      "state": "exited"
+    },
+    {
+      "id": "81b30b54a3142239f57143f7c6c820f14885c39473c64326ccef16f4bd43a0bc",
+      "name": "tender-fusion-full-bbe11ff8ce20-kafka-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "kafka",
+      "created": "2026-10-23T10:42:45.100531822Z",
+      "state": "exited"
+    },
+    {
+      "id": "eb4c70f580dccc9bd76a19c14dab8fcf259a6aa96e5c80ed2621dbd3fbcab37c",
+      "name": "tender-fusion-full-bbe11ff8ce20-configure-1",
+      "compose_project": "tender-fusion-full-bbe11ff8ce20",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:42:28.31208695Z",
+      "state": "exited"
+    },
+    {
+      "id": "ffb9a719f65bfb92390bc263ef2ebdb0f4c4da92b301e9f1e70879eac87e7c43",
+      "name": "tender-fusion-full-f7c218afb7e9-web-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "web",
+      "created": "2026-10-23T10:40:58.333894Z",
+      "state": "created"
+    },
+    {
+      "id": "a1578012d055c8a16a4d36abce8b1a0851472854609cf74e2e38210c394f44db",
+      "name": "tender-fusion-full-f7c218afb7e9-worker-comparison-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "worker-comparison",
+      "created": "2026-10-23T10:40:57.953430372Z",
+      "state": "created"
+    },
+    {
+      "id": "7f7ef94bcfbe706a7b5afb9acc0fdeab878c9eaa1990c72ac784b04c5b4dd35d",
+      "name": "tender-fusion-full-f7c218afb7e9-reconcile-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "reconcile",
+      "created": "2026-10-23T10:40:57.944945685Z",
+      "state": "created"
+    },
+    {
+      "id": "c08cc898d5ecd90946dcaa893cea8c544dceac5b30e7b6d4d0c4877165ef8c89",
+      "name": "tender-fusion-full-f7c218afb7e9-word-controller-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "word-controller",
+      "created": "2026-10-23T10:40:57.933714305Z",
+      "state": "created"
+    },
+    {
+      "id": "82e8512d6249fc6ab2453b21c77ffd5d09a99de9bbbd15dbe044c9bc735f6b45",
+      "name": "tender-fusion-full-f7c218afb7e9-api-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "api",
+      "created": "2026-10-23T10:40:57.924109385Z",
+      "state": "created"
+    },
+    {
+      "id": "844499248ad92d5e2ee558c6bb74105488fd0e86e29421f5edc58ecb50a5692f",
+      "name": "tender-fusion-full-f7c218afb7e9-relay-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "relay",
+      "created": "2026-10-23T10:40:57.915496744Z",
+      "state": "created"
+    },
+    {
+      "id": "cd5a2c31f72775d9a4fbe12210e4186ebf05284f425e0011ff2b81b82c41a8d3",
+      "name": "tender-fusion-full-f7c218afb7e9-worker-export-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "worker-export",
+      "created": "2026-10-23T10:40:57.90630776Z",
+      "state": "created"
+    },
+    {
+      "id": "b0d4fa3cff66ad9a901800d25dbc151befaafc788ee0b6aee3c3b9ceaf7c9d67",
+      "name": "tender-fusion-full-f7c218afb7e9-build-controller-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "build-controller",
+      "created": "2026-10-23T10:40:57.905820715Z",
+      "state": "created"
+    },
+    {
+      "id": "5ec3e3ebf3e0459e6ba2f722cb9fa06061a0923af7017b7cb060eb0e33519c33",
+      "name": "tender-fusion-full-f7c218afb7e9-worker-document-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "worker-document",
+      "created": "2026-10-23T10:40:57.904683999Z",
+      "state": "created"
+    },
+    {
+      "id": "a422b34136ad61517d566dad97680250783c878027b98133c467af8ab7462e9a",
+      "name": "tender-fusion-full-f7c218afb7e9-publish-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "publish",
+      "created": "2026-10-23T10:40:57.801141594Z",
+      "state": "created"
+    },
+    {
+      "id": "f28b564ec17673c9a846a17f20b7e89008bd9a14324163e2e88536bb82f3812f",
+      "name": "tender-fusion-full-f7c218afb7e9-init-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "init",
+      "created": "2026-10-23T10:40:57.690430873Z",
+      "state": "exited"
+    },
+    {
+      "id": "fd44bcf664432af3efa7c30211495830152def115fdb7bc197ea62cc0b40e804",
+      "name": "tender-fusion-full-f7c218afb7e9-kafka-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "kafka",
+      "created": "2026-10-23T10:40:57.482178306Z",
+      "state": "exited"
+    },
+    {
+      "id": "b063038c1f5e993641ac1401f09b9d4f1036cfda8a6145b60fa010fcf7a98a27",
+      "name": "tender-fusion-full-f7c218afb7e9-postgres-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "postgres",
+      "created": "2026-10-23T10:40:57.470576692Z",
+      "state": "exited"
+    },
+    {
+      "id": "d94702a75ac033fe51864ab4ac9d7c94a5c63cf6cf975a72eb8b8b62ff2edec2",
+      "name": "tender-fusion-full-f7c218afb7e9-object-store-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "object-store",
+      "created": "2026-10-23T10:40:57.460033052Z",
+      "state": "exited"
+    },
+    {
+      "id": "a76f6555f2cd6b3319acfed0e01c65918a7a80f1b692cccd2e6ce849e661e8e2",
+      "name": "tender-fusion-full-f7c218afb7e9-configure-1",
+      "compose_project": "tender-fusion-full-f7c218afb7e9",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:40:40.745254204Z",
+      "state": "exited"
+    },
+    {
+      "id": "84438337288ba987d91219808f181d3ba1c5fa1f6b17b0e1b8a3b0ba4031e22e",
+      "name": "tender-fusion-object-image-info-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "object-image-info",
+      "created": "2026-10-23T10:38:29.920667481Z",
+      "state": "exited"
+    },
+    {
+      "id": "153af7d1ae99e13715bdd0d4cd01bcb3193dccbbea2682f328cd6dc0afaa1578",
+      "name": "tender-fusion-full-60227587cf5c-web-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "web",
+      "created": "2026-10-23T10:25:08.026198506Z",
+      "state": "created"
+    },
+    {
+      "id": "c1b1c0609a1132692a8eeacdf493df5ae89a44f4c90eff00ac208b77ba0e250b",
+      "name": "tender-fusion-full-60227587cf5c-relay-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "relay",
+      "created": "2026-10-23T10:25:07.658869997Z",
+      "state": "created"
+    },
+    {
+      "id": "663cc292a2d6f99f8e7046f432914c1eafe18551fdbfa741c49fc95b1b8da773",
+      "name": "tender-fusion-full-60227587cf5c-reconcile-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "reconcile",
+      "created": "2026-10-23T10:25:07.648471731Z",
+      "state": "created"
+    },
+    {
+      "id": "70722b0af1154af9d6b3abd2b0196b7057c1282477d4943cd99d941b9be3d19a",
+      "name": "tender-fusion-full-60227587cf5c-worker-document-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "worker-document",
+      "created": "2026-10-23T10:25:07.640230558Z",
+      "state": "created"
+    },
+    {
+      "id": "c094144422d35a69920ee0fabc635ffe083eb08fc3f89aac154bcb23288348b3",
+      "name": "tender-fusion-full-60227587cf5c-word-controller-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "word-controller",
+      "created": "2026-10-23T10:25:07.630157675Z",
+      "state": "created"
+    },
+    {
+      "id": "bef950ca5b2b29801dbc4d70ab4c03060a67b7aed47ff7e4f0f587b622dbdc90",
+      "name": "tender-fusion-full-60227587cf5c-worker-comparison-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "worker-comparison",
+      "created": "2026-10-23T10:25:07.622311571Z",
+      "state": "created"
+    },
+    {
+      "id": "465e0f14b32eb22bffddfc9a8c0cc6b4f6fa1e04bfd09af8bdbced93061ab9c9",
+      "name": "tender-fusion-full-60227587cf5c-worker-export-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "worker-export",
+      "created": "2026-10-23T10:25:07.622231225Z",
+      "state": "created"
+    },
+    {
+      "id": "56af663ad8b450637d16a54c2a9727362c0f953ea8a4fbc6ffa8b49e118f7125",
+      "name": "tender-fusion-full-60227587cf5c-api-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "api",
+      "created": "2026-10-23T10:25:07.622167988Z",
+      "state": "created"
+    },
+    {
+      "id": "55f8d01993b1319c107e8c40adce2a862adbaeab2ca8b37ca1a93cb6fda15d8b",
+      "name": "tender-fusion-full-60227587cf5c-build-controller-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "build-controller",
+      "created": "2026-10-23T10:25:07.620449731Z",
+      "state": "created"
+    },
+    {
+      "id": "84b74dccd37ebe156086426b7667250ea33e7cae334498a274bbed26ac236d75",
+      "name": "tender-fusion-full-60227587cf5c-publish-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "publish",
+      "created": "2026-10-23T10:25:07.518020099Z",
+      "state": "created"
+    },
+    {
+      "id": "c905843ce07166d951fc6eabe1fc9a1479cadb12bb0a9974f7db581bdfb05354",
+      "name": "tender-fusion-full-60227587cf5c-init-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "init",
+      "created": "2026-10-23T10:25:07.421399883Z",
+      "state": "created"
+    },
+    {
+      "id": "106ff4afafba53093dc84e9103ef21ac6054a97914d5157e223392d472e3b326",
+      "name": "tender-fusion-full-60227587cf5c-postgres-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "postgres",
+      "created": "2026-10-23T10:25:07.263939297Z",
+      "state": "exited"
+    },
+    {
+      "id": "52ded3cb98f36a805a75e201df67485d87a9870255be04a7bbc08847947b0bb6",
+      "name": "tender-fusion-full-60227587cf5c-object-store-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "object-store",
+      "created": "2026-10-23T10:25:07.225857169Z",
+      "state": "exited"
+    },
+    {
+      "id": "5e3ac4aded223100c1c1d7b70a4eb5020e25a5a61cbc8626d31ab9243255452c",
+      "name": "tender-fusion-full-60227587cf5c-kafka-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "kafka",
+      "created": "2026-10-23T10:25:07.220088311Z",
+      "state": "exited"
+    },
+    {
+      "id": "8591caae8a43108d3b197e10911b2ec2016a374adb6da63051ffa6109bed15cd",
+      "name": "tender-fusion-full-60227587cf5c-configure-1",
+      "compose_project": "tender-fusion-full-60227587cf5c",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:24:50.433160065Z",
+      "state": "exited"
+    },
+    {
+      "id": "26adf51da3e1d4d7eb46faf2b5d004d2a83138e0d41e3cd650cc29c5efdbc660",
+      "name": "tender-fusion-full-f244782ec07a-configure-1",
+      "compose_project": "tender-fusion-full-f244782ec07a",
+      "compose_service": "configure",
+      "created": "2026-10-23T10:20:56.5609322Z",
+      "state": "exited"
+    },
+    {
+      "id": "235289b57cd544c3dcf897e4aba318daec5b1c7fb0e5871e517033daf7596228",
+      "name": "tender-fusion-postgres-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "postgres",
+      "created": "2026-10-23T09:39:29.630458527Z",
+      "state": "exited"
+    },
+    {
+      "id": "7e173b320627329d1ea6c8f2b2c0224e489ea2f400deeb553f69bd90f178fedd",
+      "name": "tender-fusion-api-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "api",
+      "created": "2026-10-23T08:57:55.202157616Z",
+      "state": "exited"
+    },
+    {
+      "id": "337d238e3709421c1d79be58cafec42ef57b099b9608d01f585dba6d02e7b383",
+      "name": "tender-fusion-init-1",
+      "compose_project": "tender-fusion",
+      "compose_service": "init",
+      "created": "2026-10-23T08:57:54.930621163Z",
+      "state": "exited"
+    },
+    {
+      "id": "98d65bb4571dae746a1a292931108e334dd3bbd0418204ded7b7b56ebcffaed2",
+      "name": "bidwb-web-1",
+      "compose_project": "bidwb",
+      "compose_service": "web",
+      "created": "2026-10-18T10:39:08.993995271Z",
+      "state": "exited"
+    },
+    {
+      "id": "4543ed54d23d2bdbb8abb6543ad7002af36cf1fa48acd1191f8e397269fb3b72",
+      "name": "bidwb-worker-parse-1",
+      "compose_project": "bidwb",
+      "compose_service": "worker-parse",
+      "created": "2026-10-18T10:15:08.008844167Z",
+      "state": "exited"
+    },
+    {
+      "id": "2320c62fae2885009835fcd6aa7a1c32d828add2f3c7a7cd67dbb4441ffd3f01",
+      "name": "bidwb-worker-ai-1",
+      "compose_project": "bidwb",
+      "compose_service": "worker-ai",
+      "created": "2026-10-18T10:15:07.975565269Z",
+      "state": "exited"
+    },
+    {
+      "id": "9425ad30760215b95b4dc55d0e11377f27c051f353f30eb09afc01b3e15865e5",
+      "name": "bidwb-worker-experiment-1",
+      "compose_project": "bidwb",
+      "compose_service": "worker-experiment",
+      "created": "2026-10-18T10:15:07.956783475Z",
+      "state": "exited"
+    },
+    {
+      "id": "7700369f3f0310bf34b9dc0b8fc2850d524e63e5e212646c9a4fa5d29ed0e7bc",
+      "name": "bidwb-api-1",
+      "compose_project": "bidwb",
+      "compose_service": "api",
+      "created": "2026-10-18T10:15:07.92190671Z",
+      "state": "exited"
+    },
+    {
+      "id": "f04c4db50a3d512201b7ca44c56f7d70edb47af6018198f29e8b3b953289e4c7",
+      "name": "bidwb-reaper-1",
+      "compose_project": "bidwb",
+      "compose_service": "reaper",
+      "created": "2026-10-18T10:15:07.904091366Z",
+      "state": "exited"
+    },
+    {
+      "id": "baab230cc08792a1d3b0828888e58e61bd4b12ca649a1eca06253db1059d030d",
+      "name": "bidwb-worker-export-1",
+      "compose_project": "bidwb",
+      "compose_service": "worker-export",
+      "created": "2026-10-18T10:15:07.892931102Z",
+      "state": "exited"
+    },
+    {
+      "id": "0f01d137af6a474ea84308163b657dfa931f9eeb47b7e45188100af9ace85ec4",
+      "name": "bidwb-relay-1",
+      "compose_project": "bidwb",
+      "compose_service": "relay",
+      "created": "2026-10-18T10:15:07.833806756Z",
+      "state": "exited"
+    },
+    {
+      "id": "e1717a4ae9e9f39d6985061fcb5b74af7e46f08b3b2c7c584e88188987084d2f",
+      "name": "bidwb-word-converter-1",
+      "compose_project": "bidwb",
+      "compose_service": "word-converter",
+      "created": "2026-10-18T04:25:54.499301858Z",
+      "state": "exited"
+    },
+    {
+      "id": "ed2dd108160ebce93566f11f83b10d6c2a9539ef98deee9e23fa47c1b7a54ab4",
+      "name": "bidwb-migrate-1",
+      "compose_project": "bidwb",
+      "compose_service": "migrate",
+      "created": "2026-10-17T11:57:38.076321997Z",
+      "state": "exited"
+    },
+    {
+      "id": "b6dd67755dd0d0c864df50de5cef1b65c5d47bc11ec4e6fc155e260b1de9ab78",
+      "name": "bidwb-kafka-init-1",
+      "compose_project": "bidwb",
+      "compose_service": "kafka-init",
+      "created": "2026-10-17T11:57:38.051278221Z",
+      "state": "exited"
+    },
+    {
+      "id": "621538421e8d92bac6ddb6e83e01478fa6b7d812edd1b5d8f4fde24c8a474559",
+      "name": "bidwb-postgres-1",
+      "compose_project": "bidwb",
+      "compose_service": "postgres",
+      "created": "2026-10-17T11:50:19.750616982Z",
+      "state": "exited"
+    },
+    {
+      "id": "97c3704c108a45ded35d0d854d510f5c50e94e147ebe8409c10d5e4ebdc53daa",
+      "name": "bidwb-kafka-1",
+      "compose_project": "bidwb",
+      "compose_service": "kafka",
+      "created": "2026-10-17T11:50:19.723618176Z",
+      "state": "exited"
+    }
+  ],
+  "scope": "local synthetic engineering acceptance; no business, paid provider or production acceptance"
+}

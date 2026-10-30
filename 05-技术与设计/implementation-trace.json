@@ -1,5 +1,5 @@
 {
-  "code_revision": "1e8eefea9fa696152492b5b02cc2a347e434167d",
+  "code_revision": "b21cb8c6c7637ad5fcdec8e8c7169b89c9de6f41",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "f8ba7ba5f7a9a1aefaa8908935835d5687f2e0f5738c47306e01c32ba45f3209",
+      "code_sha256": "862e6810d54376a9f61a5fe7ef66f939904789ff585d828d189699982d02a68a",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -453,6 +453,51 @@
       "acceptance": "not_accepted",
       "code_sha256": "7c814cadfb6666deedaf0adb6c7d18355aa2becd8a534080d80a74008c6926e2",
       "test_sha256": "7315ddffbb84369d3e2bfbdc23a4c3dbadd6e78e34a774ab295c1eb9ba6c161b"
+    },
+    {
+      "id": "TEST-STARTUP-CONFIG",
+      "code": "deploy/configuration_check.py",
+      "test": "tests/test_configuration_check.py",
+      "document": "05-技术与设计/团队运行故障排查.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5d718561e9e024cdf613147192061f39f4daaa60e485e824aac8bd75c6d6af36",
+      "test_sha256": "0a3c68220db9036234eee485967e7abd6e3a1562b4e31412ddd6b752334871b8"
+    },
+    {
+      "id": "TEST-STARTUP-NATIVE",
+      "code": "deploy/run.py",
+      "test": "tests/test_configuration_check_pg.py",
+      "document": "05-技术与设计/团队运行故障排查.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "bc3850de21924ed484682d3a9e4a4110662894ef4055480479c0a6ee33ef5835",
+      "test_sha256": "0a7291387178a1e213613e388b6e60ba7422926807af33d0c000f02e9e7a628c"
+    },
+    {
+      "id": "TEST-KAFKA-READINESS",
+      "code": "deploy/initialize_topics.py",
+      "test": "tests/test_initialize_topics.py",
+      "document": "05-技术与设计/团队运行故障排查.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e22b8e0b49e60fe707b6ca3165af6362c79aa72b1985785dc468a04c55a66bf8",
+      "test_sha256": "00e421aa7a79c54993a1cb1a86413f3ebf8a61c33d472734e8190864feb381bf"
+    },
+    {
+      "id": "TEST-DOCKER-LIFECYCLE",
+      "code": "deploy/disposable_docker.py",
+      "test": "tests/test_disposable_docker.py",
+      "document": "05-技术与设计/本机测试资源规范.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "f0b06b697024a45353a862d845838e4898092e5931bfbeb76ed5ccc9bdc9e9de",
+      "test_sha256": "8cdee1b458032a75904dd13d4a6e07301f5868d0ac2d74858801e6bc054b0716"
+    },
+    {
+      "id": "TEST-DOCKER-NATIVE",
+      "code": "deploy/disposable_docker.py",
+      "test": "tests/test_disposable_docker_native.py",
+      "document": "05-技术与设计/本机测试资源规范.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "f0b06b697024a45353a862d845838e4898092e5931bfbeb76ed5ccc9bdc9e9de",
+      "test_sha256": "b22d6c3b0d49549bc79010dfb349756ec7437c474fe7d3f5155c1c44e22ca14e"
     }
   ]
 }
