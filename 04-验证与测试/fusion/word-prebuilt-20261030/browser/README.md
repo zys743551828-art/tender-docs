@@ -1,0 +1,7 @@
+# Word本机浏览器验收证据
+
+应用固定提交d0fb75ad4b6f55ad44b8ec35c93d19425f821d09，合成单DOCX，桌面1440×1100。实际Linux API/Vite/Chromium、PG17/私有S3与宿主真实Worker，不挂docker.sock、不调用模型。summary/verification区分转换资格、PDF采用和默认解析partial。截图是实际全页采集，采集时已滚动到Word卡片，不能用其sticky侧栏在整张长图的位置推断初始视口布局；未测本次Word当前态390px或解析完成后的UI刷新。
+
+两个脚本仅为本轮已执行验收的源码快照，不是产品部署入口，也不是独立安装器。它们依赖本机任务布局与既有run_word_prebuilt_pg.py、run_native_browser.py的PREP、本机固定测试镜像及工作台依赖；产品操作入口见正式运行页的word_prebuilt CLI与资料工作区。源码快照字节与本机冻结值核对；运行中浏览器脚本摘要没有额外读回，不能把传输推断写成实测摘要一致。公开元数据把本机绝对路径相对化，原件保存在本机证据目录。未复制含临时配置的日志、Cookie、口令或私有env。
+
+原件与PDF均为合成，下载字节已与同次S3原对象核对。主network/3容器和转换1容器按精确ID复核不存在，Worker正常退出；完整资源和边界看summary。之前五轮保留在本机，分别涉及Vite配置、选择器、验收gate、parse定位及无效settings夹具；不覆盖失败、不当作产品失败或额外通过案例。

@@ -1,0 +1,22 @@
+{
+  "frozen_at_utc": "2026-10-30T15:25:55.796722+00:00",
+  "purpose": "Acceptance source snapshot only; not a product deployment entry or dependency registry",
+  "scripts": [
+    {
+      "name": "run_word_browser_once.py",
+      "source_path": "<task-root>/run_word_browser_once.py",
+      "snapshot_path": "run_word_browser_once.py",
+      "sha256": "9bf4b925e6f56c6c66c50ed48c36dffd89ba3b1c3b6e9d7a2cc68d163174ef7a",
+      "snapshot_bytes_equal": true
+    },
+    {
+      "name": "word-browser-once.mjs",
+      "source_path": "<task-root>/word-browser-once.mjs",
+      "snapshot_path": "word-browser-once.mjs",
+      "sha256": "d4d8cca14d1a514ed00a99dbbd9c7e4dade6292757bf571e9708995927acf3dc",
+      "snapshot_bytes_equal": true
+    }
+  ],
+  "runtime_browser_script_sha256_observed": false,
+  "runtime_parity_note": "Script was copied unchanged by recorded docker cp in this runner; runtime digest was not additionally read before container cleanup. No business run repeated for metadata."
+}

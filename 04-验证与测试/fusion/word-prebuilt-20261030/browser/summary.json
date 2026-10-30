@@ -1,0 +1,87 @@
+{
+  "started_utc": "2026-10-30T15:20:41.970643+00:00",
+  "started_local": "2026-10-30T23:20:41.970643+08:00",
+  "network": "run-owned bridge; only PG/S3 published on random 127.0.0.1 ports; not Docker --internal",
+  "full_compose_word_installed": false,
+  "kafka_tested": false,
+  "models_called": false,
+  "passed": true,
+  "parse_coverage": "partial",
+  "page_count": 1,
+  "controlled_render_qualified": true,
+  "controlled_relation_verified": true,
+  "downloads_match_real_storage": true,
+  "api_nonowner": true,
+  "worker_nonowner": true,
+  "source_profile_match": true,
+  "browser_url": "http://127.0.0.1:5179/bids/97cdafd7-4972-478a-8f95-2de9ac19e3f1/materials",
+  "worker_stop_fallback_triggered": false,
+  "worker_exit_code": 0,
+  "worker_stopped": true,
+  "conversion_cleanup": [
+    {
+      "receipt": "conversion-447f9c11c92f403ab5f63da6f8477b28.json",
+      "closed": true,
+      "run_id": "aab8b03588c54c5a9ab50bebe9d59ff6"
+    }
+  ],
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-30T15:23:23.985687+00:00",
+  "finished_local": "2026-10-30T23:23:23.985687+08:00",
+  "post_run_official_cleanup_verification": true,
+  "resource_observations": [
+    {
+      "receipt": "resources.json",
+      "kind": "network",
+      "id": "53bbe91989080c13a414a8edae4db6911b1268a2298e6058ca10870a13fd9029",
+      "name": "tender-test-10be052e54e0-1",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "bfe44e0a343a30632f4d437aef03d37fcccd2459d6e829b1a992da5de0d0399e",
+      "name": "tender-test-10be052e54e0-2",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "6313712b66246ff14660767eccf8862de70951939bd0f9dc0f337bed5c067d12",
+      "name": "tender-test-10be052e54e0-3",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "resources.json",
+      "kind": "container",
+      "id": "1b5587cd5ccc3e3e34bf6eea5f0fe8bdde7022ed4ea5eed57f68d1dab66cacb9",
+      "name": "tender-test-10be052e54e0-4",
+      "still_exists": false,
+      "recorded_state": "removed"
+    },
+    {
+      "receipt": "conversion-resources\\conversion-447f9c11c92f403ab5f63da6f8477b28.json",
+      "kind": "container",
+      "id": "0820e8053f30a1bd9094f5fb9853d19d094084b92cf644236ea07c0aa414fdc9",
+      "name": "tender-test-aab8b03588c5-1",
+      "still_exists": false,
+      "recorded_state": "removed"
+    }
+  ],
+  "visual_scope": {
+    "Word_current_state": "desktop 1440x1100 only",
+    "Word_390_tested": false,
+    "note": "Prior general 390 visual checks are separate evidence; this Word run was not repeated for a screenshot."
+  },
+  "role_evidence": {
+    "api_connection_login": "word_browser_api",
+    "worker_connection_login": "word_browser_worker",
+    "roles_created_nonowner": true,
+    "worker_assert_role_executed": true,
+    "select_current_user_separately_persisted": false
+  },
+  "acceptance_scripts_frozen": true
+}
