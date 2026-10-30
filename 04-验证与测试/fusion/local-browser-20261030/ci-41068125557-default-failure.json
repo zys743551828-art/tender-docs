@@ -1,0 +1,25 @@
+{
+  "run_id": 41068125557,
+  "job_id": 124105464061,
+  "failed_steps": [
+    {
+      "name": "Default tests (external coverage reported as skipped)",
+      "status": "completed",
+      "conclusion": "failure"
+    }
+  ],
+  "necessary_failure_snippets": [
+    "=================================== FAILURES ===================================",
+    "tests/test_package_material_execution_check.py:170: in test_shared_frontend_fixture_is_exact_current_protocol",
+    "E   AssertionError: assert ({'blockers': ...e78bf6'}, ...} == {'blockers': ...901bc2'}, ...}",
+    "E     ",
+    "E     Omitting 4 identical items, use -vv to show",
+    "E     Differing items:",
+    "E     {'target': {'judgment_method_digest': 'cce18e181f2b32c4e78663ab7663da4c86fa442cb80429c7e545626d24e8a254', 'profile': {...ff4df250b845e056e1807bea4e5', 'serializer_digest': 'd747d9a11243e6c932ef9a98671bc25404cb2e2159ad36f2a7761faca3e78bf6'}} != {'target': {'judgment_method_digest': '96728067708cba419f952da4660ec2ad42c31b86a5f120e50a51c47c331383d1', 'profile': {...ff4df250b845e056e1807bea4e5', 'serializer_digest': 'c8c78bd7556b06acd1d589449f60642f386a5af4ddebae91553dfd12c1901bc2'}}",
+    "E     Use -v to get more diff)",
+    "=========================== short test summary info ============================",
+    "FAILED tests/test_package_material_execution_check.py::test_shared_frontend_fixture_is_exact_current_protocol",
+    "1 failed, 4823 passed, 2445 skipped, 8 warnings in 688.73s (0:11:28)",
+    "##[error]Process completed with exit code 1."
+  ]
+}
