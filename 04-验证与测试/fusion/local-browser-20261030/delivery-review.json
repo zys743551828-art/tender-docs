@@ -1,0 +1,20 @@
+{
+  "hostname": "zhangyansong",
+  "application_revision": "d2b5e3e221554dc90fce3717adaeca7f1b91817e",
+  "scope": "read-only delivery path review; no application services started",
+  "compose_config": "passed",
+  "preview_images_present": [
+    "sha256:f21edf5853b0c337de05a4b6af7ee16787b5520d8e4101b34fea6ee2a70b25be",
+    "sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+    "sha256:f59162088fb1ddaa18d29e155b60e3b89fec071d7e34b4a0fbb549e73d247f24"
+  ],
+  "native_tests_reused_from": "b1c56192444a81e544f8cdf590dfebd81b4932ab",
+  "new_runtime_tests": 0,
+  "new_resources": 0,
+  "blockers": [
+    "trusted image provisioning on a new machine is not automated",
+    "full runtime has no human credential handoff CLI",
+    "fresh current-dev preview human acceptance not executed; existing volumes preserved"
+  ],
+  "existing_document_targets_checked": 18
+}
