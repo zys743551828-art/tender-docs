@@ -1,5 +1,5 @@
 {
-  "code_revision": "99c8dfcd77b173e80e9e2de76241d10c6f1ad352",
+  "code_revision": "df00777df9676a80180e09d226c1fdd48161165a",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -407,7 +407,7 @@
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "e80529f401650c4abdef56c0e0116bb1858dab76d8b2658209baa5cde55590b2",
-      "test_sha256": "c0e01298c20eaafdce9612bf1603211f4492096aea49b02adc4c2a5ac7dc0772"
+      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
     },
     {
       "id": "TEST-PRICE-BROWSER",
@@ -415,8 +415,17 @@
       "test": "tests/test_package_pricing_native_s3.py",
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "911d98eeb26089f34210997314b91cf44f856103096af9aa36a3b1272915f451",
-      "test_sha256": "c0e01298c20eaafdce9612bf1603211f4492096aea49b02adc4c2a5ac7dc0772"
+      "code_sha256": "4898f98f1335526306ccbe25ffebe45c03a7f94e952a1369667a992ef25a6e5d",
+      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
+    },
+    {
+      "id": "TEST-WORKSPACE-JOURNEYS",
+      "code": "apps/web/scripts/native-workspace-journeys.mjs",
+      "test": "tests/test_package_pricing_native_s3.py",
+      "document": "04-验证与测试/工作台四组原生组合验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "5f08f61ee0a25639d8702b3d9c94c2a5ba0502350bc9c17a2bb0edc690c3a955",
+      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
     }
   ]
 }
