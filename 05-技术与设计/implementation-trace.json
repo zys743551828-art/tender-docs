@@ -1,5 +1,5 @@
 {
-  "code_revision": "283e334186cec0bfedce91585846470cea700474",
+  "code_revision": "99c8dfcd77b173e80e9e2de76241d10c6f1ad352",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -53,7 +53,7 @@
       "test": "tests/test_pricing_calculator.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "3eb49fdcbe6413f327fb34200bc76619e2ac3b102a46253eab48570d05b81e3d",
+      "code_sha256": "e80529f401650c4abdef56c0e0116bb1858dab76d8b2658209baa5cde55590b2",
       "test_sha256": "6a8c14aa9b3c568e4bdf3721448d8e1fdee5438f084c9c0e3792141dcb92900a"
     },
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "4e5fd4d6a438acf129c22e802908dc2500abeca0bf9a8f157053f744f4e203fc",
+      "code_sha256": "f8ba7ba5f7a9a1aefaa8908935835d5687f2e0f5738c47306e01c32ba45f3209",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -399,6 +399,24 @@
       "acceptance": "not_accepted",
       "code_sha256": "6e7c7a40356a9f4c05d5732b99d6e5f04ac72793c356f9325a04b6b944c541de",
       "test_sha256": "6aef62fc490ad0e45ea20aba6508f122485a809b3f21b170c034abe960d32dd1"
+    },
+    {
+      "id": "TEST-PRICE-NATIVE",
+      "code": "packages/pricing",
+      "test": "tests/test_package_pricing_native_s3.py",
+      "document": "04-验证与测试/报价历史原生验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e80529f401650c4abdef56c0e0116bb1858dab76d8b2658209baa5cde55590b2",
+      "test_sha256": "c0e01298c20eaafdce9612bf1603211f4492096aea49b02adc4c2a5ac7dc0772"
+    },
+    {
+      "id": "TEST-PRICE-BROWSER",
+      "code": "apps/web/scripts/check-pricing-native-browser.mjs",
+      "test": "tests/test_package_pricing_native_s3.py",
+      "document": "04-验证与测试/报价历史原生验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "911d98eeb26089f34210997314b91cf44f856103096af9aa36a3b1272915f451",
+      "test_sha256": "c0e01298c20eaafdce9612bf1603211f4492096aea49b02adc4c2a5ac7dc0772"
     }
   ]
 }
