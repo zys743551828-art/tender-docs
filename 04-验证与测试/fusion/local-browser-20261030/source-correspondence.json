@@ -1,0 +1,13 @@
+{
+  "reviewed_commit": "b1c56192444a81e544f8cdf590dfebd81b4932ab",
+  "file": "apps/web/scripts/native-workspace-journeys.mjs",
+  "checkout_sha256": "ba589c706014c452a9e88116a6c7d1d807c4a40cc2a842a901a9875718e71a32",
+  "runtime_observed_sha256": "71e6b6897f8e06b7d25dfac0142393e2e761444592ffc50f5444adbca8eeee61",
+  "reconstructed_with_screenshot_sha256": "71e6b6897f8e06b7d25dfac0142393e2e761444592ffc50f5444adbca8eeee61",
+  "insertion_before": "    await context.close();",
+  "inserted_statement": "    await page.screenshot({path: `/evidence/journey-${config.journeys.phase}.png`, fullPage: true}).catch(() => {});\n",
+  "reconstruction_matches_observed_runtime": true,
+  "checkout_contains_input_value_assertions": true,
+  "checkout_contains_confirmed_scope_assertion": true,
+  "scope": "Only additive screenshot before closing the context. Existing action and assertion bytes preserved."
+}
