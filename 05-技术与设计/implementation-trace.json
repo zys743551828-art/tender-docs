@@ -1,5 +1,5 @@
 {
-  "code_revision": "df00777df9676a80180e09d226c1fdd48161165a",
+  "code_revision": "d59533e5448f12c33fa86280f11c7b2c825856d9",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -407,7 +407,7 @@
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "e80529f401650c4abdef56c0e0116bb1858dab76d8b2658209baa5cde55590b2",
-      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
+      "test_sha256": "d6c486824bee29b4957f541030e35e4e52de2210c9bab3eafc487f1bc8e20ce7"
     },
     {
       "id": "TEST-PRICE-BROWSER",
@@ -415,8 +415,8 @@
       "test": "tests/test_package_pricing_native_s3.py",
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "4898f98f1335526306ccbe25ffebe45c03a7f94e952a1369667a992ef25a6e5d",
-      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
+      "code_sha256": "17120cda4b1281e5f7d9ef2aa42d4aac3b867c0a7badf003ff0bcd86eb93fa69",
+      "test_sha256": "d6c486824bee29b4957f541030e35e4e52de2210c9bab3eafc487f1bc8e20ce7"
     },
     {
       "id": "TEST-WORKSPACE-JOURNEYS",
@@ -424,8 +424,35 @@
       "test": "tests/test_package_pricing_native_s3.py",
       "document": "04-验证与测试/工作台四组原生组合验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "5f08f61ee0a25639d8702b3d9c94c2a5ba0502350bc9c17a2bb0edc690c3a955",
-      "test_sha256": "1fa3eab0f4dcf45ce5a85f1a872f07e81faa165932ef5d50f57162429bb76f16"
+      "code_sha256": "6fbdb8c9948e8e26fcaf774ddc6ad9cb32fa0fdfc80fc93c4d373e62c524eaa3",
+      "test_sha256": "d6c486824bee29b4957f541030e35e4e52de2210c9bab3eafc487f1bc8e20ce7"
+    },
+    {
+      "id": "TEST-LIFECYCLE-UI",
+      "code": "apps/web/src/ProjectLifecyclePanel.tsx",
+      "test": "apps/web/src/ProjectLifecyclePanel.test.tsx",
+      "document": "04-验证与测试/FR015生命周期表单原生验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "4cfa3437f0f9742521c02df66b17f1fa84db253c9a4bb74129cfce41584226e0",
+      "test_sha256": "69744af0f82fff623f96f73f24fcc05d54b72893ffbd55119e6a86ecb6943196"
+    },
+    {
+      "id": "TEST-LIFECYCLE-NATIVE",
+      "code": "apps/web/scripts/native-lifecycle-journey.mjs",
+      "test": "tests/test_package_pricing_native_s3.py",
+      "document": "04-验证与测试/FR015生命周期表单原生验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "6e7845090c4b730fbb71995537c6b73f71e987a2c59f158571c86b62f4ded8b1",
+      "test_sha256": "d6c486824bee29b4957f541030e35e4e52de2210c9bab3eafc487f1bc8e20ce7"
+    },
+    {
+      "id": "TEST-LIFECYCLE-RECOVERY",
+      "code": "apps/web/src/useRecordedCommand.ts",
+      "test": "apps/web/src/useRecordedCommand.test.tsx",
+      "document": "04-验证与测试/FR015生命周期表单原生验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "7c814cadfb6666deedaf0adb6c7d18355aa2becd8a534080d80a74008c6926e2",
+      "test_sha256": "7315ddffbb84369d3e2bfbdc23a4c3dbadd6e78e34a774ab295c1eb9ba6c161b"
     }
   ]
 }
