@@ -30,6 +30,27 @@ class SyncTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "inside"):
             check(Path("."), self.docs, self.manifest)
 
+    def test_supporting_reference_escape_rejected(self):
+        manifest = copy.deepcopy(self.manifest)
+        manifest["supporting_checks"] = [
+            {
+                "id": "TEST-ESCAPE",
+                "code": "../outside",
+                "test": "unused",
+                "document": "unused",
+                "acceptance": "not_accepted",
+            }
+        ]
+        expected = {}
+        for row in manifest["requirements"]:
+            for field in ("code", "test"):
+                expected["workbench/" + row[field]] = row[field + "_sha256"]
+        with patch(
+            "check_implementation_sync.fingerprint", side_effect=lambda root, path: expected[path]
+        ):
+            with self.assertRaisesRegex(ValueError, "inside"):
+                check(Path("."), self.docs, manifest)
+
 
 if __name__ == "__main__":
     unittest.main()

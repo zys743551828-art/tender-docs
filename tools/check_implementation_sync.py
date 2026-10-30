@@ -28,7 +28,12 @@ def check(root, docs, manifest):
     rows = manifest["requirements"]
     if {r["id"] for r in rows} != {f"FR-{n:03}" for n in range(1, 41)} or len(rows) != 40:
         raise ValueError("Expected unique FR001–040 mapping")
-    for row in rows:
+    supporting = manifest.get("supporting_checks", [])
+    if len({r["id"] for r in supporting}) != len(supporting) or any(
+        not r["id"].startswith("TEST-") for r in supporting
+    ):
+        raise ValueError("Expected unique supporting TEST mappings")
+    for row in rows + supporting:
         for field in ("code", "test"):
             path = row[field]
             if Path(path).is_absolute() or ".." in Path(path).parts:
@@ -50,4 +55,6 @@ if __name__ == "__main__":
     docs = Path(__file__).resolve().parents[1]
     manifest = json.loads((docs / "05-技术与设计/implementation-trace.json").read_text())
     check(args.app.resolve(), docs, manifest)
-    print("PASS: 40 requirement mappings, tracked source/test fingerprints and document anchors")
+    print(
+        f"PASS: 40 requirement mappings + {len(manifest.get('supporting_checks', []))} supporting checks, tracked fingerprints and document anchors"
+    )

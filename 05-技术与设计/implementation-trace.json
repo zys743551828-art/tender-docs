@@ -1,5 +1,5 @@
 {
-  "code_revision": "a703f35f75013cb238a36c6235a8aac858f42da3",
+  "code_revision": "b00d4daa6c910f18fdefc059d7edf1868ec1bcfb",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "fe63e28ff5a1ebdac649cd9384de08ea5298c551d7ec687540a5b113284a69d2",
+      "code_sha256": "4e5fd4d6a438acf129c22e802908dc2500abeca0bf9a8f157053f744f4e203fc",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -361,6 +361,44 @@
       "acceptance": "not_accepted",
       "code_sha256": "766a014df58423699d6b4e7fbdd53d01198e8891bd09c1a5fbfcb929b20735a4",
       "test_sha256": "f48aa19e4d7113917b6e976eeb107bf4a0f91d18ed51164ad744ea30f07765bf"
+    }
+  ],
+  "supporting_checks": [
+    {
+      "id": "TEST-PRED-APP",
+      "code": "packages/prediction_sandbox",
+      "test": "tests/test_package_prediction_native_pg.py",
+      "document": "05-技术与设计/测试专用预测认证协议.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "6e7c7a40356a9f4c05d5732b99d6e5f04ac72793c356f9325a04b6b944c541de",
+      "test_sha256": "1f8e1f6e929d6ecb72e58ca090303ad4593130547a4d6278bc318db69a7c4bfd"
+    },
+    {
+      "id": "TEST-PRED-HTTP",
+      "code": "apps/api/prediction_sandbox.py",
+      "test": "tests/test_prediction_sandbox_contract.py",
+      "document": "05-技术与设计/测试专用预测认证协议.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "08c46db6eac758d8f253931ebf94d5bdcba5c8202a2cce579ea22f6d27f3939f",
+      "test_sha256": "6aef62fc490ad0e45ea20aba6508f122485a809b3f21b170c034abe960d32dd1"
+    },
+    {
+      "id": "TEST-PRED-SQL",
+      "code": "deploy/sql/prediction-sandbox.sql",
+      "test": "tests/test_package_prediction_native_pg.py",
+      "document": "05-技术与设计/测试专用预测认证协议.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "b7be1b9d7f8654774cc995ebf0fe4c468bc4ded4531a7ce2f18d90f9205f5e83",
+      "test_sha256": "1f8e1f6e929d6ecb72e58ca090303ad4593130547a4d6278bc318db69a7c4bfd"
+    },
+    {
+      "id": "TEST-PRED-BOUNDARY",
+      "code": "packages/prediction_sandbox",
+      "test": "tests/test_prediction_sandbox_contract.py",
+      "document": "05-技术与设计/测试专用预测认证协议.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "6e7c7a40356a9f4c05d5732b99d6e5f04ac72793c356f9325a04b6b944c541de",
+      "test_sha256": "6aef62fc490ad0e45ea20aba6508f122485a809b3f21b170c034abe960d32dd1"
     }
   ]
 }
