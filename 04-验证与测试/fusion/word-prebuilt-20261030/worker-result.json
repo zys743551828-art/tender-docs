@@ -1,0 +1,94 @@
+{
+  "scope": "fresh PG17, two nonowner LOGIN roles, Cookie/CSRF ASGI API, real S3, direct real outbox/fence Worker, prebuilt Gotenberg",
+  "kafka_broker_tested": false,
+  "in_memory_storage_used": false,
+  "conversion": {
+    "state": "succeeded",
+    "coverage": "complete",
+    "conversion_attempted": true,
+    "error_code": null,
+    "retryable": false,
+    "gaps": [],
+    "protocol": "word-prebuilt-gotenberg/1",
+    "isolation": {
+      "NetworkMode": "none",
+      "IpcMode": "none",
+      "ReadonlyRootfs": true,
+      "Memory": 536870912,
+      "MemorySwap": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": 64,
+      "image_id": "sha256:e3d196d893aa14a70057f9b6e33c11f6120cb2f721fc6ee4f85150a48686060e",
+      "user": "65534:65534",
+      "cap_drop": "ALL",
+      "no_new_privileges": true,
+      "tmpfs": {
+        "/tmp": "rw,noexec,nosuid,nodev,size=134217728,mode=1777",
+        "/input": "rw,noexec,nosuid,nodev,size=104857600,mode=1777",
+        "/output": "rw,noexec,nosuid,nodev,size=67108864,mode=1777"
+      },
+      "checks": {
+        "cpu_limited": true,
+        "bounded_tmpfs_output": true,
+        "network_none": true,
+        "no_new_privileges": true,
+        "nonroot": true,
+        "memory_limited": true,
+        "read_only": true,
+        "no_daemon_document_logs": true,
+        "capabilities_dropped": true,
+        "pid_private": true,
+        "clean_environment": true,
+        "ipc_none": true,
+        "pids_limited": true,
+        "no_anonymous_persistent_volumes": true,
+        "immutable_image": true,
+        "own_job_cleanup_confirmed": true,
+        "uts_private": true,
+        "not_privileged": true,
+        "no_host_binds_or_ports": true
+      },
+      "own_job_cleanup_confirmed": true
+    },
+    "measurements": {
+      "page_count": 1,
+      "gaps": []
+    },
+    "chain": {
+      "source_docx_digest": "5c3b00ac5e85ca9db332675b7e296fa8b23c0e466ba81b4d619aa476d0963d99",
+      "pdf_digest": "cb8d8b83021204be8f033adaa79d0191a48649cb9312b74d0d36039f7f2cc770",
+      "profile_digest": "c96dab5af24a9cfbcf4d46d665de97df0e3ea7c5a342c4d92a36d652d97eec84",
+      "page_count": 1,
+      "renderer_digest": "3943b543065e2e3a876f0ed331706943e22e301d3141616e559980c79a74c624",
+      "fontset_digest": "ed2c82bf0f5b8afa428098af2bb30f73aadffec0a2510f430dc221fa0c51cbfa",
+      "options_digest": "5a87cb34abd8adeef9259d9ac02bae20f4420aea71e461bad3986b30f0061a99",
+      "image_reference": "gotenberg/gotenberg:8.39.0-libreoffice@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161"
+    },
+    "resource_receipt": {
+      "run_id": "802c578db3324afa899f478138179708",
+      "closed": true,
+      "resources": [
+        {
+          "kind": "container",
+          "name": "tender-test-802c578db332-1",
+          "id": "d714cb03965e76d69ce3eac853bec828c4481eb691f48275b853d6d6cb21221b",
+          "state": "removed"
+        }
+      ]
+    }
+  },
+  "adopted": true,
+  "controlled_relation": {
+    "kind": "controlled_render",
+    "verification": "verified"
+  },
+  "parse_coverage": "partial",
+  "physical_pages": 1,
+  "evidence_physical_page": 1,
+  "original_sha256": "5c3b00ac5e85ca9db332675b7e296fa8b23c0e466ba81b4d619aa476d0963d99",
+  "pdf_sha256": "cb8d8b83021204be8f033adaa79d0191a48649cb9312b74d0d36039f7f2cc770",
+  "exact_api_downloads_verified": true,
+  "byte_transport": "real native presigned S3 over loopback; API Cookie/CSRF grants",
+  "anonymous_s3_read_denied": true,
+  "private_bucket_object_count": 4
+}

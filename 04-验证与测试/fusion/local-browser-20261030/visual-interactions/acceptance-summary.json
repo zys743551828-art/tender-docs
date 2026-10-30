@@ -1,0 +1,36 @@
+{
+  "status": "passed_scoped_sidebar_visual_regression_and_six_real_interaction_groups",
+  "formal_test": "tender-app-dev/workbench/tests/test_native_visual_interactions.py",
+  "entrypoint": "python run_native_visual_interactions.py",
+  "pytest": {"passed": 1, "failed": 0, "skipped": 0, "seconds": 26.46, "representative_groups": 6},
+  "entrypoint_provenance": "Actual formal repository fixture and explicit browser_history(browser_script=...) executed; no temporary TEST injection or helper path replacement",
+  "application_change": {
+    "file": "apps/web/src/styles.css",
+    "scope": "Only account footer rules; App logic and other buttons unchanged",
+    "rules": ["member name flex1, min-width0, overflow-wrap:anywhere", "account avatar flex-shrink0", "account logout flex0 0 auto and white-space:nowrap"]
+  },
+  "regression_assertion": {
+    "viewport": "1280x1000",
+    "long_member_name": "Synthetic browser member",
+    "logout_text": "退出",
+    "text_lines_by_range_client_rects": 1,
+    "button_bbox": {"x": 176, "y": 947.75, "width": 22, "height": 24.5},
+    "inside_footer": true,
+    "inside_viewport": true,
+    "avatar_width": 30
+  },
+  "pixel_review": {
+    "tool": "view_image",
+    "checked_images": ["visual-authoring-1280.png", "visual-directory-dialog-390.png"],
+    "finding": "Desktop long member name wraps within its area while logout remains horizontally readable and separated; avatar remains circular at30px. Narrow directory keyboard/focus state remains intact.",
+    "screenshots_generated": 10,
+    "scope": "Known sidebar defect and representative interaction states; no whole-application visual certification"
+  },
+  "other_real_checks": "Same six groups: login validation/failure/success/refresh; empty materials and zero-byte rejection/retry/remove; persisted failed parse and actual MODEL_NOT_CONFIGURED503; settings single write/project unchanged/history/offline retry; real draft edit/save/export controls/directory keyboard/refresh; anonymous401/logout refresh",
+  "unhandled_page_errors": [],
+  "api_mocking": false,
+  "boundaries": ["Synthetic directory/material snapshot and append-only failed parse receipt are prepared in the isolated DB", "No real parser execution, successful binary upload, build worker/export artifact, paid model, OCR or formal scoring qualification is claimed", "The old212541 screenshot/log/JUnit are retained; its summary and formal document explicitly correct the missed sidebar issue"],
+  "static_checks": ["Final styles.css Prettier check passed", "Updated browser script ESLint and Prettier passed"],
+  "cleanup": {"receipt": "resources.json", "closed": true, "owned_containers_removed": 2},
+  "remaining_blockers": []
+}

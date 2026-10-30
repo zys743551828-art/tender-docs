@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "name": "limited_visual_interactions",
+      "checks": [
+        {
+          "name": "login_validation_failure_retry_and_session_refresh",
+          "real_http": true
+        },
+        {
+          "name": "empty_materials_zero_byte_validation_retry_remove_refresh",
+          "boundary": "Client validation; no upload or parse worker success claimed"
+        },
+        {
+          "name": "seeded_failed_parse_and_empty_review_remain_unqualified",
+          "boundary": "Failed parse is a persisted synthetic fixture, not a parser execution"
+        },
+        {
+          "name": "settings_single_write_other_project_unchanged_refresh_history_offline_retry",
+          "writes": 1
+        },
+        {
+          "name": "draft_validation_real_edit_save_export_guard_directory_escape_and_refresh",
+          "desktop_account_layout": {
+            "text": "退出",
+            "textLines": 1,
+            "button": {
+              "x": 176,
+              "y": 947.75,
+              "width": 22,
+              "height": 24.5
+            },
+            "insideFooter": true,
+            "insideViewport": true,
+            "avatarWidth": 30
+          },
+          "boundary": "No build worker/export success claimed; only current export controls inspected"
+        },
+        {
+          "name": "unauthenticated_isolation_and_logout_refresh",
+          "status": 401
+        }
+      ]
+    }
+  ],
+  "page_errors": [],
+  "api_mocking": false,
+  "real_app": true
+}
