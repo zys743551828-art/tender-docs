@@ -1,0 +1,78 @@
+{
+  "scope": "Temporary isolated full/1 startup baseline in detached d188; Word v2 not integrated; no model/automation profiles enabled",
+  "outcome": "startup_passed_verification_not_run_due_to_wrapper_observation_error",
+  "stages": {
+    "prepare": "passed",
+    "configure": "passed",
+    "initialize": "passed_as_required_completed_dependency",
+    "publish": "passed_as_required_completed_dependency",
+    "compose_up_wait": "passed",
+    "synthetic_pdf_kafka_verify": "not_run"
+  },
+  "health": {
+    "api": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "build-controller": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "kafka": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "postgres": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "reconcile": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "relay": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "web": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "word-controller": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "worker-comparison": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "worker-document": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    },
+    "worker-export": {
+      "status": "passed",
+      "evidence": "existing docker compose up --wait exited 0; configured health check required by this startup"
+    }
+  },
+  "object_store_status": "running; no Compose health check declared",
+  "wrapper_failure": "PUBLIC_RESOURCE_INSPECTION_FAILED reading absent optional Health map field; corrected only task wrapper with index, no application change or restart",
+  "private_logs_retained": false,
+  "cleanup": {
+    "normal_stop_returncode": 0,
+    "removed_counts": {
+      "container": 15,
+      "network": 2,
+      "volume": 14
+    },
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "closed": true,
+    "proof": "Each removed exact object inspected for project and container instance/service or volume/network logical label, initially absent project; post-remove inspect absent; final project listings empty"
+  },
+  "application_or_git_changes": false,
+  "worktree_removal_owner": "root"
+}

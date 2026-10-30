@@ -1,0 +1,14 @@
+{
+  "dist_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\evidence-local-20261030\\web-production-legacy-build\\dist",
+  "index_sha256": "53070f3df46152cb85f2b4b6b91acf6694907c93c41ba86f95a7df0ed5a86abe",
+  "nginx_image": "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+  "web_container": "e90d05d5623cad334a6ac14030e1f14d1f26ea3b70c4fcedd52156197879271b",
+  "browser_origin": "http://127.0.0.1:8080",
+  "qa_network_mode": "container:e90d05d5623cad334a6ac14030e1f14d1f26ea3b70c4fcedd52156197879271b",
+  "api_alias": "api",
+  "api_port": 8000,
+  "nginx_configuration_sha256": {
+    "nginx-fusion-full-main.conf": "f22c9a86ba231110f229165c665df4742b6e54849df0254086bcce2a85af5681",
+    "nginx-fusion-full.conf": "a6f5ff0eb2556e81e5a58e8ca132983e155f0ed1f830bee6f6557c6185fde7ae"
+  }
+}

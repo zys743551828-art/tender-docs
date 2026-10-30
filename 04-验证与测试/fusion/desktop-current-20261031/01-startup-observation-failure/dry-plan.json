@@ -1,0 +1,158 @@
+{
+  "scope": "Temporary local isolated full/1 baseline; no Word v2/model/automation integration",
+  "worktree": "<task>\\.tools\\d188\\workbench",
+  "directory": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+  "origin": "http://127.0.0.1:65441",
+  "default_services": [
+    "api",
+    "build-controller",
+    "configure",
+    "init",
+    "kafka",
+    "object-store",
+    "postgres",
+    "publish",
+    "reconcile",
+    "relay",
+    "web",
+    "word-controller",
+    "worker-comparison",
+    "worker-document",
+    "worker-export"
+  ],
+  "default_service_count": 15,
+  "verification_extra_service": "validation",
+  "expected_total_containers_with_verify": 16,
+  "declared_volumes": [
+    "api_state",
+    "init_state",
+    "kafka_data",
+    "object_data",
+    "owner_secret",
+    "postgres_data",
+    "private_config",
+    "profile_api",
+    "profile_controller",
+    "profile_paid_controller",
+    "profile_paid_worker",
+    "profile_reconcile",
+    "profile_relay",
+    "profile_task_runner",
+    "profile_worker",
+    "store_secret",
+    "validation_login"
+  ],
+  "expected_used_volumes": [
+    "api_state",
+    "init_state",
+    "kafka_data",
+    "object_data",
+    "owner_secret",
+    "postgres_data",
+    "private_config",
+    "profile_api",
+    "profile_controller",
+    "profile_reconcile",
+    "profile_relay",
+    "profile_worker",
+    "store_secret",
+    "validation_login"
+  ],
+  "expected_used_volume_count": 14,
+  "declared_networks": [
+    "core",
+    "model_egress",
+    "preview"
+  ],
+  "expected_used_networks": [
+    "core",
+    "preview"
+  ],
+  "images": [
+    {
+      "role": "postgres",
+      "image": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+      "available": true,
+      "platform": "linux|amd64"
+    },
+    {
+      "role": "kafka",
+      "image": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+      "available": true,
+      "platform": "linux|amd64"
+    },
+    {
+      "role": "object_store",
+      "image": "chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+      "available": true,
+      "platform": "linux|amd64"
+    },
+    {
+      "role": "python",
+      "image": "tender-workbench-runtime@sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "available": true,
+      "platform": "linux|amd64"
+    },
+    {
+      "role": "web",
+      "image": "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "available": true,
+      "platform": "linux|amd64"
+    }
+  ],
+  "commands": [
+    [
+      "<host-python>",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "deploy.fusion_desktop",
+      "prepare",
+      "--directory",
+      "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+      "--name",
+      "full_accept188",
+      "--origin",
+      "http://127.0.0.1:65441",
+      "--python-image",
+      "tender-workbench-runtime@sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "--web-image",
+      "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433"
+    ],
+    [
+      "<host-python>",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "deploy.fusion_desktop",
+      "up",
+      "--directory",
+      "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188"
+    ],
+    [
+      "<host-python>",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "deploy.fusion_desktop",
+      "verify",
+      "--directory",
+      "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188"
+    ],
+    [
+      "<host-python>",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "deploy.fusion_desktop",
+      "stop",
+      "--directory",
+      "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188"
+    ]
+  ],
+  "cleanup": "Stop exact saved group, inspect label/id ownership, individually rm containers without -v, remove only initially absent matching project networks/volumes; preserve all ambiguity"
+}

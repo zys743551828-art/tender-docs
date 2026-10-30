@@ -1,0 +1,71 @@
+[
+  {
+    "operation_id": "1a001119-2ad6-465f-a49d-b7def2f1d937",
+    "generation": 1,
+    "handler_version": "document/1",
+    "state": "succeeded",
+    "seconds": 0.23386655199999495,
+    "output": {
+      "result_ref": "/api/v1/uploads/3f0bec7f-057b-41da-8c9f-d5c86a10ea3c",
+      "word_intake_url": "/api/v1/bids/5962bdd3-9c82-4f39-870f-a65cf4620ed2/word-originals/6cceeabd-51c4-4e37-a8d0-85a93b641aad",
+      "document_version_id": "6cceeabd-51c4-4e37-a8d0-85a93b641aad",
+      "word_original_saved": true,
+      "conversion_operation_id": "6856bc93-2b00-4abf-b92d-1fa24825d8d3"
+    },
+    "external_client_timeout_seconds": 120
+  },
+  {
+    "operation_id": "6856bc93-2b00-4abf-b92d-1fa24825d8d3",
+    "generation": 1,
+    "handler_version": "word-render/1",
+    "state": "succeeded",
+    "seconds": 3.5964145379999763,
+    "output": {
+      "result_ref": "/api/v1/bids/5962bdd3-9c82-4f39-870f-a65cf4620ed2/word-originals/6cceeabd-51c4-4e37-a8d0-85a93b641aad",
+      "conversion_gaps": [],
+      "conversion_state": "succeeded",
+      "conversion_coverage": "complete",
+      "word_render_adoption": {
+        "role": "body",
+        "current_material_id": "61ad3cbc-e5d3-4ac8-86f3-a59bc4e375e4",
+        "current_material_revision": 2,
+        "source_still_current_material": true,
+        "source_still_current_word_body": true
+      },
+      "pdf_document_version_id": "7fae92b3-e5b5-4016-8f46-5465247bc850",
+      "controlled_render_verified": true,
+      "source_document_version_id": "6cceeabd-51c4-4e37-a8d0-85a93b641aad"
+    },
+    "external_client_timeout_seconds": 120
+  },
+  {
+    "operation_id": "c529ff8c-e7ab-4c0e-879c-d8eabe67b4f1",
+    "generation": 1,
+    "handler_version": "document/1",
+    "state": "succeeded",
+    "seconds": 0.06305344000008972,
+    "output": {
+      "coverage": "failed",
+      "result_ref": "/api/v1/bids/5962bdd3-9c82-4f39-870f-a65cf4620ed2/materials",
+      "evidence_ids": [],
+      "model_review": "not_run"
+    },
+    "external_client_timeout_seconds": 120
+  },
+  {
+    "operation_id": "a5ff508b-ce6c-4f8b-8e1c-1e9db116a7b4",
+    "generation": 1,
+    "handler_version": "document/1",
+    "state": "succeeded",
+    "seconds": 0.06752218100007212,
+    "output": {
+      "coverage": "partial",
+      "result_ref": "/api/v1/bids/5962bdd3-9c82-4f39-870f-a65cf4620ed2/materials",
+      "evidence_ids": [
+        "5ec84b20-7c01-4157-add2-b510de55d044"
+      ],
+      "model_review": "not_run"
+    },
+    "external_client_timeout_seconds": 120
+  }
+]

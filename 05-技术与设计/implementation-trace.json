@@ -1,5 +1,5 @@
 {
-  "code_revision": "4108b686c9c5174b6e14ae8f29cfc89c665dd752",
+  "code_revision": "35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "4eb5821de66a18bf7b218ee25add49f7eafe9c42aa0a6833d2276978301e2ceb",
+      "code_sha256": "09de322de0a3411c66e9ddfe95907da17f27018ea9538dc2f5f316691a9fdbf5",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -588,6 +588,15 @@
       "acceptance": "not_accepted",
       "code_sha256": "6aa860c3f2123744691c3d4407a967a62a0451eb1358de77f59ae8c6e357c17e",
       "test_sha256": "d51ec601423fd70567163857eaba9d36d9b93c74489caf10ae62fb88d24655f0"
+    },
+    {
+      "id": "TEST-DESKTOP-VERIFY",
+      "code": "deploy/fusion_desktop_verify.py",
+      "test": "tests/test_fusion_desktop_verify.py",
+      "document": "05-技术与设计/工作台运行与验收.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "1a1a774a79d438343f5eef45f952d88452f39592264f83f53ddf126abb9be97d",
+      "test_sha256": "62c54865059b27e5d5c23cb3ae77b78fd98d3587dba6809bba60b2494e681435"
     }
   ]
 }

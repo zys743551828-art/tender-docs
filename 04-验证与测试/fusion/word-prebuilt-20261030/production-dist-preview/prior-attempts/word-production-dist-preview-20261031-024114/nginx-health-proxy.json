@@ -1,0 +1,41 @@
+{
+  "path": "/nginx-health",
+  "status": 200,
+  "body": {
+    "database": "ready",
+    "model": "not_configured",
+    "slice": "pdf-and-core-review"
+  },
+  "attempts": [
+    {
+      "status": 502,
+      "elapsed_seconds": 0.00048690300002363074
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 0.2532531970000491
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 0.5061287910000374
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 0.7592861650000486
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 1.0120667170000388
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 1.2649004419999983
+    },
+    {
+      "status": 200,
+      "elapsed_seconds": 1.5272089489999416
+    }
+  ],
+  "ready": true,
+  "model_called": false
+}

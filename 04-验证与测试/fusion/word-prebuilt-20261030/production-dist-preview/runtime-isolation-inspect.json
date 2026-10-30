@@ -1,0 +1,187 @@
+{
+  "services": [
+    {
+      "Id": "e90d05d5623cad334a6ac14030e1f14d1f26ea3b70c4fcedd52156197879271b",
+      "ImageID": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "User": "65532:65532",
+      "ReadonlyRootfs": true,
+      "Privileged": false,
+      "CapDrop": [
+        "ALL"
+      ],
+      "SecurityOpt": [
+        "no-new-privileges:true"
+      ],
+      "Tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=64m,mode=1777"
+      },
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/etc/nginx/nginx.conf",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/etc/nginx/conf.d/fusion-full-server.conf",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/usr/share/nginx/html",
+          "RW": false
+        }
+      ],
+      "NetworkMode": "6000bba2de2ed606aefd98f2bfbde6f2d7e5237f57b96df96709e6e269721503",
+      "Labels": {
+        "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>",
+        "tender.test.disposable": "true",
+        "tender.test.run": "7977a3d3e569432b990e66c07c1080d2"
+      },
+      "role": "web"
+    },
+    {
+      "Id": "43ca75ed68020b140948f7c8bc5c1e88e67345cdeca6c8c7393964a31139ff92",
+      "ImageID": "sha256:9ff5ec8223f3610e515880bfa6db1fc563463afd885920a1e38ee1a8319e3988",
+      "User": "",
+      "ReadonlyRootfs": false,
+      "Privileged": false,
+      "CapDrop": null,
+      "SecurityOpt": null,
+      "Tmpfs": null,
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/evidence",
+          "RW": true
+        }
+      ],
+      "NetworkMode": "container:e90d05d5623cad334a6ac14030e1f14d1f26ea3b70c4fcedd52156197879271b",
+      "Labels": {
+        "tender.test.disposable": "true",
+        "tender.test.run": "7977a3d3e569432b990e66c07c1080d2"
+      },
+      "role": "qa"
+    },
+    {
+      "Id": "78d75555f00280bcd493199b18ca2044fc2250387f96fcd7afdf6555becf6d7d",
+      "ImageID": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "User": "65532:65532",
+      "ReadonlyRootfs": true,
+      "Privileged": false,
+      "CapDrop": [
+        "ALL"
+      ],
+      "SecurityOpt": [
+        "no-new-privileges:true"
+      ],
+      "Tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=512m,mode=1777",
+        "/workspace/.local": "rw,nosuid,nodev,size=16m,uid=65532,gid=65532,mode=0700"
+      },
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/run/word-profile.json",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/deploy",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/packages",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/pyproject.toml",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/requirements.lock.txt",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/api",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/worker",
+          "RW": false
+        }
+      ],
+      "NetworkMode": "6000bba2de2ed606aefd98f2bfbde6f2d7e5237f57b96df96709e6e269721503",
+      "Labels": {
+        "tender.test.disposable": "true",
+        "tender.test.run": "7977a3d3e569432b990e66c07c1080d2"
+      },
+      "role": "api"
+    },
+    {
+      "Id": "df232b145d6d21df5bd1e00b7b64c8251797e8bf2ea3848f1a85435f4fda26f6",
+      "ImageID": "sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "User": "65532:65532",
+      "ReadonlyRootfs": true,
+      "Privileged": false,
+      "CapDrop": [
+        "ALL"
+      ],
+      "SecurityOpt": [
+        "no-new-privileges:true"
+      ],
+      "Tmpfs": {
+        "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+      },
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Destination": "/run/word-profile.json",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/deploy",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/packages",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/pyproject.toml",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/requirements.lock.txt",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/api",
+          "RW": false
+        },
+        {
+          "Type": "bind",
+          "Destination": "/workspace/apps/worker",
+          "RW": false
+        }
+      ],
+      "NetworkMode": "6000bba2de2ed606aefd98f2bfbde6f2d7e5237f57b96df96709e6e269721503",
+      "Labels": {
+        "tender.test.disposable": "true",
+        "tender.test.run": "7977a3d3e569432b990e66c07c1080d2"
+      },
+      "role": "worker"
+    }
+  ],
+  "environment_values_not_requested": true
+}

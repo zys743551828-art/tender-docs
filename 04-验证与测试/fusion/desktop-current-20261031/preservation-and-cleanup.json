@@ -1,0 +1,88 @@
+{
+  "scope": "Read-only post-cleanup metadata; no old volume contents accessed and no image/volume mutation",
+  "all_five_fixed_images_still_present": [
+    {
+      "role": "postgres",
+      "requested_fixed_reference": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+      "still_present": true,
+      "repository_digests": [
+        "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d"
+      ],
+      "platform": "linux/amd64"
+    },
+    {
+      "role": "kafka",
+      "requested_fixed_reference": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+      "still_present": true,
+      "repository_digests": [
+        "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e"
+      ],
+      "platform": "linux/amd64"
+    },
+    {
+      "role": "object_store",
+      "requested_fixed_reference": "chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+      "still_present": true,
+      "repository_digests": [
+        "chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d"
+      ],
+      "platform": "linux/amd64"
+    },
+    {
+      "role": "python",
+      "requested_fixed_reference": "tender-workbench-runtime@sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e",
+      "still_present": true,
+      "repository_digests": [
+        "tender-workbench-runtime@sha256:126140f957f2988cea63a404c84debc7787fe7a800cb53b084fbd8624968ee5e"
+      ],
+      "platform": "linux/amd64"
+    },
+    {
+      "role": "web",
+      "requested_fixed_reference": "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "still_present": true,
+      "repository_digests": [
+        "nginx@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433"
+      ],
+      "platform": "linux/amd64"
+    }
+  ],
+  "remaining_non_test_named_volume_count": 114,
+  "remaining_non_test_named_volume_names_sha256": "4e418a8071f2c9bba7425a120397050774366879ccaa0c3a3ab10f9dfe2cc0ee",
+  "three_test_project_volumes_remaining": 0,
+  "preservation_evidence": "All removal receipts identify initially absent per-test project objects; no image removal, prune, docker rm -v, or unknown-volume removal was invoked. Existing volumes outside those project namespaces were excluded from every removal. Global before inventory and old volume content hashes were not collected; no stronger bytewise-preservation claim is made.",
+  "exact_cleanup_by_run": [
+    {
+      "run": "01-startup-observation-failure",
+      "closed": true,
+      "removed": {
+        "container": 15,
+        "network": 2,
+        "volume": 14
+      }
+    },
+    {
+      "run": "02-fixture-import-failure",
+      "closed": true,
+      "removed": {
+        "container": 16,
+        "network": 2,
+        "volume": 14
+      }
+    },
+    {
+      "run": "03-current-pass",
+      "closed": true,
+      "removed": {
+        "container": 16,
+        "network": 2,
+        "volume": 14
+      }
+    }
+  ],
+  "total_removed": {
+    "container": 47,
+    "network": 6,
+    "volume": 42
+  }
+}

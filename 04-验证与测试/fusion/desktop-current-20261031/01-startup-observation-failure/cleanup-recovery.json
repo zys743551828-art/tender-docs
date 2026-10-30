@@ -1,0 +1,314 @@
+{
+  "scope": "Exact cleanup recovery after optional Health observation template failed; no startup or verification rerun",
+  "project": "tender-fusion-full-bdbc3464b211",
+  "instance_id": "bdbc3464b2114aa7a2c22a81a30006cc",
+  "removed": [
+    {
+      "kind": "container",
+      "id": "75cf6155dcec8025b42b52f13dcebf2929d5e29e60a4c1f914902a907482200c",
+      "name": "/tender-fusion-full-bdbc3464b211-publish-1"
+    },
+    {
+      "kind": "container",
+      "id": "394d653ba3d02a23a94f96c89efe37b83c7b011c8e8c9d562734cf395525b4ce",
+      "name": "/tender-fusion-full-bdbc3464b211-init-1"
+    },
+    {
+      "kind": "container",
+      "id": "8ec6453ed34bfc08430b578be86d78bd3a0eab7d81791c5bfa01877c13b06eb7",
+      "name": "/tender-fusion-full-bdbc3464b211-object-store-1"
+    },
+    {
+      "kind": "container",
+      "id": "d9e09115239f30129495f3a233314807e8402f26d59b94ff0c022e1ff731f6af",
+      "name": "/tender-fusion-full-bdbc3464b211-configure-1"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_api_state",
+      "name": "tender-fusion-full-bdbc3464b211_api_state"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_init_state",
+      "name": "tender-fusion-full-bdbc3464b211_init_state"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_object_data",
+      "name": "tender-fusion-full-bdbc3464b211_object_data"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_owner_secret",
+      "name": "tender-fusion-full-bdbc3464b211_owner_secret"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_private_config",
+      "name": "tender-fusion-full-bdbc3464b211_private_config"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_profile_api",
+      "name": "tender-fusion-full-bdbc3464b211_profile_api"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_profile_controller",
+      "name": "tender-fusion-full-bdbc3464b211_profile_controller"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_profile_reconcile",
+      "name": "tender-fusion-full-bdbc3464b211_profile_reconcile"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_profile_relay",
+      "name": "tender-fusion-full-bdbc3464b211_profile_relay"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_profile_worker",
+      "name": "tender-fusion-full-bdbc3464b211_profile_worker"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_store_secret",
+      "name": "tender-fusion-full-bdbc3464b211_store_secret"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-bdbc3464b211_validation_login",
+      "name": "tender-fusion-full-bdbc3464b211_validation_login"
+    }
+  ],
+  "retained": [],
+  "before": {
+    "container": [
+      {
+        "id": "75cf6155dcec8025b42b52f13dcebf2929d5e29e60a4c1f914902a907482200c",
+        "name": "/tender-fusion-full-bdbc3464b211-publish-1",
+        "labels": {
+          "com.docker.compose.config-hash": "d3a1448d81219d992d9f58b523f65953c3666ac6ae21b710e16856b2721f80fa",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "init:service_completed_successfully:false",
+          "com.docker.compose.image": "sha256:9ba5b1f8eee649b7f89c9b905ee0c366f574dc6fe49e0e090432dacdffa14efd",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.project.config_files": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\full.compose.json",
+          "com.docker.compose.project.environment_file": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\compose.public.env",
+          "com.docker.compose.project.working_dir": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+          "com.docker.compose.service": "publish",
+          "com.docker.compose.version": "5.6.0",
+          "tender.desktop.instance": "bdbc3464b2114aa7a2c22a81a30006cc"
+        },
+        "status": "exited",
+        "exit_code": 0,
+        "health": null
+      },
+      {
+        "id": "394d653ba3d02a23a94f96c89efe37b83c7b011c8e8c9d562734cf395525b4ce",
+        "name": "/tender-fusion-full-bdbc3464b211-init-1",
+        "labels": {
+          "com.docker.compose.config-hash": "a6e3023d6adddcdaf24dbdbc921167408f528e9365b4a9321c6a635dd170b0b8",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "postgres:service_healthy:false,configure:service_completed_successfully:false,kafka:service_healthy:false,object-store:service_started:false",
+          "com.docker.compose.image": "sha256:9ba5b1f8eee649b7f89c9b905ee0c366f574dc6fe49e0e090432dacdffa14efd",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.project.config_files": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\full.compose.json",
+          "com.docker.compose.project.environment_file": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\compose.public.env",
+          "com.docker.compose.project.working_dir": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+          "com.docker.compose.service": "init",
+          "com.docker.compose.version": "5.6.0",
+          "tender.desktop.instance": "bdbc3464b2114aa7a2c22a81a30006cc"
+        },
+        "status": "exited",
+        "exit_code": 0,
+        "health": null
+      },
+      {
+        "id": "8ec6453ed34bfc08430b578be86d78bd3a0eab7d81791c5bfa01877c13b06eb7",
+        "name": "/tender-fusion-full-bdbc3464b211-object-store-1",
+        "labels": {
+          "author": "Chris Lu",
+          "com.docker.compose.config-hash": "a665cb0245375d4992ae2504b48a3788df8de67fc5f744baab247ac2d6cc708e",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "configure:service_completed_successfully:false",
+          "com.docker.compose.image": "sha256:aba492e2a4e4c90bff795745e8e660affa1f09e7650f5981bd7bccd1a06cd931",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.project.config_files": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\full.compose.json",
+          "com.docker.compose.project.environment_file": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\compose.public.env",
+          "com.docker.compose.project.working_dir": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+          "com.docker.compose.service": "object-store",
+          "com.docker.compose.version": "5.6.0",
+          "org.opencontainers.image.created": "2026-09-28T18:38:00.259Z",
+          "org.opencontainers.image.description": "SeaweedFS is a distributed storage system for blobs, objects, files, and data lake, to store and serve billions of files fast!",
+          "org.opencontainers.image.licenses": "Apache-2.0",
+          "org.opencontainers.image.revision": "530be3e37337488ecc34d58441e0bc476e121c93",
+          "org.opencontainers.image.source": "https://github.com/seaweedfs/seaweedfs",
+          "org.opencontainers.image.title": "seaweedfs",
+          "org.opencontainers.image.url": "https://github.com/seaweedfs/seaweedfs",
+          "org.opencontainers.image.vendor": "Chris Lu",
+          "org.opencontainers.image.version": "4.48",
+          "tender.desktop.instance": "bdbc3464b2114aa7a2c22a81a30006cc"
+        },
+        "status": "exited",
+        "exit_code": 137,
+        "health": null
+      },
+      {
+        "id": "d9e09115239f30129495f3a233314807e8402f26d59b94ff0c022e1ff731f6af",
+        "name": "/tender-fusion-full-bdbc3464b211-configure-1",
+        "labels": {
+          "com.docker.compose.config-hash": "e8479a1e4d4993dc3c8a4a2fa0b9ddfb78d0c9a27eb8296c245fed1a0fb0f8db",
+          "com.docker.compose.container-number": "1",
+          "com.docker.compose.depends_on": "",
+          "com.docker.compose.image": "sha256:9ba5b1f8eee649b7f89c9b905ee0c366f574dc6fe49e0e090432dacdffa14efd",
+          "com.docker.compose.oneoff": "False",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.project.config_files": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\bootstrap.compose.json",
+          "com.docker.compose.project.environment_file": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188\\compose.public.env",
+          "com.docker.compose.project.working_dir": "<task>\\.tools\\d188\\workbench\\.local\\full-desktop\\accept188",
+          "com.docker.compose.service": "configure",
+          "com.docker.compose.version": "5.6.0",
+          "tender.desktop.instance": "bdbc3464b2114aa7a2c22a81a30006cc"
+        },
+        "status": "exited",
+        "exit_code": 0,
+        "health": null
+      }
+    ],
+    "network": [],
+    "volume": [
+      {
+        "name": "tender-fusion-full-bdbc3464b211_api_state",
+        "labels": {
+          "com.docker.compose.config-hash": "aece6608709809c736c8564845467913fd170315ed9488971e67338927975857",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "api_state"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_init_state",
+        "labels": {
+          "com.docker.compose.config-hash": "b34303e6ecdecb67c3d95d4cb0257fe996481ebd4456d3b2efae6d79d9d6ab2a",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "init_state"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_object_data",
+        "labels": {
+          "com.docker.compose.config-hash": "6cec9436c3069c7e6bf43c36e5d7ce5f6e94188fe9980dab181c4cb8c869fbb2",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "object_data"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_owner_secret",
+        "labels": {
+          "com.docker.compose.config-hash": "ee6592e4a73cbb53714e0194cd2c5220a7f8964671c4dc6c32c90394e2b70f9d",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "owner_secret"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_private_config",
+        "labels": {
+          "com.docker.compose.config-hash": "cffe5f2b79316ecb9148751aa700e43617be6813d5e1148c78bcbf0f6f46e645",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "private_config"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_profile_api",
+        "labels": {
+          "com.docker.compose.config-hash": "6321da88234886bdd42f0d6dbe23cfc81e41b1ae4ed6f3d7e1985fa822b0ebfe",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "profile_api"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_profile_controller",
+        "labels": {
+          "com.docker.compose.config-hash": "7517972561d06e2ff26455b2e7b494baa92641a5022c47045029464b9e9c8e42",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "profile_controller"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_profile_reconcile",
+        "labels": {
+          "com.docker.compose.config-hash": "c98a527a8eaeeb47ceccd2d4e994710ef751770b4989b7d03878f4b23667d165",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "profile_reconcile"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_profile_relay",
+        "labels": {
+          "com.docker.compose.config-hash": "a81102072a7953eb203545f3a198630527901e2d177d389efa84cf43dad8b435",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "profile_relay"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_profile_worker",
+        "labels": {
+          "com.docker.compose.config-hash": "252b8d7d8ec949036cc20e68259892bd85bbab2fd1f3b5789e5efcd11808b7f2",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "profile_worker"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_store_secret",
+        "labels": {
+          "com.docker.compose.config-hash": "c72eccdb086ec3e6be5f2d57425670f40faf97df3468f1342a2b50f209c29e85",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "store_secret"
+        }
+      },
+      {
+        "name": "tender-fusion-full-bdbc3464b211_validation_login",
+        "labels": {
+          "com.docker.compose.config-hash": "d920c19e68e0b96c1450386453eb5134a2d4c1596364d84c8e33c5d9b23c9c33",
+          "com.docker.compose.project": "tender-fusion-full-bdbc3464b211",
+          "com.docker.compose.version": "5.6.0",
+          "com.docker.compose.volume": "validation_login"
+        }
+      }
+    ]
+  },
+  "after": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "normal_stop": {
+    "returncode": 0,
+    "public_events": [
+      {
+        "ok": true,
+        "project": "tender-fusion-full-bdbc3464b211",
+        "action": "stop",
+        "volumes_deleted": false
+      }
+    ]
+  },
+  "closed": true
+}

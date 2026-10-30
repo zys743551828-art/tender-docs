@@ -1,0 +1,168 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.web-build
+#1 transferring dockerfile: 1.65kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.7@sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720
+#2 ...
+
+#3 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.7@sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720
+#2 DONE 1.7s
+
+#4 docker-image://docker.io/docker/dockerfile:1.7@sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720
+#4 resolve docker.io/docker/dockerfile:1.7@sha256:b5f3b260a9678e1d83d2fce86eeddf79420b79147eaba2a25986f47133d73720 0.0s done
+#4 CACHED
+
+#5 [internal] load metadata for docker.io/library/node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0
+#5 ...
+
+#6 [auth] library/node:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0
+#5 DONE 1.4s
+
+#7 [build  1/10] FROM docker.io/library/node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0
+#7 resolve docker.io/library/node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0 0.0s done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 51.59kB 0.1s
+#8 transferring context: 60.65kB 0.1s done
+#8 DONE 0.1s
+
+#9 [build  4/10] COPY scripts/copy-pdf-resources.mjs ./scripts/copy-pdf-resources.mjs
+#9 CACHED
+
+#10 [build  5/10] COPY public/ ./public/
+#10 CACHED
+
+#11 [build  2/10] WORKDIR /build
+#11 CACHED
+
+#12 [build  3/10] COPY package.json package-lock.json ./
+#12 CACHED
+
+#13 [build  6/10] RUN npm ci --no-audit --no-fund
+#13 CACHED
+
+#14 [build  7/10] COPY src/ ./src/
+#14 DONE 0.2s
+
+#15 [build  8/10] COPY qa-previews/frozen-inputs/*.ts ./qa-previews/frozen-inputs/
+#15 DONE 0.1s
+
+#16 [build  9/10] COPY index.html vite.config.ts tsconfig.json ./
+#16 DONE 0.1s
+
+#17 [build 10/10] RUN npm run build
+#17 0.476 
+#17 0.476 > @tender/workbench-web@0.1.0 prebuild
+#17 0.476 > node scripts/copy-pdf-resources.mjs
+#17 0.476 
+#17 0.581 
+#17 0.581 > @tender/workbench-web@0.1.0 build
+#17 0.581 > tsc -b && vite build
+#17 0.581 
+#17 9.802 vite v6.3.5 building for production...
+#17 9.841 transforming...
+#17 12.28 ✓ 417 modules transformed.
+#17 12.59 rendering chunks...
+#17 12.74 [plugin vite:reporter] 
+#17 12.74 (!) /build/src/AssistantWorkspace.tsx is dynamically imported by /build/src/App.tsx but also statically imported by /build/src/AssistantDrawer.tsx, dynamic import will not move module into another chunk.
+#17 12.74 
+#17 12.76 computing gzip size...
+#17 12.79 dist/index.html                                                0.70 kB │ gzip:   0.43 kB
+#17 12.79 dist/assets/pdf.worker.min-Dkey6ZUl.mjs                    1,321.31 kB
+#17 12.79 dist/assets/PackageNextActions-HIIFH2Qy.css                    0.41 kB │ gzip:   0.19 kB
+#17 12.79 dist/assets/Knowledge-BnKjjVr_.css                             0.55 kB │ gzip:   0.24 kB
+#17 12.79 dist/assets/ProjectSelectedReviewSummary-B_0OL1a3.css          0.59 kB │ gzip:   0.25 kB
+#17 12.79 dist/assets/PackageCoverageWorkspace-ByH6HDrk.css              0.86 kB │ gzip:   0.33 kB
+#17 12.79 dist/assets/PackageDependencyPlanWorkspace-BVZtru1-.css        1.47 kB │ gzip:   0.50 kB
+#17 12.79 dist/assets/PackageReviewComparisonWorkspace-C_WWQvUo.css      1.67 kB │ gzip:   0.46 kB
+#17 12.79 dist/assets/SubmissionPanel-C1faBvRk.css                       1.79 kB │ gzip:   0.61 kB
+#17 12.79 dist/assets/PackageFrozenInputWorkspace-C44VfPis.css           2.22 kB │ gzip:   0.58 kB
+#17 12.79 dist/assets/PackageRetrospectives-wF0CraaE.css                 2.40 kB │ gzip:   0.73 kB
+#17 12.79 dist/assets/PackageReviewWorkspace-BQp4TxbX.css                2.73 kB │ gzip:   0.67 kB
+#17 12.79 dist/assets/PackageEvidencePicker-C3z6oAW8.css                 2.84 kB │ gzip:   0.65 kB
+#17 12.79 dist/assets/PackageSubmissionReviewActions-B7AOsr-_.css        2.84 kB │ gzip:   0.84 kB
+#17 12.79 dist/assets/TaskTemplateEditor-D43RvBA3.css                    2.92 kB │ gzip:   0.88 kB
+#17 12.79 dist/assets/PackageHistoricalResearch-UGo4lI9l.css             3.61 kB │ gzip:   1.02 kB
+#17 12.79 dist/assets/PackageFactChangeWorkspace-IDFYhqSq.css            3.80 kB │ gzip:   0.92 kB
+#17 12.79 dist/assets/HistoricalImports-BCz0XcNw.css                     3.81 kB │ gzip:   1.11 kB
+#17 12.79 dist/assets/WorkContextWorkspace-Dyh5cbCa.css                  3.82 kB │ gzip:   1.02 kB
+#17 12.79 dist/assets/PackageTechnicalScope-DIxjFiOa.css                 4.06 kB │ gzip:   1.14 kB
+#17 12.79 dist/assets/PackageRuleCorrections-CyQBuaYP.css                6.00 kB │ gzip:   1.45 kB
+#17 12.79 dist/assets/packageReview-DehTHCS7.css                         6.14 kB │ gzip:   1.45 kB
+#17 12.79 dist/assets/AuthoringPanel-ChYVbqjp.css                       13.41 kB │ gzip:   3.05 kB
+#17 12.79 dist/assets/index-QP_WnFDT.css                               189.25 kB │ gzip:  49.77 kB
+#17 12.79 dist/assets/packageHistoryPresentation-Dh36bOao.js             0.36 kB │ gzip:   0.34 kB
+#17 12.79 dist/assets/businessNames-D2PcdCRi.js                          1.04 kB │ gzip:   0.68 kB
+#17 12.79 dist/assets/PackageReviewEvidence-CICTknzL.js                  2.40 kB │ gzip:   1.36 kB
+#17 12.79 dist/assets/ExactPackageTaskRunDetails-CQbWFOS-.js             2.65 kB │ gzip:   1.46 kB
+#17 12.79 dist/assets/packageReviewHistoricalRun-Da33KLP_.js             2.84 kB │ gzip:   1.08 kB
+#17 12.79 dist/assets/ProjectSelectedReviewSummary-CZnxecSX.js           3.06 kB │ gzip:   1.52 kB
+#17 12.79 dist/assets/PackageEvidencePicker-By4aNa-n.js                  3.15 kB │ gzip:   1.66 kB
+#17 12.79 dist/assets/WorkContextReviewDetails-B2RlzEqd.js               3.19 kB │ gzip:   1.68 kB
+#17 12.79 dist/assets/PackageReviewOriginalRunDetails-DLcenKlS.js        3.33 kB │ gzip:   1.74 kB
+#17 12.79 dist/assets/PackageOriginalVerification-DWBXqw0y.js            3.38 kB │ gzip:   1.78 kB
+#17 12.79 dist/assets/WorkContextChoices-e__s1xua.js                     3.98 kB │ gzip:   2.04 kB
+#17 12.79 dist/assets/PackageAuthoringTaskResult-BhWNssUx.js             4.05 kB │ gzip:   2.13 kB
+#17 12.79 dist/assets/TaskAuthoringResultPanel-DuSiFZGB.js               4.15 kB │ gzip:   2.08 kB
+#17 12.79 dist/assets/inputDependencyProtocol-ulq8r5Z1.js                5.88 kB │ gzip:   2.48 kB
+#17 12.79 dist/assets/factScopeValidation-BRVWZFFb.js                    5.92 kB │ gzip:   2.36 kB
+#17 12.79 dist/assets/dependencyPlanProtocol-DBZrkcmi.js                 6.64 kB │ gzip:   2.47 kB
+#17 12.79 dist/assets/workContextProtocol-C5wftoWj.js                    7.69 kB │ gzip:   2.77 kB
+#17 12.79 dist/assets/Metrics-B_0YP-Gq.js                                7.76 kB │ gzip:   3.17 kB
+#17 12.79 dist/assets/packageReviewComparisonProtocol-OS_heob8.js        7.77 kB │ gzip:   2.93 kB
+#17 12.79 dist/assets/ReportPanel-D029oz0c.js                            7.86 kB │ gzip:   3.42 kB
+#17 12.79 dist/assets/PackageNextActions-BgenhXWN.js                     7.94 kB │ gzip:   3.15 kB
+#17 12.79 dist/assets/packageReviewProtocol-CNULOzEO.js                  9.75 kB │ gzip:   3.35 kB
+#17 12.79 dist/assets/PackageDependencyPlanWorkspace-hEeK3TAR.js        10.85 kB │ gzip:   4.40 kB
+#17 12.79 dist/assets/workContextDirectoryProtocol-DWRXmx3Z.js          11.12 kB │ gzip:   3.84 kB
+#17 12.79 dist/assets/PackageSubmissionReviewActions-CfOIwz-1.js        12.59 kB │ gzip:   4.77 kB
+#17 12.79 dist/assets/packageOutcomeProtocol-DXoKBnB7.js                12.65 kB │ gzip:   4.84 kB
+#17 12.79 dist/assets/packageSubmissionProtocol-3Dt9wTE8.js             14.39 kB │ gzip:   4.69 kB
+#17 12.79 dist/assets/PackageReviewComparisonWorkspace-HG26dSya.js      16.08 kB │ gzip:   6.21 kB
+#17 12.79 dist/assets/PackageReviewInputDetails-QRa4Qh0T.js             18.05 kB │ gzip:   6.26 kB
+#17 12.79 dist/assets/PackageCoverageWorkspace-BfYXY7dp.js              22.35 kB │ gzip:   8.25 kB
+#17 12.79 dist/assets/WorkContextWorkspace-B7WI4mJS.js                  23.07 kB │ gzip:   7.44 kB
+#17 12.79 dist/assets/PackageReviewReportExports-DhjuLmh-.js            23.51 kB │ gzip:   8.00 kB
+#17 12.79 dist/assets/HistoricalImports-BmFiJ1PJ.js                     24.17 kB │ gzip:   8.47 kB
+#17 12.79 dist/assets/PackageFactChangeWorkspace-umYxNVV0.js            25.86 kB │ gzip:   8.74 kB
+#17 12.79 dist/assets/PackageReviewWorkspace-D2r39Sx6.js                27.79 kB │ gzip:   9.68 kB
+#17 12.79 dist/assets/PackageRetrospectives-bIWZygd0.js                 27.89 kB │ gzip:   8.98 kB
+#17 12.79 dist/assets/api-capabilities-DpfjmonX.js                      30.98 kB │ gzip:   3.35 kB
+#17 12.79 dist/assets/PackageReviewProgress-BRt43wMX.js                 32.31 kB │ gzip:  10.87 kB
+#17 12.79 dist/assets/PricingPanel-Bd--1spr.js                          36.94 kB │ gzip:  11.68 kB
+#17 12.79 dist/assets/PackageFrozenInputWorkspace-CZgCVcUw.js           37.62 kB │ gzip:  11.90 kB
+#17 12.79 dist/assets/PackageHistoricalResearch-B4aE7njX.js             45.62 kB │ gzip:  13.85 kB
+#17 12.79 dist/assets/PackageRuleCorrections-C3T7Zx3L.js                53.07 kB │ gzip:  16.69 kB
+#17 12.79 dist/assets/Knowledge-fSSz7-pb.js                             55.45 kB │ gzip:  17.47 kB
+#17 12.79 dist/assets/TaskPanel-DL65XbBw.js                             57.62 kB │ gzip:  17.75 kB
+#17 12.79 dist/assets/packageHistoricalResearchRecovery-C0Qqik65.js     76.89 kB │ gzip:  11.21 kB
+#17 12.79 dist/assets/SubmissionPanel-CxN9p0hx.js                       92.37 kB │ gzip:  27.82 kB
+#17 12.79 dist/assets/TaskTemplateEditor-BgO6A-Hb.js                   101.41 kB │ gzip:  31.39 kB
+#17 12.79 dist/assets/PackageTechnicalScope-aFg_PmLK.js                113.16 kB │ gzip:  34.71 kB
+#17 12.79 dist/assets/AuthoringPanel-C5pICbkf.js                       354.37 kB │ gzip: 112.24 kB
+#17 12.79 dist/assets/pdf-q-5ow4VI.js                                  541.88 kB │ gzip: 164.72 kB
+#17 12.79 dist/assets/index-Dax90DKX.js                                736.18 kB │ gzip: 229.76 kB
+#17 12.79 
+#17 12.79 (!) Some chunks are larger than 500 kB after minification. Consider:
+#17 12.79 - Using dynamic import() to code-split the application
+#17 12.79 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#17 12.79 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#17 12.79 ✓ built in 2.97s
+#17 DONE 13.0s
+
+#18 [dist 1/1] COPY --from=build /build/dist/ /
+#18 DONE 0.1s
+
+#19 exporting to client directory
+#19 copying files 8.33MB 0.1s
+#19 copying files 12.84MB 0.2s done
+#19 DONE 0.2s

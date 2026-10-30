@@ -8,3 +8,5 @@
 - 可执行命令和部署边界见应用 [`docs/build-artifacts.md`](https://github.com/zys743551828-art/tender-app/blob/dev/workbench/docs/build-artifacts.md)。旧 full/1 安装器仍有独立平台前提和 Word 通道接线缺口，构建成功不等于正式部署验收。
 
 官方 Nginx1.30.5-alpine 固定 manifest 已在本机获取；实际服务和浏览器交互/像素结果单独记录，不能从本构建日志推断。归档不含完整dist、秘密配置、真实标书或缓存。
+
+[本提交 CI41103933851](https://github.com/zys743551828-art/tender-app/actions/runs/41103933851)已11/11成功，[终态元数据](ci-41103933851.json)与[Kafka缓存必要片段](ci-41103933851-kafka-cache-snippets.json)单独保存。本次真实缓存命中后仍执行原SHA512检查并通过，Outbox真实用例成功；不以缓存命中替代校验或业务验收。

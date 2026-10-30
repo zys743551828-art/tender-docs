@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-10-30T18:44:57.208498+00:00",
+  "started_local": "2026-10-31T02:44:57.208498+08:00",
+  "topology": {
+    "mode": "local isolated acceptance only",
+    "application_image": "tender-workbench-runtime:py3.12.16-candidate-20261030",
+    "containers": [
+      "PG17",
+      "private S3",
+      "browser QA tooling only",
+      "API uid65532 readonly",
+      "Worker uid65532 readonly",
+      "official nginx production dist uid65532 readonly"
+    ],
+    "networks": 1,
+    "host_executor": "separate bounded host process; not containerized",
+    "application_sources": "packages, apps/api, apps/worker, deploy, pyproject and requirements all readonly",
+    "api_generated_state": "/workspace/.local tmpfs16m uid/gid65532 mode0700",
+    "application_tmpfs": "/tmp512m",
+    "worker_mailbox": "/tmp/word-execution",
+    "protocol": "word-conversion-execution/2; rawconvert only",
+    "browser_origin": "http://127.0.0.1:8080 in shared web network namespace",
+    "scope": "small synthetic Word success chain solely to reach PDF preview; desktop/narrow canvas/text, lazy Worker assets, close/Escape/focus/cancel idle",
+    "guards": "no docker.sock; no DB/model env in QA or host executor; no model calls; per-job Gotenberg networknone",
+    "cleanup": "stop executor and application services before PG/S3; official process and conversion recovery helpers"
+  },
+  "host_executor_containerized": false,
+  "models_called": false,
+  "full_compose_installed": false,
+  "kafka_tested": false,
+  "worker_local_qualification_proved": true,
+  "narrow_conversion_v2_proved": true,
+  "runtime_commit_not_asserted": true,
+  "passed": true,
+  "production_dist_served_by_nginx": true,
+  "prior_timeout_retry_not_repeated": true,
+  "preview_pdf_matches_s3": true,
+  "parse_coverage": "partial",
+  "api_worker_candidate_image": true,
+  "browser_url": "http://127.0.0.1:8080/bids/5962bdd3-9c82-4f39-870f-a65cf4620ed2/materials",
+  "host_executor_stopped": true,
+  "host_executor_exit_code": 0,
+  "conversion_cleanup": [
+    {
+      "receipt": "conversion-2ca5fbfb935d4d269526c4d78d4753bf.json",
+      "closed": true,
+      "run_id": "09d66efe6f50472290496240c0e38159"
+    }
+  ],
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-30T18:46:22.837181+00:00",
+  "finished_local": "2026-10-31T02:46:22.837181+08:00"
+}

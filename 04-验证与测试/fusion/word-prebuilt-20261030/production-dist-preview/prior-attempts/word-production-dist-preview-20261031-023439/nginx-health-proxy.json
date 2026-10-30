@@ -1,0 +1,29 @@
+{
+  "path": "/nginx-health",
+  "status": 200,
+  "body": {
+    "database": "ready",
+    "model": "not_configured",
+    "slice": "pdf-and-core-review"
+  },
+  "attempts": [
+    {
+      "status": 502,
+      "elapsed_seconds": 0.0005345249999777479
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 0.25397243200001185
+    },
+    {
+      "status": 502,
+      "elapsed_seconds": 0.50685675699998
+    },
+    {
+      "status": 200,
+      "elapsed_seconds": 0.7685386829999743
+    }
+  ],
+  "ready": true,
+  "model_called": false
+}

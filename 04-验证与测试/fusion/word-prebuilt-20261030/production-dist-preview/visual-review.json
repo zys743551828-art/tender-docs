@@ -1,0 +1,37 @@
+{
+  "actual_view_reviewer": "local_config_audit",
+  "actual_view_images": [
+    "preview-desktop-canvas.png",
+    "preview-desktop-text.png",
+    "preview-390-canvas.png",
+    "preview-390-text.png",
+    "preview-390-focus-return.png",
+    "preview-desktop-focus-return.png",
+    "preview-cancel-focus-return.png"
+  ],
+  "observations": "Chinese PDF canvas and actual parsed text visible at desktop/390; partial gap and Word conversion-not-qualification notices retained; close/page select/tabs reachable, returned focus ring visible. No observed horizontal overflow or overlap.",
+  "canvas_layout": {
+    "desktop_width": 1440,
+    "desktop_scroll": 1440,
+    "narrow_width": 390,
+    "narrow_scroll": 390
+  },
+  "cancellation_scope": "Viewer close/Escape and no new preview requests during2300ms idle; third open closed before PDF drawing-loading observed, no claim of aborting an in-flight PDF transfer or canceling a Word task.",
+  "not_tested": [
+    "full keyboard Tab loop",
+    "Word task cancellation",
+    "all app pages",
+    "page/rich full browser chain",
+    "Kafka",
+    "models",
+    "production deployment",
+    "full Compose installation"
+  ],
+  "root_actual_view_images": [
+    "preview-desktop-canvas.png",
+    "preview-390-canvas.png",
+    "preview-390-text.png",
+    "preview-390-focus-return.png"
+  ],
+  "root_observations": "Original page truly rendered; readable parsed text at390; partial and Word-not-qualified notices retained; close/page select/tabs visible; no horizontal overflow; returned focus ring clear. A4 fit-page text small in this synthetic sample; no claim about arbitrary complex layouts or full zoom coverage."
+}

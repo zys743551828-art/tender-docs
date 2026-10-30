@@ -1,0 +1,296 @@
+{
+  "scope": "Normal Windows Desktop full/1 local isolated baseline; no Word v2/full/2 integration",
+  "source_commit": "35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8",
+  "prepare": "passed",
+  "configure_initialize_publish": "passed",
+  "up_wait": "passed",
+  "health_after_up": {
+    "web": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "word-controller": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "relay": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "build-controller": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "worker-document": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "api": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "worker-comparison": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "reconcile": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "worker-export": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "publish": {
+      "status": "exited",
+      "exit_code": 0,
+      "health": null
+    },
+    "init": {
+      "status": "exited",
+      "exit_code": 0,
+      "health": null
+    },
+    "object-store": {
+      "status": "running",
+      "exit_code": 0,
+      "health": null
+    },
+    "kafka": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "postgres": {
+      "status": "running",
+      "exit_code": 0,
+      "health": "healthy"
+    },
+    "configure": {
+      "status": "exited",
+      "exit_code": 0,
+      "health": null
+    }
+  },
+  "verify": {
+    "returncode": 0,
+    "seconds": 8.88,
+    "public_events": [
+      {
+        "ok": true,
+        "runtime_uid": 65532,
+        "nonowner": true,
+        "plan_digest": "9265402ec5bd1e5a055e1a76046667232ba2dd7c618a60afa2dd42b3468b08ed",
+        "same_origin_http": true,
+        "session_and_ticket_isolation": true,
+        "kafka_worker_parse": true,
+        "download_sha256": "11f129555ae700f2a0238bbf60868b2af19991f5bc050f8782b119caccc53764",
+        "physical_pages": 2,
+        "coverage": "partial",
+        "current_body_changed": false,
+        "provider_calls": 0
+      },
+      {
+        "ok": true,
+        "project": "tender-fusion-full-3cd28d7052bc",
+        "synthetic_transport_verified": true,
+        "provider_calls": 0,
+        "private_values_exported": false
+      }
+    ],
+    "raw_output_retained": false
+  },
+  "models_and_automation": "disabled; verifier confirms provider_calls=0",
+  "cleanup": {
+    "removed": [
+      {
+        "kind": "container",
+        "id": "f5eafd0eaf00c7613df86001b8b0b9625f12d19fd5320fa23912622499bd3ed8",
+        "name": "/tender-fusion-full-3cd28d7052bc-validation-1"
+      },
+      {
+        "kind": "container",
+        "id": "309cdd9a3c50ca436b33afc2e68ab6c1fc2287c24bf63616e97c843dcb47933c",
+        "name": "/tender-fusion-full-3cd28d7052bc-web-1"
+      },
+      {
+        "kind": "container",
+        "id": "1be65a0e2c08e9ddfc52ecc0c83ae765c83cf69dc60aca418301061921ca0693",
+        "name": "/tender-fusion-full-3cd28d7052bc-word-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "76f2d7f461d876d427cb157895abeb243a036a3dec78f5da4276e5500d57da93",
+        "name": "/tender-fusion-full-3cd28d7052bc-relay-1"
+      },
+      {
+        "kind": "container",
+        "id": "10d892fe4b8e84dca8fd6e0c7ec04c5594b6d63e465a6ed3c0052113cb6962c5",
+        "name": "/tender-fusion-full-3cd28d7052bc-build-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "f435bb0b688dcb1a461957ced2554f3e71e553b9d6514ba2d0e7872497f7b1a2",
+        "name": "/tender-fusion-full-3cd28d7052bc-worker-document-1"
+      },
+      {
+        "kind": "container",
+        "id": "315aa5fd4cb56cbefaf6f908e04b5888c33699e2dc28f627501b4e37c2276ada",
+        "name": "/tender-fusion-full-3cd28d7052bc-api-1"
+      },
+      {
+        "kind": "container",
+        "id": "96df6531c3f21d9b5d9bdabe2642d7f343713b16a37f1573c7f1a24b4b073d91",
+        "name": "/tender-fusion-full-3cd28d7052bc-worker-comparison-1"
+      },
+      {
+        "kind": "container",
+        "id": "54b34d2bcea8920ea0a1e5679e3fad42f9515c252d6d51505831629a09d36be0",
+        "name": "/tender-fusion-full-3cd28d7052bc-reconcile-1"
+      },
+      {
+        "kind": "container",
+        "id": "034b7a4215a97a59242005de8276313e09253f209fa1480ace5ef2ccca109827",
+        "name": "/tender-fusion-full-3cd28d7052bc-worker-export-1"
+      },
+      {
+        "kind": "container",
+        "id": "c9a063b12c9633a0b2da0053278ad1955b5bce6f4ea7de1f9f5afee163d5d998",
+        "name": "/tender-fusion-full-3cd28d7052bc-publish-1"
+      },
+      {
+        "kind": "container",
+        "id": "dcede4b979b7c9b805fab874292d22b5b15a0e64f8353c75cb2d9e93cc471088",
+        "name": "/tender-fusion-full-3cd28d7052bc-init-1"
+      },
+      {
+        "kind": "container",
+        "id": "bdaad62afb2b72d8cc98700803e8bf1260c9931f789023534ac0c841a4938a7a",
+        "name": "/tender-fusion-full-3cd28d7052bc-object-store-1"
+      },
+      {
+        "kind": "container",
+        "id": "0a9c0609c5a2666dabd7e21a747f382f373e8c6cfa9cf2c342dd0f4f56817ef8",
+        "name": "/tender-fusion-full-3cd28d7052bc-kafka-1"
+      },
+      {
+        "kind": "container",
+        "id": "d4f4cec413eb35eb8c02f20253bdec162523522dac6f522a4dc9ce21fb2c9054",
+        "name": "/tender-fusion-full-3cd28d7052bc-postgres-1"
+      },
+      {
+        "kind": "container",
+        "id": "f7f2c94684d7b4c915d54c7ef6ff75b1b9fb549389e550f46a067f11e7baeb9b",
+        "name": "/tender-fusion-full-3cd28d7052bc-configure-1"
+      },
+      {
+        "kind": "network",
+        "id": "3415143fe405b550e8c660fffa8893f8e40de56341ced5c1cef92bc30ca34134",
+        "name": "tender-fusion-full-3cd28d7052bc_core"
+      },
+      {
+        "kind": "network",
+        "id": "d5d9b917604e6b4a23ee88478ac47878921844ab78b718500b9a78035eff9f17",
+        "name": "tender-fusion-full-3cd28d7052bc_preview"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_api_state",
+        "name": "tender-fusion-full-3cd28d7052bc_api_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_init_state",
+        "name": "tender-fusion-full-3cd28d7052bc_init_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_kafka_data",
+        "name": "tender-fusion-full-3cd28d7052bc_kafka_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_object_data",
+        "name": "tender-fusion-full-3cd28d7052bc_object_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_owner_secret",
+        "name": "tender-fusion-full-3cd28d7052bc_owner_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_postgres_data",
+        "name": "tender-fusion-full-3cd28d7052bc_postgres_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_private_config",
+        "name": "tender-fusion-full-3cd28d7052bc_private_config"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_profile_api",
+        "name": "tender-fusion-full-3cd28d7052bc_profile_api"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_profile_controller",
+        "name": "tender-fusion-full-3cd28d7052bc_profile_controller"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_profile_reconcile",
+        "name": "tender-fusion-full-3cd28d7052bc_profile_reconcile"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_profile_relay",
+        "name": "tender-fusion-full-3cd28d7052bc_profile_relay"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_profile_worker",
+        "name": "tender-fusion-full-3cd28d7052bc_profile_worker"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_store_secret",
+        "name": "tender-fusion-full-3cd28d7052bc_store_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-3cd28d7052bc_validation_login",
+        "name": "tender-fusion-full-3cd28d7052bc_validation_login"
+      }
+    ],
+    "retained": [],
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "closed": true
+  },
+  "prior_runs": [
+    {
+      "evidence": "desktop-accept188-185421",
+      "result": "startup passed; wrapper optional Health observation failed before verify; exact cleanup 15C/2N/14V closed"
+    },
+    {
+      "evidence": "desktop-accept188-verify-190051",
+      "result": "startup passed; verify ModuleNotFoundError from unlocked fixture-generation dependency; exact cleanup 16C/2N/14V closed"
+    }
+  ],
+  "application_or_git_changes_by_test_agent": false,
+  "raw_logs_retained": false
+}

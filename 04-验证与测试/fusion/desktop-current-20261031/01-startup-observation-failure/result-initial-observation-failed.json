@@ -1,0 +1,244 @@
+{
+  "scope": "Temporary local isolated full/1 baseline; no Word v2/model/automation integration",
+  "stages": {
+    "prepare": {
+      "returncode": 0,
+      "seconds": 0.19,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-bdbc3464b211",
+          "services_started": 0
+        }
+      ],
+      "raw_output_retained": false
+    },
+    "up": {
+      "returncode": 0,
+      "seconds": 196.58,
+      "public_events": [
+        {
+          "ok": true,
+          "stage": "configured",
+          "plan_digest": "79303eabdc2fc82ea115028f3991a0eca25bcb1c636e1767d8c15a26bbb55389",
+          "private_values_exported": false
+        },
+        {
+          "ok": true,
+          "project": "tender-fusion-full-bdbc3464b211",
+          "origin": "http://127.0.0.1:65441",
+          "plan_digest": "79303eabdc2fc82ea115028f3991a0eca25bcb1c636e1767d8c15a26bbb55389",
+          "private_values_exported": false
+        }
+      ],
+      "raw_output_retained": false
+    },
+    "stop": {
+      "returncode": 0,
+      "seconds": 5.22,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-bdbc3464b211",
+          "action": "stop",
+          "volumes_deleted": false
+        }
+      ],
+      "raw_output_retained": false
+    }
+  },
+  "observations": {},
+  "cleanup": {
+    "removed": [
+      {
+        "kind": "container",
+        "id": "69b33d9a5b8cd109bc4aed6b1804c0378d850ae950886ad3b1d71be2460aa248",
+        "name": "/tender-fusion-full-bdbc3464b211-web-1"
+      },
+      {
+        "kind": "container",
+        "id": "70d2ed840f589e2987238840f5c6aa0c49c5fadeca3e8ee5dd57d98026e4f6b6",
+        "name": "/tender-fusion-full-bdbc3464b211-worker-comparison-1"
+      },
+      {
+        "kind": "container",
+        "id": "7316e4eff8ba8d98e789ae696161d68f406c4af8b8dd581473660ea3d7acdbe2",
+        "name": "/tender-fusion-full-bdbc3464b211-api-1"
+      },
+      {
+        "kind": "container",
+        "id": "bfffa3ab2de3b7b43b3b2200b4626f95ebfe5f12c788f7905a091ef11136cec2",
+        "name": "/tender-fusion-full-bdbc3464b211-word-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "b58b38875b328bff88ce9663d2b59c0eb72aef8ccd6625be0575add6672c6ce5",
+        "name": "/tender-fusion-full-bdbc3464b211-build-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "c8b0204324931ea0383fb9f546dec32472bb3fdcdec6a4c39de70b9501010454",
+        "name": "/tender-fusion-full-bdbc3464b211-worker-document-1"
+      },
+      {
+        "kind": "container",
+        "id": "9bd356bf5676759673e6476b412dc7157383e0c9b3b1cf1581d33094610b634e",
+        "name": "/tender-fusion-full-bdbc3464b211-worker-export-1"
+      },
+      {
+        "kind": "container",
+        "id": "528cdd42d97250d6794025c5469b045420492f2509cf2e2ebf1a76cfed852f94",
+        "name": "/tender-fusion-full-bdbc3464b211-reconcile-1"
+      },
+      {
+        "kind": "container",
+        "id": "d8150c4018e926a8cce27c21041f76a9a259c4e172304ff2bc658e25dc1bca50",
+        "name": "/tender-fusion-full-bdbc3464b211-relay-1"
+      },
+      {
+        "kind": "container",
+        "id": "8a924278a8c527f47df96262acbe733fbea337f2d0f713ff5c2f98e47c0a1fe3",
+        "name": "/tender-fusion-full-bdbc3464b211-kafka-1"
+      },
+      {
+        "kind": "container",
+        "id": "7a0235cf1b71478418c5d15ea0c8651198e05de6b6d0f58dc30e68115ccd0e74",
+        "name": "/tender-fusion-full-bdbc3464b211-postgres-1"
+      },
+      {
+        "kind": "network",
+        "id": "aae8cc2307abbdafb624b4ef361d32c897e083545803e1fca3236f5bc3a2d69a",
+        "name": "tender-fusion-full-bdbc3464b211_core"
+      },
+      {
+        "kind": "network",
+        "id": "cd4de4c3a041c0cdc4be993cbffaaaa5948fbbcf6d62f025eaedb864f3fc5cb6",
+        "name": "tender-fusion-full-bdbc3464b211_preview"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_kafka_data",
+        "name": "tender-fusion-full-bdbc3464b211_kafka_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_postgres_data",
+        "name": "tender-fusion-full-bdbc3464b211_postgres_data"
+      }
+    ],
+    "retained": [
+      {
+        "kind": "container",
+        "id": "75cf6155dcec8025b42b52f13dcebf2929d5e29e60a4c1f914902a907482200c",
+        "reason": "PUBLIC_RESOURCE_INSPECTION_FAILED"
+      },
+      {
+        "kind": "container",
+        "id": "394d653ba3d02a23a94f96c89efe37b83c7b011c8e8c9d562734cf395525b4ce",
+        "reason": "PUBLIC_RESOURCE_INSPECTION_FAILED"
+      },
+      {
+        "kind": "container",
+        "id": "8ec6453ed34bfc08430b578be86d78bd3a0eab7d81791c5bfa01877c13b06eb7",
+        "reason": "PUBLIC_RESOURCE_INSPECTION_FAILED"
+      },
+      {
+        "kind": "container",
+        "id": "d9e09115239f30129495f3a233314807e8402f26d59b94ff0c022e1ff731f6af",
+        "reason": "PUBLIC_RESOURCE_INSPECTION_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_api_state",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_init_state",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_object_data",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_owner_secret",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_private_config",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_profile_api",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_profile_controller",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_profile_reconcile",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_profile_relay",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_profile_worker",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_store_secret",
+        "reason": "EXACT_REMOVAL_FAILED"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-bdbc3464b211_validation_login",
+        "reason": "EXACT_REMOVAL_FAILED"
+      }
+    ],
+    "snapshot_error": "PUBLIC_RESOURCE_ENUMERATION_FAILED",
+    "remaining": {
+      "container": [
+        "75cf6155dcec8025b42b52f13dcebf2929d5e29e60a4c1f914902a907482200c",
+        "394d653ba3d02a23a94f96c89efe37b83c7b011c8e8c9d562734cf395525b4ce",
+        "8ec6453ed34bfc08430b578be86d78bd3a0eab7d81791c5bfa01877c13b06eb7",
+        "d9e09115239f30129495f3a233314807e8402f26d59b94ff0c022e1ff731f6af"
+      ],
+      "network": [],
+      "volume": [
+        "tender-fusion-full-bdbc3464b211_api_state",
+        "tender-fusion-full-bdbc3464b211_init_state",
+        "tender-fusion-full-bdbc3464b211_object_data",
+        "tender-fusion-full-bdbc3464b211_owner_secret",
+        "tender-fusion-full-bdbc3464b211_private_config",
+        "tender-fusion-full-bdbc3464b211_profile_api",
+        "tender-fusion-full-bdbc3464b211_profile_controller",
+        "tender-fusion-full-bdbc3464b211_profile_reconcile",
+        "tender-fusion-full-bdbc3464b211_profile_relay",
+        "tender-fusion-full-bdbc3464b211_profile_worker",
+        "tender-fusion-full-bdbc3464b211_store_secret",
+        "tender-fusion-full-bdbc3464b211_validation_login"
+      ]
+    },
+    "closed": false
+  },
+  "started_resources": true,
+  "project": "tender-fusion-full-bdbc3464b211",
+  "instance_id": "bdbc3464b2114aa7a2c22a81a30006cc",
+  "origin": "http://127.0.0.1:65441",
+  "initial_project_resources_empty": true,
+  "outcome": "failed",
+  "error_code": "PUBLIC_RESOURCE_INSPECTION_FAILED"
+}

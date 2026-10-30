@@ -4,7 +4,7 @@
 
 团队运行反馈见[团队运行故障排查](05-技术与设计/团队运行故障排查.md)：先区分历史 backend 与当前 workbench 的配置和启动入口；不要提交环境变量秘密或把离线兼容测试当云端验收。
 
-当前实现入口：[需求与实现追溯](02-业务与产品/实现追溯矩阵.md)、[实现架构](05-技术与设计/工作台实现架构.md)、[运行与验收](05-技术与设计/工作台运行与验收.md)。应用dev当前检查点`4108b686c9c5174b6e14ae8f29cfc89c665dd752`已提交推送Web构建材料；Word v2检查点`2a64dfe`的[CI41100590565](https://github.com/zys743551828-art/tender-app/actions/runs/41100590565)已11/11成功；当前4108对应[CI41103933851](https://github.com/zys743551828-art/tender-app/actions/runs/41103933851)正在跟踪，终态未确认，不标为已绿。更早2db的CI41092556442已11/11成功，不与d0fb的CI41071558768混配。fusion/main保留原状，历史测试数字各按原SHA/环境读取。
+当前实现入口：[需求与实现追溯](02-业务与产品/实现追溯矩阵.md)、[实现架构](05-技术与设计/工作台实现架构.md)、[运行与验收](05-技术与设计/工作台运行与验收.md)。应用dev当前检查点`35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8`已提交推送PDF原页兼容及Desktop验证样本依赖修复；Word v2检查点`2a64dfe`的[CI41100590565](https://github.com/zys743551828-art/tender-app/actions/runs/41100590565)已11/11成功；前一构建4108对应[CI41103933851](https://github.com/zys743551828-art/tender-app/actions/runs/41103933851)已11/11成功，终态元数据已归档。更早2db的CI41092556442已11/11成功，不与d0fb的CI41071558768混配。fusion/main保留原状，历史测试数字各按原SHA/环境读取。 188对应[CI41109541224](https://github.com/zys743551828-art/tender-app/actions/runs/41109541224)已11/11成功；当前35b9的[CI41113128132](https://github.com/zys743551828-art/tender-app/actions/runs/41113128132)已11/11成功，终态元数据随Desktop证据归档。
 
 测试成功链与正式资格严格分离，见[测试专用预测认证协议](05-技术与设计/测试专用预测认证协议.md)。测试协议检查点283e334的CI九项成功、本地4671通过/2436跳过、原生11通过、前端1980通过均属历史工程结果；真实模型质量、旧Word03固定基线重放及完整用户/生产签收分别保留边界。
 
@@ -153,3 +153,6 @@ fusion与独立render来源已经整合到dev，原分支及历史证据保留�
 报价阶段确认修复、本机真实浏览器12项及前端1991项通过见[本机浏览器组合验证](04-验证与测试/本机浏览器组合验证.md)；同提交[CI41044426836](https://github.com/zys743551828-art/tender-app/actions/runs/41044426836)已11项全部成功。
 
 当前交付镜像边界：标准Web配方补齐源import闭包11个.ts后，生产dist build已14秒成功；官方nginx六容器补验现已通过，同源上传、转换/采用、partial刷新及桌面/390px下载留证，见[生产产物浏览器验证](04-验证与测试/fusion/word-prebuilt-20261030/production-dist-browser/README.md)；此前两轮工具检查失败均已回收且未进入业务流程。相关目录总24跟踪文件并非全部构建输入，精确清理边界见[运行依赖范围](05-技术与设计/工作台运行与验收.md#依赖固定的当前范围与剩余项)。[v2机制回归](04-验证与测试/fusion/word-prebuilt-20261030/conversion-v2-runtime/README.md)保存103/54项报告；51项prebuilt只有工具回执，没有补造JUnit。
+
+
+[当前Desktop真实启动证据](04-验证与测试/fusion/desktop-current-20261031/README.md)记录35b9的prepare/up/verify/stop全部通过：非owner/UID65532、同源真实上传、会话与票据隔离、Kafka Worker两页解析、下载字节匹配和0模型调用。原语义保留partial/current_body_changed=false；不是Word或业务正式资格。前两轮失败分别记录为观察脚本缺可选Health字段、验证脚本误依赖ReportLab，未覆盖写成通过。三轮47容器/6网络/42新测试卷全部精确回收；临时worktree和root新增mypy缓存已清理，原工作区/私有配置/旧dist/原有卷/镜像保留。常规full/1与Word v2专项拓扑保持边界，下一步full/2仍是工程接线。

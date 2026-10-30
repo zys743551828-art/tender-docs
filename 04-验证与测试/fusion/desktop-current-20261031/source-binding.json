@@ -1,0 +1,126 @@
+{
+  "source_commit": "35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8",
+  "plan_digest": "9265402ec5bd1e5a055e1a76046667232ba2dd7c618a60afa2dd42b3468b08ed",
+  "source_file_count": 943,
+  "canonical_source_manifest_sha256": "0f61e4f42c85c4173839e333b7cb848c71c339b8e0f23e31a0a56e6e9df92ce4",
+  "frontend_file_count": 399,
+  "canonical_frontend_manifest_sha256": "675c8c8a5475425446f2e29659015bb641a95a96b1e1d54530f64056d0a5d921",
+  "frontend_same_as188": true,
+  "source_change_vs188": [
+    "deploy/fusion_desktop_verify.py"
+  ],
+  "source_copies": [
+    {
+      "artifact": "sources/fusion_desktop_verify.py",
+      "sha256": "641e2fda0d176309a551245d4cdb4b58cf968b48fb27488597b3da527bb2f127",
+      "byte_copy": true
+    },
+    {
+      "artifact": "sources/test_fusion_desktop_verify.py",
+      "sha256": "de2d76c66732ab1de89069649753be3609a82f60bbe169adc9e06efbb6fe8fbc",
+      "byte_copy": true
+    }
+  ],
+  "fixture_regression_junit": {
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "command": "<host-python> -X utf8 -B -m pytest tests/test_fusion_desktop_verify.py --junitxml=<task>/evidence-local-20261030/desktop-fixture-regression.xml -q",
+    "cwd": "tender-app-dev/workbench",
+    "warning": "One existing PDFium get_text_range default-parameter warning"
+  },
+  "quality_receipts": {
+    "ruff": "passed (root tool receipt)",
+    "mypy": "passed --platform linux (root tool receipt)",
+    "bandit": "passed -ll (root tool receipt)",
+    "separate_quality_logs_available": false
+  },
+  "redaction_provenance": [
+    {
+      "artifact": "01-startup-observation-failure/dry-plan.json",
+      "original_sha256": "65cac8e38e31d8c2921d3d43d72a709cb9eb61f4a06d4584ffe5ec2b2f0bcb43",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "01-startup-observation-failure/acceptance-summary.json",
+      "original_sha256": "902d9eceafc31f1308c2651e57dc4d878b73b8c716a7fa24520c6532bfe9fc4d",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "01-startup-observation-failure/result.json",
+      "original_sha256": "136d038e6772342aad0d3ab86dee07eb306a1fce5e63d6b47cd18a004a6524a1",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "02-fixture-import-failure/dry-plan.json",
+      "original_sha256": "84aef6d0196ca82d2e9f55cb5008ab3838e72e88d75484225c183a89301ca2dd",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "02-fixture-import-failure/acceptance-summary.json",
+      "original_sha256": "4e18ab3ad6da4a042c95974abbb3c73bafab0ef8c211fe15b8ff82fc0a40072d",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "02-fixture-import-failure/result.json",
+      "original_sha256": "6fe9f3fa9d2d0e4bcecc8c084a47c130f6c4fc6f9c790971ca6a0fe478b34c05",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/dry-plan.json",
+      "original_sha256": "a90acddc7f4978c824cddd1ef754e7e6acedaacda04f53fdb373f7de9efad8aa",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/acceptance-summary.json",
+      "original_sha256": "11618e538b8d6721f0371e0be65c26e703d01ed11bb3c19e6084e12eaa6b2dfd",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/result.json",
+      "original_sha256": "984791ccc067a66c7649deda163f19eeace9b8345d2bbdd361fbd77d08cefe96",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "01-startup-observation-failure/result-initial-observation-failed.json",
+      "original_sha256": "136d038e6772342aad0d3ab86dee07eb306a1fce5e63d6b47cd18a004a6524a1",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "01-startup-observation-failure/cleanup-recovery.json",
+      "original_sha256": "4ae23b8978bdbdd188177ab279ce5bfa4036f007f344f5275a87d2f8cad15873",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/fixture-preflight.json",
+      "original_sha256": "65e87f81e391241a71324d72d948947cd84a6a7f560bd555b6fcd07edffa467c",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/source-change-vs188.json",
+      "original_sha256": "03b68bce5b71f9bfe58872ca0a64c9cc598d2bf8da155c9ba1afa3c096eb46bc",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "03-current-pass/optional-health-regression.json",
+      "original_sha256": "e859b73156d8ab33c84a6458ebf8bcaa78a54ecbc9b6605b7eca109895ec1a8f",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "fixture-regression/cache-cleanup.json",
+      "original_sha256": "6371ecd62aca2867427444fc8179532c2c0f2cbb56f5ce4af276c1da105e250f",
+      "transform": "JSON reserialization; only local absolute path/hostname redaction, execution values unchanged"
+    },
+    {
+      "artifact": "fixture-regression/fixture-regression.redacted.xml",
+      "original_sha256": "fca99cfd63d35887ab36c31f84cb9f9fbf98b772eba557f854901aa66498b3d1",
+      "transform": "Only testsuite.hostname redacted; XML serialized; original task JUnit retained unchanged"
+    }
+  ],
+  "execution_wrapper": {
+    "artifact": "sources/run_desktop_accept35_verify.py",
+    "sha256": "a8fbb8c46db70c806201133613617b833cd2d1958b88c77d15cb76b24bb34a15",
+    "byte_copy": true
+  }
+}
