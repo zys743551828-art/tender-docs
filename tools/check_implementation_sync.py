@@ -26,7 +26,9 @@ def fingerprint(root, path):
 
 def check(root, docs, manifest):
     rows = manifest["requirements"]
-    if {r["id"] for r in rows} != {f"FR-{n:03}" for n in range(1, 41)} or len(rows) != 40:
+    if {r["id"] for r in rows} != {f"FR-{n:03}" for n in range(1, 41)} or len(
+        rows
+    ) != 40:
         raise ValueError("Expected unique FR001–040 mapping")
     supporting = manifest.get("supporting_checks", [])
     if len({r["id"] for r in supporting}) != len(supporting) or any(
@@ -53,7 +55,9 @@ if __name__ == "__main__":
     parser.add_argument("--app", type=Path, required=True)
     args = parser.parse_args()
     docs = Path(__file__).resolve().parents[1]
-    manifest = json.loads((docs / "05-技术与设计/implementation-trace.json").read_text())
+    manifest = json.loads(
+        (docs / "05-技术与设计/implementation-trace.json").read_text()
+    )
     check(args.app.resolve(), docs, manifest)
     print(
         f"PASS: 40 requirement mappings + {len(manifest.get('supporting_checks', []))} supporting checks, tracked fingerprints and document anchors"

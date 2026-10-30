@@ -46,7 +46,8 @@ class SyncTests(unittest.TestCase):
             for field in ("code", "test"):
                 expected["workbench/" + row[field]] = row[field + "_sha256"]
         with patch(
-            "check_implementation_sync.fingerprint", side_effect=lambda root, path: expected[path]
+            "check_implementation_sync.fingerprint",
+            side_effect=lambda root, path: expected[path],
         ):
             with self.assertRaisesRegex(ValueError, "inside"):
                 check(Path("."), self.docs, manifest)
