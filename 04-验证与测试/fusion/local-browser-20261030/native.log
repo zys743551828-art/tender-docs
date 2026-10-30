@@ -1,0 +1,20 @@
+............                                                             [100%]
+=============================== warnings summary ===============================
+../../usr/local/lib/python3.12/site-packages/starlette/testclient.py:37
+  /usr/local/lib/python3.12/site-packages/starlette/testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_package_pricing_native_s3.py: 10 warnings
+  /usr/local/lib/python3.12/site-packages/botocore/auth.py:422: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    datetime_now = datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------- generated xml file: /evidence/results/junit.xml ----------------
+12 passed, 11 warnings in 82.54s (0:01:22)
+## Backend pricing
+
+| Passed | Failed | Errors | Skipped |
+| ---: | ---: | ---: | ---: |
+| 12 | 0 | 0 | 0 |
+
+Skipped tests are unverified coverage, not successful acceptance. See summary.json for the exact skip reasons.

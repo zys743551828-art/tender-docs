@@ -1,5 +1,5 @@
 {
-  "code_revision": "b21cb8c6c7637ad5fcdec8e8c7169b89c9de6f41",
+  "code_revision": "b1c56192444a81e544f8cdf590dfebd81b4932ab",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -424,7 +424,7 @@
       "test": "tests/test_package_pricing_native_s3.py",
       "document": "04-验证与测试/工作台四组原生组合验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "6fbdb8c9948e8e26fcaf774ddc6ad9cb32fa0fdfc80fc93c4d373e62c524eaa3",
+      "code_sha256": "f6d406b462249b0da5a7e21582e5b6db77fe8abbab04e25562f5e63ea3cdc29e",
       "test_sha256": "d6c486824bee29b4957f541030e35e4e52de2210c9bab3eafc487f1bc8e20ce7"
     },
     {
@@ -498,6 +498,15 @@
       "acceptance": "not_accepted",
       "code_sha256": "f0b06b697024a45353a862d845838e4898092e5931bfbeb76ed5ccc9bdc9e9de",
       "test_sha256": "b22d6c3b0d49549bc79010dfb349756ec7437c474fe7d3f5155c1c44e22ca14e"
+    },
+    {
+      "id": "TEST-PRICE-SCOPE-REFRESH",
+      "code": "apps/web/src/PackagePricingScope.tsx",
+      "test": "apps/web/src/PackagePricingScope.test.tsx",
+      "document": "04-验证与测试/本机浏览器组合验证.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "cea465fca10101586c9f828affa26248bfa5e3d5ea6e483365ca42c9151ce530",
+      "test_sha256": "921f235a97f893876f5dcb5edf82b5cbf7eb3cc355f866b9bda03bcd07b494c1"
     }
   ]
 }

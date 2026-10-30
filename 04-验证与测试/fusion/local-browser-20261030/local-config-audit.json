@@ -1,0 +1,210 @@
+{
+  "scope": "offline redacted read-only audit; no service/API/network/model calls; no private values persisted",
+  "files": [
+    {
+      "path": "D:\\workspace\\tender\\.env",
+      "exists": true,
+      "keys": [
+        "BIDWB_LLM_API_KEY",
+        "BIDWB_LLM_BASE_URL",
+        "BIDWB_LLM_MODEL",
+        "BIDWB_STORAGE_ACCESS_KEY_ID",
+        "BIDWB_STORAGE_ADDRESSING_STYLE",
+        "BIDWB_STORAGE_BUCKET",
+        "BIDWB_STORAGE_ENDPOINT_URL",
+        "BIDWB_STORAGE_PUBLIC_ENDPOINT_URL",
+        "BIDWB_STORAGE_REGION",
+        "BIDWB_STORAGE_SECRET_ACCESS_KEY",
+        "BIDWB_STORAGE_SIGNATURE_VERSION",
+        "DEEPSEEK_API_KEY",
+        "DEEPSEEK_BASE_URL",
+        "OSS_ACCESS_KEY_ID",
+        "OSS_ACCESS_KEY_SECRET",
+        "OSS_BUCKET",
+        "OSS_REGION",
+        "OSS_URL"
+      ],
+      "configuration_families": [
+        "legacy-direct",
+        "legacy-compose"
+      ],
+      "assignment_structure_valid": true,
+      "duplicate_keys_present": false,
+      "role_dsn_key_present": {
+        "API_DATABASE_DSN": false,
+        "WORKER_DATABASE_DSN": false,
+        "RESEARCH_WORKER_DATABASE_DSN": false,
+        "SCORE_READ_DATABASE_DSN": false,
+        "MODEL_DATABASE_DSN": false,
+        "BIDWB_DATABASE_URL": false,
+        "BIDWB_WORKER_DATABASE_URL": false,
+        "BIDWB_RUNTIME_DATABASE_URL": false
+      },
+      "legacy_keys_rejected_by_workbench": true,
+      "endpoints": {
+        "OSS_URL": {
+          "key_present": true,
+          "nonempty": true,
+          "https_scheme": false,
+          "has_hostname": true,
+          "bucket_prefixed_hostname": true,
+          "internal_hostname_shape": false,
+          "public_endpoint_role": false,
+          "internal_address_in_public_key": false
+        },
+        "BIDWB_STORAGE_ENDPOINT_URL": {
+          "key_present": true,
+          "nonempty": true,
+          "https_scheme": true,
+          "has_hostname": true,
+          "bucket_prefixed_hostname": false,
+          "internal_hostname_shape": false,
+          "public_endpoint_role": false,
+          "internal_address_in_public_key": false
+        },
+        "BIDWB_STORAGE_PUBLIC_ENDPOINT_URL": {
+          "key_present": true,
+          "nonempty": true,
+          "https_scheme": true,
+          "has_hostname": true,
+          "bucket_prefixed_hostname": false,
+          "internal_hostname_shape": false,
+          "public_endpoint_role": true,
+          "internal_address_in_public_key": false
+        }
+      },
+      "public_endpoint_key_present": true,
+      "internal_or_service_endpoint_key_present": true
+    },
+    {
+      "path": "D:\\workspace\\tender\\tender-app\\deploy\\.env",
+      "exists": true,
+      "keys": [
+        "ADMIN_DISPLAY_NAME",
+        "ADMIN_LOGIN",
+        "APP_IMAGE",
+        "APP_VERSION",
+        "AUTO_ANALYSIS",
+        "BACKUP_DIR",
+        "BACKUP_KEEP_DAILY",
+        "BACKUP_KEEP_MONTHLY",
+        "BACKUP_OSS_MANIFEST_CMD",
+        "KAFKA_CLUSTER_ID",
+        "KAFKA_IMAGE",
+        "KAFKA_TOPIC_PREFIX",
+        "LLM_BASE_URL",
+        "LLM_MODEL",
+        "LOG_LEVEL",
+        "MILVUS_IMAGE",
+        "MINIO_IMAGE",
+        "MLFLOW_ARTIFACT_URI",
+        "MLFLOW_IMAGE",
+        "MLFLOW_UI_PORT",
+        "MLFLOW_VERSION",
+        "NGINX_IMAGE",
+        "NODE_IMAGE",
+        "NPM_REGISTRY",
+        "OSS_ADDRESSING_STYLE",
+        "OSS_BUCKET",
+        "OSS_ENDPOINT_URL",
+        "OSS_PUBLIC_ENDPOINT_URL",
+        "OSS_REGION",
+        "OSS_SIGNATURE_VERSION",
+        "PIP_INDEX_URL",
+        "POSTGRES_IMAGE",
+        "PREDICTION_ANCHORS",
+        "PREDICTION_ANCHOR_TAU",
+        "PREDICTION_REPEATS",
+        "PUBLIC_BASE_URL",
+        "PYTHON_IMAGE",
+        "RETRIEVAL_BACKEND",
+        "WEB_API_RATE",
+        "WEB_BIND_ADDR",
+        "WEB_CLIENT_MAX_BODY_SIZE",
+        "WEB_HTTPS_PORT",
+        "WEB_HTTP_PORT",
+        "WEB_IMAGE",
+        "WEB_LOGIN_RATE",
+        "WEB_PUBLIC_HOST",
+        "WEB_SERVER_NAME",
+        "WEB_SET_REAL_IP_FROM",
+        "WORD_IMAGE",
+        "WORD_RENDERER_FINGERPRINT"
+      ],
+      "configuration_families": [
+        "legacy-compose"
+      ],
+      "assignment_structure_valid": true,
+      "duplicate_keys_present": false,
+      "role_dsn_key_present": {
+        "API_DATABASE_DSN": false,
+        "WORKER_DATABASE_DSN": false,
+        "RESEARCH_WORKER_DATABASE_DSN": false,
+        "SCORE_READ_DATABASE_DSN": false,
+        "MODEL_DATABASE_DSN": false,
+        "BIDWB_DATABASE_URL": false,
+        "BIDWB_WORKER_DATABASE_URL": false,
+        "BIDWB_RUNTIME_DATABASE_URL": false
+      },
+      "legacy_keys_rejected_by_workbench": true,
+      "endpoints": {
+        "OSS_ENDPOINT_URL": {
+          "key_present": true,
+          "nonempty": true,
+          "https_scheme": true,
+          "has_hostname": true,
+          "bucket_prefixed_hostname": false,
+          "internal_hostname_shape": false,
+          "public_endpoint_role": false,
+          "internal_address_in_public_key": false
+        },
+        "OSS_PUBLIC_ENDPOINT_URL": {
+          "key_present": true,
+          "nonempty": true,
+          "https_scheme": true,
+          "has_hostname": true,
+          "bucket_prefixed_hostname": false,
+          "internal_hostname_shape": false,
+          "public_endpoint_role": true,
+          "internal_address_in_public_key": false
+        }
+      },
+      "public_endpoint_key_present": true,
+      "internal_or_service_endpoint_key_present": true
+    },
+    {
+      "path": "D:\\workspace\\tender\\tender-app\\workbench\\.env",
+      "exists": false
+    }
+  ],
+  "source_loading": {
+    "legacy_settings_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\tender-app-dev\\backend\\src\\bidwb\\config.py",
+    "legacy_prefix": "BIDWB_",
+    "legacy_settings_auto_dotenv": false,
+    "legacy_secret_file_expansion_supported": true,
+    "workbench_configuration_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\tender-app-dev\\workbench\\packages\\platform_runtime\\configuration.py",
+    "development_dotenv_uses_setdefault": true,
+    "WORKBENCH_ENV_FILE_disables_default_dotenv_read": true,
+    "run_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\tender-app-dev\\workbench\\deploy\\run.py",
+    "run_default_env_is_workbench_dotenv": true,
+    "explicit_file_overrides_inherited_environment": true,
+    "run_role_filters_other_role_dsns": true,
+    "run_role_requires_explicit_role_dsn": true,
+    "configuration_check_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\tender-app-dev\\workbench\\deploy\\configuration_check.py",
+    "posix_mode_guard_present": true,
+    "posix_mode_guard_bypassed": false,
+    "checker_executed": false,
+    "storage_path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\tender-app-dev\\workbench\\packages\\domain\\storage.py",
+    "storage_reads_OBJECT_STORE_family": true,
+    "oss_provider_validates_pinned_expected_configuration": true
+  },
+  "historical_inventory": {
+    "path": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\evidence-local-20261030\\inventory.json",
+    "container_records_present": true,
+    "compose_label_fields_present": true,
+    "Config_Env_present": false
+  },
+  "actual_current_startup_entry_determined": false,
+  "service_availability_determined": false,
+  "runtime_environment_precedence_determined": false
+}
