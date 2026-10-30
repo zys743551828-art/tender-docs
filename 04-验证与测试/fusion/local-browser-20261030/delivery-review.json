@@ -1,6 +1,6 @@
 {
   "hostname": "zhangyansong",
-  "application_revision": "d2b5e3e221554dc90fce3717adaeca7f1b91817e",
+  "application_revision": "c0b659378cfc7884bc3d58fd7c324bace0bea1e5",
   "scope": "read-only delivery path review; no application services started",
   "compose_config": "passed",
   "preview_images_present": [
@@ -13,7 +13,7 @@
   "new_resources": 0,
   "blockers": [
     "trusted image provisioning on a new machine is not automated",
-    "full runtime has no human credential handoff CLI",
+    "Windows Docker Desktop named-volume full runtime has no human credential handoff CLI; Linux full runtime accepts operator private password file",
     "fresh current-dev preview human acceptance not executed; existing volumes preserved"
   ],
   "existing_document_targets_checked": 18

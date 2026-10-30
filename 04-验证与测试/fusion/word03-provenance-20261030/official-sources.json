@@ -1,0 +1,49 @@
+{
+  "checked_utc": "2026-10-30T11:55:01.127597+00:00",
+  "scope": "official documentation only; no image pull or build",
+  "sources": [
+    {
+      "url": "https://docs.docker.com/reference/cli/docker/image/pull/",
+      "status": 200,
+      "bytes_read": 476935,
+      "expected_terms_observed": [
+        "digest",
+        "configuration",
+        "MPL",
+        "Font"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md",
+      "status": 200,
+      "bytes_read": 15582,
+      "expected_terms_observed": [
+        "digest",
+        "configuration",
+        "MPL",
+        "SIL"
+      ]
+    },
+    {
+      "url": "https://www.libreoffice.org/about-us/licenses/",
+      "status": 200,
+      "bytes_read": 27267,
+      "expected_terms_observed": [
+        "MPL",
+        "Mozilla",
+        "License"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/LICENSE",
+      "status": 200,
+      "bytes_read": 4301,
+      "expected_terms_observed": [
+        "MPL",
+        "SIL",
+        "Font",
+        "License"
+      ]
+    }
+  ]
+}
