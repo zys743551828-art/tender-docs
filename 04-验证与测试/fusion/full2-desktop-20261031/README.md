@@ -33,3 +33,38 @@ TEST-DESKTOP-WORD-BOOTSTRAP 对应角色隔离、明确模型声明与私密 std
 本轮实例已精确回收：16 个容器、2 个网络、14 个测试卷；登记的 16 个宿主进程身份全部退出，固定镜像保留。详见[普通安装与生命周期记录](installation-lifecycle/scope-result-summary.json)和[真实 Word 浏览器/API 验证](normal-word-browser/README.md)。早期失败保留其原结论；历史一次 S3 ClientError 在最终矩阵中未复现，不能倒推其原因为何。
 
 已移除 774 个重复历史前端源码和 2 个可重建缓存，保留当前 24 个规范输入（其中 11 个 TS 模块参与构建）与必要验收记录；源历史可从固定 Git 提交恢复。未删除用户未跟踪数据、原工作区、私有配置、镜像或业务卷。应用 CI 11/11 全部成功，见[终态回执](ci/summary.json)；文档版本以本仓 `git rev-parse HEAD` 为准。
+
+
+## 当前技术正文范围候选（587151c；同SHA实测待验）
+
+当前已推送候选为 [`587151cced8f0501303c5b27abc06ccbbb55e5a3`](https://github.com/zys743551828-art/tender-app/commit/587151cced8f0501303c5b27abc06ccbbb55e5a3)。本节是后续工程补充，上述6446等历史结果、失败和未签收边界不改写。按用户2026-10-31最新范围，本方商务／报价／资质附件接入取消本轮交付；继续技术正文需求完整性、原页证据、精确冻结与判断。**根当前587151c栈的完整同SHA安装与业务实测仍在执行，尚不能宣称通过或整体完成**；不把C791 API、后续前端预览与5516 CI拼合成此次验收。
+
+### 正常安装缺口与定向回归
+
+| 实际缺口 | 最小修复及已取得证据 | 尚未证明 |
+|---|---|---|
+| configure helper缺 `requirements-parsing.lock.txt` 只读源挂载，严格来源读取报FileNotFoundError | 补齐正式helper／Compose等既有RO源清单，来源完整性要求不变；task `parser-source-mount-fix-20261031/host-02.xml` 为67通过，静态全0 | 不是完整安装通过；原始配置失败与收尾保留 |
+| Word installation使用旧严格键集，漏接可选parser与base plan一致绑定 | `deploy/fusion_word_spec.py` 接可选parser并严格对齐request/base plan，未知键仍拒绝；task `parser-word-installation-fix-20261031/host-02.xml` 为93通过，1项Linux inode/owner用例在Windows跳过，静态全0 | 平台跳过不计通过；新整栈发布仍待实测 |
+| Word host拒绝Desktop peer新增的精确RO解析锁目标 | 仅将 `/workspace/requirements-parsing.lock.txt` 纳入既有精确只读源码目标，其它peer约束不变；task `parser-word-peer-mount-fix-20261031/host.xml` 为114通过，10项实际Linux UID65532 helper用例在Windows跳过，静态全0 | 不放开任意宿主路径、可写bind或docker.sock；投影单测不证明实际host转换通过 |
+| 正常verify仍把所有解析固定要求为旧通道partial | 按实际配置严格校验冻结context、来源与parser/config身份；新通道的两页纯文字fixture须complete且gaps为空，旧通道保留固定partial及原gap；`desktop-parser-qualification-fix-20261031/host-02.xml` 为30通过、0跳过，静态全0 | 不接受complete/partial任意一种凑通过；当前候选实际verify及业务仍待回执 |
+
+历史候选 `e509e81` 的 `207a568821eb4409ab7af26ebdaf0ff4` 轮次已实际正常up，两个Word peer ready；verify因上述旧资格断言失败。随后正常stop返回Word stopped及cleanup_closed，精确回收17容器、3网络、15合成卷，剩余0。它只证明该版本启动与正常停止机制，不能替代当前候选完整业务、重装或视觉验收。此前长路径失败及peer拒绝轮次仍保留失败结论；独立精确恢复成功不回填为正常停机通过。
+
+分轮测试scope不相加，也不能替代完整同SHA实测。最初basetemp父目录／explicit环境缺失导致的runner错误保留原记录，不算产品断言通过。Windows验收深路径 `WinError 206` 已用短验收目录与task导出处理，未改系统长路径策略；新clone与实例路径也建议保持简短。
+
+<a id="TEST-PARSER-NORMAL"></a>
+### TEST-PARSER-NORMAL
+
+对应 `deploy/fusion_parsing_spec.py`、`packages/domain/parsing_profile.py`、`packages/parsing/`、`apps/worker/handlers.py` 与 `tests/test_fusion_parser_feature.py` 等。默认 `document/1` 固定partial；显式 `prepare --word --parser --parser-image <真实repository@sha256>` 才接私有parser及新 `document/2`，绑定parser/config和源字节，历史解析不重写。parser存在不等于OCR/表格或判断complete。配方及本机镜像分发边界见[使用说明](../../../使用说明.md#41-可选私有解析服务document2)。当前正常上传→document/2→冻结证据的完整链仍待587151c实测回执。
+
+<a id="TEST-MODEL-ADMISSION"></a>
+### TEST-MODEL-ADMISSION
+
+对应 `deploy/fusion_desktop_model_admission.py`、`deploy/fusion_desktop.py` 与 `tests/test_fusion_desktop_model_admission.py`。首次模型 `up --model-admission-file` 读取公开官方价格／正数全局预算及相对来源快照，不是API密钥；专用非owner预算profile绑定数据库与模型，保留事务/用途/有效期检查。缺失、冲突、过期、模型不匹配拒绝启动paid角色，不用owner插表或默认价格绕过；该准入步骤provider_calls=0。旧手动预算证据和新正常安装机制分开，当前587151c首次启动实际结果待验。
+
+<a id="TEST-WORD-STATIC-CORRESPONDENCE"></a>
+### TEST-WORD-STATIC-CORRESPONDENCE
+
+对应 `packages/word_intake/static_layout.py`、`packages/word_intake/prebuilt.py` 与 `tests/test_word_static_layout.py`。证明仅限单显式section、静态stories、固定表格与内联不透明PNG；源准入、字体、文字可见位置、表格栅格/单元格、像素、顺序与分页等原要求不降，未知结构保留gap/partial。
+
+task `word-static-correction-20261031/complete-unit.xml` 与 `frozen-unit.xml` 均为198通过的同类定向回执，**不相加**。七份既有SYNTHETIC PDF只做新检查器重检，源DOCX/PDF绑定及检查结果可核，但未重新调用转换器；不等于七份新转换通过、复杂Word已采用或真实标书质量通过。必须用当前587151c profile重新真实转换、经Worker/API发布并核对采用资格后另记结果。PAGE仍仅 `one_canonical_footer_PAGE_only`，两项目录/实测页范围UNKNOWN和普通RICH `navigation_only`不升级。详见[Word核查](../../Word03来源与复现核查.md)。

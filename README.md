@@ -4,9 +4,9 @@
 
 安装与操作统一见[工作台使用说明](使用说明.md)，包括固定提交、依赖与镜像、初始化、Word、模型配置、业务操作、停止和恢复边界。
 
-当前应用源码检查点为 [`5516ec2fd4f8b6cfebd98de5a384ca875a797a88`](https://github.com/zys743551828-art/tender-app/commit/5516ec2fd4f8b6cfebd98de5a384ca875a797a88)。[合成全流程与真实服务验收](04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md)记录逐项版本、通过／失败、用量、视觉与清理结果；首次完整安装和后续定向验证的范围分别保留。 当前 [CI41196580387](https://github.com/zys743551828-art/tender-app/actions/runs/41196580387) 已11/11全部成功。源码／测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`，均不是需求签收证明。
+当前应用候选源码检查点为 [`587151cced8f0501303c5b27abc06ccbbb55e5a3`](https://github.com/zys743551828-art/tender-app/commit/587151cced8f0501303c5b27abc06ccbbb55e5a3)，[本提交CI](https://github.com/zys743551828-art/tender-app/actions/runs/41208593659)及同SHA全栈验收正在执行。[合成全流程与真实服务验收](04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md)记录逐项版本、通过／失败、用量、视觉与清理结果；首次完整安装和后续定向验证的范围分别保留。历史5516的 [CI41196580387](https://github.com/zys743551828-art/tender-app/actions/runs/41196580387) 已11/11成功，不代表当前候选已整体验收。源码／测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`，均不是需求签收证明。
 
-本轮[Desktop full/2 工程验收](04-验证与测试/fusion/full2-desktop-20261031/README.md)已完成普通安装、真实 Word/PAGE/RICH 路径、桌面与窄屏预览下载及既定生命周期矩阵。使用官方 Gotenberg 预构建镜像；旧 Word03 [来源记录](04-验证与测试/Word03来源与复现核查.md)保留原身份，新版本独立验收。PAGE 的目录/章节页范围未知提示继续保留，RICH 仅在已核模式与样本范围内成立。
+[Desktop full/2 工程验收](04-验证与测试/fusion/full2-desktop-20261031/README.md)保留既有普通安装、真实Word/PAGE/RICH路径、桌面与窄屏预览下载及生命周期证据的原提交范围。当前候选新增解析服务、正常模型准入及静态对应机制，不能拼接旧证据宣称同SHA完整通过。使用官方Gotenberg预构建镜像；旧Word03 [来源记录](04-验证与测试/Word03来源与复现核查.md)保留原身份，新版本独立验收。PAGE的目录/章节页范围未知提示继续保留，RICH仅在已核模式与样本范围内成立。本方商务、报价、资质附件接入已按用户最新决定取消本轮交付，技术正文范围继续验证。
 
 正式架构见[工作台实现架构](05-技术与设计/工作台实现架构.md)，启动边界见[运行与验收](05-技术与设计/工作台运行与验收.md)，历史 backend 与当前 workbench 的配置区分见[团队排障](05-技术与设计/团队运行故障排查.md)。[FR006原生联合证据](04-验证与测试/报价历史原生验收.md)及其他历史测试数继续按原提交/环境解读。
 
