@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites name="vitest tests" tests="36" failures="0" errors="0" time="3.630165372">
+    <testsuite name="src/A1Workspace.test.tsx" timestamp="2026-10-31T10:23:40.281Z" hostname="1748bc5ae901" tests="9" failures="0" errors="0" skipped="0" time="0.363015151">
+        <testcase classname="src/A1Workspace.test.tsx" name="来源、提取、判断、评分与人工确认分层，10/10不会写成原文零遗漏" time="0.045475431">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="保留两项旧关键风险，不因本轮未检测或隐藏分数而消失" time="0.060504457">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="矩阵将检查失败与成功后的无法判断分开，不给失败项假满足" time="0.017405827">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="事实未知和布尔否不替换成0，空事实库不加首次评审前置" time="0.012823731">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="批量规则只提交明确勾选的pending项，不覆盖驳回和暂缓" time="0.100764093">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="单条决定对象已变化时保留输入并禁止旧解释配新ETag提交" time="0.05612106">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="显式历史轮次优先，不拿current指针替换所指review" time="0.040371343">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="读取刷新失败保留已知记录并显式标明未更新，不伪造空成功" time="0.016442908">
+        </testcase>
+        <testcase classname="src/A1Workspace.test.tsx" name="矩阵默认将否决和强制要求置前，不因原始返回顺序让一般评分项遮住核心失败" time="0.012336379">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/ProjectLifecyclePanel.test.tsx" timestamp="2026-10-31T10:23:40.284Z" hostname="1748bc5ae901" tests="6" failures="0" errors="0" skipped="0" time="0.379745931">
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="server actions only, cancel sends nothing, reason required, double submit records once" time="0.152416272">
+        </testcase>
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="412 retains reason, never rebases automatically, explicit refresh requires choosing again" time="0.08163362">
+        </testcase>
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="lost ACK survives remount with exact original request; another member cannot recover it" time="0.073961925">
+        </testcase>
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="archive blockers and submitted-only end follow authoritative capabilities" time="0.016611309">
+        </testcase>
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="late old project acknowledgement cannot update the new project" time="0.047206438">
+        </testcase>
+        <testcase classname="src/ProjectLifecyclePanel.test.tsx" name="foreign view and tampered stored target fail closed" time="0.007268271">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/SourceEffectivityPanel.test.tsx" timestamp="2026-10-31T10:23:40.285Z" hostname="1748bc5ae901" tests="16" failures="0" errors="0" skipped="0" time="2.699198385">
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="submits only selected old-source rules, all explicit ambiguity ACKs and literal new-source quote" time="0.313152631">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="requires every ambiguity and an exact source quote; cancel never sends" time="0.220404765">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="submits the original CRLF bytes after editing a multiline excerpt in a textarea" time="0.184003827">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="submits the original LF bytes after editing a multiline excerpt in a textarea" time="0.200515164">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="submits the original CR bytes after editing a multiline excerpt in a textarea" time="0.183179734">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="does not repair edited character while adapting CRLF evidence input" time="0.156698268">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="does not repair edited punctuation while adapting CRLF evidence input" time="0.149993841">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="does not repair inserted space while adapting CRLF evidence input" time="0.151147593">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="keeps an unresolvable mixed-line-ending edit invalid instead of inventing source text" time="0.152492338">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="unavailable resolution fails closed without exposing internal codes" time="0.007893636">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="missing new requirements blocks replacement and directs users to the existing addition entry" time="0.143645611">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="412 preserves edits and requires explicit reread/reselection, without rebasing or resend" time="0.187553645">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="lost ACK retries the same original request after remount, isolated from another member" time="0.176673724">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="project switch ignores a late acknowledgement and clears the visible edit scope" time="0.163008942">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="requires a surviving new-source rule after mixed-source rules are retired" time="0.139803494">
+        </testcase>
+        <testcase classname="src/SourceEffectivityPanel.test.tsx" name="tampered pending targets cannot be replayed" time="0.168204362">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/WordOriginals.test.tsx" timestamp="2026-10-31T10:23:40.287Z" hostname="1748bc5ae901" tests="5" failures="0" errors="0" skipped="0" time="0.188205905">
+        <testcase classname="src/WordOriginals.test.tsx" name="无转换结果显示可恢复说明，技术码留在折叠详情且不授予PDF或资格" time="0.078498022">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="处理成功但转换partial仍保留未完成与Word无资格，迟到历史不称当前采用" time="0.031303896">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="补PDF固定原Word、项目、用途和独立file，不把关系称已核验" time="0.024765297">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="重试用Word GET实tag，202只受理，原件和未完成提示不冒变成功" time="0.030729779">
+        </testcase>
+        <testcase classname="src/WordOriginals.test.tsx" name="安全拒绝说明可操作且真实码仅在详情中显示，不给PDF或授予资格" time="0.022148128">
+        </testcase>
+    </testsuite>
+</testsuites>

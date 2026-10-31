@@ -1,0 +1,28 @@
+{
+  "format": "tender-extended-offline-recovery/3",
+  "services": [
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    },
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    },
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    },
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    },
+    {
+      "s3_process_reaped_and_private_state_removed": true
+    }
+  ]
+}

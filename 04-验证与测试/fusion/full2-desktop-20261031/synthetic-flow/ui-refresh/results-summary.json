@@ -1,0 +1,28 @@
+{
+  "final_shared_target": {
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "test_files": 4,
+    "junit": "final-shared-junit.xml"
+  },
+  "final_full_frontend": {
+    "passed": 2011,
+    "failed": 0,
+    "errors": 0,
+    "test_files": 199,
+    "junit": "frontend-complete-junit.xml"
+  },
+  "early_runner": {
+    "tests_executed": 0,
+    "cause_from_execution_handoff": "Thread parameter/startup error; not business failure",
+    "junit": "frontend-all-junit.xml"
+  },
+  "earlier_microtask_full": {
+    "passed": 2010,
+    "failed": 1,
+    "file": "earlier-full-microtask-failure.json"
+  },
+  "scope": "Shared refresh completion and success-after-GET timing; target/full overlap, never sum 27 and 2011",
+  "paid_model_calls": 0
+}

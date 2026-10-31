@@ -1,0 +1,27 @@
+{
+  "reviewer": "Root Codex actual image inspection, reported to archive owner",
+  "inspected_files": [
+    "normal-report-final-ready-1440.png",
+    "normal-report-final-ready-390.png",
+    "conflict-original-page-two-1440.png",
+    "conflict-original-page-two-390.png",
+    "conflict-report-final-ready-390.png"
+  ],
+  "checks": {
+    "normal_report_card_inset_clear": true,
+    "chinese_table_picture_page_number_visible": true,
+    "no_obvious_overflow_in_inspected_viewports": true,
+    "conflict_historical_report_notice_clear": true
+  },
+  "normal_measured_card_insets_from_browser": {
+    "1440": {
+      "left": 25,
+      "right": 25
+    },
+    "390": {
+      "left": 17,
+      "right": 17
+    }
+  },
+  "scope": "Only named actual captured viewports; missing report pixels were not separately claimed inspected; not Word adoption, arbitrary-document quality or model semantic accuracy"
+}

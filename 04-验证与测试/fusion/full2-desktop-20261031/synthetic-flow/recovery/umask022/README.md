@@ -1,0 +1,17 @@
+# CI umask022 API recovery fixture correction
+
+CI 41188927492 / recovery job124501503889 failed only the API migration smoke at test457 -> bootstrap_fresh.py300 PRIVATE_DIRECTORY_PERMISSIONS. Existing recovery helpers create .local/backups with parents=True and mode0700, which leaves the intermediate .local at0755 under umask022. The previous local QA mounted .local explicitly0700, masking that condition. No bootstrap guard defect or full2 business failure is claimed.
+
+The task-level runner reuses existing immutable620 / Python3.12.16 / PDFium5.14 plus native readonly public source, PG17.11 and Seaweed4.48 donors, network=none, synthetic credentials/data and exact disposable ownership. It selects only test_current_api_post_activation_old_cookie_login_reads_and_once_only_write, explicitly sets process umask0022 and prepares its own tmpfs .local0755 to reproduce the observed CI intermediate directory. It does not alter any host/global CI setting or running full2 resources.
+
+- Red173619: unchanged test SHA6e3c17fa...4ba9, 0/1 passed, 1 failure, zero skips; exact PRIVATE_DIRECTORY_PERMISSIONS at bootstrap_fresh.py300/test457 reproduced. Original failure summary and sanitized JUnit retained.
+- Intermediate173755: zero pytest cases; known import-order preflight only. Its exact QA was stopped to let finally close all resources; no recovery business claim.
+- Green173855: 1/1 native API case passed, zero failures/errors/skips; Ruff check/format, runtime mypy/Bandit all exit0. Original six and remaining25 unchanged cases were not repeated.
+
+Only the owned test file changes: before any fixture credential write, explicitly create the two owned private directories with0700, use lstat to assert an ordinary directory owned by the current UID (thereby rejecting symlinks), tighten permissions with follow_symlinks=False, and assert0700. This also makes the single case independent of prior cases having created backups. Permanent assertions and public proof retain the real directory outcome; no production guard or global umask is changed.
+
+The complete original native API smoke still passes: distinct source/target PG clusters, strict original offline quarantine, minimal measured source ACL activation, other purposes closed, backup reader readonly, old cookie401, new login/bid/nonempty draft read, original download+transfer200 and bytes equal, CSRF denial, exactly-once idempotent write, source unchanged, fresh target DB/bucket removed, API/PG/S3 processes stopped and private state removed. Full-application and production recovery qualification remainfalse.
+
+The optional /proc observation arrived after pytest exited, so pytest_processes=[]; it only observes the private directory as ordinary/non-symlink UID65534 mode0700. It is not claimed as a live pytest umask measurement. Executed task source explicitly establishes0022 before launching pytest, and the unchanged red test fails at the expected production permission guard.
+
+final-review.json independently inspects all9 exact containers from the three rounds absent, remaining=[]. No new networks/volumes, image removal, host tool installation, model/service calls, credentials exported, Git writes or live-s5 source changes. Both green test and unchanged runtime are LF; green-source-freeze.json and exact source snapshots preserve execution bytes. Runtime SHA29d3d6b4bb0f6fa85f8b8b2b53ec35e96e475e8354ba1adcb9a856184331a541 remains unchanged; test SHAf780980f88ed23b0a5cc0d635deac3e2f7e28268571ddd892833021c915901c1.

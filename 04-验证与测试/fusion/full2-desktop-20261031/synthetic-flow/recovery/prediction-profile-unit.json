@@ -1,0 +1,33 @@
+{
+  "scope": "existing /4 prediction profile and /3 boundary unit tests only; not cross-cluster /4 data recovery",
+  "exit_code": 0,
+  "tests": 22,
+  "passed": 22,
+  "failed": 0,
+  "skipped": 0,
+  "cases": [
+    "test_prediction_profile_keeps_legacy_plan_and_installs_before_sealing",
+    "test_prediction_profile_rejects_changed_plan[missing]",
+    "test_prediction_profile_rejects_changed_plan[reorder]",
+    "test_prediction_profile_rejects_changed_plan[bytes]",
+    "test_private_ref_invalid_is_not_silently_omitted",
+    "test_private_object_requires_explicit_port_and_bounded_bytes",
+    "test_plan_preserves_old_plan_and_covers_authoring_and_full_material_chain_once",
+    "test_changed_frozen_plan_never_enters_restore[missing]",
+    "test_changed_frozen_plan_never_enters_restore[reordered]",
+    "test_changed_frozen_plan_never_enters_restore[extra]",
+    "test_changed_frozen_plan_never_enters_restore[bytes]",
+    "test_changed_frozen_plan_never_enters_restore[digest]",
+    "test_local_tool_rejects_remote_identity_injected_options_and_implicit_services[host=example.invalid port=5432 dbname=x user=y]",
+    "test_local_tool_rejects_remote_identity_injected_options_and_implicit_services[host=127.0.0.1 port=5432 dbname=x user=y options='-c search_path=evil']",
+    "test_local_tool_rejects_remote_identity_injected_options_and_implicit_services[host=127.0.0.1 port=1 dbname=x user=y]",
+    "test_local_tool_rejects_remote_identity_injected_options_and_implicit_services[host=127.0.0.1 port=5432 dbname=x user=y service=hidden]",
+    "test_rerun_clears_all_case_evidence_before_any_selected_service_starts",
+    "test_private_helper_acl_upgrade_keeps_old_archive_sql_bytes",
+    "test_archive_format_selects_exact_historical_or_current_sql[False-False]",
+    "test_archive_format_selects_exact_historical_or_current_sql[False-True]",
+    "test_archive_format_selects_exact_historical_or_current_sql[True-False]",
+    "test_archive_format_selects_exact_historical_or_current_sql[True-True]"
+  ],
+  "raw_junit_sha256": "e5edb6ee0db4e106fa94ede856c20f312483f35d290d4621cce10ebc23e26030"
+}

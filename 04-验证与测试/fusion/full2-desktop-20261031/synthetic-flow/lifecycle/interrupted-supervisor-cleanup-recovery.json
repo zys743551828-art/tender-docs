@@ -1,0 +1,259 @@
+{
+  "started_utc": "2026-10-31T11:13:45.914443+00:00",
+  "project": "tender-fusion-full-327c846b8e5e",
+  "instance_id": "327c846b8e5e41cba40742f674efd0f5",
+  "previous_outcome": "interrupted_unfinished",
+  "original_result_preserved": true,
+  "removed": [
+    {
+      "kind": "container",
+      "id": "106baffc415d24f9891704d9c304c9d0f2a09c4ccb7932eb624ba6429f2784bc",
+      "name": "/tender-fusion-full-327c846b8e5e-validation-1"
+    },
+    {
+      "kind": "container",
+      "id": "9b305ba23b0cea3a93684310716c432c8014346757df357719aaa0ba34af6200",
+      "name": "/tender-fusion-full-327c846b8e5e-web-1"
+    },
+    {
+      "kind": "container",
+      "id": "ce3697bba2640bfb809ccdac29f28fe231c0848e6e45a38830634deadbbaa842",
+      "name": "/tender-fusion-full-327c846b8e5e-reconcile-1"
+    },
+    {
+      "kind": "container",
+      "id": "f1690e51825d3950528596ee08ee0cd7c2adbdd60d46390b541d8be140856b4f",
+      "name": "/tender-fusion-full-327c846b8e5e-worker-assistant-1"
+    },
+    {
+      "kind": "container",
+      "id": "aac88d9ff0cd52cb61ca8f217b1b8a44ed6f42e4ce1a73398d3601fc8bcb9662",
+      "name": "/tender-fusion-full-327c846b8e5e-word-controller-1"
+    },
+    {
+      "kind": "container",
+      "id": "e0f715d44e29c79e6717c6e6e91565a968bfe4ab69815e40828bfe0bf2f3ac87",
+      "name": "/tender-fusion-full-327c846b8e5e-worker-document-1"
+    },
+    {
+      "kind": "container",
+      "id": "6d1ee8d3fb3e69b455a078c3a3a4b01cde64027dfca2b29349b1156659df3381",
+      "name": "/tender-fusion-full-327c846b8e5e-api-1"
+    },
+    {
+      "kind": "container",
+      "id": "adde2482d33e7719ffc362119f08f051da2b1bf8e63de04647e8979ae42007b1",
+      "name": "/tender-fusion-full-327c846b8e5e-relay-1"
+    },
+    {
+      "kind": "container",
+      "id": "f79ed22046e870f05b27e11614e6e7348cada63d55cc6af196c900e6298bfed5",
+      "name": "/tender-fusion-full-327c846b8e5e-worker-export-1"
+    },
+    {
+      "kind": "container",
+      "id": "73d7555093de4495e32b168e3bcc521e8bcc5a02cb85d055c2f5c6aeb3a879f5",
+      "name": "/tender-fusion-full-327c846b8e5e-worker-comparison-1"
+    },
+    {
+      "kind": "container",
+      "id": "ca1635f53567bf2f7161345452cc2df4c784b12a310049f16264622af55aec5f",
+      "name": "/tender-fusion-full-327c846b8e5e-assistant-controller-1"
+    },
+    {
+      "kind": "container",
+      "id": "6cd8ec0310c8f69d402de3980442ef9c7a2d8585a9704a1734210668d5787197",
+      "name": "/tender-fusion-full-327c846b8e5e-review-controller-1"
+    },
+    {
+      "kind": "container",
+      "id": "6b0c3b21dce0247a583853e5eb7f51c11231a7ec9780fad519b478c4ff3f4167",
+      "name": "/tender-fusion-full-327c846b8e5e-build-controller-1"
+    },
+    {
+      "kind": "container",
+      "id": "66b0fb7126896d58cd9789da6cdb0c17430a50c30fee9ae2a7a5974dd1625422",
+      "name": "/tender-fusion-full-327c846b8e5e-worker-review-1"
+    },
+    {
+      "kind": "container",
+      "id": "b08cc3be59b4cf0187ed68e2b5b433a845a79db1384ce9532da5f3c2abef9eab",
+      "name": "/tender-fusion-full-327c846b8e5e-publish-1"
+    },
+    {
+      "kind": "container",
+      "id": "363c7b2781b1d777c677926c845c575a2a7bf732b63fdda882060aa63c1cd8e2",
+      "name": "/tender-fusion-full-327c846b8e5e-init-1"
+    },
+    {
+      "kind": "container",
+      "id": "7691bc72bd6286c0ede3cffacf70ae058ffaf87c69b3229d954b1e4d092ed1d2",
+      "name": "/tender-fusion-full-327c846b8e5e-postgres-1"
+    },
+    {
+      "kind": "container",
+      "id": "0dde4281dc87dedf10a55b796285149d3f9e4e13cf03615d10b7b435c8392e92",
+      "name": "/tender-fusion-full-327c846b8e5e-kafka-1"
+    },
+    {
+      "kind": "container",
+      "id": "b937e0f93c504f927f7831ab5f009bfb7ebdeef98b291e8a008f271c21645e7c",
+      "name": "/tender-fusion-full-327c846b8e5e-object-store-1"
+    },
+    {
+      "kind": "container",
+      "id": "e7782ef11be1a7d062be04f57fe4d155e0cac3cf7c2baa2b3d030194f34aa3e8",
+      "name": "/tender-fusion-full-327c846b8e5e-configure-1"
+    },
+    {
+      "kind": "network",
+      "id": "af68d2885ca545ae07a50a7eddd891ebb49b5f42950d0e0c825e72fcb712c76e",
+      "name": "tender-fusion-full-327c846b8e5e_core"
+    },
+    {
+      "kind": "network",
+      "id": "913bb81ea9f47b7a093bf6a44216bc9f33b375e3bed5678c881822dd07ee122f",
+      "name": "tender-fusion-full-327c846b8e5e_model_egress"
+    },
+    {
+      "kind": "network",
+      "id": "871c26d45dfe24bd32340d2f7e83fde7634cebdb45c7b33a4ff45fa31ae0ed2d",
+      "name": "tender-fusion-full-327c846b8e5e_preview"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_api_state",
+      "name": "tender-fusion-full-327c846b8e5e_api_state"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_init_state",
+      "name": "tender-fusion-full-327c846b8e5e_init_state"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_kafka_data",
+      "name": "tender-fusion-full-327c846b8e5e_kafka_data"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_object_data",
+      "name": "tender-fusion-full-327c846b8e5e_object_data"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_owner_secret",
+      "name": "tender-fusion-full-327c846b8e5e_owner_secret"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_postgres_data",
+      "name": "tender-fusion-full-327c846b8e5e_postgres_data"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_private_config",
+      "name": "tender-fusion-full-327c846b8e5e_private_config"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_api",
+      "name": "tender-fusion-full-327c846b8e5e_profile_api"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_controller",
+      "name": "tender-fusion-full-327c846b8e5e_profile_controller"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_paid_controller",
+      "name": "tender-fusion-full-327c846b8e5e_profile_paid_controller"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_paid_worker",
+      "name": "tender-fusion-full-327c846b8e5e_profile_paid_worker"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_reconcile",
+      "name": "tender-fusion-full-327c846b8e5e_profile_reconcile"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_relay",
+      "name": "tender-fusion-full-327c846b8e5e_profile_relay"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_profile_worker",
+      "name": "tender-fusion-full-327c846b8e5e_profile_worker"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_store_secret",
+      "name": "tender-fusion-full-327c846b8e5e_store_secret"
+    },
+    {
+      "kind": "volume",
+      "id": "tender-fusion-full-327c846b8e5e_validation_login",
+      "name": "tender-fusion-full-327c846b8e5e_validation_login"
+    }
+  ],
+  "retained": [],
+  "cleanup_closed": true,
+  "normal_stop": {
+    "returncode": 0,
+    "codes": [],
+    "raw_logs_retained": false
+  },
+  "word": {
+    "state": "interrupted_processes_dead",
+    "graceful_shutdown_proven": false,
+    "original_metadata_state": "ready",
+    "missing_host_summaries": 2,
+    "conversion_receipt_files": 0,
+    "conversion_tasks_recorded": 0,
+    "conversion_resources_recovered": [],
+    "processes": [
+      {
+        "service": "worker-document",
+        "pid": 28296,
+        "saved_identity": "windows:134379139202248481",
+        "same_process_alive": false,
+        "pid_reused": false
+      },
+      {
+        "service": "worker-document",
+        "pid": 6604,
+        "saved_identity": "windows:134379139202045591",
+        "same_process_alive": false,
+        "pid_reused": false
+      },
+      {
+        "service": "worker-export",
+        "pid": 5128,
+        "saved_identity": "windows:134379139209052622",
+        "same_process_alive": false,
+        "pid_reused": false
+      },
+      {
+        "service": "worker-export",
+        "pid": 4924,
+        "saved_identity": "windows:134379139208826218",
+        "same_process_alive": false,
+        "pid_reused": false
+      }
+    ]
+  },
+  "remaining": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "finished_utc": "2026-10-31T11:14:18.949069+00:00",
+  "cleanup_mode": "interrupted_disposable_recovery",
+  "graceful_shutdown_proven": false,
+  "old_failure_receipt_preserved": true
+}

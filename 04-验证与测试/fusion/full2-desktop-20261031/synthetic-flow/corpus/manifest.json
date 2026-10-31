@@ -1,0 +1,96 @@
+{
+  "artifacts": [
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3750,
+      "declared_logical_pages": 1,
+      "path": "generated/01_tender_SYNTHETIC.docx",
+      "purpose": "tender_body",
+      "sha256": "473587ac4d23ca9e5e2bf3e2819af439df207630bd1f21039f09c59fec43923a",
+      "source_kind": "authority",
+      "title": "招标正文"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3350,
+      "declared_logical_pages": 1,
+      "path": "generated/02_addendum_SYNTHETIC.docx",
+      "purpose": "addendum",
+      "sha256": "1c13a25458b620a937130bf9de0ccab43c4c2da5ed3cba3aa5bc047ec0d8afe4",
+      "source_kind": "authority",
+      "title": "补遗"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 7569,
+      "declared_logical_pages": 2,
+      "path": "generated/03_technical_normal_SYNTHETIC.docx",
+      "purpose": "technical",
+      "sha256": "f7b243f22586b01dc9307480e6748ebb5cf0103f8b73d8e360d13e843ecf1c29",
+      "source_kind": "own",
+      "title": "技术正常样本"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3459,
+      "declared_logical_pages": 1,
+      "path": "generated/04_business_SYNTHETIC.docx",
+      "purpose": "business",
+      "sha256": "d3bb0033f0d9899e76e2500e6bc277c7190aeff322cee5445dd6fe40a27a0b23",
+      "source_kind": "own",
+      "title": "商务附件"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3465,
+      "declared_logical_pages": 1,
+      "path": "generated/05_quote_SYNTHETIC.docx",
+      "purpose": "pricing",
+      "sha256": "ae7937b64e30ccc8b4ddfbb5c2175b1d720461fa38e1e2631fc20608254900cf",
+      "source_kind": "own",
+      "title": "报价附件"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3401,
+      "declared_logical_pages": 1,
+      "path": "generated/06_submission_list_SYNTHETIC.docx",
+      "purpose": "submission_checklist",
+      "sha256": "1b061b9ddc1cc016770e01863df81a0cadd752bf86d8897f17361e3702413583",
+      "source_kind": "own",
+      "title": "提交清单"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 7570,
+      "declared_logical_pages": 2,
+      "path": "generated/07_technical_conflict_SYNTHETIC.docx",
+      "purpose": "technical",
+      "sha256": "667dea760f4a62209378d8fff943c2bf8027e900309f8bda6292f4b8d821550d",
+      "source_kind": "own",
+      "title": "技术矛盾样本"
+    },
+    {
+      "actual_pdf_pages": null,
+      "bytes": 3173,
+      "declared_logical_pages": 1,
+      "path": "generated/08_field_policy_rejected_SYNTHETIC.docx",
+      "purpose": "field_policy_rejected",
+      "sha256": "c0dd9eaf503066de9f5b810dc306f1132972cdd50b49cbc6132cb757ada86f84",
+      "source_kind": "own",
+      "title": "动态域拒绝反例"
+    }
+  ],
+  "conversion_executed": false,
+  "dependencies": {
+    "DOCX": "stdlib OOXML; canonical PAGE/ZIP pattern from packages/authoring/generated_docx.py",
+    "Pillow": "12.3.0"
+  },
+  "expected_sha256": "eb6ace2733b5e4700fe7eac5832f30487c32c7c454b76288e1c53b772ba26d4f",
+  "fixture_id": "SYNTHETIC-FULLFLOW-20261031",
+  "generator": "generate.py/1",
+  "network_calls": 0,
+  "official_scores": null,
+  "schema_id": "https://tender.invalid/contracts/bid-package/1",
+  "synthetic": true
+}

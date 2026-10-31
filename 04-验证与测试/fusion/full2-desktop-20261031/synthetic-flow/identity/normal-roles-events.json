@@ -1,0 +1,121 @@
+[
+  {
+    "method": "GET",
+    "path": "/auth/session",
+    "status": 401,
+    "code": "UNAUTHENTICATED"
+  },
+  {
+    "method": "GET",
+    "path": "/auth/session",
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/bids",
+    "status": 201
+  },
+  {
+    "method": "GET",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "PATCH",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/bids",
+    "status": 201
+  },
+  {
+    "method": "GET",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922/settings",
+    "status": 200
+  },
+  {
+    "method": "PATCH",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922/settings",
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922/settings",
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "PATCH",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "PATCH",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 200
+  },
+  {
+    "method": "PATCH",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/settings",
+    "status": 412,
+    "code": "REVISION_CONFLICT"
+  },
+  {
+    "method": "POST",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/upload-batches",
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922/upload-batches",
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/bids/038fffb5-96c0-44c2-bb40-fe9b79c31d0f/uploads",
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/uploads/48927818-0a02-4225-bba5-71458245cf82",
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922",
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/bids/d6f20e25-e42f-40bd-99a2-04e6152e7922/upload-batches/30e3cfbf-608b-4149-98d3-7e475c0314a6/commit",
+    "status": 409,
+    "code": "UPLOAD_TARGET_MISMATCH"
+  },
+  {
+    "method": "GET",
+    "path": "/uploads/48927818-0a02-4225-bba5-71458245cf82",
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/logout",
+    "status": 204
+  },
+  {
+    "method": "GET",
+    "path": "/auth/session",
+    "status": 401,
+    "code": "UNAUTHENTICATED"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "frozen_utc": "2026-10-31T11:15:38.979582+00:00",
+  "source_freeze": [
+    {
+      "path": "deploy/fusion_desktop.py",
+      "sha256": "fe6e76628a404a044acbb30c89593d1533b838b23fa32393dc973027e647aea4",
+      "crlf_count": 0
+    },
+    {
+      "path": "tests/test_fusion_desktop_word.py",
+      "sha256": "37768efa7ce82356be40c9a7a47958f33b5bd9c2c7df1207233bb76b2b47f5ef",
+      "crlf_count": 0
+    },
+    {
+      "path": "tests/test_fusion_desktop_compose.py",
+      "sha256": "17e25edf45209b12ab0f33cf38fd65e2bba872407c12d83fa83a39a5ecae1b6c",
+      "crlf_count": 0
+    }
+  ],
+  "red_cli": {
+    "failed": 4,
+    "passed": 2
+  },
+  "red_model_profile": {
+    "failed": 2,
+    "passed": 2
+  },
+  "final": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "deselected": 66
+  },
+  "checks": [
+    {
+      "check": "final",
+      "exit_code": 0
+    },
+    {
+      "check": "ruff",
+      "exit_code": 0
+    },
+    {
+      "check": "format",
+      "exit_code": 0
+    },
+    {
+      "check": "mypy",
+      "exit_code": 0
+    },
+    {
+      "check": "bandit",
+      "exit_code": 0
+    }
+  ],
+  "mypy_target_platform": "linux (existing dependent POSIX modules; original Windows diagnostics retained)",
+  "new_service_or_stop_or_delete_executed_by_this_agent": false,
+  "git_writes": false,
+  "s5_frozen_source_changed": false,
+  "interrupted_recovery_execution_owner": "root"
+}

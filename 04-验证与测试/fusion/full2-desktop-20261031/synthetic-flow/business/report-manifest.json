@@ -1,0 +1,67 @@
+{
+  "scope": "Actual normal application report downloads from independent synthetic PDF inputs, not adopted Word",
+  "cases": [
+    {
+      "case": "conflict",
+      "task_round": "conflict-pdf-103228",
+      "state": "passed",
+      "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+      "review_id": "835625a0-1808-4223-8d38-419f977fd872",
+      "state_review_coverage": "partial",
+      "report": {
+        "document_version_id": "8a56a1a9-458f-4a9e-a46f-70cb18fc7cc7",
+        "sha256": "6581cbe490f3ff44a0c148be51bc25b814a218c329803fe4458fb48219853b48",
+        "byte_size": 6206,
+        "metadata_digest_matches": true
+      },
+      "actual_report_sha256": "6581cbe490f3ff44a0c148be51bc25b814a218c329803fe4458fb48219853b48",
+      "actual_report_bytes": 6206,
+      "visual_review": "See final-observation/pixel-review.json exact inspected file list, not all screenshots",
+      "latest_observation": "final-observation/conflict-state.json",
+      "latest_fresh_get_review_coverage": "partial",
+      "latest_fresh_get_current_at_observation": false
+    },
+    {
+      "case": "normal",
+      "task_round": "normal-pdf-103929",
+      "state": "passed",
+      "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+      "review_id": "402f1dcf-6103-4f20-8359-f877acf0857c",
+      "state_review_coverage": "partial",
+      "report": {
+        "document_version_id": "4b9e5615-a58c-4fe6-9ba1-efb51e71e9b6",
+        "sha256": "9d37e1490d2dacaadf354dab4143460c870ec9688e529a1402ab15ea91466d1f",
+        "byte_size": 5755,
+        "metadata_digest_matches": true
+      },
+      "actual_report_sha256": "9d37e1490d2dacaadf354dab4143460c870ec9688e529a1402ab15ea91466d1f",
+      "actual_report_bytes": 5755,
+      "visual_review": "See final-observation/pixel-review.json exact inspected file list, not all screenshots",
+      "latest_observation": "final-observation/normal-state.json",
+      "latest_fresh_get_review_coverage": "partial",
+      "latest_fresh_get_current_at_observation": true
+    },
+    {
+      "case": "missing",
+      "task_round": "missing-pdf-103933",
+      "state": "passed",
+      "bid_id": "e250ad22-3751-47cf-add7-acd28ccad1a9",
+      "review_id": "32bcaec9-a165-48d6-b48f-640bcce3d3ac",
+      "state_review_coverage": "pending",
+      "report": {
+        "document_version_id": "7a75fba6-0149-4089-aa5e-2e65391db67b",
+        "sha256": "838b269d548e131572e1da3b72a73179f42c925bdc235fc64bb2a8a14f907052",
+        "byte_size": 6234,
+        "metadata_digest_matches": true
+      },
+      "actual_report_sha256": "838b269d548e131572e1da3b72a73179f42c925bdc235fc64bb2a8a14f907052",
+      "actual_report_bytes": 6234,
+      "visual_review": "See final-observation/pixel-review.json exact inspected file list, not all screenshots",
+      "latest_observation": "final-observation/missing-state.json",
+      "latest_fresh_get_review_coverage": "partial",
+      "latest_fresh_get_current_at_observation": true
+    }
+  ],
+  "semantic_accuracy_qualified": false,
+  "whole_package_qualified": false
+}

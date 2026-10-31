@@ -1,0 +1,312 @@
+{
+  "state": "passed_limited_mechanism_not_qualified",
+  "synthetic_only": true,
+  "checks": {
+    "anonymous_session_401": true,
+    "existing_active_session": true,
+    "other_attachment_role_refusal_422": true,
+    "authority_partial_parse_freeze_rejected": true,
+    "bid_partial_parse_freeze_rejected": true,
+    "actual_authority_and_body_package_storage": true,
+    "explicit_unknowns_do_not_qualify": true
+  },
+  "qualifications": {
+    "whole_package": false,
+    "review_ready": false
+  },
+  "limitations": [
+    "Current typed bid membership accepts body/bid_body only; other business/pricing attachments are excluded, not silently relabelled.",
+    "Stored package/inventory/coverage is not compliance, model quality, whole-package download or submission qualification.",
+    "No model, review, assistant, pricing, submission or object-transfer POST is permitted."
+  ],
+  "browser_version": "unavailable",
+  "identity_before": {
+    "lot": null,
+    "digest": "6267a2662bdbeda05ffedf94d76b00341c3a79aa35b7584258b6e3a5882c3fe3",
+    "lot_id": null,
+    "region": null,
+    "round_id": "abd29990-7801-458c-9d1e-8f29339206a5",
+    "round_no": 1,
+    "bidder_id": "913bc2da-ecbf-4777-9d3d-23b1d7f197e4",
+    "bidder_name": "本公司（部署主体待核验）",
+    "authority_id": "3c7a817e-4895-4c83-92da-4e4a2e798cc0",
+    "binding_status": "pending",
+    "engineering_type": null,
+    "identity_version": "bid-identity/2",
+    "engineering_title": "SYNTHETIC conflict-pdf",
+    "engineering_project_id": "6e230aee-3211-451e-9431-3ce392f78414"
+  },
+  "scope_binding": {
+    "identity": {
+      "lot": "SYNTHETIC conflict-pdf lot",
+      "digest": "eb3969d7fdc22eb06875267c34223d038f957953b1512bc3799f4399effc8814",
+      "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+      "region": null,
+      "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+      "round_no": 1,
+      "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+      "bidder_name": "SYNTHETIC conflict-pdf bidder",
+      "authority_id": "a010b1e4-217d-406a-ac90-c51ddcbaa112",
+      "binding_status": "confirmed",
+      "engineering_type": null,
+      "identity_version": "bid-identity/2",
+      "engineering_title": "SYNTHETIC conflict-pdf engineering",
+      "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600"
+    },
+    "affected": {
+      "reviews": 1,
+      "submissions": 0,
+      "outcomes": 0,
+      "samples": 0,
+      "drafts": 0,
+      "documents": 7,
+      "facts": 0,
+      "knowledge_citations": 0
+    },
+    "historical_records_rewritten": false,
+    "old_review_may_be_stale": true,
+    "new_model_requests": 0
+  },
+  "stage": "completed",
+  "bid_ids": [
+    "04ba0fa2-f195-479c-aac8-87d0c7b8abaa"
+  ],
+  "elapsed_seconds": 2.792,
+  "other_attachment_boundary": {
+    "typed_bid_support": false,
+    "excluded_documents": [
+      {
+        "id": "59a259fa-50ad-40d8-9cf3-a8e4a97f7f6b",
+        "role": "other",
+        "filename": "06_submission_list_SYNTHETIC.pdf"
+      },
+      {
+        "id": "c02c2e70-917b-4d38-a11e-70e76e3b746d",
+        "role": "other",
+        "filename": "04_business_SYNTHETIC.pdf"
+      },
+      {
+        "id": "fa95029e-655a-4c08-a49c-a7ec48b26b70",
+        "role": "other",
+        "filename": "05_quote_SYNTHETIC.pdf"
+      }
+    ],
+    "expected_code": "PACKAGE_DOCUMENT_ROLE_REJECTED",
+    "api_refusal_executed": true,
+    "missing_attachment_qualification": false
+  },
+  "actual_requirement_denominator": 11,
+  "page_errors": [],
+  "browser_closed": true,
+  "browser_profile_removed": true,
+  "package_manifests": [
+    {
+      "kind": "authority",
+      "manifest": {
+        "package_id": "95fadc81-796f-417e-bf1f-14d8cdb6658c",
+        "revision_id": "60dfa58b-2d6d-4bd7-96c7-579431ae7a69",
+        "revision": 1,
+        "kind": "authority",
+        "scope": {
+          "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600",
+          "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+          "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+          "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+          "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+          "bidder_status": "confirmed"
+        },
+        "members": [
+          {
+            "member_id": "synthetic-authority-1",
+            "document_version_id": "55ead19a-2d02-4e09-8e21-592771abb12c",
+            "file_digest": "51f75e9e82baa8b65e67700a168985943993d48c8ce475ad7d05a1384e8d2b28",
+            "source_kind": "authority",
+            "source_ref": "document-file:8fe39b53-1c17-442e-803a-378ae6b441a3:revision:1",
+            "scope": {
+              "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600",
+              "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+              "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+              "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+              "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "addendum"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          },
+          {
+            "member_id": "synthetic-authority-2",
+            "document_version_id": "8eebbad9-8228-4af0-ac5d-3e7c942371e1",
+            "file_digest": "70f7a09faf0b98146fed23be1b0e084e6ba6570376c1ca35ca64b814a5a44db1",
+            "source_kind": "authority",
+            "source_ref": "document-file:cd8b837b-ed5f-4f08-8267-2206d9f1c11c:revision:1",
+            "scope": {
+              "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600",
+              "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+              "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+              "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+              "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "tender_body"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          }
+        ],
+        "predecessor_digest": null,
+        "identity_version": "bid-package/1"
+      },
+      "digest": "d66c048084bcd71d8a3d9417cf045a5fa9a49419dc01959f01a5e67e82878c33",
+      "storage_eligible": false,
+      "review_ready": false,
+      "evidence_count": 0
+    },
+    {
+      "kind": "bid",
+      "manifest": {
+        "package_id": "eab64766-90d2-4c92-b9e3-e6e2adc0ae46",
+        "revision_id": "81c2c976-60f3-4c28-bbee-89cc9b80203b",
+        "revision": 1,
+        "kind": "bid",
+        "scope": {
+          "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600",
+          "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+          "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+          "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+          "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+          "bidder_status": "confirmed"
+        },
+        "members": [
+          {
+            "member_id": "synthetic-bid-1",
+            "document_version_id": "7ecc5ca1-b1a6-4813-9f90-5ecade72e81c",
+            "file_digest": "4a7cb3a1967a6aaae50e2de41d4bd30317d67d52f4f3e4601c557265a17b5edc",
+            "source_kind": "own",
+            "source_ref": "document-file:cffd7a66-9fa5-4f83-aa37-ed4005577804:revision:1",
+            "scope": {
+              "engineering_project_id": "96b13179-9983-439c-84a1-ad2ec3562600",
+              "lot_id": "7191b64d-1e39-4ac6-9a0e-f6399bb9444a",
+              "round_id": "bb751510-f7a0-4e55-87d3-54fffbaae117",
+              "bid_id": "04ba0fa2-f195-479c-aac8-87d0c7b8abaa",
+              "bidder_id": "14f54dbe-139b-4272-82a1-18d56566254d",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "technical"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          }
+        ],
+        "predecessor_digest": null,
+        "identity_version": "bid-package/1"
+      },
+      "digest": "c9ff18cc7a4bb138890783ccf9e90332ee73d0b982dc00957dca447d564086fb",
+      "storage_eligible": false,
+      "review_ready": false,
+      "evidence_count": 0
+    }
+  ],
+  "inventory": {
+    "digest": "498aca5d261074dc32740e95fba971a2067c7d9c5cbe5761038e2341bf3f21bc",
+    "id": "cef9bc40-e1dc-4c0c-88d2-2631be2236d3",
+    "version": "bid-package-requirements/1",
+    "extraction_binding": "unproven_legacy_rule_set",
+    "review_ready": false,
+    "requirement_count": 11
+  },
+  "coverage": {
+    "digest": "a06989ef452aeda1806db479d8125ee97701e5554321102f73070300dc60a7a5",
+    "assessment": {
+      "package_digest": "c9ff18cc7a4bb138890783ccf9e90332ee73d0b982dc00957dca447d564086fb",
+      "complete": false,
+      "requirement_inventory_complete": false,
+      "requirement_states": {
+        "4624ce82-f9ab-4061-852d-14b7f3b4241a": "unknown",
+        "90a55a0b-b0a4-42a5-8fa4-d7e8caf9ac1e": "unknown",
+        "6ab3c960-81c7-4d18-a2c9-709cc8ea5723": "unknown",
+        "10b3a3ca-ecfc-4d2d-ad75-a889a9af1551": "unknown",
+        "21669527-ace3-494c-b197-585caf3281ac": "unknown",
+        "3e8469ed-b9cc-49d8-9190-f13b4706b562": "unknown",
+        "5a048f5a-45af-4f6e-a338-6ad673cc3361": "unknown",
+        "665820e9-b482-464a-8909-dee227c12a6e": "unknown",
+        "889862ef-9f43-4d09-b034-533a93b89937": "unknown",
+        "a18bc8a7-b594-4ceb-a4ad-026589ff31d0": "unknown",
+        "e1a44143-6d4d-4967-a2db-c467351ddf5c": "unknown"
+      },
+      "requirement_digests": {
+        "4624ce82-f9ab-4061-852d-14b7f3b4241a": "7c19290eeeb30a297065403782018fb1d3c843f6a6bac8eba3caf6a065878bf6",
+        "90a55a0b-b0a4-42a5-8fa4-d7e8caf9ac1e": "43db8f1346fa48fc8ef47b48c5444b5d8115dc8d32e1e6f5e13279fde7938a1d",
+        "6ab3c960-81c7-4d18-a2c9-709cc8ea5723": "215213c052f0b0db1402211cd693a5eb4ce94611e19d70806579215f5e2ccb15",
+        "10b3a3ca-ecfc-4d2d-ad75-a889a9af1551": "6fd0d21065c1fa823f3762521ecc2b9eae594a938df9ec049b7ae2380db3a26a",
+        "21669527-ace3-494c-b197-585caf3281ac": "59e76c00a4344b22bd3e6e57217b86047c530e63c54559df76b9e37d747fa638",
+        "3e8469ed-b9cc-49d8-9190-f13b4706b562": "03318e8a64a28ce55e978012f3caff03cc5df51ddd9dc68615bf43ed3921b1e7",
+        "5a048f5a-45af-4f6e-a338-6ad673cc3361": "ae1645abd2d1ac8434b6f85b5ac30c356bbd6081aed9f74e0ab0902748b01b6a",
+        "665820e9-b482-464a-8909-dee227c12a6e": "42714ab2a295b0328444be789bfd69300acb43e006c74149bb58e3250f4c88e3",
+        "889862ef-9f43-4d09-b034-533a93b89937": "baa8819b24fcade706aae63d712dacda27cd43f0ecc4c87a62401384556f7e42",
+        "a18bc8a7-b594-4ceb-a4ad-026589ff31d0": "486bdacf43dd0d72bb2483bdddd6547668829c3a4b6baac817b8f310cb3cdd1a",
+        "e1a44143-6d4d-4967-a2db-c467351ddf5c": "6fed9ead0e4a141f59d99b88cc34db36196322be4b4fa5309420c5e2ac845a42"
+      },
+      "inspected_ranges": [],
+      "member_gaps": [
+        {
+          "member_id": "synthetic-bid-1",
+          "document_version_id": "7ecc5ca1-b1a6-4813-9f90-5ecade72e81c",
+          "purposes": [
+            "technical"
+          ],
+          "codes": [
+            "page_count_unknown",
+            "parts_unassigned",
+            "parse_identity_not_frozen"
+          ],
+          "reason": "No exact parse run selected"
+        }
+      ]
+    },
+    "review_ready": false,
+    "result_states": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  "frontend_preview_used_by_package_script": false,
+  "ui_source": "Existing C791 package UI; not new static frontend preview"
+}

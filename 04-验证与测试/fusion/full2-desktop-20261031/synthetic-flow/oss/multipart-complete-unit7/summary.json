@@ -1,0 +1,54 @@
+{
+  "frozen_utc": "2026-10-31T10:17:21.156656+00:00",
+  "source_freeze": [
+    {
+      "path": "packages/uploads/native.py",
+      "sha256": "772a45c256ed7c440993f49263ad88d5f8b8f05d36acc1742f5f75a927600bcb",
+      "crlf_count": 0
+    },
+    {
+      "path": "tests/test_multipart.py",
+      "sha256": "90c7239f688225e1864e59c4353aea21de10da6a1a45ebc6ee600467f2e093e1",
+      "crlf_count": 0
+    }
+  ],
+  "red": {
+    "tests": 1,
+    "failed": 1,
+    "reason": "completed ACL default rather than private"
+  },
+  "green": {
+    "tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0
+  },
+  "checks": [
+    {
+      "check": "ruff",
+      "exit_code": 0
+    },
+    {
+      "check": "format",
+      "exit_code": 0
+    },
+    {
+      "check": "mypy",
+      "exit_code": 0
+    },
+    {
+      "check": "bandit",
+      "exit_code": 0
+    }
+  ],
+  "new_external_probe_executed": false,
+  "previous_live_acl_failure_preserved": true,
+  "temporary_cache_absent": true,
+  "git_writes": false,
+  "services_or_s7_touched": false,
+  "official_sources": [
+    "https://help.aliyun.com/zh/oss/developer-reference/completemultipartupload",
+    "https://help.aliyun.com/zh/oss/developer-reference/initiatemultipartupload"
+  ],
+  "scope": "observed current-region Complete request semantics; no cross-region qualification"
+}

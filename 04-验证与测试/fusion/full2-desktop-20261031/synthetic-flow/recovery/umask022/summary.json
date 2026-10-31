@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-10-31T09:38:55.147304+00:00",
+  "source": "$TASK\\tender-app-dev\\workbench",
+  "selected_case": "migration",
+  "scope": "single current-API migration smoke under CI umask022 and CI-created 0755 local parent",
+  "network": "none",
+  "models_called": false,
+  "production_credentials_read": false,
+  "software_installed": false,
+  "actual_tests_run": true,
+  "runner_exit_code": 0,
+  "remaining_service_processes": [],
+  "cases": [
+    {
+      "file": "migration-junit.xml",
+      "cases": [
+        {
+          "name": "test_current_api_post_activation_old_cookie_login_reads_and_once_only_write",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        }
+      ],
+      "original_sha256": "e3c921050c290a6c7265063f36e82dc32ca1f09801fff74d73fda57a185c5047"
+    }
+  ],
+  "state": "passed",
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-31T09:40:14.243319+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "result": "infrastructure_startup_failed",
+  "error": "OWNED_NATIVE_PG_S3_NOT_READY",
+  "cause": "Docker internal network did not publish requested host loopback bindings; observed NetworkSettings.Ports arrays empty",
+  "pytest_executed": false,
+  "browser_bundled": false,
+  "paid_calls": 0,
+  "cleanup_closed": true,
+  "private_inputs_removed": true,
+  "resources": {
+    "containers": 2,
+    "networks": 1,
+    "volumes": 0
+  }
+}

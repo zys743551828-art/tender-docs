@@ -1,0 +1,42 @@
+{
+  "scope": "Later real UI button downloads; exact same original report artifact bytes, no duplicate binary copy",
+  "observations": [
+    {
+      "case": "normal",
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/final-observation-normal-pdf-104859/normal-pdf-ui-report.docx",
+      "archived_identical_artifact": "../normal/review-report.docx",
+      "sha256": "9d37e1490d2dacaadf354dab4143460c870ec9688e529a1402ab15ea91466d1f",
+      "bytes": 5755,
+      "bytes_equal": true,
+      "download_button_clicked": true,
+      "review_coverage": "partial",
+      "review_current_at_observation": true,
+      "no_new_business_mutations": true
+    },
+    {
+      "case": "missing",
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/final-observation-missing-pdf-104904/missing-pdf-ui-report.docx",
+      "archived_identical_artifact": "../missing/review-report.docx",
+      "sha256": "838b269d548e131572e1da3b72a73179f42c925bdc235fc64bb2a8a14f907052",
+      "bytes": 6234,
+      "bytes_equal": true,
+      "download_button_clicked": true,
+      "review_coverage": "partial",
+      "review_current_at_observation": true,
+      "no_new_business_mutations": true
+    },
+    {
+      "case": "conflict",
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/final-observation-conflict-pdf-105508/conflict-pdf-ui-report.docx",
+      "archived_identical_artifact": "../conflict/review-report.docx",
+      "sha256": "6581cbe490f3ff44a0c148be51bc25b814a218c329803fe4458fb48219853b48",
+      "bytes": 6206,
+      "bytes_equal": true,
+      "download_button_clicked": true,
+      "review_coverage": "partial",
+      "review_current_at_observation": false,
+      "no_new_business_mutations": true
+    }
+  ],
+  "new_model_calls": 0
+}

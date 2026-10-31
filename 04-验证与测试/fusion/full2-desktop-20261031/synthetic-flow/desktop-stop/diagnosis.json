@@ -1,0 +1,29 @@
+{
+  "scope": "read-only before root recovery execution",
+  "correct_current_c_python_verified": true,
+  "cwd": ".tools/s5/workbench",
+  "loaded_module": ".tools/s5/workbench/deploy/fusion_desktop.py",
+  "main_entry_present": true,
+  "help_returncode": 0,
+  "help_argparse_usage_present": true,
+  "request_version_matches_word": true,
+  "saved_four_host_launcher_process_identities_alive": false,
+  "both_stop_markers_present": true,
+  "both_host_summaries_missing": true,
+  "both_host_requests_and_receipts_directories_exist_and_empty": true,
+  "metadata_state": "ready",
+  "original_stop_returncode": 0,
+  "original_container_status_counts": {
+    "exited": 18,
+    "running": 2
+  },
+  "remaining_running_services": [
+    "worker-assistant",
+    "worker-review"
+  ],
+  "remaining_running_profiles": [
+    "model"
+  ],
+  "cause": "nonstatus CLI success ignored Word unavailable/cleanup; compose stop omitted declared model profile",
+  "interrupted_missing_summaries_not_normal_stop_success": true
+}

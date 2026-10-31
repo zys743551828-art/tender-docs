@@ -4,7 +4,7 @@
 
 安装与操作统一见[工作台使用说明](使用说明.md)，包括固定提交、依赖与镜像、初始化、Word、模型配置、业务操作、停止和恢复边界。
 
-当前应用提交为 [`6446ba0ad98beb46a0c3942295215aa59dbc5df5`](https://github.com/zys743551828-art/tender-app/commit/6446ba0ad98beb46a0c3942295215aa59dbc5df5)；[CI41174917023](https://github.com/zys743551828-art/tender-app/actions/runs/41174917023) 11/11 项全部成功。源码/测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`；它们不是需求签收证明。
+当前应用源码检查点为 [`5516ec2fd4f8b6cfebd98de5a384ca875a797a88`](https://github.com/zys743551828-art/tender-app/commit/5516ec2fd4f8b6cfebd98de5a384ca875a797a88)。[合成全流程与真实服务验收](04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md)记录逐项版本、通过／失败、用量、视觉与清理结果；首次完整安装和后续定向验证的范围分别保留。源码／测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`，均不是需求签收证明。
 
 本轮[Desktop full/2 工程验收](04-验证与测试/fusion/full2-desktop-20261031/README.md)已完成普通安装、真实 Word/PAGE/RICH 路径、桌面与窄屏预览下载及既定生命周期矩阵。使用官方 Gotenberg 预构建镜像；旧 Word03 [来源记录](04-验证与测试/Word03来源与复现核查.md)保留原身份，新版本独立验收。PAGE 的目录/章节页范围未知提示继续保留，RICH 仅在已核模式与样本范围内成立。
 

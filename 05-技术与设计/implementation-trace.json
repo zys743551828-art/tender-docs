@@ -1,5 +1,5 @@
 {
-  "code_revision": "6446ba0ad98beb46a0c3942295215aa59dbc5df5",
+  "code_revision": "5516ec2fd4f8b6cfebd98de5a384ca875a797a88",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -8,7 +8,7 @@
       "test": "tests/test_package_submission_preflight.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e1d692ddc8ee4ed733d31d2fcf5f2b893eb177da3be84c69eaea6ed1b056d76c",
+      "code_sha256": "f65abdbe83f2ec293196ed9060bbe2e39d4b36578f2940c8662c1c8db90f063b",
       "test_sha256": "c51cdd28b37463f1de8e9054e719c47c2dc04e9e4da51a83166ac203bf726f09"
     },
     {
@@ -35,7 +35,7 @@
       "test": "tests/test_package_material_scope_findings.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e1d692ddc8ee4ed733d31d2fcf5f2b893eb177da3be84c69eaea6ed1b056d76c",
+      "code_sha256": "f65abdbe83f2ec293196ed9060bbe2e39d4b36578f2940c8662c1c8db90f063b",
       "test_sha256": "705d25f5002c8ccd79ad02404e62dad4ca85775fc4946adcbaa6508d6b107706"
     },
     {
@@ -44,7 +44,7 @@
       "test": "tests/test_package_scope_review.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e1d692ddc8ee4ed733d31d2fcf5f2b893eb177da3be84c69eaea6ed1b056d76c",
+      "code_sha256": "f65abdbe83f2ec293196ed9060bbe2e39d4b36578f2940c8662c1c8db90f063b",
       "test_sha256": "a06a057be9d1bb0ad2e80a692dd81b812ca12381f06d482478f54d2776d69724"
     },
     {
@@ -71,7 +71,7 @@
       "test": "tests/test_package_rule_corrections.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "e1d692ddc8ee4ed733d31d2fcf5f2b893eb177da3be84c69eaea6ed1b056d76c",
+      "code_sha256": "f65abdbe83f2ec293196ed9060bbe2e39d4b36578f2940c8662c1c8db90f063b",
       "test_sha256": "045d783e3722f6e7d7518e440214f53539204275b849a5ac4ddb57faf2835924"
     },
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "4cae76eca9078ccf55fe4eaa5d4a7d39a044c0c5cfd6731103058f219f4c9b83",
+      "code_sha256": "d3c1025693c3892231a813787913c1b6aceaaf788b12420b1348d3c8d42df785",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -407,7 +407,7 @@
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "e80529f401650c4abdef56c0e0116bb1858dab76d8b2658209baa5cde55590b2",
-      "test_sha256": "718e1b2cc21009a432da5da85d50150d7236d50fb9c03117b035517760744510"
+      "test_sha256": "268ea6b37febf973adba77b65652a580d030a090f569a6763a5f4e7e5de79c55"
     },
     {
       "id": "TEST-PRICE-BROWSER",
@@ -416,7 +416,7 @@
       "document": "04-验证与测试/报价历史原生验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "17120cda4b1281e5f7d9ef2aa42d4aac3b867c0a7badf003ff0bcd86eb93fa69",
-      "test_sha256": "718e1b2cc21009a432da5da85d50150d7236d50fb9c03117b035517760744510"
+      "test_sha256": "268ea6b37febf973adba77b65652a580d030a090f569a6763a5f4e7e5de79c55"
     },
     {
       "id": "TEST-WORKSPACE-JOURNEYS",
@@ -425,7 +425,7 @@
       "document": "04-验证与测试/工作台四组原生组合验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "f6d406b462249b0da5a7e21582e5b6db77fe8abbab04e25562f5e63ea3cdc29e",
-      "test_sha256": "718e1b2cc21009a432da5da85d50150d7236d50fb9c03117b035517760744510"
+      "test_sha256": "268ea6b37febf973adba77b65652a580d030a090f569a6763a5f4e7e5de79c55"
     },
     {
       "id": "TEST-LIFECYCLE-UI",
@@ -433,8 +433,8 @@
       "test": "apps/web/src/ProjectLifecyclePanel.test.tsx",
       "document": "04-验证与测试/FR015生命周期表单原生验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "4cfa3437f0f9742521c02df66b17f1fa84db253c9a4bb74129cfce41584226e0",
-      "test_sha256": "69744af0f82fff623f96f73f24fcc05d54b72893ffbd55119e6a86ecb6943196"
+      "code_sha256": "ec43cfb8ea3c82a5e5015c2e21421e5a74d46a90dc76af7b5ea341b9afeec7d2",
+      "test_sha256": "e9f859f1e4c385698a6544dd99b556bffe7b7eeb75f8f269e8edd6afd2043996"
     },
     {
       "id": "TEST-LIFECYCLE-NATIVE",
@@ -443,7 +443,7 @@
       "document": "04-验证与测试/FR015生命周期表单原生验收.md",
       "acceptance": "not_accepted",
       "code_sha256": "6e7845090c4b730fbb71995537c6b73f71e987a2c59f158571c86b62f4ded8b1",
-      "test_sha256": "718e1b2cc21009a432da5da85d50150d7236d50fb9c03117b035517760744510"
+      "test_sha256": "268ea6b37febf973adba77b65652a580d030a090f569a6763a5f4e7e5de79c55"
     },
     {
       "id": "TEST-LIFECYCLE-RECOVERY",
@@ -614,7 +614,7 @@
       "document": "04-验证与测试/fusion/full2-desktop-20261031/README.md",
       "acceptance": "not_accepted",
       "code_sha256": "6d83255c9b10e798477cb1fa095a5d3af0c703e7f1cf62b93584e9b12da0c16f",
-      "test_sha256": "83c5f030f896cc98058c414db5bed112c01f381db074459e56f72cbd162fdcab"
+      "test_sha256": "80402db0ab6056b8d0c6d6e6ebc2e2e8078fd289b3a2a20ef3d0b0f60aa68a97"
     },
     {
       "id": "TEST-WORD-PAGE-DISPATCH",
@@ -624,6 +624,78 @@
       "acceptance": "not_accepted",
       "code_sha256": "cff310cecb8ac6ba4bc7747440030099bbf0c2c1ac8216ad2a717dcffe8a6c42",
       "test_sha256": "150fd91c19b7fdfc776813a71faa7a167c1b423db37b0dc34061b8f866a3697d"
+    },
+    {
+      "id": "TEST-SOURCE-ACK",
+      "code": "packages/domain/source_effectivity.py",
+      "test": "tests/test_source_effectivity_ambiguities.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "e0a29c5f73ccd6c74a74f279ef986e178cee085247eb00f500913a8c5dd351a4",
+      "test_sha256": "d8ea7b3e2d1b85b95e01d4feddd0992c5667228f26ff48e4e47f5203f57b34e4"
+    },
+    {
+      "id": "TEST-SOURCE-ACK-UI",
+      "code": "apps/web/src/SourceEffectivityPanel.tsx",
+      "test": "apps/web/src/SourceEffectivityPanel.test.tsx",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "956291219f71590924249f1659e5bfc95208797b05eb1b20e8091dc4f5baf401",
+      "test_sha256": "9aacf7ee5d49e34bdc5ccd22e4bbf21fb7062640b2c3714c2f4dae7b84ec7773"
+    },
+    {
+      "id": "TEST-EXTRACTION-GROUNDING",
+      "code": "apps/worker/review_handlers.py",
+      "test": "tests/test_rule_extraction_grounding_correction.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "c568be29b8ddae5571854b181bb6ec87bbd954e68f87ebf0799e33b0eb7d0843",
+      "test_sha256": "1e499c06159bebc2b30d3803334efbdabd9ede0377281488685d497a21db8670"
+    },
+    {
+      "id": "TEST-MIGRATION-API",
+      "code": "deploy/extended_recovery_runtime.py",
+      "test": "tests/test_extended_recovery_migration_runtime.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "b6349e63014467311b97e258be9db94d24325154957109db9ea4f87bd6092569",
+      "test_sha256": "083fb4638be454b9ab80f6bf0fac7a102232d75cb6f68dc53365c5f1f2f6fdde"
+    },
+    {
+      "id": "TEST-OSS-PRIVATE-PUT",
+      "code": "packages/domain/providers/oss.py",
+      "test": "tests/test_providers.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "7e3fe3f0ff67889a8be544e23f55cf8a4c2fba009682e52ba6d48f1d56f84383",
+      "test_sha256": "1755825fa8b74a42d5829818a5d3f4a81faf8e8a8ba985bd56afddf74cae117f"
+    },
+    {
+      "id": "TEST-OSS-MULTIPART",
+      "code": "packages/uploads/native.py",
+      "test": "tests/test_multipart.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "728d585cf9721e80811a148b3a82d8b629ee20f18d0abb92186736771393fe90",
+      "test_sha256": "7e91096318ef5cec324891fbe2a2598abeb635efd6ec1bd6a4f91677e7e57524"
+    },
+    {
+      "id": "TEST-UI-REFRESH",
+      "code": "apps/web/src/useResource.ts",
+      "test": "apps/web/src/useResource.test.tsx",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "9e6d9a2e1f4df1e3912ce5d2b53e63f329e46500a281a803687caef5adc1040d",
+      "test_sha256": "e40042c412be255d444cffafbc73d9e2fc81be283bd3d665d7ff9d3fd48db952"
+    },
+    {
+      "id": "TEST-DESKTOP-STOP",
+      "code": "deploy/fusion_desktop.py",
+      "test": "tests/test_fusion_desktop_word.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "20bd04e36f5910ea03f5998c3dc646112adcce97f39ce1bec1c9da44bcc4ffa8",
+      "test_sha256": "80402db0ab6056b8d0c6d6e6ebc2e2e8078fd289b3a2a20ef3d0b0f60aa68a97"
     }
   ]
 }

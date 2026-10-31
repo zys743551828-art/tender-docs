@@ -1,0 +1,318 @@
+{
+  "state": "passed_limited_mechanism_not_qualified",
+  "synthetic_only": true,
+  "checks": {
+    "anonymous_session_401": true,
+    "existing_active_session": true,
+    "other_attachment_role_refusal_422": true,
+    "authority_partial_parse_freeze_rejected": true,
+    "bid_partial_parse_freeze_rejected": true,
+    "actual_authority_and_body_package_storage": true,
+    "explicit_unknowns_do_not_qualify": true
+  },
+  "qualifications": {
+    "whole_package": false,
+    "review_ready": false
+  },
+  "limitations": [
+    "Current typed bid membership accepts body/bid_body only; other business/pricing attachments are excluded, not silently relabelled.",
+    "Stored package/inventory/coverage is not compliance, model quality, whole-package download or submission qualification.",
+    "No model, review, assistant, pricing, submission or object-transfer POST is permitted."
+  ],
+  "browser_version": "unavailable",
+  "identity_before": {
+    "lot": null,
+    "digest": "fcb8430d7e0997a85aef85e996bc8ab45da708266b8c1f9895dd1903bb7eaaae",
+    "lot_id": null,
+    "region": null,
+    "round_id": "82485812-eedc-4bba-bb36-56e4ef2a0a2d",
+    "round_no": 1,
+    "bidder_id": "96b6e511-3a84-4f77-b459-e293abe11800",
+    "bidder_name": "本公司（部署主体待核验）",
+    "authority_id": "5c4314a0-b737-426c-8430-069da99c5d46",
+    "binding_status": "pending",
+    "engineering_type": null,
+    "identity_version": "bid-identity/2",
+    "engineering_title": "SYNTHETIC normal-pdf",
+    "engineering_project_id": "3ef663ec-ad62-4f30-94c8-0a039b949659"
+  },
+  "scope_binding": {
+    "identity": {
+      "lot": "SYNTHETIC normal-pdf lot",
+      "digest": "0754a24ee21f73836e8644e41109db2f4043cea69f8ef67e8d3090e71a0dafb8",
+      "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+      "region": null,
+      "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+      "round_no": 1,
+      "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+      "bidder_name": "SYNTHETIC normal-pdf bidder",
+      "authority_id": "7076dd45-f975-48f7-a023-d1a0c025e719",
+      "binding_status": "confirmed",
+      "engineering_type": null,
+      "identity_version": "bid-identity/2",
+      "engineering_title": "SYNTHETIC normal-pdf engineering",
+      "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c"
+    },
+    "affected": {
+      "reviews": 1,
+      "submissions": 0,
+      "outcomes": 0,
+      "samples": 0,
+      "drafts": 0,
+      "documents": 7,
+      "facts": 0,
+      "knowledge_citations": 0
+    },
+    "historical_records_rewritten": false,
+    "old_review_may_be_stale": true,
+    "new_model_requests": 0
+  },
+  "stage": "completed",
+  "bid_ids": [
+    "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f"
+  ],
+  "elapsed_seconds": 2.454,
+  "other_attachment_boundary": {
+    "typed_bid_support": false,
+    "excluded_documents": [
+      {
+        "id": "9915a819-15fa-47a9-b17a-c9755e1f41c6",
+        "role": "other",
+        "filename": "04_business_SYNTHETIC.pdf"
+      },
+      {
+        "id": "a34e771e-af3d-4c08-88b2-1d4055a25c51",
+        "role": "other",
+        "filename": "06_submission_list_SYNTHETIC.pdf"
+      },
+      {
+        "id": "d73fab7b-e589-4a7e-a16d-afc370e94c8b",
+        "role": "other",
+        "filename": "05_quote_SYNTHETIC.pdf"
+      }
+    ],
+    "expected_code": "PACKAGE_DOCUMENT_ROLE_REJECTED",
+    "api_refusal_executed": true,
+    "missing_attachment_qualification": false
+  },
+  "actual_requirement_denominator": 13,
+  "page_errors": [],
+  "browser_closed": true,
+  "browser_profile_removed": true,
+  "package_manifests": [
+    {
+      "kind": "authority",
+      "manifest": {
+        "package_id": "0fd1bcb6-0f4f-4b43-be21-169870fa950d",
+        "revision_id": "658c4d70-b4c7-4f42-9ace-e3e5bfa82df7",
+        "revision": 1,
+        "kind": "authority",
+        "scope": {
+          "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c",
+          "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+          "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+          "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+          "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+          "bidder_status": "confirmed"
+        },
+        "members": [
+          {
+            "member_id": "synthetic-authority-1",
+            "document_version_id": "81ebea44-d4a3-4c5a-b52c-53a8236659a2",
+            "file_digest": "70f7a09faf0b98146fed23be1b0e084e6ba6570376c1ca35ca64b814a5a44db1",
+            "source_kind": "authority",
+            "source_ref": "document-file:7199b7f0-49ec-46b8-bb95-d0abedf9d27b:revision:1",
+            "scope": {
+              "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c",
+              "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+              "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+              "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+              "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "tender_body"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          },
+          {
+            "member_id": "synthetic-authority-2",
+            "document_version_id": "fc12f374-0f46-4bf8-872c-b7cd608505f5",
+            "file_digest": "51f75e9e82baa8b65e67700a168985943993d48c8ce475ad7d05a1384e8d2b28",
+            "source_kind": "authority",
+            "source_ref": "document-file:58a31164-6650-4f49-8bb8-da26c8315b1d:revision:1",
+            "scope": {
+              "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c",
+              "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+              "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+              "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+              "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "addendum"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          }
+        ],
+        "predecessor_digest": null,
+        "identity_version": "bid-package/1"
+      },
+      "digest": "ab1fbfefc94ef94dd7647e6d62aa1baa823d14877a4a059a5a7f59f779ca11cd",
+      "storage_eligible": false,
+      "review_ready": false,
+      "evidence_count": 0
+    },
+    {
+      "kind": "bid",
+      "manifest": {
+        "package_id": "a6deaca6-4372-4034-9fcd-6efced4567fc",
+        "revision_id": "a6b091d3-52ee-49d5-bfd0-26d475748a70",
+        "revision": 1,
+        "kind": "bid",
+        "scope": {
+          "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c",
+          "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+          "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+          "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+          "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+          "bidder_status": "confirmed"
+        },
+        "members": [
+          {
+            "member_id": "synthetic-bid-1",
+            "document_version_id": "3f9df1b5-51bc-4d9e-9449-26ac01b8528d",
+            "file_digest": "389fcec50367b7f646561746f7bc6cacfb64bbc909f6cf33240981691c78a2f7",
+            "source_kind": "own",
+            "source_ref": "document-file:d7eb1067-a888-4d5d-aec2-7cdba11abeee:revision:1",
+            "scope": {
+              "engineering_project_id": "38234e1b-5cb0-41e0-aec7-611cd7bcdb8c",
+              "lot_id": "f1de30e1-fe0c-48be-9269-b69d61d8b259",
+              "round_id": "d7a381aa-3421-434a-9e5c-0f4d08601fb2",
+              "bid_id": "2fbe2783-ecc4-4d07-a1f9-a6ff3ccaf58f",
+              "bidder_id": "d3ad2037-a58c-43bf-a8f8-e7e1b932bc28",
+              "bidder_status": "confirmed"
+            },
+            "purposes": [
+              "technical"
+            ],
+            "page_count": null,
+            "parse": {
+              "status": "not_frozen",
+              "parse_run_id": null,
+              "parser_digest": null,
+              "config_digest": null,
+              "evidence_digest": null,
+              "reason": "No exact parse run selected"
+            },
+            "parts": []
+          }
+        ],
+        "predecessor_digest": null,
+        "identity_version": "bid-package/1"
+      },
+      "digest": "2b3671b2c2c1314d8d3579759df480c844dc1856851635acae6012361cbc7404",
+      "storage_eligible": false,
+      "review_ready": false,
+      "evidence_count": 0
+    }
+  ],
+  "inventory": {
+    "digest": "08c0f83638b9e717b36131fc4cdff3a99a465309a8b3508bc5a6b6eda007c1c9",
+    "id": "3d401889-295d-4190-81b0-43bf49fd8cbc",
+    "version": "bid-package-requirements/1",
+    "extraction_binding": "unproven_legacy_rule_set",
+    "review_ready": false,
+    "requirement_count": 13
+  },
+  "coverage": {
+    "digest": "98540f2e992288d0149394594a4998cf2d9ba3e5381dc8fa9fd0287c3811a9cb",
+    "assessment": {
+      "package_digest": "2b3671b2c2c1314d8d3579759df480c844dc1856851635acae6012361cbc7404",
+      "complete": false,
+      "requirement_inventory_complete": false,
+      "requirement_states": {
+        "65b36f4f-677c-4914-913d-98075692bd86": "unknown",
+        "68f75933-6dd1-4426-9847-1e97a2341abc": "unknown",
+        "e337b50e-9b09-4668-ac55-2555bc0fe7bb": "unknown",
+        "fdc87b79-4ec2-4c42-aa9b-a97057dd899d": "unknown",
+        "05e5d4d2-52a5-439e-81e8-a386a19ecb3e": "unknown",
+        "0aeb1afa-df3d-4191-a176-92699c89109c": "unknown",
+        "14ad7f9e-0b93-4653-84df-6c31e0b97c43": "unknown",
+        "8bc1d2f5-14a8-4663-b876-626fd273b16d": "unknown",
+        "8d78d7ae-f678-4ee7-a8d1-e18288d32519": "unknown",
+        "a0e6a50b-b9d9-4fde-a23d-ff682ca75f84": "unknown",
+        "afe8335e-3ed8-4a9d-82b7-5287d11e6a7c": "unknown",
+        "b99f28b1-10ef-4a55-9b50-4d711d31e177": "unknown",
+        "f6d9521a-05f9-44b3-9b55-ae77128102a6": "unknown"
+      },
+      "requirement_digests": {
+        "65b36f4f-677c-4914-913d-98075692bd86": "b898cac09e7bdd87382be21faec560b39607d5feeb4618d80367941706419922",
+        "68f75933-6dd1-4426-9847-1e97a2341abc": "c651fa26d3ec4da20bf8f260a4c78d640b338898a4a5940f99ca49d8fe7f089e",
+        "e337b50e-9b09-4668-ac55-2555bc0fe7bb": "7874c1f3ef79a71cff586854c59e2bbbff9ca930dd58ee1b6e7085af17b855ce",
+        "fdc87b79-4ec2-4c42-aa9b-a97057dd899d": "81c4b8ef27d2684d1424ed221835469dfdc59249cd3eb8158ffab7e016e1f9f8",
+        "05e5d4d2-52a5-439e-81e8-a386a19ecb3e": "3cc1c5e8a60d507c75c3abd815d04ac987778f675266d5c8fd758599233a3a73",
+        "0aeb1afa-df3d-4191-a176-92699c89109c": "5c480f6529b4c958f88ec089054c5fdd0bdd880728c828230ffae9c8c036799e",
+        "14ad7f9e-0b93-4653-84df-6c31e0b97c43": "a29769c971100f3cda77924d098d05a6411fbf6cef67f3c8580c7f384cf32fcf",
+        "8bc1d2f5-14a8-4663-b876-626fd273b16d": "dfac7f7808052d7d0b0b234c14f66b93389106c910d21874199590c513840f7a",
+        "8d78d7ae-f678-4ee7-a8d1-e18288d32519": "cc983024eaf505693e5d6bf6ae53fe22b4d3cb9b275d6aed5746ae62d04cce25",
+        "a0e6a50b-b9d9-4fde-a23d-ff682ca75f84": "185530ada2755c839b0bb7d4d5736d17ad912b1dde3dde7f358eecad3861f0b5",
+        "afe8335e-3ed8-4a9d-82b7-5287d11e6a7c": "f65662058100a84ff2bbd4d484167523fd2c5ccf8b2cbf32088f499ab824c55e",
+        "b99f28b1-10ef-4a55-9b50-4d711d31e177": "a191c2202f31b3dc289dc8f892a74e69f836acd398726f594c6bbd7f4947bf45",
+        "f6d9521a-05f9-44b3-9b55-ae77128102a6": "4d4304f97184c2930046e442941913f42e37aadd6c8524f05cda02f2bd8a84f9"
+      },
+      "inspected_ranges": [],
+      "member_gaps": [
+        {
+          "member_id": "synthetic-bid-1",
+          "document_version_id": "3f9df1b5-51bc-4d9e-9449-26ac01b8528d",
+          "purposes": [
+            "technical"
+          ],
+          "codes": [
+            "page_count_unknown",
+            "parts_unassigned",
+            "parse_identity_not_frozen"
+          ],
+          "reason": "No exact parse run selected"
+        }
+      ]
+    },
+    "review_ready": false,
+    "result_states": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  },
+  "frontend_preview_used_by_package_script": false,
+  "ui_source": "Existing C791 package UI, not static preview"
+}

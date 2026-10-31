@@ -1,0 +1,172 @@
+{
+  "calls": [
+    {
+      "logical_key": "extract-rules",
+      "rules": [
+        {
+          "rule_index": 0,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "disqualification"
+        },
+        {
+          "rule_index": 1,
+          "statement_grounded": false,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 2,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 3,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 4,
+          "statement_grounded": false,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 5,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 6,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 7,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "advisory"
+        },
+        {
+          "rule_index": 8,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "advisory"
+        }
+      ],
+      "rule_count": 9,
+      "ambiguity_count": 4
+    },
+    {
+      "logical_key": "extract-rules-grounding-correction-1",
+      "rules": [
+        {
+          "rule_index": 0,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            true
+          ],
+          "exceptions_grounded": [],
+          "kind": "disqualification"
+        },
+        {
+          "rule_index": 1,
+          "statement_grounded": false,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 2,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 3,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 4,
+          "statement_grounded": false,
+          "conditions_grounded": [
+            false
+          ],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 5,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 6,
+          "statement_grounded": true,
+          "conditions_grounded": [],
+          "exceptions_grounded": [],
+          "kind": "mandatory"
+        },
+        {
+          "rule_index": 7,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            true
+          ],
+          "exceptions_grounded": [],
+          "kind": "advisory"
+        },
+        {
+          "rule_index": 8,
+          "statement_grounded": true,
+          "conditions_grounded": [
+            true
+          ],
+          "exceptions_grounded": [],
+          "kind": "advisory"
+        }
+      ],
+      "rule_count": 9,
+      "ambiguity_count": 4,
+      "changed_statement_indices": [],
+      "changed_condition_rule_indices": [
+        0,
+        7,
+        8
+      ],
+      "changed_quote_rule_indices": []
+    }
+  ],
+  "raw_response_exported": false
+}

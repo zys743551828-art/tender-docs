@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-10-31T09:53:09.091631+00:00",
+  "scope": "offline OSS SDK request boundary only; no live OSS or paid services",
+  "source_freeze": [
+    {
+      "path": "tender-app-dev/workbench/packages/domain/providers/oss.py",
+      "sha256": "34155b56bbf279cf3f7f8197bbec12d8dc39774ab11d2f8f969ce6c9d857003e",
+      "crlf_count": 0
+    },
+    {
+      "path": "tender-app-dev/workbench/tests/test_providers.py",
+      "sha256": "0861417c94cddac07a71aa05025401f09d686415c2ad646d4ab7de73d9ec3e41",
+      "crlf_count": 0
+    }
+  ],
+  "red": {
+    "selected": "storage_from_env",
+    "tests": 1,
+    "passed": 0,
+    "failed": 1,
+    "error_type": "KeyError",
+    "missing_header": "x-oss-object-acl"
+  },
+  "green": {
+    "selected": "oss",
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "deselected": 17,
+    "sdk_deprecation_warnings": 1
+  },
+  "checks": {
+    "ruff": 0,
+    "ruff_format": 0,
+    "mypy_provider": 0,
+    "bandit_provider": 0
+  },
+  "real_requests_sent": 0,
+  "credentials_read": false,
+  "bucket_acl_changed": false,
+  "existing_object_acl_changed": false,
+  "storage_class_changed": false,
+  "git_writes": false,
+  "proof_limits": "mock request headers and actual-byte collision comparisons, not live provider privacy verification"
+}

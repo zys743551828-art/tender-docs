@@ -1,0 +1,16 @@
+{
+  "source": "evidence-local-20261030/full2-normal-094443/result.json",
+  "original_result_sha256": "928924556ff065d4cf36a631c083a96d7c3175a5e8af9f9c5c182bbe2286552d",
+  "original_result_rewritten": false,
+  "outcome_boundary": "Original interrupted/unfinished supervisor journal preserved, later successful browser evidence does not convert it into a completed supervisor run",
+  "active_phase_in_original": {
+    "name": "ready_gate_waiting_word_probes",
+    "started_utc": "2026-10-31T09:52:26.095056+00:00",
+    "ttl_seconds": 4200
+  },
+  "heartbeat_utc_in_original": "2026-10-31T10:10:48.345025+00:00",
+  "normal_stop_exit_zero_is_not_cleanup_proof": true,
+  "first_attempt_cleanup_closed": false,
+  "later_recovery_receipt": "interrupted-supervisor-cleanup-recovery.json",
+  "later_cleanup_does_not_prove_graceful_shutdown": true
+}

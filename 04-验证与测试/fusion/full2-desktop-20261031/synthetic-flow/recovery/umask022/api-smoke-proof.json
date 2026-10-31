@@ -1,0 +1,70 @@
+{
+  "format": "current-application-post-migration-smoke/1",
+  "private_fixture_directories_mode": "0700",
+  "private_fixture_directories_regular_and_owned": true,
+  "activation": {
+    "offline_verified_before_activation": true,
+    "source_effective_acl_sha256": "3d6bbf1ce6f659f7565e20ce6be07bc0fb023c9c19e83d7b37d89e2cfc4050d2",
+    "source_effective_acl_count": 903,
+    "target_before_acl_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "target_before_acl_count": 0,
+    "target_after_acl_sha256": "3d6bbf1ce6f659f7565e20ce6be07bc0fb023c9c19e83d7b37d89e2cfc4050d2",
+    "target_after_acl_count": 903,
+    "actual_acl_subset_of_source": true,
+    "target_api_login": "twb_checks_api_recovery_41c43d34_c333e7f0_api",
+    "other_purposes_connect_denied": true,
+    "api_only_readwrite_setting": true,
+    "full_application_restore_qualified": false
+  },
+  "source_system_identifier": "7702764382866342348",
+  "target_system_identifier": "7702764405131448835",
+  "old_cookie_rejected": true,
+  "new_login_verified": true,
+  "bid_and_nonempty_draft_read": true,
+  "original_artifact": {
+    "status": 200,
+    "fixture_upload_pipeline_qualified": false,
+    "transfer_status": 200,
+    "bytes_equal": true
+  },
+  "csrf_enforced": true,
+  "new_keys_rotated": true,
+  "idempotent_settings_write_once": true,
+  "api_login": "twb_checks_api_recovery_41c43d34_c333e7f0_api",
+  "api_nonowner_high_privileges_false": true,
+  "backup_reader_remains_readonly": true,
+  "api_processes": [
+    {
+      "role": "source_api",
+      "loopback_only": true,
+      "stopped": true,
+      "pid": 484,
+      "exit_code": -15
+    },
+    {
+      "role": "target_api",
+      "loopback_only": true,
+      "stopped": true,
+      "pid": 547,
+      "exit_code": -15
+    }
+  ],
+  "workers_started": false,
+  "model_calls": 0,
+  "full_application_restore_qualified": false,
+  "production_rpo_rto_qualified": false,
+  "source_unchanged": true,
+  "new_target_database_and_bucket_removed": true,
+  "owned_source_target_cluster_cleanup": [
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    },
+    {
+      "postgres_stopped": true,
+      "listener_closed": true,
+      "private_cluster_and_password_removed": true
+    }
+  ]
+}

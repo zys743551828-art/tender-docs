@@ -1,0 +1,52 @@
+{
+  "scope": "Selected fixed status/code identifiers only; no provider raw response, rule text or request payload",
+  "cases": [
+    {
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/normal-pdf-081352/normal-pdf-state.json",
+      "state": "failed",
+      "bid_id": "793187a3-56e5-466a-b5ba-6c289bf723b1",
+      "stage": "rules-and-review",
+      "failure": {
+        "stage": "rules-and-review",
+        "code": "RULE_STATEMENT_UNGROUNDED",
+        "type": "Error"
+      },
+      "review_post_attempted": true,
+      "rule_set_id": null
+    },
+    {
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/normal-pdf-082120/normal-pdf-state.json",
+      "state": "failed",
+      "bid_id": "9393df48-03fc-4f4a-847e-c09714480e68",
+      "stage": "rules-and-review",
+      "failure": {
+        "stage": "rules-and-review",
+        "code": "SOURCE_EFFECTIVITY_AMBIGUOUS",
+        "type": "Error"
+      },
+      "review_post_attempted": true,
+      "rule_set_id": "0f8708ac-50e0-4fda-aaf1-de4cf15ac4b3"
+    },
+    {
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/normal-pdf-091903/normal-pdf-state.json",
+      "state": "failed",
+      "bid_id": "8ac61fb2-2f80-448c-ba16-d28d44666ae3",
+      "stage": "rules-and-review",
+      "failure": {
+        "stage": "rules-and-review",
+        "code": "RULE_CONDITION_UNGROUNDED",
+        "type": "Error"
+      },
+      "review_post_attempted": true,
+      "rule_set_id": null
+    }
+  ],
+  "provider_succeeded_business_calls": 3,
+  "business_input_tokens": 5823,
+  "business_output_tokens": 5536,
+  "prior_probe_tokens": 143,
+  "total_including_probe_tokens": 11502,
+  "estimated_deepseek_peak_cny": "0.05634",
+  "invoice_queried": false,
+  "model_semantic_quality_qualified": false
+}

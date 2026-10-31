@@ -1,0 +1,202 @@
+{
+  "started_utc": "2026-10-31T09:18:56.671256+00:00",
+  "source": "$TASK\\tender-app-dev\\workbench",
+  "selected_case": "all",
+  "scope": "synthetic isolated offline recovery only",
+  "network": "none",
+  "models_called": false,
+  "production_credentials_read": false,
+  "software_installed": false,
+  "actual_tests_run": true,
+  "runner_exit_code": 0,
+  "remaining_service_processes": [],
+  "cases": [
+    {
+      "file": "migration-junit.xml",
+      "cases": [
+        {
+          "name": "test_actual_acl_membership_closure_keeps_nonowner_attributes",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_untrusted_privileged_or_missing_role_rejected[pg_read_all_data]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_untrusted_privileged_or_missing_role_rejected[bad;role]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_untrusted_privileged_or_missing_role_rejected[extended_recovery_owner_aaaaaaaaaaaaaaaa]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_untrusted_privileged_or_missing_role_rejected[unknown_role]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_source_privileged_attributes_never_recreated[3]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_source_privileged_attributes_never_recreated[4]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_source_privileged_attributes_never_recreated[5]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_source_privileged_attributes_never_recreated[6]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_source_privileged_attributes_never_recreated[7]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_admin_membership_rejected_instead_of_expanding_worker_power",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_malformed_role_edges_rejected[edge0]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_malformed_role_edges_rejected[edge1]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_same_or_unverified_cluster_identity_rejected[7-7]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_same_or_unverified_cluster_identity_rejected[not-an-id-8]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_initial_owner_refused_before_any_resource_creation",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_external_archive_cannot_enter_capture_path",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_modified_archive_binding_rejected_before_connections",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_nonempty_authoring_migrates_to_distinct_owned_pg17_cluster",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_activation_rejects_ddl_or_unrecognized_metadata[record0]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_activation_rejects_ddl_or_unrecognized_metadata[record1]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_activation_rejects_ddl_or_unrecognized_metadata[None]",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_projection_keeps_column_scope_and_does_not_restore_truncate",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_acl_expansion_rejected",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_api_activation_needs_original_completed_offline_verification",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        },
+        {
+          "name": "test_current_api_post_activation_old_cookie_login_reads_and_once_only_write",
+          "class": "tests.test_extended_recovery_migration_runtime",
+          "result": "passed"
+        }
+      ],
+      "original_sha256": "fb5f86889f6e2d0dd0e571f4ba383636ef2b7d8714ad901a37063da7924403d8"
+    },
+    {
+      "file": "material-junit.xml",
+      "cases": [
+        {
+          "name": "test_native_dispatch_ledger_and_private_response_bytes_survive_offline_recovery",
+          "class": "tests.test_extended_recovery_material_pg",
+          "result": "passed"
+        }
+      ],
+      "original_sha256": "432e8aeacf51d780285f5e8ce9edb29f78a84cbc8f2f43162f65af9863621de2"
+    },
+    {
+      "file": "authoring-junit.xml",
+      "cases": [
+        {
+          "name": "test_native_edited_word_all_schema_rows_objects_and_runtime_quarantine",
+          "class": "tests.test_extended_recovery_authoring_pg",
+          "result": "passed"
+        }
+      ],
+      "original_sha256": "3240c76f935c88437ae29ec84419816dd7d9686c4b92b2a742aaa88f769e6afd"
+    },
+    {
+      "file": "schema-junit.xml",
+      "cases": [
+        {
+          "name": "test_fresh_full_order_and_future_column_function_sequence_grantee_quarantine[none]",
+          "class": "tests.test_extended_recovery_pg",
+          "result": "passed"
+        },
+        {
+          "name": "test_fresh_full_order_and_future_column_function_sequence_grantee_quarantine[audit_failure]",
+          "class": "tests.test_extended_recovery_pg",
+          "result": "passed"
+        },
+        {
+          "name": "test_fresh_full_order_and_future_column_function_sequence_grantee_quarantine[new_global_write_reader]",
+          "class": "tests.test_extended_recovery_pg",
+          "result": "passed"
+        },
+        {
+          "name": "test_start_report_failure_after_actual_postmaster_start_still_stops_owned_cluster",
+          "class": "tests.test_extended_recovery_pg",
+          "result": "passed"
+        }
+      ],
+      "original_sha256": "be4bcd1a7d632f3dbe0f118cfdbf2ead70c002e2e568a2e1e72135b2580f2281"
+    }
+  ],
+  "state": "passed",
+  "cleanup_closed": true,
+  "finished_utc": "2026-10-31T09:22:19.826873+00:00"
+}

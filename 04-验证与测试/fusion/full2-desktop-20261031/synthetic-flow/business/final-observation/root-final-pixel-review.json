@@ -1,0 +1,42 @@
+{
+  "reviewer": "root_actual_image_inspection",
+  "scope": "synthetic local acceptance; existing server API with actual production frontend assets; no production or real-business qualification",
+  "viewed": [
+    {
+      "directory": "final-observation-normal-pdf-104859",
+      "files": [
+        "normal-pdf-report-final-ready-1440.png",
+        "normal-pdf-report-final-ready-390.png"
+      ],
+      "result": "pass",
+      "findings": "Report content and download controls have desktop 24px and narrow 16px inset; readable labels and no visible horizontal overflow."
+    },
+    {
+      "directory": "final-observation-conflict-pdf-105508",
+      "files": [
+        "conflict-pdf-original-page-two-1440.png",
+        "conflict-pdf-original-page-two-390.png"
+      ],
+      "result": "pass",
+      "findings": "Actual PDF physical page 2 displays Chinese text, both tables, flow diagram and footer at both widths. Original viewer controls remain visible; partial parsing warning remains explicit. This is PDF viewing, not proof of complex Word adoption."
+    },
+    {
+      "directory": "final-observation-conflict-pdf-105508",
+      "files": [
+        "conflict-pdf-report-final-ready-390.png"
+      ],
+      "result": "pass",
+      "findings": "Report form and existing download button have visible padding and readable wrapping. Historical review/input notice is visible after package binding invalidated currentness."
+    }
+  ],
+  "uncovered": [
+    "Arbitrary real tender layouts",
+    "Real model scoring quality",
+    "Production deployment",
+    "Human business sign-off"
+  ],
+  "claims": {
+    "all_product_pages_visually_accepted": false,
+    "complex_word_qualification_granted": false
+  }
+}

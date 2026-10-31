@@ -1,0 +1,29 @@
+{
+  "scope": "application storage factory/from_env/native OSS integration; synthetic only",
+  "started_utc": "2026-10-31T09:54:14.568139+00:00",
+  "credentials_exported": false,
+  "signed_urls_exported": false,
+  "model_calls": 0,
+  "retry_policy": "none",
+  "requests": 15,
+  "checks": {
+    "factory_selects_native_oss": true,
+    "isolated_prefix_bound": true,
+    "put_digest_matches": true,
+    "app_get_bytes_match": true,
+    "metadata_size_matches": true,
+    "same_content_deduplicated": true,
+    "different_content_rejected": true,
+    "conflict_did_not_overwrite": true,
+    "object_acl_private": true,
+    "anonymous_read_denied": true,
+    "signed_read_matches": true
+  },
+  "cleanup": {
+    "put_attempted": true,
+    "exact_object_absent": true
+  },
+  "test_prefix": "workbench-checks/app-live-7a3d946485134a2cb6b9fd4e31b84107/",
+  "outcome": "passed",
+  "finished_utc": "2026-10-31T09:54:15.541713+00:00"
+}

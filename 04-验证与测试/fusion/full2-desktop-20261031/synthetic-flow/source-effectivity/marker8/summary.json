@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/usr/local/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-ra",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/tmp/source-effectivity-tests",
+    "--junitxml=/evidence/native.xml",
+    "tests/test_source_effectivity_ambiguities.py::test_remaining_tender_requirements_scope_is_explicitly_partial",
+    "tests/test_source_effectivity_integration.py::test_http_remaining_tender_requirements_cannot_whole_replace",
+    "tests/test_source_effectivity_integration.py::test_http_effectivity_cookie_csrf_cas_schema_and_response_loss_replay",
+    "tests/test_source_effectivity_integration.py::test_explicit_partial_scope_cannot_be_confirmed_as_whole"
+  ],
+  "exit_code": 0,
+  "junit": {
+    "tests": 8,
+    "passed": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged": true,
+  "scope": "exact local-scope markers plus retained original-byte/CAS/replay/whole-scope subset; no model or converter execution"
+}

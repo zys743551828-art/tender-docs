@@ -1,0 +1,18 @@
+{
+  "source": "evidence-local-20261030/lifecycle-refresh-race-20261031/frontend-all-final-junit.xml",
+  "source_sha256": "95792303ac0fdc53043a653f83765d647ac8a8cf9b515d9c4325fde9bbd7b576",
+  "tests": 2011,
+  "passed": 2010,
+  "failed": 1,
+  "errors": 0,
+  "test_files": 199,
+  "failures": [
+    {
+      "classname": "src/PackageNavigationWorkspace.test.tsx",
+      "name": "keeps an unread or failed package directory unknown, with no false empty-project instruction",
+      "message": "finish is not a function"
+    }
+  ],
+  "cause": "Microtask-start prototype changed synchronous fetch startup; final fix preserves synchronous fetch and shares completion promise",
+  "business_failure_claimed": false
+}

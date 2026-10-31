@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "-k",
+        "remaining_tender_requirements_scope",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/tmp/freeze06-pytest",
+        "--junitxml=/evidence/targets.xml",
+        "tests/test_source_effectivity_ambiguities.py"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 2.2923473800001375
+    }
+  ],
+  "junit": {
+    "tests": 4,
+    "passed": 2,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged_during_run": true,
+  "scope": "explicit source ambiguity pure regression; no paid IO or service qualification"
+}

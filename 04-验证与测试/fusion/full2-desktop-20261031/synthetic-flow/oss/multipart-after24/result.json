@@ -1,0 +1,36 @@
+{
+  "scope": "native adapter only; not browser/DB/application multipart qualification",
+  "started_utc": "2026-10-31T10:19:26.041518+00:00",
+  "test_prefix": "workbench-checks/native-multipart-574fe8e34f9c41a9ab875693de55fd0f/",
+  "requests": 24,
+  "checks": {
+    "fixed_destination_and_existing_aliases_verified": true,
+    "exact_keys_previously_absent": true,
+    "completed_bytes_equal": true,
+    "completed_object_acl_private": true,
+    "completed_object_anonymous_403": true,
+    "native_size_and_sha_verified": true,
+    "aborted_object_absent": true
+  },
+  "cleanup": {
+    "abort": {
+      "upload_id_received": true,
+      "upload_id_sha256": "d402ba80af98bd93a731098309bfaf19ead50c84def98acf85a8bb97945dffa6",
+      "exact_upload_closed": true,
+      "exact_object_absent": true
+    },
+    "success": {
+      "upload_id_received": true,
+      "upload_id_sha256": "49bc3da11f880eaf131a0530c8f5bb5b9086a74dd04562ea00f94946798ef81b",
+      "exact_upload_closed": true,
+      "exact_object_absent": true
+    }
+  },
+  "model_calls": 0,
+  "credentials_exported": false,
+  "bucket_or_existing_objects_modified": false,
+  "sdk_retries": 0,
+  "cleanup_closed": true,
+  "outcome": "passed",
+  "finished_utc": "2026-10-31T10:19:26.971505+00:00"
+}

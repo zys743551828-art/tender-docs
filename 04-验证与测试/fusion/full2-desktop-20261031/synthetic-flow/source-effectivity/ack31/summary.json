@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/usr/local/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-ra",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/tmp/source-effectivity-tests",
+    "--junitxml=/evidence/native.xml",
+    "tests/test_source_effectivity_ambiguities.py",
+    "tests/test_source_effectivity_integration.py"
+  ],
+  "exit_code": 0,
+  "junit": {
+    "tests": 31,
+    "passed": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged": true,
+  "scope": "real nonowner PG/S3/HTTP decision qualification, synthetic extraction/evidence fixture; no model or converter execution"
+}
