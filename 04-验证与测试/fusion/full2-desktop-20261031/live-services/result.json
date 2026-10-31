@@ -1,0 +1,41 @@
+{
+  "scope": "synthetic provider-level integration only; no business qualification",
+  "budget_cny": 20,
+  "model_calls": 1,
+  "oss_requests": 8,
+  "model_max_input_tokens_budget": 32768,
+  "model_max_output_tokens": 128,
+  "model_peak_input_cny_per_million": 2,
+  "model_peak_output_cny_per_million": 8,
+  "model_conservative_upper_cost_cny": 0.06656,
+  "oss_reserved_cost_cny": 1,
+  "total_reserved_upper_cost_cny": 1.06656,
+  "retry_policy": "none",
+  "checks": {
+    "model_schema": true,
+    "oss_roundtrip": true,
+    "object_acl_private": true,
+    "anonymous_read_denied": true,
+    "model_to_storage": true
+  },
+  "cleanup": {
+    "created_object": true,
+    "exact_object_absent": true
+  },
+  "usage": {
+    "prompt_tokens": 123,
+    "completion_tokens": 20,
+    "total_tokens": 143,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 123
+  },
+  "model_request_id_suffix": "ddf02576",
+  "model_estimated_peak_cost_cny": 0.000406,
+  "formal_scoring_eligible": false,
+  "versioning_enabled": false,
+  "created_test_key": "workbench-checks/live-20261031-aeaddaf5fe164a9890c70ba37894f6d5/synthetic.json",
+  "oss_request_id_suffix": "30F41729",
+  "anonymous_status": 403,
+  "outcome": "passed",
+  "finished_utc": "2026-10-31T07:24:27.493782+00:00"
+}

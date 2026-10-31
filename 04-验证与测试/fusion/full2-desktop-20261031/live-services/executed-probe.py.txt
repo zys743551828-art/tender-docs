@@ -1,0 +1,157 @@
+"""One authorized synthetic provider probe. Never emit configuration or raw errors."""
+from pathlib import Path
+import datetime
+import hashlib
+import json
+import logging
+import os
+import re
+import sys
+from urllib.parse import urlsplit
+from uuid import uuid4
+
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / 'tender-app-dev/workbench'))
+logging.disable(logging.CRITICAL)
+import oss2
+import requests
+from packages.domain.providers.deepseek import DeepSeekClient
+from packages.domain.providers.oss import OssClient, SafeSession, ENDPOINT, BUCKET, REGION
+
+OUT = ROOT / 'evidence-local-20261030/live-synthetic-20261031'
+OUT.mkdir(exist_ok=True)
+marker = OUT / 'attempt-started.json'
+with marker.open('x', encoding='utf8') as f:
+    json.dump({'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'max_model_calls': 1, 'max_oss_requests': 14}, f)
+
+result = {'scope': 'synthetic provider-level integration only; no business qualification',
+          'budget_cny': 20, 'model_calls': 0, 'oss_requests': 0,
+          'model_max_input_tokens_budget': 32768, 'model_max_output_tokens': 128,
+          'model_peak_input_cny_per_million': 2, 'model_peak_output_cny_per_million': 8,
+          'model_conservative_upper_cost_cny': 0.06656, 'oss_reserved_cost_cny': 1,
+          'total_reserved_upper_cost_cny': 1.06656, 'retry_policy': 'none',
+          'checks': {}, 'cleanup': {'created_object': False, 'exact_object_absent': None}}
+native = None
+key = 'workbench-checks/live-20261031-' + uuid4().hex + '/synthetic.json'
+created = False
+put_attempted = False
+version_id = None
+
+def public_error(exc):
+    code = getattr(exc, 'code', None)
+    return code if isinstance(code, str) and re.fullmatch(r'[A-Za-z_]{1,80}', code) else type(exc).__name__
+
+def request_suffix(value):
+    return value[-8:] if isinstance(value, str) and re.fullmatch(r'[A-Za-z0-9_-]{8,200}', value) else None
+
+class CountedSession(SafeSession):
+    def do_request(self, req, timeout):
+        result['oss_requests'] += 1
+        if result['oss_requests'] > 14:
+            raise RuntimeError('OSS_REQUEST_LIMIT')
+        return super().do_request(req, timeout)
+
+try:
+    values = {}
+    for line in Path('D:/workspace/tender/.env').read_text(encoding='utf-8-sig').splitlines():
+        match = re.fullmatch(r'\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*', line)
+        if match:
+            value = match[2]
+            if value.startswith(('"', "'")):
+                if len(value) < 2 or value[-1] != value[0]:
+                    raise RuntimeError('CONFIG_QUOTING_UNSUPPORTED')
+                value = value[1:-1]
+            values[match[1]] = value
+    assert all(values.get(k) for k in ('DEEPSEEK_API_KEY', 'OSS_ACCESS_KEY_ID', 'OSS_ACCESS_KEY_SECRET'))
+    assert urlsplit(values['DEEPSEEK_BASE_URL']).hostname == 'api.deepseek.com'
+    assert values['DEEPSEEK_BASE_URL'].rstrip('/') in {'https://api.deepseek.com', 'https://api.deepseek.com/v1'}
+    assert values['OSS_REGION'] == REGION and values['OSS_BUCKET'] == BUCKET
+    assert values['DEEPSEEK_API_KEY'] == values['BIDWB_LLM_API_KEY']
+    assert values['OSS_ACCESS_KEY_ID'] == values['BIDWB_STORAGE_ACCESS_KEY_ID']
+    assert values['OSS_ACCESS_KEY_SECRET'] == values['BIDWB_STORAGE_SECRET_ACCESS_KEY']
+    # Explicit current low-cost model, with official RMB peak prices. No user config is edited.
+    client = DeepSeekClient(api_key=values['DEEPSEEK_API_KEY'], model='deepseek-flash', base_url='https://api.deepseek.com/v1')
+    schema = {'type': 'object', 'properties': {'document_kind': {'const': 'synthetic'}, 'required_certificate': {'const': 'TEST-CERT'}}, 'required': ['document_kind', 'required_certificate'], 'additionalProperties': False}
+    messages = [{'role': 'user', 'content': 'Synthetic tender test only. Required certificate: TEST-CERT. Return document_kind synthetic and required_certificate TEST-CERT as JSON.'}]
+    assert len(json.dumps({'messages': messages, 'schema': schema}).encode()) < 4096
+    result['model_calls'] = 1
+    try:
+        generation = client.generate(messages=messages, max_tokens=128, json_schema=schema)
+        result['checks']['model_schema'] = generation.data == {'document_kind': 'synthetic', 'required_certificate': 'TEST-CERT'}
+        result['usage'] = generation.usage
+        result['model_request_id_suffix'] = request_suffix(generation.request_id)
+        result['model_estimated_peak_cost_cny'] = round((generation.usage['prompt_tokens'] * 2 + generation.usage['completion_tokens'] * 8) / 1000000, 8)
+        result['formal_scoring_eligible'] = generation.formal_scoring_eligible
+        body = json.dumps(generation.data, sort_keys=True).encode()
+    except Exception as exc:
+        result['checks']['model_schema'] = False
+        result['model_error'] = public_error(exc)
+        usage = getattr(exc, 'usage', None)
+        if isinstance(usage, dict):
+            result['usage'] = {k: v for k, v in usage.items() if k in {'prompt_tokens', 'completion_tokens', 'total_tokens'} and type(v) is int}
+        body = b'{"document_kind":"synthetic","required_certificate":"TEST-CERT"}'
+    assert len(body) < 1024
+    oss2.defaults.request_retries = 0
+    native = oss2.Bucket(oss2.AuthV4(values['OSS_ACCESS_KEY_ID'], values['OSS_ACCESS_KEY_SECRET']), ENDPOINT, BUCKET, region=REGION, session=CountedSession(), connect_timeout=30)
+    # Read versioning metadata only; never list or read pre-existing objects.
+    versioning = native.get_bucket_versioning()
+    result['versioning_enabled'] = versioning.status == 'Enabled'
+    # One exact newly-created private Standard object; never inherit a public bucket ACL.
+    put_attempted = True
+    response = native.put_object(key, body, headers={'x-oss-forbid-overwrite': 'true', 'x-oss-object-acl': 'private', 'x-oss-storage-class': 'Standard', 'Content-Type': 'application/json', 'x-oss-meta-sha256': hashlib.sha256(body).hexdigest()})
+    created = True
+    version_id = response.headers.get('x-oss-version-id')
+    result['cleanup']['created_object'] = True
+    result['created_test_key'] = key
+    result['oss_request_id_suffix'] = request_suffix(response.request_id)
+    if result['versioning_enabled'] and not version_id:
+        raise RuntimeError('OWN_OBJECT_VERSION_ID_MISSING')
+    port = OssClient(native, prefix='')
+    metadata = port.head_object(Bucket=BUCKET, Key=key)
+    downloaded = port.get_object(Bucket=BUCKET, Key=key)
+    try:
+        result['checks']['oss_roundtrip'] = downloaded['Body'].read(1025) == body and metadata['ContentLength'] == len(body)
+    finally:
+        downloaded['Body'].close()
+    result['checks']['object_acl_private'] = native.get_object_acl(key).acl == 'private'
+    # Unsigned request to this exact synthetic object only; no signed URL is generated or recorded.
+    result['oss_requests'] += 1
+    with requests.get(f'https://{BUCKET}.oss-cn-hangzhou.aliyuncs.com/{key}', timeout=(5, 20), allow_redirects=False, stream=True) as response:
+        result['checks']['anonymous_read_denied'] = response.status_code == 403
+        result['anonymous_status'] = response.status_code
+    result['checks']['model_to_storage'] = result['checks']['model_schema'] and result['checks']['oss_roundtrip']
+except Exception as exc:
+    result['error'] = public_error(exc)
+finally:
+    if put_attempted and not created and native is not None:
+        # Resolve an uncertain PUT only for our cryptographically unique key and matching metadata.
+        try:
+            owned = native.head_object(key)
+            if owned.content_length == len(body) and owned.headers.get('x-oss-meta-sha256') == hashlib.sha256(body).hexdigest():
+                created = True
+                version_id = owned.headers.get('x-oss-version-id')
+                result['cleanup']['created_object'] = True
+                result['created_test_key'] = key
+            else:
+                result['cleanup']['ownership_unconfirmed'] = True
+        except oss2.exceptions.OssError as exc:
+            result['cleanup']['uncertain_put_exact_key_absent'] = exc.status == 404
+        except Exception as exc:
+            result['cleanup']['uncertain_put_error'] = public_error(exc)
+    if created and native is not None:
+        try:
+            native.delete_object(key, params={'versionId': version_id} if version_id is not None else None)
+            try:
+                native.head_object(key, params={'versionId': version_id} if version_id is not None else None)
+                result['cleanup']['exact_object_absent'] = False
+            except oss2.exceptions.OssError as exc:
+                if exc.status == 404:
+                    result['cleanup']['exact_object_absent'] = True
+                else:
+                    raise
+        except Exception as exc:
+            result['cleanup']['error'] = public_error(exc)
+    result['outcome'] = 'passed' if result['checks'] and all(result['checks'].values()) and result['cleanup']['exact_object_absent'] is True else 'failed_or_incomplete'
+    result['finished_utc'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    (OUT / 'result.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf8')
+    print(json.dumps(result, indent=2))

@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "deepseek_rmb": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "oss_examples": "https://help.aliyun.com/zh/oss/product-overview/billing-examples",
+    "oss_requests": "https://help.aliyun.com/zh/oss/product-overview/api-operation-calling-fees",
+    "oss_traffic": "https://help.aliyun.com/zh/oss/product-overview/traffic-fees"
+  },
+  "checked_date": "2026-10-31",
+  "deepseek_peak_cny_per_million": {
+    "input_cache_miss": 2,
+    "output": 8
+  },
+  "oss_official_hangzhou_example": {
+    "put_get_cny_per_10000_requests": 0.01,
+    "outbound_cny_per_gb": 0.5,
+    "standard_lrs_cny_per_gb_month": 0.15
+  },
+  "actual_model_calls": 1,
+  "actual_model_tokens": {
+    "input": 123,
+    "output": 20
+  },
+  "actual_oss_requests": 8,
+  "oss_conservative_reservation_cny": 1,
+  "model_peak_estimate_cny": 0.000406,
+  "combined_small_usage_estimate_ceiling_cny": 0.0015,
+  "combined_preexecution_reservation_cny": 1.06656,
+  "user_budget_cny": 20,
+  "billed_amount": "not_queried_estimate_only",
+  "assumptions": "Official fixed Hangzhou endpoint; private Standard object <1KiB; no acceleration, tools, search, retries, bucket mutations or existing object access; no account-wide charges included."
+}
