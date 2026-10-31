@@ -82,3 +82,12 @@ task `word-static-correction-20261031/complete-unit.xml` 与 `frozen-unit.xml` �
 ### 候选 9a15c3d：API 健康检查预算
 
 `9a15c3d989626f4ce27c035978a4b3472783c6f7` 只将 API 健康检查超时由 15 秒调整为既有公共探针的 40 秒，并补充 full 与 desktop 两个入口的配置回归。实测已有成功探针接近 15 秒、亦有超时；不能据此断言此前所有启动失败均由同一原因造成。修前新增用例三项按预期失败，修后 Linux 相关用例 112 通过、0 跳过；真实模型模式的全栈安装、业务及保留数据重启，以及本提交 CI 仍待终态。
+
+
+### 9a15c3d 技术资料包的真实阻塞
+
+本机最终候选的合成 10/14/12 三份 Word 已完成转换、采用、完整解析与两类资料包冻结；复杂图表样本的转换/版式核查通过，但正文解析仍如实报告图像与 OCR 缺口。编辑器保存恢复及 PAGE/RICH 的四个文件生成、真实下载已通过。PAGE 目录页码与章节实页范围仍为 UNKNOWN，RICH 的导航范围不等于正式业务资格。
+
+真实技术规则请求在 prepare-review 阶段返回 `DEPENDENCY_FAILURE`，尚未产生模型请求或费用。对该合成测试任务以非 owner 工作进程只读重查，`validate_frozen_input` 报 PostgreSQL `42501 InsufficientPrivilege`：当前受控 Word 来源核验读取 `design.commands`，而工作进程不具备该表 SELECT。此为产品接线缺口；不将部分通过写成整链通过，也不跳过命令回执校验或直接授予全表权限。可能的修复是经评审的窄范围 Word 采用回执视图，仍需明确允许对工作进程增加该视图的只读权限并在隔离环境测试；未对生产或现有数据库扩权。
+
+本机证据见 `evidence-local-20261030/final-technical-9a15-clarified-review/readonly-diagnosis.json`、`final-controlled-word-9a15-clarified-installed/` 与 `final-authoring-9a15-model-installed/`。同一 SHA 的保留数据重启和 CI 继续跟踪；真实模型质量、正式评分和真人签收均未验收。
