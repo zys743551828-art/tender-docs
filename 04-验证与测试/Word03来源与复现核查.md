@@ -2,6 +2,17 @@
 
 本次有限核查应用dev `283e334186cec0bfedce91585846470cea700474`，不重复已通过测试套件，不修改转换器、期望摘要或准入规则。[实际资产/源码/镜像预检证据](fusion/word03-provenance-20261030/evidence.json)。结论：宿主配套资产内容已全部对上，缺少原精确基础镜像及可定位的获取来源；当前无法构建原镜像或执行规定的真实转换。
 
+
+## 当前静态对应机制补充（abe97e0候选；正常安装及最终集成待实测）
+
+本页以下Word03来源结论与回执保留历史时点。当前Gotenberg预构建路线新增 `packages/word_intake/static_layout.py`／`word-static-correspondence/1`，新profile源码身份包含检查器；它复用现有PDFium/RICH纯检查，是受限证明适配，不是新转换器或任意Word排版保证。
+
+候选范围严格为单一显式页面section、静态正文/页眉页脚、固定原生表格及内联不透明PNG。源DOCX先过原安全准入，宏、动态域、外链不因此放开；实际PDF还须核对文字可见位置、静态stories、页边距、表格栅格/单元格、图片像素与归属、对象顺序及显式分页，并满足原字体与转换隔离/清理证明。未知或不支持结构保留gap/partial，不能以HTTP200、全文字符串相等或单测代替资格。
+
+**源码已实现不等于重新转换验收已通过。** 用新检查器重检旧SYNTHETIC PDF，只证明检查器与既有输出的对应情况，不能宣称abe97e0候选新profile重新执行DOCX→PDF成功。最终仍须从同SHA准备新profile、真实独立转换、绑定源DOCX/实际PDF/receipt，经Worker发布与API使用；本轮最终安装/业务链由唯一运行器执行，尚待回执，不预写通过。旧复杂Word partial及旧回执不回填，Word03冻结源不改。
+
+PAGE的 `one_canonical_footer_PAGE_only` 仍只允许规范页脚PAGE；`TOC_PAGE_NUMBERS_UNKNOWN` 与 `ACTUAL_SECTION_PAGE_RANGES_UNKNOWN` 不因静态适配消失。普通RICH `navigation_only` 与独立compute complete仍是不同边界。可选parser document/2接解析身份/证据通路，不代替Word采用或PAGE目录资格。本方商务／报价／资质附件接入已取消本轮交付，历史材料与检查不删除。配置见[使用说明](../使用说明.md#41-可选私有解析服务document2)。
+
 ## 原规范究竟固定什么
 
 `workbench/packages/word_intake/renderer.py:28`固定本地Docker image ID：
