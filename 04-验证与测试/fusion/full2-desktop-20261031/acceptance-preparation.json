@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-31T06:33:05.038330+00:00",
+  "app_revision": "6446ba0ad98beb46a0c3942295215aa59dbc5df5",
+  "preview": {
+    "mode": "preview_only_no_external_calls",
+    "bid_id": "00000000-0000-4000-8000-000000000001",
+    "fixture_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "command_id": null,
+    "max_invocations": 2,
+    "max_output_tokens_each": 8192,
+    "max_input_bytes_each": 24576,
+    "seconds": 180,
+    "deadline_semantics": "180s is a new-call start window; an already-started provider request keeps its native45s total timeout and bounded storage/finalization",
+    "ordinary_group_offsets_modified": false
+  },
+  "help_exit_codes": {
+    "deploy.backups.run": 0,
+    "deploy.application_recovery": 0
+  },
+  "private_configuration_read": false,
+  "provider_calls": 0,
+  "production_operations": 0,
+  "new_test_resources": 0,
+  "scope": "Public source and synthetic placeholder CLI only; not live preflight or qualification"
+}
