@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="1.856" timestamp="2026-10-31T13:22:09.346597+08:00" hostname="zhangyansong"><testcase classname="tests.test_authoring_page_dispatch" name="test_generated_build_requires_supported_matching_frozen_protocol[authoring-prebuilt-generated/1-True]" time="0.283"><failure message="assert False is True&#10; +  where False = bool([])">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025130911FD0&gt;
+declared = 'authoring-prebuilt-generated/1', expected_dispatch = True
+
+    @pytest.mark.parametrize(
+        "declared,expected_dispatch",
+        [
+            ("authoring-prebuilt-generated/1", True),
+            ("authoring-generated-sandbox/1", False),
+            ("unknown-generated-protocol/1", False),
+        ],
+    )
+    def test_generated_build_requires_supported_matching_frozen_protocol(
+        monkeypatch, declared, expected_dispatch
+    ):
+        snapshot = generated_snapshot.__wrapped__()
+        identity = prebuilt._fixed()
+        provider = {"identity": identity, "profile_digest": prebuilt.digest(identity)}
+        profile = prebuilt_generated.profile_for(provider)
+        manifest = {
+            "writer_kind": "generated_text/2",
+            "writer_digest": build_repository.generated_writer_digest(),
+            "generator_identity": generated_docx.generator_identity(),
+            "authoring_structure_digest": snapshot["authoring_structure"]["digest"],
+            "formats": ["pdf"],
+            "renderer_identity": profile,
+            "render_protocol": declared,
+        }
+        calls, stored = [], {}
+    
+        def render(source, actual_snapshot, producer, actual_profile):
+            assert source.startswith(b"PK") and actual_snapshot == snapshot
+            assert actual_profile == profile and producer
+            calls.append(declared)
+            # A failed sentinel proves routing while retaining the renderer verdict.
+            return {
+                "state": "failed",
+                "pdf": None,
+                "chain": {},
+                "gaps": ["SYNTHETIC_ROUTE_REACHED"],
+                "coverage": "failed",
+                "isolation": {},
+            }
+    
+        monkeypatch.setattr(prebuilt_dispatch, "generated", render)
+        monkeypatch.setattr(
+            build_repository.storage, "put", lambda key, data, media: stored.__setitem__(key, data)
+        )
+        monkeypatch.setattr(build_repository.storage, "get", stored.__getitem__)
+        result = build_repository.compute_prepared_build(
+            {
+                "input_id": "synthetic-routing-input",
+                "snapshot": snapshot,
+                "info": {"draft_snapshot_id": snapshot["snapshot_id"], "manifest": manifest},
+            }
+        )
+&gt;       assert bool(calls) is expected_dispatch
+E       assert False is True
+E        +  where False = bool([])
+
+tests\test_authoring_page_dispatch.py:62: AssertionError</failure></testcase><testcase classname="tests.test_authoring_page_dispatch" name="test_generated_build_requires_supported_matching_frozen_protocol[authoring-generated-sandbox/1-False]" time="0.022"><failure message="AssertionError: assert True is False&#10; +  where True = bool(['authoring-generated-sandbox/1'])">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025131C8E630&gt;
+declared = 'authoring-generated-sandbox/1', expected_dispatch = False
+
+    @pytest.mark.parametrize(
+        "declared,expected_dispatch",
+        [
+            ("authoring-prebuilt-generated/1", True),
+            ("authoring-generated-sandbox/1", False),
+            ("unknown-generated-protocol/1", False),
+        ],
+    )
+    def test_generated_build_requires_supported_matching_frozen_protocol(
+        monkeypatch, declared, expected_dispatch
+    ):
+        snapshot = generated_snapshot.__wrapped__()
+        identity = prebuilt._fixed()
+        provider = {"identity": identity, "profile_digest": prebuilt.digest(identity)}
+        profile = prebuilt_generated.profile_for(provider)
+        manifest = {
+            "writer_kind": "generated_text/2",
+            "writer_digest": build_repository.generated_writer_digest(),
+            "generator_identity": generated_docx.generator_identity(),
+            "authoring_structure_digest": snapshot["authoring_structure"]["digest"],
+            "formats": ["pdf"],
+            "renderer_identity": profile,
+            "render_protocol": declared,
+        }
+        calls, stored = [], {}
+    
+        def render(source, actual_snapshot, producer, actual_profile):
+            assert source.startswith(b"PK") and actual_snapshot == snapshot
+            assert actual_profile == profile and producer
+            calls.append(declared)
+            # A failed sentinel proves routing while retaining the renderer verdict.
+            return {
+                "state": "failed",
+                "pdf": None,
+                "chain": {},
+                "gaps": ["SYNTHETIC_ROUTE_REACHED"],
+                "coverage": "failed",
+                "isolation": {},
+            }
+    
+        monkeypatch.setattr(prebuilt_dispatch, "generated", render)
+        monkeypatch.setattr(
+            build_repository.storage, "put", lambda key, data, media: stored.__setitem__(key, data)
+        )
+        monkeypatch.setattr(build_repository.storage, "get", stored.__getitem__)
+        result = build_repository.compute_prepared_build(
+            {
+                "input_id": "synthetic-routing-input",
+                "snapshot": snapshot,
+                "info": {"draft_snapshot_id": snapshot["snapshot_id"], "manifest": manifest},
+            }
+        )
+&gt;       assert bool(calls) is expected_dispatch
+E       AssertionError: assert True is False
+E        +  where True = bool(['authoring-generated-sandbox/1'])
+
+tests\test_authoring_page_dispatch.py:62: AssertionError</failure></testcase><testcase classname="tests.test_authoring_page_dispatch" name="test_generated_build_requires_supported_matching_frozen_protocol[unknown-generated-protocol/1-False]" time="0.020" /></testsuite></testsuites>

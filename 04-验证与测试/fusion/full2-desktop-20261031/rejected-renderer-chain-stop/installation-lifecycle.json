@@ -1,0 +1,539 @@
+{
+  "scope": "Current frozen full/2 installation and lifecycle on local Windows/Docker; no model calls or production deployment",
+  "project": "tender-fusion-full-c56b8c508e34",
+  "instance_id": "c56b8c508e34453f81ff75fa54030f31",
+  "outcome": "failed",
+  "error_code": "FULL2_LIFECYCLE_UP_UNEXPECTED_EXIT",
+  "stages": {
+    "prepare": {
+      "returncode": 0,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-c56b8c508e34",
+          "services_started": 0
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "secure_up": {
+      "returncode": 0,
+      "public_events": [
+        {
+          "stage": "bootstrap_input_name",
+          "bootstrap_input_container": "tender-fusion-full-c56b8c508e34-bootstrap-94e9595ad866"
+        },
+        {
+          "ok": true,
+          "stage": "configured",
+          "plan_digest": "961fbbfb6985bcbadd055d5e90bc550aa543bde9cfe9282fe474bd86517743b8",
+          "private_values_exported": false
+        },
+        {
+          "stage": "secure_up_login",
+          "supplied_password_login": true,
+          "up_result": {
+            "project": "tender-fusion-full-c56b8c508e34",
+            "origin": "http://127.0.0.1:8080",
+            "plan_digest": "961fbbfb6985bcbadd055d5e90bc550aa543bde9cfe9282fe474bd86517743b8",
+            "private_values_exported": false,
+            "bootstrap_input_container": "tender-fusion-full-c56b8c508e34-bootstrap-94e9595ad866",
+            "word": {
+              "state": "ready",
+              "ready": true,
+              "restart_required": false,
+              "peers": {
+                "worker-document": {
+                  "container_id": "046d343f50974b1c72ea08f64b409fa6b8da127293990bb620a40d3240dcfe7a",
+                  "pid": 26144,
+                  "process_alive": true,
+                  "launcher_pid": 27512,
+                  "launcher_alive": true,
+                  "peer_running": true,
+                  "was_ready": true,
+                  "ready_record_verified": true,
+                  "summary": null,
+                  "ready": true
+                },
+                "worker-export": {
+                  "container_id": "74c1e147001a069112c3c9c692ea822e4531d1f80fee70218c555d989a10b696",
+                  "pid": 21620,
+                  "process_alive": true,
+                  "launcher_pid": 26368,
+                  "launcher_alive": true,
+                  "peer_running": true,
+                  "was_ready": true,
+                  "ready_record_verified": true,
+                  "summary": null,
+                  "ready": true
+                }
+              }
+            }
+          }
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "initial_status": {
+      "returncode": 0,
+      "seconds": 0.72,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-c56b8c508e34",
+          "action": "status",
+          "volumes_deleted": false,
+          "word": {
+            "state": "ready",
+            "ready": true,
+            "restart_required": false,
+            "peers": {
+              "worker-document": {
+                "container_id": "046d343f50974b1c72ea08f64b409fa6b8da127293990bb620a40d3240dcfe7a",
+                "pid": 26144,
+                "process_alive": true,
+                "launcher_pid": 27512,
+                "launcher_alive": true,
+                "peer_running": true,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": null,
+                "ready": true
+              },
+              "worker-export": {
+                "container_id": "74c1e147001a069112c3c9c692ea822e4531d1f80fee70218c555d989a10b696",
+                "pid": 21620,
+                "process_alive": true,
+                "launcher_pid": 26368,
+                "launcher_alive": true,
+                "peer_running": true,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": null,
+                "ready": true
+              }
+            }
+          }
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "verify": {
+      "returncode": 0,
+      "seconds": 9.41,
+      "public_events": [
+        {
+          "ok": true,
+          "runtime_uid": 65532,
+          "nonowner": true,
+          "plan_digest": "961fbbfb6985bcbadd055d5e90bc550aa543bde9cfe9282fe474bd86517743b8",
+          "same_origin_http": true,
+          "session_and_ticket_isolation": true,
+          "kafka_worker_parse": true,
+          "download_sha256": "11f129555ae700f2a0238bbf60868b2af19991f5bc050f8782b119caccc53764",
+          "physical_pages": 2,
+          "coverage": "partial",
+          "current_body_changed": false,
+          "provider_calls": 0
+        },
+        {
+          "ok": true,
+          "project": "tender-fusion-full-c56b8c508e34",
+          "synthetic_transport_verified": true,
+          "provider_calls": 0,
+          "private_values_exported": false
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "lifecycle_stop": {
+      "returncode": 0,
+      "seconds": 7.41,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-c56b8c508e34",
+          "action": "stop",
+          "volumes_deleted": false,
+          "word": {
+            "state": "unavailable",
+            "ready": false,
+            "cleanup_closed": true,
+            "peers": {
+              "worker-document": {
+                "container_id": "046d343f50974b1c72ea08f64b409fa6b8da127293990bb620a40d3240dcfe7a",
+                "pid": 26144,
+                "process_alive": false,
+                "launcher_pid": 27512,
+                "launcher_alive": false,
+                "peer_running": false,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": {
+                  "state": "failed",
+                  "cleanup_closed": true,
+                  "error_code": "WORD_EXECUTION_PEER_TMPFS_INVALID",
+                  "processed": 3
+                },
+                "ready": false,
+                "peer_exited_during_planned_stop": false,
+                "cleanup_closed": true
+              },
+              "worker-export": {
+                "container_id": "74c1e147001a069112c3c9c692ea822e4531d1f80fee70218c555d989a10b696",
+                "pid": 21620,
+                "process_alive": false,
+                "launcher_pid": 26368,
+                "launcher_alive": false,
+                "peer_running": false,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": {
+                  "state": "failed",
+                  "cleanup_closed": true,
+                  "error_code": "WORD_EXECUTION_PEER_INVALID",
+                  "processed": 3
+                },
+                "ready": false,
+                "peer_exited_during_planned_stop": true,
+                "cleanup_closed": true
+              }
+            }
+          }
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "lifecycle_up": {
+      "returncode": 2,
+      "seconds": 223.75,
+      "public_events": [
+        {
+          "ok": true,
+          "stage": "configured",
+          "plan_digest": "961fbbfb6985bcbadd055d5e90bc550aa543bde9cfe9282fe474bd86517743b8",
+          "private_values_exported": false
+        },
+        {
+          "ok": false,
+          "code": "DESKTOP_WORD_RESTART_REQUIRED"
+        }
+      ],
+      "raw_logs_retained": false
+    },
+    "final_stop": {
+      "returncode": 0,
+      "seconds": 1.45,
+      "public_events": [
+        {
+          "ok": true,
+          "project": "tender-fusion-full-c56b8c508e34",
+          "action": "stop",
+          "volumes_deleted": false,
+          "word": {
+            "state": "unavailable",
+            "ready": false,
+            "cleanup_closed": true,
+            "peers": {
+              "worker-document": {
+                "container_id": "046d343f50974b1c72ea08f64b409fa6b8da127293990bb620a40d3240dcfe7a",
+                "pid": 26144,
+                "process_alive": false,
+                "launcher_pid": 27512,
+                "launcher_alive": false,
+                "peer_running": false,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": {
+                  "state": "failed",
+                  "cleanup_closed": true,
+                  "error_code": "WORD_EXECUTION_PEER_TMPFS_INVALID",
+                  "processed": 3
+                },
+                "ready": false,
+                "peer_exited_during_planned_stop": false,
+                "cleanup_closed": true
+              },
+              "worker-export": {
+                "container_id": "74c1e147001a069112c3c9c692ea822e4531d1f80fee70218c555d989a10b696",
+                "pid": 21620,
+                "process_alive": false,
+                "launcher_pid": 26368,
+                "launcher_alive": false,
+                "peer_running": false,
+                "was_ready": true,
+                "ready_record_verified": true,
+                "summary": {
+                  "state": "failed",
+                  "cleanup_closed": true,
+                  "error_code": "WORD_EXECUTION_PEER_INVALID",
+                  "processed": 3
+                },
+                "ready": false,
+                "peer_exited_during_planned_stop": false,
+                "cleanup_closed": true
+              }
+            }
+          }
+        }
+      ],
+      "raw_logs_retained": false
+    }
+  },
+  "cleanup": {
+    "removed": [
+      {
+        "kind": "container",
+        "id": "7cf1b1a1db37efa76ea1674d3ac8025f475041de4af818a5f69647f4030ddc72",
+        "name": "/tender-fusion-full-c56b8c508e34-validation-1"
+      },
+      {
+        "kind": "container",
+        "id": "5e6400bb5838c5981b0d1ccb413f775b187ea51f798b3e50b16e53a88aed629a",
+        "name": "/tender-fusion-full-c56b8c508e34-web-1"
+      },
+      {
+        "kind": "container",
+        "id": "5b35f11badf2d85e3badec82326683382b27c5c1fb741eb6972f11d8a602d8ca",
+        "name": "/tender-fusion-full-c56b8c508e34-reconcile-1"
+      },
+      {
+        "kind": "container",
+        "id": "046d343f50974b1c72ea08f64b409fa6b8da127293990bb620a40d3240dcfe7a",
+        "name": "/tender-fusion-full-c56b8c508e34-worker-document-1"
+      },
+      {
+        "kind": "container",
+        "id": "74c1e147001a069112c3c9c692ea822e4531d1f80fee70218c555d989a10b696",
+        "name": "/tender-fusion-full-c56b8c508e34-worker-export-1"
+      },
+      {
+        "kind": "container",
+        "id": "ac936bfaa863b6cb25932b66eb4dee48b37bcdb17a0ef37a52b4864d0ab6bda6",
+        "name": "/tender-fusion-full-c56b8c508e34-relay-1"
+      },
+      {
+        "kind": "container",
+        "id": "a2d45813dd6bc2c267ee6b6005fab996ac129ede672a33c8d970392f893ab584",
+        "name": "/tender-fusion-full-c56b8c508e34-worker-comparison-1"
+      },
+      {
+        "kind": "container",
+        "id": "290f80d07d28e3817d7eab16086a8e05739fb09eb819cd71a74d3043cf46e178",
+        "name": "/tender-fusion-full-c56b8c508e34-build-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "11bcfbb24e937febca0d062534eb43c10403d62c73ee21457a29d40222c523e3",
+        "name": "/tender-fusion-full-c56b8c508e34-api-1"
+      },
+      {
+        "kind": "container",
+        "id": "e2de27fe8fad99544e4af5d23843f95c4b2f3762af4d0dd19e22b79223ccd6f2",
+        "name": "/tender-fusion-full-c56b8c508e34-word-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "175a93e87432dbdb3b23345bc6b1211445f3f602c0533a586e23c1ba046266ef",
+        "name": "/tender-fusion-full-c56b8c508e34-publish-1"
+      },
+      {
+        "kind": "container",
+        "id": "07576fd41230ee85454e3e74c359a75d60c9542e83fbd8d0997d29978a2ca48c",
+        "name": "/tender-fusion-full-c56b8c508e34-init-1"
+      },
+      {
+        "kind": "container",
+        "id": "1dce68478443f9dfd3582e9409266a720270dd1dcd7efaf21ec7a5653b8dedfc",
+        "name": "/tender-fusion-full-c56b8c508e34-postgres-1"
+      },
+      {
+        "kind": "container",
+        "id": "fc768f18532d776d3a74fb7ea57fa0b373fc2a3ba7a24a263242b5b0f5c0760e",
+        "name": "/tender-fusion-full-c56b8c508e34-kafka-1"
+      },
+      {
+        "kind": "container",
+        "id": "fb52efe75f059288df9590b6be1b9f0759f17206e82ba385a08a239e8ca333a5",
+        "name": "/tender-fusion-full-c56b8c508e34-object-store-1"
+      },
+      {
+        "kind": "container",
+        "id": "1bdfeb29ba7e7b21f14df358da1cbf219e2efcfbd7418fce9e24c6f145cf6214",
+        "name": "/tender-fusion-full-c56b8c508e34-configure-1"
+      },
+      {
+        "kind": "network",
+        "id": "eb17504e5ef8b75d388a627bca27848a04c7c071c14b829a712d954032304f60",
+        "name": "tender-fusion-full-c56b8c508e34_core"
+      },
+      {
+        "kind": "network",
+        "id": "5c4d35eaf296fea14fd15fa4f397d4fee053082fe670ff848b58ac7d99d747ac",
+        "name": "tender-fusion-full-c56b8c508e34_preview"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_api_state",
+        "name": "tender-fusion-full-c56b8c508e34_api_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_init_state",
+        "name": "tender-fusion-full-c56b8c508e34_init_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_kafka_data",
+        "name": "tender-fusion-full-c56b8c508e34_kafka_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_object_data",
+        "name": "tender-fusion-full-c56b8c508e34_object_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_owner_secret",
+        "name": "tender-fusion-full-c56b8c508e34_owner_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_postgres_data",
+        "name": "tender-fusion-full-c56b8c508e34_postgres_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_private_config",
+        "name": "tender-fusion-full-c56b8c508e34_private_config"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_profile_api",
+        "name": "tender-fusion-full-c56b8c508e34_profile_api"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_profile_controller",
+        "name": "tender-fusion-full-c56b8c508e34_profile_controller"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_profile_reconcile",
+        "name": "tender-fusion-full-c56b8c508e34_profile_reconcile"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_profile_relay",
+        "name": "tender-fusion-full-c56b8c508e34_profile_relay"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_profile_worker",
+        "name": "tender-fusion-full-c56b8c508e34_profile_worker"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_store_secret",
+        "name": "tender-fusion-full-c56b8c508e34_store_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c56b8c508e34_validation_login",
+        "name": "tender-fusion-full-c56b8c508e34_validation_login"
+      }
+    ],
+    "retained": [],
+    "word_metadata_state": "ready",
+    "word_processes": [
+      {
+        "pid": 26144,
+        "saved_identity": "windows:134378957183860502",
+        "same_process_alive": false
+      },
+      {
+        "pid": 27512,
+        "saved_identity": "windows:134378957183646275",
+        "same_process_alive": false
+      },
+      {
+        "pid": 21620,
+        "saved_identity": "windows:134378957192075110",
+        "same_process_alive": false
+      },
+      {
+        "pid": 26368,
+        "saved_identity": "windows:134378957191870439",
+        "same_process_alive": false
+      },
+      {
+        "pid": 26144,
+        "saved_identity": "windows:134378957183860502",
+        "same_process_alive": false
+      },
+      {
+        "pid": 27512,
+        "saved_identity": "windows:134378957183646275",
+        "same_process_alive": false
+      },
+      {
+        "pid": 21620,
+        "saved_identity": "windows:134378957192075110",
+        "same_process_alive": false
+      },
+      {
+        "pid": 26368,
+        "saved_identity": "windows:134378957191870439",
+        "same_process_alive": false
+      },
+      {
+        "pid": 26144,
+        "saved_identity": "windows:134378957183860502",
+        "same_process_alive": false
+      },
+      {
+        "pid": 27512,
+        "saved_identity": "windows:134378957183646275",
+        "same_process_alive": false
+      },
+      {
+        "pid": 21620,
+        "saved_identity": "windows:134378957192075110",
+        "same_process_alive": false
+      },
+      {
+        "pid": 26368,
+        "saved_identity": "windows:134378957191870439",
+        "same_process_alive": false
+      }
+    ],
+    "word_summaries": [
+      {
+        "generation": "a69dd85ed3904e2f8dfd2bf8c57c2d70",
+        "service": "worker-document",
+        "summary": {
+          "state": "failed",
+          "cleanup_closed": true,
+          "error_code": "WORD_EXECUTION_PEER_TMPFS_INVALID",
+          "processed": 3
+        }
+      },
+      {
+        "generation": "a69dd85ed3904e2f8dfd2bf8c57c2d70",
+        "service": "worker-export",
+        "summary": {
+          "state": "failed",
+          "cleanup_closed": true,
+          "error_code": "WORD_EXECUTION_PEER_INVALID",
+          "processed": 3
+        }
+      }
+    ],
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "closed": true
+  }
+}

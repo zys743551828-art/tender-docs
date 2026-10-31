@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "product_files_modified": false,
+  "new_product_tests_needed": false,
+  "reason": "No product defect observed; only independent task harness compatibility/timing corrected.",
+  "scope": "desktop nonmodal focus entry/exit, compact original/text bidirectional Tab cycles, true unfinished PDF HTTP response abort and reopen",
+  "actual_browser": "134.0.6998.35",
+  "ui_url": "http://127.0.0.1:8080/bids/cac5b2a3-e0da-49b9-a2a0-26b8ba4a469b/materials",
+  "focus_checks": [
+    {
+      "viewport": "desktop",
+      "mode": null,
+      "outbound_steps": 2,
+      "forward_steps_including_start_end": 0,
+      "reverse_steps_including_start_end": 0
+    },
+    {
+      "viewport": "390",
+      "mode": "original",
+      "outbound_steps": 0,
+      "forward_steps_including_start_end": 7,
+      "reverse_steps_including_start_end": 7
+    },
+    {
+      "viewport": "390",
+      "mode": "text",
+      "outbound_steps": 0,
+      "forward_steps_including_start_end": 8,
+      "reverse_steps_including_start_end": 8
+    }
+  ],
+  "aborts": [
+    {
+      "label": "desktop",
+      "status": 200,
+      "mime_type": "application/pdf",
+      "observed_body_bytes": 0,
+      "partial_body_bytes_claimed": false,
+      "headers_received": true,
+      "not_finished_before_close": true,
+      "cdp_canceled": true,
+      "cdp_error": "net::ERR_ABORTED",
+      "matching_playwright_requestfailed": true,
+      "header_to_abort_ms": 156.50699999991957,
+      "requests_at_close": 12,
+      "requests_after_idle": 12,
+      "idle_ms": 2300,
+      "recovered_canvas": {
+        "width": 454,
+        "height": 587,
+        "nonwhite_pixels": 999
+      }
+    },
+    {
+      "label": "390",
+      "status": 200,
+      "mime_type": "application/pdf",
+      "observed_body_bytes": 0,
+      "partial_body_bytes_claimed": false,
+      "headers_received": true,
+      "not_finished_before_close": true,
+      "cdp_canceled": true,
+      "cdp_error": "net::ERR_ABORTED",
+      "matching_playwright_requestfailed": true,
+      "header_to_abort_ms": 58.702000000039334,
+      "requests_at_close": 20,
+      "requests_after_idle": 20,
+      "idle_ms": 2300,
+      "recovered_canvas": {
+        "width": 326,
+        "height": 421,
+        "nonwhite_pixels": 603
+      }
+    }
+  ],
+  "page_errors": [],
+  "cleanup_all38_resources_absent": true,
+  "operator_known_pids_absent": true,
+  "provenance": "HEAD35b9 plus frozen host-peer working bytes2a94; no CI coverage claimed for new host deployment mode",
+  "prior_attempts": [
+    {
+      "folder": "pdf-focus-cancel-20261031-102447",
+      "passed": false,
+      "scope": "No browser or Word conversion; old3-key task equality rejected new6-key ready metadata; closed."
+    },
+    {
+      "folder": "pdf-focus-cancel-20261031-102736",
+      "passed": false,
+      "scope": "No browser or Word conversion; incorrect task Popen-PID equality rejected real Windows venv child PID; closed."
+    },
+    {
+      "folder": "pdf-focus-cancel-20261031-103043",
+      "passed": false,
+      "scope": "Desktop keyboard passed; task overrequired partial dataReceived under CDP; slow close not attempted; closed."
+    },
+    {
+      "folder": "pdf-focus-cancel-20261031-103522",
+      "passed": false,
+      "scope": "Desktop keyboard passed;20s task observation exhausted during metadata+slow response startup; close not attempted; closed."
+    }
+  ]
+}

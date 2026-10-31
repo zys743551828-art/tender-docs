@@ -1,0 +1,123 @@
+"""Frozen-source limited regression, with an explicit disposable test-tool overlay."""
+
+import datetime
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+TASK = Path(__file__).resolve().parent
+SOURCE = TASK / "tender-app-dev/workbench"
+IMAGE = "sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59"
+OUT = TASK / "evidence-local-20261030" / ("runtime-pdfium514-complete-targets-" + datetime.datetime.now(datetime.UTC).strftime("%Y%m%d-%H%M%S"))
+sys.path.insert(0, str(SOURCE))
+from deploy.disposable_docker import DockerTestRun
+
+PRODUCTION = ["deploy/" + name + ".py" for name in (
+    "word_execution_host", "fusion_word_spec", "fusion_word_runtime", "fusion_desktop_word",
+    "fusion_desktop_compose", "fusion_desktop_private", "fusion_desktop", "fusion_desktop_verify",
+)] + ["packages/word_intake/prebuilt.py", "packages/word_intake/repository.py", "packages/parsing/physical_pdf.py", "packages/authoring/rich_pdf.py"]
+TESTS = ["tests/" + name + ".py" for name in (
+    "test_word_execution_host", "test_fusion_word_spec", "test_fusion_word_runtime", "test_fusion_desktop_word",
+    "test_fusion_desktop_compose", "test_fusion_desktop_private", "test_desktop_bootstrap_input", "test_fusion_desktop_verify",
+    "test_word_prebuilt", "test_authoring_rich_renderer", "test_authoring_page_navigation", "test_document_parses",
+    "test_authoring_rich_table_pdf", "test_package_technical_assets", "test_authoring_rich",
+    "test_authoring_rich_image_order", "test_authoring_rich_image_sections", "test_authoring_rich_visibility",
+)]
+DRIVER = r'''
+import collections,hashlib,importlib.metadata,importlib.util,json,os,pathlib,subprocess,sys,time,xml.etree.ElementTree as ET
+sys.path.insert(0,'/source')
+from deploy.ci_checks import test_environment,junit_summary
+environment=test_environment();os.environ.clear();os.environ.update(environment);os.chdir('/source')
+production=PRODUCTION_LIST;tests=TEST_LIST
+paths=production+tests+['requirements.lock.txt','requirements-fusion-checks.txt','deploy/fusion_full_requirements.txt','deploy/requirements-build.lock.txt']
+fingerprints={name:hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest() for name in paths}
+import pypdfium2 as pdfium
+facts={'image_reference':IMAGE_REF,'python':sys.version,'pid':os.getpid(),'uid':os.getuid(),'gid':os.getgid(),
+       'pypdfium2':importlib.metadata.version('pypdfium2'),'pdfium':str(pdfium.PDFIUM_INFO),'reportlab_present':importlib.util.find_spec('reportlab') is not None,
+       'tools':{name:importlib.metadata.version(name) for name in ['pytest','ruff','mypy','bandit']},'source_sha256':fingerprints,
+       'business_environment_present':any(key.endswith('_DSN') or key.startswith('DEEPSEEK_') for key in environment)}
+assert facts['pypdfium2']=='5.14.0' and not facts['reportlab_present'] and not facts['business_environment_present']
+pathlib.Path('/evidence/production-runtime.json').write_text(json.dumps(facts,indent=2)+'\n')
+results=[]
+def run(label,command,env=environment):
+ started=time.monotonic();result=subprocess.run(command,env=env,capture_output=True,text=True,timeout=420,check=False)
+ pathlib.Path('/evidence',label+'.log').write_text(result.stdout+'\n'+result.stderr)
+ record={'label':label,'command':command,'exit_code':result.returncode,'elapsed_seconds':time.monotonic()-started};results.append(record);print(json.dumps(record),flush=True)
+ return result
+run('production-pip-check',[sys.executable,'-B','-m','pip','--isolated','check'])
+overlay=run('test-overlay-install',[sys.executable,'-B','-m','pip','--isolated','install','--no-index','--no-deps','--no-compile','--target','/tmp/check-tools','/wheels/reportlab-5.0.1-py3-none-any.whl'])
+assert overlay.returncode==0
+pytest_environment={**environment,'PYTHONPATH':'/tmp/check-tools:/source'}
+pytest_script="""
+import importlib.metadata,json,os,pathlib,sys
+import reportlab,pypdfium2,pytest
+facts={'pid':os.getpid(),'uid':os.getuid(),'gid':os.getgid(),'python':sys.version,'pypdfium2':importlib.metadata.version('pypdfium2'),
+       'pdfium':str(pypdfium2.PDFIUM_INFO),'reportlab_version':importlib.metadata.version('reportlab'),'reportlab_location':reportlab.__file__,
+       'overlay_scope':'this pytest process only; /tmp/check-tools is container tmpfs, not production image or host venv'}
+assert facts['reportlab_version']=='5.0.1' and facts['reportlab_location'].startswith('/tmp/check-tools/')
+pathlib.Path('/evidence/pytest-runtime.json').write_text(json.dumps(facts,indent=2)+'\\n')
+raise SystemExit(pytest.main(TEST_ARGUMENTS))
+""".replace('TEST_ARGUMENTS',repr(['-q','-ra','--tb=short','-p','no:cacheprovider','--basetemp=/tmp/pdfium514-pytest','--junitxml=/evidence/targets.xml',*tests]))
+run('pytest',[sys.executable,'-B','-c',pytest_script],pytest_environment)
+for label,command in [
+ ('ruff-check',['ruff','check','--no-cache',*production,*tests]),
+ ('ruff-format',['ruff','format','--check','--no-cache',*production,*tests]),
+ ('mypy',['mypy','--platform','linux','--cache-dir=/tmp/pdfium514-mypy',*production]),
+ ('bandit',['bandit','-q','-ll',*production]),
+]:run(label,command)
+assert importlib.util.find_spec('reportlab') is None
+same=all(hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()==value for name,value in fingerprints.items())
+perfile={}
+for case in ET.parse('/evidence/targets.xml').getroot().iter('testcase'):
+ counts=perfile.setdefault(case.attrib.get('classname','unknown'),collections.Counter())
+ counts['errors' if case.find('error') is not None else 'failures' if case.find('failure') is not None else 'skipped' if case.find('skipped') is not None else 'passed']+=1
+summary={'checks':results,'junit':junit_summary(pathlib.Path('/evidence/targets.xml')),'per_file':perfile,
+         'source_unchanged_during_run':same,'test_overlay':{'package':'reportlab','version':'5.0.1','location':'/tmp/check-tools','production_imports_unchanged':True},
+         'original_test_sources_and_assertions_unmodified':True}
+pathlib.Path('/evidence/summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps({'junit':summary['junit'],'per_file':perfile}),flush=True)
+raise SystemExit(not same or any(r['exit_code'] for r in results))
+'''.replace("PRODUCTION_LIST", repr(PRODUCTION)).replace("TEST_LIST", repr(TESTS)).replace("IMAGE_REF", repr(IMAGE))
+
+
+def main():
+    OUT.mkdir(parents=True)
+    (OUT / "runner.py.txt").write_bytes(Path(__file__).read_bytes())
+    wheels = OUT / "wheels"
+    wheels.mkdir()
+    lock = SOURCE / "requirements-fusion-checks.txt"
+    if "reportlab==5.0.1" not in lock.read_text():
+        raise RuntimeError("EXISTING_CHECK_LOCK_REQUIRED")
+    (OUT / "requirements-fusion-checks.txt").write_bytes(lock.read_bytes())
+    from deploy.word_execution_host import clean_environment
+
+    environment = clean_environment()
+    temporary = OUT / "download-tmp"
+    temporary.mkdir()
+    environment.update(WORKBENCH_ENV_FILE="explicit-test-helper-download", PYTHONDONTWRITEBYTECODE="1", TEMP=str(temporary), TMP=str(temporary))
+    command = [str(SOURCE / ".venv/Scripts/python.exe"), "-B", "-m", "pip", "--isolated", "download", "--index-url", "https://pypi.org/simple", "--no-cache-dir", "--no-deps", "--only-binary=:all:", "--disable-pip-version-check", "--dest", str(wheels), "reportlab==5.0.1"]
+    result = subprocess.run(command, env=environment, capture_output=True, text=True, check=False, timeout=120)
+    (OUT / "helper-download.log").write_text(result.stdout + "\n" + result.stderr, encoding="utf-8")
+    if result.returncode or not (wheels / "reportlab-5.0.1-py3-none-any.whl").is_file():
+        raise RuntimeError("OFFICIAL_LOCKED_TEST_HELPER_WHEEL_REQUIRED")
+    environment["DOCKER_HOST"] = "npipe:////./pipe/dockerDesktopLinuxEngine" if os.name == "nt" else "unix:///var/run/docker.sock"
+    os.environ.clear();os.environ.update(environment)
+    code = 1
+    try:
+        with DockerTestRun(OUT / "resources.json") as run:
+            mounts = []
+            for name in ("packages", "apps/api", "apps/worker", "deploy", "tests", "qa", "pyproject.toml", "requirements.lock.txt", "requirements-fusion-checks.txt", "docs/authoring-rich-static-checks/word03-base-profile.json"):
+                mounts += ["--mount", f"type=bind,source={SOURCE/name},target=/source/{name},readonly"]
+            identity = run.container(IMAGE, ["--network","none","--ipc","none","--read-only","--memory","2g","--cpus","1","--pids-limit","256","--user","65532:65532","--cap-drop","ALL","--security-opt","no-new-privileges:true","--tmpfs","/tmp:rw,exec,nosuid,nodev,size=1g,mode=1777","--mount",f"type=bind,source={OUT},target=/evidence","--mount",f"type=bind,source={wheels},target=/wheels,readonly",*mounts,"--env","WORKBENCH_ENV_FILE=explicit-pdfium514-targets","--env","PYTHONDONTWRITEBYTECODE=1","--env","PYTEST_DISABLE_PLUGIN_AUTOLOAD=1","--workdir","/source","--entrypoint","python"], ["-B","-c",DRIVER])
+            result = run._call("start","--attach",identity,timeout=600)
+            (OUT / "driver.log").write_text(result.stdout+"\n"+result.stderr,encoding="utf-8")
+            print(result.stdout,flush=True);print(result.stderr,flush=True);code=result.returncode
+    finally:
+        receipt=json.loads((OUT/'resources.json').read_text())
+        print(json.dumps({'evidence':str(OUT),'exit_code':code,'cleanup_closed':receipt['closed']}),flush=True)
+    return code
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

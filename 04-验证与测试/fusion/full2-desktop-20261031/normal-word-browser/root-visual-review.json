@@ -1,0 +1,28 @@
+{
+  "reviewer": "root",
+  "scope": "Actual freeze07 production frontend on local Windows Docker test instance, synthetic data only",
+  "images": [
+    {
+      "name": "external-preview-desktop.png",
+      "sha256": "6ae82777e527db12adf6d39b8b3ca5c445036128373ce761b2f6da7153f08afd"
+    },
+    {
+      "name": "external-preview-390.png",
+      "sha256": "d356a83b487f099b44327a75f40167e629adef936b2625c7bc66ed31fb2cb112"
+    },
+    {
+      "name": "external-390-refresh.png",
+      "sha256": "2de3e800aa11f9935c8e07ee8c472cc4b659274bd7f34b364ab2ddd07bdc9adb"
+    }
+  ],
+  "observed": [
+    "Actual PDF page visible; Chinese text rendered without replacement glyphs",
+    "Desktop panel controls and qualification notices readable",
+    "390px current adopted PDF survives refresh; original/PDF download actions remain visible",
+    "No horizontal clipping or overlapping controls observed"
+  ],
+  "limits": [
+    "A4 page fitted to narrow width is small; final content review remains a desktop operation",
+    "Does not establish real tender quality, full structured parsing or formal Word acceptance"
+  ]
+}

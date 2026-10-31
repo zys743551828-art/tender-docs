@@ -1,0 +1,200 @@
+{
+  "scope": "Current frozen full/2 installation and lifecycle on local Windows/Docker; no model calls or production deployment",
+  "project": "tender-fusion-full-c4a52ce9b41f",
+  "instance_id": "c4a52ce9b41f42e4ac2fb4b2064aa346",
+  "outcome": "failed",
+  "error_code": "SECURE_UP_OR_PASSWORD_LOGIN_FAILED",
+  "cleanup": {
+    "removed": [
+      {
+        "kind": "container",
+        "id": "e606237e989d647b3e5cd89f342f517f0c65aadce316b908f96b7c904889e49c",
+        "name": "/tender-fusion-full-c4a52ce9b41f-web-1"
+      },
+      {
+        "kind": "container",
+        "id": "51dca85108a31e607f922862fdf74a8c9725fc8226a5881dada0abcdc4dfbc8a",
+        "name": "/tender-fusion-full-c4a52ce9b41f-build-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "42163e9a37eea8817c00eb04d28987620f6f17961f7a41c60114c9d70bab21e9",
+        "name": "/tender-fusion-full-c4a52ce9b41f-api-1"
+      },
+      {
+        "kind": "container",
+        "id": "0aee33f204697d6f0334b9181457d164228a0fdffabd40b7226f7527ccdfb1e3",
+        "name": "/tender-fusion-full-c4a52ce9b41f-worker-export-1"
+      },
+      {
+        "kind": "container",
+        "id": "288a6cfcf441dc88c8c2346973d429ac5e14b5a389a1ca4207131fd1585c4b09",
+        "name": "/tender-fusion-full-c4a52ce9b41f-worker-comparison-1"
+      },
+      {
+        "kind": "container",
+        "id": "2bdbe79c8c317dd93a2154cede6d4d9ec74216a0dae71e7ef64b264aa29003a9",
+        "name": "/tender-fusion-full-c4a52ce9b41f-word-controller-1"
+      },
+      {
+        "kind": "container",
+        "id": "127c605f44cb48f1b677e9dff65f3ba795471fc3e8cc7df60bc6845bcfa2038b",
+        "name": "/tender-fusion-full-c4a52ce9b41f-relay-1"
+      },
+      {
+        "kind": "container",
+        "id": "69bbf5243189c3a26980bd2f18506aea1a9972d28b2780a1e7fb128c8b10da2f",
+        "name": "/tender-fusion-full-c4a52ce9b41f-reconcile-1"
+      },
+      {
+        "kind": "container",
+        "id": "e3e148e3b9f357b6887688d5a7e5c99dac36ceec9c068fed9bdebd3ab147f154",
+        "name": "/tender-fusion-full-c4a52ce9b41f-worker-document-1"
+      },
+      {
+        "kind": "container",
+        "id": "d62a8dbada0dea15d99fd5b2f375fcd4fd14b65d33d225ffc28813e52612c795",
+        "name": "/tender-fusion-full-c4a52ce9b41f-publish-1"
+      },
+      {
+        "kind": "container",
+        "id": "56b5043a43aa7a7967cdae267400c82c8780ab85b0ffb293a3cb5fc6368d69fa",
+        "name": "/tender-fusion-full-c4a52ce9b41f-init-1"
+      },
+      {
+        "kind": "container",
+        "id": "c8748b08dd1e3aadd0f3eb04e40138d2be8693f9ed7b6539e487ab29212f983e",
+        "name": "/tender-fusion-full-c4a52ce9b41f-postgres-1"
+      },
+      {
+        "kind": "container",
+        "id": "af9fc2aa46f764d1e367990129ada1896a5ab251c6a47cf788e07a2d08dbed64",
+        "name": "/tender-fusion-full-c4a52ce9b41f-kafka-1"
+      },
+      {
+        "kind": "container",
+        "id": "670c619bd322a4015253b4e13f340daff2f4c307f12dcfbb99eb2836ae064f3f",
+        "name": "/tender-fusion-full-c4a52ce9b41f-object-store-1"
+      },
+      {
+        "kind": "container",
+        "id": "41acf66f32241a817ff376286218d0288f72711789e88983399e729fac71cb40",
+        "name": "/tender-fusion-full-c4a52ce9b41f-configure-1"
+      },
+      {
+        "kind": "network",
+        "id": "36dd853a9b6bfe7170dc93e941023e6d10f8fc84dbb890e4e688a15ce2b1f3a2",
+        "name": "tender-fusion-full-c4a52ce9b41f_core"
+      },
+      {
+        "kind": "network",
+        "id": "76fee882da6c7d39b74e34d83762e3b682ce0f534022e937f41827b35a4d8853",
+        "name": "tender-fusion-full-c4a52ce9b41f_preview"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_api_state",
+        "name": "tender-fusion-full-c4a52ce9b41f_api_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_init_state",
+        "name": "tender-fusion-full-c4a52ce9b41f_init_state"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_kafka_data",
+        "name": "tender-fusion-full-c4a52ce9b41f_kafka_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_object_data",
+        "name": "tender-fusion-full-c4a52ce9b41f_object_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_owner_secret",
+        "name": "tender-fusion-full-c4a52ce9b41f_owner_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_postgres_data",
+        "name": "tender-fusion-full-c4a52ce9b41f_postgres_data"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_private_config",
+        "name": "tender-fusion-full-c4a52ce9b41f_private_config"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_profile_api",
+        "name": "tender-fusion-full-c4a52ce9b41f_profile_api"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_profile_controller",
+        "name": "tender-fusion-full-c4a52ce9b41f_profile_controller"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_profile_reconcile",
+        "name": "tender-fusion-full-c4a52ce9b41f_profile_reconcile"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_profile_relay",
+        "name": "tender-fusion-full-c4a52ce9b41f_profile_relay"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_profile_worker",
+        "name": "tender-fusion-full-c4a52ce9b41f_profile_worker"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_store_secret",
+        "name": "tender-fusion-full-c4a52ce9b41f_store_secret"
+      },
+      {
+        "kind": "volume",
+        "id": "tender-fusion-full-c4a52ce9b41f_validation_login",
+        "name": "tender-fusion-full-c4a52ce9b41f_validation_login"
+      }
+    ],
+    "retained": [],
+    "word_metadata_state": "failed",
+    "word_processes": [
+      {
+        "pid": 27464,
+        "saved_identity": "windows:134378941594834712",
+        "same_process_alive": false
+      }
+    ],
+    "word_summaries": [
+      {
+        "generation": "c5634032d5de4366aafa1945f4002af1",
+        "service": "worker-document",
+        "summary": {
+          "state": "failed",
+          "cleanup_closed": true,
+          "error_code": "WORD_EXECUTION_PEER_INVALID",
+          "processed": 0
+        }
+      }
+    ],
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "closed": true
+  },
+  "bootstrap_input_container": {
+    "name": "tender-fusion-full-c4a52ce9b41f-bootstrap-537e613b5c0c",
+    "exact_absent_after_up": true,
+    "oneoff_requested_rm": true
+  },
+  "qualification": "rejected_before_Word_ready; no Word conversion or login claim",
+  "notes": "Original manager cleanup_closed=false for an unpublished interpreter PID is retained inside the resource receipt; exact independent resource closure is true."
+}

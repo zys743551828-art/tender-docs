@@ -1,0 +1,553 @@
+[
+  {
+    "viewport": "desktop",
+    "expected": "nonmodal keyboard exit and return",
+    "initial": {
+      "id": 1,
+      "tag": "BUTTON",
+      "text": "关闭原件",
+      "inside_panel": true,
+      "inside_surface": true,
+      "visible": true,
+      "focus_visible": false,
+      "bounds": {
+        "left": 1338,
+        "right": 1424,
+        "top": 16,
+        "bottom": 56
+      }
+    },
+    "outbound": [
+      {
+        "id": 2,
+        "tag": "DIV",
+        "text": "调整来源面板宽度",
+        "inside_panel": false,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 912,
+          "right": 924,
+          "top": 0,
+          "bottom": 1100
+        }
+      },
+      {
+        "id": 3,
+        "tag": "BUTTON",
+        "text": "选择整包继续核查",
+        "inside_panel": false,
+        "inside_surface": false,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 277,
+          "right": 381,
+          "top": 988.0625,
+          "bottom": 1015.5625
+        }
+      }
+    ],
+    "inbound": [
+      {
+        "id": 2,
+        "tag": "DIV",
+        "text": "调整来源面板宽度",
+        "inside_panel": false,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 912,
+          "right": 924,
+          "top": 0,
+          "bottom": 1100
+        }
+      },
+      {
+        "id": 1,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 1338,
+          "right": 1424,
+          "top": 16,
+          "bottom": 56
+        }
+      }
+    ]
+  },
+  {
+    "viewport": "390",
+    "mode": "original",
+    "expected": "modal bidirectional wrap",
+    "forward": [
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": false,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      },
+      {
+        "id": 5,
+        "tag": "A",
+        "text": "查看对应Word原件与转换状态",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 15,
+          "right": 164,
+          "top": 142.765625,
+          "bottom": 161.453125
+        }
+      },
+      {
+        "id": 6,
+        "tag": "SELECT",
+        "text": "1",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 182,
+          "right": 247,
+          "top": 299.234375,
+          "bottom": 333.234375
+        }
+      },
+      {
+        "id": 7,
+        "tag": "BUTTON",
+        "text": "下载资料原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 288,
+          "right": 378,
+          "top": 303.234375,
+          "bottom": 329.234375
+        }
+      },
+      {
+        "id": 8,
+        "tag": "BUTTON",
+        "text": "原页",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 191,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 9,
+        "tag": "BUTTON",
+        "text": "解析文本",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 199,
+          "right": 374,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      }
+    ],
+    "reverse": [
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      },
+      {
+        "id": 9,
+        "tag": "BUTTON",
+        "text": "解析文本",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 199,
+          "right": 374,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 8,
+        "tag": "BUTTON",
+        "text": "原页",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 191,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 7,
+        "tag": "BUTTON",
+        "text": "下载资料原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 288,
+          "right": 378,
+          "top": 303.234375,
+          "bottom": 329.234375
+        }
+      },
+      {
+        "id": 6,
+        "tag": "SELECT",
+        "text": "1",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 182,
+          "right": 247,
+          "top": 299.234375,
+          "bottom": 333.234375
+        }
+      },
+      {
+        "id": 5,
+        "tag": "A",
+        "text": "查看对应Word原件与转换状态",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 15,
+          "right": 164,
+          "top": 142.765625,
+          "bottom": 161.453125
+        }
+      },
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      }
+    ]
+  },
+  {
+    "viewport": "390",
+    "mode": "text",
+    "expected": "modal bidirectional wrap",
+    "forward": [
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": false,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      },
+      {
+        "id": 5,
+        "tag": "A",
+        "text": "查看对应Word原件与转换状态",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 15,
+          "right": 164,
+          "top": 142.765625,
+          "bottom": 161.453125
+        }
+      },
+      {
+        "id": 6,
+        "tag": "SELECT",
+        "text": "1",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 182,
+          "right": 247,
+          "top": 299.234375,
+          "bottom": 333.234375
+        }
+      },
+      {
+        "id": 7,
+        "tag": "BUTTON",
+        "text": "下载资料原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 288,
+          "right": 378,
+          "top": 303.234375,
+          "bottom": 329.234375
+        }
+      },
+      {
+        "id": 8,
+        "tag": "BUTTON",
+        "text": "原页",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 191,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 9,
+        "tag": "BUTTON",
+        "text": "解析文本",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 199,
+          "right": 374,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 10,
+        "tag": "SUMMARY",
+        "text": "文件身份",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 374,
+          "top": 676.59375,
+          "bottom": 692.59375
+        }
+      },
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      }
+    ],
+    "reverse": [
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      },
+      {
+        "id": 10,
+        "tag": "SUMMARY",
+        "text": "文件身份",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 374,
+          "top": 676.59375,
+          "bottom": 692.59375
+        }
+      },
+      {
+        "id": 9,
+        "tag": "BUTTON",
+        "text": "解析文本",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 199,
+          "right": 374,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 8,
+        "tag": "BUTTON",
+        "text": "原页",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 16,
+          "right": 191,
+          "top": 446.015625,
+          "bottom": 482.015625
+        }
+      },
+      {
+        "id": 7,
+        "tag": "BUTTON",
+        "text": "下载资料原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 288,
+          "right": 378,
+          "top": 303.234375,
+          "bottom": 329.234375
+        }
+      },
+      {
+        "id": 6,
+        "tag": "SELECT",
+        "text": "1",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 182,
+          "right": 247,
+          "top": 299.234375,
+          "bottom": 333.234375
+        }
+      },
+      {
+        "id": 5,
+        "tag": "A",
+        "text": "查看对应Word原件与转换状态",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 15,
+          "right": 164,
+          "top": 142.765625,
+          "bottom": 161.453125
+        }
+      },
+      {
+        "id": 4,
+        "tag": "BUTTON",
+        "text": "关闭原件",
+        "inside_panel": true,
+        "inside_surface": true,
+        "visible": true,
+        "focus_visible": true,
+        "bounds": {
+          "left": 318,
+          "right": 378,
+          "top": 12,
+          "bottom": 44
+        }
+      }
+    ]
+  }
+]

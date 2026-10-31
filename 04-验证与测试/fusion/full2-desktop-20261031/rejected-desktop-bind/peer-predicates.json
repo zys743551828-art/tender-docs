@@ -1,0 +1,84 @@
+{
+  "container_id": "e3e148e3b9f357b6887688d5a7e5c99dac36ceec9c068fed9bdebd3ab147f154",
+  "checks": {
+    "id": true,
+    "running": true,
+    "user": true,
+    "unprivileged": true,
+    "readonly": true,
+    "labels": {
+      "tender.desktop.instance": true,
+      "tender.word.version": true,
+      "tender.word.plan": true,
+      "tender.word.deployment": true,
+      "com.docker.compose.project": true,
+      "com.docker.compose.service": true
+    },
+    "mounts_list": true,
+    "tmpfs_dict": true,
+    "tmpfs_declared": true,
+    "no_tmpfs_shadow": true,
+    "no_socket": true,
+    "no_shadow_or_npipe_or_runtime_bind": false
+  },
+  "actual_user": "65532:65532",
+  "tmpfs_key_present": true,
+  "tmpfs": {
+    "/tmp": "rw,nosuid,nodev,size=512m,mode=1777"
+  },
+  "mounts": [
+    {
+      "Type": "volume",
+      "Source": "/var/lib/docker/volumes/tender-fusion-full-c4a52ce9b41f_profile_worker/_data",
+      "Destination": "/runtime",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\deploy",
+      "Destination": "/workspace/deploy",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/c/Users/74355/Documents/Codex/2026-10-30/task/.tools/f2/workbench/packages",
+      "Destination": "/workspace/packages",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\pyproject.toml",
+      "Destination": "/workspace/pyproject.toml",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\requirements.lock.txt",
+      "Destination": "/workspace/requirements.lock.txt",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\apps\\api",
+      "Destination": "/workspace/apps/api",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\apps\\worker",
+      "Destination": "/workspace/apps/worker",
+      "RW": false
+    }
+  ],
+  "expected_labels": {
+    "tender.desktop.instance": "c4a52ce9b41f42e4ac2fb4b2064aa346",
+    "tender.word.version": "word-conversion-execution/2",
+    "tender.word.plan": "ce54b9615c26043b7e05ac01f347c81806c31fcb0571033b0079527f9b15496a",
+    "tender.word.deployment": "f277960aeb604ca2837817490742b290",
+    "com.docker.compose.project": "tender-fusion-full-c4a52ce9b41f",
+    "com.docker.compose.service": "worker-document"
+  },
+  "formatted_inspect_returncode": 0,
+  "formatted_error_missing_tmpfs": false,
+  "raw_logs_retained": false
+}

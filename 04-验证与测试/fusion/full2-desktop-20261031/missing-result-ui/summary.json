@@ -1,0 +1,51 @@
+{
+  "focused_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "eslint": 0,
+  "prettier": 0,
+  "standard_web_build": 0,
+  "node_build": "24.22.2",
+  "active_dist_files": 399,
+  "active_dist_unchanged": true,
+  "new_dist_files": 399,
+  "new_index_sha256": "79118a31b6e5109b9847ba669d96748c98b9eedef76769d395be9201eefd682a",
+  "source_sha256": {
+    "WordOriginals.tsx": "369e22da591ceefcb6b01f3130b76a243d9a63759fd53c6c89e7ff51eb5af399",
+    "WordOriginals.test.tsx": "546c8c0f5011270f39cb6facc0f7ba967c58ac53b2273086253c570b8a036898"
+  },
+  "production_assets_contain_neutral_text": true,
+  "production_assets_old_claim_absent": true,
+  "browser_replay": {
+    "browser": "134.0.6998.35",
+    "scope": "Captured synthetic state UI replay only, not business E2E",
+    "results": [
+      {
+        "width": 1440,
+        "details_keyboard_open_close": true,
+        "focus_retained": true,
+        "old_claim_absent": true,
+        "no_horizontal_overflow": true
+      },
+      {
+        "width": 390,
+        "details_keyboard_open_close": true,
+        "focus_retained": true,
+        "old_claim_absent": true,
+        "no_horizontal_overflow": true
+      }
+    ]
+  },
+  "visual_review": {
+    "actual_images_viewed": [
+      "replay-1440.png",
+      "replay-1440-details.png",
+      "replay-390.png",
+      "replay-390-details.png"
+    ],
+    "finding": "Neutral hint readable; details folded/open states and focus indicator visible. No horizontal overflow or clipped warning text in this synthetic card."
+  },
+  "cleanup_closed": true,
+  "business_e2e": false
+}

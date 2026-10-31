@@ -1,0 +1,59 @@
+{
+  "instance_id": "f497fd347c2c45158a5fb49436560d25",
+  "services": {
+    "web": {
+      "Id": "2fe314a8e477d5b02d951fdfffc7ac976da1a7cff3b490977b9c1ffe3b543018",
+      "ImageID": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "User": "65532:65532",
+      "Running": true,
+      "Labels": {
+        "com.docker.compose.config-hash": "1f5fc235bfd1e38292c3d28e00de17f379449ea1d41a3fac6f414bd488f2d8d9",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "api:service_healthy:false",
+        "com.docker.compose.image": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "tender-fusion-full-f497fd347c2c",
+        "com.docker.compose.project.config_files": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g\\full.compose.json",
+        "com.docker.compose.project.environment_file": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g\\compose.public.env",
+        "com.docker.compose.project.working_dir": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g",
+        "com.docker.compose.service": "web",
+        "com.docker.compose.version": "5.6.0",
+        "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>",
+        "tender.desktop.instance": "f497fd347c2c45158a5fb49436560d25"
+      }
+    },
+    "worker-export": {
+      "Id": "2aad72397b09b31801d0cf4dc82f98f23d98019ffee9f7e63b8d2b29e9cb4d44",
+      "ImageID": "sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+      "User": "65532:65532",
+      "Running": true,
+      "Labels": {
+        "com.docker.compose.config-hash": "b404cc2282a14e76693a9e238c89a4a9bf5ed9bb415a4f7eccacbebade170b37",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "publish:service_completed_successfully:false",
+        "com.docker.compose.image": "sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "tender-fusion-full-f497fd347c2c",
+        "com.docker.compose.project.config_files": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g\\full.compose.json",
+        "com.docker.compose.project.environment_file": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g\\compose.public.env",
+        "com.docker.compose.project.working_dir": "C:\\Users\\74355\\Documents\\Codex\\2026-10-30\\task\\.tools\\f2\\workbench\\.local\\full-desktop\\accept_f2g",
+        "com.docker.compose.service": "worker-export",
+        "com.docker.compose.version": "5.6.0",
+        "tender.desktop.instance": "f497fd347c2c45158a5fb49436560d25",
+        "tender.word.deployment": "dbf3a08055334f85939742b8033c23cd",
+        "tender.word.plan": "fa78bbd05dc342830cebb67ae2007dab3d112f017b4b7600eb2e7d98ca78898f",
+        "tender.word.version": "word-conversion-execution/2"
+      }
+    }
+  },
+  "host_mode_verified": "deployment",
+  "login_volume_ro": true,
+  "profile_api_not_mounted": true,
+  "origin": "http://127.0.0.1:8080",
+  "public_profile_digests": {
+    "external": "01890de1db352122cd8dfa1c21776e7e5cc603d04e321bccdb46187f2108bd77",
+    "page": "a9017e7c81912eefb1007a6180a86eb4d9720c5a3aea8ee1abd9d248c1800a60",
+    "rich": "dafd5fb7bf04c94cb61584888c0b6df61e48469978e02beb2e8dd931832c42ad"
+  },
+  "request_sha256": "b3fab2ca9b8af64fc8a431aba57a58d6af4800ebf1331f0f61dd44a8c69640fc"
+}

@@ -1,0 +1,132 @@
+{
+  "state": "completed",
+  "external_word": {
+    "state": "passed",
+    "same_origin_upload": true,
+    "resumed_existing_upload": false,
+    "converted": true,
+    "adopted": true,
+    "parse_coverage": "partial",
+    "refresh_restored": true,
+    "original_download_matches_input": true,
+    "pdf_download_matches_api_digest": true,
+    "preview_canvas": {
+      "width": 454,
+      "height": 587,
+      "nonwhite_pixels": 999
+    },
+    "narrow_refresh_restored": true,
+    "narrow_downloads_clicked": true,
+    "narrow_download_buttons": {
+      "下载Word资料原件": {
+        "x": 19,
+        "y": 466.375,
+        "width": 151,
+        "height": 40
+      },
+      "下载此Word转换的PDF": {
+        "x": 19,
+        "y": 542.375,
+        "width": 178,
+        "height": 40
+      }
+    },
+    "pdf_document_id": "54333f90-47b2-49f0-b462-2e9aff6eb511",
+    "bid_id": "04c7b90d-9182-4a08-ab0e-f38a16523349"
+  },
+  "manual_authoring": {
+    "attempted": true,
+    "manual_content": true,
+    "model_used": false,
+    "business_qualification_claimed": false,
+    "outputs": [
+      {
+        "lane": "page",
+        "state": "succeeded",
+        "build_id": "ad4aac9e-a8be-49be-a6e8-49a87e360d19",
+        "operation_id": "4bda4ecf-56bf-46b5-93f9-7f81aecd7ade",
+        "operation": {
+          "id": "4bda4ecf-56bf-46b5-93f9-7f81aecd7ade",
+          "state": "succeeded",
+          "fixed_codes": []
+        },
+        "formats": [
+          {
+            "format": "docx",
+            "state": "succeeded",
+            "document_version_id": "5a9de611-16b8-4fc3-ae4d-227b8bce3d9c",
+            "gaps": [
+              "TOC_PAGE_NUMBERS_UNKNOWN",
+              "ACTUAL_SECTION_PAGE_RANGES_UNKNOWN"
+            ]
+          },
+          {
+            "format": "pdf",
+            "state": "succeeded",
+            "document_version_id": "07ca2588-8780-4f03-9945-2791efd428fb",
+            "gaps": [
+              "TOC_PAGE_NUMBERS_UNKNOWN",
+              "ACTUAL_SECTION_PAGE_RANGES_UNKNOWN"
+            ]
+          }
+        ],
+        "layout": null
+      },
+      {
+        "lane": "rich",
+        "state": "succeeded",
+        "build_id": "edfcd951-befd-42f1-b3b7-534c6699c64c",
+        "operation_id": "a364cd66-120b-4ad7-95e7-f01fe640ece1",
+        "operation": {
+          "id": "a364cd66-120b-4ad7-95e7-f01fe640ece1",
+          "state": "succeeded",
+          "fixed_codes": []
+        },
+        "formats": [
+          {
+            "format": "docx",
+            "state": "succeeded",
+            "document_version_id": "e07e1d2d-9d8b-41fc-9e08-72e6db030083",
+            "gaps": []
+          },
+          {
+            "format": "pdf",
+            "state": "succeeded",
+            "document_version_id": "7fc653a9-3754-4232-98f4-ac08c064c639",
+            "gaps": []
+          }
+        ],
+        "layout": {
+          "scope": "navigation_only",
+          "pagination_mode": "chapter_start_new_page",
+          "state": "complete",
+          "fixed_point": true,
+          "page_count": 2,
+          "iteration_count": 2,
+          "entries": [
+            {
+              "section_id": "9f63f3a3-e100-4ac5-849e-5edf7261526c",
+              "start_page": 2,
+              "end_page": 2,
+              "printed_toc_page": 2,
+              "gaps": []
+            }
+          ],
+          "gaps": []
+        }
+      }
+    ],
+    "draft_id": "e189e911-5620-435d-86fe-a1d4f6f9f680",
+    "draft_revision": 2,
+    "prerequisites_succeeded": true,
+    "state": "succeeded",
+    "normal_export_queue_proved": true
+  },
+  "browser_version": "134.0.6998.35",
+  "ui_origin": "http://127.0.0.1:8080",
+  "model_calls": 0,
+  "credentials_exported": false,
+  "cookies_exported": false,
+  "request_bodies_exported": false,
+  "page_errors": []
+}

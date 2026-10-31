@@ -1,5 +1,5 @@
 {
-  "code_revision": "35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8",
+  "code_revision": "6446ba0ad98beb46a0c3942295215aa59dbc5df5",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -89,7 +89,7 @@
       "test": "tests/test_authoring_exact_revisions_pg.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
+      "code_sha256": "01c9ab20215b188212fe424b2eac229211336812dbb833e5f54379572dee7208",
       "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
     },
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "09de322de0a3411c66e9ddfe95907da17f27018ea9538dc2f5f316691a9fdbf5",
+      "code_sha256": "4cae76eca9078ccf55fe4eaa5d4a7d39a044c0c5cfd6731103058f219f4c9b83",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -332,7 +332,7 @@
       "test": "tests/test_authoring_exact_revisions_pg.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
+      "code_sha256": "01c9ab20215b188212fe424b2eac229211336812dbb833e5f54379572dee7208",
       "test_sha256": "d4f46d0d0af1d2f394a88d0a0a3ff2c5b02669551c7ec9165d06b72cbd3a3cf6"
     },
     {
@@ -350,7 +350,7 @@
       "test": "tests/test_authoring_rich_table_continuations.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "fab505267b53d7b9a43e505fd426ffb7963fdc98837de84fe3bb67280bdc2dc2",
+      "code_sha256": "01c9ab20215b188212fe424b2eac229211336812dbb833e5f54379572dee7208",
       "test_sha256": "8d1feaf40aea9ba49935572d4efad9ba3a5d8677f2d0db51a8367e2ea7a5009d"
     },
     {
@@ -514,8 +514,8 @@
       "test": "tests/test_word_prebuilt.py",
       "document": "04-验证与测试/Word03来源与复现核查.md",
       "acceptance": "not_accepted",
-      "code_sha256": "db1d792508708bbb1c4f1c7abffe155a536abc36bc3e644cae89c0c9404c8c39",
-      "test_sha256": "6ab0042c0f9ccb1285d37c6a905b728384609cdbb34e070e4129491042696814"
+      "code_sha256": "d486e405e42fc1be40a21302f535b69cc0ade936f7113b1b911ac8f750c66f79",
+      "test_sha256": "0b7ba47665f634abf8bbfd185e13e91c77f41b751d4deca647e9d335000cb5da"
     },
     {
       "id": "TEST-WORD-RICH-PREBUILT",
@@ -577,8 +577,8 @@
       "test": "tests/test_word_execution_host.py",
       "document": "05-技术与设计/工作台实现架构.md",
       "acceptance": "not_accepted",
-      "code_sha256": "3d2114365503b5abde03ebaa2f6f8e2db7c11703ffde07c5b506da29aa48f433",
-      "test_sha256": "a401322d08e620816580718076631b20cd76c6ef4cc73edef85c6ef4af85a878"
+      "code_sha256": "8efcee126f3ae2c04bf8ea5ae40eb19168fa8555dc10921cc0cadff8e38247ac",
+      "test_sha256": "4b111ded619adcf9b41ba398c9e79be1dd25fd8166b26aa18b42aaeb21251cbb"
     },
     {
       "id": "TEST-WORD-EXECUTION-DISPATCH",
@@ -595,8 +595,35 @@
       "test": "tests/test_fusion_desktop_verify.py",
       "document": "05-技术与设计/工作台运行与验收.md",
       "acceptance": "not_accepted",
-      "code_sha256": "1a1a774a79d438343f5eef45f952d88452f39592264f83f53ddf126abb9be97d",
+      "code_sha256": "72da55f27bc1a48b92f858f43bafbe1de7ea353e20b9d1c9094e07cd40ff8781",
       "test_sha256": "62c54865059b27e5d5c23cb3ae77b78fd98d3587dba6809bba60b2494e681435"
+    },
+    {
+      "id": "TEST-DESKTOP-WORD-BOOTSTRAP",
+      "code": "deploy/fusion_desktop_private.py",
+      "test": "tests/test_desktop_bootstrap_input.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "50c68ba1f45c31b2f20cf01dcb2dd0c7f264e234608fc5f57144521168621430",
+      "test_sha256": "5913dd89046eb4b48a9fbed5fda6f34301e499e0c4a06a5f654816d62221d36a"
+    },
+    {
+      "id": "TEST-DESKTOP-WORD-LIFECYCLE",
+      "code": "deploy/fusion_desktop_word.py",
+      "test": "tests/test_fusion_desktop_word.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "6d83255c9b10e798477cb1fa095a5d3af0c703e7f1cf62b93584e9b12da0c16f",
+      "test_sha256": "83c5f030f896cc98058c414db5bed112c01f381db074459e56f72cbd162fdcab"
+    },
+    {
+      "id": "TEST-WORD-PAGE-DISPATCH",
+      "code": "packages/authoring/build_repository.py",
+      "test": "tests/test_authoring_page_dispatch.py",
+      "document": "04-验证与测试/fusion/full2-desktop-20261031/README.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "cff310cecb8ac6ba4bc7747440030099bbf0c2c1ac8216ad2a717dcffe8a6c42",
+      "test_sha256": "150fd91c19b7fdfc776813a71faa7a167c1b423db37b0dc34061b8f866a3697d"
     }
   ]
 }

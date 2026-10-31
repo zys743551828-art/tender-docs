@@ -1,16 +1,16 @@
-> 后续开发统一使用 `dev`，跟踪 `origin/dev`。应用源码主目录为 `workbench/`；旧供体及历史分支作为来源保留。跨仓维护策略见[正式交接](https://github.com/zys743551828-art/tender-docs/blob/dev/00-项目管理/工作交接.md)。
+> 开发统一使用 `dev`，跟踪各自 `origin/dev`；应用源码在 `tender-app/workbench/`。
 
 # 项目总纲
 
-团队运行反馈见[团队运行故障排查](05-技术与设计/团队运行故障排查.md)：先区分历史 backend 与当前 workbench 的配置和启动入口；不要提交环境变量秘密或把离线兼容测试当云端验收。
+安装与操作统一见[工作台使用说明](使用说明.md)，包括固定提交、依赖与镜像、初始化、Word、模型配置、业务操作、停止和恢复边界。
 
-当前实现入口：[需求与实现追溯](02-业务与产品/实现追溯矩阵.md)、[实现架构](05-技术与设计/工作台实现架构.md)、[运行与验收](05-技术与设计/工作台运行与验收.md)。应用dev当前检查点`35b9e3c6f84a43ac79a2f21b4a3616ae378f61d8`已提交推送PDF原页兼容及Desktop验证样本依赖修复；Word v2检查点`2a64dfe`的[CI41100590565](https://github.com/zys743551828-art/tender-app/actions/runs/41100590565)已11/11成功；前一构建4108对应[CI41103933851](https://github.com/zys743551828-art/tender-app/actions/runs/41103933851)已11/11成功，终态元数据已归档。更早2db的CI41092556442已11/11成功，不与d0fb的CI41071558768混配。fusion/main保留原状，历史测试数字各按原SHA/环境读取。 188对应[CI41109541224](https://github.com/zys743551828-art/tender-app/actions/runs/41109541224)已11/11成功；当前35b9的[CI41113128132](https://github.com/zys743551828-art/tender-app/actions/runs/41113128132)已11/11成功，终态元数据随Desktop证据归档。
+当前应用提交为 [`6446ba0ad98beb46a0c3942295215aa59dbc5df5`](https://github.com/zys743551828-art/tender-app/commit/6446ba0ad98beb46a0c3942295215aa59dbc5df5)；[CI41174917023](https://github.com/zys743551828-art/tender-app/actions/runs/41174917023) 11/11 项全部成功。源码/测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`；它们不是需求签收证明。
 
-测试成功链与正式资格严格分离，见[测试专用预测认证协议](05-技术与设计/测试专用预测认证协议.md)。测试协议检查点283e334的CI九项成功、本地4671通过/2436跳过、原生11通过、前端1980通过均属历史工程结果；真实模型质量、旧Word03固定基线重放及完整用户/生产签收分别保留边界。
+本轮[Desktop full/2 工程验收](04-验证与测试/fusion/full2-desktop-20261031/README.md)已完成普通安装、真实 Word/PAGE/RICH 路径、桌面与窄屏预览下载及既定生命周期矩阵。使用官方 Gotenberg 预构建镜像；旧 Word03 [来源记录](04-验证与测试/Word03来源与复现核查.md)保留原身份，新版本独立验收。PAGE 的目录/章节页范围未知提示继续保留，RICH 仅在已核模式与样本范围内成立。
 
-当前Word使用官方Gotenberg预构建组件和`word-conversion-execution/2`：生产、准入、字体/PDF资格与RICH目录循环在Linux Worker执行，宿主只转换并返回原始事实。[PAGE/RICH实测与四PNG复核](04-验证与测试/fusion/word-prebuilt-20261030/conversion-v2-authoring/README.md)、[五容器真实浏览器链](04-验证与测试/fusion/word-prebuilt-20261030/conversion-v2-browser/README.md)已归档；原full/1尚未装配新入口，后续full/2需版本化验收。旧Word03身份及其[来源核查](04-验证与测试/Word03来源与复现核查.md)保留，不以找回旧镜像作为新版前置。
+正式架构见[工作台实现架构](05-技术与设计/工作台实现架构.md)，启动边界见[运行与验收](05-技术与设计/工作台运行与验收.md)，历史 backend 与当前 workbench 的配置区分见[团队排障](05-技术与设计/团队运行故障排查.md)。[FR006原生联合证据](04-验证与测试/报价历史原生验收.md)及其他历史测试数继续按原提交/环境解读。
 
-FR-006报价历史倒序缺陷已修正，新增[真实PG/S3与界面验收](04-验证与测试/报价历史原生验收.md)，独立定向聚合11通过；本轮应用99c8dfc的[CI 41000747338十项全部成功](https://github.com/zys743551828-art/tender-app/actions/runs/41000747338)，合成机制和真人/真实条款签收分别记录。
+真实模型质量、复杂真实标书、生产迁移/恢复和真人业务签收仍依正式条件完成；合成机制、测试专用预测协议和 CI 成功不能替代这些条件。五仓已整理当前入口，历史源码与必要验收证据保留来源，未改写 Git 历史。
 
 文档编号：GOV-000  
 类型：项目规划

@@ -1,0 +1,21 @@
+{
+  "reviewer": "local_config_audit",
+  "actual_view_images": [
+    "focus-desktop-exit.png",
+    "focus-desktop-return.png",
+    "focus-390-original-forward-wrap.png",
+    "focus-390-text-reverse-wrap.png",
+    "slow-desktop-pending.png",
+    "slow-390-pending.png",
+    "preview-recover-desktop-canvas.png",
+    "preview-recover-390-canvas.png",
+    "preview-slow-390-focus-return.png"
+  ],
+  "observations": "Visible focus rings; desktop nonmodal focus can leave/reenter; compact source/text controls and close remain readable; actual pending loading and restored canvas visible; no observed horizontal overflow/occlusion; partial and Word-not-qualified notices retained.",
+  "root_review_reference": "root-visual-review.json",
+  "boundaries": [
+    "A4 fit-width small text is the existing sample scale, not proof of arbitrary complex layout or zoom",
+    "actual pending HTTP response canceled; observed body bytes0, no partial-body-byte claim",
+    "only captured viewport states reviewed"
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "checks": [
+    {
+      "label": "production-pip-check",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6969162950000003
+    },
+    {
+      "label": "test-overlay-install",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--no-compile",
+        "--target",
+        "/tmp/check-tools",
+        "/wheels/reportlab-5.0.1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.8345171060000007
+    },
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-c",
+        "\nimport importlib.metadata,json,os,pathlib,sys\nimport reportlab,pypdfium2,pytest\nfacts={'pid':os.getpid(),'uid':os.getuid(),'gid':os.getgid(),'python':sys.version,'pypdfium2':importlib.metadata.version('pypdfium2'),\n       'pdfium':str(pypdfium2.PDFIUM_INFO),'reportlab_version':importlib.metadata.version('reportlab'),'reportlab_location':reportlab.__file__,\n       'overlay_scope':'this pytest process only; /tmp/check-tools is container tmpfs, not production image or host venv'}\nassert facts['reportlab_version']=='5.0.1' and facts['reportlab_location'].startswith('/tmp/check-tools/')\npathlib.Path('/evidence/pytest-runtime.json').write_text(json.dumps(facts,indent=2)+'\\n')\nraise SystemExit(pytest.main(['-q', '-ra', '--tb=short', '-p', 'no:cacheprovider', '--basetemp=/tmp/pdfium514-pytest', '--junitxml=/evidence/targets.xml', 'tests/test_word_execution_host.py', 'tests/test_fusion_word_spec.py', 'tests/test_fusion_word_runtime.py', 'tests/test_fusion_desktop_word.py', 'tests/test_fusion_desktop_compose.py', 'tests/test_fusion_desktop_private.py', 'tests/test_desktop_bootstrap_input.py', 'tests/test_fusion_desktop_verify.py', 'tests/test_word_prebuilt.py', 'tests/test_authoring_rich_renderer.py', 'tests/test_authoring_page_navigation.py', 'tests/test_document_parses.py', 'tests/test_authoring_rich_table_pdf.py', 'tests/test_package_technical_assets.py', 'tests/test_authoring_rich.py', 'tests/test_authoring_rich_image_order.py', 'tests/test_authoring_rich_image_sections.py', 'tests/test_authoring_rich_visibility.py']))\n"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 60.429792479
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "ruff",
+        "check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "deploy/fusion_word_spec.py",
+        "deploy/fusion_word_runtime.py",
+        "deploy/fusion_desktop_word.py",
+        "deploy/fusion_desktop_compose.py",
+        "deploy/fusion_desktop_private.py",
+        "deploy/fusion_desktop.py",
+        "deploy/fusion_desktop_verify.py",
+        "packages/word_intake/prebuilt.py",
+        "packages/word_intake/repository.py",
+        "packages/parsing/physical_pdf.py",
+        "packages/authoring/rich_pdf.py",
+        "tests/test_word_execution_host.py",
+        "tests/test_fusion_word_spec.py",
+        "tests/test_fusion_word_runtime.py",
+        "tests/test_fusion_desktop_word.py",
+        "tests/test_fusion_desktop_compose.py",
+        "tests/test_fusion_desktop_private.py",
+        "tests/test_desktop_bootstrap_input.py",
+        "tests/test_fusion_desktop_verify.py",
+        "tests/test_word_prebuilt.py",
+        "tests/test_authoring_rich_renderer.py",
+        "tests/test_authoring_page_navigation.py",
+        "tests/test_document_parses.py",
+        "tests/test_authoring_rich_table_pdf.py",
+        "tests/test_package_technical_assets.py",
+        "tests/test_authoring_rich.py",
+        "tests/test_authoring_rich_image_order.py",
+        "tests/test_authoring_rich_image_sections.py",
+        "tests/test_authoring_rich_visibility.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.14937592799999777
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "deploy/fusion_word_spec.py",
+        "deploy/fusion_word_runtime.py",
+        "deploy/fusion_desktop_word.py",
+        "deploy/fusion_desktop_compose.py",
+        "deploy/fusion_desktop_private.py",
+        "deploy/fusion_desktop.py",
+        "deploy/fusion_desktop_verify.py",
+        "packages/word_intake/prebuilt.py",
+        "packages/word_intake/repository.py",
+        "packages/parsing/physical_pdf.py",
+        "packages/authoring/rich_pdf.py",
+        "tests/test_word_execution_host.py",
+        "tests/test_fusion_word_spec.py",
+        "tests/test_fusion_word_runtime.py",
+        "tests/test_fusion_desktop_word.py",
+        "tests/test_fusion_desktop_compose.py",
+        "tests/test_fusion_desktop_private.py",
+        "tests/test_desktop_bootstrap_input.py",
+        "tests/test_fusion_desktop_verify.py",
+        "tests/test_word_prebuilt.py",
+        "tests/test_authoring_rich_renderer.py",
+        "tests/test_authoring_page_navigation.py",
+        "tests/test_document_parses.py",
+        "tests/test_authoring_rich_table_pdf.py",
+        "tests/test_package_technical_assets.py",
+        "tests/test_authoring_rich.py",
+        "tests/test_authoring_rich_image_order.py",
+        "tests/test_authoring_rich_image_sections.py",
+        "tests/test_authoring_rich_visibility.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.130709662000001
+    },
+    {
+      "label": "mypy",
+      "command": [
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir=/tmp/pdfium514-mypy",
+        "deploy/word_execution_host.py",
+        "deploy/fusion_word_spec.py",
+        "deploy/fusion_word_runtime.py",
+        "deploy/fusion_desktop_word.py",
+        "deploy/fusion_desktop_compose.py",
+        "deploy/fusion_desktop_private.py",
+        "deploy/fusion_desktop.py",
+        "deploy/fusion_desktop_verify.py",
+        "packages/word_intake/prebuilt.py",
+        "packages/word_intake/repository.py",
+        "packages/parsing/physical_pdf.py",
+        "packages/authoring/rich_pdf.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.837339306999993
+    },
+    {
+      "label": "bandit",
+      "command": [
+        "bandit",
+        "-q",
+        "-ll",
+        "deploy/word_execution_host.py",
+        "deploy/fusion_word_spec.py",
+        "deploy/fusion_word_runtime.py",
+        "deploy/fusion_desktop_word.py",
+        "deploy/fusion_desktop_compose.py",
+        "deploy/fusion_desktop_private.py",
+        "deploy/fusion_desktop.py",
+        "deploy/fusion_desktop_verify.py",
+        "packages/word_intake/prebuilt.py",
+        "packages/word_intake/repository.py",
+        "packages/parsing/physical_pdf.py",
+        "packages/authoring/rich_pdf.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6371895470000055
+    }
+  ],
+  "junit": {
+    "tests": 527,
+    "passed": 527,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "per_file": {
+    "tests.test_word_execution_host": {
+      "passed": 91
+    },
+    "tests.test_fusion_word_spec": {
+      "passed": 22
+    },
+    "tests.test_fusion_word_runtime": {
+      "passed": 30
+    },
+    "tests.test_fusion_desktop_word": {
+      "passed": 37
+    },
+    "tests.test_fusion_desktop_compose": {
+      "passed": 31
+    },
+    "tests.test_fusion_desktop_private": {
+      "passed": 15
+    },
+    "tests.test_desktop_bootstrap_input": {
+      "passed": 35
+    },
+    "tests.test_fusion_desktop_verify": {
+      "passed": 1
+    },
+    "tests.test_word_prebuilt": {
+      "passed": 52
+    },
+    "tests.test_authoring_rich_renderer": {
+      "passed": 19
+    },
+    "tests.test_authoring_page_navigation": {
+      "passed": 16
+    },
+    "tests.test_document_parses": {
+      "passed": 18
+    },
+    "tests.test_authoring_rich_table_pdf": {
+      "passed": 39
+    },
+    "tests.test_package_technical_assets": {
+      "passed": 50
+    },
+    "tests.test_authoring_rich": {
+      "passed": 30
+    },
+    "tests.test_authoring_rich_image_order": {
+      "passed": 22
+    },
+    "tests.test_authoring_rich_image_sections": {
+      "passed": 11
+    },
+    "tests.test_authoring_rich_visibility": {
+      "passed": 8
+    }
+  },
+  "source_unchanged_during_run": true,
+  "test_overlay": {
+    "package": "reportlab",
+    "version": "5.0.1",
+    "location": "/tmp/check-tools",
+    "production_imports_unchanged": true
+  },
+  "original_test_sources_and_assertions_unmodified": true
+}

@@ -46,7 +46,7 @@ def check(root, docs, manifest):
                 )
         if row["acceptance"] != "not_accepted":
             raise ValueError("Acceptance requires a separate reviewed evidence record")
-        if row["id"] not in (docs / row["document"]).read_text():
+        if row["id"] not in (docs / row["document"]).read_text(encoding="utf-8"):
             raise ValueError(f"Missing documented requirement {row['id']}")
 
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     docs = Path(__file__).resolve().parents[1]
     manifest = json.loads(
-        (docs / "05-技术与设计/implementation-trace.json").read_text()
+        (docs / "05-技术与设计/implementation-trace.json").read_text(encoding="utf-8")
     )
     check(args.app.resolve(), docs, manifest)
     print(

@@ -1,0 +1,22 @@
+"""Limited PAGE dispatch + stopped mailbox regressions, no product modifications."""
+import datetime
+import run_freeze06_word_targets as base
+
+base.OUT=base.TASK/'evidence-local-20261030'/('word-page-host-final-'+datetime.datetime.now(datetime.UTC).strftime('%Y%m%d-%H%M%S'))
+base.DRIVER=base.DRIVER.replace("production=['packages/word_intake/prebuilt.py','deploy/word_execution_host.py']", "production=['packages/authoring/build_repository.py','deploy/word_execution_host.py']")
+base.DRIVER=base.DRIVER.replace("tests=['tests/test_word_prebuilt.py','tests/test_word_execution_host.py']", "tests=['tests/test_word_execution_host.py','tests/test_authoring_page_dispatch.py','tests/test_authoring_generated.py','tests/test_authoring.py::test_truncated_converter_pdf_is_failed_while_actual_word_is_retained']")
+base.DRIVER=base.DRIVER.replace('paths=production+tests',"paths=production+list(dict.fromkeys(name.split('::')[0] for name in tests))")
+base.DRIVER=base.DRIVER.replace('--no-cache\',*production,*tests','--no-cache\',*production')
+base.DRIVER=base.DRIVER.replace('only final prebuilt and host unit modules; not final DB/Word/PAGE/RICH qualification','limited host/PAGE dispatch/pure generation/truncated-PDF targets; not real converter or DB/Word qualification')
+
+class PublicFixtureRun(base.DockerTestRun):
+ def container(self,image,arguments=(),command=(),*,env=None):
+  name='docs/authoring-rich-static-checks/word03-base-profile.json'
+  assert (base.SOURCE/name).is_file()
+  arguments=[*arguments,'--mount',f'type=bind,source={base.SOURCE/name},target=/source/{name},readonly']
+  return super().container(image,arguments,command,env=env)
+
+base.DockerTestRun=PublicFixtureRun
+
+if __name__=='__main__':
+ raise SystemExit(base.main())

@@ -1,0 +1,5 @@
+* -text whitespace=cr-at-eol
+
+# Raw execution logs retain original whitespace; this applies only to archived evidence.
+*.log -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+*.xml -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

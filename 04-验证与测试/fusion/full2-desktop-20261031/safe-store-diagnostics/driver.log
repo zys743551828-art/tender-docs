@@ -1,0 +1,7 @@
+{"label": "pytest", "command": ["/usr/local/bin/python", "-B", "-m", "pytest", "-q", "-ra", "--tb=short", "-p", "no:cacheprovider", "--basetemp=/tmp/freeze06-pytest", "--junitxml=/evidence/targets.xml", "tests/test_desktop_bootstrap_input.py", "tests/test_fusion_desktop_private.py"], "exit_code": 0, "elapsed_seconds": 2.8389878010002576}
+{"label": "ruff-check", "command": ["ruff", "check", "--no-cache", "deploy/fusion_desktop_private.py"], "exit_code": 0, "elapsed_seconds": 0.038065192000431125}
+{"label": "ruff-format", "command": ["ruff", "format", "--check", "--no-cache", "deploy/fusion_desktop_private.py"], "exit_code": 0, "elapsed_seconds": 0.011861193000186177}
+{"label": "mypy", "command": ["mypy", "--platform", "linux", "--cache-dir=/tmp/freeze06-mypy", "deploy/fusion_desktop_private.py"], "exit_code": 0, "elapsed_seconds": 9.310560022000573}
+{"label": "bandit", "command": ["bandit", "-q", "-ll", "deploy/fusion_desktop_private.py"], "exit_code": 0, "elapsed_seconds": 0.3993538989998342}
+{"tests": 52, "passed": 52, "failures": 0, "errors": 0, "skipped": 0, "skip_reasons": []}
+

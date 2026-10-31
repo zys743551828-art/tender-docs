@@ -1,0 +1,74 @@
+{
+  "scope": "Local isolated normal Desktop full/2 install, real API/UI Word acceptance, and lifecycle; no production deployment or model calls",
+  "freeze": "full2-source-freeze-07.json",
+  "project": "tender-fusion-full-f497fd347c2c",
+  "runtime": "tender-workbench-runtime@sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+  "source_files": 946,
+  "frontend_files": 399,
+  "frontend_index_sha256": "79118a31b6e5109b9847ba669d96748c98b9eedef76769d395be9201eefd682a",
+  "installation": {
+    "prepare": 0,
+    "normal_up": 0,
+    "synthetic_supplied_admin_http_login": 200,
+    "initial_status": 0,
+    "normal_verify": 0,
+    "bootstrap_oneoff_exact_absent": true
+  },
+  "word_ui_qa": {
+    "reference": "../f2-normal-word-20261031-133952",
+    "external_normal_ui": "complete",
+    "normal_manual_PAGE_docx_pdf": "succeeded_navigation_unknown_gaps_preserved",
+    "normal_manual_RICH_docx_pdf": "succeeded_two_page_two_round_navigation_complete",
+    "installed_PAGE_RICH": "complete_chain_provider_digest_equal",
+    "desktop_and_390_downloads_byte_equal": true,
+    "unexpected_http_errors": 0,
+    "screenshots_actualview_count": 4,
+    "qa_cleanup": "exact_absent_confirmed_by_owner"
+  },
+  "lifecycle": {
+    "strict_normal_stop_state_stopped_cleanup_closed": true,
+    "normal_restart_same_worker_ids": true,
+    "normal_restart_fresh_generation": true,
+    "controlled_single_executor_stop_status_exit": 2,
+    "explicit_executor_recovery_status_exit": 0,
+    "executor_recovery_same_worker_ids": true,
+    "executor_recovery_fresh_generation": true,
+    "old_export_exact_absent": true,
+    "status_after_worker_recreate_exit": 2,
+    "ordinary_up_refuses_automatic_rebind_exit": 2,
+    "old_binding_retained_until_explicit_restart": true,
+    "explicit_rebind_status_exit": 0,
+    "explicit_rebind_export_id_changed": true,
+    "explicit_rebind_document_id_unchanged": true,
+    "failures": []
+  },
+  "cleanup": {
+    "closed": true,
+    "explicitly_removed": {
+      "container": 16,
+      "network": 2,
+      "volume": 14
+    },
+    "separately_auto_removed_containers": {
+      "bootstrap": true,
+      "compose_replaced_old_export": true
+    },
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "retained": [],
+    "unique_host_process_identities": 16,
+    "all_registered_host_identities_absent": true,
+    "host_summary_count": 8,
+    "all_host_summaries_cleanup_closed": true,
+    "manager_final_state": "stopped",
+    "six_fixed_images_retained": true
+  },
+  "historical_init_ClientError": "not_reproduced_this_run; prior cause remains unknown; no claimed S3 behavior repair",
+  "paid_provider_calls": 0,
+  "private_values_exported": false,
+  "product_source_changed_during_test": false,
+  "overall": "passed"
+}

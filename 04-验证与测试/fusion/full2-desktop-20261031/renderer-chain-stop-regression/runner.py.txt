@@ -1,0 +1,71 @@
+"""Frozen final renderer-chain and stopped-peer regression; only two test modules."""
+
+import datetime
+import json
+import os
+from pathlib import Path
+import sys
+
+TASK = Path(__file__).resolve().parent
+SOURCE = TASK / "tender-app-dev/workbench"
+OUT = TASK / "evidence-local-20261030" / ("word-freeze06-targets-" + datetime.datetime.now(datetime.UTC).strftime("%Y%m%d-%H%M%S"))
+IMAGE = "sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59"
+sys.path.insert(0, str(SOURCE))
+from deploy.disposable_docker import DockerTestRun
+
+DRIVER = r'''
+import hashlib,importlib.metadata,json,os,pathlib,subprocess,sys,time
+sys.path.insert(0,'/source')
+from deploy.ci_checks import test_environment,junit_summary
+environment=test_environment();os.environ.clear();os.environ.update(environment);os.chdir('/source')
+production=['packages/word_intake/prebuilt.py','deploy/word_execution_host.py']
+tests=['tests/test_word_prebuilt.py','tests/test_word_execution_host.py']
+paths=production+tests
+fingerprints={name:hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest() for name in paths}
+facts={'image_reference':IMAGE_REF,'python':sys.version,'pid':os.getpid(),'uid':os.getuid(),'gid':os.getgid(),'pypdfium2':importlib.metadata.version('pypdfium2'),'source_sha256':fingerprints}
+pathlib.Path('/evidence/runtime.json').write_text(json.dumps(facts,indent=2)+'\n')
+commands=[
+ ('pytest',[sys.executable,'-B','-m','pytest','-q','-ra','--tb=short','-p','no:cacheprovider','--basetemp=/tmp/freeze06-pytest','--junitxml=/evidence/targets.xml',*tests]),
+ ('ruff-check',['ruff','check','--no-cache',*production,*tests]),
+ ('ruff-format',['ruff','format','--check','--no-cache',*production,*tests]),
+ ('mypy',['mypy','--platform','linux','--cache-dir=/tmp/freeze06-mypy',*production]),
+ ('bandit',['bandit','-q','-ll',*production]),
+]
+results=[]
+for label,command in commands:
+ started=time.monotonic();result=subprocess.run(command,env=environment,capture_output=True,text=True,timeout=180,check=False)
+ pathlib.Path('/evidence',label+'.log').write_text(result.stdout+'\n'+result.stderr)
+ record={'label':label,'command':command,'exit_code':result.returncode,'elapsed_seconds':time.monotonic()-started};results.append(record);print(json.dumps(record),flush=True)
+same=all(hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()==value for name,value in fingerprints.items())
+summary={'checks':results,'junit':junit_summary(pathlib.Path('/evidence/targets.xml')),'source_unchanged_during_run':same,'scope':'only final prebuilt and host unit modules; not final DB/Word/PAGE/RICH qualification'}
+pathlib.Path('/evidence/summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary['junit']),flush=True)
+raise SystemExit(not same or any(result['exit_code'] for result in results))
+'''.replace("IMAGE_REF", repr(IMAGE))
+
+
+def main():
+    OUT.mkdir(parents=True)
+    (OUT / "runner.py.txt").write_bytes(Path(__file__).read_bytes())
+    from deploy.word_execution_host import clean_environment
+
+    environment = clean_environment()
+    environment.update(DOCKER_HOST="npipe:////./pipe/dockerDesktopLinuxEngine", WORKBENCH_ENV_FILE="explicit-freeze06-word-regression", PYTHONDONTWRITEBYTECODE="1")
+    os.environ.clear();os.environ.update(environment)
+    code = 1
+    try:
+        with DockerTestRun(OUT / "resources.json") as run:
+            mounts = []
+            for name in ("packages", "deploy", "tests", "pyproject.toml", "requirements.lock.txt"):
+                mounts += ["--mount", f"type=bind,source={SOURCE/name},target=/source/{name},readonly"]
+            identity = run.container(IMAGE, ["--network","none","--ipc","none","--read-only","--memory","1g","--cpus","1","--pids-limit","128","--user","65532:65532","--cap-drop","ALL","--security-opt","no-new-privileges:true","--tmpfs","/tmp:rw,nosuid,nodev,size=512m,mode=1777","--mount",f"type=bind,source={OUT},target=/evidence",*mounts,"--env","WORKBENCH_ENV_FILE=explicit-freeze06-word-regression","--env","PYTHONDONTWRITEBYTECODE=1","--env","PYTEST_DISABLE_PLUGIN_AUTOLOAD=1","--workdir","/source","--entrypoint","python"], ["-B","-c",DRIVER])
+            result=run._call('start','--attach',identity,timeout=300)
+            (OUT/'driver.log').write_text(result.stdout+'\n'+result.stderr,encoding='utf-8')
+            print(result.stdout,flush=True);print(result.stderr,flush=True);code=result.returncode
+    finally:
+        receipt=json.loads((OUT/'resources.json').read_text())
+        print(json.dumps({'evidence':str(OUT),'exit_code':code,'cleanup_closed':receipt['closed']}),flush=True)
+    return code
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

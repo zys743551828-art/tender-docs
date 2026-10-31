@@ -1,0 +1,41 @@
+{
+  "source_freeze": "full2-source-freeze-05.json",
+  "runtime": "tender-workbench-runtime@sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+  "project": "tender-fusion-full-c56b8c508e34",
+  "prepare": "passed",
+  "normal_up": "passed",
+  "supplied_synthetic_admin_login": "passed_http_200",
+  "initial_status": "passed",
+  "normal_verify": "passed",
+  "word_business_scope": {
+    "evidence": "../f2-normal-word-20261031-125726",
+    "normal_ui_external": "failed_WORD_CONVERSION_RESULT_MISSING",
+    "manual_api_draft_CAS": "passed",
+    "normal_api_page_build": "not_succeeded",
+    "installed_worker_page_rich": "internally_complete_but_chain_provider_digest_mismatch_not_final_qualification_pass"
+  },
+  "lifecycle": {
+    "normal_stop": "exit0_resources_closed_but_doc_TMPFS_INVALID_not_accepted_as_planned_stop",
+    "normal_up_after_stop": "failed_DESKTOP_WORD_RESTART_REQUIRED",
+    "single_executor_stopfile_recovery": "not_reached",
+    "worker_recreate_no_automatic_rebind": "not_reached"
+  },
+  "cleanup": {
+    "closed": true,
+    "removed": {
+      "container": 16,
+      "network": 2,
+      "volume": 14
+    },
+    "remaining": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "retained": [],
+    "all_recorded_host_identities_absent": true
+  },
+  "model_calls": 0,
+  "private_values_exported": false,
+  "source_changed_during_run": false
+}

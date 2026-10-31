@@ -1,0 +1,29 @@
+{
+  "reviewer": "local_config_audit",
+  "actual_pixels_viewed": true,
+  "files": [
+    {
+      "name": "external-desktop.png",
+      "sha256": "ecf8bb6b4fecf3878266fc46dbba927c61953c24dd5979a51031c3e1d0fc29ef"
+    },
+    {
+      "name": "external-preview-desktop.png",
+      "sha256": "6ae82777e527db12adf6d39b8b3ca5c445036128373ce761b2f6da7153f08afd"
+    },
+    {
+      "name": "external-preview-390.png",
+      "sha256": "d356a83b487f099b44327a75f40167e629adef936b2625c7bc66ed31fb2cb112"
+    },
+    {
+      "name": "external-390-refresh.png",
+      "sha256": "2de3e800aa11f9935c8e07ee8c472cc4b659274bd7f34b364ab2ddd07bdc9adb"
+    }
+  ],
+  "observations": [
+    "Desktop Word original, successful conversion/current adoption and both download controls are readable.",
+    "Desktop and390 original page show rendered synthetic Chinese content; partial parse and Word qualification boundaries remain visible.",
+    "390 refresh shows both downloadable buttons fully inside viewport with readable notices and no observed horizontal obstruction.",
+    "A4 fit-width small text is current design; arbitrary zoom, complex layouts or whole-site coverage are not claimed."
+  ],
+  "scope": "Only captured states. Tab/cancellation evidence is reused separately; not repeated in this run."
+}

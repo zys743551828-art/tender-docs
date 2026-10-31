@@ -1,0 +1,15 @@
+"""Limited safe S3 error metadata tests; no real object store or credential access."""
+import datetime
+from pathlib import Path
+import run_freeze06_word_targets as base
+
+base.OUT=base.TASK/'evidence-local-20261030'/('desktop-private-safe-diagnostics-'+datetime.datetime.now(datetime.UTC).strftime('%Y%m%d-%H%M%S'))
+base.DRIVER=base.DRIVER.replace("production=['packages/word_intake/prebuilt.py','deploy/word_execution_host.py']", "production=['deploy/fusion_desktop_private.py']")
+base.DRIVER=base.DRIVER.replace("tests=['tests/test_word_prebuilt.py','tests/test_word_execution_host.py']", "tests=['tests/test_desktop_bootstrap_input.py','tests/test_fusion_desktop_private.py']")
+base.DRIVER=base.DRIVER.replace('--no-cache\',*production,*tests','--no-cache\',*production')
+base.DRIVER=base.DRIVER.replace('only final prebuilt and host unit modules; not final DB/Word/PAGE/RICH qualification','safe diagnostic whitelist tests only; does not prove unknown S3 fault fixed')
+
+if __name__=='__main__':
+ code=base.main()
+ (base.OUT/'limited-runner.py.txt').write_bytes(Path(__file__).read_bytes())
+ raise SystemExit(code)

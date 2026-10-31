@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/tmp/freeze06-pytest",
+        "--junitxml=/evidence/targets.xml",
+        "tests/test_word_execution_host.py",
+        "tests/test_authoring_page_dispatch.py",
+        "tests/test_authoring_generated.py",
+        "tests/test_authoring.py::test_truncated_converter_pdf_is_failed_while_actual_word_is_retained"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.99452860800011
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "ruff",
+        "check",
+        "--no-cache",
+        "packages/authoring/build_repository.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.026379522999377514
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "packages/authoring/build_repository.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.02167287500014936
+    },
+    {
+      "label": "mypy",
+      "command": [
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir=/tmp/freeze06-mypy",
+        "packages/authoring/build_repository.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.426627269000164
+    },
+    {
+      "label": "bandit",
+      "command": [
+        "bandit",
+        "-q",
+        "-ll",
+        "packages/authoring/build_repository.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.4126853379993918
+    }
+  ],
+  "junit": {
+    "tests": 138,
+    "passed": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged_during_run": true,
+  "scope": "limited host/PAGE dispatch/pure generation/truncated-PDF targets; not real converter or DB/Word qualification",
+  "per_module": {
+    "tests.test_word_execution_host": {
+      "passed": 114,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "tests.test_authoring_page_dispatch": {
+      "passed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "tests.test_authoring_generated": {
+      "passed": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "tests.test_authoring": {
+      "passed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "public_fixture": {
+    "path": "docs/authoring-rich-static-checks/word03-base-profile.json",
+    "readonly_bind": true,
+    "sha256": "7faf2b4bf4a1099404b07d7bdcc6d8dc1f7d4bf6724a38fb87e7543bd24588da"
+  },
+  "source_unchanged_after_run": true,
+  "cleanup_closed": true
+}

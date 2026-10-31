@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/tmp/host-ctime-pytest",
+        "--junitxml=/evidence/host.xml",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.6723940609999772
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "ruff",
+        "check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.02829726999993909
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.018269527000029484
+    },
+    {
+      "label": "mypy",
+      "command": [
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir=/tmp/host-ctime-mypy",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.2525016359998062
+    },
+    {
+      "label": "bandit",
+      "command": [
+        "bandit",
+        "-q",
+        "-ll",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3948140869999861
+    }
+  ],
+  "junit": {
+    "tests": 102,
+    "passed": 102,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged_during_run": true,
+  "other_test_modules_executed": false
+}

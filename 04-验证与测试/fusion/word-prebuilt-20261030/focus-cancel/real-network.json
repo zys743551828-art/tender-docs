@@ -1,0 +1,121 @@
+{
+  "phase": "recover-390",
+  "transfers": [
+    {
+      "request_id": "1258.316",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "warm-desktop",
+      "started_timestamp": 1074.004097,
+      "request_event_wall_ms": 1793414562337,
+      "data_length": 17306,
+      "encoded_data_length": 17306,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1074.028491,
+      "response_event_wall_ms": 1793414562361,
+      "last_data_timestamp": 1074.02998,
+      "finished": true,
+      "finished_timestamp": 1074.02953,
+      "total_encoded_length": 17759
+    },
+    {
+      "request_id": "1258.329",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "warm-390",
+      "started_timestamp": 1077.573595,
+      "request_event_wall_ms": 1793414565906,
+      "data_length": 17306,
+      "encoded_data_length": 17306,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1077.595629,
+      "response_event_wall_ms": 1793414565928,
+      "last_data_timestamp": 1077.596383,
+      "finished": true,
+      "finished_timestamp": 1077.59592,
+      "total_encoded_length": 17759
+    },
+    {
+      "request_id": "1258.356",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-desktop",
+      "started_timestamp": 1094.31305,
+      "request_event_wall_ms": 1793414582644,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1110.422285,
+      "response_event_wall_ms": 1793414598753,
+      "failure": {
+        "canceled": true,
+        "error_text": "net::ERR_ABORTED",
+        "timestamp": 1110.578792
+      }
+    },
+    {
+      "request_id": "1258.392",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "recover-desktop",
+      "started_timestamp": 1113.200848,
+      "request_event_wall_ms": 1793414601531,
+      "data_length": 17306,
+      "encoded_data_length": 17306,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1113.228356,
+      "response_event_wall_ms": 1793414601558,
+      "last_data_timestamp": 1113.229007,
+      "finished": true,
+      "finished_timestamp": 1113.22856,
+      "total_encoded_length": 17759
+    },
+    {
+      "request_id": "1258.413",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-390",
+      "started_timestamp": 1122.287707,
+      "request_event_wall_ms": 1793414610618,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1136.930913,
+      "response_event_wall_ms": 1793414625261,
+      "failure": {
+        "canceled": true,
+        "error_text": "net::ERR_ABORTED",
+        "timestamp": 1136.989615
+      }
+    },
+    {
+      "request_id": "1258.442",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "recover-390",
+      "started_timestamp": 1139.562069,
+      "request_event_wall_ms": 1793414627892,
+      "data_length": 17306,
+      "encoded_data_length": 17306,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1139.585018,
+      "response_event_wall_ms": 1793414627915,
+      "last_data_timestamp": 1139.586181,
+      "finished": true,
+      "finished_timestamp": 1139.585722,
+      "total_encoded_length": 17759
+    }
+  ],
+  "request_failures": [
+    {
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "error_text": "net::ERR_ABORTED",
+      "phase": "slow-desktop"
+    },
+    {
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "error_text": "net::ERR_ABORTED",
+      "phase": "slow-390"
+    }
+  ]
+}

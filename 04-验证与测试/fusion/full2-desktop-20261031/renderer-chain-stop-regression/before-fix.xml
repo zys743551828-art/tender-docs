@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.905" timestamp="2026-10-31T13:02:31.285533+08:00" hostname="zhangyansong"><testcase classname="tests.test_word_prebuilt" name="test_real_ooxml_and_pdf_preserve_text_and_cleanup" time="0.477"><failure message="AssertionError: assert '24b92b2cb4c3...7db408d40080a' == 'c0c56753ae3d...b4faf0835b9b2'&#10;  &#10;  - c0c56753ae3dbf5f0ab9fab922ce0a6f8f4b8137958b6aaaf76b4faf0835b9b2&#10;  + 24b92b2cb4c3c77b71a7553781ab130eef900b4503811fbf6c97db408d40080a">runtime = namespace(profile={'identity': {'protocol': 'word-prebuilt-gotenberg/2', 'image_reference': 'gotenberg/gotenberg:8.39....'}, 'profile_digest': 'dcaf3eaae94160d79d02642edbbc5b7df2ad552c15d0b36d54aa53c89098d31d'}, events=['enter', 'cleanup'])
+tmp_path = WindowsPath('C:/Users/74355/Documents/Codex/2026-10-30/task/evidence-local-20261030/renderer-chain-before-fix-tmp/test_real_ooxml_and_pdf_preser0')
+
+    def test_real_ooxml_and_pdf_preserve_text_and_cleanup(runtime, tmp_path):
+        result = prebuilt.render(docx(), runtime.profile, receipt=tmp_path / "run.json")
+        assert result["coverage"] == "complete"
+        assert result["chain"]["pdf_digest"] == prebuilt.digest(pdf())
+&gt;       assert result["chain"]["renderer_digest"] == runtime.profile["identity"]["renderer_digest"]
+E       AssertionError: assert '24b92b2cb4c3...7db408d40080a' == 'c0c56753ae3d...b4faf0835b9b2'
+E         
+E         - c0c56753ae3dbf5f0ab9fab922ce0a6f8f4b8137958b6aaaf76b4faf0835b9b2
+E         + 24b92b2cb4c3c77b71a7553781ab130eef900b4503811fbf6c97db408d40080a
+
+tests\test_word_prebuilt.py:145: AssertionError</failure></testcase></testsuite></testsuites>

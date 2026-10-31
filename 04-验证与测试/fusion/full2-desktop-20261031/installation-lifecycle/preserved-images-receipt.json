@@ -1,0 +1,86 @@
+{
+  "images": [
+    {
+      "role": "postgres",
+      "reference": "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+      "present": true,
+      "metadata": {
+        "id": "sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d",
+        "repo_digests": [
+          "pgvector/pgvector@sha256:ac08538c6f8b9904c33c8224c5e5706dbe760aca29db1d096972b4052c22a75d"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    },
+    {
+      "role": "kafka",
+      "reference": "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+      "present": true,
+      "metadata": {
+        "id": "sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e",
+        "repo_digests": [
+          "apache/kafka@sha256:5cc2a2fd93fa2687b44015eee04fb2c3edd9e526bd64bf8bec5ff1e268772e0e"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    },
+    {
+      "role": "object_store",
+      "reference": "chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+      "present": true,
+      "metadata": {
+        "id": "sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d",
+        "repo_digests": [
+          "chrislusf/seaweedfs@sha256:4e61d15fd35994cb1e43e1e553dff106794841fd9a99ade2fc8c8bfce4d7872d"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    },
+    {
+      "role": "python",
+      "reference": "tender-workbench-runtime@sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+      "present": true,
+      "metadata": {
+        "id": "sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59",
+        "repo_digests": [
+          "tender-workbench-runtime@sha256:620f97f10e54173f1bcc574168f4626a3d07143aecc91ae038b70f733369fe59"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    },
+    {
+      "role": "web",
+      "reference": "nginx:1.30.5-alpine@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+      "present": true,
+      "metadata": {
+        "id": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+        "repo_digests": [
+          "nginx@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    },
+    {
+      "role": "word",
+      "reference": "gotenberg/gotenberg:8.39.0-libreoffice@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161",
+      "present": true,
+      "metadata": {
+        "id": "sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161",
+        "repo_digests": [
+          "gotenberg/gotenberg@sha256:298c3989049baf530afe7137b64374c22810bb863ef1ed91d256e33f335af161"
+        ],
+        "os": "linux",
+        "architecture": "amd64"
+      }
+    }
+  ],
+  "all_six_fixed_images_retained": true,
+  "cleanup_targets_only_initially_absent_exact_project_labels": true,
+  "no_image_removal_or_prune_performed": true,
+  "unrelated_volume_enumeration_or_removal_performed": false
+}

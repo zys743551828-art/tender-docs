@@ -1,0 +1,7 @@
+# PAGE dispatch and mailbox-stop regression
+
+The real normal PAGE export froze `authoring-prebuilt-generated/1`, but the high-level build handler accepted only the legacy generated protocol. The handler now accepts the two explicit generated producer protocols only when the frozen declaration matches the installed profile identity. The generator, source verification, layout inspection and publishing rules remain unchanged. A routing-only test returns a deliberately failed renderer sentinel, so it cannot manufacture PDF qualification; before the fix, the legitimate prebuilt route and a mismatched legacy declaration both failed the assertions.
+
+A later real idle stop reached a mailbox list/read operation after the Worker exited. The same exact-ID stopped observation is now applied centrally to failed mailbox execs, including verify/list/read/publish. Active, unrelated or unavailable peers retain their errors; manager admission codes were not broadened.
+
+Linux bounded regression: 138 passed, zero skipped (host114, new routing3, generated20, retained truncated-output1). Ruff, format, mypy and Bandit passed. The first harness run missed a read-only public legacy fixture and is retained as a failed execution locally; the successful run mounts that original file unchanged. Test containers were removed. Real PAGE export and the full lifecycle remain separately verified installation steps.

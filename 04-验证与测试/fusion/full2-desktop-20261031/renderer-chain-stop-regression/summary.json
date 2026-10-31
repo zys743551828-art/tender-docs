@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/tmp/freeze06-pytest",
+        "--junitxml=/evidence/targets.xml",
+        "tests/test_word_prebuilt.py",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.432241167000029
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "ruff",
+        "check",
+        "--no-cache",
+        "packages/word_intake/prebuilt.py",
+        "deploy/word_execution_host.py",
+        "tests/test_word_prebuilt.py",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04913776700004746
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "packages/word_intake/prebuilt.py",
+        "deploy/word_execution_host.py",
+        "tests/test_word_prebuilt.py",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.030901290999736375
+    },
+    {
+      "label": "mypy",
+      "command": [
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir=/tmp/freeze06-mypy",
+        "packages/word_intake/prebuilt.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.124393161000171
+    },
+    {
+      "label": "bandit",
+      "command": [
+        "bandit",
+        "-q",
+        "-ll",
+        "packages/word_intake/prebuilt.py",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.46766180400027224
+    }
+  ],
+  "junit": {
+    "tests": 158,
+    "passed": 158,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged_during_run": true,
+  "scope": "only final prebuilt and host unit modules; not final DB/Word/PAGE/RICH qualification"
+}

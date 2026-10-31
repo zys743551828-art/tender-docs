@@ -1,0 +1,138 @@
+[
+  {
+    "label": "desktop",
+    "download_limit_bytes_per_second": 1024,
+    "expected_pdf_bytes": 17306,
+    "before_close": {
+      "request_id": "1258.356",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-desktop",
+      "started_timestamp": 1094.31305,
+      "request_event_wall_ms": 1793414582644,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1110.422285,
+      "response_event_wall_ms": 1793414598753,
+      "response_headers_received": true,
+      "body_transfer_unfinished": true,
+      "partial_body_bytes_claimed": false
+    },
+    "after_close": {
+      "request_id": "1258.356",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-desktop",
+      "started_timestamp": 1094.31305,
+      "request_event_wall_ms": 1793414582644,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1110.422285,
+      "response_event_wall_ms": 1793414598753,
+      "failure": {
+        "canceled": true,
+        "error_text": "net::ERR_ABORTED",
+        "timestamp": 1110.578792
+      }
+    },
+    "closed": {
+      "kind": "button",
+      "focus_returned": true,
+      "requests_at_close": 12,
+      "requests_after_idle": 12,
+      "idle_ms": 2300
+    },
+    "recovered": {
+      "label": "recover-desktop",
+      "page_select_labels": [
+        "物理页1"
+      ],
+      "role": "complementary",
+      "canvas": {
+        "width": 454,
+        "height": 587,
+        "nonwhite_pixels": 999
+      },
+      "page": "1",
+      "page_options": [
+        "1"
+      ],
+      "actual_text": "施工工期 120 天，质量合格。合成容器浏览器 Word 验证。",
+      "partial_notice": true,
+      "layout": {
+        "viewport": 1440,
+        "scroll": 1440
+      }
+    }
+  },
+  {
+    "label": "390",
+    "download_limit_bytes_per_second": 1024,
+    "expected_pdf_bytes": 17306,
+    "before_close": {
+      "request_id": "1258.413",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-390",
+      "started_timestamp": 1122.287707,
+      "request_event_wall_ms": 1793414610618,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1136.930913,
+      "response_event_wall_ms": 1793414625261,
+      "response_headers_received": true,
+      "body_transfer_unfinished": true,
+      "partial_body_bytes_claimed": false
+    },
+    "after_close": {
+      "request_id": "1258.413",
+      "path": "/api/v1/object-transfers/versions/dcaa7b03-d168-4c34-b67f-48ad6aeee101",
+      "phase": "slow-390",
+      "started_timestamp": 1122.287707,
+      "request_event_wall_ms": 1793414610618,
+      "data_length": 0,
+      "encoded_data_length": 0,
+      "status": 200,
+      "mime_type": "application/pdf",
+      "response_timestamp": 1136.930913,
+      "response_event_wall_ms": 1793414625261,
+      "failure": {
+        "canceled": true,
+        "error_text": "net::ERR_ABORTED",
+        "timestamp": 1136.989615
+      }
+    },
+    "closed": {
+      "kind": "escape",
+      "focus_returned": true,
+      "requests_at_close": 20,
+      "requests_after_idle": 20,
+      "idle_ms": 2300
+    },
+    "recovered": {
+      "label": "recover-390",
+      "page_select_labels": [
+        "物理页1"
+      ],
+      "role": "dialog",
+      "canvas": {
+        "width": 326,
+        "height": 421,
+        "nonwhite_pixels": 603
+      },
+      "page": "1",
+      "page_options": [
+        "1"
+      ],
+      "actual_text": "施工工期 120 天，质量合格。合成容器浏览器 Word 验证。",
+      "partial_notice": true,
+      "layout": {
+        "viewport": 390,
+        "scroll": 390
+      }
+    }
+  }
+]

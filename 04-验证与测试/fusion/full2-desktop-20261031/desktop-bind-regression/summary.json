@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "label": "pytest",
+      "command": [
+        "/usr/local/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/tmp/host-bind-pytest",
+        "--junitxml=/evidence/host.xml",
+        "tests/test_word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.7726314230001208
+    },
+    {
+      "label": "ruff-check",
+      "command": [
+        "ruff",
+        "check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "tests/test_word_execution_host.py",
+        "tests/test_authoring_docx_import_render.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04942582700005005
+    },
+    {
+      "label": "ruff-format",
+      "command": [
+        "ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "deploy/word_execution_host.py",
+        "tests/test_word_execution_host.py",
+        "tests/test_authoring_docx_import_render.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.021149189999960072
+    },
+    {
+      "label": "mypy",
+      "command": [
+        "mypy",
+        "--platform",
+        "linux",
+        "--cache-dir=/tmp/host-bind-mypy",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.1748707760000343
+    },
+    {
+      "label": "bandit",
+      "command": [
+        "bandit",
+        "-q",
+        "-ll",
+        "deploy/word_execution_host.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3912261509999553
+    }
+  ],
+  "junit": {
+    "tests": 99,
+    "passed": 99,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skip_reasons": []
+  },
+  "source_unchanged_during_run": true,
+  "optin_soffice_execution": false
+}

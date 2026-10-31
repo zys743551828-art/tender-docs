@@ -1,0 +1,7 @@
+{"label": "pytest", "command": ["/usr/local/bin/python", "-B", "-m", "pytest", "-q", "-ra", "--tb=short", "-p", "no:cacheprovider", "--basetemp=/tmp/freeze06-pytest", "--junitxml=/evidence/targets.xml", "tests/test_word_execution_host.py", "tests/test_authoring_page_dispatch.py", "tests/test_authoring_generated.py", "tests/test_authoring.py::test_truncated_converter_pdf_is_failed_while_actual_word_is_retained"], "exit_code": 0, "elapsed_seconds": 5.99452860800011}
+{"label": "ruff-check", "command": ["ruff", "check", "--no-cache", "packages/authoring/build_repository.py", "deploy/word_execution_host.py"], "exit_code": 0, "elapsed_seconds": 0.026379522999377514}
+{"label": "ruff-format", "command": ["ruff", "format", "--check", "--no-cache", "packages/authoring/build_repository.py", "deploy/word_execution_host.py"], "exit_code": 0, "elapsed_seconds": 0.02167287500014936}
+{"label": "mypy", "command": ["mypy", "--platform", "linux", "--cache-dir=/tmp/freeze06-mypy", "packages/authoring/build_repository.py", "deploy/word_execution_host.py"], "exit_code": 0, "elapsed_seconds": 9.426627269000164}
+{"label": "bandit", "command": ["bandit", "-q", "-ll", "packages/authoring/build_repository.py", "deploy/word_execution_host.py"], "exit_code": 0, "elapsed_seconds": 0.4126853379993918}
+{"tests": 138, "passed": 138, "failures": 0, "errors": 0, "skipped": 0, "skip_reasons": []}
+
