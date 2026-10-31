@@ -68,3 +68,12 @@ TEST-DESKTOP-WORD-BOOTSTRAP 对应角色隔离、明确模型声明与私密 std
 对应 `packages/word_intake/static_layout.py`、`packages/word_intake/prebuilt.py` 与 `tests/test_word_static_layout.py`。证明仅限单显式section、静态stories、固定表格与内联不透明PNG；源准入、字体、文字可见位置、表格栅格/单元格、像素、顺序与分页等原要求不降，未知结构保留gap/partial。
 
 task `word-static-correction-20261031/complete-unit.xml` 与 `frozen-unit.xml` 均为198通过的同类定向回执，**不相加**。七份既有SYNTHETIC PDF只做新检查器重检，源DOCX/PDF绑定及检查结果可核，但未重新调用转换器；不等于七份新转换通过、复杂Word已采用或真实标书质量通过。必须用当前587151c profile重新真实转换、经Worker/API发布并核对采用资格后另记结果。PAGE仍仅 `one_canonical_footer_PAGE_only`，两项目录/实测页范围UNKNOWN和普通RICH `navigation_only`不升级。详见[Word核查](../../Word03来源与复现核查.md)。
+
+
+### 候选 124fc6e：精确 Word 来源、保存恢复和输入边界
+
+当前候选为 `124fc6e8005917d0dd98fa1c25a72bc301c1c3ca`，对应 [CI41214902947](https://github.com/zys743551828-art/tender-app/actions/runs/41214902947)；当前尚待终态及统一版本全栈验收。上一候选 587151c 的 [CI41208593659](https://github.com/zys743551828-art/tender-app/actions/runs/41208593659) 已 11/11 成功，不能替代新候选实测。
+
+本候选补全受控 Word 三角色的材料包来源核验，客户端不能注入只读来源资格；保持衍生 PDF 非直接上传身份。相关关系/角色原生用例与前端回归通过，真实浏览器纵向路径仍以新候选实测为准。编辑器 ACK 后跨 schema 的完整文档比较修复和项目列表局部定位修复，保留真正未保存草稿和横向滚动。模型金额/输出上限早期拒绝已有真实 PG17 非 owner 及 rollback/idempotency 证据，无数据库协议放宽。
+
+证据在已授权本机 task 的 `evidence-local-20261030/controlled-word-admission-20261031/`、`final-ui-observation-20261031/`、`model-native-20261031-144037/`；此处不上传私有配置、凭据或原始私人日志。新候选的统一安装、重装、正常停止、技术判定与实际像素验收仍待本轮后续记录。
