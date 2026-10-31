@@ -1,0 +1,43 @@
+{
+  "full_frontend_evidence_reused": "lifecycle-refresh-race-20261031/frontend-complete-junit.xml:2011passed",
+  "source_commit": "5516ec2fd4f8b6cfebd98de5a384ca875a797a88",
+  "format": 0,
+  "lint": 0,
+  "cleanup_closed": true,
+  "frontend_files": 400,
+  "scope": "Final Node24 standard production build; existing 2011 frontend tests reused, not rerun",
+  "node_base_reference": "node:24.22.2-bookworm-slim@sha256:a43f7fc3e52e87d12a905f46eea0275def84ca8f2981a5b53fed44d7fb398ee0",
+  "build_command": "tsc -b && vite build",
+  "production_build_passed": true,
+  "vite_version": "6.3.5",
+  "local_test_build_image_id": "sha256:efac6ed8da91a5e256166b444b0919d3887e1100f2e3379f259c10cdcb889449",
+  "image_id_is_registry_digest_claimed": false,
+  "resource_receipt": {
+    "run_id": "2ddc73e292fc4e58bedb8613a4a69c6a",
+    "closed": true,
+    "resources": [
+      {
+        "kind": "container",
+        "name": "tender-test-2ddc73e292fc-1",
+        "id": "feb79e0fcbf6f6a9828be5840a3391ff582d167e9f03c57b7cd9f42e52a56474",
+        "state": "removed"
+      }
+    ]
+  },
+  "source_receipts": [
+    {
+      "path": "evidence-local-20261030/synthetic-fullflow-20261031/web-lifecycle-final/summary.json",
+      "sha256": "51c51501a0caeedf7d6fd96873d549e471c2f624093b0975144dd612a6bc40c3"
+    },
+    {
+      "path": "evidence-local-20261030/synthetic-fullflow-20261031/web-lifecycle-final/resources.json",
+      "sha256": "99893d589dadd74654c1aa67df4b467dea0fc0a7f3fa8b662d078b605d5f1594"
+    },
+    {
+      "path": "evidence-local-20261030/synthetic-fullflow-20261031/web-lifecycle-final/build.log",
+      "sha256": "1cba4c8a29aa182ce3a6e4cf188d8ecde4513dc721e02661113ccbc301469549"
+    }
+  ],
+  "new_paid_or_service_execution_by_archiver": false,
+  "public_content_check": "Selected metadata only; no credentials, raw env/log export or signed URLs"
+}

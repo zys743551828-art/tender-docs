@@ -1092,6 +1092,27 @@
       "source_sha256": "d6f0158d50030fa2706117b0ed4b7d54513028e733c66402a23ce34f2b60ef8e",
       "archived_sha256": "eed77674e3d8ea016312a803ad263d7a2bdf4def520719f94d64ec2b7522e5f7",
       "transformation": "Public receipt; absolute target replaced with project-relative .tools/s5, no private configuration content copied"
+    },
+    {
+      "source": "evidence-local-20261030/ci-5516ec2-final/ci-final.json",
+      "destination": "ci/5516-terminal.json",
+      "source_sha256": "82e362f16d5b2fc41813ce2a015c285bedb868415423b80e9fd93e74d41ea5cb",
+      "archived_sha256": "4876529377da42fb2cbc4c1ea15016f5323d6408d61314c34ab5cd01e8e52e07",
+      "transformation": "Selected terminal CI fields and eleven job names/conclusions; no steps/logs copied"
+    },
+    {
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/matrix.json",
+      "destination": "current-matrix.json",
+      "source_sha256": "c6a5d3bbc3ea2139a61b81c01ac283c4d00f9650def23aa4ad4f4b5c590af03e",
+      "archived_sha256": "c6a5d3bbc3ea2139a61b81c01ac283c4d00f9650def23aa4ad4f4b5c590af03e",
+      "transformation": "byte copy, current dated root matrix; old pending snapshot unchanged"
+    },
+    {
+      "source": "evidence-local-20261030/synthetic-fullflow-20261031/web-lifecycle-final/summary.json",
+      "destination": "frontend/lifecycle-final-build.json",
+      "source_sha256": "51c51501a0caeedf7d6fd96873d549e471c2f624093b0975144dd612a6bc40c3",
+      "archived_sha256": "82b437d603fa8b24f9f038630ad1908cfc8a5bfcbafbc3f63a3ad216f9175330",
+      "transformation": "Combined selected public build/resource metadata, full source receipt hashes embedded; local image ID explicitly classified"
     }
   ]
 }

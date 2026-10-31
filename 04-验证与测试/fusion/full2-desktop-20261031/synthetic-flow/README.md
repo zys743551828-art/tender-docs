@@ -2,7 +2,7 @@
 
 本记录只覆盖已完成并可核验的有限合成机制、浏览器及隔离恢复证据。**不是全部业务验收完成，不是模型语义准确率、任意复杂标书质量或真人正式签收。** 原材料全部为虚构 SYNTHETIC，不能作为官方评分标签。
 
-当前已推送 app `5516ec2fd4f8b6cfebd98de5a384ca875a797a88`；新 CI 由根跟踪，**仍待终态，未写全绿**。旧 7f92 的 [CI 41194633417](https://github.com/zys743551828-art/tender-app/actions/runs/41194633417) 已终态 **10 success / 1 failure**，见[官方结果快照](ci/7f92-terminal.json)，pricing native 生命周期连续 reopen 的 POST 等待超时保留。修复后完整前端 2011 与原生组合单项通过是后续独立证据，不改写旧 CI。此前 c791/f061 两版完整 CI 11/11 已确认。
+当前已推送 app `5516ec2fd4f8b6cfebd98de5a384ca875a797a88`；[CI 41196580387](https://github.com/zys743551828-art/tender-app/actions/runs/41196580387) 已终态 **11/11 success，0 failure**，见[精简官方回执](ci/5516-terminal.json)。旧 7f92 的 [CI 41194633417](https://github.com/zys743551828-art/tender-app/actions/runs/41194633417) 已终态 **10 success / 1 failure**，见[官方结果快照](ci/7f92-terminal.json)，pricing native 生命周期连续 reopen 的 POST 等待超时保留。修复后完整前端 2011 与原生组合单项通过是后续独立证据，不改写旧 CI。此前 c791/f061 两版完整 CI 11/11 已确认。
 
 三个独立 PDF 场景的普通上传、来源消歧、核心评审、报告下载脚本现已通过，见下方实际字节回执；不是复杂 Word 已采用或整包资格。它们使用 **新实际生产构建静态资源接既有 C791 真实 API 的 frontend preview**：仅替换静态构建响应，API/模型/数据库/存储请求均无 mock，保留原 HTTP 安全头。不能冒称全栈按新 SHA 重装。本轮普通业务 API 实际运行在 C791 环境；后续业务存储的两个 OSS 模块在真实 OSS 路径独立验证。5516 新增 UI 等待与 Desktop stop 修复，另由完整前端 2011、停机 14、原生组合 1 及新 CI 验证；不冒称 5516 全栈按同 SHA 重装。
 
@@ -12,7 +12,7 @@ S7 `tender-fusion-full-327c846b8e5e` 已完成**异常中断后的受限恢复�
 
 ## 覆盖分母与待验
 
-工作矩阵是 **9 项能力，绝不是 9 个测试**。S03/S04/S05 的三场景有限普通 PDF 链已完成，三场景 typed 机制均完成，最终所选截图已有明确范围的根像素复核；S7 精确资源清理已闭环；刷新与停机修复已有定向/完整前端/原生回归，最新 CI 和真实正常优雅停机的结论仍需分开；不能汇总为全部要求通过。原 CI、组合交互及失活会话测试按其原有范围复用，不能替代模型与完整材料链。
+工作矩阵是 **9 项能力，绝不是 9 个测试**。S03/S04/S05 的三场景有限普通 PDF 链已完成，三场景 typed 机制均完成，最终所选截图已有明确范围的根像素复核；S7 精确资源清理已闭环；刷新与停机修复已有定向/完整前端/原生回归，最新 CI 已11/11通过，但与真实正常优雅停机的结论仍需分开；不能汇总为全部要求通过。原 CI、组合交互及失活会话测试按其原有范围复用，不能替代模型与完整材料链。
 
 | 能力 | 已有事实与边界 |
 |---|---|
@@ -24,9 +24,9 @@ S7 `tender-fusion-full-327c846b8e5e` 已完成**异常中断后的受限恢复�
 | S06 身份/跨项目 | [八项真实检查](identity/normal-roles-state.json)；匿名/退出 401、同键重放、旧 ETag 412、跨项目绑定 409。最新[原生组合](native-lifecycle/workspace-journeys.json)另实际验证 active/inactive member、历史 ACK 与新 API 过程通知；未发明 admin RBAC。 |
 | S07 视觉/交互 | identity 两宽[像素复核](identity/pixel-review.json)通过所见范围；Word [093753 稳定错误卡两宽复核](word-policy/final093753/pixel-review.json)通过所见错误状态，早期 loading 图仅保留为历史，不能作为该通过依据。 |
 | S08 隔离恢复 | 最新单轮 [32/32](recovery/summary.json)，另 [22/22 单元检查](recovery/prediction-profile-unit.json)独立计数；有限当前 API smoke 通过，仍非生产完整恢复/RPO/RTO。 |
-| S09 回归/生命周期 | 7f92 CI终态10成功1失败；5516新CI待终态。共享刷新定向27、完整前端2011、停机14、真实原生组合1项通过按各自分母保留，不能相加。S7恢复清理closed不证明graceful。 |
+| S09 回归/生命周期 | 7f92 CI终态10成功1失败；5516 CI41196580387终态11/11success。共享刷新定向27、完整前端2011、停机14、真实原生组合1项通过按各自分母保留，不能相加。S7恢复清理closed不证明graceful。 |
 
-[根工作矩阵快照](matrix-snapshot-110758.json)保留其 `updated_utc=2026-10-31T11:07:58.384228Z` 的九能力状态，不改根文件。其中 S09 当时“清理未闭环”早于 11:13:45–11:14:18 恢复清理，应由上方后到回执补充；它仍正确保留最新 CI/停机缺陷待修，不是全部验收完成。
+[根工作矩阵快照](matrix-snapshot-110758.json)保留其 `updated_utc=2026-10-31T11:07:58.384228Z` 的九能力状态，不改根文件。其中 S09 当时“清理未闭环”早于 11:13:45–11:14:18 恢复清理，应由上方后到回执补充；其中 CI/停机待修仅是当时背景，当前状态见[根最终矩阵](current-matrix.json)、[精简矩阵摘要](matrix-summary.json)与5516终态回执；不得回写历史快照，也不因CI全绿宣称全部业务资格。
 
 ## 原始材料角色与整包缺口
 
@@ -100,7 +100,7 @@ package 脚本未接 driver 的 static preview 参数，仍为旧 C791 package U
 | 第三笔 `RULE_CONDITION_UNGROUNDED` | provider 结构合法不等于来源逐字有效；原 blocked/费用保留，有界纠正回归不等于新业务已成功。 |
 | S6 两笔计费仍 blocked | 初始+一次校正均 provider succeeded/usage_reported，但剩余 statement 不 grounded；原失败和费用保留。51 项定向修复之外，S7 的实际六笔请求与报告另有独立回执；旧 S6 失败不改写。 |
 | Word 策略卡 loading 图 | 092212 loading 图只证明机制回执，不授视觉通过；093753 新中文稳定错误卡已由根实际查看 1440/390 PNG，文字清晰、布局无溢出，见新 pixel-review。仅负例状态视觉通过，非转换或业务质量。 |
-| CI 41188927492 recovery 失败 | 本机 32 通过不覆盖 umask 022。测试私有目录缺口已由 022 先红后单 API green 1/1 证明修复；runtime 未改，bootstrap 未放宽，C791 后一 CI 已 11/11 success；最新 7f92 CI 仍进行中且 pricing 生命周期超时待诊断。旧 run cancelled 与其 job 曾失败分别保留。 |
+| CI 41188927492 recovery 失败 | 本机 32 通过不覆盖 umask 022。测试私有目录缺口已由 022 先红后单 API green 1/1 证明修复；runtime 未改，bootstrap 未放宽，C791 后一 CI 已 11/11 success；后续 7f92 CI 已终态10成功1失败；最终5516 CI已11/11success，旧失败均保留。旧 run cancelled 与其 job 曾失败分别保留。 |
 | 恢复早轮失败 | Windows bind 源 I/O 触发原租约；后来用字节一致只读 tmpfs 源。测试 cleanup 参数及新 reader CONNECT 的隔离 fixture 缺口分别修复；最终同源 32 原断言通过，未放宽租约/权限。 |
 
 ## 最终刷新与停机机制回归
@@ -110,7 +110,9 @@ package 脚本未接 driver 的 static preview 参数，仍为旧 C791 package U
 
 对应 `apps/web/src/useResource.ts`、`ProjectLifecyclePanel.tsx` 及其直接测试。实际 fetch 仍同步启动；共享完成 promise，调用者在同一 flight 的 GET 刷新真正结束后才宣布保存成功，避免连续 reopen 复用旧 ETag。没有延迟 sleep 或放宽真实 HTTP 断言。
 
-[定向 shared 27 项 JUnit](ui-refresh/final-shared-junit.xml)为 4 文件/27 通过；[完整前端 JUnit](ui-refresh/frontend-complete-junit.xml)为 **199 文件/2011 通过、0 failure、0 error**。两者重叠，不相加。历史 microtask 启动原型的[完整 2010 通过/1 失败](ui-refresh/earlier-full-microtask-failure.json)保留（`finish is not a function`）；恢复同步 fetch 启动后最终完整 2011 全过。更早线程参数启动错误的 [0 tests 回执](ui-refresh/frontend-all-junit.xml)与[分母说明](ui-refresh/results-summary.json)保留，**不是业务失败或0测试通过验收**。
+[定向 shared 27 项 JUnit](ui-refresh/final-shared-junit.xml)为 4 文件/27 通过；[完整前端 JUnit](ui-refresh/frontend-complete-junit.xml)为 **199 文件/2011 通过、0 failure、0 error**。两者重叠，不相加。
+
+[最终 Node24 标准生产构建回执](frontend/lifecycle-final-build.json)绑定源码 5516：固定 Node24.22.2，Docker recipe 实际 `tsc -b && vite build` 成功、format/lint exit0，最终 **400 文件**；2011 项沿用上述完整回执，没有重复执行。`efac…9449` 仅是本机 test-build image ID，不冒称已发布的 registry digest。唯一构建检查容器已 removed/closed；构建通过不等于新全栈业务重装。历史 microtask 启动原型的[完整 2010 通过/1 失败](ui-refresh/earlier-full-microtask-failure.json)保留（`finish is not a function`）；恢复同步 fetch 启动后最终完整 2011 全过。更早线程参数启动错误的 [0 tests 回执](ui-refresh/frontend-all-junit.xml)与[分母说明](ui-refresh/results-summary.json)保留，**不是业务失败或0测试通过验收**。
 
 ### 原生生命周期组合
 
@@ -123,7 +125,7 @@ package 脚本未接 driver 的 static preview 参数，仍为旧 C791 package U
 
 对应 `deploy/fusion_desktop.py`、`tests/test_fusion_desktop_word.py`、`test_fusion_desktop_compose.py`。原 CLI 忽略 Word unavailable/cleanup 状态而仍 exit0，且 Compose stop 未带已声明 model profile，导致 worker-review/assistant 漏停；[诊断](desktop-stop/diagnosis.json)保留两个缺陷与原 host summary 缺失事实。
 
-[最终14项JUnit](desktop-stop/final-junit.xml)、[红/绿与静态摘要](desktop-stop/summary.json)及[静态检查](desktop-stop/checks.json)通过。mypy 目标为 Linux，原 Windows POSIX 依赖诊断不冒称通过；这些是离线控制/错误传播回归，没有由该测试 owner 启动或停止真实服务。非 status CLI 在未证实关闭时须非零，正常停服务包含配置中的 model profile。**14项通过不回填 S7 graceful_shutdown_proven**；S7仍只取得异常恢复精确清理资格。最新5516 CI仍待最终结果。
+[最终14项JUnit](desktop-stop/final-junit.xml)、[红/绿与静态摘要](desktop-stop/summary.json)及[静态检查](desktop-stop/checks.json)通过。mypy 目标为 Linux，原 Windows POSIX 依赖诊断不冒称通过；这些是离线控制/错误传播回归，没有由该测试 owner 启动或停止真实服务。非 status CLI 在未证实关闭时须非零，正常停服务包含配置中的 model profile。**14项通过不回填 S7 graceful_shutdown_proven**；S7仍只取得异常恢复精确清理资格。最新5516 CI41196580387已11/11success，回执见目录上方。
 
 ## OSS 原生边界与修复
 
@@ -149,4 +151,4 @@ package 脚本未接 driver 的 static preview 参数，仍为旧 C791 package U
 
 [来源与变换](archive-provenance.json)记录精选源文件及摘要；JSON 仅替换本机绝对路径，成功 JUnit 去除非必要 stdout/stderr/properties，未改测试结论。[inventory](inventory.json)记录本目录实际文件。没有复制私有 profile/env/log、operator 输入、官方 HTML base64、原始模型响应、整个临时源码树或旧克隆。
 
-S7异常恢复清理已完成；共享GET flight、成功提示时序与两个停机缺陷的最终持久回归已补齐。早期17项是中间重叠scope，不与最终27/2011相加。尚待5516新CI终态；S7从未取得正常优雅停机证明。最终观察没有新增模型请求；计费累计仍为 12 请求/45,606 tokens/估计 0.193338 CNY，OSS 71 请求。以上修复和机制证据不能自动授予业务资格。
+S7异常恢复清理已完成；共享GET flight、成功提示时序与两个停机缺陷的最终持久回归已补齐。早期17项是中间重叠scope，不与最终27/2011相加。5516新CI终态已11/11success；S7从未取得正常优雅停机证明。最终观察没有新增模型请求；计费累计仍为 12 请求/45,606 tokens/估计 0.193338 CNY，OSS 71 请求。以上修复和机制证据不能自动授予业务资格。

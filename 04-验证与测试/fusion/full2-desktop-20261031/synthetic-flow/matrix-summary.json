@@ -1,0 +1,70 @@
+{
+  "scope": "Current finite engineering acceptance summary, nine capabilities not nine tests",
+  "source_commit": "5516ec2fd4f8b6cfebd98de5a384ca875a797a88",
+  "current_ci": {
+    "run_id": 41196580387,
+    "status": "completed",
+    "conclusion": "success",
+    "counts": {
+      "success": 11,
+      "failure": 0,
+      "total": 11
+    },
+    "receipt": "ci/5516-terminal.json",
+    "observed_at": "2026-10-31T11:43:53.101Z"
+  },
+  "historical_matrix_snapshot": "matrix-snapshot-110758.json",
+  "capabilities": [
+    {
+      "id": "S01",
+      "state": "synthetic_corpus_passed",
+      "scope": "8 materials / 3 scenarios, 7 eligible and 1 policy negative"
+    },
+    {
+      "id": "S02",
+      "state": "partial_conversion_safely_blocked",
+      "scope": "Six complex Word outputs not adopted; independent PDFs are separate inputs"
+    },
+    {
+      "id": "S03",
+      "state": "bounded_real_model_mechanism_passed_partial_qualification",
+      "scope": "3 bid extract/core paths, final reviews partial; semantic accuracy unqualified"
+    },
+    {
+      "id": "S04",
+      "state": "three_scenario_paths_passed_with_expected_limits",
+      "scope": "Normal/conflict/missing inputs, no fabricated missing attachments"
+    },
+    {
+      "id": "S05",
+      "state": "reports_verified_typed_guards_passed_not_ready",
+      "scope": "3 report SHA matches; typed unknown denominators 11/13/13; other wiring gap retained"
+    },
+    {
+      "id": "S06",
+      "state": "bounded_identity_and_native_interaction_passed",
+      "scope": "8 identity checks plus separate real combined native test"
+    },
+    {
+      "id": "S07",
+      "state": "selected_pixels_and_interactions_passed",
+      "scope": "Exact root-reviewed captures only, not all pages/arbitrary documents"
+    },
+    {
+      "id": "S08",
+      "state": "isolated_recovery_32_passed",
+      "scope": "Separate22 boundary units and umask1 regression, not production/RPO/RTO"
+    },
+    {
+      "id": "S09",
+      "state": "latest_ci_11_success_and_exact_recovery_cleanup_closed",
+      "scope": "5516 terminal11/11; S7 abnormal recovery20C3N16V closed, graceful_shutdown_proven false"
+    }
+  ],
+  "all_product_requirements_complete": false,
+  "whole_package_qualified": false,
+  "model_semantic_quality_qualified": false,
+  "production_operations": false,
+  "new_paid_calls_during_final_observation_or_archiving": 0,
+  "original_interrupted_result_and_failed_cleanup_preserved": true
+}
