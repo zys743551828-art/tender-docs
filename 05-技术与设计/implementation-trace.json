@@ -1,5 +1,5 @@
 {
-  "code_revision": "8d108e56336122ff593ca59a91ebd35ee9dd948e",
+  "code_revision": "431ba1926335fd7a9072489d669c95e19af57ef3",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -8,7 +8,7 @@
       "test": "tests/test_package_submission_preflight.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "b4410f9b646e6c03e910075b983ef2477465dc18a7d1b33498546e0f4a54d382",
+      "code_sha256": "879d6a267b93d26630d24a9f14dca7cbd3b546c140e4f6a5a0f41449dc8d1467",
       "test_sha256": "c51cdd28b37463f1de8e9054e719c47c2dc04e9e4da51a83166ac203bf726f09"
     },
     {
@@ -35,7 +35,7 @@
       "test": "tests/test_package_material_scope_findings.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "b4410f9b646e6c03e910075b983ef2477465dc18a7d1b33498546e0f4a54d382",
+      "code_sha256": "879d6a267b93d26630d24a9f14dca7cbd3b546c140e4f6a5a0f41449dc8d1467",
       "test_sha256": "705d25f5002c8ccd79ad02404e62dad4ca85775fc4946adcbaa6508d6b107706"
     },
     {
@@ -44,7 +44,7 @@
       "test": "tests/test_package_scope_review.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "b4410f9b646e6c03e910075b983ef2477465dc18a7d1b33498546e0f4a54d382",
+      "code_sha256": "879d6a267b93d26630d24a9f14dca7cbd3b546c140e4f6a5a0f41449dc8d1467",
       "test_sha256": "a06a057be9d1bb0ad2e80a692dd81b812ca12381f06d482478f54d2776d69724"
     },
     {
@@ -71,7 +71,7 @@
       "test": "tests/test_package_rule_corrections.py",
       "document": "02-业务与产品/实现追溯矩阵.md",
       "acceptance": "not_accepted",
-      "code_sha256": "b4410f9b646e6c03e910075b983ef2477465dc18a7d1b33498546e0f4a54d382",
+      "code_sha256": "879d6a267b93d26630d24a9f14dca7cbd3b546c140e4f6a5a0f41449dc8d1467",
       "test_sha256": "045d783e3722f6e7d7518e440214f53539204275b849a5ac4ddb57faf2835924"
     },
     {
@@ -287,7 +287,7 @@
       "test": "tests/test_extended_recovery.py",
       "document": "02-业务与产品/融合扩展实现核对.md",
       "acceptance": "not_accepted",
-      "code_sha256": "34809731caf2e44f747595ad33f74991ac868b6ae2f31285e00ad7434d84e98c",
+      "code_sha256": "6ec3e2cdfad53b8035b192bd5089790d5858de6b8910dd0f90f50c90be28023a",
       "test_sha256": "cdf35180f8a864180dc9f30b4f5b2d7d31b2ea96680ed91173941027a3495bb9"
     },
     {
@@ -723,6 +723,33 @@
       "acceptance": "not_accepted",
       "code_sha256": "a0215a075c5d5e0c4f4b5ce428fa5da9a4b3e4757f3e93cdc22837ebd68542a6",
       "test_sha256": "102b2a68dbbe9daa88de19098008b6897863a4dfcdff87a7b7e80bfbcbe95ff8"
+    },
+    {
+      "id": "TEST-MANUAL-RULE-INITIAL",
+      "code": "packages/domain/rule_corrections.py",
+      "test": "tests/test_manual_rule_initial_pg.py",
+      "document": "使用说明.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "4ea63abbc803899e599554551f2f305c9df9f97e76a485e26711438c3af6ad03",
+      "test_sha256": "a14e69c2cb11304ab8b576f328ea31fae1ffac67bc9112c56559a299a20c1a9f"
+    },
+    {
+      "id": "TEST-MANUAL-RULE-UI",
+      "code": "apps/web/src/ManualRuleForm.tsx",
+      "test": "apps/web/src/A1Workspace.test.tsx",
+      "document": "使用说明.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "eab80b4a2b8e72f5f33c7dbd3800458dda3382518be7a45eb70598e547deda8b",
+      "test_sha256": "fba9ada96b70afc944181fb3d551db02db3f44e758b36d4e7fcd958bb74adb10"
+    },
+    {
+      "id": "TEST-MANUAL-RULE-REPORT",
+      "code": "apps/worker/report_handlers.py",
+      "test": "tests/test_manual_rule_initial.py",
+      "document": "使用说明.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "a99e126cf9ebc2beb718e6adead85fc476862e7ed8cf910ed8ccd9d18e20513a",
+      "test_sha256": "3ee84e5f7083ecb2ab2ab893112f22d75d68c42806839a15391651f436655d01"
     }
   ]
 }
