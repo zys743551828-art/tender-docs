@@ -1,5 +1,5 @@
 {
-  "code_revision": "368b924a2b94d0cfeea57952c8c9f3cb2f1c9522",
+  "code_revision": "73f46449faf1a70039214cef0e859e13c988a88c",
   "scope": "FR001–040源码与用例关系；不是完整需求验收",
   "requirements": [
     {
@@ -759,6 +759,15 @@
       "acceptance": "not_accepted",
       "code_sha256": "48937ede908fae967b5dff8d5e1cde5de292b5de426a2c30675634dbd5569ea9",
       "test_sha256": "786dedf256b1861ac95b1abb13c577d0f4a0ef7f953efb5796e3fd3585b664d4"
+    },
+    {
+      "id": "TEST-PACKAGE-RULE-ORIGIN",
+      "code": "apps/web/src/PackageRequirements.tsx",
+      "test": "apps/web/src/PackageRequirements.test.tsx",
+      "document": "使用说明.md",
+      "acceptance": "not_accepted",
+      "code_sha256": "2e47040f016cf2f123dfa0120a338543285511cd202819c9baa974af8d927b75",
+      "test_sha256": "cf3041c57932196503de7ab21e850e04bcbff1e0dcb5bf123b1a3b649071263b"
     }
   ]
 }
