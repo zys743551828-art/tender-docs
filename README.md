@@ -4,7 +4,7 @@
 
 安装与操作统一见[工作台使用说明](使用说明.md)，包括固定提交、依赖与镜像、初始化、Word、模型配置、业务操作、停止和恢复边界。
 
-当前应用 dev 检查点为 [`431ba1926335fd7a9072489d669c95e19af57ef3`](https://github.com/zys743551828-art/tender-app/commit/431ba1926335fd7a9072489d669c95e19af57ef3)；[本提交 CI](https://github.com/zys743551828-art/tender-app/actions/runs/42182532875) 尚待终态，同一版本的真实后端浏览器验收尚未完成。
+当前应用 dev 检查点为 [`368b924a2b94d0cfeea57952c8c9f3cb2f1c9522`](https://github.com/zys743551828-art/tender-app/commit/368b924a2b94d0cfeea57952c8c9f3cb2f1c9522)；[本提交 CI](https://github.com/zys743551828-art/tender-app/actions/runs/42186273562) 尚待终态，同一版本的真实后端浏览器验收尚未完成。
 
 历史应用检查点为 [`587151cced8f0501303c5b27abc06ccbbb55e5a3`](https://github.com/zys743551828-art/tender-app/commit/587151cced8f0501303c5b27abc06ccbbb55e5a3)，[本提交CI](https://github.com/zys743551828-art/tender-app/actions/runs/41208593659)及同SHA全栈验收正在执行。[合成全流程与真实服务验收](04-验证与测试/fusion/full2-desktop-20261031/synthetic-flow/README.md)记录逐项版本、通过／失败、用量、视觉与清理结果；首次完整安装和后续定向验证的范围分别保留。历史5516的 [CI41196580387](https://github.com/zys743551828-art/tender-app/actions/runs/41196580387) 已11/11成功，不代表当前候选已整体验收。源码／测试链接与指纹见[40项需求追溯](02-业务与产品/实现追溯矩阵.md)和 `05-技术与设计/implementation-trace.json`，均不是需求签收证明。
 
